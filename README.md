@@ -33,7 +33,7 @@ This workshop is aimed primarily at participants teaching data science in an aca
 
 ## Learning objectives
 
-LEARNING_OBJECTIVES
+[ADD AN ITEMIZED LIST OF LEARNING OBJECTIVES.]
 
 ## Is this course for me?
 
