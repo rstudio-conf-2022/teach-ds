@@ -3,7 +3,7 @@ Designing the Data Science Classroom
 
 ### rstudio::conf 2022
 
-by INSTRUCTOR_NAME
+by Mine Çetinkaya-Rundel + Maria Tackett
 
 -----
 
