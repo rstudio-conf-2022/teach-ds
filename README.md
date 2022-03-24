@@ -37,7 +37,13 @@ LEARNING_OBJECTIVES
 
 ## Is this course for me?
 
-THREE_QUESTIONS
+If your answer to any of the following questions is “yes”, then this is the right workshop for you.
+ 
+- Do you want to learn / discuss curriculum, pedagogy, and computing infrastructure design for teaching data science with R and RStudio?
+
+- Are you interested in setting up your class in RStudio Cloud?
+
+- Do you want to integrate version control with git into your teaching and learn about tools and best practices for running your course on GitHub?
 
 ## Prework
 
