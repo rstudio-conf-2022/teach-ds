@@ -46,6 +46,9 @@ If your answer to any of the following questions is “yes”, then this is the 
 - Do you want to integrate version control with git into your teaching and learn about tools and best practices for running your course on GitHub?
 
 ## Prework
+
+NOTE: ADD LINK TO VIDEO ON LET THEM EAT CAKE FIRST
+
 In this workshop you will wear two hats: the educator and the learner. At times I will be demoing workflows for instructors (whom I assume are familiar with R, RStudio, and the tidyverse and have taught with or are interested in teaching with RStudio Cloud, Git, and GitHub) and at other times you will be working through the student view (on RStudio Cloud, assuming you're not using your local setup).
 
 For the former, you'll need to come prepared. For the latter, you can assume you're a student in an intro data science course and this is the first day of class (i.e. there's no expectation of prep).
@@ -104,7 +107,7 @@ The RStudio Cloud workspace is at [INSERT LINK].
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Welcome + Curriculum design [Mine]       |
+| 09:00 - 10:30 | Welcome + Curriculum design + Meet the toolkit [Mine]       |
 | 10:30 - 11:00 | *Coffee break*   |
 | 11:00 - 12:30 | Teaching data science with the tidyverse [Mine]       |
 | 12:30 - 13:30 | *Lunch break*    |
