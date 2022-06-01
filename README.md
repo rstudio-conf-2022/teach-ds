@@ -58,25 +58,25 @@ RSTUDIO.CLOUD ACCOUNT, ETC.\]
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Welcome + Curriculum design        |
+| 09:00 - 10:30 | Welcome + Curriculum design [Mine]       |
 | 10:30 - 11:00 | *Coffee break*   |
-| 11:00 - 12:30 | Computing infrastructure with RStudio Cloud         |
+| 11:00 - 12:30 | Teaching data science with the tidyverse [Mine]       |
 | 12:30 - 13:30 | *Lunch break*    |
-| 13:30 - 15:00 | Reproducible workflows: Quarto, Git, GitHub        |
+| 13:30 - 15:00 | Teaching modern modeling with tidymodels [Maria]       |
 | 15:00 - 15:30 | *Coffee break*   |
-| 15:30 - 17:00 | Teaching the tidyverse       |
+| 15:30 - 17:00 | Interactivity and immediate feedback with learnr [Maria]       |
 
 ### Day 2
 
 | Time          | Activity         |
 | :------------ | :--------------- |
-| 09:00 - 10:30 | Teaching tidymodels        |
+| 09:00 - 10:30 | Computing infrastructure with RStudio Cloud [Mine]       |
 | 10:30 - 11:00 | *Coffee break*   |
-| 11:00 - 12:30 | Interactivity and immediate feedback with learnr      |
+| 11:00 - 12:30 | Reproducible workflows: Quarto, Git, GitHub [Mine + Maria]       |
 | 12:30 - 13:30 | *Lunch break*    |
-| 13:30 - 15:00 | Making a data package    OR Getting more out of GitHub    |
+| 13:30 - 15:00 | Making a data package [Mine]       |
 | 15:00 - 15:30 | *Coffee break*   |
-| 15:30 - 17:00 | #rstats lifehacks for instructors OR Organizing teaching materials with Quarto (websites, books, rticles, etc.)        |
+| 15:30 - 17:00 | Organizing teaching materials + Wrap-up / Q&A [Maria]       |
 
 ## Instructors
 
