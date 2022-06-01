@@ -33,7 +33,7 @@ This workshop is aimed primarily at participants teaching data science in an aca
 
 ## Learning objectives
 
-[ADD AN ITEMIZED LIST OF LEARNING OBJECTIVES.]
+Curriculum, workflow, and infrastructure design for teaching data science with R and RStudio.
 
 ## Is this course for me?
 
@@ -46,11 +46,57 @@ If your answer to any of the following questions is “yes”, then this is the 
 - Do you want to integrate version control with git into your teaching and learn about tools and best practices for running your course on GitHub?
 
 ## Prework
+In this workshop you will wear two hats: the educator and the learner. At times I will be demoing workflows for instructors (whom I assume are familiar with R, RStudio, and the tidyverse and have taught with or are interested in teaching with RStudio Cloud, Git, and GitHub) and at other times you will be working through the student view (on RStudio Cloud, assuming you're not using your local setup).
 
-\[ADD INFORMATION YOU WANT LEARNERS TO HAVE / STEPS THEY WANT THEM TO
-COMPLETE PRIOR TO THE WORKSHOP. THIS COULD BE A LINK TO A THREAD ON
-RSTUDIO COMMUNITY, PACKAGE INSTALL INSTRUCTIONS, HOW TO GET AN
-RSTUDIO.CLOUD ACCOUNT, ETC.\]
+For the former, you'll need to come prepared. For the latter, you can assume you're a student in an intro data science course and this is the first day of class (i.e. there's no expectation of prep).
+
+So, let's focus on the former -- the instructor view. The list of items you should complete prior to the workshop can be found below. If you need help with any of the steps, please ask on the [RStudio Community thread about this workshop](https://community.rstudio.com/t/designing-the-data-science-classroom-workshop-rstudio-conf-2020).
+
+**Note:** These steps will direct you to relevant chapters from "Happy Git with R" by Jenny Bryan et. al. It's such a great and comprehensive resource that I have not felt the need to replicate the information elsewhere.
+
+- [Register a free GitHub account](https://happygitwithr.com/github-acct.html#github-acct)
+- [Install or update R and RStudio](https://happygitwithr.com/install-r-rstudio.html#install-r-rstudio)
+- [Install Git](https://happygitwithr.com/install-git.html#install-git)
+- [Introduce yourself to Git](https://happygitwithr.com/hello-git.html#hello-git)
+- [Prove local Git can talk to GitHub](https://happygitwithr.com/push-pull-github.html#push-pull-github)
+- [Cache your username and password or set up SSH keys](https://happygitwithr.com/credential-caching.html#credential-caching)
+- [Create and save a GitHub Personal Access Token (PAT)](https://happygitwithr.com/credential-caching.html#credential-caching)
+- [Prove RStudio can find local Git and, therefore, can talk to GitHub](https://happygitwithr.com/rstudio-git-github.html#rstudio-git-github)
+
+Finally, specific to this workshop:
+- Install and load the following packages:
+  - From CRAN:
+  
+```
+install.packages("devtools")
+install.packages("DiagrammeR")
+install.packages("DT")
+install.packages("flesdashboard")
+install.packages("gapminder")
+install.packages("learnr")
+install.packages("lubridate")
+install.packages("infer")
+install.packages("magick")
+install.packages("nycflights13")
+install.packages("rvest")
+install.packages("shiny")
+install.packages("sortable")
+install.packages("tidyverse")
+install.packages("unvotes")
+```
+
+  - From GitHub:
+  
+```
+devtools::install_github("gadenbuie/countdown")
+devtools::install_github("OpenIntroStat/openintro-r-package")
+devtools::install_github("rundel/ghclass")
+devtools::install_github("rstudio/parsons")
+```
+
+## RStudio Cloud
+
+The RStudio Cloud workspace is at [INSERT LINK].
 
 ## Schedule
 
