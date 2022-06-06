@@ -1,5 +1,6 @@
 ---
-title: "Module 1 - Welcome"
+title: "Module 3"
+description: "Teaching modern modeling with tidymodels"
 ---
 
 ## Slides

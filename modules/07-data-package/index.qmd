@@ -1,5 +1,6 @@
 ---
-title: "Module 1 - Welcome"
+title: "Module 7"
+description: "Making a data package"
 ---
 
 ## Slides

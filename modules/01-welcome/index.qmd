@@ -1,5 +1,6 @@
 ---
-title: "Module 1 - Welcome"
+title: "Module 1"
+description: "Welcome + Curriculum design + Meet the toolkit"
 ---
 
 ## Slides

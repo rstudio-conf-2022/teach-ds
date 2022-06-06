@@ -1,0 +1,15 @@
+[
+  {
+    "listing": "/modules.html",
+    "items": [
+      "/modules/01-welcome/index.html",
+      "/modules/02-tidyverse/index.html",
+      "/modules/03-tidymodels/index.html",
+      "/modules/04-learnr/index.html",
+      "/modules/05-rstudio-cloud/index.html",
+      "/modules/06-reproduciblity/index.html",
+      "/modules/07-data-package/index.html",
+      "/modules/08-organizing/index.html"
+    ]
+  }
+]

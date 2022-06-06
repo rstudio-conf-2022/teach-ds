@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "slides.html",
-    "href": "slides.html",
-    "title": "Modernizing the undergraduate regression analysis course",
+    "objectID": "modules.html",
+    "href": "modules.html",
+    "title": "Modules",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "Welcome + Curriculum design + Meet the toolkit\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching data science with the tidyverse\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTeaching modern modeling with tidymodels\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nInteractivity and immediate feedback with learnr\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nComputing infrastructure with RStudio Cloud\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nReproducible workflows: Quarto, Git, GitHub\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaking a data package\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOrganizing teaching materials + Wrap-up / Q&A\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
@@ -56,23 +56,16 @@
     "text": "Day 2\n\n\n\n\n\n\n\n\nTime\nActivity\nPresenter\n\n\n\n\n09:00 - 10:30\nComputing infrastructure with RStudio Cloud\nMine\n\n\n10:30 - 11:00\n☕ Coffee break\n\n\n\n11:00 - 12:30\nReproducible workflows: Quarto, Git, GitHub\nMine + Maria\n\n\n12:30 - 13:30\n🍽️ Lunch break\n\n\n\n13:30 - 15:00\nMaking a data package\nMine\n\n\n15:00 - 15:30\n☕ Coffee break\n\n\n\n15:30 - 17:00\nOrganizing teaching materials + Wrap-up / Q&A\nMaria"
   },
   {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
-    "section": "",
-    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License."
-  },
-  {
-    "objectID": "modules/04-learnr/index.html",
-    "href": "modules/04-learnr/index.html",
-    "title": "Module 1 - Welcome",
+    "objectID": "modules/01-welcome/index.html",
+    "href": "modules/01-welcome/index.html",
+    "title": "Module 1",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "modules/04-learnr/index.html#exercises",
-    "href": "modules/04-learnr/index.html#exercises",
-    "title": "Module 1 - Welcome",
+    "objectID": "modules/01-welcome/index.html#exercises",
+    "href": "modules/01-welcome/index.html#exercises",
+    "title": "Module 1",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
   },
@@ -98,108 +91,101 @@
     "text": "Session agenda\n\n…"
   },
   {
-    "objectID": "modules/01-welcome/index.html",
-    "href": "modules/01-welcome/index.html",
-    "title": "Module 1 - Welcome",
+    "objectID": "modules/04-learnr/index.html",
+    "href": "modules/04-learnr/index.html",
+    "title": "Module 4",
     "section": "",
     "text": "View slides in full screen"
   },
   {
-    "objectID": "modules/01-welcome/index.html#exercises",
-    "href": "modules/01-welcome/index.html#exercises",
-    "title": "Module 1 - Welcome",
+    "objectID": "modules/04-learnr/index.html#exercises",
+    "href": "modules/04-learnr/index.html#exercises",
+    "title": "Module 4",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
   },
   {
     "objectID": "modules/03-tidymodels/index.html",
     "href": "modules/03-tidymodels/index.html",
-    "title": "Module 1 - Welcome",
+    "title": "Module 3",
     "section": "",
     "text": "View slides in full screen"
   },
   {
     "objectID": "modules/03-tidymodels/index.html#exercises",
     "href": "modules/03-tidymodels/index.html#exercises",
-    "title": "Module 1 - Welcome",
+    "title": "Module 3",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
   },
   {
     "objectID": "modules/08-organizing/index.html",
     "href": "modules/08-organizing/index.html",
-    "title": "Module 1 - Welcome",
+    "title": "Module 8",
     "section": "",
     "text": "View slides in full screen"
   },
   {
     "objectID": "modules/08-organizing/index.html#exercises",
     "href": "modules/08-organizing/index.html#exercises",
-    "title": "Module 1 - Welcome",
+    "title": "Module 8",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
   },
   {
     "objectID": "modules/07-data-package/index.html",
     "href": "modules/07-data-package/index.html",
-    "title": "Module 1 - Welcome",
+    "title": "Module 7",
     "section": "",
     "text": "View slides in full screen"
   },
   {
     "objectID": "modules/07-data-package/index.html#exercises",
     "href": "modules/07-data-package/index.html#exercises",
-    "title": "Module 1 - Welcome",
+    "title": "Module 7",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
   },
   {
     "objectID": "modules/02-tidyverse/index.html",
     "href": "modules/02-tidyverse/index.html",
-    "title": "Module 1 - Welcome",
+    "title": "Module 2",
     "section": "",
     "text": "View slides in full screen"
   },
   {
     "objectID": "modules/02-tidyverse/index.html#exercises",
     "href": "modules/02-tidyverse/index.html#exercises",
-    "title": "Module 1 - Welcome",
+    "title": "Module 2",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
   },
   {
     "objectID": "modules/05-rstudio-cloud/index.html",
     "href": "modules/05-rstudio-cloud/index.html",
-    "title": "Module 1 - Welcome",
+    "title": "Module 5",
     "section": "",
     "text": "View slides in full screen"
   },
   {
     "objectID": "modules/05-rstudio-cloud/index.html#exercises",
     "href": "modules/05-rstudio-cloud/index.html#exercises",
-    "title": "Module 1 - Welcome",
+    "title": "Module 5",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
   },
   {
     "objectID": "modules/06-reproduciblity/index.html",
     "href": "modules/06-reproduciblity/index.html",
-    "title": "Module 1 - Welcome",
+    "title": "Module 6",
     "section": "",
     "text": "View slides in full screen"
   },
   {
     "objectID": "modules/06-reproduciblity/index.html#exercises",
     "href": "modules/06-reproduciblity/index.html#exercises",
-    "title": "Module 1 - Welcome",
+    "title": "Module 6",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
-  },
-  {
-    "objectID": "resources.html#textbooks",
-    "href": "resources.html#textbooks",
-    "title": "Resources",
-    "section": "Textbooks",
-    "text": "Textbooks\n\nR for Data Science by Hadley Wickham, Garret Grolemund, and Mine Çetinkaya-Rundel.\nIntroduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin\nTidy modeling with R by Max Kuhn and Julia Silge"
   }
 ]

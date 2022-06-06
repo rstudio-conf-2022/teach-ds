@@ -2,8 +2,8 @@ project:
   type: website
 
 website:
-  title: "Modernizing the undergraduate regression analysis course"
-  description: "Homepage for eCOTS 2022 breakout session"
+  title: "Designing the Data Science Classroom"
+  description: "Homepage for rstudio::conf(2022) workshop"
   sidebar:
     background: "#2e3846"
     logo: "images/logo.gif"
@@ -20,24 +20,8 @@ website:
     contents:
      - href: index.qmd
        text: Home
-     - section: Modules
-       contents:
-        - href: modules/01-welcome/index.qmd
-          text: "01 - Welcome"
-        - href: modules/02-tidyverse/index.qmd
-          text: "02 - Teach tidyverse"
-        - href: modules/03-tidymodels/index.qmd
-          text: "03 - Teach tidymodels"
-        - href: modules/04-learnr/index.qmd
-          text: "04 - Interactivity with learnr"
-        - href: modules/05-rstudio-cloud/index.qmd
-          text: "05 - RStudio Cloud"
-        - href: modules/06-reproduciblity/index.qmd
-          text: "06 - Quarto + Git + GitHub"
-        - href: modules/07-data-package/index.qmd
-          text: "07 - Data package"
-        - href: modules/08-organizing/index.qmd
-          text: "08 - Organizing materials"
+     - href: modules.qmd
+       text: Modules
      - href: resources.qmd
        text: Resources
      - href: license.qmd

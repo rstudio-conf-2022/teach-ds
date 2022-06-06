@@ -1,5 +1,6 @@
 ---
-title: "Module 1 - Welcome"
+title: "Module 5"
+description: "Computing infrastructure with RStudio Cloud"
 ---
 
 ## Slides

@@ -1,5 +1,6 @@
 ---
-title: "Module 1 - Welcome"
+title: "Module 2"
+description: "Teaching data science with the tidyverse"
 ---
 
 ## Slides

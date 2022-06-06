@@ -1,5 +1,6 @@
 ---
-title: "Module 1 - Welcome"
+title: "Module 6"
+description: "Reproducible workflows: Quarto, Git, GitHub"
 ---
 
 ## Slides
