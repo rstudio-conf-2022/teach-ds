@@ -1,0 +1,9 @@
+[View slides in full screen](slides/index.html)
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="slides/" height="630" width="1120"></iframe>
+```
+
+</div>

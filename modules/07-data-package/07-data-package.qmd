@@ -1,0 +1,24 @@
+---
+title: "Making a data package"
+subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
+author: "Mine Çetinkaya-Rundel"
+footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
+logo: "../images/logo.png"
+format: 
+  revealjs:
+    theme: ../slides.scss
+    multiplex: true
+    transition: fade
+    slide-number: true
+    incremental: false 
+    chalkboard: true
+    center: true
+execute:
+  freeze: auto
+---
+
+# In progress
+
+::: callout-warning
+These slides are currently being designed and built.
+:::

@@ -1,0 +1,62 @@
+---
+title: "Welcome"
+subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
+author: "Mine Çetinkaya-Rundel"
+footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
+logo: "../images/logo.png"
+format: 
+  revealjs:
+    theme: ../slides.scss
+    multiplex: true
+    transition: fade
+    slide-number: true
+    incremental: false 
+    chalkboard: true
+    center: true
+execute:
+  freeze: auto
+---
+
+# Welcome
+
+## Introductions
+
+::: columns
+::: {.column width="50%"}
+![](images/mine.png){fig-alt="Dr. Mine Cetinkaya-Rundel" fig-align="center"}
+:::
+
+::: {.column width="50%"}
+![](images/maria.png){fig-alt="Dr. Maria Tackett" fig-align="center"}
+:::
+:::
+
+::: {style="text-align: center;"}
+Dr. Mine Çetinkaya-Rundel
+
+Dr. Maria Tackett
+:::
+
+## 
+
+![](../images/logo.png){fig-alt="Hex logo for workshop" fig-align="center"}
+
+::: {style="text-align: center;"}
+One link for all materials
+
+🔗 [bit.ly/rstd.io/teach-ds-conf22](https://bit.ly/rstd.io/teach-ds-conf22)
+:::
+
+## Session agenda
+
+-   ...
+
+# In progress
+
+::: callout-warning
+These slides are currently being designed and built.
+:::
+
+# Curriculum design
+
+# Meet the toolkit

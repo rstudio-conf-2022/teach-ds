@@ -1,0 +1,20 @@
+---
+title: "Module 1 - Welcome"
+---
+
+## Slides
+
+[View slides in full screen](../../modules/04-learnr/04-learnr.html)
+
+<div>
+
+```{=html}
+<iframe class="slide-deck" src="04-learnr.html" height="420" width="747"></iframe>
+```
+
+</div>
+
+## Exercises
+
+-   Exercise 1...
+-   Exercise 2...

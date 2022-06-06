@@ -1,0 +1,18 @@
+---
+title: "Resources"
+editor: visual
+---
+
+## Course websites
+
+<!--# TO DO: Add links to STA 199, IntroDS, etc. course websites. -->
+
+## Textbooks
+
+-   [R for Data Science](https://r4ds.hadley.nz/) by Hadley Wickham, Garret Grolemund, and Mine Çetinkaya-Rundel.
+
+-   [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) by Mine Çetinkaya-Rundel and Johanna Hardin
+
+-   [Tidy modeling with R](https://www.tmwr.org/) by Max Kuhn and Julia Silge
+
+<!--# TO DO: Add MDSR by Baumer? -->

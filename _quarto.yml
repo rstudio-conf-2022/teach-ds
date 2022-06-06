@@ -1,0 +1,57 @@
+project:
+  type: website
+
+website:
+  title: "Modernizing the undergraduate regression analysis course"
+  description: "Homepage for eCOTS 2022 breakout session"
+  sidebar:
+    background: "#2e3846"
+    logo: "images/logo.gif"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/matackett/ecots2022-modern-regression
+        text: GitHub
+      - icon: cloud-fill
+        href: https://rstudio.cloud/spaces/249609
+        text: RStudio Cloud
+    style: docked
+    contents:
+     - href: index.qmd
+       text: Home
+     - section: Modules
+       contents:
+        - href: modules/01-welcome/index.qmd
+          text: "01 - Welcome"
+        - href: modules/02-tidyverse/index.qmd
+          text: "02 - Teach tidyverse"
+        - href: modules/03-tidymodels/index.qmd
+          text: "03 - Teach tidymodels"
+        - href: modules/04-learnr/index.qmd
+          text: "04 - Interactivity with learnr"
+        - href: modules/05-rstudio-cloud/index.qmd
+          text: "05 - RStudio Cloud"
+        - href: modules/06-reproduciblity/index.qmd
+          text: "06 - Quarto + Git + GitHub"
+        - href: modules/07-data-package/index.qmd
+          text: "07 - Data package"
+        - href: modules/08-organizing/index.qmd
+          text: "08 - Organizing materials"
+     - href: resources.qmd
+       text: Resources
+     - href: license.qmd
+       text: License
+
+format:
+  html:
+    theme:
+      light: [cosmo, theme.scss]
+      dark: [cosmo, theme-dark.scss]
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+
+editor: visual
+
