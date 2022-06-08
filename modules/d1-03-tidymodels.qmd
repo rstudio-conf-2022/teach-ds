@@ -1,0 +1,19 @@
+---
+title: "Teaching modern modeling with tidymodels"
+subtitle: "13:30 - 15:00"
+author: "Maria Tackett"
+date: "2022-07-25"
+image: "images/tidymodels.png"
+---
+
+## Slides
+
+[View slides in full screen](../materials/03-tidymodels/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/03-tidymodels/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+-   Exercise 1...
+-   Exercise 2...

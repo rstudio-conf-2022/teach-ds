@@ -1,0 +1,19 @@
+---
+title: "Organizing teaching materials + Wrap-up / Q&A"
+subtitle: "15:30 - 17:00"
+author: "Maria Tackett"
+date: "2022-07-26"
+image: "images/organization.png"
+---
+
+## Slides
+
+[View slides in full screen](../materials/08-organizing/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/08-organizing/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+-   Exercise 1...
+-   Exercise 2...

@@ -1,0 +1,19 @@
+---
+title: "Interactivity and immediate feedback with learnr"
+subtitle: "15:30 - 17:00"
+author: "Maria Tackett"
+date: "2022-07-25"
+image: "images/learnr.png"
+---
+
+## Slides
+
+[View slides in full screen](../materials/04-learnr/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/04-learnr/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+-   Exercise 1...
+-   Exercise 2...

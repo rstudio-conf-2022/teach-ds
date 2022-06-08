@@ -57,9 +57,12 @@ For the latter, you can mostly assume that you're a student in an intro data sci
 However we'd also like to give you a taste of how the remainder of the semester goes, which often entails students watching background videos to prepare.
 To prepare for the first module, please watch the following video before the workshop.
 
-🎥 [Let them eat cake (first)!](https://youtu.be/fQ4t7p6ZXDg)
-
+```{=html}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fQ4t7p6ZXDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+::: {style="align: center;"}
 🖥️ [Slides](https://bit.ly/let-eat-cake-cc)
+:::
 
 For the former, you'll might need to prepare a bit more.
 If you already are a Git and GitHub user, have a personal token saved, and can push to and pull from GitHub without having to type your password in each time, you're good to go.
@@ -116,37 +119,7 @@ If you choose to use your local R and RStudio install for the workshop, you shou
 
 You can join the RStudio Cloud workspace for this workshop at [**rstd.io/teach-ds-conf22-cloud**](https://rstd.io/teach-ds-conf22-cloud).
 
-# Schedule
-
-## Day 1
-
-| Time          | Activity                                         | Presenter |
-|:------------|:---------------------------------------------|-------------|
-| 09:00 - 10:30 | Welcome + Curriculum design + Meet the toolkit   | Mine      |
-| 10:30 - 11:00 | ☕ *Coffee break*                                |           |
-| 11:00 - 12:30 | Teaching data science with the tidyverse         | Mine      |
-| 12:30 - 13:30 | 🍽️ *Lunch break*                                 |           |
-| 13:30 - 15:00 | Teaching modern modeling with tidymodels         | Maria     |
-| 15:00 - 15:30 | ☕ *Coffee break*                                |           |
-| 15:30 - 17:00 | Interactivity and immediate feedback with learnr | Maria     |
-
-: {tbl-colwidths="\[20,55,25\]"}
-
-## Day 2
-
-| Time          | Activity                                      | Presenter    |
-|:------------|:---------------------------------------------|-------------|
-| 09:00 - 10:30 | Computing infrastructure with RStudio Cloud   | Mine         |
-| 10:30 - 11:00 | ☕ *Coffee break*                             |              |
-| 11:00 - 12:30 | Reproducible workflows: Quarto, Git, GitHub   | Mine + Maria |
-| 12:30 - 13:30 | 🍽️ *Lunch break*                              |              |
-| 13:30 - 15:00 | Making a data package                         | Mine         |
-| 15:00 - 15:30 | ☕ *Coffee break*                             |              |
-| 15:30 - 17:00 | Organizing teaching materials + Wrap-up / Q&A | Maria        |
-
-: {tbl-colwidths="\[20,55,25\]"}
-
-# Presenters
+# Instructors
 
 ![](images/mine.png){style="float:right;padding: 0 0 0 10px;" fig-alt="Headshot of Dr. Mine Çetinkaya-Rundel" width="200"}
 

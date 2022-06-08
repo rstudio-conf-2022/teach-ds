@@ -1,0 +1,19 @@
+---
+title: "Teaching data science with the tidyverse"
+subtitle: "11:00 - 12:30"
+author: "Mine Çetinkaya-Rundel"
+date: "2022-07-25"
+image: "images/tidyverse.png"
+---
+
+## Slides
+
+[View slides in full screen](../materials/02-tidyverse/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/02-tidyverse/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+-   Exercise 1...
+-   Exercise 2...

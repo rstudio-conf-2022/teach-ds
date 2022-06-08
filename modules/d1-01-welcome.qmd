@@ -1,0 +1,19 @@
+---
+title: "Welcome + Curriculum design + Meet the toolkit"
+subtitle: "09:00 - 10:30"
+author: "Mine Çetinkaya-Rundel"
+date: "2022-07-25"
+image: "images/hello.png"
+---
+
+## Slides
+
+[View slides in full screen](../materials/01-welcome/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/01-welcome/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+-   Exercise 1...
+-   Exercise 2...

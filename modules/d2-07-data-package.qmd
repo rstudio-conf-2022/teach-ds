@@ -1,0 +1,19 @@
+---
+title: "Making a data package"
+subtitle: "13:30 - 15:00"
+author: "Mine Çetinkaya-Rundel"
+date: "2022-07-27"
+image: "images/data-package.png"
+---
+
+## Slides
+
+[View slides in full screen](../materials/07-data-package/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/07-data-package/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+-   Exercise 1...
+-   Exercise 2...

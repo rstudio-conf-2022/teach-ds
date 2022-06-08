@@ -20,12 +20,9 @@ website:
     contents:
      - href: index.qmd
        text: Home
-     - href: modules.qmd
-       text: Modules
+     - href: schedule.qmd
      - href: resources.qmd
-       text: Resources
      - href: license.qmd
-       text: License
 
 format:
   html:
