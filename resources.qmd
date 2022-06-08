@@ -47,8 +47,4 @@ This page is under construction and will be updated continuously until the works
 -   Teaching with the tidyverse:
     -   Çetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator's perspective of the tidyverse. *Technology Innovations in Statistics Education*, 14(1). <http://dx.doi.org/10.5070/T514154352>.
 -   Organizing teaching materials:
-    -   Dogucu, M., & Çetinkaya-Rundel, M.
-        (2022).
-        Tools and Recommendations for Reproducible Teaching.
-        *arXiv preprint arXiv:2202.09504*.
-        <https://doi.org/10.48550/arXiv.2202.09504>.
+    -   Dogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. *arXiv preprint arXiv:2202.09504*. <https://doi.org/10.48550/arXiv.2202.09504>.
