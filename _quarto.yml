@@ -11,7 +11,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.com/matackett/ecots2022-modern-regression
+        href: https://github.com/rstudio-conf-2022/teach-ds
         text: GitHub
       - icon: cloud-fill
         href: https://rstudio.cloud/spaces/249609
