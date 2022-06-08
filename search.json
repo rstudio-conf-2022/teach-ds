@@ -60,7 +60,14 @@
     "href": "modules/d2-06-reproduciblity.html",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "",
-    "text": "Motivating reproducibility\nTeaching authoring computational documents with Quarto\nTeaching version control with Git\nTeaching collaboration with GitHub\nUsing GitHub as your learning management system"
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d2-06-reproduciblity.html#outline",
+    "href": "modules/d2-06-reproduciblity.html#outline",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Outline",
+    "text": "Outline\n\nMotivating reproducibility\nTeaching authoring computational documents with Quarto\nTeaching version control with Git\nTeaching collaboration with GitHub\nUsing GitHub as your learning management system"
   },
   {
     "objectID": "modules/d2-06-reproduciblity.html#slides",
@@ -81,7 +88,14 @@
     "href": "modules/d1-03-tidymodels.html",
     "title": "Teaching modern modeling with tidymodels",
     "section": "",
-    "text": "…"
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d1-03-tidymodels.html#outline",
+    "href": "modules/d1-03-tidymodels.html#outline",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Outline",
+    "text": "Outline\n\n…"
   },
   {
     "objectID": "modules/d1-03-tidymodels.html#slides",
@@ -102,7 +116,14 @@
     "href": "modules/d1-01-hello.html",
     "title": "Hello #teachds",
     "section": "",
-    "text": "Introductions\nPrinciples for designing introductory data science curricula\n\nStart with cake 🍰\nCherish day one 🗓️\nSkip baby steps 🍼\nHide the veggies 🥦\nLeverage the ecosystem 🌲\n\nMeet the toolkit\n\nR and RStudio in RStudio Cloud\nQuarto\nGit and GitHub"
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d1-01-hello.html#outline",
+    "href": "modules/d1-01-hello.html#outline",
+    "title": "Hello #teachds",
+    "section": "Outline",
+    "text": "Outline\n\nIntroductions\nPrinciples for designing introductory data science curricula\n\nStart with cake 🍰\nCherish day one 🗓️\nSkip baby steps 🍼\nHide the veggies 🥦\nLeverage the ecosystem 🌲\n\nMeet the toolkit\n\nR and RStudio in RStudio Cloud\nQuarto\nGit and GitHub"
   },
   {
     "objectID": "modules/d1-01-hello.html#slides",
@@ -144,7 +165,14 @@
     "href": "modules/d2-05-rstudio-cloud.html",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "",
-    "text": "Why and how RStudio in the Cloud?\nProjects in RStudio Cloud\nTeaching with RStudio Cloud\n\nShare an RStudio Cloud project\nInvite students to an RStudio Cloud workspace\n\nTips for teaching with RStudio Cloud\nThe rscloud package"
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d2-05-rstudio-cloud.html#outline",
+    "href": "modules/d2-05-rstudio-cloud.html#outline",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Outline",
+    "text": "Outline\n\nWhy and how RStudio in the Cloud?\nProjects in RStudio Cloud\nTeaching with RStudio Cloud\n\nShare an RStudio Cloud project\nInvite students to an RStudio Cloud workspace\n\nTips for teaching with RStudio Cloud\nThe rscloud package"
   },
   {
     "objectID": "modules/d2-05-rstudio-cloud.html#slides",
@@ -165,7 +193,14 @@
     "href": "modules/d1-04-learnr.html",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "",
-    "text": "…"
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d1-04-learnr.html#outline",
+    "href": "modules/d1-04-learnr.html#outline",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Outline",
+    "text": "Outline\n\n…"
   },
   {
     "objectID": "modules/d1-04-learnr.html#slides",
@@ -186,7 +221,14 @@
     "href": "modules/d1-02-tidyverse.html",
     "title": "Teaching data science with the tidyverse",
     "section": "",
-    "text": "Principles of the tidyverse\nTeaching with the tidyverse\n\nGrouped summaries\nData visualization\nBeyond wrangling, summaries, and visualizations\n\nPedagogical strengths of the tidyverse\nKeeping up with the tidyverse"
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d1-02-tidyverse.html#outline",
+    "href": "modules/d1-02-tidyverse.html#outline",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Outline",
+    "text": "Outline\n\nPrinciples of the tidyverse\nTeaching with the tidyverse\n\nGrouped summaries\nData visualization\nBeyond wrangling, summaries, and visualizations\n\nPedagogical strengths of the tidyverse\nKeeping up with the tidyverse"
   },
   {
     "objectID": "modules/d1-02-tidyverse.html#slides",
@@ -221,7 +263,14 @@
     "href": "modules/d2-08-organizing.html",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "",
-    "text": "…"
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d2-08-organizing.html#outline",
+    "href": "modules/d2-08-organizing.html#outline",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Outline",
+    "text": "Outline\n\n…"
   },
   {
     "objectID": "modules/d2-08-organizing.html#slides",
@@ -249,7 +298,14 @@
     "href": "modules/d2-07-data-package.html",
     "title": "Making a data package",
     "section": "",
-    "text": "Anatomy of an R package\nData cleaning and the data-raw folder\nDocumenting your data\nChecking and testing your package\nYour package on GitHub and CRAN"
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d2-07-data-package.html#outline",
+    "href": "modules/d2-07-data-package.html#outline",
+    "title": "Making a data package",
+    "section": "Outline",
+    "text": "Outline\n\nAnatomy of an R package\nData cleaning and the data-raw folder\nDocumenting your data\nChecking and testing your package\nYour package on GitHub and CRAN"
   },
   {
     "objectID": "modules/d2-07-data-package.html#slides",
