@@ -1,5 +1,5 @@
 ---
-title: "Welcome"
+title: "Hello #teachds"
 subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
 author: "Mine Çetinkaya-Rundel"
 footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
