@@ -1,15 +1,21 @@
 [
   {
-    "listing": "/modules.html",
+    "listing": "/schedule.html",
     "items": [
-      "/modules/01-welcome/index.html",
-      "/modules/02-tidyverse/index.html",
-      "/modules/03-tidymodels/index.html",
-      "/modules/04-learnr/index.html",
-      "/modules/05-rstudio-cloud/index.html",
-      "/modules/06-reproduciblity/index.html",
-      "/modules/07-data-package/index.html",
-      "/modules/08-organizing/index.html"
+      "/modules/d1-01-welcome.html",
+      "/modules/d1-01b-coffee-break.html",
+      "/modules/d1-02-tidyverse.html",
+      "/modules/d1-02b-lunch-break.html",
+      "/modules/d1-03-tidymodels.html",
+      "/modules/d1-03b-coffee-break.html",
+      "/modules/d1-04-learnr.html",
+      "/modules/d2-05-rstudio-cloud.html",
+      "/modules/d2-05b-coffee-break.html",
+      "/modules/d2-06-reproduciblity.html",
+      "/modules/d2-06b-lunch-break.html",
+      "/modules/d2-07-data-package.html",
+      "/modules/d2-07b-coffee-break.html",
+      "/modules/d2-08-organizing.html"
     ]
   }
 ]
