@@ -6,6 +6,16 @@ date: "2022-07-25"
 image: "images/tidyverse.png"
 ---
 
+## Outline
+
+-   Principles of the tidyverse
+-   Teaching with the tidyverse
+    -   Grouped summaries
+    -   Data visualization
+    -   Beyond wrangling, summaries, and visualizations
+-   Pedagogical strengths of the tidyverse
+-   Keeping up with the tidyverse
+
 ## Slides
 
 [View slides in full screen](../materials/02-tidyverse/index.html)
