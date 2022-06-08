@@ -4,6 +4,19 @@ subtitle: "11:00 - 12:30"
 author: "Mine Çetinkaya-Rundel"
 date: "2022-07-25"
 image: "images/tidyverse.png"
+listing:
+  - id: exercises
+    contents:
+      - ../materials/02-tidyverse/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names:
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: images/exercise.png
+tbl-colwidths: [5,20,75]
 ---
 
 ## Outline
@@ -25,5 +38,5 @@ image: "images/tidyverse.png"
 ```
 ## Exercises
 
--   Exercise 1...
--   Exercise 2...
+::: {#exercises}
+:::

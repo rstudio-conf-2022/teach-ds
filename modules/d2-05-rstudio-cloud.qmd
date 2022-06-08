@@ -4,7 +4,30 @@ subtitle: "09:00 - 10:30"
 author: "Mine Çetinkaya-Rundel"
 date: "2022-07-26"
 image: "images/rstudio-cloud.png"
+listing:
+  - id: exercises
+    contents:
+      - ../materials/05-rstudio-cloud/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names:
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: images/exercise.png
+tbl-colwidths: [5,20,75]
 ---
+
+## Outline
+
+-   Why and how RStudio in the Cloud?
+-   Projects in RStudio Cloud
+-   Teaching with RStudio Cloud
+    -   Share an RStudio Cloud project
+    -   Invite students to an RStudio Cloud workspace
+-   Tips for teaching with RStudio Cloud
+-   The `rscloud` package
 
 ## Slides
 
@@ -15,5 +38,5 @@ image: "images/rstudio-cloud.png"
 ```
 ## Exercises
 
--   Exercise 1...
--   Exercise 2...
+::: {#exercises}
+:::

@@ -4,7 +4,28 @@ subtitle: "11:00 - 12:30"
 author: "Mine Çetinkaya-Rundel"
 date: "2022-07-26"
 image: "images/toolkit.png"
+listing:
+  - id: exercises
+    contents:
+      - ../materials/06-reproducibility/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names:
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: images/exercise.png
+tbl-colwidths: [5,20,75]
 ---
+
+## Outline
+
+-   Motivating reproducibility
+-   Teaching authoring computational documents with Quarto
+-   Teaching version control with Git
+-   Teaching collaboration with GitHub
+-   Using GitHub as your learning management system
 
 ## Slides
 
@@ -15,5 +36,5 @@ image: "images/toolkit.png"
 ```
 ## Exercises
 
--   Exercise 1...
--   Exercise 2...
+::: {#exercises}
+:::

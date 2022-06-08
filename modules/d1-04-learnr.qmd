@@ -4,7 +4,24 @@ subtitle: "15:30 - 17:00"
 author: "Maria Tackett"
 date: "2022-07-25"
 image: "images/learnr.png"
+listing:
+  - id: exercises
+    contents:
+      - ../materials/04-learnr/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names:
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: images/exercise.png
+tbl-colwidths: [5,20,75]
 ---
+
+## Outline
+
+-   ...
 
 ## Slides
 
@@ -15,5 +32,5 @@ image: "images/learnr.png"
 ```
 ## Exercises
 
--   Exercise 1...
--   Exercise 2...
+::: {#exercises}
+:::

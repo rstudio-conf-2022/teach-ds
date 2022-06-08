@@ -4,22 +4,43 @@ subtitle: "09:00 - 10:30"
 author: "Mine Çetinkaya-Rundel"
 date: "2022-07-25"
 image: "images/hello.png"
+listing:
+  - id: exercises
+    contents:
+      - ../materials/01-hello/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names:
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: images/exercise.png
+tbl-colwidths: [5,20,75]
 ---
 
 ## Outline
 
 -   Introductions
--   Curriculum design
+-   Principles for designing introductory data science curricula
+    -   Start with cake 🍰
+    -   Cherish day one 🗓️
+    -   Skip baby steps 🍼
+    -   Hide the veggies 🥦
+    -   Leverage the ecosystem 🌲
 -   Meet the toolkit
+    -   R and RStudio in RStudio Cloud
+    -   Quarto
+    -   Git and GitHub
 
 ## Slides
 
-[View slides in full screen](../materials/01-welcome/index.html)
+[View slides in full screen](../materials/01-hello/index.html)
 
 ```{=html}
-<iframe class="slide-deck" src="../materials/01-welcome/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="../materials/01-hello/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 ## Exercises
 
--   Exercise 1...
--   Exercise 2...
+::: {#exercises}
+:::
