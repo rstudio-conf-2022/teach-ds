@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Mine Çetinkaya-Rundel">
+<meta name="dcterms.date" content="2022-07-25">
 
-<title>Designing the Data Science Classroom - Resources</title>
+<title>Designing the Data Science Classroom - Hello #teachds</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -18,23 +20,25 @@ ul.task-list{list-style: none;}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -54,7 +58,31 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-exercises .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-subtitle','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-exercises'] = new List('listing-exercises', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -64,7 +92,7 @@ ul.task-list{list-style: none;}
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Resources</h1>
+      <h1 class="quarto-secondary-nav-title">Hello #teachds</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -76,8 +104,8 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation docked overflow-auto">
     <div class="pt-lg-2 mt-2 text-center sidebar-header">
-      <a href="./" class="sidebar-logo-link">
-      <img src="./images/logo.gif" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      <a href="../" class="sidebar-logo-link">
+      <img src="../images/logo.gif" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
       </a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/matackett/ecots2022-modern-regression" title="GitHub" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
@@ -94,22 +122,22 @@ ul.task-list{list-style: none;}
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Home</a>
+  <a href="../index.html" class="sidebar-item-text sidebar-link">Home</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./schedule.html" class="sidebar-item-text sidebar-link">Schedule</a>
+  <a href="../schedule.html" class="sidebar-item-text sidebar-link">Schedule</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./resources.html" class="sidebar-item-text sidebar-link active">Resources</a>
+  <a href="../resources.html" class="sidebar-item-text sidebar-link">Resources</a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./license.html" class="sidebar-item-text sidebar-link">License</a>
+  <a href="../license.html" class="sidebar-item-text sidebar-link">License</a>
   </div>
 </li>
     </ul>
@@ -121,10 +149,9 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#course-material-repositories" id="toc-course-material-repositories" class="nav-link active" data-scroll-target="#course-material-repositories">Course material repositories</a></li>
-  <li><a href="#course-websites" id="toc-course-websites" class="nav-link" data-scroll-target="#course-websites">Course websites</a></li>
-  <li><a href="#textbooks" id="toc-textbooks" class="nav-link" data-scroll-target="#textbooks">Textbooks</a></li>
-  <li><a href="#papers" id="toc-papers" class="nav-link" data-scroll-target="#papers">Papers</a></li>
+  <li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline">Outline</a></li>
+  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
 </nav>
     </div>
@@ -133,75 +160,98 @@ ul.task-list{list-style: none;}
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Resources</h1>
+<h1 class="title d-none d-lg-block">Hello #teachds</h1>
+<p class="subtitle lead">09:00 - 10:30</p>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Presenter</div>
+    <div class="quarto-title-meta-contents">
+             <p>Mine Çetinkaya-Rundel </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Date</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 25, 2022</p>
+    </div>
+  </div>
     
   </div>
   
 
 </header>
 
-<div class="callout-warning callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This page is under construction and will be updated continuously until the workshop date.</p>
-</div>
-</div>
-<section id="course-material-repositories" class="level2">
-<h2 class="anchored" data-anchor-id="course-material-repositories">Course material repositories</h2>
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
 <ul>
-<li>Data Science in a Box: <a href="https://datasciencebox.org/">datasciencebox.org</a></li>
-</ul>
-<!--# TO DO: Add others... -->
-</section>
-<section id="course-websites" class="level2">
-<h2 class="anchored" data-anchor-id="course-websites">Course websites</h2>
-<!--# TO DO: Add links to STA 199, IntroDS, etc. course websites. -->
-</section>
-<section id="textbooks" class="level2">
-<h2 class="anchored" data-anchor-id="textbooks">Textbooks</h2>
+<li>Introductions</li>
+<li>Principles for designing introductory data science curricula
 <ul>
-<li><p><a href="https://r4ds.hadley.nz/">R for Data Science</a> by Hadley Wickham, Garret Grolemund, and Mine Çetinkaya-Rundel.</p></li>
-<li><p><a href="https://openintro-ims.netlify.app/">Introduction to Modern Statistics</a> by Mine Çetinkaya-Rundel and Johanna Hardin</p></li>
-<li><p><a href="https://www.tmwr.org/">Tidy modeling with R</a> by Max Kuhn and Julia Silge</p></li>
-</ul>
-<!--# TO DO: Add MDSR by Baumer? -->
-</section>
-<section id="papers" class="level2">
-<h2 class="anchored" data-anchor-id="papers">Papers</h2>
-<!--# TO DO: Add more relevant papers. -->
-<ul>
-<li>Designing introductory data science curricula:
-<ul>
-<li><p>Çetinkaya-Rundel, M., &amp; Ellison, V. (2021). A fresh look at introductory data science. <em>Journal of Statistics and Data Science Education</em>, <em>29</em>(sup1), S16-S26. <a href="https://doi.org/10.1080/10691898.2020.1804497" class="uri">https://doi.org/10.1080/10691898.2020.1804497</a>.</p></li>
-<li><p>Baumer, B. (2015). A data science course for undergraduates: Thinking with data. <em>The American Statistician</em>, <em>69</em>(4), 334-342. <a href="https://doi.org/10.1080/00031305.2015.1081105" class="uri">https://doi.org/10.1080/00031305.2015.1081105</a>.</p></li>
+<li>Start with cake 🍰</li>
+<li>Cherish day one 🗓️</li>
+<li>Skip baby steps 🍼</li>
+<li>Hide the veggies 🥦</li>
+<li>Leverage the ecosystem 🌲</li>
 </ul></li>
-<li>Teaching reproducibility and version control:
+<li>Meet the toolkit
 <ul>
-<li>Beckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., &amp; Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. <em>Journal of Statistics and Data Science Education</em>, <em>29</em>(sup1), S132-S144. <a href="https://doi.org/10.1080/10691898.2020.1848485" class="uri">https://doi.org/10.1080/10691898.2020.1848485</a>.</li>
-</ul></li>
-<li>Teaching with the tidyverse:
-<ul>
-<li>Çetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., &amp; Rundel, C. (2022). An educator’s perspective of the tidyverse. <em>Technology Innovations in Statistics Education</em>, 14(1). <a href="http://dx.doi.org/10.5070/T514154352" class="uri">http://dx.doi.org/10.5070/T514154352</a>.</li>
-</ul></li>
-<li>Organizing teaching materials:
-<ul>
-<li>Dogucu, M., &amp; Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. <em>arXiv preprint arXiv:2202.09504</em>. <a href="https://doi.org/10.48550/arXiv.2202.09504" class="uri">https://doi.org/10.48550/arXiv.2202.09504</a>.</li>
+<li>R and RStudio in RStudio Cloud</li>
+<li>Quarto</li>
+<li>Git and GitHub</li>
 </ul></li>
 </ul>
+</section>
+<section id="slides" class="level2">
+<h2 class="anchored" data-anchor-id="slides">Slides</h2>
+<p><a href="../materials/01-hello/index.html">View slides in full screen</a></p>
+<iframe class="slide-deck" src="../materials/01-hello/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+</section>
+<section id="exercises" class="level2">
+<h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
+<div id="listing-exercises" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Exercise
+</th>
+<th>
+Title
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1654662073010" data-listing-reading-time-sort="0.005" data-listing-title-sort="Title placeholder for Exercise 1" data-listing-filename-sort="ex-1.qmd">
+<td class="listing-subtitle">
+Exercise 1
+</td>
+<td class="listing-title">
+<a href="../materials/01-hello/ex-1.html" class="title">Title placeholder for Exercise 1</a>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1654662073010" data-listing-reading-time-sort="0.005" data-listing-title-sort="Title placeholder for Exercise 2" data-listing-filename-sort="ex-2.qmd">
+<td class="listing-subtitle">
+Exercise 2
+</td>
+<td class="listing-title">
+<a href="../materials/01-hello/ex-2.html" class="title">Title placeholder for Exercise 2</a>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
 
 
 </section>

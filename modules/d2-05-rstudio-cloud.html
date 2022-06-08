@@ -26,6 +26,8 @@ ul.task-list{list-style: none;}
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -56,7 +58,31 @@ ul.task-list{list-style: none;}
     "search-submit-button-title": "Submit"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-exercises .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-subtitle','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-exercises'] = new List('listing-exercises', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -123,7 +149,8 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#slides" id="toc-slides" class="nav-link active" data-scroll-target="#slides">Slides</a></li>
+  <li><a href="#outline" id="toc-outline" class="nav-link active" data-scroll-target="#outline">Outline</a></li>
+  <li><a href="#slides" id="toc-slides" class="nav-link" data-scroll-target="#slides">Slides</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   </ul>
 </nav>
@@ -160,6 +187,20 @@ ul.task-list{list-style: none;}
 
 </header>
 
+<section id="outline" class="level2">
+<h2 class="anchored" data-anchor-id="outline">Outline</h2>
+<ul>
+<li>Why and how RStudio in the Cloud?</li>
+<li>Projects in RStudio Cloud</li>
+<li>Teaching with RStudio Cloud
+<ul>
+<li>Share an RStudio Cloud project</li>
+<li>Invite students to an RStudio Cloud workspace</li>
+</ul></li>
+<li>Tips for teaching with RStudio Cloud</li>
+<li>The <code>rscloud</code> package</li>
+</ul>
+</section>
 <section id="slides" class="level2">
 <h2 class="anchored" data-anchor-id="slides">Slides</h2>
 <p><a href="../materials/05-rstudio-cloud/index.html">View slides in full screen</a></p>
@@ -167,10 +208,44 @@ ul.task-list{list-style: none;}
 </section>
 <section id="exercises" class="level2">
 <h2 class="anchored" data-anchor-id="exercises">Exercises</h2>
-<ul>
-<li>Exercise 1…</li>
-<li>Exercise 2…</li>
-</ul>
+<div id="listing-exercises" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Exercise
+</th>
+<th>
+Title
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1654662073010" data-listing-reading-time-sort="0.005" data-listing-title-sort="Title placeholder for Exercise 1" data-listing-filename-sort="ex-1.qmd">
+<td class="listing-subtitle">
+Exercise 1
+</td>
+<td class="listing-title">
+<a href="../materials/05-rstudio-cloud/ex-1.html" class="title">Title placeholder for Exercise 1</a>
+</td>
+</tr>
+<tr data-index="1" data-listing-file-modified-sort="1654662073010" data-listing-reading-time-sort="0.005" data-listing-title-sort="Title placeholder for Exercise 2" data-listing-filename-sort="ex-2.qmd">
+<td class="listing-subtitle">
+Exercise 2
+</td>
+<td class="listing-title">
+<a href="../materials/05-rstudio-cloud/ex-2.html" class="title">Title placeholder for Exercise 2</a>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
 
 
 </section>

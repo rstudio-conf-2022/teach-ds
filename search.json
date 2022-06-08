@@ -1,24 +1,45 @@
 [
   {
-    "objectID": "materials/01-welcome/index.html#introductions",
-    "href": "materials/01-welcome/index.html#introductions",
-    "title": "Welcome",
+    "objectID": "materials/01-hello/index.html#introductions",
+    "href": "materials/01-hello/index.html#introductions",
+    "title": "Hello #teachds",
     "section": "Introductions",
     "text": "Introductions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. Mine Çetinkaya-Rundel\nDr. Maria Tackett"
   },
   {
-    "objectID": "materials/01-welcome/index.html#section",
-    "href": "materials/01-welcome/index.html#section",
-    "title": "Welcome",
+    "objectID": "materials/01-hello/index.html#section",
+    "href": "materials/01-hello/index.html#section",
+    "title": "Hello #teachds",
     "section": "",
     "text": "One link for all materials\n🔗 bit.ly/rstd.io/teach-ds-conf22"
   },
   {
-    "objectID": "materials/01-welcome/index.html#session-agenda",
-    "href": "materials/01-welcome/index.html#session-agenda",
-    "title": "Welcome",
+    "objectID": "materials/01-hello/index.html#session-agenda",
+    "href": "materials/01-hello/index.html#session-agenda",
+    "title": "Hello #teachds",
     "section": "Session agenda",
     "text": "Session agenda\n\n…"
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "resources.html#course-material-repositories",
+    "href": "resources.html#course-material-repositories",
+    "title": "Resources",
+    "section": "Course material repositories",
+    "text": "Course material repositories\n\nData Science in a Box: datasciencebox.org"
+  },
+  {
+    "objectID": "resources.html#course-websites",
+    "href": "resources.html#course-websites",
+    "title": "Resources",
+    "section": "Course websites",
+    "text": "Course websites"
   },
   {
     "objectID": "resources.html#textbooks",
@@ -28,46 +49,74 @@
     "text": "Textbooks\n\nR for Data Science by Hadley Wickham, Garret Grolemund, and Mine Çetinkaya-Rundel.\nIntroduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin\nTidy modeling with R by Max Kuhn and Julia Silge"
   },
   {
+    "objectID": "resources.html#papers",
+    "href": "resources.html#papers",
+    "title": "Resources",
+    "section": "Papers",
+    "text": "Papers\n\n\nDesigning introductory data science curricula:\n\nÇetinkaya-Rundel, M., & Ellison, V. (2021). A fresh look at introductory data science. Journal of Statistics and Data Science Education, 29(sup1), S16-S26. https://doi.org/10.1080/10691898.2020.1804497.\nBaumer, B. (2015). A data science course for undergraduates: Thinking with data. The American Statistician, 69(4), 334-342. https://doi.org/10.1080/00031305.2015.1081105.\n\nTeaching reproducibility and version control:\n\nBeckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. Journal of Statistics and Data Science Education, 29(sup1), S132-S144. https://doi.org/10.1080/10691898.2020.1848485.\n\nTeaching with the tidyverse:\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator’s perspective of the tidyverse. Technology Innovations in Statistics Education, 14(1). http://dx.doi.org/10.5070/T514154352.\n\nOrganizing teaching materials:\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. arXiv preprint arXiv:2202.09504. https://doi.org/10.48550/arXiv.2202.09504."
+  },
+  {
     "objectID": "modules/d2-06-reproduciblity.html",
     "href": "modules/d2-06-reproduciblity.html",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "Motivating reproducibility\nTeaching authoring computational documents with Quarto\nTeaching version control with Git\nTeaching collaboration with GitHub\nUsing GitHub as your learning management system"
+  },
+  {
+    "objectID": "modules/d2-06-reproduciblity.html#slides",
+    "href": "modules/d2-06-reproduciblity.html#slides",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "modules/d2-06-reproduciblity.html#exercises",
     "href": "modules/d2-06-reproduciblity.html#exercises",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1…\nExercise 2…"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-03-tidymodels.html",
     "href": "modules/d1-03-tidymodels.html",
     "title": "Teaching modern modeling with tidymodels",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "…"
+  },
+  {
+    "objectID": "modules/d1-03-tidymodels.html#slides",
+    "href": "modules/d1-03-tidymodels.html#slides",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "modules/d1-03-tidymodels.html#exercises",
     "href": "modules/d1-03-tidymodels.html#exercises",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1…\nExercise 2…"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "modules/d1-01-welcome.html",
-    "href": "modules/d1-01-welcome.html",
-    "title": "Welcome + Curriculum design + Meet the toolkit",
+    "objectID": "modules/d1-01-hello.html",
+    "href": "modules/d1-01-hello.html",
+    "title": "Hello #teachds",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "Introductions\nPrinciples for designing introductory data science curricula\n\nStart with cake 🍰\nCherish day one 🗓️\nSkip baby steps 🍼\nHide the veggies 🥦\nLeverage the ecosystem 🌲\n\nMeet the toolkit\n\nR and RStudio in RStudio Cloud\nQuarto\nGit and GitHub"
   },
   {
-    "objectID": "modules/d1-01-welcome.html#exercises",
-    "href": "modules/d1-01-welcome.html#exercises",
-    "title": "Welcome + Curriculum design + Meet the toolkit",
+    "objectID": "modules/d1-01-hello.html#slides",
+    "href": "modules/d1-01-hello.html#slides",
+    "title": "Hello #teachds",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d1-01-hello.html#exercises",
+    "href": "modules/d1-01-hello.html#exercises",
+    "title": "Hello #teachds",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1…\nExercise 2…"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-05b-coffee-break.html",
@@ -95,42 +144,63 @@
     "href": "modules/d2-05-rstudio-cloud.html",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "Why and how RStudio in the Cloud?\nProjects in RStudio Cloud\nTeaching with RStudio Cloud\n\nShare an RStudio Cloud project\nInvite students to an RStudio Cloud workspace\n\nTips for teaching with RStudio Cloud\nThe rscloud package"
+  },
+  {
+    "objectID": "modules/d2-05-rstudio-cloud.html#slides",
+    "href": "modules/d2-05-rstudio-cloud.html#slides",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "modules/d2-05-rstudio-cloud.html#exercises",
     "href": "modules/d2-05-rstudio-cloud.html#exercises",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1…\nExercise 2…"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-04-learnr.html",
     "href": "modules/d1-04-learnr.html",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "…"
+  },
+  {
+    "objectID": "modules/d1-04-learnr.html#slides",
+    "href": "modules/d1-04-learnr.html#slides",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "modules/d1-04-learnr.html#exercises",
     "href": "modules/d1-04-learnr.html#exercises",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1…\nExercise 2…"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-02-tidyverse.html",
     "href": "modules/d1-02-tidyverse.html",
     "title": "Teaching data science with the tidyverse",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "Principles of the tidyverse\nTeaching with the tidyverse\n\nGrouped summaries\nData visualization\nBeyond wrangling, summaries, and visualizations\n\nPedagogical strengths of the tidyverse\nKeeping up with the tidyverse"
+  },
+  {
+    "objectID": "modules/d1-02-tidyverse.html#slides",
+    "href": "modules/d1-02-tidyverse.html#slides",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "modules/d1-02-tidyverse.html#exercises",
     "href": "modules/d1-02-tidyverse.html#exercises",
     "title": "Teaching data science with the tidyverse",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1…\nExercise 2…"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-02b-lunch-break.html",
@@ -151,14 +221,21 @@
     "href": "modules/d2-08-organizing.html",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "…"
+  },
+  {
+    "objectID": "modules/d2-08-organizing.html#slides",
+    "href": "modules/d2-08-organizing.html#slides",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "modules/d2-08-organizing.html#exercises",
     "href": "modules/d2-08-organizing.html#exercises",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1…\nExercise 2…"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-03b-coffee-break.html",
@@ -172,14 +249,21 @@
     "href": "modules/d2-07-data-package.html",
     "title": "Making a data package",
     "section": "",
-    "text": "View slides in full screen"
+    "text": "Anatomy of an R package\nData cleaning and the data-raw folder\nDocumenting your data\nChecking and testing your package\nYour package on GitHub and CRAN"
+  },
+  {
+    "objectID": "modules/d2-07-data-package.html#slides",
+    "href": "modules/d2-07-data-package.html#slides",
+    "title": "Making a data package",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "modules/d2-07-data-package.html#exercises",
     "href": "modules/d2-07-data-package.html#exercises",
     "title": "Making a data package",
     "section": "Exercises",
-    "text": "Exercises\n\nExercise 1…\nExercise 2…"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "slides.html",

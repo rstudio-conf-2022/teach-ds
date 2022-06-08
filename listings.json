@@ -1,8 +1,61 @@
 [
   {
+    "listing": "/modules/d2-06-reproduciblity.html",
+    "items": []
+  },
+  {
+    "listing": "/modules/d1-03-tidymodels.html",
+    "items": [
+      "/materials/03-tidymodels/ex-1.html",
+      "/materials/03-tidymodels/ex-2.html"
+    ]
+  },
+  {
+    "listing": "/modules/d1-01-hello.html",
+    "items": [
+      "/materials/01-hello/ex-1.html",
+      "/materials/01-hello/ex-2.html"
+    ]
+  },
+  {
+    "listing": "/modules/d2-05-rstudio-cloud.html",
+    "items": [
+      "/materials/05-rstudio-cloud/ex-1.html",
+      "/materials/05-rstudio-cloud/ex-2.html"
+    ]
+  },
+  {
+    "listing": "/modules/d1-04-learnr.html",
+    "items": [
+      "/materials/04-learnr/ex-1.html",
+      "/materials/04-learnr/ex-2.html"
+    ]
+  },
+  {
+    "listing": "/modules/d1-02-tidyverse.html",
+    "items": [
+      "/materials/02-tidyverse/ex-1.html",
+      "/materials/02-tidyverse/ex-2.html"
+    ]
+  },
+  {
+    "listing": "/modules/d2-08-organizing.html",
+    "items": [
+      "/materials/08-organizing/ex-1.html",
+      "/materials/08-organizing/ex-2.html"
+    ]
+  },
+  {
+    "listing": "/modules/d2-07-data-package.html",
+    "items": [
+      "/materials/07-data-package/ex-1.html",
+      "/materials/07-data-package/ex-2.html"
+    ]
+  },
+  {
     "listing": "/schedule.html",
     "items": [
-      "/modules/d1-01-welcome.html",
+      "/modules/d1-01-hello.html",
       "/modules/d1-01b-coffee-break.html",
       "/modules/d1-02-tidyverse.html",
       "/modules/d1-02b-lunch-break.html",
