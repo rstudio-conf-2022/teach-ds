@@ -43,14 +43,12 @@ This page is under construction and will be updated continuously until the works
         *The American Statistician*, *69*(4), 334-342.
         <https://doi.org/10.1080/00031305.2015.1081105>.
 -   Teaching reproducibility and version control:
-    -   Beckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M.
-        (2021).
-        Implementing version control with Git and GitHub as a learning objective in statistics and data science courses.
-        *Journal of Statistics and Data Science Education*, *29*(sup1), S132-S144.
-        <https://doi.org/10.1080/10691898.2020.1848485>.
+    -   Beckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. *Journal of Statistics and Data Science Education*, *29*(sup1), S132-S144. <https://doi.org/10.1080/10691898.2020.1848485>.
 -   Teaching with the tidyverse:
-    -   Çetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C.
+    -   Çetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator's perspective of the tidyverse. *Technology Innovations in Statistics Education*, 14(1). <http://dx.doi.org/10.5070/T514154352>.
+-   Organizing teaching materials:
+    -   Dogucu, M., & Çetinkaya-Rundel, M.
         (2022).
-        An educator's perspective of the tidyverse.
-        *Technology Innovations in Statistics Education*, 14(1).
-        <http://dx.doi.org/10.5070/T514154352>.
+        Tools and Recommendations for Reproducible Teaching.
+        *arXiv preprint arXiv:2202.09504*.
+        <https://doi.org/10.48550/arXiv.2202.09504>.
