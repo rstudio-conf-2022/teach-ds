@@ -10,7 +10,7 @@ title: Designing the data science classroom
 
 🏨 Room TBA
 
-✍️ [rstudio::conf(2022)](https://rstd.io/conf)
+✍️ [Click here to register](https://www.rstudio.com/conference/2022/workshops/teach-ds/)
 
 ------------------------------------------------------------------------
 
