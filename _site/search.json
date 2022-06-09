@@ -187,5 +187,61 @@
     "title": "Module 6",
     "section": "Exercises",
     "text": "Exercises\n\nExercise 1…\nExercise 2…"
+  },
+  {
+    "objectID": "modules/04-learnr/04-learnr.html#within-a-course",
+    "href": "modules/04-learnr/04-learnr.html#within-a-course",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Within a course",
+    "text": "Within a course\n\nFlipped classroom:\n\nAssign a learnr tutorial, including narrative and implementation in R that students can practice with, before introducing a concept in class\nCover the concept in class (quicker)\nAllocate the time saved to hands on exercises in class\n\nLecture follow-up\n\nProvide the same content from the lecture as follow up exercises\n\nLab exercises / assignments"
+  },
+  {
+    "objectID": "modules/04-learnr/04-learnr.html#self-learning",
+    "href": "modules/04-learnr/04-learnr.html#self-learning",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Self learning",
+    "text": "Self learning\n\nLearn by doing\nPackage tutorials\nWorkshop follow ups"
+  },
+  {
+    "objectID": "modules/04-learnr/04-learnr.html#getting-started",
+    "href": "modules/04-learnr/04-learnr.html#getting-started",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Getting started",
+    "text": "Getting started\nFollow along options:\n\nLocal:\n\nIn RStudio, install and load the learnr and sortable packages\nFile ➝ New File ➝ R Markdown… ➝ From template ➝ Interactive Tutorial\n\nCloud: Go to the workspace for this course and start the assignment called 07 - Learnr.\nDeployed tutorial: https://gallery.shinyapps.io/tutorial-demo/"
+  },
+  {
+    "objectID": "modules/04-learnr/04-learnr.html#sharing-with-students",
+    "href": "modules/04-learnr/04-learnr.html#sharing-with-students",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Sharing with students",
+    "text": "Sharing with students\n\nYou could share the R Markdown (and all accompanying files) but that’s probably not what you want to do…\nDeploy on\n\nshinapps.io\nRStudio Connect (free for academic use)"
+  },
+  {
+    "objectID": "modules/04-learnr/04-learnr.html#code-checking",
+    "href": "modules/04-learnr/04-learnr.html#code-checking",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Code checking",
+    "text": "Code checking\n\nNo built in code checking feature, but hooks for using other packages for code checking\ngradethis is furthest along: https://github.com/rstudio-education/gradethis"
+  },
+  {
+    "objectID": "modules/04-learnr/04-learnr.html#recording-events",
+    "href": "modules/04-learnr/04-learnr.html#recording-events",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Recording events",
+    "text": "Recording events\n\nRecording events like exercise and question submissions, requests for hints/solutions, etc.\nThis is possible with learnr, though not very simple\nWith other R tools that allow for writing out to spreadsheets (e.g. Google Sheets) and building dashboards (e.g. shinydashboard) it’s possible to build a dashboard for your class where you can track their progress and learn from what they’re struggling with"
+  },
+  {
+    "objectID": "modules/04-learnr/04-learnr.html#a-simpler-hack-minute-paper",
+    "href": "modules/04-learnr/04-learnr.html#a-simpler-hack-minute-paper",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "A simpler hack: “Minute paper”",
+    "text": "A simpler hack: “Minute paper”\nAdd a link at the end of your tutorial to a Google (or other) form\n\nWrite about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?\n\nOR\n\nIf you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz."
+  },
+  {
+    "objectID": "modules/04-learnr/04-learnr.html#demo",
+    "href": "modules/04-learnr/04-learnr.html#demo",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Demo",
+    "text": "Demo"
   }
 ]

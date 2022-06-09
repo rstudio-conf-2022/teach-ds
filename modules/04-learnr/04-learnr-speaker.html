@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-html/tabby.min.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.503">
+  <meta charset="utf-8">
+  <meta name="generator" content="quarto-0.9.363">
 
   <meta name="author" content="Mine Çetinkaya-Rundel">
   <title>Designing the Data Science Classroom - Interactivity and immediate feedback with learnr</title>
@@ -25,6 +19,13 @@
     ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <script src="../../site_libs/clipboard/clipboard.min.js"></script>
+  <script src="../../site_libs/quarto-html/tabby.min.js"></script>
+  <script src="../../site_libs/quarto-html/popper.min.js"></script>
+  <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+  <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+  <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
+  <link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -341,12 +342,130 @@
 </div>
 </div>
 </div>
+</section>
+
+<section>
+<section id="what" class="title-slide slide level1 center">
+<h1>What?</h1>
+
+</section>
+<section id="demo" class="slide level2">
+<h2>Demo</h2>
+
+<img data-src="images/learnr-first-look.png" class="r-stretch"></section>
+<section class="slide level2">
+
+</section></section>
+<section>
+<section id="why" class="title-slide slide level1 center">
+<h1>Why?</h1>
+
+</section>
+<section id="within-a-course" class="slide level2">
+<h2>Within a course</h2>
+<ul>
+<li>Flipped classroom:
+<ul>
+<li>Assign a learnr tutorial, including narrative and implementation in R that students can practice with, before introducing a concept in class</li>
+<li>Cover the concept in class (quicker)</li>
+<li>Allocate the time saved to hands on exercises in class</li>
+</ul></li>
+<li>Lecture follow-up
+<ul>
+<li>Provide the same content from the lecture as follow up exercises</li>
+</ul></li>
+<li>Lab exercises / assignments</li>
+</ul>
+</section>
+<section id="self-learning" class="slide level2">
+<h2>Self learning</h2>
+<ul>
+<li>Learn by doing</li>
+<li>Package tutorials</li>
+<li>Workshop follow ups</li>
+</ul>
+</section></section>
+<section>
+<section id="how" class="title-slide slide level1 center">
+<h1>How?</h1>
+
+</section>
+<section id="getting-started" class="slide level2">
+<h2>Getting started</h2>
+<p>Follow along options:</p>
+<ul>
+<li><p>Local:</p>
+<ul>
+<li>In RStudio, install and load the <strong>learnr</strong> and <strong>sortable</strong> packages</li>
+<li>File ➝ New File ➝ R Markdown… ➝ From template ➝ Interactive Tutorial</li>
+</ul></li>
+<li><p>Cloud: Go to the workspace for this course and start the assignment called <strong>07 - Learnr</strong>.</p></li>
+<li><p>Deployed tutorial: https://gallery.shinyapps.io/tutorial-demo/</p></li>
+</ul>
+</section>
+<section id="sharing-with-students" class="slide level2">
+<h2>Sharing with students</h2>
+<ul>
+<li><p>You could share the R Markdown (and all accompanying files) but that’s probably not what you want to do…</p></li>
+<li><p>Deploy on</p>
+<ul>
+<li>shinapps.io</li>
+<li>RStudio Connect (free for academic use)</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="how-else" class="title-slide slide level1 center">
+<h1>How else?</h1>
+
+</section>
+<section id="code-checking" class="slide level2">
+<h2>Code checking</h2>
+<ul>
+<li><p>No built in code checking feature, but hooks for using other packages for code checking</p></li>
+<li><p><strong>gradethis</strong> is furthest along: https://github.com/rstudio-education/gradethis</p></li>
+</ul>
+</section>
+<section id="recording-events" class="slide level2">
+<h2>Recording events</h2>
+<ul>
+<li>Recording events like exercise and question submissions, requests for hints/solutions, etc.</li>
+<li>This is possible with learnr, though not very simple</li>
+<li>With other R tools that allow for writing out to spreadsheets (e.g.&nbsp;Google Sheets) and building dashboards (e.g.&nbsp;shinydashboard) it’s possible to build a dashboard for your class where you can track their progress and learn from what they’re struggling with</li>
+</ul>
+</section>
+<section id="a-simpler-hack-minute-paper" class="slide level2">
+<h2>A simpler hack: “Minute paper”</h2>
+<p>Add a link at the end of your tutorial to a Google (or other) form</p>
+<ul>
+<li><em>Write about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?</em></li>
+</ul>
+<p>OR</p>
+<ul>
+<li><em>If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.</em></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Create a tutorial with three questions: one multiple choice, one code, and one sortable / parsons question. It’s of course ok if each question requires some code, but this is not required.</p>
+</div>
+</div>
+</div>
 
 
 <img src="../images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://rstd.io/teach-ds-conf22">🔗 rstd.io/teach-ds-conf22</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

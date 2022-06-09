@@ -4,8 +4,8 @@ listing:
   type: grid
   contents:
     - "modules/*/index.qmd"
-  fields: [title, description, image]
-  image-placeholder: "images/image-place-holder.png"
-  grid-columns: 4
+  fields: [title, description]
+ # image-placeholder: "images/image-place-holder.png"
+  grid-columns: 1
 editor: visual
 ---
