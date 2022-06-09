@@ -26,7 +26,11 @@ This page is under construction and will be updated continuously until the works
 
 ## Outline
 
--   ...
+-   Writing learnr tutorials
+-   Writing different types of questions
+-   Using learnr in your course
+    -   Logging student responses
+    -   Deploying tutorials
 
 ## Slides
 

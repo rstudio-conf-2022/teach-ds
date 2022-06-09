@@ -26,7 +26,12 @@ This page is under construction and will be updated continuously until the works
 
 ## Outline
 
--   ...
+-   Organizing teaching materials using Quarto
+    -   Making presentations
+    -   Writing course notes
+    -   Creating a course website
+-   Deploying materials
+-   Wrap-up + Q&A
 
 ## Slides
 

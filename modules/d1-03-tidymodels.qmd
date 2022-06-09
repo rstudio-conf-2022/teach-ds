@@ -26,7 +26,13 @@ This page is under construction and will be updated continuously until the works
 
 ## Outline
 
--   ...
+-   Teaching modern modeling
+-   Introducing tiydmodels
+-   Teaching with tidymodels
+    -   Feature engineering
+    -   Prediction
+    -   Cross-validation
+-   Using tidymodels in your course
 
 ## Slides
 
