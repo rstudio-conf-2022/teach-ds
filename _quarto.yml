@@ -2,8 +2,24 @@ project:
   type: website
 
 website:
+  page-navigation: true
   title: "Designing the Data Science Classroom"
   description: "Homepage for rstudio::conf(2022) workshop"
+  site-url: "https://rstudio-conf-2022.github.io/teach-ds/"
+  
+  repo-url: https://github.com/rstudio-conf-2022/teach-ds
+  repo-actions: [edit, issue]
+
+  opengraph: true
+  twitter-card:
+    creator: "@minebocek"
+    image: "images/twitter-card.png"
+
+  page-footer:
+    right: "This page is built with ❤️ and [Quarto](https://quarto.org/)."
+    left: "&copy; Copyright 2022, Mine Çetinkaya-Rundel and Maria Tackett"
+    background: "#2e3846"
+
   sidebar:
     background: "#2e3846"
     logo: "images/logo.gif"
