@@ -2,170 +2,170 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/08-organizing/ex-1.html</loc>
-    <lastmod>2022-06-09T20:28:04.691Z</lastmod>
+    <lastmod>2022-06-09T20:36:07.598Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/08-organizing/ex-2.html</loc>
-    <lastmod>2022-06-09T20:28:05.931Z</lastmod>
+    <lastmod>2022-06-09T20:36:08.894Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/08-organizing/index.html</loc>
-    <lastmod>2022-06-09T20:28:06.399Z</lastmod>
+    <lastmod>2022-06-09T20:36:09.362Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/03-tidymodels/ex-1.html</loc>
-    <lastmod>2022-06-09T20:28:07.487Z</lastmod>
+    <lastmod>2022-06-09T20:36:10.506Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/03-tidymodels/ex-2.html</loc>
-    <lastmod>2022-06-09T20:28:07.807Z</lastmod>
+    <lastmod>2022-06-09T20:36:10.874Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/03-tidymodels/index.html</loc>
-    <lastmod>2022-06-09T20:28:08.155Z</lastmod>
+    <lastmod>2022-06-09T20:36:11.238Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/02-tidyverse/ex-1.html</loc>
-    <lastmod>2022-06-09T20:28:08.479Z</lastmod>
+    <lastmod>2022-06-09T20:36:11.614Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/02-tidyverse/ex-2.html</loc>
-    <lastmod>2022-06-09T20:28:08.843Z</lastmod>
+    <lastmod>2022-06-09T20:36:11.974Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/02-tidyverse/index.html</loc>
-    <lastmod>2022-06-09T20:28:09.203Z</lastmod>
+    <lastmod>2022-06-09T20:36:12.286Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/01-hello/ex-1.html</loc>
-    <lastmod>2022-06-09T20:28:09.575Z</lastmod>
+    <lastmod>2022-06-09T20:36:12.686Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/01-hello/ex-2.html</loc>
-    <lastmod>2022-06-09T20:28:09.943Z</lastmod>
+    <lastmod>2022-06-09T20:36:13.102Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/01-hello/index.html</loc>
-    <lastmod>2022-06-09T20:28:10.267Z</lastmod>
+    <lastmod>2022-06-09T20:36:13.466Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/04-learnr/ex-1.html</loc>
-    <lastmod>2022-06-09T20:28:10.615Z</lastmod>
+    <lastmod>2022-06-09T20:36:13.858Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/04-learnr/ex-2.html</loc>
-    <lastmod>2022-06-09T20:28:10.955Z</lastmod>
+    <lastmod>2022-06-09T20:36:14.278Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/04-learnr/index.html</loc>
-    <lastmod>2022-06-09T20:28:11.251Z</lastmod>
+    <lastmod>2022-06-09T20:36:14.630Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/06-reproduciblity/ex-1.html</loc>
-    <lastmod>2022-06-09T20:28:11.575Z</lastmod>
+    <lastmod>2022-06-09T20:36:15.018Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/06-reproduciblity/ex-2.html</loc>
-    <lastmod>2022-06-09T20:28:11.891Z</lastmod>
+    <lastmod>2022-06-09T20:36:15.382Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/06-reproduciblity/index.html</loc>
-    <lastmod>2022-06-09T20:28:12.215Z</lastmod>
+    <lastmod>2022-06-09T20:36:15.718Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/05-rstudio-cloud/ex-1.html</loc>
-    <lastmod>2022-06-09T20:28:12.551Z</lastmod>
+    <lastmod>2022-06-09T20:36:16.102Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/05-rstudio-cloud/ex-2.html</loc>
-    <lastmod>2022-06-09T20:28:12.887Z</lastmod>
+    <lastmod>2022-06-09T20:36:16.486Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/05-rstudio-cloud/index.html</loc>
-    <lastmod>2022-06-09T20:28:13.211Z</lastmod>
+    <lastmod>2022-06-09T20:36:16.842Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/ex-1.html</loc>
-    <lastmod>2022-06-09T20:28:13.531Z</lastmod>
+    <lastmod>2022-06-09T20:36:17.226Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/ex-2.html</loc>
-    <lastmod>2022-06-09T20:28:13.863Z</lastmod>
+    <lastmod>2022-06-09T20:36:17.590Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/index.html</loc>
-    <lastmod>2022-06-09T20:28:14.191Z</lastmod>
+    <lastmod>2022-06-09T20:36:17.942Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/resources.html</loc>
-    <lastmod>2022-06-09T20:28:14.543Z</lastmod>
+    <lastmod>2022-06-09T20:36:18.342Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d2-06-reproduciblity.html</loc>
-    <lastmod>2022-06-09T20:28:14.943Z</lastmod>
+    <lastmod>2022-06-09T20:36:18.778Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d1-03-tidymodels.html</loc>
-    <lastmod>2022-06-09T20:28:15.367Z</lastmod>
+    <lastmod>2022-06-09T20:36:19.206Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d1-01-hello.html</loc>
-    <lastmod>2022-06-09T20:28:15.811Z</lastmod>
+    <lastmod>2022-06-09T20:36:19.658Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d2-05b-coffee-break.html</loc>
-    <lastmod>2022-06-09T20:28:16.179Z</lastmod>
+    <lastmod>2022-06-09T20:36:20.022Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d2-06b-lunch-break.html</loc>
-    <lastmod>2022-06-09T20:28:16.551Z</lastmod>
+    <lastmod>2022-06-09T20:36:20.390Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d1-01b-coffee-break.html</loc>
-    <lastmod>2022-06-09T20:28:16.915Z</lastmod>
+    <lastmod>2022-06-09T20:36:20.766Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d2-05-rstudio-cloud.html</loc>
-    <lastmod>2022-06-09T20:28:17.343Z</lastmod>
+    <lastmod>2022-06-09T20:36:21.198Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d1-04-learnr.html</loc>
-    <lastmod>2022-06-09T20:28:17.779Z</lastmod>
+    <lastmod>2022-06-09T20:36:21.634Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d1-02-tidyverse.html</loc>
-    <lastmod>2022-06-09T20:28:18.199Z</lastmod>
+    <lastmod>2022-06-09T20:36:22.078Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d1-02b-lunch-break.html</loc>
-    <lastmod>2022-06-09T20:28:18.531Z</lastmod>
+    <lastmod>2022-06-09T20:36:22.478Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d2-07b-coffee-break.html</loc>
-    <lastmod>2022-06-09T20:28:18.863Z</lastmod>
+    <lastmod>2022-06-09T20:36:22.878Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d2-08-organizing.html</loc>
-    <lastmod>2022-06-09T20:28:19.255Z</lastmod>
+    <lastmod>2022-06-09T20:36:23.342Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d1-03b-coffee-break.html</loc>
-    <lastmod>2022-06-09T20:28:19.587Z</lastmod>
+    <lastmod>2022-06-09T20:36:23.750Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/modules/d2-07-data-package.html</loc>
-    <lastmod>2022-06-09T20:28:20.023Z</lastmod>
+    <lastmod>2022-06-09T20:36:24.210Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/index.html</loc>
-    <lastmod>2022-06-09T20:28:21.951Z</lastmod>
+    <lastmod>2022-06-09T20:36:26.254Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/license.html</loc>
-    <lastmod>2022-06-09T20:28:22.283Z</lastmod>
+    <lastmod>2022-06-09T20:36:26.618Z</lastmod>
   </url>
   <url>
     <loc>https://rstudio-conf-2022.github.io/teach-ds/schedule.html</loc>
-    <lastmod>2022-06-09T20:28:22.815Z</lastmod>
+    <lastmod>2022-06-09T20:36:27.166Z</lastmod>
   </url>
 </urlset>

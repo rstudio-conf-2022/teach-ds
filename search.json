@@ -21,6 +21,62 @@
     "text": "Session agenda\n\n…"
   },
   {
+    "objectID": "materials/04-learnr/index.html#demo",
+    "href": "materials/04-learnr/index.html#demo",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Demo",
+    "text": "Demo"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#within-a-course",
+    "href": "materials/04-learnr/index.html#within-a-course",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Within a course",
+    "text": "Within a course\n\nFlipped classroom:\n\nAssign a learnr tutorial, including narrative and implementation in R that students can practice with, before introducing a concept in class\nCover the concept in class (quicker)\nAllocate the time saved to hands on exercises in class\n\nLecture follow-up\n\nProvide the same content from the lecture as follow up exercises\n\nLab exercises / assignments"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#self-learning",
+    "href": "materials/04-learnr/index.html#self-learning",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Self learning",
+    "text": "Self learning\n\nLearn by doing\nPackage tutorials\nWorkshop follow ups"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#getting-started",
+    "href": "materials/04-learnr/index.html#getting-started",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Getting started",
+    "text": "Getting started\nFollow along options:\n\nLocal:\n\nIn RStudio, install and load the learnr and sortable packages\nFile ➝ New File ➝ R Markdown… ➝ From template ➝ Interactive Tutorial\n\nCloud: Go to the workspace for this course and start the assignment called 07 - Learnr.\nDeployed tutorial: https://gallery.shinyapps.io/tutorial-demo/"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#sharing-with-students",
+    "href": "materials/04-learnr/index.html#sharing-with-students",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Sharing with students",
+    "text": "Sharing with students\n\nYou could share the R Markdown (and all accompanying files) but that’s probably not what you want to do…\nDeploy on\n\nshinapps.io\nRStudio Connect (free for academic use)"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#code-checking",
+    "href": "materials/04-learnr/index.html#code-checking",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Code checking",
+    "text": "Code checking\n\nNo built in code checking feature, but hooks for using other packages for code checking\ngradethis is furthest along: https://github.com/rstudio-education/gradethis"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#recording-events",
+    "href": "materials/04-learnr/index.html#recording-events",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Recording events",
+    "text": "Recording events\n\nRecording events like exercise and question submissions, requests for hints/solutions, etc.\nThis is possible with learnr, though not very simple\nWith other R tools that allow for writing out to spreadsheets (e.g. Google Sheets) and building dashboards (e.g. shinydashboard) it’s possible to build a dashboard for your class where you can track their progress and learn from what they’re struggling with"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#a-simpler-hack-minute-paper",
+    "href": "materials/04-learnr/index.html#a-simpler-hack-minute-paper",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "A simpler hack: “Minute paper”",
+    "text": "A simpler hack: “Minute paper”\nAdd a link at the end of your tutorial to a Google (or other) form\n\nWrite about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?\n\nOR\n\nIf you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz."
+  },
+  {
     "objectID": "resources.html",
     "href": "resources.html",
     "title": "Resources",
@@ -53,7 +109,7 @@
     "href": "resources.html#papers",
     "title": "Resources",
     "section": "Papers",
-    "text": "Papers\n\n\nDesigning introductory data science curricula:\n\nÇetinkaya-Rundel, M., & Ellison, V. (2021). A fresh look at introductory data science. Journal of Statistics and Data Science Education, 29(sup1), S16-S26. https://doi.org/10.1080/10691898.2020.1804497.\nBaumer, B. (2015). A data science course for undergraduates: Thinking with data. The American Statistician, 69(4), 334-342. https://doi.org/10.1080/00031305.2015.1081105.\n\nTeaching reproducibility and version control:\n\nBeckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. Journal of Statistics and Data Science Education, 29(sup1), S132-S144. https://doi.org/10.1080/10691898.2020.1848485.\n\nTeaching with the tidyverse:\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator’s perspective of the tidyverse. Technology Innovations in Statistics Education, 14(1). http://dx.doi.org/10.5070/T514154352.\n\nOrganizing teaching materials:\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. arXiv preprint arXiv:2202.09504. https://doi.org/10.48550/arXiv.2202.09504."
+    "text": "Papers\n\n\nDesigning introductory data science curricula:\n\nÇetinkaya-Rundel, M., & Ellison, V. (2021). A fresh look at introductory data science. Journal of Statistics and Data Science Education, 29(sup1), S16-S26. https://doi.org/10.1080/10691898.2020.1804497.\nBaumer, B. (2015). A data science course for undergraduates: Thinking with data. The American Statistician, 69(4), 334-342. https://doi.org/10.1080/00031305.2015.1081105.\n\nTeaching reproducibility and version control:\n\nBeckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. Journal of Statistics and Data Science Education, 29(sup1), S132-S144. https://doi.org/10.1080/10691898.2020.1848485.\n\nTeaching with the tidyverse:\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator’s perspective of the tidyverse. Technology Innovations in Statistics Education, 14(1). http://dx.doi.org/10.5070/T514154352.\n\nOrganizing teaching materials:\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. arXiv preprint arXiv:2202.09504. https://doi.org/10.48550/arXiv.2202.09504.\n\nTeaching modern modeling:\n\nTackett, M. (2022) Three principles for modernizing an undergraduate regression analysis course. arXiv preprint arXiv:2205.11026. https://doi.org/10.48550/arXiv.2205.11026"
   },
   {
     "objectID": "modules/d2-06-reproduciblity.html",
@@ -95,7 +151,7 @@
     "href": "modules/d1-03-tidymodels.html#outline",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Outline",
-    "text": "Outline\n\n…"
+    "text": "Outline\n\nTeaching modern modeling\nIntroducing tiydmodels\nTeaching with tidymodels\n\nFeature engineering\nPrediction\nCross-validation\n\nUsing tidymodels in your course"
   },
   {
     "objectID": "modules/d1-03-tidymodels.html#slides",
@@ -200,7 +256,7 @@
     "href": "modules/d1-04-learnr.html#outline",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Outline",
-    "text": "Outline\n\n…"
+    "text": "Outline\n\nWriting learnr tutorials\nWriting different types of questions\nUsing learnr in your course\n\nLogging student responses\nDeploying tutorials"
   },
   {
     "objectID": "modules/d1-04-learnr.html#slides",
@@ -270,7 +326,7 @@
     "href": "modules/d2-08-organizing.html#outline",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Outline",
-    "text": "Outline\n\n…"
+    "text": "Outline\n\nOrganizing teaching materials using Quarto\n\nMaking presentations\nWriting course notes\nCreating a course website\n\nDeploying materials\nWrap-up + Q&A"
   },
   {
     "objectID": "modules/d2-08-organizing.html#slides",
