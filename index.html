@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.545">
+<meta name="generator" content="quarto-0.9.558">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -87,6 +87,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./schedule.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -119,6 +120,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 }</script>
 
 
+<meta name="twitter:title" content="Designing the Data Science Classroom - Designing the data science classroom">
+<meta name="twitter:description" content="🗓️ July 25 and 26…">
+<meta name="twitter:image" content="https://rstudio-conf-2022.github.io/teach-ds/images/twitter-card.png">
+<meta name="twitter:creator" content="@minebocek">
+<meta name="twitter:image-height" content="675">
+<meta name="twitter:image-width" content="1200">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar docked">
@@ -193,7 +201,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   </ul></li>
   <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/rstudio-conf-2022/teach-ds/edit/main/index.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/rstudio-conf-2022/teach-ds/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -217,11 +225,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <hr>
 <p>🗓️ July 25 and 26, 2022</p>
 <p>⏰ 09:00 - 17:00</p>
-<p>🏨 [ADD ROOM]</p>
+<p>🏨 Room TBA</p>
 <p>✍️ <a href="https://rstd.io/conf">rstudio::conf(2022)</a></p>
 <hr>
 <section id="overview" class="level1">
 <h1>Overview</h1>
+<script src="https://fast.wistia.com/embed/medias/o8orjrabxc.jsonp" async=""></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async=""></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_o8orjrabxc videoFoam=true" style="height:100%;position:relative;width:100%"><div class="wistia_swatch" style="height:100%;left:0;opacity:0;overflow:hidden;position:absolute;top:0;transition:opacity 200ms;width:100%;"><img src="https://fast.wistia.com/embed/medias/o8orjrabxc/swatch" style="filter:blur(5px);height:100%;object-fit:contain;width:100%;" alt="" aria-hidden="true" onload="this.parentNode.style.opacity=1;"></div></div></div></div>
+<p><br></p>
 <p>There has been significant innovation in introductory statistics and data science courses to equip students with the statistical, computing, and communication skills needed for modern data analysis. Innovating subsequent courses is also important, so students can continue developing these skills beyond the first course. In this session, we’ll present a modern approach to teaching undergraduate regression analysis, the second statistics course for many students. We’ll share strategies for using real-world data sets and examples, teaching modern computing skills, and incorporating non-technical skills such as writing and effective collaboration as part of the course. We’ll share example activities and assignments, along with a demo of the computing toolkit using the R tidymodels package, Quarto for reproducible reports, and Git and GitHub for version control and collaboration. The activities and demo will be hands-on; attendees will also have the opportunity to exchange ideas and ask questions throughout the session.</p>
 <p>Success in data science and statistics is dependent on the development of both analytical and computational skills, and the demand for educators who are proficient at teaching both these skills is growing. The goal of this workshop is to equip educators with concrete information on content, workflows, and infrastructure for painlessly introducing modern computation with R and RStudio within a data science curriculum.</p>
 <p>In addition to gaining technical knowledge, participants will engage in discussion around the decisions that go into developing a data science curriculum and choosing workflows and infrastructure that best support the curriculum and allow for scalability. Workshop attendees will work through several exercises from existing courses and get first-hand experience with doing and teaching data science with the tidyverse and tidymodels packages. Attendees will also get experience using relevant tool-chains and techniques, including running a course on RStudio Cloud, literate programming with Quarto, and workflows for collaboration, version control, and automated feedback with Git/GitHub. We will also discuss best practices for configuring and deploying classroom infrastructures to support these tools.</p>
@@ -243,9 +253,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2 class="anchored" data-anchor-id="prework">Prework</h2>
 <p>In this workshop you will wear two hats: the educator and the learner. At times we will be demoing workflows for instructors (whom I assume are familiar with R, RStudio, and the tidyverse and have taught with or are interested in teaching with RStudio Cloud, Git, and GitHub) and at other times you will be working through the student view (on RStudio Cloud, assuming you’re not using your local setup).</p>
 <p>For the latter, you can mostly assume that you’re a student in an intro data science course and this is the first day of class (i.e.&nbsp;there’s no expectation of prep). However we’d also like to give you a taste of how the remainder of the semester goes, which often entails students watching background videos to prepare. To prepare for the first module, please watch the following video before the workshop.</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fQ4t7p6ZXDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<div style="text-align: center;">
+<iframe width="560" height="315" align="middle" src="https://www.youtube.com/embed/fQ4t7p6ZXDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 <div style="align: center;">
 <p>🖥️ <a href="https://bit.ly/let-eat-cake-cc">Slides</a></p>
+</div>
 </div>
 <p>For the former, you’ll might need to prepare a bit more. If you already are a Git and GitHub user, have a personal token saved, and can push to and pull from GitHub without having to type your password in each time, you’re good to go. If not, please complete the following steps before the workshop<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. If you need help with any of the steps, please ask on <a href="https://github.com/rstudio-conf-2022/teach-ds/discussions">GitHub Discussions</a>.</p>
 <ul>
@@ -483,7 +495,22 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./schedule.html" class="pagination-link">
+        <span class="nav-page-text">Schedule</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">© Copyright 2022, Mine Çetinkaya-Rundel and Maria Tackett</div>   
+    <div class="nav-footer-right">This page is built with ❤️ and <a href="https://quarto.org/">Quarto</a>.</div>
+  </div>
+</footer>
 
 
 
