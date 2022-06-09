@@ -4,7 +4,7 @@ subtitle: "13:30 - 15:00"
 author: "Mine Çetinkaya-Rundel"
 date: "2022-07-27"
 image: "images/data-package.png"
-image-alt: "Hex logo showing a box that's open with icons for dataset floating in it."
+image-alt: "Hex logo showing a box that is open with icons for dataset floating in it."
 listing:
   - id: exercises
     contents:
