@@ -4,6 +4,7 @@ subtitle: "15:30 - 17:00"
 author: "Maria Tackett"
 date: "2022-07-25"
 image: "images/learnr.png"
+image-alt: "Hex logo for the learnr package."
 listing:
   - id: exercises
     contents:

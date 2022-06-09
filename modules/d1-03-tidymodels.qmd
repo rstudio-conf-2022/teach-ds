@@ -4,6 +4,7 @@ subtitle: "13:30 - 15:00"
 author: "Maria Tackett"
 date: "2022-07-25"
 image: "images/tidymodels.png"
+image-alt: "Hex logo for the tidymodels package."
 listing:
   - id: exercises
     contents:

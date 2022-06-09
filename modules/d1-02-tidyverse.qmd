@@ -4,6 +4,7 @@ subtitle: "11:00 - 12:30"
 author: "Mine Çetinkaya-Rundel"
 date: "2022-07-25"
 image: "images/tidyverse.png"
+image-alt: "Hex logo for the tidyverse package."
 listing:
   - id: exercises
     contents:

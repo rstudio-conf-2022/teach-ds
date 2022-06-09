@@ -4,6 +4,7 @@ subtitle: "11:00 - 12:30"
 author: "Mine Çetinkaya-Rundel"
 date: "2022-07-26"
 image: "images/toolkit.png"
+image-alt: "Hex logo showing the logos for Quarto, Git, and GitHub as well as R and RStudio."
 listing:
   - id: exercises
     contents:

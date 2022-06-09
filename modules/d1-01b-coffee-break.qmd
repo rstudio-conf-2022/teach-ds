@@ -3,6 +3,7 @@ title: "Coffee break"
 subtitle: "10:30 - 11:00"
 date: "2022-07-25"
 image: "images/coffee-break.png"
+image-alt: "A coffee cup."
 ---
 
 Coffee and refreshments served at ...

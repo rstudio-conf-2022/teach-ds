@@ -4,6 +4,7 @@ subtitle: "09:00 - 10:30"
 author: "Mine Çetinkaya-Rundel"
 date: "2022-07-26"
 image: "images/rstudio-cloud.png"
+image-alt: "Hex logo for RStudio Cloud."
 listing:
   - id: exercises
     contents:
