@@ -13,6 +13,7 @@ by Mine Çetinkaya-Rundel + Maria Tackett
 
 ------------------------------------------------------------------------
 
+<<<<<<< HEAD
 ## Overview
 
 Success in data science and statistics is dependent on the development of both analytical and computational skills, and the demand for educators who are proficient at teaching both these skills is growing. The goal of this workshop is to equip educators with concrete information on content, workflows, and infrastructure for painlessly introducing modern computation with R and RStudio within a data science curriculum.
@@ -123,6 +124,9 @@ The RStudio Cloud workspace is at [INSERT LINK].
 Mine Çetinkaya-Rundel is Professor of the Practice at Duke University and Developer Educator at RStudio. Mine’s work focuses on innovation in statistics and data science pedagogy, with an emphasis on computing, reproducible research, student-centered learning, and open-source education as well as pedagogical approaches for enhancing retention of women and under-represented minorities in STEM. Mine works on integrating computation into the undergraduate statistics curriculum, using reproducible research methodologies and analysis of real and complex datasets. Mine works on the OpenIntro project, whose mission is to make educational products that are free, transparent, and lower barriers to education. As part of this project she co-authored four open-source introductory statistics textbooks. She is also the creator and maintainer of datasciencebox.org and she teaches the popular Statistics with R MOOC on Coursera. Mine is a Fellow of the ASA and Elected Member of the ISI as well as the winner of the 2021 Robert V. Hogg Award for For Excellence in Teaching Introductory Statistics.
 
 Maria Tackett is an Assistant Professor of the Practice in the Department of Statistical Science at Duke University. Prior to joining the faculty at Duke, Maria earned a Ph.D. in Statistics from the University of Virginia and worked as a statistician at Capital One. Her current work focuses on understanding how active learning strategies can be used to promote engagement and student motivation in undergraduate statistics courses. She also studies how classroom practices in introductory math and statistics courses impact students’ sense of community, self-efficacy, and learning outcomes. Maria is an RStudio certified trainer and is actively involved in the R and statistics education communities.
+=======
+This repository contains materials for the "Designing the Data Science Classroom" workshop at rstudio::conf(2022). See [https://rstd.io/teach-ds-conf22](rstd.io/teach-ds-conf22) for rendered workshop materials.
+>>>>>>> b6261aa7b4335e246e7d1bbfc0e960e179528041
 
 ------------------------------------------------------------------------
 

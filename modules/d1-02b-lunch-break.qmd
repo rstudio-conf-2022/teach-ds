@@ -1,0 +1,14 @@
+---
+title: "Lunch break"
+subtitle: "12:30 - 13:30"
+date: "2022-07-25"
+image: "images/lunch-break.png"
+image-alt: "Plate and utensils."
+---
+
+Lunch is served at ...
+
+Before you leave for lunch break, please ... <!--# TO DO: Add instructions on giving feedback on stickies. -->
+
+The teaching team is also taking this time to refuel and recharge.
+If you have any questions, please save then fir after the break.

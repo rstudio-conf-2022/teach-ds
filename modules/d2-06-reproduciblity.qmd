@@ -1,0 +1,45 @@
+---
+title: "Reproducible workflows: Quarto, Git, GitHub"
+subtitle: "11:00 - 12:30"
+author: "Mine Çetinkaya-Rundel"
+date: "2022-07-26"
+image: "images/toolkit.png"
+image-alt: "Hex logo showing the logos for Quarto, Git, and GitHub as well as R and RStudio."
+listing:
+  - id: exercises
+    contents:
+      - ../materials/06-reproducibility/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names:
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: images/exercise.png
+tbl-colwidths: [5,20,75]
+---
+
+::: callout-warning
+This page is under construction and will be updated continuously until the workshop date.
+:::
+
+## Outline
+
+-   Motivating reproducibility
+-   Teaching authoring computational documents with Quarto
+-   Teaching version control with Git
+-   Teaching collaboration with GitHub
+-   Using GitHub as your learning management system
+
+## Slides
+
+[View slides in full screen](../materials/06-reproduciblity/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/06-reproduciblity/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+::: {#exercises}
+:::

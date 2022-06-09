@@ -1,0 +1,41 @@
+---
+title: "Organizing teaching materials + Wrap-up / Q&A"
+subtitle: "15:30 - 17:00"
+author: "Maria Tackett"
+date: "2022-07-26"
+image: "images/organization.png"
+image-alt: "Hex logo with icons for folder tree, Git repository, and web browser."
+listing:
+  - id: exercises
+    contents:
+      - ../materials/08-organizing/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names:
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: images/exercise.png
+tbl-colwidths: [5,20,75]
+---
+
+::: callout-warning
+This page is under construction and will be updated continuously until the workshop date.
+:::
+
+## Outline
+
+-   ...
+
+## Slides
+
+[View slides in full screen](../materials/08-organizing/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/08-organizing/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+::: {#exercises}
+:::

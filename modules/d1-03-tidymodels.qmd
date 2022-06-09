@@ -1,0 +1,41 @@
+---
+title: "Teaching modern modeling with tidymodels"
+subtitle: "13:30 - 15:00"
+author: "Maria Tackett"
+date: "2022-07-25"
+image: "images/tidymodels.png"
+image-alt: "Hex logo for the tidymodels package."
+listing:
+  - id: exercises
+    contents:
+      - ../materials/03-tidymodels/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names:
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: images/exercise.png
+tbl-colwidths: [5,20,75]
+---
+
+::: callout-warning
+This page is under construction and will be updated continuously until the workshop date.
+:::
+
+## Outline
+
+-   ...
+
+## Slides
+
+[View slides in full screen](../materials/03-tidymodels/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/03-tidymodels/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+## Exercises
+
+::: {#exercises}
+:::
