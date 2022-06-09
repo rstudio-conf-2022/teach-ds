@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - "images/twitter-card.png"
 
 website:
   page-navigation: true
