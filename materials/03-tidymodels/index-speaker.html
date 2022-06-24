@@ -17,6 +17,69 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -333,6 +396,7 @@
   <p class="author">Maria Tackett</p>
 </section>
 
+<section>
 <section id="in-progress" class="title-slide slide level1 center">
 <h1>In progress</h1>
 <div class="callout callout-warning callout-captioned callout-style-default">
@@ -349,15 +413,559 @@
 </div>
 </div>
 </section>
+<section id="session-outline" class="slide level2">
+<h2>Session outline</h2>
+<div class="cell">
 
-<section id="section" class="title-slide slide level1 center">
-<h1></h1>
+</div>
+</section></section>
+<section>
+<section id="teaching-modern-modeling" class="title-slide slide level1 center">
+<h1>Teaching modern modeling</h1>
+
+</section>
+<section id="course-context" class="slide level2">
+<h2>Course context</h2>
+</section>
+<section id="gaise-guidelines" class="slide level2">
+<h2>GAISE Guidelines</h2>
+<ul>
+<li>Teach statistical thinking.
+<ul>
+<li>Teach statistics as an investigative process of problem-solving and decision-making.</li>
+<li>Give students experience with multivariable thinking.</li>
+</ul></li>
+<li>Integrate real data with a context and purpose.</li>
+<li>Foster active learning.</li>
+<li>Use technology to explore concepts and analyze data.</li>
+</ul>
+<p><a href="https://www.amstat.org/docs/default-source/amstat-documents/gaisecollege_full.pdf">Guidelines for Assessment and Instruction in Statistics Education (GAISE) 2016 Report</a></p>
+</section>
+<section id="teaching-modern-regression" class="slide level2">
+<h2>Teaching modern regression</h2>
+<p>Facilitate opportunities for students to…</p>
+<div>
+<ul>
+<li class="fragment"><p>Regularly engage with <strong>real-world applications and complex data</strong></p></li>
+<li class="fragment"><p>Develop proficiency <strong>using professional statistical software</strong> and using a reproducible workflow</p></li>
+<li class="fragment"><p>Identify <strong>appropriate methods based on the primary analysis objective</strong> - inference or prediction</p></li>
+<li class="fragment"><p>Develop important non-technical skills, specifically written communication and teamwork</p></li>
+</ul>
+</div>
+</section>
+<section id="discussion" class="slide level2">
+<h2>Discussion</h2>
+<ul>
+<li><p>How much do you teach regression in your course(s)?</p></li>
+<li><p>Do you currently implement any of these principles in your teaching? Do you find some more challenging to implement than others?</p></li>
+</ul>
+</section></section>
+<section>
+<section id="introducing-tidymodels" class="title-slide slide level1 center">
+<h1>Introducing tidymodels</h1>
+
+</section>
+<section id="tidymodels" class="slide level2">
+<h2>Tidymodels</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/hello-tidymodels.png"></p>
+</figure>
+</div>
+</div><div class="column" style="width:60%;">
+<p>The <strong>tidymodels</strong> framework is a collection of packages for modeling and machine learning using tidyverse principles.</p>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">"tidymodels"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="tidymodels-1" class="slide level2">
+<h2>Tidymodels</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ────────────────────────────────────── tidymodels 0.2.0 ──</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>✔ broom        0.8.0     ✔ rsample      0.1.1
+✔ dials        0.1.1     ✔ tune         0.2.0
+✔ infer        1.0.2     ✔ workflows    0.2.6
+✔ modeldata    0.1.1     ✔ workflowsets 0.2.1
+✔ parsnip      0.2.1     ✔ yardstick    0.0.9
+✔ recipes      0.2.0     </code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
+✖ scales::discard() masks purrr::discard()
+✖ dplyr::filter()   masks stats::filter()
+✖ recipes::fixed()  masks stringr::fixed()
+✖ dplyr::lag()      masks stats::lag()
+✖ yardstick::spec() masks readr::spec()
+✖ recipes::step()   masks stats::step()
+• Search for functions across packages at https://www.tidymodels.org/find/</code></pre>
+</div>
+</div>
+</section>
+<section id="data-loans-from-lending-club" class="slide level2">
+<h2>Data: Loans from Lending Club</h2>
+<p>[Write introduction to the data] and the variables. Partially follow analysis in Chapter 8 - Linear regression with multiple predictors in <a href="https://openintro-ims.netlify.app/index.html">Introduction to Modern Statistics</a>.</p>
+</section>
+<section id="data-loans-from-lending-club-1" class="slide level2">
+<h2>Data: Loans from Lending Club</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(openintro)</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">glimpse</span>(loans_full_schema)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 10,000
+Columns: 55
+$ emp_title                        &lt;chr&gt; "global config engineer ", "warehouse…
+$ emp_length                       &lt;dbl&gt; 3, 10, 3, 1, 10, NA, 10, 10, 10, 3, 1…
+$ state                            &lt;fct&gt; NJ, HI, WI, PA, CA, KY, MI, AZ, NV, I…
+$ homeownership                    &lt;fct&gt; MORTGAGE, RENT, RENT, RENT, RENT, OWN…
+$ annual_income                    &lt;dbl&gt; 90000, 40000, 40000, 30000, 35000, 34…
+$ verified_income                  &lt;fct&gt; Verified, Not Verified, Source Verifi…
+$ debt_to_income                   &lt;dbl&gt; 18.01, 5.04, 21.15, 10.16, 57.96, 6.4…
+$ annual_income_joint              &lt;dbl&gt; NA, NA, NA, NA, 57000, NA, 155000, NA…
+$ verification_income_joint        &lt;fct&gt; , , , , Verified, , Not Verified, , ,…
+$ debt_to_income_joint             &lt;dbl&gt; NA, NA, NA, NA, 37.66, NA, 13.12, NA,…
+$ delinq_2y                        &lt;int&gt; 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0…
+$ months_since_last_delinq         &lt;int&gt; 38, NA, 28, NA, NA, 3, NA, 19, 18, NA…
+$ earliest_credit_line             &lt;dbl&gt; 2001, 1996, 2006, 2007, 2008, 1990, 2…
+$ inquiries_last_12m               &lt;int&gt; 6, 1, 4, 0, 7, 6, 1, 1, 3, 0, 4, 4, 8…
+$ total_credit_lines               &lt;int&gt; 28, 30, 31, 4, 22, 32, 12, 30, 35, 9,…
+$ open_credit_lines                &lt;int&gt; 10, 14, 10, 4, 16, 12, 10, 15, 21, 6,…
+$ total_credit_limit               &lt;int&gt; 70795, 28800, 24193, 25400, 69839, 42…
+$ total_credit_utilized            &lt;int&gt; 38767, 4321, 16000, 4997, 52722, 3898…
+$ num_collections_last_12m         &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ num_historical_failed_to_pay     &lt;int&gt; 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0…
+$ months_since_90d_late            &lt;int&gt; 38, NA, 28, NA, NA, 60, NA, 71, 18, N…
+$ current_accounts_delinq          &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ total_collection_amount_ever     &lt;int&gt; 1250, 0, 432, 0, 0, 0, 0, 0, 0, 0, 0,…
+$ current_installment_accounts     &lt;int&gt; 2, 0, 1, 1, 1, 0, 2, 2, 6, 1, 2, 1, 2…
+$ accounts_opened_24m              &lt;int&gt; 5, 11, 13, 1, 6, 2, 1, 4, 10, 5, 6, 7…
+$ months_since_last_credit_inquiry &lt;int&gt; 5, 8, 7, 15, 4, 5, 9, 7, 4, 17, 3, 4,…
+$ num_satisfactory_accounts        &lt;int&gt; 10, 14, 10, 4, 16, 12, 10, 15, 21, 6,…
+$ num_accounts_120d_past_due       &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, NA, 0, 0, 0, 0, …
+$ num_accounts_30d_past_due        &lt;int&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ num_active_debit_accounts        &lt;int&gt; 2, 3, 3, 2, 10, 1, 3, 5, 11, 3, 2, 2,…
+$ total_debit_limit                &lt;int&gt; 11100, 16500, 4300, 19400, 32700, 272…
+$ num_total_cc_accounts            &lt;int&gt; 14, 24, 14, 3, 20, 27, 8, 16, 19, 7, …
+$ num_open_cc_accounts             &lt;int&gt; 8, 14, 8, 3, 15, 12, 7, 12, 14, 5, 8,…
+$ num_cc_carrying_balance          &lt;int&gt; 6, 4, 6, 2, 13, 5, 6, 10, 14, 3, 5, 3…
+$ num_mort_accounts                &lt;int&gt; 1, 0, 0, 0, 0, 3, 2, 7, 2, 0, 2, 3, 3…
+$ account_never_delinq_percent     &lt;dbl&gt; 92.9, 100.0, 93.5, 100.0, 100.0, 78.1…
+$ tax_liens                        &lt;int&gt; 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ public_record_bankrupt           &lt;int&gt; 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0…
+$ loan_purpose                     &lt;fct&gt; moving, debt_consolidation, other, de…
+$ application_type                 &lt;fct&gt; individual, individual, individual, i…
+$ loan_amount                      &lt;int&gt; 28000, 5000, 2000, 21600, 23000, 5000…
+$ term                             &lt;dbl&gt; 60, 36, 36, 36, 36, 36, 60, 60, 36, 3…
+$ interest_rate                    &lt;dbl&gt; 14.07, 12.61, 17.09, 6.72, 14.07, 6.7…
+$ installment                      &lt;dbl&gt; 652.53, 167.54, 71.40, 664.19, 786.87…
+$ grade                            &lt;fct&gt; C, C, D, A, C, A, C, B, C, A, C, B, C…
+$ sub_grade                        &lt;fct&gt; C3, C1, D1, A3, C3, A3, C2, B5, C2, A…
+$ issue_month                      &lt;fct&gt; Mar-2018, Feb-2018, Feb-2018, Jan-201…
+$ loan_status                      &lt;fct&gt; Current, Current, Current, Current, C…
+$ initial_listing_status           &lt;fct&gt; whole, whole, fractional, whole, whol…
+$ disbursement_method              &lt;fct&gt; Cash, Cash, Cash, Cash, Cash, Cash, C…
+$ balance                          &lt;dbl&gt; 27015.86, 4651.37, 1824.63, 18853.26,…
+$ paid_total                       &lt;dbl&gt; 1999.330, 499.120, 281.800, 3312.890,…
+$ paid_principal                   &lt;dbl&gt; 984.14, 348.63, 175.37, 2746.74, 1569…
+$ paid_interest                    &lt;dbl&gt; 1015.19, 150.49, 106.43, 566.15, 754.…
+$ paid_late_fees                   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</code></pre>
+</div>
+</div>
+</section>
+<section id="regression-syntax" class="slide level2">
+<h2>Regression syntax</h2>
+<p>Fit a linear regression model to predict the interest rate using the debt to income ratio.</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Base R</a></li><li><a href="#tabset-1-2">Tidymodels</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>base_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(interest_rate <span class="sc">~</span> debt_to_income, <span class="at">data =</span> loans_full_schema)</span>
+<span id="cb8-2"><a href="#cb8-2"></a></span>
+<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">summary</span>(base_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = interest_rate ~ debt_to_income, data = loans_full_schema)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-21.7391  -3.7203  -0.7945   2.7351  18.6274 
+
+Coefficients:
+                Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)    11.511445   0.080732  142.59   &lt;2e-16 ***
+debt_to_income  0.047183   0.003302   14.29   &lt;2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 4.948 on 9974 degrees of freedom
+  (24 observations deleted due to missingness)
+Multiple R-squared:  0.02007,   Adjusted R-squared:  0.01997 
+F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>tidy_lm <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">fit</span>(interest_rate <span class="sc">~</span> debt_to_income, <span class="at">data =</span> loans_full_schema)</span>
+<span id="cb10-4"><a href="#cb10-4"></a></span>
+<span id="cb10-5"><a href="#cb10-5"></a><span class="fu">tidy</span>(tidy_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term           estimate std.error statistic  p.value
+  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     11.5      0.0807      143.  0       
+2 debt_to_income   0.0472   0.00330      14.3 7.05e-46</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="model-summaries-using-broom" class="slide level2">
+<h2>Model summaries using broom</h2>
+<p>Can utilize functions from the <strong>broom</strong> package to produce tidy summaries of models fit using Base R or the tidymodels framework</p>
+<ul>
+<li><p><code>tidy()</code>: summarizes information about model components</p></li>
+<li><p><code>glance()</code>: reports information about the entire model</p></li>
+<li><p><code>augment()</code>: adds informations about observations to a dataset</p></li>
+</ul>
+<p><br></p>
+<p><a href="https://broom.tidymodels.org/">broom.tidymodels.org</a></p>
+</section>
+<section id="tidy" class="slide level2">
+<h2><code>tidy()</code></h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1"><code>Base R</code></a></li><li><a href="#tabset-2-2"><code>Tidymodels</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>base_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(interest_rate <span class="sc">~</span> debt_to_income, <span class="at">data =</span> loans_full_schema)</span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="fu">tidy</span>(base_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term           estimate std.error statistic  p.value
+  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     11.5      0.0807      143.  0       
+2 debt_to_income   0.0472   0.00330      14.3 7.05e-46</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>tidy_lm <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">fit</span>(interest_rate <span class="sc">~</span> debt_to_income, <span class="at">data =</span> loans_full_schema)</span>
+<span id="cb14-4"><a href="#cb14-4"></a><span class="fu">tidy</span>(tidy_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term           estimate std.error statistic  p.value
+  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     11.5      0.0807      143.  0       
+2 debt_to_income   0.0472   0.00330      14.3 7.05e-46</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="glance" class="slide level2">
+<h2><code>glance()</code></h2>
+<div class="panel-tabset">
+<ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Base R</a></li><li><a href="#tabset-3-2">Tidymodels</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">glance</span>(base_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.
+# … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-3-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">glance</span>(tidy_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 12
+  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.
+# … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="augment" class="slide level2">
+<h2><code>augment()</code></h2>
+<div class="panel-tabset">
+<ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Base R</a></li><li><a href="#tabset-4-2">Tidymodels</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>base_lm_aug <span class="ot">&lt;-</span> <span class="fu">augment</span>(base_lm)</span>
+<span id="cb20-2"><a href="#cb20-2"></a>base_lm_aug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9,976 × 9
+   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd
+   &lt;chr&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+ 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6
+ 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6
+ 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5
+ 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5
+ 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7
+ 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5
+ 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6
+ 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7
+ 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7
+10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5
+# … with 9,966 more rows, and 1 more variable: .std.resid &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="tabset-4-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>tidy_lm_aug <span class="ot">&lt;-</span> <span class="fu">augment</span>(tidy_lm<span class="sc">$</span>fit)</span>
+<span id="cb22-2"><a href="#cb22-2"></a>tidy_lm_aug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 9,976 × 9
+   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd
+   &lt;chr&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+ 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6
+ 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6
+ 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5
+ 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5
+ 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7
+ 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5
+ 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6
+ 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7
+ 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7
+10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5
+# … with 9,966 more rows, and 1 more variable: .std.resid &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="why-full-tidymodels-framework" class="slide level2">
+<h2>Why full tidymodels framework?</h2>
+<p>Most pedagogical advantages for more advanced models:</p>
+<ul>
+<li>Consistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.</li>
+<li>Streamline modeling workflow
+<ul>
+<li>Split data into train and test sets</li>
+<li>Create custom variables</li>
+<li>Assess model performance</li>
+<li>Use model for prediction and inference</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="teaching-with-tidymodels" class="title-slide slide level1 center">
+<h1>Teaching with tidymodels</h1>
+
+</section>
+<section id="getting-started" class="slide level2">
+<h2>Getting started</h2>
+<p>Let’s breakdown the syntax from the previous example.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">fit</span>(interest_rate <span class="sc">~</span> debt_to_income, <span class="at">data =</span> loans_full_schema) <span class="sc">|&gt;</span></span>
+<span id="cb24-4"><a href="#cb24-4"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term           estimate std.error statistic  p.value
+  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     11.5      0.0807      143.  0       
+2 debt_to_income   0.0472   0.00330      14.3 7.05e-46</code></pre>
+</div>
+</div>
+</section>
+<section id="specify-model" class="slide level2">
+<h2>1️⃣ Specify model</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">linear_reg</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear Regression Model Specification (regression)
+
+Computational engine: lm </code></pre>
+</div>
+</div>
+</section>
+<section id="set-computational-engine" class="slide level2">
+<h2>2️⃣ Set computational engine</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Linear Regression Model Specification (regression)
+
+Computational engine: lm </code></pre>
+</div>
+</div>
+</section>
+<section id="fit-the-model" class="slide level2">
+<h2>3️⃣ Fit the model</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb30-3"><a href="#cb30-3"></a>  <span class="fu">fit</span>(interest_rate <span class="sc">~</span> debt_to_income, <span class="at">data =</span> loans_full_schema)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>parsnip model object
+
+
+Call:
+stats::lm(formula = interest_rate ~ debt_to_income, data = data)
+
+Coefficients:
+   (Intercept)  debt_to_income  
+      11.51145         0.04718  </code></pre>
+</div>
+</div>
+</section>
+<section id="summarize-output" class="slide level2">
+<h2>4️⃣ Summarize output</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb32-3"><a href="#cb32-3"></a>  <span class="fu">fit</span>(interest_rate <span class="sc">~</span> debt_to_income, <span class="at">data =</span> loans_full_schema) <span class="sc">|&gt;</span></span>
+<span id="cb32-4"><a href="#cb32-4"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term           estimate std.error statistic  p.value
+  &lt;chr&gt;             &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)     11.5      0.0807      143.  0       
+2 debt_to_income   0.0472   0.00330      14.3 7.05e-46</code></pre>
+</div>
+</div>
+</section>
+<section id="feature-engineering" class="slide level2">
+<h2>Feature engineering</h2>
+<p><strong>Feature engineering</strong> is the process of transforming raw variables in preparation for use in a statistical model.</p>
+<p><br></p>
+<div class="fragment">
+<p>We may be familiar doing feature engineering using dplyr before fitting the model.</p>
+<p><br></p>
+</div>
+<div class="fragment">
+<p>The <a href="https://recipes.tidymodels.org/">recipes</a> package makes it possible to do feature engineering as part of the modeling workflow using “dplyr-like” functions.</p>
+</div>
+</section>
+<section id="example-predicting-interest-rate" class="slide level2">
+<h2>Example: Predicting interest rate</h2>
+<p><strong>Goal</strong>: Fit a model to predict the interest rate from the term, debt to income ratio, home ownership, and number of delinquencies in past two years.</p>
+<p><br></p>
+<div class="fragment">
+<p>We need to do the following to prepare the predictors for the model:</p>
+<ul>
+<li>Make <code>term</code> a factor.</li>
+<li>Mean-center <code>debt_to_income</code>.</li>
+<li>Break <code>delinq_2y</code> into the categories 0, 1, 2, 3+.</li>
+</ul>
+</div>
+</section>
+<section id="feature-engineering-using-dplyr" class="slide level2">
+<h2>Feature engineering using dplyr</h2>
+<h3 id="prepare-the-data">Prepare the data</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>loans_full_schema <span class="ot">&lt;-</span> loans_full_schema <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">as_factor</span>(term)) <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">mutate</span>(<span class="at">debt_to_income_cent =</span> debt_to_income <span class="sc">-</span> <span class="fu">mean</span>(debt_to_income)) <span class="sc">|&gt;</span></span>
+<span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">mutate</span>(<span class="at">delinq_2y_cat =</span> <span class="fu">cut</span>(delinq_2y, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<h3 id="fit-the-model-1">Fit the model</h3>
+<p>[ADD THE R CODE]</p>
+</section>
+<section id="feature-engineering-with-recipes" class="slide level2">
+<h2>Feature engineering with recipes</h2>
+
+<img data-src="images/recipes.png" class="r-stretch quarto-figure-center"><p class="caption">Illustration by <a href="https://www.allisonhorst.com/">Allison Horst</a></p></section>
+<section id="feature-engineering-with-recipes-1" class="slide level2">
+<h2>Feature engineering with recipes</h2>
+<ul>
+<li><p>Write code step by step</p></li>
+<li><p>Put all steps in a single pipeline</p></li>
+</ul>
+</section>
+<section id="recipes-vs.-dplyr" class="slide level2">
+<h2>recipes vs.&nbsp;dplyr</h2>
+<ul>
+<li><p>show code side by side</p></li>
+<li><p>advantages / disadvantage of each approach</p></li>
+</ul>
+</section>
+<section id="put-it-together-with-workflow" class="slide level2">
+<h2>Put it together with workflow</h2>
+<ul>
+<li><p>Define the model</p></li>
+<li><p>Define the receipe</p></li>
+</ul>
+</section>
+<section id="exercise---feature-engineering" class="slide level2">
+<h2>Exercise - feature engineering</h2>
+</section>
+<section id="prediction" class="slide level2">
+<h2>Prediction</h2>
+</section>
+<section id="test-vs.-train-data" class="slide level2">
+<h2>Test vs.&nbsp;Train data</h2>
+</section>
+<section id="prediction-exercise" class="slide level2">
+<h2>Prediction exercise</h2>
+</section>
+<section id="thinking-about-prediction-or-inference" class="slide level2">
+<h2>Thinking about prediction or inference</h2>
+</section>
+<section id="exercise---split-into-test-and-train" class="slide level2">
+<h2>Exercise - split into test and train?</h2>
+</section>
+<section id="cross-validation" class="slide level2">
+<h2>Cross-validation</h2>
+</section>
+<section id="exercise---cross-validation" class="slide level2">
+<h2>Exercise - cross validation</h2>
+</section></section>
+<section>
+<section id="using-tidydmodels-in-your-course" class="title-slide slide level1 center">
+<h1>Using tidydmodels in your course</h1>
+
+</section>
+<section id="pedagogical-advantages" class="slide level2">
+<h2>Pedagogical advantages</h2>
+</section>
+<section id="activity-discussion" class="slide level2">
+<h2>Activity / Discussion</h2>
+<ul>
+<li><p>Think about how you might implement this in the classroom</p></li>
+<li><p>What is a potential challenge</p></li>
+<li><p>Write an activity</p></li>
+<li><p>Minute paper - any remaining questions?</p></li>
+</ul>
 
 
 <img src="../images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://rstd.io/teach-ds-conf22">🔗 rstd.io/teach-ds-conf22</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -574,6 +1182,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

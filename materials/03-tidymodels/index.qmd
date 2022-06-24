@@ -23,4 +23,358 @@ execute:
 These slides are currently being designed and built.
 :::
 
-# 
+## Session outline
+
+```{r}
+#| message: false
+#| warning: false
+
+# load packages for slides
+library(tidyverse)
+library(openintro)
+```
+
+# Teaching modern modeling
+
+## Course context
+
+## GAISE Guidelines
+
+-   Teach statistical thinking.
+    -   Teach statistics as an investigative process of problem-solving and decision-making.
+    -   Give students experience with multivariable thinking.
+-   Integrate real data with a context and purpose.
+-   Foster active learning.
+-   Use technology to explore concepts and analyze data.
+
+[Guidelines for Assessment and Instruction in Statistics Education (GAISE) 2016 Report](https://www.amstat.org/docs/default-source/amstat-documents/gaisecollege_full.pdf)
+
+## Teaching modern regression
+
+Facilitate opportunities for students to...
+
+::: incremental
+-   Regularly engage with **real-world applications and complex data**
+
+-   Develop proficiency **using professional statistical software** and using a reproducible workflow
+
+-   Identify **appropriate methods based on the primary analysis objective** - inference or prediction
+
+-   Develop important non-technical skills, specifically written communication and teamwork
+:::
+
+## Discussion
+
+-   How much do you teach regression in your course(s)?
+
+-   Do you currently implement any of these principles in your teaching? Do you find some more challenging to implement than others?
+
+# Introducing tidymodels
+
+## Tidymodels
+
+::: columns
+::: {.column width="40%"}
+![](images/hello-tidymodels.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+The **tidymodels** framework is a collection of packages for modeling and machine learning using tidyverse principles.
+
+<br>
+
+```{r}
+#| eval: false
+#| echo: true
+
+install.packages("tidymodels")
+```
+:::
+:::
+
+## Tidymodels
+
+```{r}
+#| echo: true
+#| message: true
+#| warning: true
+
+library(tidymodels)
+```
+
+## Data: Loans from Lending Club
+
+\[Write introduction to the data\] and the variables. Partially follow analysis in Chapter 8 - Linear regression with multiple predictors in [Introduction to Modern Statistics](https://openintro-ims.netlify.app/index.html).
+
+## Data: Loans from Lending Club
+
+```{r}
+#| echo: true
+library(openintro)
+glimpse(loans_full_schema)
+```
+
+## Regression syntax
+
+Fit a linear regression model to predict the interest rate using the debt to income ratio.
+
+::: panel-tabset
+## Base R
+
+```{r}
+#| echo: true
+base_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)
+
+summary(base_lm)
+```
+
+## Tidymodels
+
+```{r}
+#| echo: true
+tidy_lm <- linear_reg() |> 
+  set_engine("lm") |>
+  fit(interest_rate ~ debt_to_income, data = loans_full_schema)
+
+tidy(tidy_lm)
+```
+:::
+
+## Model summaries using broom
+
+Can utilize functions from the **broom** package to produce tidy summaries of models fit using Base R or the tidymodels framework
+
+-   `tidy()`: summarizes information about model components
+
+-   `glance()`: reports information about the entire model
+
+-   `augment()`: adds informations about observations to a dataset
+
+<br>
+
+[broom.tidymodels.org](https://broom.tidymodels.org/)
+
+## `tidy()`
+
+::: panel-tabset
+## `Base R`
+
+```{r}
+#| echo: true
+base_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)
+tidy(base_lm)
+```
+
+## `Tidymodels`
+
+```{r}
+#| echo: true
+
+tidy_lm <- linear_reg() |> 
+  set_engine("lm") |>
+  fit(interest_rate ~ debt_to_income, data = loans_full_schema)
+tidy(tidy_lm)
+```
+:::
+
+## `glance()`
+
+::: panel-tabset
+## Base R
+
+```{r}
+#| echo: true
+#| 
+glance(base_lm)
+```
+
+## Tidymodels
+
+```{r}
+#| echo: true
+
+glance(tidy_lm)
+```
+:::
+
+## `augment()`
+
+::: panel-tabset
+## Base R
+
+```{r}
+#| echo: true
+#| code-line-numbers: "1"
+
+base_lm_aug <- augment(base_lm)
+base_lm_aug
+```
+
+## Tidymodels 
+
+```{r }
+#| echo: true
+#| code-line-numbers: "1"
+
+tidy_lm_aug <- augment(tidy_lm$fit)
+tidy_lm_aug
+```
+:::
+
+## Why full tidymodels framework? 
+
+Most pedagogical advantages for more advanced models:
+
+-   Consistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.
+-   Streamline modeling workflow
+    -   Split data into train and test sets
+    -   Create custom variables
+    -   Assess model performance
+    -   Use model for prediction and inference
+
+# Teaching with tidymodels
+
+## Getting started
+
+Let's breakdown the syntax from the previous example.
+
+```{r}
+#| echo: true
+linear_reg() |> 
+  set_engine("lm") |>
+  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>
+  tidy()
+```
+
+## 1️⃣ Specify model 
+
+```{r}
+#| echo: true
+linear_reg() 
+```
+
+## 2️⃣ Set computational engine
+
+```{r}
+#| echo: true
+linear_reg() |> 
+  set_engine("lm")
+```
+
+## 3️⃣ Fit the model
+
+```{r}
+#| echo: true
+linear_reg() |> 
+  set_engine("lm") |>
+  fit(interest_rate ~ debt_to_income, data = loans_full_schema)
+```
+
+## 4️⃣ Summarize output
+
+```{r}
+#| echo: true
+linear_reg() |> 
+  set_engine("lm") |>
+  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>
+  tidy()
+```
+
+## Feature engineering
+
+**Feature engineering** is the process of transforming raw variables in preparation for use in a statistical model.
+
+<br>
+
+. . .
+
+We may be familiar doing feature engineering using dplyr before fitting the model.
+
+<br>
+
+. . .
+
+The [recipes](https://recipes.tidymodels.org/) package makes it possible to do feature engineering as part of the modeling workflow using "dplyr-like" functions.
+
+## Example: Predicting interest rate
+
+**Goal**: Fit a model to predict the interest rate from the term, debt to income ratio, home ownership, and number of delinquencies in past two years.
+
+<br>
+
+. . .
+
+We need to do the following to prepare the predictors for the model:
+
+-   Make `term` a factor.
+-   Mean-center `debt_to_income`.
+-   Break `delinq_2y` into the categories 0, 1, 2, 3+.
+
+## Feature engineering using dplyr 
+
+### Prepare the data
+
+```{r}
+#| echo: true
+loans_full_schema <- loans_full_schema |>
+  mutate(term = as_factor(term)) |>
+  mutate(debt_to_income_cent = debt_to_income - mean(debt_to_income)) |>
+  mutate(delinq_2y_cat = cut(delinq_2y, breaks = c(0,1, 2, 3)))
+
+```
+
+### Fit the model 
+
+\[ADD THE R CODE\]
+
+## Feature engineering with recipes
+
+![Illustration by [Allison Horst](https://www.allisonhorst.com/)](images/recipes.png){fig-align="center"}
+
+## Feature engineering with recipes
+
+-   Write code step by step
+
+-   Put all steps in a single pipeline
+
+## recipes vs. dplyr 
+
+-   show code side by side
+
+-   advantages / disadvantage of each approach
+
+## Put it together with workflow 
+
+-   Define the model
+
+-   Define the receipe
+
+## Exercise - feature engineering
+
+## Prediction
+
+## Test vs. Train data
+
+## Prediction exercise
+
+## Thinking about prediction or inference
+
+## Exercise - split into test and train?
+
+## Cross-validation
+
+## Exercise - cross validation
+
+# Using tidydmodels in your course
+
+## Pedagogical advantages
+
+## Activity / Discussion
+
+-   Think about how you might implement this in the classroom
+
+-   What is a potential challenge
+
+-   Write an activity
+
+-   Minute paper - any remaining questions?
