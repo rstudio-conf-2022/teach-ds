@@ -506,7 +506,7 @@
 ✖ dplyr::lag()      masks stats::lag()
 ✖ yardstick::spec() masks readr::spec()
 ✖ recipes::step()   masks stats::step()
-• Search for functions across packages at https://www.tidymodels.org/find/</code></pre>
+• Dig deeper into tidy modeling with R at https://www.tmwr.org</code></pre>
 </div>
 </div>
 </section>
@@ -885,15 +885,30 @@ Coefficients:
 </section>
 <section id="feature-engineering-using-dplyr" class="slide level2">
 <h2>Feature engineering using dplyr</h2>
-<h3 id="prepare-the-data">Prepare the data</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a>loans_full_schema <span class="ot">&lt;-</span> loans_full_schema <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">as_factor</span>(term)) <span class="sc">|&gt;</span></span>
-<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">mutate</span>(<span class="at">debt_to_income_cent =</span> debt_to_income <span class="sc">-</span> <span class="fu">mean</span>(debt_to_income)) <span class="sc">|&gt;</span></span>
-<span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">mutate</span>(<span class="at">delinq_2y_cat =</span> <span class="fu">cut</span>(delinq_2y, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># Prepare the data</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a>loans_full_schema <span class="ot">&lt;-</span> loans_full_schema <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">as_factor</span>(term)) <span class="sc">|&gt;</span></span>
+<span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">mutate</span>(<span class="at">debt_to_income_cent =</span> debt_to_income <span class="sc">-</span> <span class="fu">mean</span>(debt_to_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb34-5"><a href="#cb34-5"></a>  <span class="fu">mutate</span>(<span class="at">delinq_2y_cat =</span> <span class="fu">cut</span>(delinq_2y, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">Inf</span>), <span class="at">right =</span> <span class="cn">FALSE</span>))</span>
+<span id="cb34-6"><a href="#cb34-6"></a></span>
+<span id="cb34-7"><a href="#cb34-7"></a><span class="co"># Fit the model </span></span>
+<span id="cb34-8"><a href="#cb34-8"></a><span class="fu">lm</span>(interest_rate <span class="sc">~</span> term <span class="sc">+</span> debt_to_income_cent <span class="sc">+</span> homeownership <span class="sc">+</span> delinq_2y_cat, <span class="at">data =</span> loans_full_schema) <span class="sc">|&gt;</span></span>
+<span id="cb34-9"><a href="#cb34-9"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 5
+  term                 estimate std.error statistic  p.value
+  &lt;chr&gt;                   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+1 (Intercept)           10.3      0.0780     132.   0       
+2 term60                 4.03     0.0997      40.4  0       
+3 debt_to_income_cent    0.0462   0.00304     15.2  1.80e-51
+4 homeownershipOWN       0.726    0.140        5.18 2.31e- 7
+5 homeownershipRENT      1.49     0.0994      15.0  1.55e-50
+6 delinq_2y_cat[1,2)     1.49     0.151        9.83 1.04e-22
+7 delinq_2y_cat[2,3)     1.81     0.288        6.29 3.23e-10
+8 delinq_2y_cat[3,Inf)   2.76     0.368        7.49 7.28e-14</code></pre>
 </div>
-<h3 id="fit-the-model-1">Fit the model</h3>
-<p>[ADD THE R CODE]</p>
+</div>
 </section>
 <section id="feature-engineering-with-recipes" class="slide level2">
 <h2>Feature engineering with recipes</h2>
@@ -905,6 +920,16 @@ Coefficients:
 <li><p>Write code step by step</p></li>
 <li><p>Put all steps in a single pipeline</p></li>
 </ul>
+</section>
+<section id="featuring-engineering-with-recipes" class="slide level2">
+<h2>Featuring engineering with recipes</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># define workflow </span></span>
+<span id="cb36-2"><a href="#cb36-2"></a></span>
+<span id="cb36-3"><a href="#cb36-3"></a>interest_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(interest_rate <span class="sc">~</span> term <span class="sc">+</span> debt_to_income <span class="sc">+</span> </span>
+<span id="cb36-4"><a href="#cb36-4"></a>                         homeownership <span class="sc">+</span> delinq_2y, </span>
+<span id="cb36-5"><a href="#cb36-5"></a>                       <span class="at">data =</span> loans_full_schema)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
 <section id="recipes-vs.-dplyr" class="slide level2">
 <h2>recipes vs.&nbsp;dplyr</h2>
@@ -922,6 +947,11 @@ Coefficients:
 </section>
 <section id="exercise---feature-engineering" class="slide level2">
 <h2>Exercise - feature engineering</h2>
+<ul>
+<li><p>Have an qmd file with the dplyr pipeline.</p></li>
+<li><p>Go to the receipes documentation and try to find the appropriate step functions.</p></li>
+<li><p>Was this easy to do? Why or why not? What was easy? What was challenging?</p></li>
+</ul>
 </section>
 <section id="prediction" class="slide level2">
 <h2>Prediction</h2>
@@ -952,13 +982,18 @@ Coefficients:
 <section id="pedagogical-advantages" class="slide level2">
 <h2>Pedagogical advantages</h2>
 </section>
+<section id="putting-it-all-together" class="slide level2">
+<h2>Putting it all together</h2>
+<ul>
+<li>Make an Rmd file with a full pipeline to show this is what your students would be able to do at the end of the semester.</li>
+</ul>
+</section>
 <section id="activity-discussion" class="slide level2">
 <h2>Activity / Discussion</h2>
 <ul>
 <li><p>Think about how you might implement this in the classroom</p></li>
 <li><p>What is a potential challenge</p></li>
 <li><p>Write an activity</p></li>
-<li><p>Minute paper - any remaining questions?</p></li>
 </ul>
 
 

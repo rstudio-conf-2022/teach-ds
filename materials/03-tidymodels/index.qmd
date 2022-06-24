@@ -310,22 +310,20 @@ We need to do the following to prepare the predictors for the model:
 -   Mean-center `debt_to_income`.
 -   Break `delinq_2y` into the categories 0, 1, 2, 3+.
 
-## Feature engineering using dplyr 
-
-### Prepare the data
+## Feature engineering using dplyr
 
 ```{r}
 #| echo: true
+# Prepare the data
 loans_full_schema <- loans_full_schema |>
   mutate(term = as_factor(term)) |>
-  mutate(debt_to_income_cent = debt_to_income - mean(debt_to_income)) |>
-  mutate(delinq_2y_cat = cut(delinq_2y, breaks = c(0,1, 2, 3)))
+  mutate(debt_to_income_cent = debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>
+  mutate(delinq_2y_cat = cut(delinq_2y, breaks = c(0, 1, 2, 3, Inf), right = FALSE))
 
+# Fit the model 
+lm(interest_rate ~ term + debt_to_income_cent + homeownership + delinq_2y_cat, data = loans_full_schema) |>
+  tidy()
 ```
-
-### Fit the model 
-
-\[ADD THE R CODE\]
 
 ## Feature engineering with recipes
 
@@ -336,6 +334,17 @@ loans_full_schema <- loans_full_schema |>
 -   Write code step by step
 
 -   Put all steps in a single pipeline
+
+## Featuring engineering with recipes
+
+```{r}
+#| echo: true
+# define workflow 
+
+interest_rec <- recipe(interest_rate ~ term + debt_to_income + 
+                         homeownership + delinq_2y, 
+                       data = loans_full_schema)
+```
 
 ## recipes vs. dplyr 
 
@@ -350,6 +359,12 @@ loans_full_schema <- loans_full_schema |>
 -   Define the receipe
 
 ## Exercise - feature engineering
+
+-   Have an qmd file with the dplyr pipeline.
+
+-   Go to the receipes documentation and try to find the appropriate step functions.
+
+-   Was this easy to do? Why or why not? What was easy? What was challenging?
 
 ## Prediction
 
@@ -369,6 +384,10 @@ loans_full_schema <- loans_full_schema |>
 
 ## Pedagogical advantages
 
+## Putting it all together
+
+-   Make an Rmd file with a full pipeline to show this is what your students would be able to do at the end of the semester.
+
 ## Activity / Discussion
 
 -   Think about how you might implement this in the classroom
@@ -376,5 +395,3 @@ loans_full_schema <- loans_full_schema |>
 -   What is a potential challenge
 
 -   Write an activity
-
--   Minute paper - any remaining questions?
