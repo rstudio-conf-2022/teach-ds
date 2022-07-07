@@ -210,7 +210,7 @@ base_lm_aug <- augment(base_lm)
 base_lm_aug
 ```
 
-## Tidymodels 
+## Tidymodels
 
 ```{r }
 #| echo: true
@@ -221,7 +221,7 @@ tidy_lm_aug
 ```
 :::
 
-## Why full tidymodels framework? 
+## Why full tidymodels framework?
 
 Most pedagogical advantages for more advanced models:
 
@@ -246,7 +246,7 @@ linear_reg() |>
   tidy()
 ```
 
-## 1️⃣ Specify model 
+## 1️⃣ Specify model
 
 ```{r}
 #| echo: true
@@ -346,13 +346,13 @@ interest_rec <- recipe(interest_rate ~ term + debt_to_income +
                        data = loans_full_schema)
 ```
 
-## recipes vs. dplyr 
+## recipes vs. dplyr
 
 -   show code side by side
 
 -   advantages / disadvantage of each approach
 
-## Put it together with workflow 
+## Put it together with workflow
 
 -   Define the model
 
