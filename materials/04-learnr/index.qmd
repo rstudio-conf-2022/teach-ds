@@ -27,23 +27,21 @@ These slides are currently being designed and built.
 
 ------------------------------------------------------------------------
 
-## Demo
+## Parts of a tutorial 
 
-![](images/learnr-first-look.png)
-
-------------------------------------------------------------------------
+![*Source: [minecr.shinyapps.io/dsbox-01-edibnb](https://minecr.shinyapps.io/dsbox-01-edibnb/)*](images/learnr-example.png)
 
 # Why?
 
 ## Within a course
 
--   Flipped classroom:
-    -   Assign a learnr tutorial, including narrative and implementation in R that students can practice with, before introducing a concept in class
+-   In a flipped classroom
+    -   Assign a learnr tutorial that students can practice with before introducing a concept in class
     -   Cover the concept in class (quicker)
     -   Allocate the time saved to hands on exercises in class
 -   Lecture follow-up
     -   Provide the same content from the lecture as follow up exercises
--   Lab exercises / assignments
+-   Provide immediate and meaningful feedback at scale
 
 ## Self learning
 
@@ -53,54 +51,143 @@ These slides are currently being designed and built.
 
 # How?
 
-## Getting started
+------------------------------------------------------------------------
+
+## Topics
+
+-   Question types
+
+-   **gradethis** for automated feedback
+
+-   Writing effective questions
+
+-   Sharing with students
+
+-   Recording student responses - include this (?)
+
+------------------------------------------------------------------------
+
+## Getting started: .qmd `r emo::ji("right_arrow")` .rmd
+
+-   Learnr tutorials are written in an R Markdown document (`.rmd`)
+
+-   The syntax and structure is very similar to a Quarto document (`.qmd`)
+
+-   These documents primarily differ in some of the arguments in the YAML
+
+## YAML for learnr tutorial
+
+```{r}
+#| eval: false
+#| echo: true
+---
+title: "Learnr Demo"
+output: 
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+    css: "css/style.css" 
+runtime: shiny_prerendered
+---
+```
+
+-   `runtime: shiny_prerendered`: Turns R Markdown into interactive app
+-   `progressive: true`: Display one subsection at a time
+-   `allow_skip: true`: Able to skip exercises in a section
+-   `css: "css/style.css"`: Apply custom formatting
+
+# Demo
+
+## Follow along
 
 Follow along options:
 
 -   Local:
 
-    -   In RStudio, install and load the **learnr** and **sortable** packages
-    -   File ➝ New File ➝ R Markdown... ➝ From template ➝ Interactive Tutorial
+    -   In RStudio, install and load the **learnr, gradethis*,*** and **sortable** packages
+    -   Access the source file for the tutorial on GitHub: [github.com/matackett/learnr-demo](https://github.com/matackett/learnr-demo)
 
--   Cloud: Go to the workspace for this course and start the assignment called **07 - Learnr**.
+-   Cloud: Go to the workspace for this course and start the assignment called **04 - Learnr**.
 
--   Deployed tutorial: https://gallery.shinyapps.io/tutorial-demo/
+-   Deployed tutorial: <https://matackett.shinyapps.io/learnr-demo>
+
+## Writing questions
+
+-   **Question types**
+    -   Multiple choice
+    -   Coding exercises
+    -   Sorting questions
+-   **Writing effective questions**
+
+## Grading coding exercises
+
+The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:
+
+-   `grade_this_code()`: Compare student code to model code (strict check)
+
+-   `grade_this()`: Compare student result to model result (flexible check)
+
+## Your turn!
+
+::: callout-important
+Create a tutorial with three questions:
+
+-   one multiple choice
+
+-   one coding exercise
+
+-   one sortable question
+
+You can write your responses in **Part 5: Your Turn!** in the learnr demo. It is OK if each question requires code, but that is not required.
+
+**Stretch goal:** Add hints and solution checking to the coding exercise.
+:::
 
 ## Sharing with students
 
--   You could share the R Markdown (and all accompanying files) but that's probably not what you want to do...
-
 -   Deploy on
 
-    -   shinapps.io
+    -   [shinapps.io](https://www.shinyapps.io/)
     -   RStudio Connect (free for academic use)
 
-# How else?
+-   Distribute tutorials as a package
 
-## Code checking
+    -   [dsbox R package](https://github.com/rstudio-education/dsbox) includes set of learnr tutorials
 
--   No built in code checking feature, but hooks for using other packages for code checking
+    -   We will talk about developing packages in a later session
 
--   **gradethis** is furthest along: https://github.com/rstudio-education/gradethis
+# Recording student responses
 
-## Recording events
+## "Minute paper"
 
--   Recording events like exercise and question submissions, requests for hints/solutions, etc.
--   This is possible with learnr, though not very simple
--   With other R tools that allow for writing out to spreadsheets (e.g. Google Sheets) and building dashboards (e.g. shinydashboard) it's possible to build a dashboard for your class where you can track their progress and learn from what they're struggling with
+Add a link to a form at the end of the tutorial for a "minute paper"
 
-## A simpler hack: "Minute paper"
-
-Add a link at the end of your tutorial to a Google (or other) form
-
+::: callout-important
 -   *Write about one or two questions you didn't get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?*
 
 OR
 
 -   *If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.*
+:::
 
 ------------------------------------------------------------------------
 
+## Collect response via learnrhash 
+
+-   Is there time to include this?
+
+## Learn more!
+
+-   Add some resources
+
+# Workshop check in 
+
+---
+
 ::: callout-important
-Create a tutorial with three questions: one multiple choice, one code, and one sortable / parsons question. It's of course ok if each question requires some code, but this is not required.
+We have completed Day 01! Please answer the following using your sticky notes:
+
+-   XX sticky note: What is going well / what has been your favorite part of the workshop so far?
+
+-   XX sticky note: What is still unclear or confusing?
 :::

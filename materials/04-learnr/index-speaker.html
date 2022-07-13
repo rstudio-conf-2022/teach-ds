@@ -17,6 +17,69 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <script src="../../site_libs/clipboard/clipboard.min.js"></script>
@@ -355,13 +418,10 @@
 <h1>What?</h1>
 
 </section>
-<section id="demo" class="slide level2">
-<h2>Demo</h2>
+<section id="parts-of-a-tutorial" class="slide level2">
+<h2>Parts of a tutorial</h2>
 
-<img data-src="images/learnr-first-look.png" class="r-stretch"></section>
-<section class="slide level2">
-
-</section></section>
+<img data-src="images/learnr-example.png" class="r-stretch quarto-figure-center"><p class="caption"><em>Source: <a href="https://minecr.shinyapps.io/dsbox-01-edibnb/">minecr.shinyapps.io/dsbox-01-edibnb</a></em></p></section></section>
 <section>
 <section id="why" class="title-slide slide level1 center">
 <h1>Why?</h1>
@@ -370,9 +430,9 @@
 <section id="within-a-course" class="slide level2">
 <h2>Within a course</h2>
 <ul>
-<li>Flipped classroom:
+<li>In a flipped classroom
 <ul>
-<li>Assign a learnr tutorial, including narrative and implementation in R that students can practice with, before introducing a concept in class</li>
+<li>Assign a learnr tutorial that students can practice with before introducing a concept in class</li>
 <li>Cover the concept in class (quicker)</li>
 <li>Allocate the time saved to hands on exercises in class</li>
 </ul></li>
@@ -380,7 +440,7 @@
 <ul>
 <li>Provide the same content from the lecture as follow up exercises</li>
 </ul></li>
-<li>Lab exercises / assignments</li>
+<li>Provide immediate and meaningful feedback at scale</li>
 </ul>
 </section>
 <section id="self-learning" class="slide level2">
@@ -396,53 +456,137 @@
 <h1>How?</h1>
 
 </section>
-<section id="getting-started" class="slide level2">
-<h2>Getting started</h2>
+<section id="topics" class="slide level2">
+<h2>Topics</h2>
+<ul>
+<li><p>Question types</p></li>
+<li><p><strong>gradethis</strong> for automated feedback</p></li>
+<li><p>Writing effective questions</p></li>
+<li><p>Sharing with students</p></li>
+<li><p>Recording student responses - include this (?)</p></li>
+</ul>
+</section>
+<section id="getting-started-.qmd-.rmd" class="slide level2">
+<h2>Getting started: .qmd ➡️ .rmd</h2>
+<ul>
+<li><p>Learnr tutorials are written in an R Markdown document (<code>.rmd</code>)</p></li>
+<li><p>The syntax and structure is very similar to a Quarto document (<code>.qmd</code>)</p></li>
+<li><p>These documents primarily differ in some of the arguments in the YAML</p></li>
+</ul>
+</section>
+<section id="yaml-for-learnr-tutorial" class="slide level2">
+<h2>YAML for learnr tutorial</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>title<span class="sc">:</span> <span class="st">"Learnr Demo"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>output<span class="sc">:</span> </span>
+<span id="cb1-4"><a href="#cb1-4"></a>  learnr<span class="sc">::</span>tutorial<span class="sc">:</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>    progressive<span class="sc">:</span> true</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    allow_skip<span class="sc">:</span> true</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    css<span class="sc">:</span> <span class="st">"css/style.css"</span> </span>
+<span id="cb1-8"><a href="#cb1-8"></a>runtime<span class="sc">:</span> shiny_prerendered</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><code>runtime: shiny_prerendered</code>: Turns R Markdown into interactive app</li>
+<li><code>progressive: true</code>: Display one subsection at a time</li>
+<li><code>allow_skip: true</code>: Able to skip exercises in a section</li>
+<li><code>css: "css/style.css"</code>: Apply custom formatting</li>
+</ul>
+</section></section>
+<section>
+<section id="demo" class="title-slide slide level1 center">
+<h1>Demo</h1>
+
+</section>
+<section id="follow-along" class="slide level2">
+<h2>Follow along</h2>
 <p>Follow along options:</p>
 <ul>
 <li><p>Local:</p>
 <ul>
-<li>In RStudio, install and load the <strong>learnr</strong> and <strong>sortable</strong> packages</li>
-<li>File ➝ New File ➝ R Markdown… ➝ From template ➝ Interactive Tutorial</li>
+<li>In RStudio, install and load the <strong>learnr, gradethis<em>,</em></strong> and <strong>sortable</strong> packages</li>
+<li>Access the source file for the tutorial on GitHub: <a href="https://github.com/matackett/learnr-demo">github.com/matackett/learnr-demo</a></li>
 </ul></li>
-<li><p>Cloud: Go to the workspace for this course and start the assignment called <strong>07 - Learnr</strong>.</p></li>
-<li><p>Deployed tutorial: https://gallery.shinyapps.io/tutorial-demo/</p></li>
+<li><p>Cloud: Go to the workspace for this course and start the assignment called <strong>04 - Learnr</strong>.</p></li>
+<li><p>Deployed tutorial: <a href="https://matackett.shinyapps.io/learnr-demo" class="uri">https://matackett.shinyapps.io/learnr-demo</a></p></li>
 </ul>
+</section>
+<section id="writing-questions" class="slide level2">
+<h2>Writing questions</h2>
+<ul>
+<li><strong>Question types</strong>
+<ul>
+<li>Multiple choice</li>
+<li>Coding exercises</li>
+<li>Sorting questions</li>
+</ul></li>
+<li><strong>Writing effective questions</strong></li>
+</ul>
+</section>
+<section id="grading-coding-exercises" class="slide level2">
+<h2>Grading coding exercises</h2>
+<p>The <a href="https://pkgs.rstudio.com/gradethis/">gradethis</a> package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:</p>
+<ul>
+<li><p><code>grade_this_code()</code>: Compare student code to model code (strict check)</p></li>
+<li><p><code>grade_this()</code>: Compare student result to model result (flexible check)</p></li>
+</ul>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn!</h2>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Create a tutorial with three questions:</p>
+<ul>
+<li><p>one multiple choice</p></li>
+<li><p>one coding exercise</p></li>
+<li><p>one sortable question</p></li>
+</ul>
+<p>You can write your responses in <strong>Part 5: Your Turn!</strong> in the learnr demo. It is OK if each question requires code, but that is not required.</p>
+<p><strong>Stretch goal:</strong> Add hints and solution checking to the coding exercise.</p>
+</div>
+</div>
+</div>
 </section>
 <section id="sharing-with-students" class="slide level2">
 <h2>Sharing with students</h2>
 <ul>
-<li><p>You could share the R Markdown (and all accompanying files) but that’s probably not what you want to do…</p></li>
 <li><p>Deploy on</p>
 <ul>
-<li>shinapps.io</li>
+<li><a href="https://www.shinyapps.io/">shinapps.io</a></li>
 <li>RStudio Connect (free for academic use)</li>
+</ul></li>
+<li><p>Distribute tutorials as a package</p>
+<ul>
+<li><p><a href="https://github.com/rstudio-education/dsbox">dsbox R package</a> includes set of learnr tutorials</p></li>
+<li><p>We will talk about developing packages in a later session</p></li>
 </ul></li>
 </ul>
 </section></section>
 <section>
-<section id="how-else" class="title-slide slide level1 center">
-<h1>How else?</h1>
+<section id="recording-student-responses" class="title-slide slide level1 center">
+<h1>Recording student responses</h1>
 
 </section>
-<section id="code-checking" class="slide level2">
-<h2>Code checking</h2>
-<ul>
-<li><p>No built in code checking feature, but hooks for using other packages for code checking</p></li>
-<li><p><strong>gradethis</strong> is furthest along: https://github.com/rstudio-education/gradethis</p></li>
-</ul>
-</section>
-<section id="recording-events" class="slide level2">
-<h2>Recording events</h2>
-<ul>
-<li>Recording events like exercise and question submissions, requests for hints/solutions, etc.</li>
-<li>This is possible with learnr, though not very simple</li>
-<li>With other R tools that allow for writing out to spreadsheets (e.g.&nbsp;Google Sheets) and building dashboards (e.g.&nbsp;shinydashboard) it’s possible to build a dashboard for your class where you can track their progress and learn from what they’re struggling with</li>
-</ul>
-</section>
-<section id="a-simpler-hack-minute-paper" class="slide level2">
-<h2>A simpler hack: “Minute paper”</h2>
-<p>Add a link at the end of your tutorial to a Google (or other) form</p>
+<section id="minute-paper" class="slide level2">
+<h2>“Minute paper”</h2>
+<p>Add a link to a form at the end of the tutorial for a “minute paper”</p>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
 <ul>
 <li><em>Write about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?</em></li>
 </ul>
@@ -450,6 +594,26 @@
 <ul>
 <li><em>If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.</em></li>
 </ul>
+</div>
+</div>
+</div>
+</section>
+<section id="collect-response-via-learnrhash" class="slide level2">
+<h2>Collect response via learnrhash</h2>
+<ul>
+<li>Is there time to include this?</li>
+</ul>
+</section>
+<section id="learn-more" class="slide level2">
+<h2>Learn more!</h2>
+<ul>
+<li>Add some resources</li>
+</ul>
+</section></section>
+<section>
+<section id="workshop-check-in" class="title-slide slide level1 center">
+<h1>Workshop check in</h1>
+
 </section>
 <section class="slide level2">
 
@@ -462,7 +626,11 @@
 <p><strong>Important</strong></p>
 </div>
 <div class="callout-content">
-<p>Create a tutorial with three questions: one multiple choice, one code, and one sortable / parsons question. It’s of course ok if each question requires some code, but this is not required.</p>
+<p>We have completed Day 01! Please answer the following using your sticky notes:</p>
+<ul>
+<li><p>XX sticky note: What is going well / what has been your favorite part of the workshop so far?</p></li>
+<li><p>XX sticky note: What is still unclear or confusing?</p></li>
+</ul>
 </div>
 </div>
 </div>
@@ -688,6 +856,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
