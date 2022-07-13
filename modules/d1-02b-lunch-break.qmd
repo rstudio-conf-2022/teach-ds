@@ -11,4 +11,4 @@ Lunch is served at ...
 Before you leave for lunch break, please ... <!--# TO DO: Add instructions on giving feedback on stickies. -->
 
 The teaching team is also taking this time to refuel and recharge.
-If you have any questions, please save then fir after the break.
+If you have any questions, please save then for after the break.
