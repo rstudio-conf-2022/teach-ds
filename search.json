@@ -1,5 +1,285 @@
 [
   {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License."
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#session-outline",
+    "href": "materials/03-tidymodels/index.html#session-outline",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Session outline",
+    "text": "Session outline"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#course-context",
+    "href": "materials/03-tidymodels/index.html#course-context",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Course context",
+    "text": "Course context"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#gaise-guidelines",
+    "href": "materials/03-tidymodels/index.html#gaise-guidelines",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "GAISE Guidelines",
+    "text": "GAISE Guidelines\n\nTeach statistical thinking.\n\nTeach statistics as an investigative process of problem-solving and decision-making.\nGive students experience with multivariable thinking.\n\nIntegrate real data with a context and purpose.\nFoster active learning.\nUse technology to explore concepts and analyze data.\n\nGuidelines for Assessment and Instruction in Statistics Education (GAISE) 2016 Report"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#teaching-modern-regression",
+    "href": "materials/03-tidymodels/index.html#teaching-modern-regression",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Teaching modern regression",
+    "text": "Teaching modern regression\nFacilitate opportunities for students to…\n\n\nRegularly engage with real-world applications and complex data\nDevelop proficiency using professional statistical software and using a reproducible workflow\nIdentify appropriate methods based on the primary analysis objective - inference or prediction\nDevelop important non-technical skills, specifically written communication and teamwork"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#discussion",
+    "href": "materials/03-tidymodels/index.html#discussion",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Discussion",
+    "text": "Discussion\n\nHow much do you teach regression in your course(s)?\nDo you currently implement any of these principles in your teaching? Do you find some more challenging to implement than others?"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#tidymodels",
+    "href": "materials/03-tidymodels/index.html#tidymodels",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Tidymodels",
+    "text": "Tidymodels\n\n\n\n\n\n\n\n\nThe tidymodels framework is a collection of packages for modeling and machine learning using tidyverse principles.\n\n\ninstall.packages(\"tidymodels\")"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#tidymodels-1",
+    "href": "materials/03-tidymodels/index.html#tidymodels-1",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Tidymodels",
+    "text": "Tidymodels\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 0.2.0 ──\n\n\n✔ broom        0.8.0     ✔ rsample      0.1.1\n✔ dials        0.1.1     ✔ tune         0.2.0\n✔ infer        1.0.2     ✔ workflows    0.2.6\n✔ modeldata    0.1.1     ✔ workflowsets 0.2.1\n✔ parsnip      0.2.1     ✔ yardstick    0.0.9\n✔ recipes      0.2.0     \n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ scales::discard() masks purrr::discard()\n✖ dplyr::filter()   masks stats::filter()\n✖ recipes::fixed()  masks stringr::fixed()\n✖ dplyr::lag()      masks stats::lag()\n✖ yardstick::spec() masks readr::spec()\n✖ recipes::step()   masks stats::step()\n• Search for functions across packages at https://www.tidymodels.org/find/"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#data-loans-from-lending-club",
+    "href": "materials/03-tidymodels/index.html#data-loans-from-lending-club",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Data: Loans from Lending Club",
+    "text": "Data: Loans from Lending Club\n[Write introduction to the data] and the variables. Partially follow analysis in Chapter 8 - Linear regression with multiple predictors in Introduction to Modern Statistics."
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#data-loans-from-lending-club-1",
+    "href": "materials/03-tidymodels/index.html#data-loans-from-lending-club-1",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Data: Loans from Lending Club",
+    "text": "Data: Loans from Lending Club\n\nlibrary(openintro)\nglimpse(loans_full_schema)\n\nRows: 10,000\nColumns: 55\n$ emp_title                        <chr> \"global config engineer \", \"warehouse…\n$ emp_length                       <dbl> 3, 10, 3, 1, 10, NA, 10, 10, 10, 3, 1…\n$ state                            <fct> NJ, HI, WI, PA, CA, KY, MI, AZ, NV, I…\n$ homeownership                    <fct> MORTGAGE, RENT, RENT, RENT, RENT, OWN…\n$ annual_income                    <dbl> 90000, 40000, 40000, 30000, 35000, 34…\n$ verified_income                  <fct> Verified, Not Verified, Source Verifi…\n$ debt_to_income                   <dbl> 18.01, 5.04, 21.15, 10.16, 57.96, 6.4…\n$ annual_income_joint              <dbl> NA, NA, NA, NA, 57000, NA, 155000, NA…\n$ verification_income_joint        <fct> , , , , Verified, , Not Verified, , ,…\n$ debt_to_income_joint             <dbl> NA, NA, NA, NA, 37.66, NA, 13.12, NA,…\n$ delinq_2y                        <int> 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0…\n$ months_since_last_delinq         <int> 38, NA, 28, NA, NA, 3, NA, 19, 18, NA…\n$ earliest_credit_line             <dbl> 2001, 1996, 2006, 2007, 2008, 1990, 2…\n$ inquiries_last_12m               <int> 6, 1, 4, 0, 7, 6, 1, 1, 3, 0, 4, 4, 8…\n$ total_credit_lines               <int> 28, 30, 31, 4, 22, 32, 12, 30, 35, 9,…\n$ open_credit_lines                <int> 10, 14, 10, 4, 16, 12, 10, 15, 21, 6,…\n$ total_credit_limit               <int> 70795, 28800, 24193, 25400, 69839, 42…\n$ total_credit_utilized            <int> 38767, 4321, 16000, 4997, 52722, 3898…\n$ num_collections_last_12m         <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…\n$ num_historical_failed_to_pay     <int> 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0…\n$ months_since_90d_late            <int> 38, NA, 28, NA, NA, 60, NA, 71, 18, N…\n$ current_accounts_delinq          <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…\n$ total_collection_amount_ever     <int> 1250, 0, 432, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ current_installment_accounts     <int> 2, 0, 1, 1, 1, 0, 2, 2, 6, 1, 2, 1, 2…\n$ accounts_opened_24m              <int> 5, 11, 13, 1, 6, 2, 1, 4, 10, 5, 6, 7…\n$ months_since_last_credit_inquiry <int> 5, 8, 7, 15, 4, 5, 9, 7, 4, 17, 3, 4,…\n$ num_satisfactory_accounts        <int> 10, 14, 10, 4, 16, 12, 10, 15, 21, 6,…\n$ num_accounts_120d_past_due       <int> 0, 0, 0, 0, 0, 0, 0, NA, 0, 0, 0, 0, …\n$ num_accounts_30d_past_due        <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…\n$ num_active_debit_accounts        <int> 2, 3, 3, 2, 10, 1, 3, 5, 11, 3, 2, 2,…\n$ total_debit_limit                <int> 11100, 16500, 4300, 19400, 32700, 272…\n$ num_total_cc_accounts            <int> 14, 24, 14, 3, 20, 27, 8, 16, 19, 7, …\n$ num_open_cc_accounts             <int> 8, 14, 8, 3, 15, 12, 7, 12, 14, 5, 8,…\n$ num_cc_carrying_balance          <int> 6, 4, 6, 2, 13, 5, 6, 10, 14, 3, 5, 3…\n$ num_mort_accounts                <int> 1, 0, 0, 0, 0, 3, 2, 7, 2, 0, 2, 3, 3…\n$ account_never_delinq_percent     <dbl> 92.9, 100.0, 93.5, 100.0, 100.0, 78.1…\n$ tax_liens                        <int> 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0…\n$ public_record_bankrupt           <int> 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0…\n$ loan_purpose                     <fct> moving, debt_consolidation, other, de…\n$ application_type                 <fct> individual, individual, individual, i…\n$ loan_amount                      <int> 28000, 5000, 2000, 21600, 23000, 5000…\n$ term                             <dbl> 60, 36, 36, 36, 36, 36, 60, 60, 36, 3…\n$ interest_rate                    <dbl> 14.07, 12.61, 17.09, 6.72, 14.07, 6.7…\n$ installment                      <dbl> 652.53, 167.54, 71.40, 664.19, 786.87…\n$ grade                            <fct> C, C, D, A, C, A, C, B, C, A, C, B, C…\n$ sub_grade                        <fct> C3, C1, D1, A3, C3, A3, C2, B5, C2, A…\n$ issue_month                      <fct> Mar-2018, Feb-2018, Feb-2018, Jan-201…\n$ loan_status                      <fct> Current, Current, Current, Current, C…\n$ initial_listing_status           <fct> whole, whole, fractional, whole, whol…\n$ disbursement_method              <fct> Cash, Cash, Cash, Cash, Cash, Cash, C…\n$ balance                          <dbl> 27015.86, 4651.37, 1824.63, 18853.26,…\n$ paid_total                       <dbl> 1999.330, 499.120, 281.800, 3312.890,…\n$ paid_principal                   <dbl> 984.14, 348.63, 175.37, 2746.74, 1569…\n$ paid_interest                    <dbl> 1015.19, 150.49, 106.43, 566.15, 754.…\n$ paid_late_fees                   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#regression-syntax",
+    "href": "materials/03-tidymodels/index.html#regression-syntax",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Regression syntax",
+    "text": "Regression syntax\nFit a linear regression model to predict the interest rate using the debt to income ratio.\n\nBase RTidymodels\n\n\n\nbase_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)\n\nsummary(base_lm)\n\n\nCall:\nlm(formula = interest_rate ~ debt_to_income, data = loans_full_schema)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-21.7391  -3.7203  -0.7945   2.7351  18.6274 \n\nCoefficients:\n                Estimate Std. Error t value Pr(>|t|)    \n(Intercept)    11.511445   0.080732  142.59   <2e-16 ***\ndebt_to_income  0.047183   0.003302   14.29   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.948 on 9974 degrees of freedom\n  (24 observations deleted due to missingness)\nMultiple R-squared:  0.02007,   Adjusted R-squared:  0.01997 \nF-statistic: 204.2 on 1 and 9974 DF,  p-value: < 2.2e-16\n\n\n\n\n\ntidy_lm <- linear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema)\n\ntidy(tidy_lm)\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#model-summaries-using-broom",
+    "href": "materials/03-tidymodels/index.html#model-summaries-using-broom",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Model summaries using broom",
+    "text": "Model summaries using broom\nCan utilize functions from the broom package to produce tidy summaries of models fit using Base R or the tidymodels framework\n\ntidy(): summarizes information about model components\nglance(): reports information about the entire model\naugment(): adds informations about observations to a dataset\n\n\nbroom.tidymodels.org"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#tidy",
+    "href": "materials/03-tidymodels/index.html#tidy",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "tidy()",
+    "text": "tidy()\n\nBase RTidymodels\n\n\n\nbase_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)\ntidy(base_lm)\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46\n\n\n\n\n\ntidy_lm <- linear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema)\ntidy(tidy_lm)\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#glance",
+    "href": "materials/03-tidymodels/index.html#glance",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "glance()",
+    "text": "glance()\n\nBase RTidymodels\n\n\n\nglance(base_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.\n# … with 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\n\n\nglance(tidy_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.\n# … with 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#augment",
+    "href": "materials/03-tidymodels/index.html#augment",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "augment()",
+    "text": "augment()\n\nBase RTidymodels\n\n\n\nbase_lm_aug <- augment(base_lm)\nbase_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd\n   <chr>             <dbl>          <dbl>   <dbl>  <dbl>    <dbl>  <dbl>   <dbl>\n 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6\n 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6\n 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5\n 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5\n 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7\n 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5\n 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6\n 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7\n 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7\n10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5\n# … with 9,966 more rows, and 1 more variable: .std.resid <dbl>\n\n\n\n\n\ntidy_lm_aug <- augment(tidy_lm$fit)\ntidy_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd\n   <chr>             <dbl>          <dbl>   <dbl>  <dbl>    <dbl>  <dbl>   <dbl>\n 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6\n 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6\n 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5\n 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5\n 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7\n 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5\n 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6\n 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7\n 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7\n10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5\n# … with 9,966 more rows, and 1 more variable: .std.resid <dbl>"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#why-full-tidymodels-framework",
+    "href": "materials/03-tidymodels/index.html#why-full-tidymodels-framework",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Why full tidymodels framework?",
+    "text": "Why full tidymodels framework?\nMost pedagogical advantages for more advanced models:\n\nConsistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.\nStreamline modeling workflow\n\nSplit data into train and test sets\nCreate custom variables\nAssess model performance\nUse model for prediction and inference"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#getting-started",
+    "href": "materials/03-tidymodels/index.html#getting-started",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Getting started",
+    "text": "Getting started\nLet’s breakdown the syntax from the previous example.\n\nlinear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#specify-model",
+    "href": "materials/03-tidymodels/index.html#specify-model",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "1️⃣ Specify model",
+    "text": "1️⃣ Specify model\n\nlinear_reg() \n\nLinear Regression Model Specification (regression)\n\nComputational engine: lm"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#set-computational-engine",
+    "href": "materials/03-tidymodels/index.html#set-computational-engine",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "2️⃣ Set computational engine",
+    "text": "2️⃣ Set computational engine\n\nlinear_reg() |> \n  set_engine(\"lm\")\n\nLinear Regression Model Specification (regression)\n\nComputational engine: lm"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#fit-the-model",
+    "href": "materials/03-tidymodels/index.html#fit-the-model",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "3️⃣ Fit the model",
+    "text": "3️⃣ Fit the model\n\nlinear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema)\n\nparsnip model object\n\n\nCall:\nstats::lm(formula = interest_rate ~ debt_to_income, data = data)\n\nCoefficients:\n   (Intercept)  debt_to_income  \n      11.51145         0.04718"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#summarize-output",
+    "href": "materials/03-tidymodels/index.html#summarize-output",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "4️⃣ Summarize output",
+    "text": "4️⃣ Summarize output\n\nlinear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#feature-engineering",
+    "href": "materials/03-tidymodels/index.html#feature-engineering",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Feature engineering",
+    "text": "Feature engineering\nFeature engineering is the process of transforming raw variables in preparation for use in a statistical model.\n\n\nWe may be familiar doing feature engineering using dplyr before fitting the model.\n\n\n\nThe recipes package makes it possible to do feature engineering as part of the modeling workflow using “dplyr-like” functions."
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#example-predicting-interest-rate",
+    "href": "materials/03-tidymodels/index.html#example-predicting-interest-rate",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Example: Predicting interest rate",
+    "text": "Example: Predicting interest rate\nGoal: Fit a model to predict the interest rate from the term, debt to income ratio, home ownership, and number of delinquencies in past two years.\n\n\nWe need to do the following to prepare the predictors for the model:\n\nMake term a factor.\nMean-center debt_to_income.\nBreak delinq_2y into the categories 0, 1, 2, 3+."
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#feature-engineering-using-dplyr",
+    "href": "materials/03-tidymodels/index.html#feature-engineering-using-dplyr",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Feature engineering using dplyr",
+    "text": "Feature engineering using dplyr\n\n# Prepare the data\nloans_full_schema <- loans_full_schema |>\n  mutate(term = as_factor(term)) |>\n  mutate(debt_to_income_cent = debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>\n  mutate(delinq_2y_cat = cut(delinq_2y, breaks = c(0, 1, 2, 3, Inf), right = FALSE))\n\n# Fit the model \nlm(interest_rate ~ term + debt_to_income_cent + homeownership + delinq_2y_cat, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 8 × 5\n  term                 estimate std.error statistic  p.value\n  <chr>                   <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)           10.3      0.0780     132.   0       \n2 term60                 4.03     0.0997      40.4  0       \n3 debt_to_income_cent    0.0462   0.00304     15.2  1.80e-51\n4 homeownershipOWN       0.726    0.140        5.18 2.31e- 7\n5 homeownershipRENT      1.49     0.0994      15.0  1.55e-50\n6 delinq_2y_cat[1,2)     1.49     0.151        9.83 1.04e-22\n7 delinq_2y_cat[2,3)     1.81     0.288        6.29 3.23e-10\n8 delinq_2y_cat[3,Inf)   2.76     0.368        7.49 7.28e-14"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#feature-engineering-with-recipes",
+    "href": "materials/03-tidymodels/index.html#feature-engineering-with-recipes",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Feature engineering with recipes",
+    "text": "Feature engineering with recipes\n\nIllustration by Allison Horst"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#feature-engineering-with-recipes-1",
+    "href": "materials/03-tidymodels/index.html#feature-engineering-with-recipes-1",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Feature engineering with recipes",
+    "text": "Feature engineering with recipes\n\nWrite code step by step\nPut all steps in a single pipeline"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#featuring-engineering-with-recipes",
+    "href": "materials/03-tidymodels/index.html#featuring-engineering-with-recipes",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Featuring engineering with recipes",
+    "text": "Featuring engineering with recipes\n\n# define workflow \n\ninterest_rec <- recipe(interest_rate ~ term + debt_to_income + \n                         homeownership + delinq_2y, \n                       data = loans_full_schema)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#recipes-vs.-dplyr",
+    "href": "materials/03-tidymodels/index.html#recipes-vs.-dplyr",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "recipes vs. dplyr",
+    "text": "recipes vs. dplyr\n\nshow code side by side\nadvantages / disadvantage of each approach"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#put-it-together-with-workflow",
+    "href": "materials/03-tidymodels/index.html#put-it-together-with-workflow",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Put it together with workflow",
+    "text": "Put it together with workflow\n\nDefine the model\nDefine the receipe"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#exercise---feature-engineering",
+    "href": "materials/03-tidymodels/index.html#exercise---feature-engineering",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Exercise - feature engineering",
+    "text": "Exercise - feature engineering\n\nHave an qmd file with the dplyr pipeline.\nGo to the receipes documentation and try to find the appropriate step functions.\nWas this easy to do? Why or why not? What was easy? What was challenging?"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#prediction",
+    "href": "materials/03-tidymodels/index.html#prediction",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Prediction",
+    "text": "Prediction"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#test-vs.-train-data",
+    "href": "materials/03-tidymodels/index.html#test-vs.-train-data",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Test vs. Train data",
+    "text": "Test vs. Train data"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#prediction-exercise",
+    "href": "materials/03-tidymodels/index.html#prediction-exercise",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Prediction exercise",
+    "text": "Prediction exercise"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#thinking-about-prediction-or-inference",
+    "href": "materials/03-tidymodels/index.html#thinking-about-prediction-or-inference",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Thinking about prediction or inference",
+    "text": "Thinking about prediction or inference"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#exercise---split-into-test-and-train",
+    "href": "materials/03-tidymodels/index.html#exercise---split-into-test-and-train",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Exercise - split into test and train?",
+    "text": "Exercise - split into test and train?"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#cross-validation",
+    "href": "materials/03-tidymodels/index.html#cross-validation",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Cross-validation",
+    "text": "Cross-validation"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#exercise---cross-validation",
+    "href": "materials/03-tidymodels/index.html#exercise---cross-validation",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Exercise - cross validation",
+    "text": "Exercise - cross validation"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#pedagogical-advantages",
+    "href": "materials/03-tidymodels/index.html#pedagogical-advantages",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Pedagogical advantages",
+    "text": "Pedagogical advantages"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#putting-it-all-together",
+    "href": "materials/03-tidymodels/index.html#putting-it-all-together",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Putting it all together",
+    "text": "Putting it all together\n\nMake an Rmd file with a full pipeline to show this is what your students would be able to do at the end of the semester."
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#activity-discussion",
+    "href": "materials/03-tidymodels/index.html#activity-discussion",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Activity / Discussion",
+    "text": "Activity / Discussion\n\nThink about how you might implement this in the classroom\nWhat is a potential challenge\nWrite an activity\n\n\n\n\n🔗 rstd.io/teach-ds-conf22"
+  },
+  {
     "objectID": "materials/01-hello/index.html#introductions",
     "href": "materials/01-hello/index.html#introductions",
     "title": "Hello #teachds",
@@ -21,18 +301,18 @@
     "text": "Session agenda\n\n…"
   },
   {
-    "objectID": "materials/04-learnr/index.html#demo",
-    "href": "materials/04-learnr/index.html#demo",
+    "objectID": "materials/04-learnr/index.html#parts-of-a-tutorial",
+    "href": "materials/04-learnr/index.html#parts-of-a-tutorial",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "Demo",
-    "text": "Demo"
+    "section": "Parts of a tutorial",
+    "text": "Parts of a tutorial\n\nSource: minecr.shinyapps.io/dsbox-01-edibnb"
   },
   {
     "objectID": "materials/04-learnr/index.html#within-a-course",
     "href": "materials/04-learnr/index.html#within-a-course",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Within a course",
-    "text": "Within a course\n\nFlipped classroom:\n\nAssign a learnr tutorial, including narrative and implementation in R that students can practice with, before introducing a concept in class\nCover the concept in class (quicker)\nAllocate the time saved to hands on exercises in class\n\nLecture follow-up\n\nProvide the same content from the lecture as follow up exercises\n\nLab exercises / assignments"
+    "text": "Within a course\n\nIn a flipped classroom\n\nAssign a learnr tutorial that students can practice with before introducing a concept in class\nCover the concept in class (quicker)\nAllocate the time saved to hands on exercises in class\n\nLecture follow-up\n\nProvide the same content from the lecture as follow up exercises\n\nProvide immediate and meaningful feedback at scale"
   },
   {
     "objectID": "materials/04-learnr/index.html#self-learning",
@@ -42,39 +322,347 @@
     "text": "Self learning\n\nLearn by doing\nPackage tutorials\nWorkshop follow ups"
   },
   {
-    "objectID": "materials/04-learnr/index.html#getting-started",
-    "href": "materials/04-learnr/index.html#getting-started",
+    "objectID": "materials/04-learnr/index.html#topics",
+    "href": "materials/04-learnr/index.html#topics",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "Getting started",
-    "text": "Getting started\nFollow along options:\n\nLocal:\n\nIn RStudio, install and load the learnr and sortable packages\nFile ➝ New File ➝ R Markdown… ➝ From template ➝ Interactive Tutorial\n\nCloud: Go to the workspace for this course and start the assignment called 07 - Learnr.\nDeployed tutorial: https://gallery.shinyapps.io/tutorial-demo/"
+    "section": "Topics",
+    "text": "Topics\n\nQuestion types\ngradethis for automated feedback\nWriting effective questions\nSharing with students\nRecording student responses - include this (?)"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#getting-started-.qmd-.rmd",
+    "href": "materials/04-learnr/index.html#getting-started-.qmd-.rmd",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Getting started: .qmd ➡️ .rmd",
+    "text": "Getting started: .qmd ➡️ .rmd\n\nLearnr tutorials are written in an R Markdown document (.rmd)\nThe syntax and structure is very similar to a Quarto document (.qmd)\nThese documents primarily differ in some of the arguments in the YAML"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#yaml-for-learnr-tutorial",
+    "href": "materials/04-learnr/index.html#yaml-for-learnr-tutorial",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "YAML for learnr tutorial",
+    "text": "YAML for learnr tutorial\n\n---\ntitle: \"Learnr Demo\"\noutput: \n  learnr::tutorial:\n    progressive: true\n    allow_skip: true\n    css: \"css/style.css\" \nruntime: shiny_prerendered\n---\n\n\nruntime: shiny_prerendered: Turns R Markdown into interactive app\nprogressive: true: Display one subsection at a time\nallow_skip: true: Able to skip exercises in a section\ncss: \"css/style.css\": Apply custom formatting"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#follow-along",
+    "href": "materials/04-learnr/index.html#follow-along",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Follow along",
+    "text": "Follow along\nFollow along options:\n\nLocal:\n\nIn RStudio, install and load the learnr, gradethis, and sortable packages\nAccess the source file for the tutorial on GitHub: github.com/matackett/learnr-demo\n\nCloud: Go to the workspace for this course and start the assignment called 04 - Learnr.\nDeployed tutorial: https://matackett.shinyapps.io/learnr-demo"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#writing-questions",
+    "href": "materials/04-learnr/index.html#writing-questions",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Writing questions",
+    "text": "Writing questions\n\nQuestion types\n\nMultiple choice\nCoding exercises\nSorting questions\n\nWriting effective questions"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#grading-coding-exercises",
+    "href": "materials/04-learnr/index.html#grading-coding-exercises",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Grading coding exercises",
+    "text": "Grading coding exercises\nThe gradethis package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:\n\ngrade_this_code(): Compare student code to model code (strict check)\ngrade_this(): Compare student result to model result (flexible check)"
+  },
+  {
+    "objectID": "materials/04-learnr/index.html#your-turn",
+    "href": "materials/04-learnr/index.html#your-turn",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Your turn!",
+    "text": "Your turn!\n\n\n\n\n\n\nImportant\n\n\nCreate a tutorial with three questions:\n\none multiple choice\none coding exercise\none sortable question\n\nYou can write your responses in Part 5: Your Turn! in the learnr demo. It is OK if each question requires code, but that is not required.\nStretch goal: Add hints and solution checking to the coding exercise."
   },
   {
     "objectID": "materials/04-learnr/index.html#sharing-with-students",
     "href": "materials/04-learnr/index.html#sharing-with-students",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Sharing with students",
-    "text": "Sharing with students\n\nYou could share the R Markdown (and all accompanying files) but that’s probably not what you want to do…\nDeploy on\n\nshinapps.io\nRStudio Connect (free for academic use)"
+    "text": "Sharing with students\n\nDeploy on\n\nshinapps.io\nRStudio Connect (free for academic use)\n\nDistribute tutorials as a package\n\ndsbox R package includes set of learnr tutorials\nWe will talk about developing packages in a later session"
   },
   {
-    "objectID": "materials/04-learnr/index.html#code-checking",
-    "href": "materials/04-learnr/index.html#code-checking",
+    "objectID": "materials/04-learnr/index.html#minute-paper",
+    "href": "materials/04-learnr/index.html#minute-paper",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "Code checking",
-    "text": "Code checking\n\nNo built in code checking feature, but hooks for using other packages for code checking\ngradethis is furthest along: https://github.com/rstudio-education/gradethis"
+    "section": "“Minute paper”",
+    "text": "“Minute paper”\nAdd a link to a form at the end of the tutorial for a “minute paper”\n\n\n\n\n\n\nImportant\n\n\n\nWrite about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?\n\nOR\n\nIf you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz."
   },
   {
-    "objectID": "materials/04-learnr/index.html#recording-events",
-    "href": "materials/04-learnr/index.html#recording-events",
+    "objectID": "materials/04-learnr/index.html#collect-response-via-learnrhash",
+    "href": "materials/04-learnr/index.html#collect-response-via-learnrhash",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "Recording events",
-    "text": "Recording events\n\nRecording events like exercise and question submissions, requests for hints/solutions, etc.\nThis is possible with learnr, though not very simple\nWith other R tools that allow for writing out to spreadsheets (e.g. Google Sheets) and building dashboards (e.g. shinydashboard) it’s possible to build a dashboard for your class where you can track their progress and learn from what they’re struggling with"
+    "section": "Collect response via learnrhash",
+    "text": "Collect response via learnrhash\n\nIs there time to include this?"
   },
   {
-    "objectID": "materials/04-learnr/index.html#a-simpler-hack-minute-paper",
-    "href": "materials/04-learnr/index.html#a-simpler-hack-minute-paper",
+    "objectID": "materials/04-learnr/index.html#learn-more",
+    "href": "materials/04-learnr/index.html#learn-more",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "A simpler hack: “Minute paper”",
-    "text": "A simpler hack: “Minute paper”\nAdd a link at the end of your tutorial to a Google (or other) form\n\nWrite about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?\n\nOR\n\nIf you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz."
+    "section": "Learn more!",
+    "text": "Learn more!\n\nAdd some resources"
+  },
+  {
+    "objectID": "modules/d1-02b-lunch-break.html",
+    "href": "modules/d1-02b-lunch-break.html",
+    "title": "Lunch break",
+    "section": "",
+    "text": "Before you leave for lunch break, please … \nThe teaching team is also taking this time to refuel and recharge. If you have any questions, please save then fir after the break."
+  },
+  {
+    "objectID": "modules/d2-08-organizing.html",
+    "href": "modules/d2-08-organizing.html",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d2-08-organizing.html#outline",
+    "href": "modules/d2-08-organizing.html#outline",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Outline",
+    "text": "Outline\n\nOrganizing teaching materials using Quarto\n\nMaking presentations\nWriting course notes\nCreating a course website\n\nDeploying materials\nWrap-up + Q&A"
+  },
+  {
+    "objectID": "modules/d2-08-organizing.html#slides",
+    "href": "modules/d2-08-organizing.html#slides",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d2-08-organizing.html#exercises",
+    "href": "modules/d2-08-organizing.html#exercises",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "modules/d2-07-data-package.html",
+    "href": "modules/d2-07-data-package.html",
+    "title": "Making a data package",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d2-07-data-package.html#outline",
+    "href": "modules/d2-07-data-package.html#outline",
+    "title": "Making a data package",
+    "section": "Outline",
+    "text": "Outline\n\nAnatomy of an R package\nData cleaning and the data-raw folder\nDocumenting your data\nChecking and testing your package\nYour package on GitHub and CRAN"
+  },
+  {
+    "objectID": "modules/d2-07-data-package.html#slides",
+    "href": "modules/d2-07-data-package.html#slides",
+    "title": "Making a data package",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d2-07-data-package.html#exercises",
+    "href": "modules/d2-07-data-package.html#exercises",
+    "title": "Making a data package",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "modules/d1-01-hello.html",
+    "href": "modules/d1-01-hello.html",
+    "title": "Hello #teachds",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d1-01-hello.html#outline",
+    "href": "modules/d1-01-hello.html#outline",
+    "title": "Hello #teachds",
+    "section": "Outline",
+    "text": "Outline\n\nIntroductions\nPrinciples for designing introductory data science curricula\n\nStart with cake 🍰\nCherish day one 🗓️\nSkip baby steps 🍼\nHide the veggies 🥦\nLeverage the ecosystem 🌲\n\nMeet the toolkit\n\nR and RStudio in RStudio Cloud\nQuarto\nGit and GitHub"
+  },
+  {
+    "objectID": "modules/d1-01-hello.html#slides",
+    "href": "modules/d1-01-hello.html#slides",
+    "title": "Hello #teachds",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d1-01-hello.html#exercises",
+    "href": "modules/d1-01-hello.html#exercises",
+    "title": "Hello #teachds",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "modules/d1-03-tidymodels.html",
+    "href": "modules/d1-03-tidymodels.html",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d1-03-tidymodels.html#outline",
+    "href": "modules/d1-03-tidymodels.html#outline",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Outline",
+    "text": "Outline\n\nTeaching modern modeling\nIntroducing tiydmodels\nTeaching with tidymodels\n\nFeature engineering\nPrediction\nCross-validation\n\nUsing tidymodels in your course"
+  },
+  {
+    "objectID": "modules/d1-03-tidymodels.html#slides",
+    "href": "modules/d1-03-tidymodels.html#slides",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d1-03-tidymodels.html#exercises",
+    "href": "modules/d1-03-tidymodels.html#exercises",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "modules/d1-04-learnr.html",
+    "href": "modules/d1-04-learnr.html",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d1-04-learnr.html#outline",
+    "href": "modules/d1-04-learnr.html#outline",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Outline",
+    "text": "Outline\n\nWriting learnr tutorials\nWriting different types of questions\nUsing learnr in your course\n\nLogging student responses\nDeploying tutorials"
+  },
+  {
+    "objectID": "modules/d1-04-learnr.html#slides",
+    "href": "modules/d1-04-learnr.html#slides",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d1-04-learnr.html#exercises",
+    "href": "modules/d1-04-learnr.html#exercises",
+    "title": "Interactivity and immediate feedback with learnr",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "modules/d2-05-rstudio-cloud.html",
+    "href": "modules/d2-05-rstudio-cloud.html",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d2-05-rstudio-cloud.html#outline",
+    "href": "modules/d2-05-rstudio-cloud.html#outline",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Outline",
+    "text": "Outline\n\nWhy and how RStudio in the Cloud?\nProjects in RStudio Cloud\nTeaching with RStudio Cloud\n\nShare an RStudio Cloud project\nInvite students to an RStudio Cloud workspace\n\nTips for teaching with RStudio Cloud\nThe rscloud package"
+  },
+  {
+    "objectID": "modules/d2-05-rstudio-cloud.html#slides",
+    "href": "modules/d2-05-rstudio-cloud.html#slides",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d2-05-rstudio-cloud.html#exercises",
+    "href": "modules/d2-05-rstudio-cloud.html#exercises",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "modules/d2-06b-lunch-break.html",
+    "href": "modules/d2-06b-lunch-break.html",
+    "title": "Lunch break",
+    "section": "",
+    "text": "Before you leave for lunch break, please … \nThe teaching team is also taking this time to refuel and recharge. If you have any questions, please save then fir after the break."
+  },
+  {
+    "objectID": "modules/d1-02-tidyverse.html",
+    "href": "modules/d1-02-tidyverse.html",
+    "title": "Teaching data science with the tidyverse",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d1-02-tidyverse.html#outline",
+    "href": "modules/d1-02-tidyverse.html#outline",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Outline",
+    "text": "Outline\n\nPrinciples of the tidyverse\nTeaching with the tidyverse\n\nGrouped summaries\nData visualization\nBeyond wrangling, summaries, and visualizations\n\nPedagogical strengths of the tidyverse\nKeeping up with the tidyverse"
+  },
+  {
+    "objectID": "modules/d1-02-tidyverse.html#slides",
+    "href": "modules/d1-02-tidyverse.html#slides",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d1-02-tidyverse.html#exercises",
+    "href": "modules/d1-02-tidyverse.html#exercises",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "modules/d1-01b-coffee-break.html",
+    "href": "modules/d1-01b-coffee-break.html",
+    "title": "Coffee break",
+    "section": "",
+    "text": "If you have questions during the break …"
+  },
+  {
+    "objectID": "modules/d1-03b-coffee-break.html",
+    "href": "modules/d1-03b-coffee-break.html",
+    "title": "Coffee break",
+    "section": "",
+    "text": "If you have questions during the break …"
+  },
+  {
+    "objectID": "modules/d2-07b-coffee-break.html",
+    "href": "modules/d2-07b-coffee-break.html",
+    "title": "Coffee break",
+    "section": "",
+    "text": "If you have questions during the break …"
+  },
+  {
+    "objectID": "modules/d2-05b-coffee-break.html",
+    "href": "modules/d2-05b-coffee-break.html",
+    "title": "Coffee break",
+    "section": "",
+    "text": "If you have questions during the break …"
+  },
+  {
+    "objectID": "modules/d2-06-reproduciblity.html",
+    "href": "modules/d2-06-reproduciblity.html",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "modules/d2-06-reproduciblity.html#outline",
+    "href": "modules/d2-06-reproduciblity.html#outline",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Outline",
+    "text": "Outline\n\nMotivating reproducibility\nTeaching authoring computational documents with Quarto\nTeaching version control with Git\nTeaching collaboration with GitHub\nUsing GitHub as your learning management system"
+  },
+  {
+    "objectID": "modules/d2-06-reproduciblity.html#slides",
+    "href": "modules/d2-06-reproduciblity.html#slides",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "modules/d2-06-reproduciblity.html#exercises",
+    "href": "modules/d2-06-reproduciblity.html#exercises",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "resources.html",
@@ -112,272 +700,6 @@
     "text": "Papers\n\n\nDesigning introductory data science curricula:\n\nÇetinkaya-Rundel, M., & Ellison, V. (2021). A fresh look at introductory data science. Journal of Statistics and Data Science Education, 29(sup1), S16-S26. https://doi.org/10.1080/10691898.2020.1804497.\nBaumer, B. (2015). A data science course for undergraduates: Thinking with data. The American Statistician, 69(4), 334-342. https://doi.org/10.1080/00031305.2015.1081105.\n\nTeaching reproducibility and version control:\n\nBeckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. Journal of Statistics and Data Science Education, 29(sup1), S132-S144. https://doi.org/10.1080/10691898.2020.1848485.\n\nTeaching with the tidyverse:\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator’s perspective of the tidyverse. Technology Innovations in Statistics Education, 14(1). http://dx.doi.org/10.5070/T514154352.\n\nOrganizing teaching materials:\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. arXiv preprint arXiv:2202.09504. https://doi.org/10.48550/arXiv.2202.09504.\n\nTeaching modern modeling:\n\nTackett, M. (2022) Three principles for modernizing an undergraduate regression analysis course. arXiv preprint arXiv:2205.11026. https://doi.org/10.48550/arXiv.2205.11026"
   },
   {
-    "objectID": "modules/d2-06-reproduciblity.html",
-    "href": "modules/d2-06-reproduciblity.html",
-    "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d2-06-reproduciblity.html#outline",
-    "href": "modules/d2-06-reproduciblity.html#outline",
-    "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Outline",
-    "text": "Outline\n\nMotivating reproducibility\nTeaching authoring computational documents with Quarto\nTeaching version control with Git\nTeaching collaboration with GitHub\nUsing GitHub as your learning management system"
-  },
-  {
-    "objectID": "modules/d2-06-reproduciblity.html#slides",
-    "href": "modules/d2-06-reproduciblity.html#slides",
-    "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
-  },
-  {
-    "objectID": "modules/d2-06-reproduciblity.html#exercises",
-    "href": "modules/d2-06-reproduciblity.html#exercises",
-    "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "modules/d1-03-tidymodels.html",
-    "href": "modules/d1-03-tidymodels.html",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d1-03-tidymodels.html#outline",
-    "href": "modules/d1-03-tidymodels.html#outline",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Outline",
-    "text": "Outline\n\nTeaching modern modeling\nIntroducing tiydmodels\nTeaching with tidymodels\n\nFeature engineering\nPrediction\nCross-validation\n\nUsing tidymodels in your course"
-  },
-  {
-    "objectID": "modules/d1-03-tidymodels.html#slides",
-    "href": "modules/d1-03-tidymodels.html#slides",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
-  },
-  {
-    "objectID": "modules/d1-03-tidymodels.html#exercises",
-    "href": "modules/d1-03-tidymodels.html#exercises",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "modules/d1-01-hello.html",
-    "href": "modules/d1-01-hello.html",
-    "title": "Hello #teachds",
-    "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d1-01-hello.html#outline",
-    "href": "modules/d1-01-hello.html#outline",
-    "title": "Hello #teachds",
-    "section": "Outline",
-    "text": "Outline\n\nIntroductions\nPrinciples for designing introductory data science curricula\n\nStart with cake 🍰\nCherish day one 🗓️\nSkip baby steps 🍼\nHide the veggies 🥦\nLeverage the ecosystem 🌲\n\nMeet the toolkit\n\nR and RStudio in RStudio Cloud\nQuarto\nGit and GitHub"
-  },
-  {
-    "objectID": "modules/d1-01-hello.html#slides",
-    "href": "modules/d1-01-hello.html#slides",
-    "title": "Hello #teachds",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
-  },
-  {
-    "objectID": "modules/d1-01-hello.html#exercises",
-    "href": "modules/d1-01-hello.html#exercises",
-    "title": "Hello #teachds",
-    "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "modules/d2-05b-coffee-break.html",
-    "href": "modules/d2-05b-coffee-break.html",
-    "title": "Coffee break",
-    "section": "",
-    "text": "If you have questions during the break …"
-  },
-  {
-    "objectID": "modules/d2-06b-lunch-break.html",
-    "href": "modules/d2-06b-lunch-break.html",
-    "title": "Lunch break",
-    "section": "",
-    "text": "Before you leave for lunch break, please … \nThe teaching team is also taking this time to refuel and recharge. If you have any questions, please save then fir after the break."
-  },
-  {
-    "objectID": "modules/d1-01b-coffee-break.html",
-    "href": "modules/d1-01b-coffee-break.html",
-    "title": "Coffee break",
-    "section": "",
-    "text": "If you have questions during the break …"
-  },
-  {
-    "objectID": "modules/d2-05-rstudio-cloud.html",
-    "href": "modules/d2-05-rstudio-cloud.html",
-    "title": "Computing infrastructure with RStudio Cloud",
-    "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d2-05-rstudio-cloud.html#outline",
-    "href": "modules/d2-05-rstudio-cloud.html#outline",
-    "title": "Computing infrastructure with RStudio Cloud",
-    "section": "Outline",
-    "text": "Outline\n\nWhy and how RStudio in the Cloud?\nProjects in RStudio Cloud\nTeaching with RStudio Cloud\n\nShare an RStudio Cloud project\nInvite students to an RStudio Cloud workspace\n\nTips for teaching with RStudio Cloud\nThe rscloud package"
-  },
-  {
-    "objectID": "modules/d2-05-rstudio-cloud.html#slides",
-    "href": "modules/d2-05-rstudio-cloud.html#slides",
-    "title": "Computing infrastructure with RStudio Cloud",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
-  },
-  {
-    "objectID": "modules/d2-05-rstudio-cloud.html#exercises",
-    "href": "modules/d2-05-rstudio-cloud.html#exercises",
-    "title": "Computing infrastructure with RStudio Cloud",
-    "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "modules/d1-04-learnr.html",
-    "href": "modules/d1-04-learnr.html",
-    "title": "Interactivity and immediate feedback with learnr",
-    "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d1-04-learnr.html#outline",
-    "href": "modules/d1-04-learnr.html#outline",
-    "title": "Interactivity and immediate feedback with learnr",
-    "section": "Outline",
-    "text": "Outline\n\nWriting learnr tutorials\nWriting different types of questions\nUsing learnr in your course\n\nLogging student responses\nDeploying tutorials"
-  },
-  {
-    "objectID": "modules/d1-04-learnr.html#slides",
-    "href": "modules/d1-04-learnr.html#slides",
-    "title": "Interactivity and immediate feedback with learnr",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
-  },
-  {
-    "objectID": "modules/d1-04-learnr.html#exercises",
-    "href": "modules/d1-04-learnr.html#exercises",
-    "title": "Interactivity and immediate feedback with learnr",
-    "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "modules/d1-02-tidyverse.html",
-    "href": "modules/d1-02-tidyverse.html",
-    "title": "Teaching data science with the tidyverse",
-    "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d1-02-tidyverse.html#outline",
-    "href": "modules/d1-02-tidyverse.html#outline",
-    "title": "Teaching data science with the tidyverse",
-    "section": "Outline",
-    "text": "Outline\n\nPrinciples of the tidyverse\nTeaching with the tidyverse\n\nGrouped summaries\nData visualization\nBeyond wrangling, summaries, and visualizations\n\nPedagogical strengths of the tidyverse\nKeeping up with the tidyverse"
-  },
-  {
-    "objectID": "modules/d1-02-tidyverse.html#slides",
-    "href": "modules/d1-02-tidyverse.html#slides",
-    "title": "Teaching data science with the tidyverse",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
-  },
-  {
-    "objectID": "modules/d1-02-tidyverse.html#exercises",
-    "href": "modules/d1-02-tidyverse.html#exercises",
-    "title": "Teaching data science with the tidyverse",
-    "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "modules/d1-02b-lunch-break.html",
-    "href": "modules/d1-02b-lunch-break.html",
-    "title": "Lunch break",
-    "section": "",
-    "text": "Before you leave for lunch break, please … \nThe teaching team is also taking this time to refuel and recharge. If you have any questions, please save then fir after the break."
-  },
-  {
-    "objectID": "modules/d2-07b-coffee-break.html",
-    "href": "modules/d2-07b-coffee-break.html",
-    "title": "Coffee break",
-    "section": "",
-    "text": "If you have questions during the break …"
-  },
-  {
-    "objectID": "modules/d2-08-organizing.html",
-    "href": "modules/d2-08-organizing.html",
-    "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d2-08-organizing.html#outline",
-    "href": "modules/d2-08-organizing.html#outline",
-    "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Outline",
-    "text": "Outline\n\nOrganizing teaching materials using Quarto\n\nMaking presentations\nWriting course notes\nCreating a course website\n\nDeploying materials\nWrap-up + Q&A"
-  },
-  {
-    "objectID": "modules/d2-08-organizing.html#slides",
-    "href": "modules/d2-08-organizing.html#slides",
-    "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
-  },
-  {
-    "objectID": "modules/d2-08-organizing.html#exercises",
-    "href": "modules/d2-08-organizing.html#exercises",
-    "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "modules/d1-03b-coffee-break.html",
-    "href": "modules/d1-03b-coffee-break.html",
-    "title": "Coffee break",
-    "section": "",
-    "text": "If you have questions during the break …"
-  },
-  {
-    "objectID": "modules/d2-07-data-package.html",
-    "href": "modules/d2-07-data-package.html",
-    "title": "Making a data package",
-    "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d2-07-data-package.html#outline",
-    "href": "modules/d2-07-data-package.html#outline",
-    "title": "Making a data package",
-    "section": "Outline",
-    "text": "Outline\n\nAnatomy of an R package\nData cleaning and the data-raw folder\nDocumenting your data\nChecking and testing your package\nYour package on GitHub and CRAN"
-  },
-  {
-    "objectID": "modules/d2-07-data-package.html#slides",
-    "href": "modules/d2-07-data-package.html#slides",
-    "title": "Making a data package",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
-  },
-  {
-    "objectID": "modules/d2-07-data-package.html#exercises",
-    "href": "modules/d2-07-data-package.html#exercises",
-    "title": "Making a data package",
-    "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Designing the data science classroom",
@@ -411,13 +733,6 @@
     "title": "Designing the data science classroom",
     "section": "RStudio Cloud",
     "text": "RStudio Cloud\nYou can join the RStudio Cloud workspace for this workshop at rstd.io/teach-ds-conf22-cloud."
-  },
-  {
-    "objectID": "license.html",
-    "href": "license.html",
-    "title": "License",
-    "section": "",
-    "text": "This work is licensed under a Creative Commons Attribution 4.0 International License."
   },
   {
     "objectID": "schedule.html",
