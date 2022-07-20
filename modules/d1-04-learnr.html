@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.18">
+<meta name="generator" content="quarto-1.0.35">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -247,20 +247,12 @@ Title
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-listing-file-modified-sort="1657736879121" data-listing-reading-time-sort="0.005" data-listing-title-sort="Title placeholder for Exercise 1" data-listing-filename-sort="ex-1.qmd">
+<tr data-index="0" data-listing-file-modified-sort="1658326563206" data-listing-reading-time-sort="0.025" data-listing-title-sort="Learnr Demo" data-listing-filename-sort="ex-1.qmd">
 <td class="listing-subtitle">
 Exercise 1
 </td>
 <td class="listing-title">
-<a href="../materials/04-learnr/ex-1.html" class="title">Title placeholder for Exercise 1</a>
-</td>
-</tr>
-<tr data-index="1" data-listing-file-modified-sort="1657736879121" data-listing-reading-time-sort="0.005" data-listing-title-sort="Title placeholder for Exercise 2" data-listing-filename-sort="ex-2.qmd">
-<td class="listing-subtitle">
-Exercise 2
-</td>
-<td class="listing-title">
-<a href="../materials/04-learnr/ex-2.html" class="title">Title placeholder for Exercise 2</a>
+<a href="../materials/04-learnr/ex-1.html" class="title">Learnr Demo</a>
 </td>
 </tr>
 </tbody>
@@ -290,7 +282,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   const toggleBodyColorPrimary = () => {
-    toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
   }
   toggleBodyColorPrimary();  
   const disableStylesheet = (stylesheets) => {

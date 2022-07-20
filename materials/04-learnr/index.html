@@ -7,7 +7,7 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.18">
+  <meta name="generator" content="quarto-1.0.35">
 
   <meta name="author" content="Maria Tackett">
   <title>Designing the Data Science Classroom - Interactivity and immediate feedback with learnr</title>
@@ -422,7 +422,7 @@
 <section id="parts-of-a-tutorial" class="slide level2 center">
 <h2>Parts of a tutorial</h2>
 
-<img data-src="images/learnr-example.png" class="r-stretch quarto-figure-center"><p class="caption"><em>Source: <a href="https://minecr.shinyapps.io/dsbox-01-edibnb/">minecr.shinyapps.io/dsbox-01-edibnb</a></em></p></section></section>
+<img data-src="images/learnr-example.png" class="r-stretch quarto-figure-center"><p class="caption"><em>Link to tutorial: <a href="https://minecr.shinyapps.io/dsbox-01-edibnb/">minecr.shinyapps.io/dsbox-01-edibnb</a></em></p></section></section>
 <section>
 <section id="why" class="title-slide slide level1 center">
 <h1>Why?</h1>
@@ -437,9 +437,9 @@
 <li>Cover the concept in class (quicker)</li>
 <li>Allocate the time saved to hands on exercises in class</li>
 </ul></li>
-<li>Lecture follow-up
+<li>As lecture follow-up
 <ul>
-<li>Provide the same content from the lecture as follow up exercises</li>
+<li>Provide the same content from the lecture as follow-up exercises</li>
 </ul></li>
 <li>Provide immediate and meaningful feedback at scale</li>
 </ul>
@@ -448,8 +448,8 @@
 <h2>Self learning</h2>
 <ul>
 <li>Learn by doing</li>
-<li>Package tutorials</li>
-<li>Workshop follow ups</li>
+<li>Tutorials in R packages</li>
+<li>Workshop follow-ups</li>
 </ul>
 </section></section>
 <section>
@@ -462,17 +462,16 @@
 <ul>
 <li><p>Question types</p></li>
 <li><p><strong>gradethis</strong> for automated feedback</p></li>
-<li><p>Writing effective questions</p></li>
-<li><p>Sharing with students</p></li>
-<li><p>Recording student responses - include this (?)</p></li>
+<li><p>Recording student responses using minute papers and <strong>learnrhash</strong></p></li>
+<li><p>Sharing tutorials with students</p></li>
 </ul>
 </section>
-<section id="getting-started-.qmd-.rmd" class="slide level2 center">
-<h2>Getting started: .qmd ➡️ .rmd</h2>
+<section id="getting-started-qmd-rmd" class="slide level2 center">
+<h2>Getting started: Qmd ➡️ Rmd</h2>
 <ul>
 <li><p>Learnr tutorials are written in an R Markdown document (<code>.rmd</code>)</p></li>
 <li><p>The syntax and structure is very similar to a Quarto document (<code>.qmd</code>)</p></li>
-<li><p>These documents primarily differ in some of the arguments in the YAML</p></li>
+<li><p>These documents primarily differ in some arguments in the YAML</p></li>
 </ul>
 </section>
 <section id="yaml-for-learnr-tutorial" class="slide level2 center">
@@ -506,11 +505,11 @@
 <ul>
 <li><p>Local:</p>
 <ul>
-<li>In RStudio, install and load the <strong>learnr, gradethis<em>,</em></strong> and <strong>sortable</strong> packages</li>
-<li>Access the source file for the tutorial on GitHub: <a href="https://github.com/matackett/learnr-demo">github.com/matackett/learnr-demo</a></li>
+<li>In RStudio, install and load the <strong>learnr, gradethis<em>,</em></strong> s<strong>ortable</strong>, and <strong>learnrhash</strong> packages</li>
+<li>Access the source file for the tutorial on GitHub: <a href="https://github.com/matackett/learnr-demo">github.com/matackett/learnr-demo</a> - UPDATE</li>
 </ul></li>
 <li><p>Cloud: Go to the workspace for this course and start the assignment called <strong>04 - Learnr</strong>.</p></li>
-<li><p>Deployed tutorial: <a href="https://matackett.shinyapps.io/learnr-demo" class="uri">https://matackett.shinyapps.io/learnr-demo</a></p></li>
+<li><p>Deployed tutorial: <a href="https://minecr.shinyapps.io/learnr-demo" class="uri">https://minecr.shinyapps.io/learnr-demo</a></p></li>
 </ul>
 </section>
 <section id="writing-questions" class="slide level2 center">
@@ -522,15 +521,7 @@
 <li>Coding exercises</li>
 <li>Sorting questions</li>
 </ul></li>
-<li><strong>Writing effective questions</strong></li>
-</ul>
-</section>
-<section id="grading-coding-exercises" class="slide level2 center">
-<h2>Grading coding exercises</h2>
-<p>The <a href="https://pkgs.rstudio.com/gradethis/">gradethis</a> package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:</p>
-<ul>
-<li><p><code>grade_this_code()</code>: Compare student code to model code (strict check)</p></li>
-<li><p><code>grade_this()</code>: Compare student result to model result (flexible check)</p></li>
+<li><strong>Automated feedback</strong></li>
 </ul>
 </section>
 <section id="your-turn" class="slide level2 center">
@@ -550,26 +541,40 @@
 <li><p>one coding exercise</p></li>
 <li><p>one sortable question</p></li>
 </ul>
-<p>You can write your responses in <strong>Part 5: Your Turn!</strong> in the learnr demo. It is OK if each question requires code, but that is not required.</p>
+<p>You can write your responses in <strong>Part 2: Your Turn!</strong> in the learnr demo. It is OK if each question requires code, but that is not required.</p>
 <p><strong>Stretch goal:</strong> Add hints and solution checking to the coding exercise.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="sharing-with-students" class="slide level2 center">
-<h2>Sharing with students</h2>
+<section id="gradethis" class="slide level2 center">
+<h2>gradethis</h2>
+<p>The <a href="https://pkgs.rstudio.com/gradethis/">gradethis</a> package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:</p>
 <ul>
-<li><p>Deploy on</p>
-<ul>
-<li><a href="https://www.shinyapps.io/">shinapps.io</a></li>
-<li>RStudio Connect (free for academic use)</li>
-</ul></li>
-<li><p>Distribute tutorials as a package</p>
-<ul>
-<li><p><a href="https://github.com/rstudio-education/dsbox">dsbox R package</a> includes set of learnr tutorials</p></li>
-<li><p>We will talk about developing packages in a later session</p></li>
-</ul></li>
+<li><p><code>grade_this_code()</code>: Compare student code to model code (strict check)</p></li>
+<li><p><code>grade_this()</code>: Compare student result to model result (flexible check)</p></li>
 </ul>
+<div class="cell">
+
+</div>
+</section>
+<section id="your-turn-1" class="slide level2 center">
+<h2>Your turn!</h2>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
+<p>Add automated feedback to your coding exercise.</p>
+<p><strong>Stretch goal</strong>: Consider 2 -3 common errors students may make. Write specific feedback for those errors.</p>
+<p>You can write your responses <strong>Part 4: Your turn!</strong> or modify the code in Part 2.</p>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="recording-student-responses" class="title-slide slide level1 center">
@@ -599,16 +604,49 @@
 </div>
 </div>
 </section>
-<section id="collect-response-via-learnrhash" class="slide level2 center">
-<h2>Collect response via learnrhash</h2>
+<section id="learnrhash" class="slide level2 center">
+<h2>learnrhash</h2>
 <ul>
-<li>Is there time to include this?</li>
+<li><p>Use the <a href="https://github.com/rundel/learnrhash"><strong>learnrhash</strong></a> package to collect student responses from learnr tutorials.</p></li>
+<li><p>Students submit responses using a “hash” submitted in an online form.</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rundel/learnrhash"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="sharing-with-students" class="slide level2 center">
+<h2>Sharing with students</h2>
+<ul>
+<li><p>Deploy on</p>
+<ul>
+<li>shinyapps<a href="https://www.shinyapps.io/">.io</a></li>
+<li>RStudio Connect (free for academic use)</li>
+</ul></li>
+<li><p>Distribute tutorials as a package</p>
+<ul>
+<li><p><a href="https://github.com/rstudio-education/dsbox">dsbox R package</a> includes a set of learnr tutorials</p></li>
+<li><p>More about developing packages in a later session</p></li>
+</ul></li>
 </ul>
 </section>
 <section id="learn-more" class="slide level2 center">
 <h2>Learn more!</h2>
+<p><strong>Creating learnr tutorials</strong></p>
 <ul>
-<li>Add some resources</li>
+<li><a href="https://education.rstudio.com/blog/2020/05/learnr-for-remote/">Teaching with learnr: a powerful tool for remote teaching</a> by Allison Horst</li>
+<li><a href="https://mine-cetinkaya-rundel.github.io/teach-r-online/">Building interactive tutorials in R</a> by Mine Çetinkaya-Rundel</li>
+<li><a href="https://github.com/rstudio/rstudio-conf/tree/master/2021/minecetinkayarundel">Feedback at scale</a> by Mine Çetinkaya-Rundel
+<ul>
+<li><a href="https://www.rstudio.com/resources/rstudioglobal-2021/feedback-at-scale/">Click here</a> for video</li>
+</ul></li>
+</ul>
+</section>
+<section id="learn-more-1" class="slide level2 center">
+<h2>Learn more!</h2>
+<p><strong>Sharing tutorials</strong></p>
+<ul>
+<li><a href="https://cran.r-project.org/web/packages/learnr/vignettes/shinyapps-publishing.html">Publishing learnr tutorials on shinyapps.io</a> by Angela Li</li>
+<li><a href="https://education.rstudio.com/blog/2020/09/delivering-learnr-tutorials-in-a-package/">How to deliver learnr tutorials in a package</a> by Desirée De Leon</li>
 </ul>
 </section></section>
 <section>
@@ -913,7 +951,10 @@
         }
       }
       const toggleBodyColorPrimary = () => {
-        toggleBodyColorMode(window.document.querySelector("link#quarto-bootstrap"));
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
       }
       toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")

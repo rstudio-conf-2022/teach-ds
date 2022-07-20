@@ -7,10 +7,28 @@
     ]
   },
   {
+    "listing": "/modules/d2-05-rstudio-cloud.html",
+    "items": [
+      "/materials/05-rstudio-cloud/ex-1.html",
+      "/materials/05-rstudio-cloud/ex-2.html"
+    ]
+  },
+  {
+    "listing": "/modules/d2-06-reproduciblity.html",
+    "items": []
+  },
+  {
     "listing": "/modules/d2-07-data-package.html",
     "items": [
       "/materials/07-data-package/ex-1.html",
       "/materials/07-data-package/ex-2.html"
+    ]
+  },
+  {
+    "listing": "/modules/d1-02-tidyverse.html",
+    "items": [
+      "/materials/02-tidyverse/ex-1.html",
+      "/materials/02-tidyverse/ex-2.html"
     ]
   },
   {
@@ -30,27 +48,8 @@
   {
     "listing": "/modules/d1-04-learnr.html",
     "items": [
-      "/materials/04-learnr/ex-1.html",
-      "/materials/04-learnr/ex-2.html"
+      "/materials/04-learnr/ex-1.html"
     ]
-  },
-  {
-    "listing": "/modules/d2-05-rstudio-cloud.html",
-    "items": [
-      "/materials/05-rstudio-cloud/ex-1.html",
-      "/materials/05-rstudio-cloud/ex-2.html"
-    ]
-  },
-  {
-    "listing": "/modules/d1-02-tidyverse.html",
-    "items": [
-      "/materials/02-tidyverse/ex-1.html",
-      "/materials/02-tidyverse/ex-2.html"
-    ]
-  },
-  {
-    "listing": "/modules/d2-06-reproduciblity.html",
-    "items": []
   },
   {
     "listing": "/schedule.html",
