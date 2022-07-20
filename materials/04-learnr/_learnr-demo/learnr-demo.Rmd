@@ -1,0 +1,416 @@
+---
+title: "Learnr Demo"
+output: 
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+    css: "css/style.css"
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+# load packages
+library(learnr)
+library(gradethis)
+library(sortable)
+library(tidyverse)
+library(learnrhash)
+library(showtext)
+library(googlesheets4)
+
+# load data
+ikea <- read_csv("data/ikea.csv")
+
+# don't echo chunks
+knitr::opts_chunk$set(echo = FALSE)
+
+# apply theme to ggplot
+ggplot2::theme_set(theme_bw())
+```
+
+## Introduction
+
+*This is a demo tutorial for the [Designing the Data Science Classroom](https://rstudio-conf-2022.github.io/teach-ds/) workshop at rstudio::conf 2022.*
+
+### Packages
+
+This tutorial uses the **tidyverse** package. Run the code below to load the package.
+
+```{r load-package, exercise = TRUE}
+library(tidyverse)
+```
+
+### Data: Ikea furniture
+
+The data in this tutorial are all about [Ikea](https://www.ikea.com/) furniture. The data were obtained from the [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-11-03/readme.md) data collection.
+
+Run the code below to load the data from a .csv file.
+
+```{r load-data, exercise = TRUE}
+ikea <- read_csv("data/ikea.csv")
+```
+
+We will primarily use the following variables in the analysis:
+
+-   `category`: The furniture category that the item belongs to (Sofas, beds, chairs, Trolleys,...)
+-   `price_usd`: Price in US dollars based on the price on the Ikea website on 4/20/2020.
+
+Run the code to see the names of all variables in the data set, and [click here](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-11-03/readme.md) to see the full data dictionary.
+
+```{r colnames, exercise = TRUE}
+names(ikea)
+```
+
+## Part 1: Question types
+
+### Multiple choice questions
+
+Below are side-by-side boxplots comparing the price of three categories of furniture at Ikea.
+
+```{r}
+ikea |> 
+  filter(category %in% c("Tables & desks", "Sofas & armchairs", "Beds")) |>
+ggplot(aes(x = category, y = price_usd, fill = category)) +
+  geom_boxplot() + 
+  guides(fill = "none") +
+  labs(x = "Furniture category", 
+       y = "Price (in $)") 
+```
+
+```{r variability}
+question("Which category of furniture has the least variability in the price?", 
+         answer("Beds"), 
+         answer("Sofas & armchairs"), 
+         answer("Tables & desk", correct = TRUE), 
+         answer("The variability is the same for all three categories")
+)
+```
+
+You can also add options to the questions to allow retries, random order, and hints for incorrect responses.
+
+```{r variability-hint}
+question("Which category of furniture has the large IQR for price?", 
+         answer("Beds"), 
+         answer("Sofas & armchairs", correct = TRUE), 
+         answer("Tables & desk"), 
+         answer("The IQR is the same for all three categories"), 
+         incorrect = "The IQR is the difference between the first and third quartiles.", 
+         allow_retry = TRUE, 
+         random_answer_order = TRUE
+)
+```
+
+### Coding exercises
+
+Count the number of observations in each furniture category.
+
+```{r count-category, exercise = TRUE}
+
+```
+
+### Coding exercises with starter code
+
+You can use starter code to provide scaffolding for the coding exercises. You can also customize the number of lines that appear in the input box.
+
+What is the median price of furniture in the most common category?
+
+```{r median-price, exercise = TRUE, exercise.lines = 5}
+ikea |>
+  ____(___, ____) |>
+  ____(___)
+```
+
+### Exercises with hints and solutions
+
+You can add hints and solutions to coding exercises.
+
+Consider the categories`Sofas & armchairs` and `Tables & desks`. Which category has the highest mean price?
+
+```{r avg-price, exercise = TRUE, exercise.lines = 5}
+ikea
+```
+
+```{r avg-price-hint-1}
+ikea |> 
+  filter(category %in% c(____)) |>
+  ____ |>
+  ____
+```
+
+```{r avg-price-hint-2}
+ikea |>
+  filter(category %in% c("Sofas & armchairs", "Tables & desks")) |>
+  group_by(___) |>
+  ___
+
+```
+
+```{r avg-price-solution}
+ikea |> 
+  filter(category %in% c("Sofas & armchairs", "Tables & desks")) |>
+  group_by(category) |>
+  summarise(mean_price = mean(price_usd))
+```
+
+### Sorting questions
+
+Use the [**sortable**](https://rstudio.github.io/sortable/) package to create sorting and ranking questions.
+
+Put the steps for baking a cake in the correct order.
+
+```{r sorting-exercise}
+# Define the answer options
+baking_steps <- c("Mix the ingredients.", 
+           "Bake the cake.", 
+           "Decorate the cake.", 
+           "Slice the cake.")
+
+
+# Write the exercise 
+question_rank(
+  "Sort the steps to bake and serve a cake in the correct order.",
+  answer(baking_steps, correct = TRUE),
+  answer(rev(baking_steps), correct = FALSE, message = "Other direction!"),
+  allow_retry = TRUE
+)
+```
+
+## Part 2: Your turn!
+
+::: your-turn
+Create a tutorial with three questions:
+
+-   one multiple choice
+-   one coding exercise
+-   one sortable question
+
+<b>Stretch goal:</b> Add hints and a solution to the coding exercise.
+
+You can write your questions in this section of the .Rmd file.
+:::
+
+## Part 3: Automated feedback
+
+So far students would have to check their solutions to coding exercises by assessing whether the output is reasonable or comparing their code to the solution. You can use the [**gradethis**](https://pkgs.rstudio.com/gradethis/articles/gradethis.html) package to provide automated feedback on code.
+
+### Checking code
+
+Count the number of items in the data set that cost more than \$300.
+
+```{r gt300, exercise = TRUE}
+
+```
+
+```{r gt300-solution}
+ikea |>
+  filter(price_usd > 300) |>
+  nrow()
+```
+
+```{r gt300-check}
+grade_this_code()
+```
+
+### Checking output
+
+Count the number of items in the data set that cost more than \$300. Submit the response as a single number, not in a data frame.
+
+```{r gt300-pt2, exercise = TRUE}
+
+```
+
+```{r gt300-pt2-solution}
+ikea |>
+  filter(price_usd > 300) |>
+  nrow()
+```
+
+```{r gt300-pt2-check}
+grade_this({
+  pass_if_equal(
+    ikea |> filter(price_usd > 300) |> nrow(), 
+  message = "Great work! You found the number of furniture items greater that cost more than $300!")
+  fail_if_equal(nrow(ikea), 
+                message = "You found the number of observations in the data, but did you forget to filter for those that cost more than $300?")
+  fail("Not quite but keep trying!")
+})
+```
+
+## Part 4: Your turn! 
+
+::: your-turn
+Add automated feedback to your coding exercise.
+
+<b>Stretch goal:</b> Consider 2 -3 common errors students may make. Write specific feedback for those errors.
+
+You can write your responses in this section or modify the code in Part 2.
+:::
+
+## Part 5: Minute paper
+
+Provide a "minute paper" in an embedded online form for students to reflect on their understanding of the material in the tutorial.
+
+```{=html}
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScsV-_m3unjj1S-NSsMjBir-yxrObaLbdS3ypzTe1tPoYv8gQ/viewform?embedded=true" width="640" height="550" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+```
+## Part 6: Recording responses with learnrhash
+
+Use the [**learnrhash**](https://github.com/rundel/learnrhash) package to collect student responses from learnr tutorials. Students submit their responses using a "hash" submitted to an online form.
+
+Create a histogram of the distribution of Ikea furniture prices and answer the following questions based on the histogram.
+
+```{r price-histogram, exercise = TRUE}
+ggplot(___, aes(x = ___)) +
+  ___() +
+  labs(
+    ___ = "Price (in $)",
+    ___ = "Frequency",
+    ___ = "Distribution of Ikea furniture prices"
+  )
+```
+
+```{r price-histogram-hint-1}
+ggplot(ikea, aes(x = ___)) +
+  ___() +
+  labs(
+    ___ = "Price (in $)",
+    ___ = "Frequency",
+    ___ = "Distribution of Ikea furniture prices"
+  )
+```
+
+```{r price-histogram-hint-2}
+ggplot(ikea, aes(x = price_usd)) +
+  ___() +
+  labs(
+    ___ = "Price (in $)",
+    ___ = "Frequency",
+    ___ = "Distribution of Ikea furniture prices"
+  )
+```
+
+```{r price-histogram-hint-3}
+ggplot(ikea, aes(x = price_usd)) +
+  geom_histogram() +
+  labs(
+    ___ = "Price (in $)",
+    ___ = "Frequency",
+    ___ = "Distribution of Ikea furniture prices"
+  )
+```
+
+```{r price-histogram-solution}
+ggplot(ikea, aes(x = price_usd)) +
+  geom_histogram() +
+  labs(
+    x = "Price (in $)",
+    y = "Frequency",
+    title = "Distribution of Ikea furniture prices"
+  )
+```
+
+```{r price-histogram-check}
+grade_this_code(
+  correct = "You correctly made the plot! Note that there is a warning that we will discuss in class."
+)
+```
+
+```{r mc1}
+question(
+  "Which of the following describes the shape of the distribution of Ikea furniture prices? Check all that apply.",
+  answer("Right skewed",
+    correct = TRUE
+  ),
+  answer("Left skewed",
+    message = "Skew is on the side of the longer tail"
+  ),
+  answer("Symmetric",
+    message = "If you were to draw a vertical line down the middle of the x-axis, would the left and right sides of the distribution look like mirror images?"
+  ),
+  answer("Unimodal",
+    correct = TRUE
+  ),
+  answer("Bimodal",
+    message = "How many prominent peaks do you see?"
+  ),
+  answer("Multimodal",
+    message = "How many prominent peaks do you see?"
+  ), 
+  random_answer_order = TRUE
+)
+```
+
+```{r mc2}
+question(
+  "Which of the following is false?",
+  answer("The mean price is expected to be lower than the median price of Ikea furniture.", correct = TRUE),
+  answer("Less than 25% of the observations have prices greater than $1000."),
+  answer("The IQR is less than $1000."),
+  answer("The median price is less than $1000."), 
+  random_answer_order = TRUE
+)
+```
+
+### Submit answers
+
+```{r context="server"}
+encoder_logic(strip_output = TRUE)
+```
+
+```{r encode, echo=FALSE}
+encoder_ui(
+  ui_before = div(strong("Once you're done with your quiz, click on Generate Submission below, copy the hash generated and paste it in the form below."), br(), br()),
+  ui_after  = iframe_ui(
+    src = "https://forms.gle/w6hUr4j7tSdvRYtr7",
+    width="700px", height= "600px"
+  )
+)
+```
+
+### Decode hash
+
+The following would not be included in a student facing tutorial, but has been included here to demonstrate the decoding functionality of the [**learnrhash**](https://github.com/rundel/learnrhash) package.
+
+```{r context="server"}
+decoder_logic()
+```
+
+```{r decode, echo=FALSE}
+decoder_ui()
+```
+
+### View data
+
+You can view the collected data [here](https://docs.google.com/spreadsheets/d/1aEJxhOTHzUXdngrSOrntoyK8Suptj7Z_U7-8B4k1XBU/edit?usp=sharing).
+
+<iframe width="900" height="400" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQjut2uPmkXsRpXSbbjSjQ68oGtw596Gxmb6kS079ZFxMoKqlc_xY3l66egsAvcXLP-XzDyPKwXpdqf/pubhtml?gid=333624434&amp;single=true&amp;widget=true&amp;headers=false">
+
+</iframe>
+
+```{r, warning = FALSE, message = FALSE}
+gs4_deauth() #deauthorize to read googlesheets
+
+# read in responses 
+
+submissions <- read_sheet("ttps://docs.google.com/spreadsheets/d/1aEJxhOTHzUXdngrSOrntoyK8Suptj7Z_U7-8B4k1XBU/edit?resourcekey#gid=333624434") |>
+  rename(student_name = `Name`, 
+         student_id = `Student ID`,
+         hash = `Copy and paste the hash generated at the end of your tutorial below.`) |>
+  select(-Timestamp)
+```
+
+### Process student submissions
+
+```{r}
+submission_data <- extract_hash(submissions)
+submission_data
+```
+
+### Calculate assignment scores
+
+```{r}
+submission_data |>
+  group_by(student_name, student_id) |>
+  count(correct) |>
+  filter(correct == TRUE)
+```
