@@ -249,7 +249,7 @@
     "href": "modules/d1-04-learnr.html#exercises",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nLearnr Demo\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nFull tutorial\n\n\nLearnr Demo\n\n\n\n\nExercise 1\n\n\nWriting questions\n\n\n\n\nExercise 2\n\n\nAutomated feedback\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-06b-lunch-break.html",
@@ -599,7 +599,21 @@
     "href": "materials/04-learnr/ex-1.html",
     "title": "Learnr Demo",
     "section": "",
-    "text": "Place holder for exercises."
+    "text": "Link to fully deployed tutorial: minecr.shinyapps.io/learnr-demo"
+  },
+  {
+    "objectID": "materials/04-learnr/ex-3.html",
+    "href": "materials/04-learnr/ex-3.html",
+    "title": "Automated feedback",
+    "section": "",
+    "text": "Stretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses Part 4: Your turn! or modify the code in Part 2."
+  },
+  {
+    "objectID": "materials/04-learnr/ex-2.html",
+    "href": "materials/04-learnr/ex-2.html",
+    "title": "Writing questions",
+    "section": "",
+    "text": "one multiple choice\none coding exercise\none sortable question\n\nYou can write your responses in Part 2: Your Turn! in the learnr demo. It is OK if each question requires code, but that is not required.\nStretch goal: Add hints and solution checking to the coding exercise."
   },
   {
     "objectID": "materials/04-learnr/index.html#parts-of-a-tutorial",
