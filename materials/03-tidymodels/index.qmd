@@ -25,6 +25,8 @@ These slides are currently being designed and built.
 
 ## Session outline
 
+-   Add agenda
+
 ```{r}
 #| message: false
 #| warning: false
@@ -36,18 +38,15 @@ library(openintro)
 
 # Teaching modern modeling
 
-## Course context
-
-## GAISE Guidelines
+## GAISE guidelines
 
 -   Teach statistical thinking.
     -   Teach statistics as an investigative process of problem-solving and decision-making.
     -   Give students experience with multivariable thinking.
 -   Integrate real data with a context and purpose.
--   Foster active learning.
 -   Use technology to explore concepts and analyze data.
 
-[Guidelines for Assessment and Instruction in Statistics Education (GAISE) 2016 Report](https://www.amstat.org/docs/default-source/amstat-documents/gaisecollege_full.pdf)
+See [Guidelines for Assessment and Instruction in Statistics Education (GAISE) 2016 Report](https://www.amstat.org/docs/default-source/amstat-documents/gaisecollege_full.pdf) for full report.
 
 ## Teaching modern regression
 
@@ -60,14 +59,16 @@ Facilitate opportunities for students to...
 
 -   Identify **appropriate methods based on the primary analysis objective** - inference or prediction
 
--   Develop important non-technical skills, specifically written communication and teamwork
+-   Develop important non-technical skills, specifically written communication and **teamwork**
 :::
 
 ## Discussion
 
+::: callout-important
 -   How much do you teach regression in your course(s)?
 
 -   Do you currently implement any of these principles in your teaching? Do you find some more challenging to implement than others?
+:::
 
 # Introducing tidymodels
 
@@ -279,6 +280,10 @@ linear_reg() |>
   fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>
   tidy()
 ```
+
+## Add slide? 
+
+-   Add a slide to show how this would be consistent if you made a logistic model?
 
 ## Feature engineering
 

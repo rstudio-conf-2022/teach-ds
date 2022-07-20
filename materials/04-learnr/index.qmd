@@ -27,9 +27,9 @@ These slides are currently being designed and built.
 
 ------------------------------------------------------------------------
 
-## Parts of a tutorial 
+## Parts of a tutorial
 
-![*Source: [minecr.shinyapps.io/dsbox-01-edibnb](https://minecr.shinyapps.io/dsbox-01-edibnb/)*](images/learnr-example.png)
+![*Link to tutorial: [minecr.shinyapps.io/dsbox-01-edibnb](https://minecr.shinyapps.io/dsbox-01-edibnb/)*](images/learnr-example.png)
 
 # Why?
 
@@ -39,15 +39,15 @@ These slides are currently being designed and built.
     -   Assign a learnr tutorial that students can practice with before introducing a concept in class
     -   Cover the concept in class (quicker)
     -   Allocate the time saved to hands on exercises in class
--   Lecture follow-up
-    -   Provide the same content from the lecture as follow up exercises
+-   As lecture follow-up
+    -   Provide the same content from the lecture as follow-up exercises
 -   Provide immediate and meaningful feedback at scale
 
 ## Self learning
 
 -   Learn by doing
--   Package tutorials
--   Workshop follow ups
+-   Tutorials in R packages
+-   Workshop follow-ups
 
 # How?
 
@@ -59,21 +59,19 @@ These slides are currently being designed and built.
 
 -   **gradethis** for automated feedback
 
--   Writing effective questions
+-   Recording student responses using minute papers and **learnrhash**
 
--   Sharing with students
-
--   Recording student responses - include this (?)
+-   Sharing tutorials with students
 
 ------------------------------------------------------------------------
 
-## Getting started: .qmd `r emo::ji("right_arrow")` .rmd
+## Getting started: Qmd `r emo::ji("right_arrow")` Rmd
 
 -   Learnr tutorials are written in an R Markdown document (`.rmd`)
 
 -   The syntax and structure is very similar to a Quarto document (`.qmd`)
 
--   These documents primarily differ in some of the arguments in the YAML
+-   These documents primarily differ in some arguments in the YAML
 
 ## YAML for learnr tutorial
 
@@ -104,12 +102,12 @@ Follow along options:
 
 -   Local:
 
-    -   In RStudio, install and load the **learnr, gradethis*,*** and **sortable** packages
-    -   Access the source file for the tutorial on GitHub: [github.com/matackett/learnr-demo](https://github.com/matackett/learnr-demo)
+    -   In RStudio, install and load the **learnr, gradethis*,*** s**ortable**, and **learnrhash** packages
+    -   Access the source file for the tutorial on GitHub: [github.com/matackett/learnr-demo](https://github.com/matackett/learnr-demo) - UPDATE
 
 -   Cloud: Go to the workspace for this course and start the assignment called **04 - Learnr**.
 
--   Deployed tutorial: <https://matackett.shinyapps.io/learnr-demo>
+-   Deployed tutorial: <https://minecr.shinyapps.io/learnr-demo>
 
 ## Writing questions
 
@@ -117,15 +115,7 @@ Follow along options:
     -   Multiple choice
     -   Coding exercises
     -   Sorting questions
--   **Writing effective questions**
-
-## Grading coding exercises
-
-The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:
-
--   `grade_this_code()`: Compare student code to model code (strict check)
-
--   `grade_this()`: Compare student result to model result (flexible check)
+-   **Automated feedback**
 
 ## Your turn!
 
@@ -138,23 +128,35 @@ Create a tutorial with three questions:
 
 -   one sortable question
 
-You can write your responses in **Part 5: Your Turn!** in the learnr demo. It is OK if each question requires code, but that is not required.
+You can write your responses in **Part 2: Your Turn!** in the learnr demo. It is OK if each question requires code, but that is not required.
 
 **Stretch goal:** Add hints and solution checking to the coding exercise.
 :::
 
-## Sharing with students
+## gradethis
 
--   Deploy on
+The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:
 
-    -   [shinapps.io](https://www.shinyapps.io/)
-    -   RStudio Connect (free for academic use)
+-   `grade_this_code()`: Compare student code to model code (strict check)
 
--   Distribute tutorials as a package
+-   `grade_this()`: Compare student result to model result (flexible check)
 
-    -   [dsbox R package](https://github.com/rstudio-education/dsbox) includes set of learnr tutorials
+```{r}
+#|eval: false
+#|echo: false
 
-    -   We will talk about developing packages in a later session
+remotes::install_github("rstudio/gradethis")
+```
+
+## Your turn! 
+
+::: callout-important
+Add automated feedback to your coding exercise.
+
+**Stretch goal**: Consider 2 -3 common errors students may make. Write specific feedback for those errors.
+
+You can write your responses **Part 4: Your turn!** or modify the code in Part 2.
+:::
 
 # Recording student responses
 
@@ -172,17 +174,51 @@ OR
 
 ------------------------------------------------------------------------
 
-## Collect response via learnrhash 
+## learnrhash
 
--   Is there time to include this?
+-   Use the [**learnrhash**](https://github.com/rundel/learnrhash) package to collect student responses from learnr tutorials.
+
+-    Students submit responses using a "hash" submitted in an online form.
+
+```{r}
+#| eval: false
+#| echo: true
+
+remotes::install_github("rundel/learnrhash")
+```
+
+## Sharing with students
+
+-   Deploy on
+
+    -   shinyapps[.io](https://www.shinyapps.io/)
+    -   RStudio Connect (free for academic use)
+
+-   Distribute tutorials as a package
+
+    -   [dsbox R package](https://github.com/rstudio-education/dsbox) includes a set of learnr tutorials
+
+    -   More about developing packages in a later session
 
 ## Learn more!
 
--   Add some resources
+**Creating learnr tutorials**
 
-# Workshop check in 
+-   [Teaching with learnr: a powerful tool for remote teaching](https://education.rstudio.com/blog/2020/05/learnr-for-remote/) by Allison Horst
+-   [Building interactive tutorials in R](https://mine-cetinkaya-rundel.github.io/teach-r-online/) by Mine Çetinkaya-Rundel
+-   [Feedback at scale](https://github.com/rstudio/rstudio-conf/tree/master/2021/minecetinkayarundel) by Mine Çetinkaya-Rundel
+    -   [Click here](https://www.rstudio.com/resources/rstudioglobal-2021/feedback-at-scale/) for video
 
----
+## Learn more! 
+
+**Sharing tutorials**
+
+-   [Publishing learnr tutorials on shinyapps.io](https://cran.r-project.org/web/packages/learnr/vignettes/shinyapps-publishing.html) by Angela Li
+-   [How to deliver learnr tutorials in a package](https://education.rstudio.com/blog/2020/09/delivering-learnr-tutorials-in-a-package/) by Desirée De Leon
+
+# Workshop check in
+
+------------------------------------------------------------------------
 
 ::: callout-important
 We have completed Day 01! Please answer the following using your sticky notes:
