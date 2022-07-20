@@ -415,6 +415,9 @@
 </section>
 <section id="session-outline" class="slide level2">
 <h2>Session outline</h2>
+<ul>
+<li>Add agenda</li>
+</ul>
 <div class="cell">
 
 </div>
@@ -424,11 +427,8 @@
 <h1>Teaching modern modeling</h1>
 
 </section>
-<section id="course-context" class="slide level2">
-<h2>Course context</h2>
-</section>
 <section id="gaise-guidelines" class="slide level2">
-<h2>GAISE Guidelines</h2>
+<h2>GAISE guidelines</h2>
 <ul>
 <li>Teach statistical thinking.
 <ul>
@@ -436,10 +436,9 @@
 <li>Give students experience with multivariable thinking.</li>
 </ul></li>
 <li>Integrate real data with a context and purpose.</li>
-<li>Foster active learning.</li>
 <li>Use technology to explore concepts and analyze data.</li>
 </ul>
-<p><a href="https://www.amstat.org/docs/default-source/amstat-documents/gaisecollege_full.pdf">Guidelines for Assessment and Instruction in Statistics Education (GAISE) 2016 Report</a></p>
+<p>See <a href="https://www.amstat.org/docs/default-source/amstat-documents/gaisecollege_full.pdf">Guidelines for Assessment and Instruction in Statistics Education (GAISE) 2016 Report</a> for full report.</p>
 </section>
 <section id="teaching-modern-regression" class="slide level2">
 <h2>Teaching modern regression</h2>
@@ -449,16 +448,28 @@
 <li class="fragment"><p>Regularly engage with <strong>real-world applications and complex data</strong></p></li>
 <li class="fragment"><p>Develop proficiency <strong>using professional statistical software</strong> and using a reproducible workflow</p></li>
 <li class="fragment"><p>Identify <strong>appropriate methods based on the primary analysis objective</strong> - inference or prediction</p></li>
-<li class="fragment"><p>Develop important non-technical skills, specifically written communication and teamwork</p></li>
+<li class="fragment"><p>Develop important non-technical skills, specifically written communication and <strong>teamwork</strong></p></li>
 </ul>
 </div>
 </section>
 <section id="discussion" class="slide level2">
 <h2>Discussion</h2>
+<div class="callout callout-important callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Important</strong></p>
+</div>
+<div class="callout-content">
 <ul>
 <li><p>How much do you teach regression in your course(s)?</p></li>
 <li><p>Do you currently implement any of these principles in your teaching? Do you find some more challenging to implement than others?</p></li>
 </ul>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="introducing-tidymodels" class="title-slide slide level1 center">
@@ -506,7 +517,7 @@
 ✖ dplyr::lag()      masks stats::lag()
 ✖ yardstick::spec() masks readr::spec()
 ✖ recipes::step()   masks stats::step()
-• Search for functions across packages at https://www.tidymodels.org/find/</code></pre>
+• Dig deeper into tidy modeling with R at https://www.tmwr.org</code></pre>
 </div>
 </div>
 </section>
@@ -690,10 +701,12 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">glance</span>(base_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.
-# … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³
+      &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.
+# … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
+#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance
+# ℹ Use `colnames()` to see all variable names</code></pre>
 </div>
 </div>
 </div>
@@ -702,10 +715,12 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">glance</span>(tidy_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
-  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
-      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.
-# … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
+  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³
+      &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.
+# … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
+#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance
+# ℹ Use `colnames()` to see all variable names</code></pre>
 </div>
 </div>
 </div>
@@ -723,19 +738,21 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb20-2"><a href="#cb20-2"></a>base_lm_aug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9,976 × 9
-   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd
-   &lt;chr&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
- 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6
- 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6
- 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5
- 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5
- 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7
- 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5
- 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6
- 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7
- 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7
-10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5
-# … with 9,966 more rows, and 1 more variable: .std.resid &lt;dbl&gt;</code></pre>
+   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²
+   &lt;chr&gt;             &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+ 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 
+ 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 
+ 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 
+ 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  
+ 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356
+ 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  
+ 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 
+ 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577
+ 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722
+10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  
+# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,
+#   ²​.std.resid
+# ℹ Use `print(n = ...)` to see more rows</code></pre>
 </div>
 </div>
 </div>
@@ -745,19 +762,21 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb22-2"><a href="#cb22-2"></a>tidy_lm_aug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9,976 × 9
-   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd
-   &lt;chr&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
- 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6
- 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6
- 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5
- 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5
- 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7
- 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5
- 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6
- 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7
- 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7
-10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5
-# … with 9,966 more rows, and 1 more variable: .std.resid &lt;dbl&gt;</code></pre>
+   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²
+   &lt;chr&gt;             &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+ 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 
+ 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 
+ 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 
+ 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  
+ 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356
+ 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  
+ 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 
+ 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577
+ 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722
+10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  
+# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,
+#   ²​.std.resid
+# ℹ Use `print(n = ...)` to see more rows</code></pre>
 </div>
 </div>
 </div>
@@ -857,6 +876,12 @@ Coefficients:
 2 debt_to_income   0.0472   0.00330      14.3 7.05e-46</code></pre>
 </div>
 </div>
+</section>
+<section id="add-slide" class="slide level2">
+<h2>Add slide?</h2>
+<ul>
+<li>Add a slide to show how this would be consistent if you made a logistic model?</li>
+</ul>
 </section>
 <section id="feature-engineering" class="slide level2">
 <h2>Feature engineering</h2>
