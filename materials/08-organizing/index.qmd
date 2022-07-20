@@ -22,3 +22,89 @@ execute:
 ::: callout-warning
 These slides are currently being designed and built.
 :::
+
+## Topics 
+
+-   Creating slides with Quarto
+-   Creating a course website with Quarto
+-   File organization & storage
+-   Deploying materials
+
+# Creating slides with Quarto 
+
+## Why use Quarto?
+
+**Benefits for instructor**
+
+-   Integrate narrative, executable R code, images, and interactive elements
+-   Create slides using Markdown syntax or visual editor
+-   Reproducible slides that are easier to update
+-   Annotation capabilities
+
+**Benefits for students**
+
+-   Option to export PDF of slides
+-   Navigation menu to find content
+-   Read slides on multiple devices
+
+# How? 
+
+## YAML
+
+::: panel-tabset
+### Basic
+
+```{r}
+#| echo: true
+#| eval: false
+---
+title: "Presentation title"
+subtitle: "Data science course"
+author: "Maria Tackett"
+format: revealjs
+---
+```
+
+### Customized
+
+```{r}
+#| echo: true
+#| eval: false
+---
+title: "Presentation title"
+subtitle: "Data science course"
+author: "Maria Tackett"
+footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
+logo: "images/logo.png"
+format: 
+  revealjs:
+    theme: simple
+    transition: fade
+    slide-number: true
+    incremental: false 
+    chalkboard: true
+execute:
+  freeze: auto
+---
+```
+:::
+
+## Follow along 
+
+\[Add instructions to get to sample presentation\]
+
+# Creating websites with Quarto 
+
+## Why? 
+
+# How
+
+## Getting started
+
+## File structure 
+
+## Follow along 
+
+## Deploying materials 
+
+# Wrap up 

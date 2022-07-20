@@ -1,0 +1,20 @@
+{
+  "hash": "3d17748c874a3dd78d5a6b1072fcbc52",
+  "result": {
+    "markdown": "---\ntitle: \"Example Presentation\"\nsubtitle: \"rstudio::conf(2022) <br> Designing the data science classroom\"\nauthor: \"Maria Tackett\"\nfooter: \"[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)\"\nlogo: \"../images/logo.png\"\nformat: \n  revealjs:\n    theme: solarized\n    multiplex: true\n    transition: fade\n    slide-number: true\n    incremental: false \n    chalkboard: true\n    center: true\nexecute:\n  freeze: auto\n---\n\n\n## Bullet point list\n\n**Unordered**\n\n-   Item A\n-   Item B\n-   Item C\n\n**Ordered**\n\n1.  Item 1\n2.  Item 2\n3.  Item 3\n\n## Incremental list\n\n::: incremental\n-   Item 1\n-   Item 2\n-   Item 3\n:::\n\n## Equations \n\nWrite mathematical symbols and equations using Latex.\n\nUse the formulas below to calculate $\\hat{\\beta}_1$, the estimated slope, and $\\hat{\\beta}_0$, the estimated intercept.\n\n\n$$\n\\begin{aligned}\n&\\hat{\\beta}_1 = r \\frac{s_y}{s_x} \\\\\n&\\hat{\\beta}_0 = \\bar{y} - \\hat{\\beta}_1 \\bar{x}\n\\end{aligned}\n$$\n\n\n## Code\n\n\n::: {.cell}\n\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, \n                            color = species)) + \n         geom_point() + \n  labs(x = \"Flipper Length (in mm)\", \n       y = \"Body Mass (in g)\",\n       title = \"Flipper length vs. body mass\",\n       subtitle = \"Penguins at Palmer Station, Antartica\"\n       ) +\n  scale_color_viridis_d()\n```\n\n::: {.cell-output-display}\n![](example-presentation_files/figure-revealjs/unnamed-chunk-2-1.png){width=960}\n:::\n:::\n\n\n## \nImages\n\n## Columns\n\n## Panels \n\n## Themes\n",
+    "supporting": [
+      "example-presentation_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    function fireSlideChanged(previousSlide, currentSlide) {\n\n      // dispatch for htmlwidgets\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for reveal\n    if (window.Reveal) {\n      window.Reveal.addEventListener(\"slidechanged\", function(event) {\n        fireSlideChanged(event.previousSlide, event.currentSlide);\n      });\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": null
+  }
+}

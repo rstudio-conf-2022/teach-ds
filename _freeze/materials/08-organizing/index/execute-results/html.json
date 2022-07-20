@@ -1,0 +1,18 @@
+{
+  "hash": "9f0de66cd7890d0a09d6c5b123e3a88a",
+  "result": {
+    "markdown": "---\ntitle: \"Organizing teaching materials + Wrap-up / Q&A\"\nsubtitle: \"rstudio::conf(2022) <br> Designing the data science classroom\"\nauthor: \"Maria Tackett\"\nfooter: \"[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)\"\nlogo: \"../images/logo.png\"\nformat: \n  revealjs:\n    theme: ../slides.scss\n    multiplex: true\n    transition: fade\n    slide-number: true\n    incremental: false \n    chalkboard: true\n    center: true\nexecute:\n  freeze: auto\n---\n\n\n# In progress\n\n::: callout-warning\nThese slides are currently being designed and built.\n:::\n\n## Topics \n\n-   Creating slides with Quarto\n-   Creating a course website with Quarto\n-   File organization & storage\n-   Deploying materials\n\n# Creating slides with Quarto \n\n## Why use Quarto?\n\n**Benefits for instructor**\n\n-   Integrate narrative, executable R code, images, and interactive elements\n-   Create slides using Markdown syntax or visual editor\n-   Reproducible slides that are easier to update\n-   Annotation capabilities\n\n**Benefits for students**\n\n-   Option to export PDF of slides\n-   Navigation menu to find content\n-   Read slides on multiple devices\n\n# How? \n\n## YAML\n\n::: panel-tabset\n### Basic\n\n\n::: {.cell}\n\n```{.r .cell-code}\n---\ntitle: \"Presentation title\"\nsubtitle: \"Data science course\"\nauthor: \"Maria Tackett\"\nformat: revealjs\n---\n```\n:::\n\n\n### Customized\n\n\n::: {.cell}\n\n```{.r .cell-code}\n---\ntitle: \"Presentation title\"\nsubtitle: \"Data science course\"\nauthor: \"Maria Tackett\"\nfooter: \"[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)\"\nlogo: \"images/logo.png\"\nformat: \n  revealjs:\n    theme: simple\n    transition: fade\n    slide-number: true\n    incremental: false \n    chalkboard: true\nexecute:\n  freeze: auto\n---\n```\n:::\n\n:::\n\n## Follow along \n\n\\[Add instructions to get to sample presentation\\]\n\n# Creating websites with Quarto \n\n## Why? \n\n# How\n\n## Getting started\n\n## File structure \n\n## Follow along \n\n## Deploying materials \n\n# Wrap up \n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    function fireSlideChanged(previousSlide, currentSlide) {\n\n      // dispatch for htmlwidgets\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for reveal\n    if (window.Reveal) {\n      window.Reveal.addEventListener(\"slidechanged\", function(event) {\n        fireSlideChanged(event.previousSlide, event.currentSlide);\n      });\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": null
+  }
+}

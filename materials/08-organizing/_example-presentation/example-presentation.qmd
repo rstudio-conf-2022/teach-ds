@@ -1,0 +1,150 @@
+---
+title: "Example Presentation"
+subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
+author: "Maria Tackett"
+footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
+logo: "../images/logo.png"
+format: 
+  revealjs:
+    theme: solarized
+    multiplex: true
+    transition: fade
+    slide-number: true
+    incremental: false 
+    chalkboard: true
+    center: true
+execute:
+  freeze: auto
+---
+
+## Bullet point list
+
+**Unordered**
+
+-   Item A
+-   Item B
+-   Item C
+
+**Ordered**
+
+1.  Item 1
+2.  Item 2
+3.  Item 3
+
+## Incremental list
+
+::: incremental
+-   Item 1
+-   Item 2
+-   Item 3
+:::
+
+## Equations
+
+Write mathematical symbols and equations using Latex.
+
+Use the formulas below to calculate $\hat{\beta}_1$, the estimated slope, and $\hat{\beta}_0$, the estimated intercept.
+
+$$
+\begin{aligned}
+&\hat{\beta}_1 = r \frac{s_y}{s_x} \\
+&\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}
+\end{aligned}
+$$
+
+## Code
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+library(tidyverse)
+library(palmerpenguins)
+library(viridis)
+```
+
+```{r}
+#| echo: true
+#| fig-align: center
+
+# Use code chunk option fig-align: center to center the plot. 
+ggplot(data = penguins, aes(x = flipper_length_mm, y = body_mass_g, 
+                            color = species)) + 
+         geom_point() + 
+  labs(x = "Flipper Length (in mm)",y = "Body Mass (in g)",
+       title = "Flipper length vs. body mass",
+       subtitle = "Penguins at Palmer Station, Antartica") +
+  scale_color_viridis_d()
+```
+
+## Images
+
+![Artwork by [\@allison_horst](https://www.allisonhorst.com/)](images/penguins.png){fig-alt="Three penguins labeled Chinstrap, Gentoo, and Adelie." fig-align="center"}
+
+## Columns
+
+::: columns
+::: {.column width="50%"}
+Calculate the proportion of penguins from each species.
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+
+penguins |>
+  count(species) |>
+  mutate(prop  = n / sum(n))
+```
+:::
+:::
+
+## Panels
+
+::: panel-tabset
+## Plot
+
+```{r}
+penguins |>
+  filter(species == "Adelie", !is.na(sex)) |>
+  ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = sex)) + 
+  geom_point() +
+  labs(x = "Flipper Length (in mm)",y = "Body Mass (in g)",
+       title = "Flipper length vs. body mass",
+       subtitle = "Adelie Penguins at Palmer Station, Antartica") +
+  scale_color_viridis_d() + 
+  facet_wrap(~island)
+
+```
+
+## Code
+
+```{r}
+#| echo: true
+#| eval: false
+
+penguins |>
+  filter(species == "Adelie", !is.na(sex)) |>
+  ggplot(aes(x = flipper_length_mm, y = body_mass_g, color = sex)) + 
+  geom_point() +
+  labs(x = "Flipper Length (in mm)",y = "Body Mass (in g)",
+       title = "Flipper length vs. body mass",
+       subtitle = "Adelie Penguins at Palmer Station, Antartica") +
+  scale_color_viridis_d() + 
+  facet_wrap(~island)
+```
+:::
+
+## Themes
+
+Customize the appearance of the slides using
+
+-   Built-in [Reveal theme](https://quarto.org/docs/presentations/revealjs/themes.html#using-themes)
+
+-   Modify built-in theme using [Sass](https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes)
+
+    -   Variant of CSS that supports variables and other features
+
+-   Create custom thing using Sass
+
+Specify the theme and/or Sass file (.scss) in the YAML

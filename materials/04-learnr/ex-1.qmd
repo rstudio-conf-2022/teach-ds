@@ -1,7 +1,7 @@
 ---
 title: "Learnr Demo"
-subtitle: "Full tutorial"
+subtitle: "Exercise 1"
 editor: visual
 ---
 
-Link to fully deployed tutorial: [minecr.shinyapps.io/learnr-demo](https://minecr.shinyapps.io/learnr-demo)
+Place holder for exercises.
