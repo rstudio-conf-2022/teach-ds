@@ -249,7 +249,7 @@
     "href": "modules/d1-04-learnr.html#exercises",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nFull tutorial\n\n\nLearnr Demo\n\n\n\n\nExercise 1\n\n\nWriting questions\n\n\n\n\nExercise 2\n\n\nAutomated feedback\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nLearnr Demo\n\n\n\n\nExercise 1\n\n\nWriting questions\n\n\n\n\nExercise 2\n\n\nAutomated feedback\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-06b-lunch-break.html",
@@ -595,11 +595,74 @@
     "text": "Session agenda\n\n…"
   },
   {
+    "objectID": "materials/08-organizing/index.html#topics",
+    "href": "materials/08-organizing/index.html#topics",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Topics",
+    "text": "Topics\n\nCreating slides with Quarto\nCreating a course website with Quarto\nFile organization & storage\nDeploying materials"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#why-use-quarto",
+    "href": "materials/08-organizing/index.html#why-use-quarto",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Why use Quarto?",
+    "text": "Why use Quarto?\nBenefits for instructor\n\nIntegrate narrative, executable R code, images, and interactive elements\nCreate slides using Markdown syntax or visual editor\nReproducible slides that are easier to update\nAnnotation capabilities\n\nBenefits for students\n\nOption to export PDF of slides\nNavigation menu to find content\nRead slides on multiple devices"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#yaml",
+    "href": "materials/08-organizing/index.html#yaml",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "YAML",
+    "text": "YAML\n\nBasicCustomized\n\n\n\n---\ntitle: \"Presentation title\"\nsubtitle: \"Data science course\"\nauthor: \"Maria Tackett\"\nformat: revealjs\n---\n\n\n\n\n---\ntitle: \"Presentation title\"\nsubtitle: \"Data science course\"\nauthor: \"Maria Tackett\"\nfooter: \"[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)\"\nlogo: \"images/logo.png\"\nformat: \n  revealjs:\n    theme: simple\n    transition: fade\n    slide-number: true\n    incremental: false \n    chalkboard: true\nexecute:\n  freeze: auto\n---"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#follow-along",
+    "href": "materials/08-organizing/index.html#follow-along",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Follow along",
+    "text": "Follow along\n[Add instructions to get to sample presentation]"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#why",
+    "href": "materials/08-organizing/index.html#why",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Why?",
+    "text": "Why?"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#getting-started",
+    "href": "materials/08-organizing/index.html#getting-started",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Getting started",
+    "text": "Getting started"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#file-structure",
+    "href": "materials/08-organizing/index.html#file-structure",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "File structure",
+    "text": "File structure"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#follow-along-1",
+    "href": "materials/08-organizing/index.html#follow-along-1",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Follow along",
+    "text": "Follow along"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#deploying-materials",
+    "href": "materials/08-organizing/index.html#deploying-materials",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Deploying materials",
+    "text": "Deploying materials"
+  },
+  {
     "objectID": "materials/04-learnr/ex-1.html",
     "href": "materials/04-learnr/ex-1.html",
     "title": "Learnr Demo",
     "section": "",
-    "text": "Link to fully deployed tutorial: minecr.shinyapps.io/learnr-demo"
+    "text": "Place holder for exercises."
   },
   {
     "objectID": "materials/04-learnr/ex-3.html",
