@@ -148,7 +148,7 @@ The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible t
 remotes::install_github("rstudio/gradethis")
 ```
 
-## Your turn! 
+## Your turn!
 
 ::: callout-important
 Add automated feedback to your coding exercise.
@@ -178,7 +178,7 @@ OR
 
 -   Use the [**learnrhash**](https://github.com/rundel/learnrhash) package to collect student responses from learnr tutorials.
 
--    Students submit responses using a "hash" submitted in an online form.
+-   Students submit responses using a "hash" submitted in an online form.
 
 ```{r}
 #| eval: false
@@ -209,7 +209,7 @@ remotes::install_github("rundel/learnrhash")
 -   [Feedback at scale](https://github.com/rstudio/rstudio-conf/tree/master/2021/minecetinkayarundel) by Mine Çetinkaya-Rundel
     -   [Click here](https://www.rstudio.com/resources/rstudioglobal-2021/feedback-at-scale/) for video
 
-## Learn more! 
+## Learn more!
 
 **Sharing tutorials**
 
