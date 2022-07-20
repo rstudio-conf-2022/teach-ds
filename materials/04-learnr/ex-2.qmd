@@ -1,0 +1,17 @@
+---
+title: "Writing questions"
+subtitle: "Exercise 1"
+editor: visual
+---
+
+Create a tutorial with three questions:
+
+-   one multiple choice
+
+-   one coding exercise
+
+-   one sortable question
+
+You can write your responses in **Part 2: Your Turn!** in the learnr demo. It is OK if each question requires code, but that is not required.
+
+**Stretch goal:** Add hints and solution checking to the coding exercise.
