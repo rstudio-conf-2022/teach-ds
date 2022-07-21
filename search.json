@@ -25,7 +25,7 @@
     "href": "modules/d2-08-organizing.html#exercises",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExample presentation\n\n\nDemo\n\n\n\n\nExample course website\n\n\nDemo\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-03b-coffee-break.html",
@@ -595,6 +595,13 @@
     "text": "Session agenda\n\n…"
   },
   {
+    "objectID": "materials/08-organizing/ex-1.html",
+    "href": "materials/08-organizing/ex-1.html",
+    "title": "Demo",
+    "section": "",
+    "text": "Local:\n\nIn RStudio, install and load [UPDATE THIS!]\nClick here to access the source file on GitHub\n\nCloud: Go to the workspace for this course and start the assignment called 08-organizing"
+  },
+  {
     "objectID": "materials/08-organizing/index.html#topics",
     "href": "materials/08-organizing/index.html#topics",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
@@ -620,28 +627,49 @@
     "href": "materials/08-organizing/index.html#follow-along",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Follow along",
-    "text": "Follow along\n[Add instructions to get to sample presentation]"
+    "text": "Follow along\nFollow along options:\n\nLocal:\n\nIn RStudio, install and load [UPDATE THIS!]\nClick here to access the source file on GitHub\n\nCloud: Go to the workspace for this course and start the assignment called 08-organizing"
   },
   {
     "objectID": "materials/08-organizing/index.html#why",
     "href": "materials/08-organizing/index.html#why",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Why?",
-    "text": "Why?"
+    "text": "Why?\n\nEasily share course materials, particularly for online courses\nSearch capabilities, so students can more easily find materials\nReproducible website that is easier to update\nLearn by doing!"
   },
   {
-    "objectID": "materials/08-organizing/index.html#getting-started",
-    "href": "materials/08-organizing/index.html#getting-started",
+    "objectID": "materials/08-organizing/index.html#getting-started-new-project",
+    "href": "materials/08-organizing/index.html#getting-started-new-project",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Getting started",
-    "text": "Getting started"
+    "section": "Getting started: New project",
+    "text": "Getting started: New project\nFile ➡️ New Project ➡️ New Directory ➡️ Quarto Website\n\n\n\n\n\n\n\n\n\n\n\nCreate files needed to connect to GitHub repository\nUse renv, a new package to capture the state of the project (R / RStudio version, packages, etc.)\nUse visual editor by default"
   },
   {
-    "objectID": "materials/08-organizing/index.html#file-structure",
-    "href": "materials/08-organizing/index.html#file-structure",
+    "objectID": "materials/08-organizing/index.html#getting-started-new-project-1",
+    "href": "materials/08-organizing/index.html#getting-started-new-project-1",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "File structure",
-    "text": "File structure"
+    "section": "Getting started: New project",
+    "text": "Getting started: New project\n\n\n\n\n\nAdd some text about the files"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#getting-started-create-github-repo",
+    "href": "materials/08-organizing/index.html#getting-started-create-github-repo",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Getting started: Create GitHub repo",
+    "text": "Getting started: Create GitHub repo\nInitialize a repository, add necessary files to .gitignore, and make initial commit\n\nusethis::use_git()\n\n\nIs it ok to commit them?\n\n1: Negative\n2: For sure\n3: No\n\nSelection: 2\n✔ Adding files\n✔ Making a commit with message 'Initial commit'"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#getting-started-create-github-repo-1",
+    "href": "materials/08-organizing/index.html#getting-started-create-github-repo-1",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Getting started: Create GitHub repo",
+    "text": "Getting started: Create GitHub repo\nCreate a new GitHub repo, connect to local repo, and make initial commit by typing the following in the console\n\nusethis::use_github()\n\n\n> usethis::use_github()\n✔ Creating GitHub repository 'matackett/course-website'\n✔ Setting remote 'origin' to 'https://github.com/matackett/course-website.git'\n✔ Pushing 'master' branch to GitHub and setting 'origin/master' as upstream branch\n✔ Opening URL 'https://github.com/matackett/course-website'"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#file-structure-for-course-content",
+    "href": "materials/08-organizing/index.html#file-structure-for-course-content",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "File structure for course content",
+    "text": "File structure for course content\n\nindex.qmd\nsyllabus.qmd\nschedule.qmd\n📂 slides\n\nlecture-01.qmd\nlecture-02.qmd\n\n📂 assignments\n\nassignment-01.qmd\nassignment-02.qmd\n\nstyle.css"
   },
   {
     "objectID": "materials/08-organizing/index.html#follow-along-1",

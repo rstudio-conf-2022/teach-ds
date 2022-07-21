@@ -489,7 +489,15 @@
 </section>
 <section id="follow-along" class="slide level2 center">
 <h2>Follow along</h2>
-<p>[Add instructions to get to sample presentation]</p>
+<p>Follow along options:</p>
+<ul>
+<li><p>Local:</p>
+<ul>
+<li>In RStudio, install and load [UPDATE THIS!]</li>
+<li><a href="https://github.com/rstudio-conf-2022/teach-ds/tree/main/materials/08-organizing/_example-presentation">Click here</a> to access the source file on GitHub</li>
+</ul></li>
+<li><p>Cloud: Go to the workspace for this course and start the assignment called <strong>08-organizing</strong></p></li>
+</ul>
 </section></section>
 <section>
 <section id="creating-websites-with-quarto" class="title-slide slide level1 center">
@@ -498,17 +506,100 @@
 </section>
 <section id="why" class="slide level2 center">
 <h2>Why?</h2>
+<ul>
+<li><p>Easily share course materials, particularly for online courses</p></li>
+<li><p>Search capabilities, so students can more easily find materials</p></li>
+<li><p>Reproducible website that is easier to update</p></li>
+<li><p>Learn by doing!</p></li>
+</ul>
 </section></section>
 <section>
 <section id="how-1" class="title-slide slide level1 center">
 <h1>How</h1>
 
 </section>
-<section id="getting-started" class="slide level2 center">
-<h2>Getting started</h2>
+<section id="getting-started-new-project" class="slide level2 center">
+<h2>Getting started: New project</h2>
+<p><strong>File</strong> ➡️ <strong>New Project</strong> ➡️ <strong>New Directory</strong> ➡️ <strong>Quarto Website</strong></p>
+<p><br></p>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/create-quarto-project.png" alt="New Quarto website window" width="562"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>Create files needed to connect to GitHub repository</p></li>
+<li><p>Use <a href="https://rstudio.github.io/renv/index.html">renv</a>, a new package to capture the state of the project (R / RStudio version, packages, etc.)</p></li>
+<li><p>Use visual editor by default</p></li>
+</ul>
+</div>
+</div>
+</div>
 </section>
-<section id="file-structure" class="slide level2 center">
-<h2>File structure</h2>
+<section id="getting-started-new-project-1" class="slide level2 center">
+<h2>Getting started: New project</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/initial-files.png" alt="List of files in new Quarto website repo" width="368"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Add some text about the files</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="getting-started-create-github-repo" class="slide level2 center">
+<h2>Getting started: Create GitHub repo</h2>
+<p>Initialize a repository, add necessary files to <code>.gitignore</code>, and make initial commit</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>usethis<span class="sc">::</span><span class="fu">use_git</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<pre><code>Is it ok to commit them?
+
+1: Negative
+2: For sure
+3: No
+
+Selection: 2
+✔ Adding files
+✔ Making a commit with message 'Initial commit'</code></pre>
+</section>
+<section id="getting-started-create-github-repo-1" class="slide level2 center">
+<h2>Getting started: Create GitHub repo</h2>
+<p>Create a new GitHub repo, connect to local repo, and make initial commit by typing the following in the <u>console</u></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>usethis<span class="sc">::</span><span class="fu">use_github</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<pre><code>&gt; usethis::use_github()
+✔ Creating GitHub repository 'matackett/course-website'
+✔ Setting remote 'origin' to 'https://github.com/matackett/course-website.git'
+✔ Pushing 'master' branch to GitHub and setting 'origin/master' as upstream branch
+✔ Opening URL 'https://github.com/matackett/course-website'</code></pre>
+</section>
+<section id="file-structure-for-course-content" class="slide level2 center">
+<h2>File structure for course content</h2>
+<ul>
+<li><p><code>index.qmd</code></p></li>
+<li><p><code>syllabus.qmd</code></p></li>
+<li><p><code>schedule.qmd</code></p></li>
+<li><p>📂 <code>slides</code></p>
+<ul>
+<li><code>lecture-01.qmd</code></li>
+<li><code>lecture-02.qmd</code></li>
+</ul></li>
+<li><p>📂 <code>assignments</code></p>
+<ul>
+<li><code>assignment-01.qmd</code></li>
+<li><code>assignment-02.qmd</code></li>
+</ul></li>
+<li><p><code>style.css</code></p></li>
+</ul>
 </section>
 <section id="follow-along-1" class="slide level2 center">
 <h2>Follow along</h2>
