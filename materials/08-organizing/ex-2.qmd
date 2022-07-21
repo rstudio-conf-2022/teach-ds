@@ -1,5 +1,5 @@
 ---
-title: "Title placeholder for Exercise 2"
-subtitle: "Exercise 2"
+title: "Demo"
+subtitle: "Example course website"
 editor: visual
 ---

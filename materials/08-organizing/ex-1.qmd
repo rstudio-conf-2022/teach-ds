@@ -1,5 +1,14 @@
 ---
-title: "Title placeholder for Exercise 1"
-subtitle: "Exercise 1"
+title: "Demo"
+subtitle: "Example presentation"
 editor: visual
 ---
+
+Follow along options:
+
+-   Local:
+
+    -   In RStudio, install and load \[UPDATE THIS!\]
+    -   [Click here](https://github.com/rstudio-conf-2022/teach-ds/tree/main/materials/08-organizing/_example-presentation) to access the source file on GitHub
+
+-   Cloud: Go to the workspace for this course and start the assignment called **08-organizing**

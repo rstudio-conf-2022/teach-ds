@@ -91,17 +91,122 @@ execute:
 
 ## Follow along 
 
-\[Add instructions to get to sample presentation\]
+Follow along options:
+
+-   Local:
+
+    -   In RStudio, install and load \[UPDATE THIS!\]
+    -   [Click here](https://github.com/rstudio-conf-2022/teach-ds/tree/main/materials/08-organizing/_example-presentation) to access the source file on GitHub
+
+-   Cloud: Go to the workspace for this course and start the assignment called **08-organizing**
 
 # Creating websites with Quarto 
 
 ## Why? 
 
+-   Easily share course materials, particularly for online courses
+
+-   Search capabilities, so students can more easily find materials
+
+-   Reproducible website that is easier to update
+
+-   Learn by doing!
+
 # How
 
-## Getting started
+## Getting started: New project 
 
-## File structure 
+**File** ➡️ **New Project** ➡️ **New Directory** ➡️ **Quarto Website**
+
+<br>
+
+. . .
+
+::: columns
+::: {.column width="50%"}
+![](images/create-quarto-project.png){fig-alt="New Quarto website window" fig-align="center" width="562"}
+:::
+
+::: {.column width="50%"}
+-   Create files needed to connect to GitHub repository
+
+-   Use [renv](https://rstudio.github.io/renv/index.html), a new package to capture the state of the project (R / RStudio version, packages, etc.)
+
+-   Use visual editor by default
+:::
+:::
+
+## Getting started: New project 
+
+::: columns
+::: {.column width="50%"}
+![](images/initial-files.png){fig-alt="List of files in new Quarto website repo" width="368"}
+:::
+
+::: {.column width="50%"}
+-   Add some text about the files
+:::
+:::
+
+## Getting started: Create GitHub repo
+
+Initialize a repository, add necessary files to `.gitignore`, and make initial commit
+
+```{r}
+#| eval: false
+#| echo: true
+usethis::use_git()
+```
+
+<br>
+
+    Is it ok to commit them?
+
+    1: Negative
+    2: For sure
+    3: No
+
+    Selection: 2
+    ✔ Adding files
+    ✔ Making a commit with message 'Initial commit'
+
+## Getting started: Create GitHub repo
+
+Create a new GitHub repo, connect to local repo, and make initial commit by typing the following in the <u>console</u>
+
+```{r}
+#| eval: false
+#| echo: true
+usethis::use_github()
+```
+
+<br>
+
+    > usethis::use_github()
+    ✔ Creating GitHub repository 'matackett/course-website'
+    ✔ Setting remote 'origin' to 'https://github.com/matackett/course-website.git'
+    ✔ Pushing 'master' branch to GitHub and setting 'origin/master' as upstream branch
+    ✔ Opening URL 'https://github.com/matackett/course-website'
+
+## File structure for course content
+
+-   `index.qmd`
+
+-   `syllabus.qmd`
+
+-   `schedule.qmd`
+
+-   📂 `slides`
+
+    -   `lecture-01.qmd`
+    -   `lecture-02.qmd`
+
+-   📂 `assignments`
+
+    -   `assignment-01.qmd`
+    -   `assignment-02.qmd`
+
+-   `style.css`
 
 ## Follow along 
 
