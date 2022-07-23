@@ -28,8 +28,9 @@ This page is under construction and will be updated continuously until the works
 
 -   Writing learnr tutorials
 -   Writing different types of questions
+-   Writing automated feedback
 -   Using learnr in your course
-    -   Logging student responses
+    -   Collecting student responses
     -   Deploying tutorials
 
 ## Slides

@@ -128,9 +128,9 @@ Create a tutorial with three questions:
 
 -   one sortable question
 
-You can write your responses in **Part 2: Your Turn!** in the learnr demo. It is OK if each question requires code, but that is not required.
+**Stretch goal**: Add hints to the coding exercise.
 
-**Stretch goal:** Add hints and solution checking to the coding exercise.
+You can write your questions in this section of `learnr-demo.Rmd`.
 :::
 
 ## gradethis
@@ -150,12 +150,12 @@ remotes::install_github("rstudio/gradethis")
 
 ## Your turn!
 
-::: callout-important
+::: appex
 Add automated feedback to your coding exercise.
 
 **Stretch goal**: Consider 2 -3 common errors students may make. Write specific feedback for those errors.
 
-You can write your responses **Part 4: Your turn!** or modify the code in Part 2.
+You can write your responses in this section or modify the code in Part 2 of `learnr-demo.Rmd`.
 :::
 
 # Recording student responses
@@ -164,13 +164,11 @@ You can write your responses **Part 4: Your turn!** or modify the code in Part 2
 
 Add a link to a form at the end of the tutorial for a "minute paper"
 
-::: callout-important
--   *Write about one or two questions you didn't get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?*
-
-OR
-
--   *If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.*
-:::
+> -   *Write about one or two questions you didn't get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?*
+>
+> OR
+>
+> -   *If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.*
 
 ------------------------------------------------------------------------
 
@@ -191,12 +189,12 @@ remotes::install_github("rundel/learnrhash")
 
 -   Deploy on
 
-    -   shinyapps[.io](https://www.shinyapps.io/)
+    -   [shinyapps.io](https://www.shinyapps.io/)
     -   RStudio Connect (free for academic use)
 
 -   Distribute tutorials as a package
 
-    -   [dsbox R package](https://github.com/rstudio-education/dsbox) includes a set of learnr tutorials
+    -   Example: [dsbox R package](https://github.com/rstudio-education/dsbox) includes a set of learnr tutorials
 
     -   More about developing packages in a later session
 
@@ -220,7 +218,7 @@ remotes::install_github("rundel/learnrhash")
 
 ------------------------------------------------------------------------
 
-::: callout-important
+::: appex
 We have completed Day 01! Please answer the following using your sticky notes:
 
 -   XX sticky note: What is going well / what has been your favorite part of the workshop so far?
