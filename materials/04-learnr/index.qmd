@@ -119,19 +119,21 @@ Follow along options:
 
 ## Your turn!
 
-::: callout-important
+::: appex
 Create a tutorial with three questions:
 
 -   one multiple choice
-
 -   one coding exercise
-
 -   one sortable question
 
 **Stretch goal**: Add hints to the coding exercise.
 
 You can write your questions in this section of `learnr-demo.Rmd`.
 :::
+
+```{r}
+countdown::countdown(minutes= 10)
+```
 
 ## gradethis
 
@@ -142,8 +144,8 @@ The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible t
 -   `grade_this()`: Compare student result to model result (flexible check)
 
 ```{r}
-#|eval: false
-#|echo: false
+#| eval: false
+#| echo: true
 
 remotes::install_github("rstudio/gradethis")
 ```
@@ -158,6 +160,10 @@ Add automated feedback to your coding exercise.
 You can write your responses in this section or modify the code in Part 2 of `learnr-demo.Rmd`.
 :::
 
+```{r}
+countdown::countdown(minutes= 10)
+```
+
 # Recording student responses
 
 ## "Minute paper"
@@ -166,7 +172,7 @@ Add a link to a form at the end of the tutorial for a "minute paper"
 
 > -   *Write about one or two questions you didn't get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?*
 >
-> OR
+>     OR
 >
 > -   *If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.*
 
