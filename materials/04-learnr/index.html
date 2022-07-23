@@ -379,6 +379,8 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
+  <script src="../../site_libs/countdown-0.3.5/countdown.js"></script>
 <meta name="twitter:title" content="Designing the Data Science Classroom - Interactivity and immediate feedback with learnr">
 <meta name="twitter:description" content="rstudio::conf(2022)  Designing the data science classroom">
 <meta name="twitter:image" content="https://rstudio-conf-2022.github.io/teach-ds//images/twitter-card.png">
@@ -526,23 +528,20 @@
 </section>
 <section id="your-turn" class="slide level2 center">
 <h2>Your turn!</h2>
-<div class="callout callout-important callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
+<div class="appex">
 <p>Create a tutorial with three questions:</p>
 <ul>
-<li><p>one multiple choice</p></li>
-<li><p>one coding exercise</p></li>
-<li><p>one sortable question</p></li>
+<li>one multiple choice</li>
+<li>one coding exercise</li>
+<li>one sortable question</li>
 </ul>
 <p><strong>Stretch goal</strong>: Add hints to the coding exercise.</p>
 <p>You can write your questions in this section of <code>learnr-demo.Rmd</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62dc5793" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
@@ -555,7 +554,7 @@
 <li><p><code>grade_this()</code>: Compare student result to model result (flexible check)</p></li>
 </ul>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rstudio/gradethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="your-turn-1" class="slide level2 center">
@@ -564,6 +563,13 @@
 <p>Add automated feedback to your coding exercise.</p>
 <p><strong>Stretch goal</strong>: Consider 2 -3 common errors students may make. Write specific feedback for those errors.</p>
 <p>You can write your responses in this section or modify the code in Part 2 of <code>learnr-demo.Rmd</code>.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62dc5987" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
 </div>
 </section></section>
 <section>
@@ -574,15 +580,11 @@
 <section id="minute-paper" class="slide level2 center">
 <h2>“Minute paper”</h2>
 <p>Add a link to a form at the end of the tutorial for a “minute paper”</p>
-<blockquote>
 <ul>
-<li><em>Write about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?</em></li>
+<li class="fragment"><p><em>Write about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?</em></p>
+<p>OR</p></li>
+<li class="fragment"><p><em>If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.</em></p></li>
 </ul>
-<p>OR</p>
-<ul>
-<li><em>If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.</em></li>
-</ul>
-</blockquote>
 </section>
 <section id="learnrhash" class="slide level2 center">
 <h2>learnrhash</h2>
@@ -591,7 +593,7 @@
 <li><p>Students submit responses using a “hash” submitted in an online form.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rundel/learnrhash"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rundel/learnrhash"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="sharing-with-students" class="slide level2 center">

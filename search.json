@@ -767,28 +767,28 @@
     "href": "materials/04-learnr/index.html#your-turn",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Your turn!",
-    "text": "Your turn!\n\n\n\n\n\n\nImportant\n\n\nCreate a tutorial with three questions:\n\none multiple choice\none coding exercise\none sortable question\n\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd."
+    "text": "Your turn!\n\nCreate a tutorial with three questions:\n\none multiple choice\none coding exercise\none sortable question\n\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd.\n\n\n\n\n10:00"
   },
   {
     "objectID": "materials/04-learnr/index.html#gradethis",
     "href": "materials/04-learnr/index.html#gradethis",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "gradethis",
-    "text": "gradethis\nThe gradethis package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:\n\ngrade_this_code(): Compare student code to model code (strict check)\ngrade_this(): Compare student result to model result (flexible check)"
+    "text": "gradethis\nThe gradethis package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:\n\ngrade_this_code(): Compare student code to model code (strict check)\ngrade_this(): Compare student result to model result (flexible check)\n\n\nremotes::install_github(\"rstudio/gradethis\")"
   },
   {
     "objectID": "materials/04-learnr/index.html#your-turn-1",
     "href": "materials/04-learnr/index.html#your-turn-1",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Your turn!",
-    "text": "Your turn!\n\nAdd automated feedback to your coding exercise.\nStretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in this section or modify the code in Part 2 of learnr-demo.Rmd."
+    "text": "Your turn!\n\nAdd automated feedback to your coding exercise.\nStretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in this section or modify the code in Part 2 of learnr-demo.Rmd.\n\n\n\n\n10:00"
   },
   {
     "objectID": "materials/04-learnr/index.html#minute-paper",
     "href": "materials/04-learnr/index.html#minute-paper",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "“Minute paper”",
-    "text": "“Minute paper”\nAdd a link to a form at the end of the tutorial for a “minute paper”\n\n\nWrite about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?\n\nOR\n\nIf you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz."
+    "text": "“Minute paper”\nAdd a link to a form at the end of the tutorial for a “minute paper”\n\nWrite about one or two questions you didn’t get right initially but were able to solve after a few tries. What was difficult about them? What did you ultimately learn?\nOR\nIf you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz."
   },
   {
     "objectID": "materials/04-learnr/index.html#learnrhash",
