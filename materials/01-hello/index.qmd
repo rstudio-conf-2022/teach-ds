@@ -37,7 +37,12 @@ Dr. Mine Çetinkaya-Rundel
 Dr. Maria Tackett
 :::
 
-## 
+## Teaching Assistants
+
+-   Becky Tang - Duke University
+-   Simon Couch - RStudio
+
+## Workshop materials
 
 ![](../images/logo.png){fig-alt="Hex logo for workshop" fig-align="center"}
 
@@ -47,16 +52,129 @@ One link for all materials
 🔗 [bit.ly/rstd.io/teach-ds-conf22](https://bit.ly/rstd.io/teach-ds-conf22)
 :::
 
-## Session agenda
+## Schedule
 
--   ...
+::: smalller
+::: columns
+::: {.column width="45%"}
+### Day 1
 
-# In progress
-
-::: callout-warning
-These slides are currently being designed and built.
+| Time          | Activity                                         |
+|:--------------|:-------------------------------------------------|
+| 09:00 - 10:30 | Hello #teachds                                   |
+| 10:30 - 11:00 | *Coffee break*                                   |
+| 11:00 - 12:30 | Teaching data science with the tidyverse         |
+| 12:30 - 13:30 | *Lunch break*                                    |
+| 13:30 - 15:00 | Teaching modern modeling with tidymodels         |
+| 15:00 - 15:30 | *Coffee break*                                   |
+| 15:30 - 17:00 | Interactivity and immediate feedback with learnr |
 :::
 
-# Curriculum design
+::: {.column width="5%"}
+:::
 
-# Meet the toolkit
+::: {.column width="50%"}
+### Day 2
+
+| Time          | Activity                                      |
+|:--------------|:----------------------------------------------|
+| 09:00 - 10:30 | Computing infrastructure with RStudio Cloud   |
+| 10:30 - 11:00 | *Coffee break*                                |
+| 11:00 - 12:30 | Reproducible workflows: Quarto, Git, GitHub   |
+| 12:30 - 13:30 | *Lunch break*                                 |
+| 13:30 - 15:00 | Making a data package                         |
+| 15:00 - 15:30 | *Coffee break*                                |
+| 15:30 - 17:00 | Organizing teaching materials + Wrap-up / Q&A |
+:::
+:::
+:::
+
+## WiFi
+
+::: larger
+Username: **conf22**
+
+Password: **together!**
+:::
+
+<br><br>
+
+::: aside
+If you have any difficulty with your connection please let us (myself and or the TAs) know so we can escalate issues if needed.
+:::
+
+## Code of Conduct {.small}
+
+All details are available at https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/.
+Please review them carefully.
+
+You can report Code of Conduct violations in person (any rstudio::conf staff ), by email ([conf\@rstudio.com](mailto:conf@rstudio.com)), or by phone (844-448-1212).
+Please see the policy linked above for contact information.
+
+Covid19 specific policies:
+
+-   RStudio requires that you wear a mask that fully covers your mouth and nose at all times in all public spaces.
+
+-   We strongly recommend that you use a correctly fitted N95, KN95, or similar particulate filtering mask; there is a limited supply available upon request.
+
+## Other useful info
+
+-   There are gender neutral bathrooms located on the river side of the Potomac Ballroom.
+
+-   The meditation room is located at Potomac Dressing Room (Open 8am - 5pm, Monday - Thursday)
+
+-   The lactation room is located at National Harbor 9 (Open 8am - 5pm, Monday - Thursday)
+
+    -   The hotel also has a dedicated room behind reception
+
+-   Participants who do not wish to be photographed have red lanyards, please note everyone's lanyard colors before taking a photo and respect their choices.
+
+## Asking for help (Stickies)
+
+::: r-hstack
+::: {style="text-align: center;"}
+::: {data-id="box1" style="background: #CC4341; width: 200px; height: 200px; margin: 25px;"}
+:::
+
+I'm stuck
+:::
+
+::: {style="text-align: center;"}
+::: {data-id="box3" style="background: #A3C586; width: 200px; height: 200px; margin: 25px;"}
+:::
+
+I'm done
+:::
+:::
+
+::: r-hstack
+::: {style="text-align: center;"}
+![](images/hand.png){fig-align="center" width="20%"} <br/>I have a general question
+:::
+:::
+
+## Other communication (Discord)
+
+You should have received an email with an invitation and instructions for joining the conference's discord server.
+
+This workshop has a private channel under Workshops,
+
+::: {.large style="text-align: center"}
+\#📚getting-started-with-shiny
+:::
+
+This is a great place to ask questions, post resources, memes, or most anything else before, during, and after the workshop.
+
+# Computational Environment
+
+## RStudio Cloud
+
+You can use the following link to join the workshops RStudio cloud space,
+
+::: {style="text-align: center;"}
+[rstd.io/teach-ds-conf22-cloud](https://rstd.io/teach-ds-conf22-cloud)
+:::
+
+<br/>
+
+Once you have joined, navigate to Projects on the top menu.

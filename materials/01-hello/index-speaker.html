@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.363">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Mine Çetinkaya-Rundel">
   <title>Designing the Data Science Classroom - Hello #teachds</title>
@@ -19,13 +25,6 @@
     ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-  <script src="../../site_libs/clipboard/clipboard.min.js"></script>
-  <script src="../../site_libs/quarto-html/tabby.min.js"></script>
-  <script src="../../site_libs/quarto-html/popper.min.js"></script>
-  <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-  <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
-  <link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -317,13 +316,14 @@
     }
   </style>
 <meta name="twitter:title" content="Designing the Data Science Classroom - Hello #teachds">
+<meta name="twitter:description" content="rstudio::conf(2022)  Designing the data science classroom">
 <meta name="twitter:image" content="https://rstudio-conf-2022.github.io/teach-ds//images/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:image-height" content="599">
 <meta name="twitter:image-width" content="1200">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -338,7 +338,7 @@
 <h1>Welcome</h1>
 
 </section>
-<section id="introductions" class="slide level2">
+<section id="introductions" class="slide level2 center">
 <h2>Introductions</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -360,50 +360,194 @@
 <p>Dr.&nbsp;Maria Tackett</p>
 </div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="teaching-assistants" class="slide level2 center">
+<h2>Teaching Assistants</h2>
+<ul>
+<li>Becky Tang - Duke University</li>
+<li>Simon Couch - RStudio</li>
+</ul>
+</section>
+<section id="workshop-materials" class="slide level2 center">
+<h2>Workshop materials</h2>
 
 <img data-src="../images/logo.png" alt="Hex logo for workshop" class="r-stretch quarto-figure-center"><div style="text-align: center;">
 <p>One link for all materials</p>
 <p>🔗 <a href="https://bit.ly/rstd.io/teach-ds-conf22">bit.ly/rstd.io/teach-ds-conf22</a></p>
 </div>
 </section>
-<section id="session-agenda" class="slide level2">
-<h2>Session agenda</h2>
+<section id="schedule" class="slide level2 center">
+<h2>Schedule</h2>
+<div class="smalller">
+<div class="columns">
+<div class="column" style="width:45%;">
+<h3 id="day-1">Day 1</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">09:00 - 10:30</td>
+<td style="text-align: left;">Hello #teachds</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10:30 - 11:00</td>
+<td style="text-align: left;"><em>Coffee break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11:00 - 12:30</td>
+<td style="text-align: left;">Teaching data science with the tidyverse</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12:30 - 13:30</td>
+<td style="text-align: left;"><em>Lunch break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13:30 - 15:00</td>
+<td style="text-align: left;">Teaching modern modeling with tidymodels</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15:00 - 15:30</td>
+<td style="text-align: left;"><em>Coffee break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15:30 - 17:00</td>
+<td style="text-align: left;">Interactivity and immediate feedback with learnr</td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:50%;">
+<h3 id="day-2">Day 2</h3>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Time</th>
+<th style="text-align: left;">Activity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">09:00 - 10:30</td>
+<td style="text-align: left;">Computing infrastructure with RStudio Cloud</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">10:30 - 11:00</td>
+<td style="text-align: left;"><em>Coffee break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">11:00 - 12:30</td>
+<td style="text-align: left;">Reproducible workflows: Quarto, Git, GitHub</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">12:30 - 13:30</td>
+<td style="text-align: left;"><em>Lunch break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">13:30 - 15:00</td>
+<td style="text-align: left;">Making a data package</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">15:00 - 15:30</td>
+<td style="text-align: left;"><em>Coffee break</em></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15:30 - 17:00</td>
+<td style="text-align: left;">Organizing teaching materials + Wrap-up / Q&amp;A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section>
+<section id="wifi" class="slide level2 center">
+<h2>WiFi</h2>
+<div class="larger">
+<p>Username: <strong>conf22</strong></p>
+<p>Password: <strong>together!</strong></p>
+</div>
+<p><br><br></p>
+
+<aside><div>
+<p>If you have any difficulty with your connection please let us (myself and or the TAs) know so we can escalate issues if needed.</p>
+</div></aside></section>
+<section id="code-of-conduct" class="slide level2 small center">
+<h2>Code of Conduct</h2>
+<p>All details are available at https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/. Please review them carefully.</p>
+<p>You can report Code of Conduct violations in person (any rstudio::conf staff ), by email (<a href="mailto:conf@rstudio.com">conf@rstudio.com</a>), or by phone (844-448-1212). Please see the policy linked above for contact information.</p>
+<p>Covid19 specific policies:</p>
 <ul>
-<li>…</li>
+<li><p>RStudio requires that you wear a mask that fully covers your mouth and nose at all times in all public spaces.</p></li>
+<li><p>We strongly recommend that you use a correctly fitted N95, KN95, or similar particulate filtering mask; there is a limited supply available upon request.</p></li>
 </ul>
+</section>
+<section id="other-useful-info" class="slide level2 center">
+<h2>Other useful info</h2>
+<ul>
+<li><p>There are gender neutral bathrooms located on the river side of the Potomac Ballroom.</p></li>
+<li><p>The meditation room is located at Potomac Dressing Room (Open 8am - 5pm, Monday - Thursday)</p></li>
+<li><p>The lactation room is located at National Harbor 9 (Open 8am - 5pm, Monday - Thursday)</p>
+<ul>
+<li>The hotel also has a dedicated room behind reception</li>
+</ul></li>
+<li><p>Participants who do not wish to be photographed have red lanyards, please note everyone’s lanyard colors before taking a photo and respect their choices.</p></li>
+</ul>
+</section>
+<section id="asking-for-help-stickies" class="slide level2 center">
+<h2>Asking for help (Stickies)</h2>
+<div class="r-hstack">
+<div style="text-align: center;">
+<div data-id="box1" style="background: #CC4341; width: 200px; height: 200px; margin: 25px;">
+
+</div>
+<p>I’m stuck</p>
+</div>
+<div style="text-align: center;">
+<div data-id="box3" style="background: #A3C586; width: 200px; height: 200px; margin: 25px;">
+
+</div>
+<p>I’m done</p>
+</div>
+</div>
+<div class="r-hstack">
+<div style="text-align: center;">
+<p><img data-src="images/hand.png" data-fig-align="center" style="width:20.0%"> <br>I have a general question</p>
+</div>
+</div>
+</section>
+<section id="other-communication-discord" class="slide level2 center">
+<h2>Other communication (Discord)</h2>
+<p>You should have received an email with an invitation and instructions for joining the conference’s discord server.</p>
+<p>This workshop has a private channel under Workshops,</p>
+<div class="large" style="text-align: center">
+<p>#📚getting-started-with-shiny</p>
+</div>
+<p>This is a great place to ask questions, post resources, memes, or most anything else before, during, and after the workshop.</p>
 </section></section>
-<section id="in-progress" class="title-slide slide level1 center">
-<h1>In progress</h1>
-<div class="callout callout-warning callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>These slides are currently being designed and built.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section id="curriculum-design" class="title-slide slide level1 center">
-<h1>Curriculum design</h1>
+<section>
+<section id="computational-environment" class="title-slide slide level1 center">
+<h1>Computational Environment</h1>
 
 </section>
-
-<section id="meet-the-toolkit" class="title-slide slide level1 center">
-<h1>Meet the toolkit</h1>
+<section id="rstudio-cloud" class="slide level2 center">
+<h2>RStudio Cloud</h2>
+<p>You can use the following link to join the workshops RStudio cloud space,</p>
+<div style="text-align: center;">
+<p><a href="https://rstd.io/teach-ds-conf22-cloud">rstd.io/teach-ds-conf22-cloud</a></p>
+</div>
+<p><br></p>
+<p>Once you have joined, navigate to Projects on the top menu.</p>
 
 
 <img src="../images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://rstd.io/teach-ds-conf22">🔗 rstd.io/teach-ds-conf22</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -622,6 +766,24 @@
     </script>
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);
