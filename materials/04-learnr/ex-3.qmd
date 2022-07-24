@@ -8,4 +8,4 @@ Add automated feedback to your coding exercise.
 
 **Stretch goal**: Consider 2 -3 common errors students may make. Write specific feedback for those errors.
 
-You can write your responses **Part 4: Your turn!** or modify the code in Part 2.
+You can write your responses in this section or modify the code in Part 2 of `learnr-demo.Rmd`.

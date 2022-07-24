@@ -34,7 +34,7 @@ ggplot2::theme_set(theme_bw())
 
 ### Packages
 
-This tutorial uses the **tidyverse** package. Run the code below to load the package.
+We will use the **tidyverse** package in this tutorial. Run the code below to load the package.
 
 ```{r load-package, exercise = TRUE}
 library(tidyverse)
@@ -42,12 +42,12 @@ library(tidyverse)
 
 ### Data: Ikea furniture
 
-The data in this tutorial are all about [Ikea](https://www.ikea.com/) furniture. The data were obtained from the [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-11-03/readme.md) data collection.
+The data set is all about [Ikea](https://www.ikea.com/) furniture. It was obtained from the [TidyTuesday](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-11-03/readme.md) data collection.
 
-Run the code below to load the data from a .csv file.
+Run the code below to see the data.
 
 ```{r load-data, exercise = TRUE}
-ikea <- read_csv("data/ikea.csv")
+ikea
 ```
 
 We will primarily use the following variables in the analysis:
@@ -78,7 +78,7 @@ ggplot(aes(x = category, y = price_usd, fill = category)) +
 ```
 
 ```{r variability}
-question("Which category of furniture has the least variability in the price?", 
+question("Which furniture category has the least variability in the price?", 
          answer("Beds"), 
          answer("Sofas & armchairs"), 
          answer("Tables & desk", correct = TRUE), 
@@ -86,10 +86,10 @@ question("Which category of furniture has the least variability in the price?",
 )
 ```
 
-You can also add options to the questions to allow retries, random order, and hints for incorrect responses.
+You can add options to allow retries, random order, and hints for incorrect responses.
 
 ```{r variability-hint}
-question("Which category of furniture has the large IQR for price?", 
+question("Which furniture category has the largest IQR?", 
          answer("Beds"), 
          answer("Sofas & armchairs", correct = TRUE), 
          answer("Tables & desk"), 
@@ -102,7 +102,7 @@ question("Which category of furniture has the large IQR for price?",
 
 ### Coding exercises
 
-Count the number of observations in each furniture category.
+What is the most common furniture category?
 
 ```{r count-category, exercise = TRUE}
 
@@ -110,21 +110,21 @@ Count the number of observations in each furniture category.
 
 ### Coding exercises with starter code
 
-You can use starter code to provide scaffolding for the coding exercises. You can also customize the number of lines that appear in the input box.
+You can use starter code to provide scaffolding for coding exercises, and there are [multiple options](https://rstudio.github.io/learnr/articles/exercises.html) to customize the exercise input box.
 
 What is the median price of furniture in the most common category?
 
 ```{r median-price, exercise = TRUE, exercise.lines = 5}
 ikea |>
-  ____(___, ____) |>
-  ____(___)
+  filter(____) |>
+  summarise(___)
 ```
 
-### Exercises with hints and solutions
+### Exercises with hints
 
-You can add hints and solutions to coding exercises.
+You can add hints to coding exercises.
 
-Consider the categories`Sofas & armchairs` and `Tables & desks`. Which category has the highest mean price?
+Consider the categories `Sofas & armchairs` and `Tables & desks`. Which category has the highest mean price?
 
 ```{r avg-price, exercise = TRUE, exercise.lines = 5}
 ikea
@@ -145,7 +145,7 @@ ikea |>
 
 ```
 
-```{r avg-price-solution}
+```{r avg-price-hint-3}
 ikea |> 
   filter(category %in% c("Sofas & armchairs", "Tables & desks")) |>
   group_by(category) |>
@@ -156,8 +156,6 @@ ikea |>
 
 Use the [**sortable**](https://rstudio.github.io/sortable/) package to create sorting and ranking questions.
 
-Put the steps for baking a cake in the correct order.
-
 ```{r sorting-exercise}
 # Define the answer options
 baking_steps <- c("Mix the ingredients.", 
@@ -165,10 +163,9 @@ baking_steps <- c("Mix the ingredients.",
            "Decorate the cake.", 
            "Slice the cake.")
 
-
 # Write the exercise 
 question_rank(
-  "Sort the steps to bake and serve a cake in the correct order.",
+  "Sort the steps for making a cake in the correct order.",
   answer(baking_steps, correct = TRUE),
   answer(rev(baking_steps), correct = FALSE, message = "Other direction!"),
   allow_retry = TRUE
@@ -184,14 +181,14 @@ Create a tutorial with three questions:
 -   one coding exercise
 -   one sortable question
 
-<b>Stretch goal:</b> Add hints and a solution to the coding exercise.
+<b>Stretch goal:</b> Add hints to the coding exercise.
 
-You can write your questions in this section of the .Rmd file.
+You can write your questions in this section of `learnr-demo.Rmd`.
 :::
 
 ## Part 3: Automated feedback
 
-So far students would have to check their solutions to coding exercises by assessing whether the output is reasonable or comparing their code to the solution. You can use the [**gradethis**](https://pkgs.rstudio.com/gradethis/articles/gradethis.html) package to provide automated feedback on code.
+So far students have to check their solutions to coding exercises by assessing whether the output is reasonable or comparing their code to the hints. You can add automated feedback on coding exercises using the [gradethis](https://pkgs.rstudio.com/gradethis/) package.
 
 ### Checking code
 
@@ -236,14 +233,14 @@ grade_this({
 })
 ```
 
-## Part 4: Your turn! 
+## Part 4: Your turn!
 
 ::: your-turn
 Add automated feedback to your coding exercise.
 
-<b>Stretch goal:</b> Consider 2 -3 common errors students may make. Write specific feedback for those errors.
+**Stretch goal**: Consider 2 -3 common errors students may make. Write specific feedback for those errors.
 
-You can write your responses in this section or modify the code in Part 2.
+You can write your responses in this section or modify the code in Part 2 of `learnr-demo.Rmd`.
 :::
 
 ## Part 5: Minute paper
@@ -257,7 +254,7 @@ Provide a "minute paper" in an embedded online form for students to reflect on t
 
 Use the [**learnrhash**](https://github.com/rundel/learnrhash) package to collect student responses from learnr tutorials. Students submit their responses using a "hash" submitted to an online form.
 
-Create a histogram of the distribution of Ikea furniture prices and answer the following questions based on the histogram.
+Create a histogram of the distribution of Ikea furniture prices, then answer the following questions based on the histogram.
 
 ```{r price-histogram, exercise = TRUE}
 ggplot(___, aes(x = ___)) +
@@ -401,16 +398,9 @@ submissions <- read_sheet("ttps://docs.google.com/spreadsheets/d/1aEJxhOTHzUXdng
 
 ### Process student submissions
 
+You can process the student data in R to review student answers, calculate assignment scores, identify common
+
 ```{r}
 submission_data <- extract_hash(submissions)
 submission_data
-```
-
-### Calculate assignment scores
-
-```{r}
-submission_data |>
-  group_by(student_name, student_id) |>
-  count(correct) |>
-  filter(correct == TRUE)
 ```

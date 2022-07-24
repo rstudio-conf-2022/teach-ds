@@ -1,7 +1,9 @@
 ---
 title: "Learnr Demo"
-subtitle: "Exercise 1"
+subtitle: "Deployed tutorial"
 editor: visual
 ---
 
-Place holder for exercises.
+The deployed tutorial is available at <https://minecr.shinyapps.io/learnr-demo>
+
+The source code is available at LINK\] and the 04-learnr project in RStudio Cloud.
