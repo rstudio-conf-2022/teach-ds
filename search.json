@@ -581,18 +581,67 @@
     "text": "Introductions\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDr. Mine Çetinkaya-Rundel\nDr. Maria Tackett"
   },
   {
-    "objectID": "materials/01-hello/index.html#section",
-    "href": "materials/01-hello/index.html#section",
+    "objectID": "materials/01-hello/index.html#teaching-assistants",
+    "href": "materials/01-hello/index.html#teaching-assistants",
     "title": "Hello #teachds",
-    "section": "",
-    "text": "One link for all materials\n🔗 bit.ly/rstd.io/teach-ds-conf22"
+    "section": "Teaching Assistants",
+    "text": "Teaching Assistants\n\nBecky Tang - Duke University\nSimon Couch - RStudio"
   },
   {
-    "objectID": "materials/01-hello/index.html#session-agenda",
-    "href": "materials/01-hello/index.html#session-agenda",
+    "objectID": "materials/01-hello/index.html#workshop-materials",
+    "href": "materials/01-hello/index.html#workshop-materials",
     "title": "Hello #teachds",
-    "section": "Session agenda",
-    "text": "Session agenda\n\n…"
+    "section": "Workshop materials",
+    "text": "Workshop materials\n\n\nOne link for all materials\n🔗 bit.ly/rstd.io/teach-ds-conf22"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#schedule",
+    "href": "materials/01-hello/index.html#schedule",
+    "title": "Hello #teachds",
+    "section": "Schedule",
+    "text": "Schedule\n\n\n\nDay 1\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nHello #teachds\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nTeaching data science with the tidyverse\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nTeaching modern modeling with tidymodels\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nInteractivity and immediate feedback with learnr\n\n\n\n\n\n\nDay 2\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nComputing infrastructure with RStudio Cloud\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nReproducible workflows: Quarto, Git, GitHub\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nMaking a data package\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nOrganizing teaching materials + Wrap-up / Q&A"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#wifi",
+    "href": "materials/01-hello/index.html#wifi",
+    "title": "Hello #teachds",
+    "section": "WiFi",
+    "text": "WiFi\n\nUsername: conf22\nPassword: together!\n\n\n\n\nIf you have any difficulty with your connection please let us (myself and or the TAs) know so we can escalate issues if needed."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#code-of-conduct",
+    "href": "materials/01-hello/index.html#code-of-conduct",
+    "title": "Hello #teachds",
+    "section": "Code of Conduct",
+    "text": "Code of Conduct\nAll details are available at https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/. Please review them carefully.\nYou can report Code of Conduct violations in person (any rstudio::conf staff ), by email (conf@rstudio.com), or by phone (844-448-1212). Please see the policy linked above for contact information.\nCovid19 specific policies:\n\nRStudio requires that you wear a mask that fully covers your mouth and nose at all times in all public spaces.\nWe strongly recommend that you use a correctly fitted N95, KN95, or similar particulate filtering mask; there is a limited supply available upon request."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#other-useful-info",
+    "href": "materials/01-hello/index.html#other-useful-info",
+    "title": "Hello #teachds",
+    "section": "Other useful info",
+    "text": "Other useful info\n\nThere are gender neutral bathrooms located on the river side of the Potomac Ballroom.\nThe meditation room is located at Potomac Dressing Room (Open 8am - 5pm, Monday - Thursday)\nThe lactation room is located at National Harbor 9 (Open 8am - 5pm, Monday - Thursday)\n\nThe hotel also has a dedicated room behind reception\n\nParticipants who do not wish to be photographed have red lanyards, please note everyone’s lanyard colors before taking a photo and respect their choices."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#asking-for-help-stickies",
+    "href": "materials/01-hello/index.html#asking-for-help-stickies",
+    "title": "Hello #teachds",
+    "section": "Asking for help (Stickies)",
+    "text": "Asking for help (Stickies)\n\n\n\n\n\nI’m stuck\n\n\n\n\n\nI’m done\n\n\n\n\n I have a general question"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#other-communication-discord",
+    "href": "materials/01-hello/index.html#other-communication-discord",
+    "title": "Hello #teachds",
+    "section": "Other communication (Discord)",
+    "text": "Other communication (Discord)\nYou should have received an email with an invitation and instructions for joining the conference’s discord server.\nThis workshop has a private channel under Workshops,\n\n#📚getting-started-with-shiny\n\nThis is a great place to ask questions, post resources, memes, or most anything else before, during, and after the workshop."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#rstudio-cloud",
+    "href": "materials/01-hello/index.html#rstudio-cloud",
+    "title": "Hello #teachds",
+    "section": "RStudio Cloud",
+    "text": "RStudio Cloud\nYou can use the following link to join the workshops RStudio cloud space,\n\nrstd.io/teach-ds-conf22-cloud\n\n\nOnce you have joined, navigate to Projects on the top menu.\n\n\n\n🔗 rstd.io/teach-ds-conf22"
   },
   {
     "objectID": "materials/08-organizing/ex-1.html",
