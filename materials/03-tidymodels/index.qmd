@@ -62,14 +62,6 @@ Facilitate opportunities for students to...
 -   Develop important non-technical skills, specifically written communication and **teamwork**
 :::
 
-## Discussion
-
-::: callout-important
--   How much do you teach regression in your course(s)?
-
--   Do you currently implement any of these principles in your teaching? Do you find some more challenging to implement than others?
-:::
-
 # Introducing tidymodels
 
 ## Tidymodels
@@ -125,7 +117,6 @@ Fit a linear regression model to predict the interest rate using the debt to inc
 ```{r}
 #| echo: true
 base_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)
-
 summary(base_lm)
 ```
 
@@ -143,17 +134,13 @@ tidy(tidy_lm)
 
 ## Model summaries using broom
 
-Can utilize functions from the **broom** package to produce tidy summaries of models fit using Base R or the tidymodels framework
+Can utilize functions from the [**broom**](broom.tidymodels.org) package to produce tidy summaries of models fit using Base R or the tidymodels framework
 
 -   `tidy()`: summarizes information about model components
 
 -   `glance()`: reports information about the entire model
 
--   `augment()`: adds informations about observations to a dataset
-
-<br>
-
-[broom.tidymodels.org](https://broom.tidymodels.org/)
+-   `augment()`: adds information about observations to a data set
 
 ## `tidy()`
 
@@ -224,7 +211,7 @@ tidy_lm_aug
 
 ## Why full tidymodels framework?
 
-Most pedagogical advantages for more advanced models:
+There are advantages for more advanced modeling:
 
 -   Consistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.
 -   Streamline modeling workflow
@@ -281,39 +268,43 @@ linear_reg() |>
   tidy()
 ```
 
-## Add slide? 
+## Consistent syntax for other models
 
--   Add a slide to show how this would be consistent if you made a logistic model?
+The syntax is the same if we fit a more advanced model, such as a logistic regression model.
+
+*Fit a model to predict the loan term length (36 or 60 month) based on the loan amount.*
+
+```{r}
+#| echo: true
+logistic_reg() |>
+  set_engine("glm") |>
+  fit(factor(term) ~ loan_amount, data = loans_full_schema) |>
+  tidy()
+```
 
 ## Feature engineering
 
-**Feature engineering** is the process of transforming raw variables in preparation for use in a statistical model.
+::: incremental
+-   **Feature engineering** is the process of transforming raw variables in preparation for use in a statistical model.
 
-<br>
+-   You may be familiar doing feature engineering using dplyr before fitting the model.
 
-. . .
-
-We may be familiar doing feature engineering using dplyr before fitting the model.
-
-<br>
-
-. . .
-
-The [recipes](https://recipes.tidymodels.org/) package makes it possible to do feature engineering as part of the modeling workflow using "dplyr-like" functions.
+-   The [**recipes**](https://recipes.tidymodels.org/) package makes it possible to do feature engineering as part of the modeling workflow using "dplyr-like" functions.
+:::
 
 ## Example: Predicting interest rate
 
-**Goal**: Fit a model to predict the interest rate from the term, debt to income ratio, home ownership, and number of delinquencies in past two years.
+::: incremental
+-   **Goal**: Fit a model to predict the interest rate based on the term, debt to income ratio, and number of delinquencies in past two years.
 
-<br>
+-   We need to do the following to prepare the predictors for the model:
 
-. . .
+    -   Make `term` a factor.
 
-We need to do the following to prepare the predictors for the model:
+    -   Mean-center `debt_to_income`.
 
--   Make `term` a factor.
--   Mean-center `debt_to_income`.
--   Break `delinq_2y` into the categories 0, 1, 2, 3+.
+    -   Break `delinq_2y` into the categories 0, 1, 2, 3+.
+:::
 
 ## Feature engineering using dplyr
 
@@ -322,11 +313,14 @@ We need to do the following to prepare the predictors for the model:
 # Prepare the data
 loans_full_schema <- loans_full_schema |>
   mutate(term = as_factor(term)) |>
-  mutate(debt_to_income_cent = debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>
-  mutate(delinq_2y_cat = cut(delinq_2y, breaks = c(0, 1, 2, 3, Inf), right = FALSE))
+  mutate(debt_to_income_cent = 
+           debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>
+  mutate(delinq_2y_cat = 
+           cut(delinq_2y, breaks = c(0, 1, 2, 3, Inf), right = FALSE))
 
 # Fit the model 
-lm(interest_rate ~ term + debt_to_income_cent + homeownership + delinq_2y_cat, data = loans_full_schema) |>
+lm(interest_rate ~ term + debt_to_income_cent + delinq_2y_cat,
+   data = loans_full_schema) |>
   tidy()
 ```
 
@@ -334,69 +328,180 @@ lm(interest_rate ~ term + debt_to_income_cent + homeownership + delinq_2y_cat, d
 
 ![Illustration by [Allison Horst](https://www.allisonhorst.com/)](images/recipes.png){fig-align="center"}
 
-## Feature engineering with recipes
-
--   Write code step by step
-
--   Put all steps in a single pipeline
-
-## Featuring engineering with recipes
+## Specify the variables
 
 ```{r}
 #| echo: true
-# define workflow 
+interest_rec <- recipe(
+  interest_rate ~ term + debt_to_income + delinq_2y, #formula
+  data = loans_full_schema #data with names and variable types
+  )
 
-interest_rec <- recipe(interest_rate ~ term + debt_to_income + 
-                         homeownership + delinq_2y, 
-                       data = loans_full_schema)
+interest_rec
 ```
 
-## recipes vs. dplyr
+## Define pre-processing steps
 
--   show code side by side
+**Make `term` a factor.**
 
--   advantages / disadvantage of each approach
+```{r}
+#| echo: true
 
-## Put it together with workflow
+interest_rec <- interest_rec |>
+  step_mutate(term = as_factor(term))
 
--   Define the model
+interest_rec
+```
 
--   Define the receipe
+## Define pre-processing steps
 
-## Exercise - feature engineering
+**Mean-center `debt_to_income`**.
 
--   Have an qmd file with the dplyr pipeline.
+```{r}
+#| echo: true
 
--   Go to the receipes documentation and try to find the appropriate step functions.
+interest_rec <- interest_rec |>
+  step_center(debt_to_income)
+
+interest_rec
+```
+
+## Define pre-processing steps
+
+**Break `delinq_2y` into the categories 0, 1, 2, 3+.**
+
+```{r}
+#| echo: true
+
+interest_rec <- interest_rec |>
+  step_cut(delinq_2y, breaks = c(0, 1, 2, 3), 
+           include_outside_range = TRUE)
+
+interest_rec
+```
+
+## Putting it all together
+
+```{r}
+#| echo: true
+
+interest_rec <- recipe(
+  interest_rate ~ term + debt_to_income + delinq_2y,
+  data = loans_full_schema) |>
+  step_mutate(term = as_factor(term))|>
+  step_center(debt_to_income) |>
+  step_cut(delinq_2y, breaks = c(0, 1, 2, 3), 
+           include_outside_range = TRUE)
+```
+
+## Putting it all together
+
+```{r}
+#| echo: true
+interest_rec
+```
+
+## Prep and bake
+
+```{r}
+#| echo: true
+interest_rec |>
+  prep()|>
+  bake(loans_full_schema) |>
+  glimpse()
+```
+
+## Feature engineering: dplyr vs. recipes - is this the right comparison?
+
+::: columns
+::: {.column width="50%"}
+**dplyr**
+
+```{r}
+#| echo: true
+#| eval: false
+
+loans_full_schema |>
+  mutate(term = as_factor(term)) |>
+  mutate(debt_to_income_cent = 
+           debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>
+  mutate(delinq_2y_cat = 
+           cut(delinq_2y, breaks = c(0, 1, 2, 3, Inf), right = FALSE))
+```
+:::
+
+::: {.column width="50%"}
+**Recipes**
+
+```{r}
+#| echo: true
+#| eval: false 
+
+recipe(
+  interest_rate ~ term + debt_to_income + delinq_2y,
+  data = loans_full_schema) |>
+  step_mutate(term = as_factor(term))|>
+  step_center(debt_to_income) |>
+  step_cut(delinq_2y, breaks = c(0, 1, 2, 3), 
+           include_outside_range = TRUE)
+
+```
+:::
+:::
+
+## Your turn!
+
+Make a model predicting interest rate using debt to income, application type, bankrupt, application type \* debt to income
+
+-   Scale debt to income
+
+<!-- -->
+
+-   Create an interaction between application_type and debt to income ratio
+
+-   Create dummy variables for all nominal predictors
+
+-   Create a new variable bankrupt that takes values "no" if public record bankrupt = 0 and "yes" if public record bankrupt = 1. Then remove public_record_bankrupt
+
+\[Write the dplyr pipeline that does all this.\]
+
+-   Use the documentation to determine the accompanying recipes steps
+
+-   Stretch goal: Run the code for the recipe.
 
 -   Was this easy to do? Why or why not? What was easy? What was challenging?
 
-## Prediction
+## Fit the model using `workflow()`
 
 ## Test vs. Train data
 
-## Prediction exercise
+-   Why we would do this. What students get out of it.
+
+-   Model assessment
+
+## Prediction
+
+## Test/train and Prediction exercise
+
+build upon the model from earlier. Do test vs. train and calculate predictions. Assess the model performance.
 
 ## Thinking about prediction or inference
 
-## Exercise - split into test and train?
+## Using tidydmodels in your course
 
-## Cross-validation
+## Pedagogy
 
-## Exercise - cross validation
+Really thinking about the purpose of the modeling - is it prediction or inference.
 
-# Using tidydmodels in your course
-
-## Pedagogical advantages
+What procedure do you use based on that?
 
 ## Putting it all together
 
 -   Make an Rmd file with a full pipeline to show this is what your students would be able to do at the end of the semester.
+-   Use the modern regression site.
 
-## Activity / Discussion
+## Discussion
 
 -   Think about how you might implement this in the classroom
 
 -   What is a potential challenge
-
--   Write an activity
