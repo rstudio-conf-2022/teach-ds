@@ -7,18 +7,887 @@ logo: "../images/logo.png"
 format: 
   revealjs:
     theme: ../slides.scss
+    fontsize: 12px
     multiplex: true
     transition: fade
     slide-number: true
     incremental: false 
     chalkboard: true
-    center: true
+    code-overflow: scroll
+    revealjs-plugins:
+    - ../countdown
 execute:
   freeze: auto
+  echo: true
 ---
 
-# In progress
+# Introduction
 
-::: callout-warning
-These slides are currently being designed and built.
+```{r}
+#| echo: false
+library(tidyverse)
+library(scales)
+library(knitr)
+library(kableExtra)
+library(colorblindr)
+
+options(dplyr.print_min = 6, dplyr.print_max = 6)
+theme_set(theme_gray(base_size = 18))
+```
+
+## Setting the scene
+
+::: columns
+::: {.column width="50%" style="text-align: center;"}
+![](images/icons8-code-64.png)
+
+**Assumption 1:**
+
+Teach authentic tools
 :::
+
+::: {.column width="50%" style="text-align: center;"}
+![](images/icons8-code-R-64.png)
+
+**Assumption 2:**
+
+Teach R as the authentic tool
+:::
+:::
+
+## Takeaway
+
+<br><br>
+
+> The tidyverse provides an effective and efficient pathway for undergraduate students at all levels and majors to gain computational skills and thinking needed throughout the data science cycle.
+
+::: aside
+Çetinkaya-Rundel, M., Hardin, J., Baumer, B. S., McNamara, A., Horton, N. J., & Rundel, C.
+(2021).
+An educator's perspective of the tidyverse.
+arXiv preprint arXiv:2108.03510.
+[arxiv.org/abs/2108.03510](https://arxiv.org/abs/2108.03510)
+:::
+
+# Principles of the tidyverse
+
+## Tidyverse
+
+::: columns
+::: {.column width="80%"}
+-   Meta R package that loads eight core packages when invoked and also bundles numerous other packages upon installation
+-   Tidyverse packages share a design philosophy, common grammar, and data structures
+:::
+
+::: {.column width="20%"}
+![](images/tidyverse.png){fig-align="center"}
+:::
+:::
+
+![](images/data-science.png){fig-align="center"}
+
+## Setup
+
+**Data:** Thousands of loans made through the Lending Club, a peer-to-peer lending platform available in the **openintro** package, with a few modifications.
+
+```{r}
+library(tidyverse)
+library(openintro)
+
+loans <- loans_full_schema %>%
+  mutate(
+    homeownership = str_to_title(homeownership), 
+    bankruptcy = if_else(public_record_bankrupt >= 1, "Yes", "No")
+  ) %>%
+  filter(annual_income >= 10) %>%
+  select(
+    loan_amount, homeownership, bankruptcy,
+    application_type, annual_income, interest_rate
+  )
+```
+
+## Start with a data frame
+
+```{r}
+loans
+```
+
+## Tidy data
+
+1.  Each variable forms a column
+2.  Each observation forms a row
+3.  Each type of observational unit forms a table
+
+::: aside
+Wickham, H.
+. (2014).
+Tidy Data.
+*Journal of Statistical Software*, *59*(10), 1--23.
+[doi.org/10.18637/jss.v059.i10](https://doi.org/10.18637/jss.v059.i10).
+:::
+
+## Task: Calculate a summary statistic {.small}
+
+::: goal
+Calculate the mean loan amount.
+:::
+
+```{r}
+loans
+```
+
+. . .
+
+```{r}
+#| eval: false
+
+mean(loan_amount)
+```
+
+. . .
+
+```{r}
+#| error: true
+#| echo: false
+
+mean(loan_amount)
+```
+
+## Task: Calculate a summary statistic
+
+::: question
+How would you calculate the mean loan amount?
+:::
+
+::: share
+{{< fa brands discord >}} Add your answer to Discord.
+:::
+
+## Accessing a variable
+
+**Approach 1:** With `attach()`:
+
+```{r}
+attach(loans)
+mean(loan_amount)
+```
+
+. . .
+
+<br>
+
+*Not recommended.* What if you had another data frame you're working with concurrently called `car_loans` that also had a variable called `loan_amount` in it?
+
+```{r}
+#| echo: false
+detach(loans)
+```
+
+## Accessing a variable
+
+**Approach 2:** Using `$`:
+
+```{r}
+mean(loans$loan_amount)
+```
+
+. . .
+
+<br>
+
+**Approach 3:** Using `with()`:
+
+```{r}
+with(loans, mean(loan_amount))
+```
+
+## Accessing a variable
+
+**Approach 4:** The tidyverse approach:
+
+```{r}
+loans %>%
+  summarise(mean_loan_amount = mean(loan_amount))
+```
+
+. . .
+
+-   More verbose
+-   But also more expressive and extensible
+
+## The tidyverse approach
+
+::: incremental
+-   Tidyverse functions take a `data` argument that allows them to localize computations inside the specified data frame
+
+-   Does not muddy the concept of what is in the current environment: variables always accessed from within in a data frame without the use of an additional function (like `with()`) or quotation marks, never as a vector
+:::
+
+# Teaching with the tidyverse
+
+## Exercise 1: Grouped summary {.small}
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Module 2 - Tidyverse" > ex-2-1.qmd
+:::
+
+::: appex
+Based on the applicants' home ownership status, compute the number of applicants and the average loan amount.
+Display the results in descending order of number of applicants.
+:::
+
+::: share
+{{< fa user-group >}} Compare answers with your neighbor and choose an approach you would teach in an intro course. {{< fa brands discord >}} Then, type your chosen answer on Discord along with some narrative about how you would approach teaching it describing how you would teach it.
+:::
+
+```{r}
+#| echo: false
+
+loans %>%
+  group_by(homeownership) %>% 
+  summarize(
+    n_applicants = n(),
+    avg_loan_amount = mean(loan_amount)
+    ) %>%
+  arrange(desc(n_applicants)) %>%
+  mutate(
+    n_applicants = number(n_applicants, big.mark = ","),
+    avg_loan_amount = dollar(avg_loan_amount, accuracy = 1)
+    ) %>%
+  kable(
+    col.names = c("Homeownership", "Average loan amount", "Number of applicants"),
+    align = "lrr"
+    )
+```
+
+<countdown time="900"/>
+
+## Break it down I
+
+::: columns
+::: {.column width="40%"}
+Based on the applicants' home ownership status, computer the number of applicants and the average loan amount.
+Display the results in descending order of number of applicants.
+:::
+
+::: {.column width="60%"}
+```{r}
+loans
+```
+:::
+:::
+
+## Break it down II
+
+::: columns
+::: {.column width="40%"}
+[Based on the applicants' home ownership status]{style="font-weight:bold;background-color:#ccddeb;"}, compute the number of applicants and the average loan amount.
+Display the results in descending order of number of applicants.
+:::
+
+::: {.column width="60%"}
+::: {.fragment fragment-index="2"}
+::: in-out
+**\[input\]** data frame
+:::
+:::
+
+::: {.fragment fragment-index="3"}
+```{r}
+#| code-line-numbers: "2"
+
+loans %>%
+  group_by(homeownership)
+```
+:::
+
+::: {.fragment fragment-index="4"}
+::: {.in-out style="text-align: right;"}
+data frame **\[output\]**
+:::
+:::
+:::
+:::
+
+## Break it down III
+
+::: columns
+::: {.column width="40%"}
+Based on the applicants' home ownership status, [compute the number of applicants]{style="font-weight:bold;background-color:#ccddeb;"} and the average loan amount.
+Display the results in descending order of number of applicants.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "3-5"
+
+loans %>%
+  group_by(homeownership) %>% 
+  summarize(
+    n_applicants = n()
+    )
+```
+:::
+:::
+
+## Break it down IV
+
+::: columns
+::: {.column width="40%"}
+Based on the applicants' home ownership status, compute the number of applicants and [the average loan amount]{style="font-weight:bold;background-color:#ccddeb;"}.
+Display the results in descending order of number of applicants.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "5"
+
+loans %>%
+  group_by(homeownership) %>% 
+  summarize(
+    n_applicants = n(),
+    avg_loan_amount = mean(loan_amount)
+    )
+```
+:::
+:::
+
+## Break it down V
+
+::: columns
+::: {.column width="40%"}
+Based on the applicants' home ownership status, compute the average loan amount and the number of applicants.
+[Display the results in descending order of number of applicants.]{style="font-weight:bold;background-color:#ccddeb;"}
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "7"
+
+loans %>%
+  group_by(homeownership) %>% 
+  summarize(
+    n_applicants = n(),
+    avg_loan_amount = mean(loan_amount)
+    ) %>%
+  arrange(desc(n_applicants))
+```
+:::
+:::
+
+## Putting it back together
+
+::: in-out
+**\[input\]** data frame
+:::
+
+```{r}
+loans %>%
+  group_by(homeownership) %>% 
+  summarize(
+    n_applicants = n(),
+    avg_loan_amount = mean(loan_amount)
+    ) %>%
+  arrange(desc(n_applicants))
+```
+
+::: in-out
+**\[output\]** data frame
+:::
+
+## Grouped summary with `aggregate()`
+
+```{r}
+res1 <- aggregate(loan_amount ~ homeownership, 
+                  data = loans, FUN = length)
+res1
+
+names(res1)[2] <- "n_applicants"
+res1
+```
+
+## Grouped summary with `aggregate()`
+
+```{r}
+res2 <- aggregate(loan_amount ~ homeownership, 
+                  data = loans, FUN = mean)
+names(res2)[2] <- "avg_loan_amount"
+
+res2
+```
+
+. . .
+
+```{r}
+res <- merge(res1, res2)
+res[order(res$n_applicants, decreasing = TRUE), ]
+```
+
+## Grouped summary with `aggregate()`
+
+::: small
+```{r}
+#| eval: false
+
+res1 <- aggregate(loan_amount ~ homeownership, data = loans, FUN = length)
+names(res1)[2] <- "n_applicants"
+res2 <- aggregate(loan_amount ~ homeownership, data = loans, FUN = mean)
+names(res2)[2] <- "avg_loan_amount"
+res <- merge(res1, res2)
+res[order(res$n_applicants, decreasing = TRUE), ]
+```
+:::
+
+. . .
+
+-   **Good:** Inputs and outputs are data frames
+-   **Not so good:** Need to introduce
+    -   formula syntax
+
+    -   passing functions as arguments
+
+    -   merging datasets
+
+    -   square bracket notation for accessing rows
+
+## Grouped summary with `tapply()`
+
+```{r}
+x <- tapply(loans$loan_amount, loans$homeownership, mean)
+x
+y <- tapply(loans$loan_amount, loans$homeownership, length)
+y
+```
+
+## Grouped summary with `tapply()`
+
+```{r}
+z <- data.frame(
+  avg_loan_amount = x,
+  n_applicants = y
+  )
+z
+z[order(z$n_applicants), ]
+```
+
+## Grouped summary with `tapply()`
+
+```{r}
+#| eval: false
+
+x <- tapply(loans$loan_amount, loans$homeownership, length)
+y <- tapply(loans$loan_amount, loans$homeownership, mean)
+z <- data.frame(n_applicants = x, avg_loan_amount = y)
+z[order(z$n_applicants), ]
+```
+
+. . .
+
+<br>
+
+**Not so good:**
+
+-   passing functions as arguments
+-   distinguishing between the various `apply()` functions
+-   ending up with a new data structure (`array`)
+-   relegating a data column to rownames
+
+## Eercise 2: Data visualization
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Module 2 - Tidyverse" > ex-2-1.qmd
+:::
+
+::: appex
+Using the `loans` data, create side-by-side box plots that shows the relationship between loan amount and application type, faceted by homeownership.
+:::
+
+::: share
+{{< fa user-group >}} Compare answers with your neighbor and choose an approach you would teach in an intro course. {{< fa brands discord >}} Then, type your chosen answer and some narrative about how you would approach teaching it describing how you would teach it.
+:::
+
+::: {.callout-tip appearance="simple"}
+See next style for desired output.
+:::
+
+<countdown time="900"/>
+
+## Desired output
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-width: 12
+
+ggplot(loans, 
+         aes(x = application_type, y = loan_amount)) +
+  geom_boxplot() +
+  facet_wrap(~ homeownership) +
+  theme_minimal(base_size = 18) +
+  scale_y_continuous(labels = label_dollar()) +
+  labs(x = "Application type", y = "Loan amount")
+```
+
+## Break it down I
+
+::: columns
+::: {.column width="40%"}
+[Using the `loans` data]{style="font-weight:bold;background-color:#ccddeb;"}, create side-by-side box plots that shows the relationship between annual income and application type, faceted by homeownership.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "1"
+
+ggplot(loans)
+```
+:::
+:::
+
+## Break it down II
+
+::: columns
+::: {.column width="40%"}
+Using the `loans` data, create side-by-side box plots that shows the relationship between annual income and [application type]{style="font-weight:bold;background-color:#ccddeb;"}, faceted by homeownership.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "2"
+
+ggplot(loans, 
+       aes(x = application_type))
+```
+:::
+:::
+
+## Break it down III
+
+::: columns
+::: {.column width="40%"}
+Using the `loans` data, create side-by-side box plots that shows the relationship between [annual income]{style="font-weight:bold;background-color:#ccddeb;"} and application type, faceted by homeownership.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "3"
+
+ggplot(loans, 
+       aes(x = application_type,
+           y = loan_amount))
+```
+:::
+:::
+
+## Break it down IV
+
+::: columns
+::: {.column width="40%"}
+Using the `loans` data, create [side-by-side box plots]{style="font-weight:bold;background-color:#ccddeb;"} that shows the relationship between annual income and application type, faceted by homeownership.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "4"
+
+ggplot(loans, 
+       aes(x = application_type,
+           y = loan_amount)) +
+  geom_boxplot()
+```
+:::
+:::
+
+## Break it down IV
+
+::: columns
+::: {.column width="40%"}
+Using the `loans` data, create side-by-side box plots that shows the relationship between annual income and application type, [faceted by homeownership]{style="font-weight:bold;background-color:#ccddeb;"}.
+:::
+
+::: {.column width="60%"}
+```{r}
+#| code-line-numbers: "5"
+
+ggplot(loans, 
+       aes(x = application_type,
+           y = loan_amount)) +
+  geom_boxplot() +
+  facet_wrap(~ homeownership)
+```
+:::
+:::
+
+## Plotting with `ggplot()`
+
+```{r}
+#| eval: false
+
+ggplot(loans, 
+       aes(x = application_type, y = loan_amount)) +
+  geom_boxplot() +
+  facet_wrap(~ homeownership)
+```
+
+. . .
+
+-   Each layer produces a valid plot
+-   Faceting by a third variable takes only one new function
+
+## Plotting with `boxplot()`
+
+```{r}
+levels <- sort(unique(loans$homeownership))
+levels
+
+loans1 <- loans[loans$homeownership == levels[1],]
+loans2 <- loans[loans$homeownership == levels[2],]
+loans3 <- loans[loans$homeownership == levels[3],]
+```
+
+## Plotting with `boxplot()`
+
+```{r}
+par(mfrow = c(1, 3))
+
+boxplot(loan_amount ~ application_type, 
+        data = loans1, main = levels[1])
+boxplot(loan_amount ~ application_type, 
+        data = loans2, main = levels[2])
+boxplot(loan_amount ~ application_type, 
+        data = loans3, main = levels[3])
+```
+
+## Visualizing a different relationship
+
+::: goal
+Visualize the relationship between interest rate and annual income, conditioned on whether the applicant had a bankruptcy.
+:::
+
+```{r}
+#| echo: false
+#| fig-align: center
+#| fig-width: 12
+
+ggplot(loans, 
+       aes(y = interest_rate, x = annual_income, 
+           color = bankruptcy)) +
+  geom_point(alpha = 0.1) + 
+  geom_smooth(method = "lm", size = 2, se = FALSE) + 
+  scale_x_log10(labels = scales::label_dollar()) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1)) +
+  scale_color_OkabeIto() +
+  labs(x = "Annual Income", y = "Interest Rate", 
+       color = "Previous\nBankruptcy") +
+  theme_minimal(base_size = 18)
+```
+
+## Plotting with `ggplot()`
+
+```{r}
+#| fig-align: center
+#| fig-width: 12
+#| code-line-numbers: "|4|5|6"
+
+ggplot(loans, 
+       aes(y = interest_rate, x = annual_income, 
+           color = bankruptcy)) +
+  geom_point(alpha = 0.1) + 
+  geom_smooth(method = "lm", size = 2, se = FALSE) + 
+  scale_x_log10()
+```
+
+## Further customizing `ggplot()` {.small}
+
+```{r}
+#| fig-align: center
+#| fig-width: 12
+#| code-line-numbers: "|6|7|8|9,10|11"
+
+ggplot(loans, 
+       aes(y = interest_rate, x = annual_income, 
+           color = bankruptcy)) +
+  geom_point(alpha = 0.1) + 
+  geom_smooth(method = "lm", size = 2, se = FALSE) + 
+  scale_x_log10(labels = scales::label_dollar()) +
+  scale_y_continuous(labels = scales::label_percent(scale = 1)) +
+  scale_color_OkabeIto() +
+  labs(x = "Annual Income", y = "Interest Rate", 
+       color = "Previous\nBankruptcy") +
+  theme_minimal(base_size = 18)
+```
+
+## Plotting with `plot()`
+
+```{r}
+#| label: base-r-viz-extend
+#| fig-show: hide
+
+# From the OkabeIto palette
+cols = c(No = "#e6a003", Yes = "#57b4e9")
+
+plot(
+  loans$annual_income,
+  loans$interest_rate,
+  pch = 16,
+  col = adjustcolor(cols[loans$bankruptcy], alpha.f = 0.1),
+  log = "x",
+  xlab = "Annual Income ($)",
+  ylab = "Interest Rate (%)",
+  xaxp = c(1000, 10000000, 1)
+)
+
+lm_b_no = lm(
+  interest_rate ~ log10(annual_income), 
+  data = loans[loans$bankruptcy == "No",]
+)
+lm_b_yes = lm(
+  interest_rate ~ log10(annual_income), 
+  data = loans[loans$bankruptcy == "Yes",]
+)
+
+abline(lm_b_no, col = cols["No"], lwd = 3)
+abline(lm_b_yes, col = cols["Yes"], lwd = 3)
+
+legend(
+  "topright", 
+  legend = c("Yes", "No"), 
+  title = "Previous\nBankruptcy", 
+  col = cols[c("Yes", "No")], 
+  pch = 16, lwd = 1
+)
+```
+
+## Plotting with `plot()`
+
+```{r}
+#| ref.label: base-r-viz-extend
+#| echo: false
+```
+
+## Beyond wrangling, summaries, visualizations
+
+Modeling and inference with **tidymodels**:
+
+-   A unified interface to modeling functions available in a large variety of packages
+
+-   Sticking to the data frame in / data frame out paradigm
+
+-   Guardrails for methodology
+
+::: {.callout-tip appearance="simple"}
+Next module is teaching with tidymodels!
+:::
+
+# Pedagogical strengths of the tidyverse
+
+## Consistency
+
+-   No matter which approach or tool you use, you should strive to be consistent in the classroom whenever possible
+
+-   Tidyverse offers consistency, something we believe to be of the utmost importance, allowing students to move knowledge about function arguments to their long-term memory
+
+## Teaching consistently
+
+-   Challenge: Google and Stack Overflow can be less useful -- demo problem solving
+
+-   Counter-proposition: teach *all* (or multiple) syntaxes at once -- trying to teach two (or more!) syntaxes at once will slow the pace of the course, introduce unnecessary syntactic confusion, and make it harder for students to complete their work.
+
+-   "Disciplined in what we teach, liberal in what we accept"
+
+::: aside
+Postel, J.
+(1980).
+DoD standard internet protocol.
+ACM SIGCOMM Computer Communication Review, 10(4), 12-51.
+[datatracker.ietf.org/doc/html/rfc760](https://datatracker.ietf.org/doc/html/rfc760)
+:::
+
+## Mixability
+
+-   Mix with base R code or code from other packages
+
+-   In fact, you can't not mix with base R code!
+
+## Scalability
+
+Adding a new variable to a visualization or a new summary statistic doesn't require introducing a numerous functions, interfaces, and data structures
+
+## User-centered design
+
+-   Interfaces designed with user experience (and learning) in mind
+
+-   Continuous feedback collection and iterative improvements based on user experiences improve functions' and packages' usability (and learnability)
+
+## Readability
+
+Interfaces that are designed to produce readable code
+
+## Community
+
+-   The encouraging and inclusive tidyverse community is one of the benefits of the paradigm
+
+-   Each package comes with a website, each of these websites are similarly laid out, and results of example code are displayed, and extensive vignettes describe how to use various functions from the package together
+
+## Shared syntax
+
+Get SQL for free with **dplyr** verbs!
+
+# Final thoughts
+
+## Building a curriculum
+
+-   Start with `library(tidyverse)`
+
+-   Teach by learning goals, not packages
+
+## Keeping up with the tidyverse
+
+-   Blog posts highlight updates, along with the reasoning behind them and worked examples
+
+-   [Lifecycle stages](https://lifecycle.r-lib.org/articles/stages.html) and badges
+
+    ![](images/lifecycle.png)
+
+## Coda {.smaller}
+
+::: columns
+::: {.column width="60%"}
+> We are all converts to the tidyverse and have made a conscious choice to use it in our research and our teaching.
+> We each learned R without the tidyverse and have all spent quite a few years teaching without it at a variety of levels from undergraduate introductory statistics courses to graduate statistical computing courses.
+> This paper is a synthesis of the reasons supporting our tidyverse choice, along with benefits and challenges associated with teaching statistics with the tidyverse.
+:::
+
+::: {.column width="40%"}
+![](images/paper-tise.png){fig-alt="Screenshot of the title and authors page of the paper linked below."}
+:::
+:::
+
+::: aside
+Çetinkaya-Rundel, M., Hardin, J., Baumer, B. S., McNamara, A., Horton, N. J., & Rundel, C.
+(2021).
+An educator's perspective of the tidyverse.
+arXiv preprint arXiv:2108.03510.
+[arxiv.org/abs/2108.03510](https://arxiv.org/abs/2108.03510)
+:::
+
+## Discussion
+
+::: question
+Do you teach with the tidyverse?
+
+-   If yes, what are some highlights of your teaching experience and what are some challenges?
+-   If no, what is your approach and, if you've considered the tidyverse but decided against it, why?
+
+Any other discussion points of interest?
+:::
+
+::: share
+{{< fa user-group >}} Discuss with your partner for a few minutes first, before sharing with the big group.
+:::
+
+<countdown time="240"/>
+
+## Time permitting
+
+Let's take a look at the source code for these slides for some of the highlighting tricks!

@@ -97,20 +97,20 @@ If you choose to use your local R and RStudio install for the workshop, you shou
     #| eval: false
 
     install.packages("devtools")
-    install.packages("DT")
-    install.packages("gapminder")
-    install.packages("ghclass")
-    install.packages("learnr")
-    install.packages("lubridate")
-    install.packages("magick")
-    install.packages("nycflights13")
-    install.packages("openintro")
-    install.packages("rvest")
-    install.packages("shiny")
-    install.packages("sortable")
+    #install.packages("DT")
+    #install.packages("gapminder")
+    #install.packages("ghclass")
+    #install.packages("learnr")
+    #install.packages("lubridate")
+    #install.packages("magick")
+    #install.packages("nycflights13")
+    #install.packages("openintro")
+    #install.packages("rvest")
+    #install.packages("shiny")
+    #install.packages("sortable")
     install.packages("tidyverse")
     install.packages("tidymodels")
-    install.packages("unvotes")
+    #install.packages("unvotes")
     ```
 
 -   From GitHub:
@@ -120,6 +120,7 @@ If you choose to use your local R and RStudio install for the workshop, you shou
 
     devtools::install_github("gadenbuie/countdown")
     devtools::install_github("rstudio/parsons")
+    devtools::install_github("rundel/learnrhash")
     ```
 
 ## RStudio Cloud
