@@ -224,7 +224,7 @@ loans |>
 
 # Teaching with the tidyverse
 
-## Exercise 1: Grouped summary {.small}
+## Your turn: Grouped summary {.small}
 
 ::: cloud
 {{< fa cloud >}} RStudio Cloud > "Module 2 - Tidyverse" > ex-2-1.qmd
@@ -489,7 +489,7 @@ z[order(z$n_applicants), ]
 -   ending up with a new data structure (`array`)
 -   relegating a data column to rownames
 
-## Exercise 2: Data visualization
+## Your turn: Data visualization
 
 ::: cloud
 {{< fa cloud >}} RStudio Cloud > "Module 2 - Tidyverse" > ex-2-2.qmd
