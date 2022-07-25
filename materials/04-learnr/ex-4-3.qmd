@@ -1,5 +1,5 @@
 ---
-title: "Ex 4.3: Automated feedback"
+title: "Ex 4.2: Automated feedback"
 subtitle: "teach_ds :: Interactivity and immediate feedback with learnr"
 editor: visual
 ---

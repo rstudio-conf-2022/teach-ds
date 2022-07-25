@@ -114,7 +114,7 @@ Follow along options:
 ## Exercise 1: Writing questions {.small}
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.qmd
+{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.rmd
 :::
 
 ::: appex
@@ -155,7 +155,7 @@ remotes::install_github("rstudio/gradethis")
 ## Exercise 2: Automated feedback {.small}
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.qmd
+{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.rmd
 :::
 
 ::: appex

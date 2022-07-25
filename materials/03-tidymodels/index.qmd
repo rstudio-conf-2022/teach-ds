@@ -115,6 +115,7 @@ glimpse(loans_full_schema)
 
 ```{r}
 #| label: interest-rate-hist
+#| fig-align: center
 
 ggplot(loans_full_schema, aes(x = interest_rate)) +
   geom_histogram(binwidth = 1) +
@@ -127,6 +128,8 @@ ggplot(loans_full_schema, aes(x = interest_rate)) +
 ## Exploratory data analysis
 
 ```{r}
+#| fig-align: center
+#| 
 ggplot(data = loans_full_schema, aes(x = debt_to_income, y = interest_rate )) +
   geom_point() + 
   labs(x = "Debt to income ratio", y = "Interest rate", 
@@ -136,6 +139,8 @@ ggplot(data = loans_full_schema, aes(x = debt_to_income, y = interest_rate )) +
 ## Exploratory data analysis
 
 ```{r}
+#| fig-align: center
+#| 
 ggplot(data = loans_full_schema, aes(x = interest_rate, fill = factor(term))) +
   geom_density(alpha= 0.5) + 
   labs(x = "Interest rate", y = "Density", 
@@ -348,7 +353,7 @@ lm(interest_rate ~ term_fct + debt_to_income_cent + delinq_2y_cat,
   tidy()
 ```
 
-## Discussion 
+## Discussion
 
 ::: question
 **What is a disadvantage to this approach?**
