@@ -17,19 +17,20 @@ execute:
   echo: true
 ---
 
-# In progress
-
-::: callout-warning
-These slides are currently being designed and built.
-:::
-
 ## Session outline
 
--   Add agenda
+-   Teaching modern modeling
+-   Introducing tidymodels
+-   Teaching with tidymodels
+    -   Feature engineering
+    -   Prediction + model evaluation
+    -   Train / test data
+-   Putting it all together
 
 ```{r}
 #| message: false
 #| warning: false
+#| echo: false
 
 # load packages for slides
 library(tidyverse)
@@ -96,9 +97,7 @@ library(tidymodels)
 
 ## Data: Loans from Lending Club
 
-The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the **openintro** package and featured in the OpenIntro textbooks .
-It contains information about 50,000 loans made through the Lending Club platform.
-The variables we'll use in this analysis are
+The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the [**openintro** package](https://cran.r-project.org/web/packages/openintro/index.html) and featured in the [OpenIntro textbooks](https://openintro-ims.netlify.app/) . It contains information about 50,000 loans made through the Lending Club platform. The variables we'll use in this presentation are
 
 -   `interest_rate`: Interest rate of the loan the applicant received.
 -   `debt_to_income`: Debt-to-income ratio.
@@ -110,6 +109,38 @@ The variables we'll use in this analysis are
 ```{r}
 library(openintro)
 glimpse(loans_full_schema)
+```
+
+## Exploratory data analysis
+
+```{r}
+#| label: interest-rate-hist
+
+ggplot(loans_full_schema, aes(x = interest_rate)) +
+  geom_histogram(binwidth = 1) +
+  labs(
+    x = "Interest rate", y = "Count",
+    title = "Distribution of loan interest rates"
+  )
+```
+
+## Exploratory data analysis
+
+```{r}
+ggplot(data = loans_full_schema, aes(x = debt_to_income, y = interest_rate )) +
+  geom_point() + 
+  labs(x = "Debt to income ratio", y = "Interest rate", 
+       title = "Interest rate by debt to income ratio")
+```
+
+## Exploratory data analysis
+
+```{r}
+ggplot(data = loans_full_schema, aes(x = interest_rate, fill = factor(term))) +
+  geom_density(alpha= 0.5) + 
+  labs(x = "Interest rate", y = "Density", 
+       fill = "Term (in months)",
+       title = "Interest rate by debt by term length")
 ```
 
 ## Regression syntax
@@ -207,7 +238,7 @@ tidy_lm_aug
 
 There are advantages for more advanced modeling:
 
--   Consistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.
+-   Consistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.)
 -   Streamline modeling workflow
     -   Split data into train and test sets
     -   Transform and create new variables
@@ -224,6 +255,10 @@ linear_reg() |>
   fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>
   tidy()
 ```
+
+<br>
+
+. . .
 
 Let's break down the syntax.
 
@@ -296,7 +331,7 @@ logistic_reg() |>
     -   Split `delinq_2y` into the categories 0, 1, 2, 3+.
 :::
 
-## Feature engineering using dplyr
+## Feature engineering using dplyr {.small}
 
 ```{r}
 # Feature engineering
@@ -311,6 +346,17 @@ loans_full_schema <- loans_full_schema |>
 lm(interest_rate ~ term_fct + debt_to_income_cent + delinq_2y_cat,
    data = loans_full_schema) |>
   tidy()
+```
+
+## Discussion 
+
+::: question
+**What is a disadvantage to this approach?**
+:::
+
+```{r}
+#| echo: false
+countdown(minutes = 2, font_size = "1.5em")
 ```
 
 ## Feature engineering with recipes
@@ -393,14 +439,19 @@ interest_rec |>
 :::
 
 ::: appex
-Write the recipe for the model in the exercise file.  Call the recipe loans_rec. Use the appropriate step_* functions to complete the feature engineering steps shown in the dplyr pipeline. 
+Write the recipe for the model in the exercise file. Call the recipe loans_rec. Use the appropriate step\_\* functions to complete the feature engineering steps shown in the dplyr pipeline.
 
-You can find the list of step_* functions on the [recipes reference page](https://recipes.tidymodels.org/reference/index.html#step-functions-imputation).
+You can find the list of step\_\* functions on the [recipes reference page](https://recipes.tidymodels.org/reference/index.html#step-functions-imputation).
 :::
 
 ::: share
-{{< fa user-group >}} Compare your answer with your neighbor along with what you found easy/straightforward and what you found challenging about writing the recipe. {{< fa brands discord >}} Then, type one recipe and one takeaway from your discussion. 
+{{< fa user-group >}} Compare your answer with your neighbor along with what you found easy/straightforward and what you found challenging about writing the recipe. {{< fa brands discord >}} Then, type one recipe and one takeaway from your discussion.
 :::
+
+```{r}
+#| echo: false
+countdown(minutes = 15, font_size = "1.5em")
+```
 
 ## Fit the model using `workflow()`
 
@@ -473,7 +524,6 @@ $$
 rmse(interest_pred, truth = interest_rate, estimate = .pred)
 ```
 
-
 ## Exercise 2: Fit, predict, evaluate {.small}
 
 ::: cloud
@@ -485,8 +535,13 @@ Build a workflow and fit the model specified in the exercise. Then calculate pre
 :::
 
 ::: share
-{{< fa user-group >}} Compare your answer with your neighbor. {{< fa brands discord >}} Type any questions that come up during the exercise and discussion.  
+{{< fa user-group >}} Compare your answer with your neighbor. {{< fa brands discord >}} Type any questions that come up during the exercise and discussion.
 :::
+
+```{r}
+#| echo: false
+countdown(minutes = 10, font_size = "1.5em")
+```
 
 # What is a limitation to the model evaluation we've done thus far?
 
@@ -503,12 +558,16 @@ set.seed(0725) #to get same split each run
 loans_split <- initial_split(loans_full_schema, prop = 0.8) #80% training
 ```
 
+. . .
+
 **Save the training data.**
 
 ```{r}
 loans_train <- training(loans_split)
 dim(loans_train)
 ```
+
+. . .
 
 **Save test data.**
 
@@ -536,6 +595,8 @@ tidy(interest_train_fit)
 interest_train_pred <- predict(interest_train_fit, loans_train) |> 
   bind_cols(loans_train |> select(interest_rate))
 ```
+
+. . .
 
 **Evaluate model**
 
@@ -566,7 +627,6 @@ rsq(interest_test_pred, truth = interest_rate, estimate = .pred)
 rmse(interest_test_pred, truth = interest_rate, estimate = .pred)
 ```
 
-<<<<<<< HEAD
 ## Exercise 3: Train / test data (time permitting) {.small}
 
 ::: cloud
@@ -574,45 +634,43 @@ rmse(interest_test_pred, truth = interest_rate, estimate = .pred)
 :::
 
 ::: appex
-Complete the code below to split the data into training (80%) and testing (20%) sets. Fit the model to the training set, then evaluate the model on the training and test sets. 
+Complete the code below to split the data into training (80%) and testing (20%) sets. Fit the model to the training set, then evaluate the model on the training and test sets.
 :::
 
 ::: share
-{{< fa user-group >}} Discuss the model performance with your neighbor. {{< fa brands discord >}} Then, type your group's assessment of the model performance.
+{{< fa user-group >}} Discuss the model performance with your neighbor. {{< fa brands discord >}} Then, type your group’s assessment of the model performance.
+:::
+
+```{r}
+#| echo: false
+countdown(minutes = 10, font_size = "1.5em")
+```
+
+## Putting it all together
+
+Let's take a look at a full analysis.
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Model 3 - Tidymodels" > ex-3-full-analysis.qmd
 :::
 
 ## Discussion
 
-:: question
- Discuss the following with your neighbor. 
+::: question
+Discuss the following with your neighbor.
 
 -   What is something from this module you can implement in your data science course?
 
--  Do you anticipate any challenges / is there anything that makes you hesitant about teaching modeling using tidymodels?
+-   Do you anticipate any challenges / is there anything that makes you hesitant about teaching modeling using tidymodels?
 
 Any other discussion points of interest?
-
 :::
 
 ::: share
 {{< fa user-group >}} Discuss with your partner for a few minutes first, before sharing with the big group.
 :::
 
-
-
-
-=======
-## Your turn!
-
-## Discussion
-
-::: question
--   What is something from this module you can implement in your data science course?
-
--   What is one potential challenge of implementing this content in your course?
-:::
-
 ```{r}
-countdown(minutes = 7, font_size = "1.5em")
+#| echo: false
+countdown(minutes = 4, font_size = "1.5em")
 ```
->>>>>>> cebb1d2da6842e5230eff8369cb44ed50bcfb5b3

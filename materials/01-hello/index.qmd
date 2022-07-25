@@ -128,11 +128,9 @@ If you have any difficulty with your connection please let us (myself and or the
 
 ## Code of Conduct {.small}
 
-All details are available at https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/.
-Please review them carefully.
+All details are available at https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/. Please review them carefully.
 
-You can report Code of Conduct violations in person (any rstudio::conf staff ), by email ([conf\@rstudio.com](mailto:conf@rstudio.com)), or by phone (844-448-1212).
-Please see the policy linked above for contact information.
+You can report Code of Conduct violations in person (any rstudio::conf staff ), by email ([conf\@rstudio.com](mailto:conf@rstudio.com)), or by phone (844-448-1212). Please see the policy linked above for contact information.
 
 Covid19 specific policies:
 
@@ -144,12 +142,9 @@ Covid19 specific policies:
 
 -   There are gender neutral bathrooms by the National Harbor rooms.
 
--   The meditation room is located at National Harbor 9.
-    Open 8am - 5pm, Monday - Thursday.
-    The hotel also has a dedicated room behind the reception.
+-   The meditation room is located at National Harbor 9. Open 8am - 5pm, Monday - Thursday. The hotel also has a dedicated room behind the reception.
 
--   The lactation room is located at Potomac Dressing Room.
-    Open 8am - 5pm, Monday - Thursday.
+-   The lactation room is located at Potomac Dressing Room. Open 8am - 5pm, Monday - Thursday.
 
 -   Participants who do not wish to be photographed have red lanyards, please note everyone's lanyard colors before taking a photo and respect their choices.
 
@@ -220,9 +215,7 @@ If you'd like to use your own system, please see [https://rstudio-conf-2022.gith
 
 ## Baking a cake {.center}
 
-Imagine you're new to baking, and you're in a baking class.
-I'm going to present two options for starting the class.
-Which one gives you **better sense** of the final product?
+Imagine you're new to baking, and you're in a baking class. I'm going to present two options for starting the class. Which one gives you **better sense** of the final product?
 
 ## Baking a cake
 
@@ -259,9 +252,7 @@ Set goals for educational curriculum before choosing instructional methods + for
 3.  Plan learning experiences and instruction
 
 ::: aside
-Wiggins, Grant P., Grant Wiggins, and Jay McTighe. 
-Understanding by design.
-Ascd, 2005.
+Wiggins, Grant P., Grant Wiggins, and Jay McTighe.  Understanding by design. Ascd, 2005.
 :::
 
 ## Designing backwards
@@ -436,8 +427,7 @@ countdown(minutes = 5, font_size = "1.5em")
 :::
 
 ::: appex
-Open the Quarto document called `ex-1-1.qmd`, render the document, view the result.
-Then, change "Turkey" to another country, and render again.
+Open the Quarto document called `ex-1-1.qmd`, render the document, view the result. Then, change "Turkey" to another country, and render again.
 :::
 
 ::: share
@@ -681,8 +671,7 @@ un_votes |>
 ## Discussion
 
 ::: question
-The following code is used to create the multivariate visualisation we saw earlier.
-How much of the code would you show/hide when just starting teaching ggplot2?
+The following code is used to create the multivariate visualisation we saw earlier. How much of the code would you show/hide when just starting teaching ggplot2?
 :::
 
 ```{r}
@@ -1137,8 +1126,7 @@ Doing data science:
 :::
 
 ::: appex
-[The Bechdel test](https://en.wikipedia.org/wiki/Bechdel_test) asks whether a work of fiction features at least two women who talk to each other about something other than a man, and there must be two women named characters.
-Review and render the documnt, then fill in the blanks.
+[The Bechdel test](https://en.wikipedia.org/wiki/Bechdel_test) asks whether a work of fiction features at least two women who talk to each other about something other than a man, and there must be two women named characters. Review and render the documnt, then fill in the blanks.
 :::
 
 ```{r}

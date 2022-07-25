@@ -1,0 +1,217 @@
+---
+title: "Full analysis"
+subtitle: "teach_ds :: Teaching modern modeling with tidymodels"
+editor: visual
+execute: 
+  echo: true
+---
+
+```{r}
+#| label: load-packages
+#| message: false
+
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+```
+
+## Data
+
+The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the [**openintro** package](https://cran.r-project.org/web/packages/openintro/index.html) and featured in the [OpenIntro textbooks](https://openintro-ims.netlify.app/). It contains information about 50,000 loans made through the Lending Club platform.
+
+The data has a bit of peculiarity about it, specifically the `application_type` variable is a factor variable with an empty level.
+
+```{r}
+levels(loans_full_schema$application_type)
+```
+
+Let's clean up this variable using the `droplevels()` function first. And let's apply that to the whole data set, in case there are other variables with similar issues.
+
+```{r}
+loans_full_schema <- droplevels(loans_full_schema)
+```
+
+The variables we'll use in this analysis are:
+
+-   `interest_rate`: Interest rate of the loan the applicant received.
+-   `debt_to_income`: Debt-to-income ratio.
+-   `public_record_bankrupt`: Number of bankruptcies listed in the public record for this applicant.
+-   `application_type`: The type of application: either `individual` or `joint`.
+
+## Analysis objective
+
+The goal is to fit a model to predict the interest rate (`interest_rate`) based on the debt to income ratio (`debt_to_income`), type of application (`application_type`), and whether there are any bankruptcies listed in the public record for the individual (`bankrupt`). The model should allow the effect of debt to income ratio to differ based on application type.
+
+$$
+\begin{align}\widehat{interest\_rate} = b_0 &+ b_1 \times debt\_to\_income \\ &+ b_2 \times application\_type \\ &+ b_3 \times bankrupt \\ &+ b_4 \times debt\_to\_income:application\_type\end{align}
+$$
+
+## Train / test split
+
+Split the data into a training (80%) and test set (20%). Don't forget to set a seed!
+
+```{r}
+#| label: split-data
+
+set.seed(0725)
+
+loans_split <- initial_split(loans_full_schema, prop = 0.8)
+
+loans_train <- training(loans_split)
+loans_test <- testing(loans_split)
+```
+
+The data exploration, recipe specification, and model fitting will be done using the **training data**.
+
+## Exploratory data analysis
+
+Take a quick look at variables relevant for the model.
+
+```{r}
+#| label: glimpse 
+
+loans_train |>
+  select(interest_rate, debt_to_income, public_record_bankrupt, application_type) |>
+  glimpse()
+```
+
+Create univariate, bivariate, and multivariate plots, and make sure to think about which plots are the most appropriate and effective given the data types.
+
+**Interest rate**
+
+```{r}
+#| label: interest-rate-hist
+ggplot(loans_train, aes(x = interest_rate)) +
+  geom_histogram(binwidth = 1) +
+  labs(
+    x = "Interest rate", y = "Count",
+    title = "Distribution of loan interest rates"
+  )
+```
+
+**Interest rate by bankruptcy**
+
+```{r}
+#| label: bivariate-plot
+
+loans_train |>
+  mutate(bankrupt = if_else(public_record_bankrupt == 0, "no", "yes")) |>
+  ggplot(aes(x = interest_rate, fill = bankrupt)) +
+  geom_density(alpha = 0.5) +
+  labs(
+    x = "Interest rate", y = "Density",
+    fill = "Past bankrupcy status", 
+    title = "Interest rate by past bankruptcy status"
+  )
+```
+
+**Interest rate vs. debt to income ratio by application type**
+
+```{r}
+#| label: multivariate-plot
+
+ggplot(loans_train, 
+       aes(x = debt_to_income, y = interest_rate,
+           color = application_type, shape = application_type)) +
+  geom_point() +
+  labs(
+    x = "Debt-to-income ratio", y = "Interest rate",
+    color = "Application type", shape = "Application type",
+    title = "Interest rate vs. Debt-to-income by application type"
+  )
+```
+
+## Model specification
+
+```{r}
+#| label: model-spec
+
+loans_spec <- linear_reg() |>
+  set_engine("lm")
+```
+
+## Recipe
+
+```{r}
+#| label: recipe
+
+loans_rec <- recipe(interest_rate ~ debt_to_income + application_type + 
+                      public_record_bankrupt, data = loans_train) |>
+  step_impute_mean(debt_to_income) |>
+  step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, 
+                                           "no", "yes"))) |>
+  step_rm(public_record_bankrupt) |>
+  step_dummy(all_nominal_predictors()) |>
+  step_interact(terms = ~ starts_with("application_type"):debt_to_income)
+```
+
+## Build workflow
+
+```{r}
+#| label: build-workflow
+
+loans_workflow <- workflow() |>
+  add_model(loans_spec) |>
+  add_recipe(loans_rec)
+
+loans_workflow
+```
+
+## Fit model on training data
+
+```{r}
+#| label: fit-model 
+
+loans_train_fit <- loans_workflow |>
+  fit(data = loans_train)
+
+tidy(loans_train_fit)
+```
+
+## Evaluate model
+
+### Training data
+
+```{r}
+#| label: evaluate-train
+
+# Predictions 
+loans_train_pred <- predict(loans_train_fit, loans_train) |>
+  bind_cols(loans_train |> select(interest_rate))
+
+## R-sq
+rsq(loans_train_pred, truth = interest_rate, estimate = .pred)
+
+## RMSE
+rmse(loans_train_pred, truth = interest_rate, estimate = .pred)
+```
+
+### Testing data
+
+**Note: This is the first time we use the testing data!**
+
+```{r}
+#| label: evaluate-test
+
+# Predictions 
+loans_test_pred <- predict(loans_train_fit, loans_test) |>
+  bind_cols(loans_test |> select(interest_rate))
+
+## R-sq
+rsq(loans_test_pred, truth = interest_rate, estimate = .pred)
+
+## RMSE
+rmse(loans_test_pred, truth = interest_rate, estimate = .pred)
+```
+
+## Discussion
+
+This document has focused on the code students would write to complete the analysis. Below are example writing prompts to help students think critically about the analysis process and interpret the results.
+
+### Exploratory data analysis
+
+Using your plots above (along with any other metrics you compute), describe your initial findings about the training data. Discuss why we perform EDA only on the training data and not on the entire data set.
+
+### Model fit and evaluation
+
+Although our primary aim is prediction and not inference, it may be of interest to view the model fit nonetheless to make sure nothing looks out of the ordinary. Create a neatly organized table of the model output, and describe your observations, such as which parameters are significant. Make sure to interpret some coefficients appropriately.

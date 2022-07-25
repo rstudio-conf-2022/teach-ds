@@ -2,6 +2,8 @@
 title: "Ex 3.3: Train / test data"
 subtitle: "teach_ds :: Teaching modern modeling with tidymodels"
 editor: visual
+execute: 
+  echo: true
 ---
 
 ```{r}
@@ -15,23 +17,19 @@ library(openintro)
 
 ## Introduction
 
-Some of the code below has been pre-populated.
-In these cases, there is a code chunk option set as `#| eval: false`.
-Make sure to remove this option prior to running the relevant code chunk to avoid any errors when rendering the document.
+Some of the code below has been pre-populated. In these cases, there is a code chunk option set as `#| eval: false`. Make sure to remove this option prior to running the relevant code chunk to avoid any errors when rendering the document.
 
 ## Model
 
-The goal is to fit a model to predict the interest rate (`interest_rate`) based on the debt to income ratio (`debt_to_income`), type of application (`application_type`), and whether there are any bankruptcies listed in the public record for the individual (`bankrupt`).
-The model should allow the effect of debt to income ratio to differ based on application type.
+The goal is to fit a model to predict the interest rate (`interest_rate`) based on the debt to income ratio (`debt_to_income`), type of application (`application_type`), and whether there are any bankruptcies listed in the public record for the individual (`bankrupt`). The model should allow the effect of debt to income ratio to differ based on application type.
 
 $$
 \begin{align}\widehat{interest\_rate} = b_0 &+ b_1 \times debt\_to\_income \\ &+ b_2 \times application\_type \\ &+ b_3 \times bankrupt \\ &+ b_4 \times debt\_to\_income:application\_type\end{align}
 $$
 
-## Recipe
+## Recipe + Workflow
 
-This exercise builds on Exercises 1 and 2.
-To get you started, the recipe created in Exercise 1 and workflow from Exercise 2 are below.
+This exercise builds on Exercises 1 and 2. To get you started, the recipe created in Exercise 1 and workflow from Exercise 2 are below.
 
 ```{r}
 #| label: recipe
@@ -44,6 +42,17 @@ loans_rec <- recipe(interest_rate ~ debt_to_income + application_type +
   step_rm(public_record_bankrupt) |>
   step_dummy(all_nominal_predictors()) |>
   step_interact(terms = ~ starts_with("application_type"):debt_to_income)
+```
+
+```{r}
+#| label: workflow 
+
+loans_spec <- linear_reg() |>
+  set_engine("lm")
+
+loans_workflow <- workflow() |>
+  add_model(loans_spec) |>
+  add_recipe(loans_rec)
 ```
 
 ## Train / test data
@@ -68,7 +77,7 @@ Fit the model to the training data.
 #| label: fit-model-train
 #| eval: false 
 
-loand_train_fit <- ______
+loans_train_fit <- ______
 ```
 
 ## Evaluate model
