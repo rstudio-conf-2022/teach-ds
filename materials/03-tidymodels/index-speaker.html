@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.363">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Maria Tackett">
   <title>Designing the Data Science Classroom - Teaching modern modeling with tidymodels</title>
@@ -47,48 +53,42 @@
       }
     pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     div.sourceCode
-      {   }
+      { color: #003b4f; background-color: #f1f3f5; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
     code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-  <script src="../../site_libs/clipboard/clipboard.min.js"></script>
-  <script src="../../site_libs/quarto-html/tabby.min.js"></script>
-  <script src="../../site_libs/quarto-html/popper.min.js"></script>
-  <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-  <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
-  <link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -380,13 +380,14 @@
     }
   </style>
 <meta name="twitter:title" content="Designing the Data Science Classroom - Teaching modern modeling with tidymodels">
+<meta name="twitter:description" content="rstudio::conf(2022)  Designing the data science classroom">
 <meta name="twitter:image" content="https://rstudio-conf-2022.github.io/teach-ds//images/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:image-height" content="599">
 <meta name="twitter:image-width" content="1200">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -413,7 +414,7 @@
 </div>
 </div>
 </section>
-<section id="session-outline" class="slide level2">
+<section id="session-outline" class="slide level2 center">
 <h2>Session outline</h2>
 <ul>
 <li>Add agenda</li>
@@ -427,7 +428,7 @@
 <h1>Teaching modern modeling</h1>
 
 </section>
-<section id="gaise-guidelines" class="slide level2">
+<section id="gaise-guidelines" class="slide level2 center">
 <h2>GAISE guidelines</h2>
 <ul>
 <li>Teach statistical thinking.
@@ -440,7 +441,7 @@
 </ul>
 <p>See <a href="https://www.amstat.org/docs/default-source/amstat-documents/gaisecollege_full.pdf">Guidelines for Assessment and Instruction in Statistics Education (GAISE) 2016 Report</a> for full report.</p>
 </section>
-<section id="teaching-modern-regression" class="slide level2">
+<section id="teaching-modern-regression" class="slide level2 center">
 <h2>Teaching modern regression</h2>
 <p>Facilitate opportunities for students to…</p>
 <div>
@@ -452,7 +453,7 @@
 </ul>
 </div>
 </section>
-<section id="discussion" class="slide level2">
+<section id="discussion" class="slide level2 center">
 <h2>Discussion</h2>
 <div class="callout callout-important callout-captioned callout-style-default">
 <div class="callout-body">
@@ -476,7 +477,7 @@
 <h1>Introducing tidymodels</h1>
 
 </section>
-<section id="tidymodels" class="slide level2">
+<section id="tidymodels" class="slide level2 center">
 <h2>Tidymodels</h2>
 <div class="columns">
 <div class="column" style="width:40%;">
@@ -494,7 +495,7 @@
 </div>
 </div>
 </section>
-<section id="tidymodels-1" class="slide level2">
+<section id="tidymodels-1" class="slide level2 center">
 <h2>Tidymodels</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(tidymodels)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -521,11 +522,11 @@
 </div>
 </div>
 </section>
-<section id="data-loans-from-lending-club" class="slide level2">
+<section id="data-loans-from-lending-club" class="slide level2 center">
 <h2>Data: Loans from Lending Club</h2>
 <p>[Write introduction to the data] and the variables. Partially follow analysis in Chapter 8 - Linear regression with multiple predictors in <a href="https://openintro-ims.netlify.app/index.html">Introduction to Modern Statistics</a>.</p>
 </section>
-<section id="data-loans-from-lending-club-1" class="slide level2">
+<section id="data-loans-from-lending-club-1" class="slide level2 center">
 <h2>Data: Loans from Lending Club</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">library</span>(openintro)</span>
@@ -591,7 +592,7 @@ $ paid_late_fees                   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 </div>
 </div>
 </section>
-<section id="regression-syntax" class="slide level2">
+<section id="regression-syntax" class="slide level2 center">
 <h2>Regression syntax</h2>
 <p>Fit a linear regression model to predict the interest rate using the debt to income ratio.</p>
 <div class="panel-tabset">
@@ -644,7 +645,7 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="model-summaries-using-broom" class="slide level2">
+<section id="model-summaries-using-broom" class="slide level2 center">
 <h2>Model summaries using broom</h2>
 <p>Can utilize functions from the <strong>broom</strong> package to produce tidy summaries of models fit using Base R or the tidymodels framework</p>
 <ul>
@@ -655,7 +656,7 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><br></p>
 <p><a href="https://broom.tidymodels.org/">broom.tidymodels.org</a></p>
 </section>
-<section id="tidy" class="slide level2">
+<section id="tidy" class="slide level2 center">
 <h2><code>tidy()</code></h2>
 <div class="panel-tabset">
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1"><code>Base R</code></a></li><li><a href="#tabset-2-2"><code>Tidymodels</code></a></li></ul>
@@ -691,7 +692,7 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="glance" class="slide level2">
+<section id="glance" class="slide level2 center">
 <h2><code>glance()</code></h2>
 <div class="panel-tabset">
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Base R</a></li><li><a href="#tabset-3-2">Tidymodels</a></li></ul>
@@ -727,7 +728,7 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="augment" class="slide level2">
+<section id="augment" class="slide level2 center">
 <h2><code>augment()</code></h2>
 <div class="panel-tabset">
 <ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Base R</a></li><li><a href="#tabset-4-2">Tidymodels</a></li></ul>
@@ -783,7 +784,7 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="why-full-tidymodels-framework" class="slide level2">
+<section id="why-full-tidymodels-framework" class="slide level2 center">
 <h2>Why full tidymodels framework?</h2>
 <p>Most pedagogical advantages for more advanced models:</p>
 <ul>
@@ -802,7 +803,7 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h1>Teaching with tidymodels</h1>
 
 </section>
-<section id="getting-started" class="slide level2">
+<section id="getting-started" class="slide level2 center">
 <h2>Getting started</h2>
 <p>Let’s breakdown the syntax from the previous example.</p>
 <div class="cell">
@@ -819,7 +820,7 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="specify-model" class="slide level2">
+<section id="specify-model" class="slide level2 center">
 <h2>1️⃣ Specify model</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">linear_reg</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -830,7 +831,7 @@ Computational engine: lm </code></pre>
 </div>
 </div>
 </section>
-<section id="set-computational-engine" class="slide level2">
+<section id="set-computational-engine" class="slide level2 center">
 <h2>2️⃣ Set computational engine</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
@@ -842,7 +843,7 @@ Computational engine: lm </code></pre>
 </div>
 </div>
 </section>
-<section id="fit-the-model" class="slide level2">
+<section id="fit-the-model" class="slide level2 center">
 <h2>3️⃣ Fit the model</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
@@ -861,7 +862,7 @@ Coefficients:
 </div>
 </div>
 </section>
-<section id="summarize-output" class="slide level2">
+<section id="summarize-output" class="slide level2 center">
 <h2>4️⃣ Summarize output</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
@@ -877,13 +878,13 @@ Coefficients:
 </div>
 </div>
 </section>
-<section id="add-slide" class="slide level2">
+<section id="add-slide" class="slide level2 center">
 <h2>Add slide?</h2>
 <ul>
 <li>Add a slide to show how this would be consistent if you made a logistic model?</li>
 </ul>
 </section>
-<section id="feature-engineering" class="slide level2">
+<section id="feature-engineering" class="slide level2 center">
 <h2>Feature engineering</h2>
 <p><strong>Feature engineering</strong> is the process of transforming raw variables in preparation for use in a statistical model.</p>
 <p><br></p>
@@ -895,7 +896,7 @@ Coefficients:
 <p>The <a href="https://recipes.tidymodels.org/">recipes</a> package makes it possible to do feature engineering as part of the modeling workflow using “dplyr-like” functions.</p>
 </div>
 </section>
-<section id="example-predicting-interest-rate" class="slide level2">
+<section id="example-predicting-interest-rate" class="slide level2 center">
 <h2>Example: Predicting interest rate</h2>
 <p><strong>Goal</strong>: Fit a model to predict the interest rate from the term, debt to income ratio, home ownership, and number of delinquencies in past two years.</p>
 <p><br></p>
@@ -908,7 +909,7 @@ Coefficients:
 </ul>
 </div>
 </section>
-<section id="feature-engineering-using-dplyr" class="slide level2">
+<section id="feature-engineering-using-dplyr" class="slide level2 center">
 <h2>Feature engineering using dplyr</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># Prepare the data</span></span>
@@ -935,18 +936,18 @@ Coefficients:
 </div>
 </div>
 </section>
-<section id="feature-engineering-with-recipes" class="slide level2">
+<section id="feature-engineering-with-recipes" class="slide level2 center">
 <h2>Feature engineering with recipes</h2>
 
 <img data-src="images/recipes.png" class="r-stretch quarto-figure-center"><p class="caption">Illustration by <a href="https://www.allisonhorst.com/">Allison Horst</a></p></section>
-<section id="feature-engineering-with-recipes-1" class="slide level2">
+<section id="feature-engineering-with-recipes-1" class="slide level2 center">
 <h2>Feature engineering with recipes</h2>
 <ul>
 <li><p>Write code step by step</p></li>
 <li><p>Put all steps in a single pipeline</p></li>
 </ul>
 </section>
-<section id="featuring-engineering-with-recipes" class="slide level2">
+<section id="featuring-engineering-with-recipes" class="slide level2 center">
 <h2>Featuring engineering with recipes</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># define workflow </span></span>
@@ -956,21 +957,21 @@ Coefficients:
 <span id="cb36-5"><a href="#cb36-5"></a>                       <span class="at">data =</span> loans_full_schema)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="recipes-vs.-dplyr" class="slide level2">
+<section id="recipes-vs.-dplyr" class="slide level2 center">
 <h2>recipes vs.&nbsp;dplyr</h2>
 <ul>
 <li><p>show code side by side</p></li>
 <li><p>advantages / disadvantage of each approach</p></li>
 </ul>
 </section>
-<section id="put-it-together-with-workflow" class="slide level2">
+<section id="put-it-together-with-workflow" class="slide level2 center">
 <h2>Put it together with workflow</h2>
 <ul>
 <li><p>Define the model</p></li>
 <li><p>Define the receipe</p></li>
 </ul>
 </section>
-<section id="exercise---feature-engineering" class="slide level2">
+<section id="exercise---feature-engineering" class="slide level2 center">
 <h2>Exercise - feature engineering</h2>
 <ul>
 <li><p>Have an qmd file with the dplyr pipeline.</p></li>
@@ -978,25 +979,25 @@ Coefficients:
 <li><p>Was this easy to do? Why or why not? What was easy? What was challenging?</p></li>
 </ul>
 </section>
-<section id="prediction" class="slide level2">
+<section id="prediction" class="slide level2 center">
 <h2>Prediction</h2>
 </section>
-<section id="test-vs.-train-data" class="slide level2">
+<section id="test-vs.-train-data" class="slide level2 center">
 <h2>Test vs.&nbsp;Train data</h2>
 </section>
-<section id="prediction-exercise" class="slide level2">
+<section id="prediction-exercise" class="slide level2 center">
 <h2>Prediction exercise</h2>
 </section>
-<section id="thinking-about-prediction-or-inference" class="slide level2">
+<section id="thinking-about-prediction-or-inference" class="slide level2 center">
 <h2>Thinking about prediction or inference</h2>
 </section>
-<section id="exercise---split-into-test-and-train" class="slide level2">
+<section id="exercise---split-into-test-and-train" class="slide level2 center">
 <h2>Exercise - split into test and train?</h2>
 </section>
-<section id="cross-validation" class="slide level2">
+<section id="cross-validation" class="slide level2 center">
 <h2>Cross-validation</h2>
 </section>
-<section id="exercise---cross-validation" class="slide level2">
+<section id="exercise---cross-validation" class="slide level2 center">
 <h2>Exercise - cross validation</h2>
 </section></section>
 <section>
@@ -1004,16 +1005,16 @@ Coefficients:
 <h1>Using tidydmodels in your course</h1>
 
 </section>
-<section id="pedagogical-advantages" class="slide level2">
+<section id="pedagogical-advantages" class="slide level2 center">
 <h2>Pedagogical advantages</h2>
 </section>
-<section id="putting-it-all-together" class="slide level2">
+<section id="putting-it-all-together" class="slide level2 center">
 <h2>Putting it all together</h2>
 <ul>
 <li>Make an Rmd file with a full pipeline to show this is what your students would be able to do at the end of the semester.</li>
 </ul>
 </section>
-<section id="activity-discussion" class="slide level2">
+<section id="activity-discussion" class="slide level2 center">
 <h2>Activity / Discussion</h2>
 <ul>
 <li><p>Think about how you might implement this in the classroom</p></li>
@@ -1286,6 +1287,24 @@ Coefficients:
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);

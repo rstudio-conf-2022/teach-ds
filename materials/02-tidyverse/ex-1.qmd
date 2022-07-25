@@ -1,5 +1,39 @@
 ---
-title: "Title placeholder for Exercise 1"
-subtitle: "Exercise 1"
+title: "Ex 2.1: Grouped Summary"
+subtitle: "teach_ds :: Teaching data science with the tidyverse"
 editor: visual
 ---
+
+## Setup
+
+```{r}
+#| label: setup
+#| message: false
+
+library(tidyverse)
+library(openintro)
+
+loans <- loans_full_schema %>%
+  mutate(
+    homeownership = str_to_title(homeownership), 
+    bankruptcy = if_else(public_record_bankrupt >= 1, "Yes", "No")
+  ) %>%
+  filter(annual_income >= 10) %>%
+  select(
+    loan_amount, homeownership, bankruptcy,
+    application_type, annual_income, interest_rate
+  )
+
+loans
+```
+
+## Exercise
+
+Based on the applicants' home ownership status, compute the average loan amount and the number of applicants.
+Display the results in descending order of number of applicants.
+
+```{r}
+#| label: grouped-
+
+# add your answer here
+```
