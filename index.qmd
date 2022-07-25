@@ -8,7 +8,7 @@ title: Designing the data science classroom
 
 ⏰ 09:00 - 17:00
 
-🏨 Room TBA
+🏨 Maryland 3
 
 ✍️ [Click here to register](https://www.rstudio.com/conference/2022/workshops/teach-ds/)
 
@@ -97,20 +97,20 @@ If you choose to use your local R and RStudio install for the workshop, you shou
     #| eval: false
 
     install.packages("devtools")
-    #install.packages("DT")
-    #install.packages("gapminder")
-    #install.packages("ghclass")
-    #install.packages("learnr")
-    #install.packages("lubridate")
-    #install.packages("magick")
-    #install.packages("nycflights13")
-    #install.packages("openintro")
-    #install.packages("rvest")
-    #install.packages("shiny")
-    #install.packages("sortable")
+    install.packages("DT")
+    install.packages("gapminder")
+    install.packages("ghclass")
+    install.packages("learnr")
+    install.packages("lubridate")
+    install.packages("magick")
+    install.packages("nycflights13")
+    install.packages("openintro")
+    install.packages("rvest")
+    install.packages("shiny")
+    install.packages("sortable")
     install.packages("tidyverse")
     install.packages("tidymodels")
-    #install.packages("unvotes")
+    install.packages("unvotes")
     ```
 
 -   From GitHub:
@@ -118,8 +118,6 @@ If you choose to use your local R and RStudio install for the workshop, you shou
     ```{r}
     #| eval: false
 
-    devtools::install_github("gadenbuie/countdown")
-    devtools::install_github("rstudio/parsons")
     devtools::install_github("rundel/learnrhash")
     ```
 
