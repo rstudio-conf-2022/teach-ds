@@ -62,7 +62,7 @@ At times we will be demoing workflows for instructors (whom I assume are familia
 
 For the latter, you can mostly assume that you're a student in an intro data science course and this is the first day of class (i.e. there's no expectation of prep).
 However we'd also like to give you a taste of how the remainder of the semester goes, which often entails students watching background videos to prepare.
-To prepare for the first module, please watch the following video before the workshop.
+To prepare for the first module, please watch the following video.
 
 ::: {style="text-align: center;"}
 ```{=html}
