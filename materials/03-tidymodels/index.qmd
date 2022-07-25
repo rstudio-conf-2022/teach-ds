@@ -2,7 +2,7 @@
 title: "Teaching modern modeling with tidymodels"
 subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
 author: "Maria Tackett"
-footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
+footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22) / Module 3"
 logo: "../images/logo.png"
 format: 
   revealjs:
@@ -12,9 +12,9 @@ format:
     slide-number: true
     incremental: false 
     chalkboard: true
-    center: true
 execute:
   freeze: auto
+  echo: true
 ---
 
 # In progress
@@ -34,6 +34,7 @@ These slides are currently being designed and built.
 # load packages for slides
 library(tidyverse)
 library(openintro)
+library(countdown)
 ```
 
 # Teaching modern modeling
@@ -78,7 +79,6 @@ The **tidymodels** framework is a collection of packages for modeling and machin
 
 ```{r}
 #| eval: false
-#| echo: true
 
 install.packages("tidymodels")
 ```
@@ -88,7 +88,6 @@ install.packages("tidymodels")
 ## Tidymodels
 
 ```{r}
-#| echo: true
 #| message: true
 #| warning: true
 
@@ -97,7 +96,9 @@ library(tidymodels)
 
 ## Data: Loans from Lending Club
 
-The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the **openintro** package and featured in the OpenIntro textbooks . It contains information about 50,000 loans made through the Lending Club platform. The variables we'll use in this analysis are
+The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the **openintro** package and featured in the OpenIntro textbooks .
+It contains information about 50,000 loans made through the Lending Club platform.
+The variables we'll use in this analysis are
 
 -   `interest_rate`: Interest rate of the loan the applicant received.
 -   `debt_to_income`: Debt-to-income ratio.
@@ -107,7 +108,6 @@ The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/r
 ## Data: Loans from Lending Club
 
 ```{r}
-#| echo: true
 library(openintro)
 glimpse(loans_full_schema)
 ```
@@ -120,7 +120,6 @@ Fit a linear regression model to predict the interest rate using the debt to inc
 ## Base R
 
 ```{r}
-#| echo: true
 base_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)
 summary(base_lm)
 ```
@@ -128,7 +127,6 @@ summary(base_lm)
 ## Tidymodels
 
 ```{r}
-#| echo: true
 tidy_lm <- linear_reg() |> 
   set_engine("lm") |>
   fit(interest_rate ~ debt_to_income, data = loans_full_schema)
@@ -153,7 +151,6 @@ Can utilize functions from the [**broom**](broom.tidymodels.org) package to prod
 ## `Base R`
 
 ```{r}
-#| echo: true
 base_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)
 tidy(base_lm)
 ```
@@ -161,8 +158,6 @@ tidy(base_lm)
 ## `Tidymodels`
 
 ```{r}
-#| echo: true
-
 tidy_lm <- linear_reg() |> 
   set_engine("lm") |>
   fit(interest_rate ~ debt_to_income, data = loans_full_schema)
@@ -176,16 +171,12 @@ tidy(tidy_lm)
 ## Base R
 
 ```{r}
-#| echo: true
-#| 
 glance(base_lm)
 ```
 
 ## Tidymodels
 
 ```{r}
-#| echo: true
-
 glance(tidy_lm)
 ```
 :::
@@ -196,7 +187,6 @@ glance(tidy_lm)
 ## Base R
 
 ```{r}
-#| echo: true
 #| code-line-numbers: "1"
 
 base_lm_aug <- augment(base_lm)
@@ -206,7 +196,6 @@ base_lm_aug
 ## Tidymodels
 
 ```{r }
-#| echo: true
 #| code-line-numbers: "1"
 
 tidy_lm_aug <- augment(tidy_lm$fit)
@@ -230,7 +219,6 @@ There are advantages for more advanced modeling:
 ## Tidymodels syntax
 
 ```{r}
-#| echo: true
 linear_reg() |> 
   set_engine("lm") |>
   fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>
@@ -242,14 +230,12 @@ Let's break down the syntax.
 ## 1️⃣ Specify model
 
 ```{r}
-#| echo: true
 linear_reg() 
 ```
 
 ## 2️⃣ Set computational engine
 
 ```{r}
-#| echo: true
 linear_reg() |> 
   set_engine("lm")
 ```
@@ -257,7 +243,6 @@ linear_reg() |>
 ## 3️⃣ Fit the model
 
 ```{r}
-#| echo: true
 linear_reg() |> 
   set_engine("lm") |>
   fit(interest_rate ~ debt_to_income, data = loans_full_schema)
@@ -266,7 +251,6 @@ linear_reg() |>
 ## 4️⃣ Summarize output
 
 ```{r}
-#| echo: true
 linear_reg() |> 
   set_engine("lm") |>
   fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>
@@ -282,7 +266,6 @@ The syntax is the same if we fit a more advanced model, such as a logistic regre
 *Fit a model to predict the loan term length (36 or 60 months) based on the loan amount.*
 
 ```{r}
-#| echo: true
 logistic_reg() |>
   set_engine("glm") |>
   fit(factor(term) ~ loan_amount, data = loans_full_schema) |>
@@ -316,7 +299,6 @@ logistic_reg() |>
 ## Feature engineering using dplyr
 
 ```{r}
-#| echo: true
 # Feature engineering
 loans_full_schema <- loans_full_schema |>
   mutate(term_fct = as_factor(term)) |>
@@ -338,7 +320,6 @@ lm(interest_rate ~ term_fct + debt_to_income_cent + delinq_2y_cat,
 ## Specify the variables
 
 ```{r}
-#| echo: true
 interest_rec <- recipe(
   interest_rate ~ term + debt_to_income + delinq_2y, 
   data = loans_full_schema 
@@ -352,8 +333,6 @@ interest_rec
 **Make `term` a factor.**
 
 ```{r}
-#| echo: true
-
 interest_rec <- interest_rec |>
   step_mutate(term = as_factor(term))
 
@@ -365,8 +344,6 @@ interest_rec
 **Mean-center `debt_to_income`**.
 
 ```{r}
-#| echo: true
-
 interest_rec <- interest_rec |>
   step_center(debt_to_income)
 
@@ -378,8 +355,6 @@ interest_rec
 **Break `delinq_2y` into the categories 0, 1, 2, 3+.**
 
 ```{r}
-#| echo: true
-
 interest_rec <- interest_rec |>
   step_cut(delinq_2y, breaks = c(-Inf,0,1, 2, 3, Inf))
 
@@ -389,8 +364,6 @@ interest_rec
 ## Putting it all together
 
 ```{r}
-#| echo: true
-
 interest_rec <- recipe(interest_rate ~ term + debt_to_income + delinq_2y,
                        data = loans_full_schema) |>
   step_mutate(term = as_factor(term))|>
@@ -401,14 +374,12 @@ interest_rec <- recipe(interest_rate ~ term + debt_to_income + delinq_2y,
 ## Putting it all together
 
 ```{r}
-#| echo: true
 interest_rec
 ```
 
 ## Prep and bake to see created variables
 
 ```{r}
-#| echo: true
 interest_rec |>
   prep()|>
   bake(loans_full_schema) |>
@@ -440,7 +411,6 @@ You can find the list of step_* functions on the [recipes reference page](https:
 **Specify the model**
 
 ```{r}
-#| echo: true
 interest_spec <- linear_reg() |>
   set_engine("lm")
 ```
@@ -450,8 +420,6 @@ interest_spec <- linear_reg() |>
 **Build workflow**
 
 ```{r}
-#| echo: true
-
 interest_workflow <- workflow() |>
   add_model(interest_spec) |>
   add_recipe(interest_rec)
@@ -460,16 +428,12 @@ interest_workflow <- workflow() |>
 ## View workflow
 
 ```{r}
-#| echo: true
-
 interest_workflow
 ```
 
 ## Fit model to data
 
 ```{r}
-#| echo: true
-
 interest_fit <- interest_workflow %>%
   fit(data = loans_full_schema)
 
@@ -481,8 +445,6 @@ tidy(interest_fit)
 ## Make predictions
 
 ```{r}
-#| echo: true
-
 interest_pred <- predict(interest_fit, loans_full_schema) |> 
   bind_cols(loans_full_schema |> select(interest_rate))
 
@@ -494,8 +456,6 @@ interest_pred
 $R^2$ is the percent of variability in the interest rate explained by the model.
 
 ```{r}
-#| echo: true
-
 rsq(interest_pred, truth = interest_rate, estimate = .pred)
 ```
 
@@ -510,8 +470,6 @@ $$
 . . .
 
 ```{r}
-#| echo: true
-
 rmse(interest_pred, truth = interest_rate, estimate = .pred)
 ```
 
@@ -541,8 +499,6 @@ Splitting the data into training and testing sets allows us to evaluate the mode
 **Split the data.**
 
 ```{r}
-#| echo: true
-#| 
 set.seed(0725) #to get same split each run
 loans_split <- initial_split(loans_full_schema, prop = 0.8) #80% training
 ```
@@ -550,7 +506,6 @@ loans_split <- initial_split(loans_full_schema, prop = 0.8) #80% training
 **Save the training data.**
 
 ```{r}
-#| echo: true
 loans_train <- training(loans_split)
 dim(loans_train)
 ```
@@ -558,7 +513,6 @@ dim(loans_train)
 **Save test data.**
 
 ```{r}
-#| echo: true
 loans_test <- testing(loans_split)
 dim(loans_test)
 ```
@@ -568,8 +522,6 @@ dim(loans_test)
 We can fit the model specified in `interest_workflow` (model spec + recipe) to the training data.
 
 ```{r}
-#| echo: true
-
 interest_train_fit <- interest_workflow |>
   fit(data = loans_train)
 
@@ -581,8 +533,6 @@ tidy(interest_train_fit)
 **Calculate predictions**
 
 ```{r}
-#| echo: true
-
 interest_train_pred <- predict(interest_train_fit, loans_train) |> 
   bind_cols(loans_train |> select(interest_rate))
 ```
@@ -590,13 +540,10 @@ interest_train_pred <- predict(interest_train_fit, loans_train) |>
 **Evaluate model**
 
 ```{r}
-#| echo: true
 rsq(interest_train_pred, truth = interest_rate, estimate = .pred)
 ```
 
 ```{r}
-#| echo: true
-#| 
 rmse(interest_train_pred, truth = interest_rate, estimate = .pred)
 ```
 
@@ -605,8 +552,6 @@ rmse(interest_train_pred, truth = interest_rate, estimate = .pred)
 **Calculate predictions**
 
 ```{r}
-#| echo: true
-
 interest_test_pred <- predict(interest_train_fit, loans_test) |> 
   bind_cols(loans_test |> select(interest_rate))
 ```
@@ -614,16 +559,14 @@ interest_test_pred <- predict(interest_train_fit, loans_test) |>
 **Evaluate model**
 
 ```{r}
-#| echo: true
 rsq(interest_test_pred, truth = interest_rate, estimate = .pred)
 ```
 
 ```{r}
-#| echo: true
-#| 
 rmse(interest_test_pred, truth = interest_rate, estimate = .pred)
 ```
 
+<<<<<<< HEAD
 ## Exercise 3: Train / test data (time permitting) {.small}
 
 ::: cloud
@@ -658,3 +601,18 @@ Any other discussion points of interest?
 
 
 
+=======
+## Your turn!
+
+## Discussion
+
+::: question
+-   What is something from this module you can implement in your data science course?
+
+-   What is one potential challenge of implementing this content in your course?
+:::
+
+```{r}
+countdown(minutes = 7, font_size = "1.5em")
+```
+>>>>>>> cebb1d2da6842e5230eff8369cb44ed50bcfb5b3

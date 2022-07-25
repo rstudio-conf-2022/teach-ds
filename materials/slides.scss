@@ -8,6 +8,7 @@ $presentation-heading-color: #7090A5;
 $presentation-title-slide-text-align: "left";
 $presentation-font-size-root: 36px;
 $code-block-font-size: 0.7em;
+$link-color: #7090A5;
 
 /*-- scss:rules --*/
 
@@ -95,4 +96,12 @@ details>summary {
   padding-left: 12px;
   padding-right: 12px;
   user-select: none;
+}
+
+.reveal pre {
+  overflow-x: auto;
+}
+.reveal pre code {
+  word-wrap: normal;
+  white-space: pre;
 }

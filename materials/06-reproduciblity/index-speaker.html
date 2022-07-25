@@ -53,39 +53,40 @@
       }
     pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
     div.sourceCode
-      {   }
+      { color: #003b4f; background-color: #f1f3f5; }
     @media screen {
     pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
     }
-    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-    code span.at { color: #7d9029; } /* Attribute */
-    code span.bn { color: #40a070; } /* BaseN */
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #4070a0; } /* Char */
-    code span.cn { color: #880000; } /* Constant */
-    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-    code span.dt { color: #902000; } /* DataType */
-    code span.dv { color: #40a070; } /* DecVal */
-    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
     code span.ex { } /* Extension */
-    code span.fl { color: #40a070; } /* Float */
-    code span.fu { color: #06287e; } /* Function */
-    code span.im { } /* Import */
-    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-    code span.op { color: #666666; } /* Operator */
-    code span.ot { color: #007020; } /* Other */
-    code span.pp { color: #bc7a00; } /* Preprocessor */
-    code span.sc { color: #4070a0; } /* SpecialChar */
-    code span.ss { color: #bb6688; } /* SpecialString */
-    code span.st { color: #4070a0; } /* String */
-    code span.va { color: #19177c; } /* Variable */
-    code span.vs { color: #4070a0; } /* VerbatimString */
-    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -398,7 +399,7 @@
   <p class="author">Mine Çetinkaya-Rundel</p>
 </section>
 
-<section class="slide level2">
+<section class="slide level2 center">
 
 <div class="cell">
 
@@ -421,7 +422,7 @@
 </div>
 </div>
 </section>
-<section id="why-git-github" class="slide level2">
+<section id="why-git-github" class="slide level2 center">
 <h2>Why Git + GitHub?</h2>
 <ul>
 <li><strong>Version control:</strong> Lots of mistakes along the way, need ability to revert</li>
@@ -434,7 +435,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="goals-for-version-control" class="slide level2">
+<section id="goals-for-version-control" class="slide level2 center">
 <h2>Goals for version control</h2>
 <ul>
 <li><p>Centralize the distribution (and collection) of all student assignments</p></li>
@@ -452,7 +453,7 @@
 <h1>GitHub as your Learning Management System</h1>
 
 </section>
-<section id="basic-structure" class="slide level2">
+<section id="basic-structure" class="slide level2 center">
 <h2>Basic Structure</h2>
 <p>On Github</p>
 <ul>
@@ -461,7 +462,7 @@
 <li><p>Student and team repos all private by default</p></li>
 </ul>
 </section>
-<section id="setting-up-a-course" class="slide level2">
+<section id="setting-up-a-course" class="slide level2 center">
 <h2>Setting up a course</h2>
 <ol type="1">
 <li>Create a <u>free</u> course organization on GitHub: <a href="https://github.com/organizations/new">github.com/organizations/new</a></li>
@@ -473,12 +474,12 @@
 <li>Grade assignment(s)**</li>
 </ol>
 </section>
-<section id="create-course-organization" class="slide level2">
+<section id="create-course-organization" class="slide level2 center">
 <h2>1️⃣ Create course organization</h2>
 <p>Select the option for a <u> free</u> course organization.</p>
 
 <img data-src="images/org-create.png" alt="Screenshot of page to create GitHub organization." width="603" class="r-stretch quarto-figure-center"></section>
-<section id="request-teacher-benefits" class="slide level2">
+<section id="request-teacher-benefits" class="slide level2 center">
 <h2>2️⃣ Request teacher benefits</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -488,7 +489,7 @@
 </div>
 </div>
 </section>
-<section id="required-information" class="slide level2">
+<section id="required-information" class="slide level2 center">
 <h2>Required information</h2>
 <p>You will need to provide the following to request teacher benefits:</p>
 <ul>
@@ -498,13 +499,13 @@
 </ul>
 <p>Verification is manual and can take up to a few days.</p>
 </section>
-<section id="add-organization-to-github-classroom" class="slide level2">
+<section id="add-organization-to-github-classroom" class="slide level2 center">
 <h2>3️⃣ Add organization to GitHub Classroom</h2>
 <p>Click <strong>New Classroom</strong> and select the GitHub organization.</p>
 
 <img data-src="images/github-classroom.png" alt="Screenshot of GitHub classroom set up" class="r-stretch quarto-figure-center"><p>You can skip the remaining set up steps for now.</p>
 </section>
-<section id="invite-students" class="slide level2">
+<section id="invite-students" class="slide level2 center">
 <h2>4️⃣ Invite students</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -514,15 +515,15 @@
 </div>
 </div>
 </section>
-<section id="member-privileges" class="slide level2">
+<section id="member-privileges" class="slide level2 center">
 <h2>Member Privileges</h2>
 
 <img data-src="images/member-priv1.png" class="r-stretch quarto-figure-center"></section>
-<section id="member-privileges-cont." class="slide level2">
+<section id="member-privileges-cont." class="slide level2 center">
 <h2>Member Privileges (cont.)</h2>
 
 <img data-src="images/member-priv2.png" class="r-stretch quarto-figure-center"></section>
-<section id="member-privileges-cont.-1" class="slide level2">
+<section id="member-privileges-cont.-1" class="slide level2 center">
 <h2>Member Privileges (cont.)</h2>
 
 <img data-src="images/member-priv3.png" class="r-stretch"></section></section>
@@ -536,7 +537,7 @@
 <h1>📦 ghclass</h1>
 
 </section>
-<section id="ghclass-1" class="slide level2">
+<section id="ghclass-1" class="slide level2 center">
 <h2>📦 ghclass</h2>
 <h3 id="tools-for-managing-github-class-organization-accounts">Tools for managing github class organization accounts</h3>
 <ul>
@@ -544,7 +545,7 @@
 <li>The package assumes that you’re an R user, and you probably teach R as well, though that’s not a requirement since this package is all about setting up repositories with the right permissions, not what your students put in those repositories.</li>
 </ul>
 </section>
-<section id="installation" class="slide level2">
+<section id="installation" class="slide level2 center">
 <h2>Installation</h2>
 <p>Use the code below to install <strong>ghclass</strong></p>
 <div class="cell">
@@ -556,14 +557,14 @@
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(ghclass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="collect-data-from-students" class="slide level2">
+<section id="collect-data-from-students" class="slide level2 center">
 <h2>Collect data from students</h2>
 <ul>
 <li><p>Need students’ GitHub usernames at a minimum</p></li>
 <li><p>Recommend collecting emails, as students might make a typo in their GitHub username</p></li>
 </ul>
 </section>
-<section id="prior-to-collecting-data" class="slide level2">
+<section id="prior-to-collecting-data" class="slide level2 center">
 <h2>Prior to collecting data…</h2>
 <p>You need to instruct students to create GitHub accounts</p>
 <ul>
@@ -575,7 +576,7 @@
 <li><p>Can have students choose and submit username as an in-class activity during the first week of classes.</p></li>
 </ul>
 </section>
-<section id="behind-the-scenes-github-tokens" class="slide level2">
+<section id="behind-the-scenes-github-tokens" class="slide level2 center">
 <h2>Behind the scenes: GitHub tokens</h2>
 <p><code>ghclass</code> uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that <code>ghclass</code> can find and use it.</p>
 <ul>
@@ -588,7 +589,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="behind-the-scenes-github-tokens---update-this-process" class="slide level2">
+<section id="behind-the-scenes-github-tokens---update-this-process" class="slide level2 center">
 <h2>Behind the scenes: GitHub tokens - UPDATE THIS PROCESS</h2>
 <ul>
 <li>If the token is found and works correctly the following code should run without error</li>
@@ -619,7 +620,7 @@
 <h1>Inviting students</h1>
 
 </section>
-<section id="invite-students-1" class="slide level2">
+<section id="invite-students-1" class="slide level2 center">
 <h2>Invite students</h2>
 <ul>
 <li>This will generate an email to students.</li>
@@ -635,7 +636,7 @@
 <pre><code>## ✔ Invited user 'minebotmine' to org 'design-ds-class'.
 ## ✔ Invited user 'rundel' to org 'design-ds-class'.</code></pre>
 </section>
-<section id="check-member-status" class="slide level2">
+<section id="check-member-status" class="slide level2 center">
 <h2>Check member status</h2>
 <ul>
 <li>Who is already in?</li>
@@ -666,7 +667,7 @@
 <h1>Creating assignments</h1>
 
 </section>
-<section id="creating-assignments---big-picture" class="slide level2">
+<section id="creating-assignments---big-picture" class="slide level2 center">
 <h2>Creating assignments - big picture</h2>
 <ul>
 <li>Create a starter repo, keep it private and make it a template</li>
@@ -675,17 +676,17 @@
 <li>Use the <code>org_create_assignment()</code> function to create copies of the starter repo with correct permissions for each of your students (or teams)</li>
 </ul>
 </section>
-<section id="creating-your-starter-repo" class="slide level2">
+<section id="creating-your-starter-repo" class="slide level2 center">
 <h2>Creating your starter repo</h2>
 <p><br></p>
 
 <img data-src="images/starter-repo-create.png" width="741" class="r-stretch"></section>
-<section id="make-your-starter-repo-a-template" class="slide level2">
+<section id="make-your-starter-repo-a-template" class="slide level2 center">
 <h2>Make your starter repo a template</h2>
 <p><br></p>
 
 <img data-src="images/starter-repo-make-template.png" width="1020" class="r-stretch"></section>
-<section id="prepare-your-starter-repo" class="slide level2">
+<section id="prepare-your-starter-repo" class="slide level2 center">
 <h2>Prepare your starter repo</h2>
 <ul>
 <li>Clone it locally</li>
@@ -695,7 +696,7 @@
 <p><br></p>
 <p>[DEMO]</p>
 </section>
-<section id="create-assignments" class="slide level2">
+<section id="create-assignments" class="slide level2 center">
 <h2>Create assignments</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">org_create_assignment</span>(</span>
@@ -722,7 +723,7 @@ GitHub (this complicates things!)</li>
 </div>
 </div>
 </section>
-<section id="options-for-giving-feedback-on-github" class="slide level2">
+<section id="options-for-giving-feedback-on-github" class="slide level2 center">
 <h2>Options for giving feedback on GitHub</h2>
 <ul>
 <li><p>Use the GitHub UI to add issues to each student’s repo</p></li>
@@ -740,7 +741,7 @@ GitHub (this complicates things!)</li>
 </ul></li>
 </ul>
 </section>
-<section id="get-big-picture-stats-for-an-assignment" class="slide level2">
+<section id="get-big-picture-stats-for-an-assignment" class="slide level2 center">
 <h2>Get big picture stats for an assignment</h2>
 <div class="cell">
 
@@ -748,7 +749,7 @@ GitHub (this complicates things!)</li>
 <p><br></p>
 <p>[DEMO]</p>
 </section>
-<section id="create-team-assignments" class="slide level2">
+<section id="create-team-assignments" class="slide level2 center">
 <h2>Create team assignments</h2>
 <p>First, we’ll make up some teams</p>
 <div class="cell">
@@ -771,7 +772,7 @@ GitHub (this complicates things!)</li>
 <h1>Giving feedback</h1>
 
 </section>
-<section id="more-on-giving-feedback-in-issues" class="slide level2">
+<section id="more-on-giving-feedback-in-issues" class="slide level2 center">
 <h2>More on giving feedback in issues</h2>
 <ul>
 <li>Instructors (and TAs) can view all repositories within the course organization.</li>
@@ -780,7 +781,7 @@ GitHub (this complicates things!)</li>
 <li>You might want to consider keeping points out of issues.</li>
 </ul>
 </section>
-<section id="peer-review" class="slide level2">
+<section id="peer-review" class="slide level2 center">
 <h2>Peer review</h2>
 <ul>
 <li><p>Once an assignment is completed you can let other students/teams into a repository and they can provide peer review.</p></li>
@@ -789,7 +790,7 @@ GitHub (this complicates things!)</li>
 </ul>
 <p>See the <a href="https://rundel.github.io/ghclass/articles/peer.html">Peer review with ghclass vignette</a> for more.</p>
 </section>
-<section id="pull-requests" class="slide level2">
+<section id="pull-requests" class="slide level2 center">
 <h2>Pull requests</h2>
 <ul>
 <li><p>Another option is to open pull requests for your students’ work where you directly edit their work and ask them to approve the edits.</p></li>
@@ -806,7 +807,7 @@ GitHub (this complicates things!)</li>
 </div>
 </div>
 </section>
-<section id="git-github-lessons-learned" class="slide level2">
+<section id="git-github-lessons-learned" class="slide level2 center">
 <h2>Git + GitHub lessons learned</h2>
 <ul>
 <li>If you plan on using git in class, start on day one, don’t wait until the “right time”</li>

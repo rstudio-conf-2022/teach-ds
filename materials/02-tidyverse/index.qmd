@@ -2,36 +2,43 @@
 title: "Teaching data science with the tidyverse"
 subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
 author: "Mine Çetinkaya-Rundel"
-footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
+footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22) / Module 2"
 logo: "../images/logo.png"
 format: 
   revealjs:
     theme: ../slides.scss
-    fontsize: 12px
     multiplex: true
     transition: fade
     slide-number: true
     incremental: false 
     chalkboard: true
-    code-overflow: scroll
-    revealjs-plugins:
-    - ../countdown
 execute:
   freeze: auto
   echo: true
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 200
 ---
 
 # Introduction
 
 ```{r}
+#| label: setup
 #| echo: false
+
 library(tidyverse)
 library(scales)
 library(knitr)
 library(kableExtra)
 library(colorblindr)
+library(countdown)
 
-options(dplyr.print_min = 6, dplyr.print_max = 6)
+options(
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6
+)
+
 theme_set(theme_gray(base_size = 18))
 ```
 
@@ -90,12 +97,12 @@ Teach R as the authentic tool
 library(tidyverse)
 library(openintro)
 
-loans <- loans_full_schema %>%
+loans <- loans_full_schema |>
   mutate(
     homeownership = str_to_title(homeownership), 
     bankruptcy = if_else(public_record_bankrupt >= 1, "Yes", "No")
-  ) %>%
-  filter(annual_income >= 10) %>%
+  ) |>
+  filter(annual_income >= 10) |>
   select(
     loan_amount, homeownership, bankruptcy,
     application_type, annual_income, interest_rate
@@ -198,7 +205,7 @@ with(loans, mean(loan_amount))
 **Approach 4:** The tidyverse approach:
 
 ```{r}
-loans %>%
+loans |>
   summarise(mean_loan_amount = mean(loan_amount))
 ```
 
@@ -234,24 +241,28 @@ Based on the applicants' home ownership status, compute the number of applicants
 ```{r}
 #| echo: false
 
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n(),
     avg_loan_amount = mean(loan_amount)
-    ) %>%
-  arrange(desc(n_applicants)) %>%
+    ) |>
+  arrange(desc(n_applicants)) |>
   mutate(
     n_applicants = number(n_applicants, big.mark = ","),
     avg_loan_amount = dollar(avg_loan_amount, accuracy = 1)
-    ) %>%
+    ) |>
   kable(
     col.names = c("Homeownership", "Average loan amount", "Number of applicants"),
     align = "lrr"
     )
 ```
 
-<countdown time="900"/>
+```{r}
+#| echo: false
+
+countdown(minutes = 15, font_size = "1.5em")
+```
 
 ## Break it down I
 
@@ -285,7 +296,7 @@ loans
 ```{r}
 #| code-line-numbers: "2"
 
-loans %>%
+loans |>
   group_by(homeownership)
 ```
 :::
@@ -309,8 +320,8 @@ Based on the applicants' home ownership status, [compute the number of applicant
 ```{r}
 #| code-line-numbers: "3-5"
 
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n()
     )
@@ -329,8 +340,8 @@ Based on the applicants' home ownership status, compute the number of applicants
 ```{r}
 #| code-line-numbers: "5"
 
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n(),
     avg_loan_amount = mean(loan_amount)
@@ -350,12 +361,12 @@ Based on the applicants' home ownership status, compute the average loan amount 
 ```{r}
 #| code-line-numbers: "7"
 
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n(),
     avg_loan_amount = mean(loan_amount)
-    ) %>%
+    ) |>
   arrange(desc(n_applicants))
 ```
 :::
@@ -368,12 +379,12 @@ loans %>%
 :::
 
 ```{r}
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n(),
     avg_loan_amount = mean(loan_amount)
-    ) %>%
+    ) |>
   arrange(desc(n_applicants))
 ```
 
@@ -478,10 +489,10 @@ z[order(z$n_applicants), ]
 -   ending up with a new data structure (`array`)
 -   relegating a data column to rownames
 
-## Eercise 2: Data visualization
+## Exercise 2: Data visualization
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud > "Module 2 - Tidyverse" > ex-2-1.qmd
+{{< fa cloud >}} RStudio Cloud > "Module 2 - Tidyverse" > ex-2-2.qmd
 :::
 
 ::: appex
@@ -496,7 +507,11 @@ Using the `loans` data, create side-by-side box plots that shows the relationshi
 See next style for desired output.
 :::
 
-<countdown time="900"/>
+```{r}
+#| echo: false
+
+countdown(minutes = 4, font_size = "1.5em")
+```
 
 ## Desired output
 
@@ -862,7 +877,11 @@ Any other discussion points of interest?
 {{< fa user-group >}} Discuss with your partner for a few minutes first, before sharing with the big group.
 :::
 
-<countdown time="240"/>
+```{r}
+#| echo: false
+
+countdown(minutes = 4, font_size = "1.5em")
+```
 
 ## Time permitting
 

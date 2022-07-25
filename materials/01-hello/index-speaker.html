@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.363">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.0.36">
 
-  <meta name="author" content="Mine Çetinkaya-Rundel">
+  <meta name="author" content="Mine Çetinkaya-Rundel + Maria Tackett">
   <title>Designing the Data Science Classroom - Hello #teachds</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -17,15 +24,72 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
-  <script src="../../site_libs/clipboard/clipboard.min.js"></script>
-  <script src="../../site_libs/quarto-html/tabby.min.js"></script>
-  <script src="../../site_libs/quarto-html/popper.min.js"></script>
-  <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-  <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-  <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
-  <link id="quarto-text-highlighting-styles" href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -316,21 +380,24 @@
       margin-right: 0; 
     }
   </style>
+  <link href="../../site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
+  <script src="../../site_libs/countdown-0.3.5/countdown.js"></script>
 <meta name="twitter:title" content="Designing the Data Science Classroom - Hello #teachds">
+<meta name="twitter:description" content="rstudio::conf(2022)  Designing the data science classroom">
 <meta name="twitter:image" content="https://rstudio-conf-2022.github.io/teach-ds//images/twitter-card.png">
 <meta name="twitter:creator" content="@minebocek">
 <meta name="twitter:image-height" content="599">
 <meta name="twitter:image-width" content="1200">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 <section id="title-slide" class="center">
   <h1 class="title">Hello #teachds</h1>
   <p class="subtitle">rstudio::conf(2022) <br> Designing the data science classroom</p>
-  <p class="author">Mine Çetinkaya-Rundel</p>
+  <p class="author">Mine Çetinkaya-Rundel + Maria Tackett</p>
 </section>
 
 <section>
@@ -367,17 +434,28 @@
 <li>Simon Couch - RStudio</li>
 </ul>
 </section>
+<section id="your-turn" class="slide level2">
+<h2>Your turn!</h2>
+<div class="question">
+<p>Introduce yourselves:</p>
+<ul>
+<li>Name</li>
+<li>Affiliation and/or where you’re joining from (geographically)</li>
+<li>Where you are in your teaching (or learning) journey</li>
+<li>Your favourite thing to teach</li>
+</ul>
+</div>
+</section>
 <section id="workshop-materials" class="slide level2">
 <h2>Workshop materials</h2>
 
-<img data-src="../images/logo.png" alt="Hex logo for workshop" class="r-stretch quarto-figure-center"><div style="text-align: center;">
+<img data-src="../images/logo.png" alt="Hex logo for workshop" style="width:20.0%" class="r-stretch quarto-figure-center"><div style="text-align: center;">
 <p>One link for all materials</p>
 <p>🔗 <a href="https://bit.ly/rstd.io/teach-ds-conf22">bit.ly/rstd.io/teach-ds-conf22</a></p>
 </div>
 </section>
-<section id="schedule" class="slide level2">
+<section id="schedule" class="slide level2 small">
 <h2>Schedule</h2>
-<div class="smalller">
 <div class="columns">
 <div class="column" style="width:45%;">
 <h3 id="day-1">Day 1</h3>
@@ -463,7 +541,6 @@
 </table>
 </div>
 </div>
-</div>
 </section>
 <section id="wifi" class="slide level2">
 <h2>WiFi</h2>
@@ -489,12 +566,9 @@
 <section id="other-useful-info" class="slide level2">
 <h2>Other useful info</h2>
 <ul>
-<li><p>There are gender neutral bathrooms located on the river side of the Potomac Ballroom.</p></li>
-<li><p>The meditation room is located at Potomac Dressing Room (Open 8am - 5pm, Monday - Thursday)</p></li>
-<li><p>The lactation room is located at National Harbor 9 (Open 8am - 5pm, Monday - Thursday)</p>
-<ul>
-<li>The hotel also has a dedicated room behind reception</li>
-</ul></li>
+<li><p>There are gender neutral bathrooms by the National Harbor rooms.</p></li>
+<li><p>The meditation room is located at National Harbor 9. Open 8am - 5pm, Monday - Thursday. The hotel also has a dedicated room behind the reception.</p></li>
+<li><p>The lactation room is located at Potomac Dressing Room. Open 8am - 5pm, Monday - Thursday.</p></li>
 <li><p>Participants who do not wish to be photographed have red lanyards, please note everyone’s lanyard colors before taking a photo and respect their choices.</p></li>
 </ul>
 </section>
@@ -502,13 +576,13 @@
 <h2>Asking for help (Stickies)</h2>
 <div class="r-hstack">
 <div style="text-align: center;">
-<div data-id="box1" style="background: #CC4341; width: 200px; height: 200px; margin: 25px;">
+<div data-id="box1" style="background: #FFA500; width: 200px; height: 200px; margin: 25px;">
 
 </div>
 <p>I’m stuck</p>
 </div>
 <div style="text-align: center;">
-<div data-id="box3" style="background: #A3C586; width: 200px; height: 200px; margin: 25px;">
+<div data-id="box3" style="background: #BF40BF; width: 200px; height: 200px; margin: 25px;">
 
 </div>
 <p>I’m done</p>
@@ -516,18 +590,32 @@
 </div>
 <div class="r-hstack">
 <div style="text-align: center;">
-<p> <br>I have a general question</p>
+<p><img data-src="images/hand.png" data-fig-align="center" style="width:20.0%"> <br>I have a general question</p>
 </div>
 </div>
-<img data-src="images/hand.png" data-fig-align="center" style="width:20.0%" class="r-stretch"></section>
-<section id="other-communication-discord" class="slide level2">
-<h2>Other communication (Discord)</h2>
+</section>
+<section id="discord" class="slide level2">
+<h2>Discord</h2>
 <p>You should have received an email with an invitation and instructions for joining the conference’s discord server.</p>
-<p>This workshop has a private channel under Workshops,</p>
+<p>This workshop has a private channel under Workshops:</p>
 <div class="large" style="text-align: center">
-<p>#📚getting-started-with-shiny</p>
+<p>#📚designing-the-data-science-classroom</p>
 </div>
-<p>This is a great place to ask questions, post resources, memes, or most anything else before, during, and after the workshop.</p>
+<p>This is a great place to ask questions, share responses to exercises, post resources, memes, or most anything else before, during, and after the workshop.</p>
+<div class="callout callout-important callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Take a minute to</p>
+<ul>
+<li>Join the Discord server for conf: <a href="discord.gg/FRxNvG7KP9">https://discord.gg/FRxNvG7KP9</a>.</li>
+<li>If you’re already in, let us know if you’re not in the channel for this workshop.</li>
+</ul>
+</div>
+</div>
+</div>
 </section></section>
 <section>
 <section id="computational-environment" class="title-slide slide level1 center">
@@ -543,10 +631,1033 @@
 </div>
 <p><br></p>
 <p>Once you have joined, navigate to Projects on the top menu.</p>
+</section>
+<section id="using-your-own-system" class="slide level2">
+<h2>Using your own system</h2>
+<p>If you’d like to use your own system, please see <a href="rstudio-conf-2022.github.io/teach-ds/#install">https://rstudio-conf-2022.github.io/teach-ds/#install</a>.</p>
+</section></section>
+<section>
+<section id="principles-for-designing-introductory-data-science-curricula" class="title-slide slide level1 center">
+<h1>Principles for designing introductory data science curricula</h1>
+
+</section>
+<section id="baking-a-cake" class="slide level2 center">
+<h2>Baking a cake</h2>
+<p>Imagine you’re new to baking, and you’re in a baking class. I’m going to present two options for starting the class. Which one gives you <strong>better sense</strong> of the final product?</p>
+</section>
+<section id="baking-a-cake-1" class="slide level2">
+<h2>Baking a cake</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Today we’re going to make a pineapple and coconut sandwich sponge cake with these ingredients</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/cake-ingredients.png"></p>
+</div>
+</div>
+</section>
+<section id="baking-a-cake-2" class="slide level2">
+<h2>Baking a cake</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Today we’re going to make a pineapple and coconut sandwich sponge cake with these ingredients</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/cake-result.png"></p>
+</div>
+</div>
+</section>
+<section id="ok-hold-on-to-that-thought" class="slide level2 center">
+<h2>OK, hold on to that thought!</h2>
+</section>
+<section id="design-foundation-1-backwards-design" class="slide level2">
+<h2>Design foundation 1: Backwards design</h2>
+<p>Set goals for educational curriculum before choosing instructional methods + forms of&nbsp;assessment</p>
+<ol type="1">
+<li>Identify desired results</li>
+<li>Determine acceptable evidence</li>
+<li>Plan learning experiences and instruction</li>
+</ol>
+
+<aside><div>
+<p>Wiggins, Grant P., Grant Wiggins, and Jay McTighe.&nbsp; Understanding by design. Ascd, 2005.</p>
+</div></aside></section>
+<section id="designing-backwards" class="slide level2">
+<h2>Designing backwards</h2>
+<div>
+<ol type="1">
+<li class="fragment">Identify desired <strong>data analysis</strong> results</li>
+<li class="fragment">Determine <strong>building blocks</strong></li>
+<li class="fragment">Plan learning experiences and instruction</li>
+</ol>
+</div>
+</section>
+<section id="design-foundation-1-gaise" class="slide level2 small">
+<h2>Design foundation 1: GAISE</h2>
+<p>2016 Guidelines for Assessment and Instruction in Statistics Education</p>
+<ol type="1">
+<li>Teach statistical thinking.<br>
+</li>
+</ol>
+<ul>
+<li>Teach statistics as an investigative process of problem-solving and decision making.</li>
+<li>Give students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.</li>
+</ul>
+<ol type="1">
+<li>Focus on conceptual understanding.</li>
+<li>Integrate real data with a context and purpose.</li>
+<li>Foster active learning.</li>
+<li>Use technology to explore concepts and analyse data.</li>
+<li>Use assessments to improve and evaluate student learning.</li>
+</ol>
+
+<aside><div>
+<p><a href="https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf">amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf</a></p>
+</div></aside></section>
+<section id="gaise" class="slide level2 small">
+<h2>2016 GAISE</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ol type="1">
+<li>Teach <strong>statistical thinking</strong>.<br>
+</li>
+</ol>
+<ul>
+<li>Teach statistics as an investigative process of problem-solving and decision making.</li>
+<li>Give students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.</li>
+</ul>
+<ol type="1">
+<li>Focus on conceptual understanding.</li>
+<li>Integrate real data with a context and purpose.</li>
+<li>Foster active learning.</li>
+<li>Use technology to explore concepts and analyse data.</li>
+<li>Use assessments to improve and evaluate student learning.</li>
+</ol>
+</div><div class="column" style="width:30%;">
+<p>NOT a commonly used subset of tests and intervals and produce them with hand calculations</p>
+</div>
+</div>
+</section>
+<section id="gaise-1" class="slide level2 small">
+<h2>2016 GAISE</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ol type="1">
+<li>Teach statistical thinking.<br>
+</li>
+</ol>
+<ul>
+<li>Teach statistics as an investigative process of problem-solving and decision making.</li>
+<li>Give students experience with multivariable thinking […] to answer challenging questions that require them to <strong>investigate and explore relationships among many variables</strong>.</li>
+</ul>
+<ol type="1">
+<li>Focus on conceptual understanding.</li>
+<li>Integrate real data with a context and purpose.</li>
+<li>Foster active learning.</li>
+<li>Use technology to explore concepts and analyse data.</li>
+<li>Use assessments to improve and evaluate student learning.</li>
+</ol>
+</div><div class="column" style="width:30%;">
+<p>Multivariate analysis requires the use of computing</p>
+</div>
+</div>
+</section>
+<section id="gaise-2" class="slide level2 small">
+<h2>2016 GAISE</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ol type="1">
+<li>Teach statistical thinking.<br>
+</li>
+</ol>
+<ul>
+<li>Teach statistics as an investigative process of problem-solving and decision making.</li>
+<li>Give students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.</li>
+</ul>
+<ol type="1">
+<li>Focus on conceptual understanding.</li>
+<li>Integrate real data with a context and purpose.</li>
+<li>Foster active learning.</li>
+<li><strong>Use technology</strong> to explore concepts and analyse data.</li>
+<li>Use assessments to improve and evaluate student learning.</li>
+</ol>
+</div><div class="column" style="width:30%;">
+<p>NOT use technology that is only applicable in the intro course or that doesn’t follow good science principles</p>
+</div>
+</div>
+</section>
+<section id="gaise-3" class="slide level2 small">
+<h2>2016 GAISE</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ol type="1">
+<li>Teach statistical thinking.<br>
+</li>
+</ol>
+<ul>
+<li>Teach statistics as an investigative process of problem-solving and decision making.</li>
+<li>Give students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.</li>
+</ul>
+<ol type="1">
+<li>Focus on conceptual understanding.</li>
+<li>Integrate real data with a context and purpose.</li>
+<li>Foster active learning.</li>
+<li>Use technology to explore concepts and <strong>analyse data</strong>.</li>
+<li>Use assessments to improve and evaluate student learning.</li>
+</ol>
+</div><div class="column" style="width:30%;">
+<p>Data analysis isn’t just inference and modelling, it’s also data importing, cleaning, preparation, exploration, and visualization</p>
+</div>
+</div>
+</section>
+<section id="so-where-do-we-go-with-all-this" class="slide level2">
+<h2>So, where do we go with all this?</h2>
+
+<img data-src="images/course-units.png" class="r-stretch"></section>
+<section id="discussion" class="slide level2">
+<h2>Discussion</h2>
+<div class="question">
+<p>Discuss in pairs of three and then as a large group.</p>
+<ul>
+<li>What are your first reactions to the curriculum we just described for an intro data science course?</li>
+<li>Which components can you see yourself (or do you already) include in an intro data science curriculum?</li>
+<li>Which components do you have reservations about, and why?</li>
+</ul>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62de9605" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="which-kitchen-would-you-rather-bake-in" class="slide level2">
+<h2>Which kitchen would you rather bake in?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/kitchen-inrepair.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/kitchen-built.png"></p>
+</div>
+</div>
+</section>
+<section id="design-principle-1-cherish-day-one" class="slide level2">
+<h2>Design principle 1: Cherish day one</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Install R</li>
+<li>Install RStudio</li>
+<li>Install the following packages:
+<ul>
+<li>tidyverse</li>
+<li>rmarkdown</li>
+<li>…</li>
+</ul></li>
+<li>Load these packages</li>
+<li>Install git</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Go to rstudio.cloud (or some other server based solution)</li>
+<li>Log in with your ID &amp; pass</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">&gt;</span> hello R<span class="sc">!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="your-turn-un-votes" class="slide level2">
+<h2>Your turn: UN Votes</h2>
+<div class="cloud">
+<p><i class="fa-solid fa-cloud"></i> Go to rstd.io/teach-ds-conf22-cloud to join the RStudio Cloud workspace for this workshop &gt; Log in &gt; Project (top left) &gt; Start “Module 1 - Hello” &gt; ex-1-1.qmd</p>
+</div>
+<div class="appex">
+<p>Open the Quarto document called <code>ex-1-1.qmd</code>, render the document, view the result. Then, change “Turkey” to another country, and render again.</p>
+</div>
+<div class="share">
+<p><i class="fa-solid fa-user-group"></i> Discuss with your neighbor:</p>
+<ul>
+<li>As a student: Why did you choose the country you chose?</li>
+<li>As an instructor: What went smoothly in the exercise? What didn’t? What would you add to the instructions? What would you take away?</li>
+</ul>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62de95f7" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="how-do-you-prefer-your-cake-recipes-words-only-or-words-pictures" class="slide level2">
+<h2>How do you prefer your cake recipes? Words only, or words &amp; pictures?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/recipe-picture.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/recipe-words.png"></p>
+</div>
+</div>
+</section>
+<section id="design-principle-2-start-with-cake" class="slide level2">
+<h2>Design principle 2: Start with cake</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Open today’s demo project</li>
+<li>Knit the document and discuss the visualisation you made with your neighbor</li>
+<li>Then, change <code>Turkey</code> to a different country, and plot again</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>x <span class="ot">&lt;-</span> <span class="dv">8</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>y <span class="ot">&lt;-</span> <span class="st">"monkey"</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>z <span class="ot">&lt;-</span> <span class="cn">FALSE</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="fu">class</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "numeric"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">class</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "character"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">class</span>(z)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "logical"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="practically-speaking" class="slide level2">
+<h2>Practically speaking…</h2>
+<ul>
+<li>With with great examples, comes a great amount of code…</li>
+<li>So explicitly encourage students to focus on the task at hand</li>
+</ul>
+<div class="appex">
+<ul>
+<li>Open today’s demo project</li>
+<li>Knit the document and discuss the visualization you made with your neighbor</li>
+<li>Then, <strong>change <code>Turkey</code> to a different country, and plot again</strong></li>
+</ul>
+</div>
+</section>
+<section id="focusing-on-the-task-at-hand" class="slide level2">
+<h2>Focusing on the task at hand</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>un_votes <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"United States"</span>, <span class="st">"Turkey"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">inner_join</span>(un_roll_calls, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>  <span class="fu">inner_join</span>(un_roll_call_issues, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>  <span class="fu">mutate</span>(<span class="at">issue =</span> <span class="fu">ifelse</span>(issue <span class="sc">==</span> <span class="st">"Nuclear weapons and nuclear material"</span>,</span>
+<span id="cb8-6"><a href="#cb8-6"></a>                        <span class="st">"Nuclear weapons and materials"</span>, issue)) <span class="sc">|&gt;</span></span>
+<span id="cb8-7"><a href="#cb8-7"></a>  <span class="fu">group_by</span>(country, <span class="at">year =</span> <span class="fu">year</span>(date), issue) <span class="sc">|&gt;</span></span>
+<span id="cb8-8"><a href="#cb8-8"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb8-9"><a href="#cb8-9"></a>    <span class="at">votes =</span> <span class="fu">n</span>(),</span>
+<span id="cb8-10"><a href="#cb8-10"></a>    <span class="at">percent_yes =</span> <span class="fu">mean</span>(vote <span class="sc">==</span> <span class="st">"yes"</span>)</span>
+<span id="cb8-11"><a href="#cb8-11"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb8-12"><a href="#cb8-12"></a>  <span class="fu">filter</span>(votes <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb8-15"><a href="#cb8-15"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb8-16"><a href="#cb8-16"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue) <span class="sc">+</span></span>
+<span id="cb8-17"><a href="#cb8-17"></a>    <span class="fu">labs</span>(</span>
+<span id="cb8-18"><a href="#cb8-18"></a>      <span class="at">title =</span> <span class="st">"Percentage of Yes votes in the UN General Assembly"</span>,</span>
+<span id="cb8-19"><a href="#cb8-19"></a>      <span class="at">subtitle =</span> <span class="st">"1946 to 2015"</span>,</span>
+<span id="cb8-20"><a href="#cb8-20"></a>      <span class="at">y =</span> <span class="st">"% Yes"</span>,</span>
+<span id="cb8-21"><a href="#cb8-21"></a>      <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb8-22"><a href="#cb8-22"></a>      <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb8-23"><a href="#cb8-23"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="focusing-on-the-task-at-hand-1" class="slide level2">
+<h2>Focusing on the task at hand</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>un_votes <span class="sc">|&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"United States"</span>, <span class="st">"Turkey"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>  <span class="fu">inner_join</span>(un_roll_calls, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>  <span class="fu">inner_join</span>(un_roll_call_issues, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>  <span class="fu">group_by</span>(country, <span class="at">year =</span> <span class="fu">year</span>(date), issue) <span class="sc">|&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="at">votes =</span> <span class="fu">n</span>(),</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="at">perc_yes =</span> <span class="fu">mean</span>(vote <span class="sc">==</span> <span class="st">"yes"</span>)</span>
+<span id="cb9-9"><a href="#cb9-9"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>  <span class="fu">filter</span>(votes <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">|&gt;</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> perc_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb9-12"><a href="#cb9-12"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb9-13"><a href="#cb9-13"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb9-14"><a href="#cb9-14"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue) <span class="sc">+</span></span>
+<span id="cb9-15"><a href="#cb9-15"></a>    <span class="fu">labs</span>(</span>
+<span id="cb9-16"><a href="#cb9-16"></a>      <span class="at">title =</span> <span class="st">"Percentage of Yes votes in the UN General Assembly"</span>,</span>
+<span id="cb9-17"><a href="#cb9-17"></a>      <span class="at">subtitle =</span> <span class="st">"1946 to 2015"</span>,</span>
+<span id="cb9-18"><a href="#cb9-18"></a>      <span class="at">y =</span> <span class="st">"% Yes"</span>, <span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb9-19"><a href="#cb9-19"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="focusing-on-the-task-at-hand-2" class="slide level2">
+<h2>Focusing on the task at hand</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>un_votes <span class="sc">|&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2"></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"United States"</span>, <span class="st">"France"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">inner_join</span>(un_roll_calls, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">inner_join</span>(un_roll_call_issues, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5"></a>  <span class="fu">group_by</span>(country, <span class="at">year =</span> <span class="fu">year</span>(date), issue) <span class="sc">|&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb10-7"><a href="#cb10-7"></a>    <span class="at">votes =</span> <span class="fu">n</span>(),</span>
+<span id="cb10-8"><a href="#cb10-8"></a>    <span class="at">perc_yes =</span> <span class="fu">mean</span>(vote <span class="sc">==</span> <span class="st">"yes"</span>)</span>
+<span id="cb10-9"><a href="#cb10-9"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>  <span class="fu">filter</span>(votes <span class="sc">&gt;</span> <span class="dv">5</span>) <span class="sc">|&gt;</span></span>
+<span id="cb10-11"><a href="#cb10-11"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> perc_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
+<span id="cb10-12"><a href="#cb10-12"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb10-13"><a href="#cb10-13"></a>    <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"loess"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb10-14"><a href="#cb10-14"></a>    <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue) <span class="sc">+</span></span>
+<span id="cb10-15"><a href="#cb10-15"></a>    <span class="fu">labs</span>(</span>
+<span id="cb10-16"><a href="#cb10-16"></a>      <span class="at">title =</span> <span class="st">"Percentage of Yes votes in the UN General Assembly"</span>,</span>
+<span id="cb10-17"><a href="#cb10-17"></a>      <span class="at">subtitle =</span> <span class="st">"1946 to 2015"</span>,</span>
+<span id="cb10-18"><a href="#cb10-18"></a>      <span class="at">y =</span> <span class="st">"% Yes"</span>, <span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">color =</span> <span class="st">"Country"</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="your-turn-exercise-design" class="slide level2 small">
+<h2>Your turn: Exercise design</h2>
+<div class="cloud">
+<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; “Module 1 - Hello” &gt; ex-1-2.qmd</p>
+</div>
+<div class="appex">
+<ul>
+<li>Your challenge is to go from nothing to a data visualization in 15 minutes of your first class. Don’t worry about the computing infrastructure (we’ll get to that later in the day), assume students have successfully landed in RStudio Cloud like you did earlier. Design an exercise for them to “create” their first visualization.</li>
+<li>If you need inspiration, you can use the <code>ggplot2::diamonds</code> or <code>dplyr::starwars</code> dataset or any dataset from <code>nycflights13</code> or <code>gapminder</code> packages.</li>
+<li>If you already have a first day exercise you like, you’re welcomed to modify it to fit the challenge: from nothing to a data visualization in 15 minutes!</li>
+</ul>
+</div>
+<div class="share">
+<p><i class="fa-solid fa-user-group"></i> Compare notes with your neighbor. <i class="fa-brands fa-discord"></i> Share your exercise on Discord.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62de9585" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="which-motivates-you-more-to-learn-how-to-cook-perfectly-chopped-onions-or-ratatouille" class="slide level2">
+<h2>Which motivates you more to learn how to cook: perfectly chopped onions or ratatouille?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/chop-onions.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/make-ratatouille.png"></p>
+</div>
+</div>
+</section>
+<section id="design-principle-3-skip-baby-steps" class="slide level2">
+<h2>Design principle 3: Skip baby steps</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unvotes-univariate-1.png" width="960"></p>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/unvotes-multivariate-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="practically-speaking-1" class="slide level2">
+<h2>Practically speaking…</h2>
+<ul>
+<li>Non-trivial examples can be motivating, but need to avoid…</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:30%;">
+<p><img data-src="images/owl-step1.png"></p>
+</div><div class="column" style="width:30%;">
+<p><img data-src="images/owl-step2.png"></p>
+</div>
+</div>
+<ul>
+<li>Scaffold and layer in between!</li>
+</ul>
+</section>
+<section id="discussion-1" class="slide level2">
+<h2>Discussion</h2>
+<div class="question">
+<p>The following code is used to create the multivariate visualisation we saw earlier. How much of the code would you show/hide when just starting teaching ggplot2?</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>un_votes <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"United States"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">inner_join</span>(un_roll_calls, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a>  <span class="fu">inner_join</span>(un_roll_call_issues, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb11-5"><a href="#cb11-5"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb11-6"><a href="#cb11-6"></a>    <span class="at">importantvote =</span> <span class="fu">ifelse</span>(importantvote <span class="sc">==</span> <span class="dv">0</span>, <span class="st">"No"</span>, <span class="st">"Yes"</span>),</span>
+<span id="cb11-7"><a href="#cb11-7"></a>    <span class="at">issue =</span> <span class="fu">ifelse</span>(issue <span class="sc">==</span> <span class="st">"Nuclear weapons and nuclear material"</span>, <span class="st">"Nuclear weapons and materials"</span>, issue)</span>
+<span id="cb11-8"><a href="#cb11-8"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb11-9"><a href="#cb11-9"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> importantvote, <span class="at">fill =</span> vote)) <span class="sc">+</span></span>
+<span id="cb11-10"><a href="#cb11-10"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb11-11"><a href="#cb11-11"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb11-12"><a href="#cb11-12"></a>  <span class="fu">labs</span>(</span>
+<span id="cb11-13"><a href="#cb11-13"></a>    <span class="at">title =</span> <span class="st">"How the US voted in the UN"</span>, </span>
+<span id="cb11-14"><a href="#cb11-14"></a>    <span class="at">subtitle =</span> <span class="st">"By issue and importance of vote"</span>,</span>
+<span id="cb11-15"><a href="#cb11-15"></a>    <span class="at">x =</span> <span class="st">"Important vote"</span>, <span class="at">y =</span> <span class="st">""</span>, <span class="at">fill =</span> <span class="st">"Vote"</span></span>
+<span id="cb11-16"><a href="#cb11-16"></a>    ) <span class="sc">+</span></span>
+<span id="cb11-17"><a href="#cb11-17"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb11-18"><a href="#cb11-18"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">"E"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62de96cb" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="designing-code-snippets-for-teaching" class="slide level2">
+<h2>Designing code snippets for teaching</h2>
+<ul>
+<li><p>Write it out to your heart’s desire and polish it</p></li>
+<li><p>Then, split into three parts:</p>
+<ul>
+<li><strong>Pre-process:</strong> Required, but isn’t directly connected to / far off from learning goals of current lesson</li>
+<li><strong>Stash:</strong> Not required, and not directly connected to learning goals of current lesson
+<ul>
+<li>Likely concepts that fit better into future lessons)</li>
+</ul></li>
+<li><strong>Feature:</strong> Heart of the lesson (and maybe a review of a previous lessons)</li>
+</ul></li>
+<li><p>Finally, decide on the pace at which to scaffold and layer</p></li>
+</ul>
+</section>
+<section id="pre-process" class="slide level2">
+<h2>Pre-process</h2>
+<p>We’ll call the highlighted lines <code>us_votes</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="1-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>un_votes <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"United States"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">inner_join</span>(un_roll_calls, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a>  <span class="fu">inner_join</span>(un_roll_call_issues, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a href="#cb12-5"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb12-6"><a href="#cb12-6"></a>    <span class="at">importantvote =</span> <span class="fu">ifelse</span>(importantvote <span class="sc">==</span> <span class="dv">0</span>, <span class="st">"No"</span>, <span class="st">"Yes"</span>),</span>
+<span id="cb12-7"><a href="#cb12-7"></a>    <span class="at">issue =</span> <span class="fu">ifelse</span>(issue <span class="sc">==</span> <span class="st">"Nuclear weapons and nuclear material"</span>, <span class="st">"Nuclear weapons and materials"</span>, issue)</span>
+<span id="cb12-8"><a href="#cb12-8"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> importantvote, <span class="at">fill =</span> vote)) <span class="sc">+</span></span>
+<span id="cb12-10"><a href="#cb12-10"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb12-11"><a href="#cb12-11"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb12-12"><a href="#cb12-12"></a>  <span class="fu">labs</span>(</span>
+<span id="cb12-13"><a href="#cb12-13"></a>    <span class="at">title =</span> <span class="st">"How the US voted in the UN"</span>, </span>
+<span id="cb12-14"><a href="#cb12-14"></a>    <span class="at">subtitle =</span> <span class="st">"By issue and importance of vote"</span>,</span>
+<span id="cb12-15"><a href="#cb12-15"></a>    <span class="at">x =</span> <span class="st">"Important vote"</span>, <span class="at">y =</span> <span class="st">""</span>, <span class="at">fill =</span> <span class="st">"Vote"</span></span>
+<span id="cb12-16"><a href="#cb12-16"></a>    ) <span class="sc">+</span></span>
+<span id="cb12-17"><a href="#cb12-17"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb12-18"><a href="#cb12-18"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">"E"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="preprocess" class="slide level2">
+<h2>Preprocess</h2>
+<div class="cell">
+
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a>us_votes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5,718 × 14
+    rcid country       country_code vote  session importantvote date       unres      amend  para short                       descr                                                     short_name issue
+   &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;        &lt;fct&gt;   &lt;dbl&gt; &lt;chr&gt;         &lt;date&gt;     &lt;chr&gt;      &lt;int&gt; &lt;int&gt; &lt;chr&gt;                       &lt;chr&gt;                                                     &lt;chr&gt;      &lt;chr&gt;
+ 1     6 United States US           no          1 No            1946-01-04 R/1/107        0     0 DECLARATION OF HUMAN RIGHTS "TO ADOPT A CUBAN PROPOSAL (A/3-C) THAT AN ITEM ON A DEC… hr         4    
+ 2     8 United States US           no          1 No            1946-01-05 R/1/297        1     0 ECOSOC POWERS               "TO ADOPT A SECOND 6TH COMM. AMENDMENT (A/14) TO THE PRO… ec         3    
+ 3    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      "TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE … co         1    
+ 4    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      "TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE … ec         3    
+ 5    18 United States US           no          1 No            1946-02-03 R/1/532        1     0 ECOSOC CONSULTANTS          "TO ADOPT USSR (ORAL) AMENDMENT REPLACING THE 1ST COMM. … ec         3    
+ 6    19 United States US           yes         1 No            1946-02-03 R/1/534        0     0 ECOSOC CONSULTANTS          "TO ADOPT THE 1ST COMM. DRAFT RESOLUTION (A/54/REV.1) PR… ec         3    
+ 7    24 United States US           yes         1 No            1946-12-05 R/1/1229       0     0 ECOSOC ELECTIONS            "TO ADOPT BELGIAN ORAL PROPOSAL TO SURRENDER BELGIUM'S S… ec         3    
+ 8    26 United States US           no          1 No            1946-12-06 R/1/1286       0     0 TRUSTEESHIP AGREEMENTS      "TO ADOPT USSR ORAL RESOL. REJECTING 8 DRAFT TRUSTEESHIP… co         1    
+ 9    27 United States US           yes         1 No            1946-12-06 R/1/1287/A     0     0 NEW GUINEA TRUSTEESHIP      "TO ADOPT THE TRUSTEESHIP AGREEMENT FOR NEW GUINEA SUBMI… co         1    
+10    28 United States US           yes         1 No            1946-12-06 R/1/1287/B     0     0 RUANDA-URUNDI TRUSTEESHIP   "TO ADOPT THE TRUSTEESHIP AGREEMENT FOR RUANDA-URUNDI SU… co         1    
+# … with 5,708 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="stash" class="slide level2">
+<h2>Stash</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="18-19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>un_votes <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"United States"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb15-3"><a href="#cb15-3"></a>  <span class="fu">inner_join</span>(un_roll_calls, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>  <span class="fu">inner_join</span>(un_roll_call_issues, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb15-6"><a href="#cb15-6"></a>    <span class="at">importantvote =</span> <span class="fu">ifelse</span>(importantvote <span class="sc">==</span> <span class="dv">0</span>, <span class="st">"No"</span>, <span class="st">"Yes"</span>),</span>
+<span id="cb15-7"><a href="#cb15-7"></a>    <span class="at">issue =</span> <span class="fu">ifelse</span>(issue <span class="sc">==</span> <span class="st">"Nuclear weapons and nuclear material"</span>, <span class="st">"Nuclear weapons and materials"</span>, issue)</span>
+<span id="cb15-8"><a href="#cb15-8"></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb15-9"><a href="#cb15-9"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> importantvote, <span class="at">fill =</span> vote)) <span class="sc">+</span></span>
+<span id="cb15-10"><a href="#cb15-10"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb15-11"><a href="#cb15-11"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb15-12"><a href="#cb15-12"></a>  <span class="fu">labs</span>(</span>
+<span id="cb15-13"><a href="#cb15-13"></a>    <span class="at">title =</span> <span class="st">"How the US voted in the UN"</span>, </span>
+<span id="cb15-14"><a href="#cb15-14"></a>    <span class="at">subtitle =</span> <span class="st">"By issue and importance of vote"</span>,</span>
+<span id="cb15-15"><a href="#cb15-15"></a>    <span class="at">x =</span> <span class="st">"Important vote"</span>, <span class="at">y =</span> <span class="st">""</span>, <span class="at">fill =</span> <span class="st">"Vote"</span></span>
+<span id="cb15-16"><a href="#cb15-16"></a>    ) <span class="sc">+</span></span>
+<span id="cb15-17"><a href="#cb15-17"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb15-18"><a href="#cb15-18"></a>  <span class="fu">scale_fill_viridis_d</span>(<span class="at">option =</span> <span class="st">"E"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="feature" class="slide level2">
+<h2>Feature</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>us_votes <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y =</span> importantvote, <span class="at">fill =</span> vote)) <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>  <span class="fu">labs</span>(</span>
+<span id="cb16-6"><a href="#cb16-6"></a>    <span class="at">title =</span> <span class="st">"How the US voted in the UN"</span>, </span>
+<span id="cb16-7"><a href="#cb16-7"></a>    <span class="at">subtitle =</span> <span class="st">"By issue and importance of vote"</span>,</span>
+<span id="cb16-8"><a href="#cb16-8"></a>    <span class="at">x =</span> <span class="st">"Important vote"</span>, <span class="at">y =</span> <span class="st">""</span>, <span class="at">fill =</span> <span class="st">"Vote"</span></span>
+<span id="cb16-9"><a href="#cb16-9"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="scaffold-1" class="slide level2">
+<h2>Scaffold 1</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/scaffold-layer-1-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="scaffold-2" class="slide level2">
+<h2>Scaffold 2</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="2-3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_votes, </span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> importantvote,</span>
+<span id="cb18-3"><a href="#cb18-3"></a>                <span class="at">fill =</span> vote))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/scaffold-layer-2-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="scaffold-3" class="slide level2">
+<h2>Scaffold 3</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_votes, </span>
+<span id="cb19-2"><a href="#cb19-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> importantvote,</span>
+<span id="cb19-3"><a href="#cb19-3"></a>                <span class="at">fill =</span> vote)) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/scaffold-layer-3-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="scaffold-4" class="slide level2">
+<h2>Scaffold 4</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_votes, </span>
+<span id="cb20-2"><a href="#cb20-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> importantvote,</span>
+<span id="cb20-3"><a href="#cb20-3"></a>                <span class="at">fill =</span> vote)) <span class="sc">+</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue, <span class="at">ncol =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/scaffold-layer-4-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="scaffold-5" class="slide level2">
+<h2>Scaffold 5</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="6-11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_votes, </span>
+<span id="cb21-2"><a href="#cb21-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> importantvote,</span>
+<span id="cb21-3"><a href="#cb21-3"></a>                <span class="at">fill =</span> vote)) <span class="sc">+</span></span>
+<span id="cb21-4"><a href="#cb21-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb21-5"><a href="#cb21-5"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-7"><a href="#cb21-7"></a>    <span class="at">title =</span> <span class="st">"How the US voted in the UN"</span>,</span>
+<span id="cb21-8"><a href="#cb21-8"></a>    <span class="at">subtitle =</span> <span class="st">"By issue and importance of vote"</span>, </span>
+<span id="cb21-9"><a href="#cb21-9"></a>    <span class="at">x =</span> <span class="st">"Important vote"</span>, </span>
+<span id="cb21-10"><a href="#cb21-10"></a>    <span class="at">y =</span> <span class="st">""</span> </span>
+<span id="cb21-11"><a href="#cb21-11"></a>    ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/scaffold-layer-5-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="scaffold-6" class="slide level2">
+<h2>Scaffold 6</h2>
+<div class="cell columns column-output-location">
+<div class="column">
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_votes, </span>
+<span id="cb22-2"><a href="#cb22-2"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">y =</span> importantvote,</span>
+<span id="cb22-3"><a href="#cb22-3"></a>                <span class="at">fill =</span> vote)) <span class="sc">+</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> issue, <span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a>  <span class="fu">labs</span>(</span>
+<span id="cb22-7"><a href="#cb22-7"></a>    <span class="at">title =</span> <span class="st">"How the US voted in the UN"</span>,</span>
+<span id="cb22-8"><a href="#cb22-8"></a>    <span class="at">subtitle =</span> <span class="st">"By issue and importance of vote"</span>, </span>
+<span id="cb22-9"><a href="#cb22-9"></a>    <span class="at">x =</span> <span class="st">"Important vote"</span>, </span>
+<span id="cb22-10"><a href="#cb22-10"></a>    <span class="at">y =</span> <span class="st">""</span>,</span>
+<span id="cb22-11"><a href="#cb22-11"></a>    <span class="at">fill =</span> <span class="st">"Vote"</span></span>
+<span id="cb22-12"><a href="#cb22-12"></a>    ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output-display">
+<p><img data-src="index_files/figure-revealjs/scaffold-layer-6-1.png" width="960"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="skip-re-insert-baby-steps" class="slide level2">
+<h2><del>Skip</del> Re-insert baby steps</h2>
+
+<img data-src="images/learnr-visualise.png" class="r-stretch"></section>
+<section id="which-is-more-likely-to-appeal-to-someone-who-has-never-tried-broccoli" class="slide level2">
+<h2>Which is more likely to appeal to someone who has never tried broccoli?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/broccoli-raw.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/broccoli-cooked.png"></p>
+</div>
+</div>
+</section>
+<section id="design-principle-4-hide-the-veggies" class="slide level2">
+<h2>Design principle 4: Hide the veggies</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Today we’re going to do web scraping</p>
+<ul>
+<li>Using the <strong>rvest</strong> package</li>
+<li>And with the help of <em>regular expressions</em></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Today we go from this to that</li>
+</ul>
+<p><img data-src="images/open-secrets-nc.png"></p>
+<ul>
+<li>and do so in a way that is easy to replicate for another state</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="practically-speaking-2" class="slide level2">
+<h2>Practically speaking…</h2>
+<ul>
+<li>Students will encounter lots of new challenges along the way</li>
+<li>Let that happen, and then provide a solution</li>
+</ul>
+</section>
+<section id="start-with-a-mini-lecture" class="slide level2">
+<h2>Start with a mini-lecture</h2>
+<ul>
+<li><strong>Lesson:</strong> Web scraping essentials for turning a structured table into a data frame in R.</li>
+</ul>
+</section>
+<section id="follow-up-with-a-hands-on-exercise" class="slide level2">
+<h2>Follow up with a hands-on exercise</h2>
+<ul>
+<li><strong>Lesson:</strong> Web scraping essentials for turning a structured table into a data frame in R.</li>
+<li><strong>Ex 1:</strong> Scrape the table off the web and save as a data frame.</li>
+</ul>
+
+<img data-src="images/open-secrets-nc-ex1.png" class="r-stretch"></section>
+<section id="and-a-thought-exercise" class="slide level2">
+<h2>And a thought exercise</h2>
+<ul>
+<li><strong>Lesson:</strong> Web scraping essentials for turning a structured table into a data frame in R.</li>
+<li><strong>Ex 1:</strong> Scrape the table off the web and save as a data frame.</li>
+<li><strong>Ex 2:</strong> What other information do we need represented as variables in the data to obtain the desired facets?</li>
+</ul>
+
+<img data-src="images/open-secrets-nc-ex2.png" class="r-stretch"></section>
+<section id="and-finally-the-veggies" class="slide level2">
+<h2>And finally, the veggies!</h2>
+<ul>
+<li><strong>Lesson:</strong> Web scraping essentials for turning a structured table into a data frame in R.</li>
+<li><strong>Ex 1:</strong> Scrape the table off the web and save as a data frame.</li>
+<li><strong>Ex 2:</strong> What other information do we need represented as variables in the data to obtain the desired facets?</li>
+<li><strong>Lesson:</strong> “Just enough” string parsing and regular expressions to go from</li>
+</ul>
+
+<img data-src="images/open-secrets-nc-ex3.png" class="r-stretch"></section>
+<section id="if-you-are-already-taking-a-baking-class-which-will-be-easier-to-venture-on-to" class="slide level2">
+<h2>If you are already taking a baking class, which will be easier to venture on to?</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/make-pastries.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/make-tacos.png"></p>
+</div>
+</div>
+</section>
+<section id="design-principle-5-leverage-the-ecosystem" class="slide level2">
+<h2>Design principle 5: Leverage the ecosystem</h2>
+<p>Estimate the difference between the average evaluation score of male and female faculty.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a>evals <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">specify</span>(score <span class="sc">~</span> gender) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a href="#cb23-3"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">100</span>, </span>
+<span id="cb23-4"><a href="#cb23-4"></a>    <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-5"><a href="#cb23-5"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>, </span>
+<span id="cb23-6"><a href="#cb23-6"></a>    <span class="at">order =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb23-7"><a href="#cb23-7"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb23-8"><a href="#cb23-8"></a>    <span class="at">l =</span> <span class="fu">quantile</span>(stat, <span class="fl">0.025</span>), </span>
+<span id="cb23-9"><a href="#cb23-9"></a>    <span class="at">u =</span> <span class="fu">quantile</span>(stat, <span class="fl">0.975</span>)</span>
+<span id="cb23-10"><a href="#cb23-10"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+       l     u
+   &lt;dbl&gt; &lt;dbl&gt;
+1 0.0531 0.238</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">t.test</span>(evals<span class="sc">$</span>score <span class="sc">~</span> evals<span class="sc">$</span>gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Welch Two Sample t-test
+
+data:  evals$score by evals$gender
+t = -2.7507, df = 398.7, p-value = 0.006218
+alternative hypothesis: true difference in means between group female and group male is not equal to 0
+95 percent confidence interval:
+ -0.24264375 -0.04037194
+sample estimates:
+mean in group female   mean in group male 
+            4.092821             4.234328 </code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="infer-in-tidymodels" class="slide level2">
+<h2>infer <span class="math inline">\(\in\)</span> tidymodels</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The objective of this package is to perform statistical inference using an expressive statistical grammar that coheres with the tidyverse design framework.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/infer-hex.png"></p>
+</div>
+</div>
+</section>
+<section id="infer-1" class="slide level2">
+<h2>infer 1</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a>evals <span class="sc">|&gt;</span></span>
+<span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">specify</span>(score <span class="sc">~</span> gender)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Response: score (numeric)
+Explanatory: gender (factor)
+# A tibble: 463 × 2
+   score gender
+   &lt;dbl&gt; &lt;fct&gt; 
+ 1   4.7 female
+ 2   4.1 female
+ 3   3.9 female
+ 4   4.8 female
+ 5   4.6 male  
+ 6   4.3 male  
+ 7   2.8 male  
+ 8   4.1 male  
+ 9   3.4 male  
+10   4.5 female
+# … with 453 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="infer-2" class="slide level2">
+<h2>infer 2</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb29-2"><a href="#cb29-2"></a>evals <span class="sc">|&gt;</span></span>
+<span id="cb29-3"><a href="#cb29-3"></a>  <span class="fu">specify</span>(score <span class="sc">~</span> gender) <span class="sc">|&gt;</span></span>
+<span id="cb29-4"><a href="#cb29-4"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Response: score (numeric)
+Explanatory: gender (factor)
+# A tibble: 46,300 × 3
+# Groups:   replicate [100]
+   replicate score gender
+       &lt;int&gt; &lt;dbl&gt; &lt;fct&gt; 
+ 1         1   4   female
+ 2         1   3.1 male  
+ 3         1   5   male  
+ 4         1   4.4 male  
+ 5         1   3.5 female
+ 6         1   4.5 female
+ 7         1   4.5 male  
+ 8         1   4.9 male  
+ 9         1   4.4 male  
+10         1   3.5 male  
+# … with 46,290 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="infer-3" class="slide level2">
+<h2>infer 3</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb31-2"><a href="#cb31-2"></a>evals <span class="sc">|&gt;</span></span>
+<span id="cb31-3"><a href="#cb31-3"></a>  <span class="fu">specify</span>(score <span class="sc">~</span> gender) <span class="sc">|&gt;</span></span>
+<span id="cb31-4"><a href="#cb31-4"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb31-5"><a href="#cb31-5"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>, <span class="at">order =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Response: score (numeric)
+Explanatory: gender (factor)
+# A tibble: 100 × 2
+   replicate     stat
+       &lt;int&gt;    &lt;dbl&gt;
+ 1         1  0.230  
+ 2         2  0.134  
+ 3         3  0.100  
+ 4         4  0.230  
+ 5         5  0.128  
+ 6         6  0.201  
+ 7         7  0.168  
+ 8         8  0.130  
+ 9         9 -0.00490
+10        10  0.123  
+# … with 90 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="infer-4" class="slide level2">
+<h2>infer 4</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb33-2"><a href="#cb33-2"></a>evals <span class="sc">|&gt;</span></span>
+<span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">specify</span>(score <span class="sc">~</span> gender) <span class="sc">|&gt;</span></span>
+<span id="cb33-4"><a href="#cb33-4"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb33-5"><a href="#cb33-5"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>, <span class="at">order =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb33-6"><a href="#cb33-6"></a>  <span class="fu">visualise</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
+<section id="infer-4-1" class="slide level2">
+<h2>infer 4</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">set.seed</span>(<span class="dv">1234</span>)</span>
+<span id="cb34-2"><a href="#cb34-2"></a>evals <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">specify</span>(score <span class="sc">~</span> gender) <span class="sc">|&gt;</span></span>
+<span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">generate</span>(<span class="at">reps =</span> <span class="dv">100</span>, <span class="at">type =</span> <span class="st">"bootstrap"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-5"><a href="#cb34-5"></a>  <span class="fu">calculate</span>(<span class="at">stat =</span> <span class="st">"diff in means"</span>, <span class="at">order =</span> <span class="fu">c</span>(<span class="st">"male"</span>, <span class="st">"female"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb34-6"><a href="#cb34-6"></a>  <span class="fu">summarise</span>(<span class="at">l =</span> <span class="fu">quantile</span>(stat, <span class="fl">0.025</span>), <span class="at">u =</span> <span class="fu">quantile</span>(stat, <span class="fl">0.975</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+       l     u
+   &lt;dbl&gt; &lt;dbl&gt;
+1 0.0285 0.238</code></pre>
+</div>
+</div>
+</section>
+<section id="one-other-way-to-leverage-the-ecosystem" class="slide level2">
+<h2>One other way to “leverage the ecosystem”</h2>
+<p>Do it all in R!</p>
+<ul>
+<li>Slides, course, course notes / textbook with <strong>Quarto</strong></li>
+<li>A student dashboard with <strong>flexdashboard</strong></li>
+<li>Git automation with <strong>ghclass</strong></li>
+<li>Interactive tutorials with <strong>learnr</strong></li>
+<li>…</li>
+</ul>
+</section></section>
+<section>
+<section id="meet-the-toolkit" class="title-slide slide level1 center">
+<h1>Meet the toolkit</h1>
+
+</section>
+<section id="course-toolkit" class="slide level2">
+<h2>Course toolkit</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Workshop operation:</p>
+<ul>
+<li>rstd.io/teach-ds-conf22</li>
+<li>Discord</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p>Doing data science:</p>
+<ul>
+<li>Programming:
+<ul>
+<li>R</li>
+<li>RStudio</li>
+<li>tidyverse</li>
+<li>Quarto</li>
+</ul></li>
+<li>Version control and collaboration:
+<ul>
+<li>Git</li>
+<li>GitHub</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="toolkit-for-reproducibility" class="slide level2">
+<h2>Toolkit for reproducibility</h2>
+<ul>
+<li>Scriptability <span class="math inline">\(\rightarrow\)</span> R</li>
+<li>Literate programming (code, narrative, output in one place) <span class="math inline">\(\rightarrow\)</span> Quarto</li>
+<li>Version control <span class="math inline">\(\rightarrow\)</span> Git / GitHub</li>
+</ul>
+</section>
+<section id="quarto" class="slide level2">
+<h2>Quarto</h2>
+<ul>
+<li>Fully reproducible reports – each time you render the analysis is ran from the beginning</li>
+<li>A visual editor (just like Google Docs) for authoring</li>
+<li>Code goes in chunks, narrative goes outside of chunks</li>
+</ul>
+</section>
+<section id="how-will-we-use-quarto" class="slide level2">
+<h2>How will we use Quarto?</h2>
+<ul>
+<li>Every exercise is a Quarto document</li>
+<li>You’ll always have a template Quarto document to start with</li>
+</ul>
+</section>
+<section id="your-turn-bechdel-quarto" class="slide level2">
+<h2>Your turn: Bechdel + Quarto</h2>
+<div class="cloud">
+<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; “Module 1 - Hello” &gt; ex-1-3.qmd</p>
+</div>
+<div class="appex">
+<p><a href="https://en.wikipedia.org/wiki/Bechdel_test">The Bechdel test</a> asks whether a work of fiction features at least two women who talk to each other about something other than a man, and there must be two women named characters. Review and render the documnt, then fill in the blanks.</p>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62de9725" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 
 
 <img src="../images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
-<p><a href="https://rstd.io/teach-ds-conf22">🔗 rstd.io/teach-ds-conf22</a></p>
+<p><a href="https://rstd.io/teach-ds-conf22">🔗 rstd.io/teach-ds-conf22</a> / Module 1</p>
 </div>
 </section></section>
     </div>
@@ -635,7 +1746,7 @@
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -765,8 +1876,68 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);

@@ -1,6 +1,6 @@
 ---
-title: "Feature engineering"
-subtitle: "Exercise 1"
+title: "Ex 3.1: Feature engineering"
+subtitle: "teach_ds :: Teaching modern modeling with tidymodels"
 editor: visual
 ---
 
@@ -18,11 +18,14 @@ library(openintro)
 
 ## Introduction
 
-Some of the code below has been pre-populated. In these cases, there is a code chunk option set as `#| eval: false`. Make sure to remove this option prior to running the relevant code chunk to avoid any errors when rendering the document.
+Some of the code below has been pre-populated.
+In these cases, there is a code chunk option set as `#| eval: false`.
+Make sure to remove this option prior to running the relevant code chunk to avoid any errors when rendering the document.
 
 ## Data
 
-The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the [**openintro** package](https://cran.r-project.org/web/packages/openintro/index.html) and featured in the [OpenIntro textbooks](https://openintro-ims.netlify.app/) . It contains information about 50,000 loans made through the Lending Club platform.
+The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the [**openintro** package](https://cran.r-project.org/web/packages/openintro/index.html) and featured in the [OpenIntro textbooks](https://openintro-ims.netlify.app/) .
+It contains information about 50,000 loans made through the Lending Club platform.
 
 The data has a bit of peculiarity about it, specifically the `application_type` variable is a factor variable with an empty level.
 
@@ -30,7 +33,8 @@ The data has a bit of peculiarity about it, specifically the `application_type` 
 levels(loans_full_schema$application_type)
 ```
 
-Let's clean up this variable using the `droplevels()` function first. And let's apply that to the whole data set, in case there are other variables with similar issues.
+Let's clean up this variable using the `droplevels()` function first.
+And let's apply that to the whole data set, in case there are other variables with similar issues.
 
 ```{r}
 loans_full_schema <- droplevels(loans_full_schema)
@@ -45,7 +49,8 @@ The variables we'll use in this analysis are:
 
 ## Model
 
-The goal is to fit a model to predict the interest rate (`interest_rate`) based on the debt to income ratio (`debt_to_income`), type of application (`application_type`), and whether there are any bankruptcies listed in the public record for the individual (`bankrupt`). The model should allow the effect of debt to income ratio to differ based on application type.
+The goal is to fit a model to predict the interest rate (`interest_rate`) based on the debt to income ratio (`debt_to_income`), type of application (`application_type`), and whether there are any bankruptcies listed in the public record for the individual (`bankrupt`).
+The model should allow the effect of debt to income ratio to differ based on application type.
 
 $$
 \begin{align}\widehat{interest\_rate} = b_0 &+ b_1 \times debt\_to\_income \\ &+ b_2 \times application\_type \\ &+ b_3 \times bankrupt \\ &+ b_4 \times debt\_to\_income:application\_type\end{align}
@@ -70,7 +75,10 @@ loans_full_schema_mod <- loans_full_schema |>
 
 ## Feature engineering using recipes
 
-Complete the code below to write the recipe for this model. Call the recipe `loans_rec`. Use the appropriate `step_*` functions to complete the feature engineering steps shown in the dplyr pipeline above. You can find the list of `step_*` functions on the [recipes reference page](https://recipes.tidymodels.org/reference/index.html#step-functions-imputation).
+Complete the code below to write the recipe for this model.
+Call the recipe `loans_rec`.
+Use the appropriate `step_*` functions to complete the feature engineering steps shown in the dplyr pipeline above.
+You can find the list of `step_*` functions on the [recipes reference page](https://recipes.tidymodels.org/reference/index.html#step-functions-imputation).
 
 ```{r}
 #| label: feature-recipes
@@ -94,4 +102,5 @@ loans_rec |>
 
 ## Discussion
 
-What was easy / straightforward about writing the recipe? What was challenging?
+What was easy / straightforward about writing the recipe?
+What was challenging?

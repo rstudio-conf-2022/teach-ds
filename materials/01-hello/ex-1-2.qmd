@@ -1,0 +1,13 @@
+---
+title: "Ex 1.1: Exercise design"
+subtitle: "teach_ds :: Teaching data science with the tidyverse"
+editor: visual
+---
+
+-   Your challenge is to go from nothing to a data visualization in 15 minutes of your first class. Don't worry about the computing infrastructure (we'll get to that later in the day), assume students have successfully landed in RStudio Cloud like you did earlier. Design an exercise for them to "create" their first visualization.
+-   If you need inspiration, you can use the `ggplot2::diamonds` or `dplyr::starwars` dataset or any dataset from `nycflights13` or `gapminder` packages.
+-   If you already have a first day exercise you like, you're welcomed to modify it to fit the challenge: from nothing to a data visualization in 15 minutes!
+
+```{r}
+# add code here
+```
