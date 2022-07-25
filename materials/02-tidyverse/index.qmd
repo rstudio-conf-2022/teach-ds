@@ -2,20 +2,16 @@
 title: "Teaching data science with the tidyverse"
 subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
 author: "Mine Çetinkaya-Rundel"
-footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
+footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22) / Module 2"
 logo: "../images/logo.png"
 format: 
   revealjs:
     theme: ../slides.scss
-    fontsize: 12px
     multiplex: true
     transition: fade
     slide-number: true
     incremental: false 
     chalkboard: true
-    code-overflow: scroll
-    revealjs-plugins:
-    - ../countdown
 execute:
   freeze: auto
   echo: true
@@ -30,8 +26,13 @@ library(scales)
 library(knitr)
 library(kableExtra)
 library(colorblindr)
+library(countdown)
 
-options(dplyr.print_min = 6, dplyr.print_max = 6)
+options(
+  dplyr.print_min = 6, 
+  dplyr.print_max = 6,
+  width = 1000
+)
 theme_set(theme_gray(base_size = 18))
 ```
 
@@ -260,7 +261,11 @@ loans %>%
     )
 ```
 
-<countdown time="900"/>
+```{r}
+#| echo: false
+
+countdown(minutes = 15, font_size = "1.5em")
+```
 
 ## Break it down I
 
@@ -492,10 +497,10 @@ z[order(z$n_applicants), ]
 -   ending up with a new data structure (`array`)
 -   relegating a data column to rownames
 
-## Eercise 2: Data visualization
+## Exercise 2: Data visualization
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud > "Module 2 - Tidyverse" > ex-2-1.qmd
+{{< fa cloud >}} RStudio Cloud > "Module 2 - Tidyverse" > ex-2-2.qmd
 :::
 
 ::: appex
@@ -510,7 +515,11 @@ Using the `loans` data, create side-by-side box plots that shows the relationshi
 See next style for desired output.
 :::
 
-<countdown time="900"/>
+```{r}
+#| echo: false
+
+countdown(minutes = 4, font_size = "1.5em")
+```
 
 ## Desired output
 
@@ -886,7 +895,11 @@ Any other discussion points of interest?
 {{< fa user-group >}} Discuss with your partner for a few minutes first, before sharing with the big group.
 :::
 
-<countdown time="240"/>
+```{r}
+#| echo: false
+
+countdown(minutes = 4, font_size = "1.5em")
+```
 
 ## Time permitting
 

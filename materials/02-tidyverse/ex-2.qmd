@@ -1,5 +1,0 @@
----
-title: "Title placeholder for Exercise 2"
-subtitle: "Exercise 2"
-editor: visual
----

@@ -1,0 +1,38 @@
+---
+title: "Ex 2.2: Side-by-side box plots"
+subtitle: "teach_ds :: Teaching data science with the tidyverse"
+editor: visual
+---
+
+## Setup
+
+```{r}
+#| label: setup
+#| message: false
+
+library(tidyverse)
+library(openintro)
+
+loans <- loans_full_schema %>%
+  mutate(
+    homeownership = str_to_title(homeownership), 
+    bankruptcy = if_else(public_record_bankrupt >= 1, "Yes", "No")
+  ) %>%
+  filter(annual_income >= 10) %>%
+  select(
+    loan_amount, homeownership, bankruptcy,
+    application_type, annual_income, interest_rate
+  )
+
+loans
+```
+
+## Exercise
+
+Using the `loans` data, create side-by-side box plots that shows the relationship between loan amount and application type, faceted by homeownership.
+
+```{r}
+#| label: boxplots-facet
+
+# add your answer here
+```

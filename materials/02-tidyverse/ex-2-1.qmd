@@ -29,11 +29,11 @@ loans
 
 ## Exercise
 
-Based on the applicants' home ownership status, compute the average loan amount and the number of applicants.
+Based on the applicants' home ownership status, compute the number of applicants and the average loan amount.
 Display the results in descending order of number of applicants.
 
 ```{r}
-#| label: grouped-
+#| label: grouped-summary
 
 # add your answer here
 ```
