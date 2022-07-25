@@ -97,7 +97,9 @@ library(tidymodels)
 
 ## Data: Loans from Lending Club
 
-The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the [**openintro** package](https://cran.r-project.org/web/packages/openintro/index.html) and featured in the [OpenIntro textbooks](https://openintro-ims.netlify.app/) . It contains information about 50,000 loans made through the Lending Club platform. The variables we'll use in this presentation are
+The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the [**openintro** package](https://cran.r-project.org/web/packages/openintro/index.html) and featured in the [OpenIntro textbooks](https://openintro-ims.netlify.app/) .
+It contains information about 50,000 loans made through the Lending Club platform.
+The variables we'll use in this presentation are
 
 -   `interest_rate`: Interest rate of the loan the applicant received.
 -   `debt_to_income`: Debt-to-income ratio.
@@ -444,7 +446,9 @@ interest_rec |>
 :::
 
 ::: appex
-Write the recipe for the model in the exercise file. Call the recipe loans_rec. Use the appropriate step\_\* functions to complete the feature engineering steps shown in the dplyr pipeline.
+Write the recipe for the model in the exercise file.
+Call the recipe loans_rec.
+Use the appropriate step\_\* functions to complete the feature engineering steps shown in the dplyr pipeline.
 
 You can find the list of step\_\* functions on the [recipes reference page](https://recipes.tidymodels.org/reference/index.html#step-functions-imputation).
 :::
@@ -536,7 +540,8 @@ rmse(interest_pred, truth = interest_rate, estimate = .pred)
 :::
 
 ::: appex
-Build a workflow and fit the model specified in the exercise. Then calculate predictions and evaluate the model using $R^2$ and $RMSE$.
+Build a workflow and fit the model specified in the exercise.
+Then calculate predictions and evaluate the model using $R^2$ and $RMSE$.
 :::
 
 ::: share
@@ -639,7 +644,8 @@ rmse(interest_test_pred, truth = interest_rate, estimate = .pred)
 :::
 
 ::: appex
-Complete the code below to split the data into training (80%) and testing (20%) sets. Fit the model to the training set, then evaluate the model on the training and test sets.
+Complete the code below to split the data into training (80%) and testing (20%) sets.
+Fit the model to the training set, then evaluate the model on the training and test sets.
 :::
 
 ::: share

@@ -713,12 +713,10 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">glance</span>(base_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
-  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³
-      &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
-1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.
-# … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
-#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance
-# ℹ Use `colnames()` to see all variable names</code></pre>
+  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.
+# … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -727,12 +725,10 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">glance</span>(tidy_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 12
-  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³
-      &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
-1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.
-# … with 2 more variables: df.residual &lt;int&gt;, nobs &lt;int&gt;, and abbreviated
-#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance
-# ℹ Use `colnames()` to see all variable names</code></pre>
+  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC
+      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.
+# … with 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -750,21 +746,19 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb23-2"><a href="#cb23-2"></a>base_lm_aug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9,976 × 9
-   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²
-   &lt;chr&gt;             &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
- 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 
- 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 
- 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 
- 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  
- 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356
- 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  
- 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 
- 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577
- 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722
-10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  
-# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,
-#   ²​.std.resid
-# ℹ Use `print(n = ...)` to see more rows</code></pre>
+   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd
+   &lt;chr&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+ 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6
+ 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6
+ 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5
+ 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5
+ 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7
+ 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5
+ 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6
+ 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7
+ 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7
+10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5
+# … with 9,966 more rows, and 1 more variable: .std.resid &lt;dbl&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -774,21 +768,19 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb25-2"><a href="#cb25-2"></a>tidy_lm_aug</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9,976 × 9
-   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²
-   &lt;chr&gt;             &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
- 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 
- 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 
- 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 
- 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  
- 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356
- 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  
- 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 
- 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577
- 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722
-10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  
-# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,
-#   ²​.std.resid
-# ℹ Use `print(n = ...)` to see more rows</code></pre>
+   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd
+   &lt;chr&gt;             &lt;dbl&gt;          &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+ 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6
+ 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6
+ 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5
+ 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5
+ 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7
+ 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5
+ 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6
+ 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7
+ 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7
+10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5
+# … with 9,966 more rows, and 1 more variable: .std.resid &lt;dbl&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -972,7 +964,7 @@ Coefficients:
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dec1fd" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62ded63d" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1139,7 +1131,7 @@ Cut numeric for delinq_2y</code></pre>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dec217" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62ded3fa" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1234,8 +1226,7 @@ Computational engine: lm </code></pre>
  8  16.1         12.0 
  9  13.1         13.6 
 10  11.0          6.71
-# … with 9,990 more rows
-# ℹ Use `print(n = ...)` to see more rows</code></pre>
+# … with 9,990 more rows</code></pre>
 </div>
 </div>
 </section>
@@ -1283,7 +1274,7 @@ RMSE = \sqrt{\frac{\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}{n}}
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dec418" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62ded4eb" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1416,7 +1407,7 @@ RMSE = \sqrt{\frac{\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}{n}}
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dec5b1" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62ded61b" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -1444,7 +1435,7 @@ RMSE = \sqrt{\frac{\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}{n}}
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dec21a" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62ded687" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">04</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
