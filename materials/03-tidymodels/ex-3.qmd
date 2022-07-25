@@ -1,13 +1,13 @@
 ---
-title: "Fit, predict, evaluate"
-subtitle: "Exercise 2"
+title: "Train / test data"
+subtitle: "Exercise 3"
 editor: visual
 ---
 
 ```{r}
 #| label: load-packages
 #| message: false
-#| 
+
 library(tidyverse)
 library(tidymodels)
 library(openintro)
@@ -27,7 +27,7 @@ $$
 
 ## Recipe
 
-This exercise builds on Exercise 1. To get you started, the recipe created in Exercise 1 is below.
+This exercise builds on Exercises 1 and 2. To get you started, the recipe created in Exercise 1 and workflow from Exercise 2 are below.
 
 ```{r}
 #| label: recipe
@@ -42,52 +42,61 @@ loans_rec <- recipe(interest_rate ~ debt_to_income + application_type +
   step_interact(terms = ~ starts_with("application_type"):debt_to_income)
 ```
 
-## Build workflow + fit the model
+## Train / test data
 
-Complete the code below to build a workflow and fit the model to `loans_full_schema`.
-
-```{r}
-#| label: model-spec 
-
-## specify the model 
-loans_spec <- linear_reg() |>
-  set_engine("lm")
-```
+Complete the code below to split the data into training (80%) and testing (20%) sets.
 
 ```{r}
-#| label: workflow-fit
+#| label: split-data
 #| eval: false 
 
-## build workflow 
-loans_workflow <- workflow() |>
-  add_model(_____) |>
-  add_recipe(______)
-
-## fit the model 
-loans_fit <- ______ |>
-  fit(data = _____)
+set.seed(12345)
+loans_split <- initial_split(_____)
+loans_train <- _____
+loans_test <- ______
 ```
 
-## Predict + evaluate model
+## Fit the model to training data
 
-Complete the code below to calculate predictions and evaluate the model using $R^2$ and $RMSE$.
+Fit the model to the training data.
 
 ```{r}
-#| label: predictions
-#| eval: false
+#| label: fit-model-train
+#| eval: false 
 
-loans_pred <- predict(______, ______) |>
-  bind_cols(loans_full_schema |> select(interest_rate))
+loand_train_fit <- ______
+```
+
+## Evaluate model
+
+Calculate $R^2$ and $RMSE$ for the training and test data.
+
+```{r}
+#| label: evaluate-train
+
+# calculate predictions 
+
+# calculate r-sq
+
+# calcuate rmse
+
 ```
 
 ```{r}
-#| label: r-sq
-#| eval: false
-rsq(_____, truth = interest_rate, estimate = .pred)
+#| label: evaluate-test
+
+# calculate predictions 
+
+# calculate r-sq
+
+# calcuate rmse
 ```
 
-```{r}
-#| label: rmse
-#| eval: false
-rmse(_____)
-```
+## Discussion
+
+Does the model perform well if the primary objective is to
+
+-   explain variability in interest rates?
+-   predict the interest rate for an application?
+
+Why or why not?
