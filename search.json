@@ -543,7 +543,7 @@
     "href": "materials/02-tidyverse/index.html#start-with-a-data-frame",
     "title": "Teaching data science with the tidyverse",
     "section": "Start with a data frame",
-    "text": "Start with a data frame\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows"
+    "text": "Start with a data frame\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#tidy-data",
@@ -557,7 +557,7 @@
     "href": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic",
     "title": "Teaching data science with the tidyverse",
     "section": "Task: Calculate a summary statistic",
-    "text": "Task: Calculate a summary statistic\n\nCalculate the mean loan amount.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\nmean(loan_amount)\n\n\n\n\n\nError in mean(loan_amount): object 'loan_amount' not found"
+    "text": "Task: Calculate a summary statistic\n\nCalculate the mean loan amount.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n\n\n\n\nmean(loan_amount)\n\n\n\n\n\nError in mean(loan_amount): object 'loan_amount' not found"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic-1",
@@ -606,14 +606,14 @@
     "href": "materials/02-tidyverse/index.html#break-it-down-i",
     "title": "Teaching data science with the tidyverse",
     "section": "Break it down I",
-    "text": "Break it down I\n\n\nBased on the applicants’ home ownership status, computer the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows"
+    "text": "Break it down I\n\n\nBased on the applicants’ home ownership status, computer the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#break-it-down-ii",
     "href": "materials/02-tidyverse/index.html#break-it-down-ii",
     "title": "Teaching data science with the tidyverse",
     "section": "Break it down II",
-    "text": "Break it down II\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n\n[input] data frame\n\n\n\n\nloans |>\n  group_by(homeownership)\n\n# A tibble: 9,976 × 6\n# Groups:   homeownership [3]\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\n\ndata frame [output]"
+    "text": "Break it down II\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n\n[input] data frame\n\n\n\n\nloans |>\n  group_by(homeownership)\n\n# A tibble: 9,976 × 6\n# Groups:   homeownership [3]\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n\n\n\n\n\ndata frame [output]"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#break-it-down-iii",
@@ -2245,6 +2245,265 @@
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Learn more!",
     "text": "Learn more!\nSharing tutorials\n\nPublishing learnr tutorials on shinyapps.io by Angela Li\nHow to deliver learnr tutorials in a package by Desirée De Leon"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#cherish-day-one",
+    "href": "materials/05-rstudio-cloud/index.html#cherish-day-one",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Cherish day one",
+    "text": "Cherish day one\n\n\nDon’t start like this\n\nInstall R\nInstall RStudio\nInstall the following packages:\n\nrmarkdown\ntidyverse\n…\n\nLoad these packages\nInstall git\n\n\nStart like this\n\nGo to rstudio.cloud\nLog in"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#why-rstudio-in-the-cloud",
+    "href": "materials/05-rstudio-cloud/index.html#why-rstudio-in-the-cloud",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Why RStudio in the cloud?",
+    "text": "Why RStudio in the cloud?\n\nReduce friction at first exposure to R\nAvoid local installation\nInstall R and RStudio on a server and provide access to students:\n\nCentralized RStudio server (*)\nDockerized RStudio server (*)\nRStudio Cloud\n\n\n\n\n(*) Çetinkaya-Rundel, Mine, and Rundel, Colin. “Infrastructure and tools for teaching computing throughout the statistical curriculum.” The American Statistician (2018). Part of the Practical Data Science for Stats collection."
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#what-is-rstudio-cloud",
+    "href": "materials/05-rstudio-cloud/index.html#what-is-rstudio-cloud",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "What is RStudio Cloud?",
+    "text": "What is RStudio Cloud?\n\n\n\n\nWe created RStudio Cloud to make it easy for professionals, hobbyists, trainers, teachers, and students to do, share, teach, and learn data science using R."
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#an-rstudio-project",
+    "href": "materials/05-rstudio-cloud/index.html#an-rstudio-project",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "An RStudio project",
+    "text": "An RStudio project"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#an-rstudio-cloud-project",
+    "href": "materials/05-rstudio-cloud/index.html#an-rstudio-cloud-project",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "An RStudio Cloud project",
+    "text": "An RStudio Cloud project"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#why-rstudio-cloud",
+    "href": "materials/05-rstudio-cloud/index.html#why-rstudio-cloud",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Why RStudio Cloud?",
+    "text": "Why RStudio Cloud?\n\nDoes not require IT support\nFeatures designed for instructors:\n\nClasses can be organized in workspaces\nMembers can be assigned different roles: instructor, TA, student\nProjects can be public or private\nProjects can be made into assignments\nStudents can make copies of projects created by instructor\nInstructor can peek into student projects\nA base project template can ensure same packages in each new project created in the workspace\nGit works out of the box"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#contexts",
+    "href": "materials/05-rstudio-cloud/index.html#contexts",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Contexts",
+    "text": "Contexts\n\nSemester long courses\n\nIntro data science / statistics: little to no background in stats, data science, programming\nUpper level data science / statistics: Varied computing background and different computer setups\n\nShorter workshops: Likely no opportunity to communicate pre-workshop instructions, varied computing background and learning goals"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#your-turn",
+    "href": "materials/05-rstudio-cloud/index.html#your-turn",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Your turn!",
+    "text": "Your turn!\nLog out of RStudio Cloud and log back in.\n\n\n\n03:00"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#workspaces",
+    "href": "materials/05-rstudio-cloud/index.html#workspaces",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Workspaces",
+    "text": "Workspaces\n\nWhen you create an account on RStudio Cloud you get a workspace of your own\nYou can add a new workspace and control its permissions\nProjects in either workspace can be public or private"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#projects",
+    "href": "materials/05-rstudio-cloud/index.html#projects",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Projects",
+    "text": "Projects\n\nA new project in RStudio Cloud\nis basically a new project in the RStudio IDE\n\n\n\n\n\n\n\nTip\n\n\nIf you use RStudio, use projects! Trust me, you won’t regret it. Find out more at r4ds.had.co.nz/workflow-projects.html."
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#projects-from-git",
+    "href": "materials/05-rstudio-cloud/index.html#projects-from-git",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Projects from Git",
+    "text": "Projects from Git\n\nA new project from Git Repo in RStudio Cloud\nis creates (cloning) a project from a Git repository RStudio"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#setup-in-140-characters",
+    "href": "materials/05-rstudio-cloud/index.html#setup-in-140-characters",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Setup in 140 characters",
+    "text": "Setup in 140 characters"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#iconography",
+    "href": "materials/05-rstudio-cloud/index.html#iconography",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Iconography",
+    "text": "Iconography\n\n👩‍🏫 teacher\n👩‍💻 student"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#some-title",
+    "href": "materials/05-rstudio-cloud/index.html#some-title",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Some title",
+    "text": "Some title\n\n\n👩‍🏫"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#section",
+    "href": "materials/05-rstudio-cloud/index.html#section",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "",
+    "text": "👩‍🏫"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#sharing-an-individual-project",
+    "href": "materials/05-rstudio-cloud/index.html#sharing-an-individual-project",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Sharing an individual project",
+    "text": "Sharing an individual project\n\n\nGood!\n\nStudents land directly in a project upon login\nWorks well for workshops where all work will be completed in a single project\nAlso great for sharing code in general, e.g. collaboration, reprexes, etc.\n\n\nNot so good…\n\nStudents need to remember to make a copy of the project (which means you need to remember to remind them!)\nChanges you make after student launches the project won’t propagate to their project"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#your-turn-create-a-sharable-project",
+    "href": "materials/05-rstudio-cloud/index.html#your-turn-create-a-sharable-project",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Your turn: Create a sharable project",
+    "text": "Your turn: Create a sharable project\n\nFirst you’re the instructor:\n\nCreate a new project and give it a name.\nCreate a template R Markdown document in the project.\nChange the access level of the project so others can see it as well.\nGrab the project URL and share it with your neighbor:\nTip: You can create a short link for the URL at bitly.com.\n\nNow you’re the student: Access your neighbor’s project as if you’re the student and they’re the instructor.\n\n\n\n\n10:00"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#section-1",
+    "href": "materials/05-rstudio-cloud/index.html#section-1",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "",
+    "text": "👩‍🏫"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#your-turn-create-a-workspace",
+    "href": "materials/05-rstudio-cloud/index.html#your-turn-create-a-workspace",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Your turn: Create a workspace",
+    "text": "Your turn: Create a workspace\n\nYou’re the instructor:\n\nCreate a new workspace and give it a name.\n\nTip: Check in with your neighbor and use a different name.\n\nAdd a short description.\n\n\n\n\n\n05:00"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#getting-students-into-class-workspace",
+    "href": "materials/05-rstudio-cloud/index.html#getting-students-into-class-workspace",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Getting students into class workspace",
+    "text": "Getting students into class workspace\nUnder the Membership tab:\n\n\n\n\n\nMake workspace shared for a short period of time, share link with students, enroll them as contributors.\nAfter drop/add switch over to this access level\nUse invitations for visitors added mid-semester\n\n\n\n\n👩‍🏫"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#permission-levels",
+    "href": "materials/05-rstudio-cloud/index.html#permission-levels",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Permission levels",
+    "text": "Permission levels\n\n\n\n\n\n\n\n\nrole\npermission\ncourse role\n\n\n\n\nadmin\nmanage users, view, edit and manage all projects\ninstructor\n\n\nmoderator\nview, edit and manage all projects\nTA\n\n\ncontributor\ncreate, edit and manage their own projects\nstudent\n\n\nviewer\nview projects shared with everyone\nauditor\n\n\n\n\n👩‍🏫"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#permissions",
+    "href": "materials/05-rstudio-cloud/index.html#permissions",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Permissions",
+    "text": "Permissions\nUnder the Membership tab:\n\n\n\n\n\nBy default, all permissions are turned off\nThink carefully before checking these boxes\n\n\n\n\n👩‍🏫"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#capacity",
+    "href": "materials/05-rstudio-cloud/index.html#capacity",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Capacity",
+    "text": "Capacity\n\n\n👩‍🏫"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#your-turn-adjust-settings",
+    "href": "materials/05-rstudio-cloud/index.html#your-turn-adjust-settings",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Your turn: Adjust settings",
+    "text": "Your turn: Adjust settings\n\nYou’re the instructor:\n\nChange the settings of your workspace to Shared.\nChange the permissions so that contributors or viewers can’t see the list of members and can’t change the visibility of their projects.\n\n\n\n\n\n03:00"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#section-2",
+    "href": "materials/05-rstudio-cloud/index.html#section-2",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "",
+    "text": "👩‍🏫"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#your-turn-create-an-assignment",
+    "href": "materials/05-rstudio-cloud/index.html#your-turn-create-an-assignment",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Your turn: Create an assignment",
+    "text": "Your turn: Create an assignment\n\nYou’re the instructor:\n\nAdd a base project to your workspace:\n\nInstall one or two of your favorite packages.\nStart an R Markdown document so necessary packages get installed.\nAdd a code-of-conduct.md (you can copy-paste from here if you like) or some other plain text document.\n\nMake this project visible to everyone. In the settings menu, set this project as the base project.\nCreate a new assignment: Homework 01.\n\n\n\n\n\n10:00"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#section-3",
+    "href": "materials/05-rstudio-cloud/index.html#section-3",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "",
+    "text": "👩‍💻"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#your-turn-assign-work",
+    "href": "materials/05-rstudio-cloud/index.html#your-turn-assign-work",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Your turn: Assign work",
+    "text": "Your turn: Assign work\n\nYou’re the instructor: - Grab the sharing link for your workspace. - Optional: Make a short link for it. - Share it with your neighbor.\nNow you’re the student: - Access your neighbor’s workspace and start the assignment.\n\n\n\n\n05:00"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#git-integration",
+    "href": "materials/05-rstudio-cloud/index.html#git-integration",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Git integration",
+    "text": "Git integration\nBase project template can be used, so new project from git also has the right packages installed!"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#sharing-a-workspace",
+    "href": "materials/05-rstudio-cloud/index.html#sharing-a-workspace",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Sharing a workspace",
+    "text": "Sharing a workspace\n\n\nGood!\n\nVarious permission levels\nBase projects with desired packages installed\nAssignments, which remove the need to remind students to make a copy of the project before starting work\nAbility to peek into students’ projects\n\n\nNot so good…\n\nStudents land in the workspace, may need to provide instructions for the next steps\nYou can update the base project throughout the course, but it will only be applied to projects created going forward"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#institution-accounts",
+    "href": "materials/05-rstudio-cloud/index.html#institution-accounts",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Institution accounts",
+    "text": "Institution accounts"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#dashboards",
+    "href": "materials/05-rstudio-cloud/index.html#dashboards",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Dashboards",
+    "text": "Dashboards\nStudent usage / engagement metrics"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#rscloud",
+    "href": "materials/05-rstudio-cloud/index.html#rscloud",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "📦 rscloud",
+    "text": "📦 rscloud\n\nA new package for managing RStudio Cloud spaces with R: github.com/rstudio/rscloud\nRequires an API key, which any instructor can request (via email for now, but soon in the UI as well)"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#collaborative-editing",
+    "href": "materials/05-rstudio-cloud/index.html#collaborative-editing",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Collaborative editing",
+    "text": "Collaborative editing\nDEMO"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#tips",
+    "href": "materials/05-rstudio-cloud/index.html#tips",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Tips",
+    "text": "Tips\n\nEach project is allocated 1GB of RAM\n\nTest things out before assignments involving large datasets\n\nWhat your students see is not always what you see\n\nCreate a secondary account and add as a student"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#primers",
+    "href": "materials/05-rstudio-cloud/index.html#primers",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Primers",
+    "text": "Primers\n\n\n\n\nrstudio.cloud/learn/primers\n\nFree primers made with the learnr package\nCompanion to R4DS by Grolemund and Wickham"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#discussion",
+    "href": "materials/05-rstudio-cloud/index.html#discussion",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Discussion",
+    "text": "Discussion\n\nWhat models can you envision for collecting assignments and providing feedback when teaching with RStudio Cloud?\n\n\n\n\n03:00\n\n\n\n\n\n\n🔗 rstd.io/teach-ds-conf22"
   },
   {
     "objectID": "index.html",
