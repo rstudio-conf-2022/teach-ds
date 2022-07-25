@@ -6,9 +6,9 @@ by Mine Çetinkaya-Rundel + Maria Tackett
 
 ------------------------------------------------------------------------
 
-:spiral_calendar: July 25 and 26, 2022  
-:alarm_clock: 09:00 - 17:00  
-:hotel: [ADD ROOM]  
+:spiral_calendar: July 25 and 26, 2022\
+:alarm_clock: 09:00 - 17:00\
+:hotel: Maryland 3\
 :writing_hand: [rstd.io/conf](http://rstd.io/conf)
 
 ------------------------------------------------------------------------
