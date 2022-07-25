@@ -15,12 +15,18 @@ format:
 execute:
   freeze: auto
   echo: true
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 200
 ---
 
 # Introduction
 
 ```{r}
+#| label: setup
 #| echo: false
+
 library(tidyverse)
 library(scales)
 library(knitr)
@@ -30,9 +36,9 @@ library(countdown)
 
 options(
   dplyr.print_min = 6, 
-  dplyr.print_max = 6,
-  width = 1000
+  dplyr.print_max = 6
 )
+
 theme_set(theme_gray(base_size = 18))
 ```
 

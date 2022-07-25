@@ -15,6 +15,10 @@ format:
 execute:
   freeze: auto
   echo: true
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 200
 ---
 
 # Welcome
