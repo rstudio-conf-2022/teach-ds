@@ -196,7 +196,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <ul class="collapse">
   <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
   <li><a href="#is-this-course-for-me" id="toc-is-this-course-for-me" class="nav-link" data-scroll-target="#is-this-course-for-me">Is this course for me?</a></li>
-  <li><a href="#prework" id="toc-prework" class="nav-link" data-scroll-target="#prework">Prework</a></li>
+  <li><a href="#prework" id="toc-prework" class="nav-link" data-scroll-target="#prework">Prework</a>
+  <ul class="collapse">
+  <li><a href="#watch" id="toc-watch" class="nav-link" data-scroll-target="#watch">Watch</a></li>
+  <li><a href="#set-up" id="toc-set-up" class="nav-link" data-scroll-target="#set-up">Set up</a></li>
+  <li><a href="#install" id="toc-install" class="nav-link" data-scroll-target="#install">Install</a></li>
+  </ul></li>
   <li><a href="#rstudio-cloud" id="toc-rstudio-cloud" class="nav-link" data-scroll-target="#rstudio-cloud">RStudio Cloud</a></li>
   </ul></li>
   <li><a href="#instructors" id="toc-instructors" class="nav-link" data-scroll-target="#instructors">Instructors</a></li>
@@ -225,7 +230,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <hr>
 <p>🗓️ July 25 and 26, 2022</p>
 <p>⏰ 09:00 - 17:00</p>
-<p>🏨 Room TBA</p>
+<p>🏨 Maryland 3</p>
 <p>✍️ <a href="https://www.rstudio.com/conference/2022/workshops/teach-ds/">Click here to register</a></p>
 <hr>
 <section id="overview" class="level1">
@@ -252,6 +257,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="prework" class="level2">
 <h2 class="anchored" data-anchor-id="prework">Prework</h2>
 <p>In this workshop you will wear two hats: the educator and the learner. At times we will be demoing workflows for instructors (whom I assume are familiar with R, RStudio, and the tidyverse and have taught with or are interested in teaching with RStudio Cloud, Git, and GitHub) and at other times you will be working through the student view (on RStudio Cloud, assuming you’re not using your local setup).</p>
+<section id="watch" class="level3">
+<h3 class="anchored" data-anchor-id="watch">Watch</h3>
 <p>For the latter, you can mostly assume that you’re a student in an intro data science course and this is the first day of class (i.e.&nbsp;there’s no expectation of prep). However we’d also like to give you a taste of how the remainder of the semester goes, which often entails students watching background videos to prepare. To prepare for the first module, please watch the following video before the workshop.</p>
 <div style="text-align: center;">
 <iframe width="560" height="315" align="middle" src="https://www.youtube.com/embed/fQ4t7p6ZXDg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
@@ -259,6 +266,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>🖥️ <a href="https://bit.ly/let-eat-cake-cc">Slides</a></p>
 </div>
 </div>
+</section>
+<section id="set-up" class="level3">
+<h3 class="anchored" data-anchor-id="set-up">Set up</h3>
 <p>For the former, you’ll might need to prepare a bit more. If you already are a Git and GitHub user, have a personal token saved, and can push to and pull from GitHub without having to type your password in each time, you’re good to go. If not, please complete the following steps before the workshop<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. If you need help with any of the steps, please ask on <a href="https://github.com/rstudio-conf-2022/teach-ds/discussions">GitHub Discussions</a>.</p>
 <ul>
 <li><a href="https://happygitwithr.com/github-acct.html#github-acct">Register a free GitHub account</a></li>
@@ -270,6 +280,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><a href="https://happygitwithr.com/rstudio-git-github.html">Connect RStudio to Git and GitHub</a></li>
 <li><a href="https://happygitwithr.com/rstudio-see-git.html">Detect Git from RStudio</a></li>
 </ul>
+</section>
+<section id="install" class="level3">
+<h3 class="anchored" data-anchor-id="install">Install</h3>
 <p>If you choose to use your local R and RStudio install for the workshop, you should also install the following packages:</p>
 <ul>
 <li><p>From CRAN:</p>
@@ -292,10 +305,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div></li>
 <li><p>From GitHub:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"gadenbuie/countdown"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rstudio/parsons"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rundel/learnrhash"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div></li>
 </ul>
+</section>
 </section>
 <section id="rstudio-cloud" class="level2">
 <h2 class="anchored" data-anchor-id="rstudio-cloud">RStudio Cloud</h2>

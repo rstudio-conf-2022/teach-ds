@@ -27,8 +27,8 @@
   {
     "listing": "/modules/d1-02-tidyverse.html",
     "items": [
-      "/materials/02-tidyverse/ex-1.html",
-      "/materials/02-tidyverse/ex-2.html"
+      "/materials/02-tidyverse/ex-2-1.html",
+      "/materials/02-tidyverse/ex-2-2.html"
     ]
   },
   {
@@ -41,16 +41,17 @@
   {
     "listing": "/modules/d1-03-tidymodels.html",
     "items": [
-      "/materials/03-tidymodels/ex-1.html",
-      "/materials/03-tidymodels/ex-2.html"
+      "/materials/03-tidymodels/ex-3-1.html",
+      "/materials/03-tidymodels/ex-3-2.html",
+      "/materials/03-tidymodels/ex-3-3.html"
     ]
   },
   {
     "listing": "/modules/d1-04-learnr.html",
     "items": [
-      "/materials/04-learnr/ex-1.html",
-      "/materials/04-learnr/ex-2.html",
-      "/materials/04-learnr/ex-3.html"
+      "/materials/04-learnr/ex-4-1.html",
+      "/materials/04-learnr/ex-4-2.html",
+      "/materials/04-learnr/ex-4-3.html"
     ]
   },
   {

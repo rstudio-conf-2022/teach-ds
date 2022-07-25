@@ -144,14 +144,7 @@
     "href": "modules/d1-02-tidyverse.html",
     "title": "Teaching data science with the tidyverse",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d1-02-tidyverse.html#outline",
-    "href": "modules/d1-02-tidyverse.html#outline",
-    "title": "Teaching data science with the tidyverse",
-    "section": "Outline",
-    "text": "Outline\n\nPrinciples of the tidyverse\nTeaching with the tidyverse\n\nGrouped summaries\nData visualization\nBeyond wrangling, summaries, and visualizations\n\nPedagogical strengths of the tidyverse\nKeeping up with the tidyverse"
+    "text": "Principles of the tidyverse\nTeaching with the tidyverse\n\nGrouped summaries\nData visualization\nBeyond wrangling, summaries, and visualizations\n\nPedagogical strengths of the tidyverse\nKeeping up with the tidyverse"
   },
   {
     "objectID": "modules/d1-02-tidyverse.html#slides",
@@ -165,7 +158,7 @@
     "href": "modules/d1-02-tidyverse.html#exercises",
     "title": "Teaching data science with the tidyverse",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 2.1: Grouped Summary\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 2.2: Side-by-side box plots\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-01-hello.html",
@@ -221,7 +214,7 @@
     "href": "modules/d1-03-tidymodels.html#exercises",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.1: Feature engineering\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.2: Fit, predict, evaluate\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.3: Train / test data\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-04-learnr.html",
@@ -249,7 +242,7 @@
     "href": "modules/d1-04-learnr.html#exercises",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nDeployed tutorial\n\n\nLearnr Demo\n\n\n\n\nExercise 1\n\n\nWriting questions\n\n\n\n\nExercise 2\n\n\nAutomated feedback\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.1: Deployed tutorial\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.2: Writing questions\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.3: Automated feedback\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-06b-lunch-break.html",
@@ -301,11 +294,746 @@
     "text": "Papers\n\n\nDesigning introductory data science curricula:\n\nÇetinkaya-Rundel, M., & Ellison, V. (2021). A fresh look at introductory data science. Journal of Statistics and Data Science Education, 29(sup1), S16-S26. https://doi.org/10.1080/10691898.2020.1804497.\nBaumer, B. (2015). A data science course for undergraduates: Thinking with data. The American Statistician, 69(4), 334-342. https://doi.org/10.1080/00031305.2015.1081105.\n\nTeaching reproducibility and version control:\n\nBeckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. Journal of Statistics and Data Science Education, 29(sup1), S132-S144. https://doi.org/10.1080/10691898.2020.1848485.\n\nTeaching with the tidyverse:\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator’s perspective of the tidyverse. Technology Innovations in Statistics Education, 14(1). http://dx.doi.org/10.5070/T514154352.\n\nOrganizing teaching materials:\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. arXiv preprint arXiv:2202.09504. https://doi.org/10.48550/arXiv.2202.09504.\n\nTeaching modern modeling:\n\nTackett, M. (2022) Three principles for modernizing an undergraduate regression analysis course. arXiv preprint arXiv:2205.11026. https://doi.org/10.48550/arXiv.2205.11026"
   },
   {
+    "objectID": "materials/06-reproduciblity/index.html#why-git-github",
+    "href": "materials/06-reproduciblity/index.html#why-git-github",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Why Git + GitHub?",
+    "text": "Why Git + GitHub?\n\nVersion control: Lots of mistakes along the way, need ability to revert\nCollaboration: Platform that removes barriers to well documented collaboration\nAccountability: Transparent commit history\nEarly introduction:\n\nMastery takes time, earlier start the better\nMarketability in industry"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#goals-for-version-control",
+    "href": "materials/06-reproduciblity/index.html#goals-for-version-control",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Goals for version control",
+    "text": "Goals for version control\n\nCentralize the distribution (and collection) of all student assignments\nEnable students to work collaboratively\nMake Git & GitHub part of student workflow\n\nVersion control is a best practice for reproducible research\nWidely used in industry and academia\nPublish / share work"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#basic-structure",
+    "href": "materials/06-reproduciblity/index.html#basic-structure",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Basic Structure",
+    "text": "Basic Structure\nOn Github\n\n1 organization per class\n1 repo per (student or team) per assignment\nStudent and team repos all private by default"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#setting-up-a-course",
+    "href": "materials/06-reproduciblity/index.html#setting-up-a-course",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Setting up a course",
+    "text": "Setting up a course\n\nCreate a free course organization on GitHub: github.com/organizations/new\nRequest teacher benefits: education.github.com/discount\nAdd organization to GitHub Classroom: classroom.github.com\nInvite students to organization\nCreate assignment(s)\nCollect assignments(s)**\nGrade assignment(s)**"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#create-course-organization",
+    "href": "materials/06-reproduciblity/index.html#create-course-organization",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "1️⃣ Create course organization",
+    "text": "1️⃣ Create course organization\nSelect the option for a  free course organization."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#request-teacher-benefits",
+    "href": "materials/06-reproduciblity/index.html#request-teacher-benefits",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "2️⃣ Request teacher benefits",
+    "text": "2️⃣ Request teacher benefits"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#required-information",
+    "href": "materials/06-reproduciblity/index.html#required-information",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Required information",
+    "text": "Required information\nYou will need to provide the following to request teacher benefits:\n\nA brief description of how you plan to use GitHub\nEstablishing connection to an academic institution by verifying with a school-issued email address + school ID or some other proof of academic affliation\nInformation about the school - link to website, address, etc.\n\nVerification is manual and can take up to a few days."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#add-organization-to-github-classroom",
+    "href": "materials/06-reproduciblity/index.html#add-organization-to-github-classroom",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "3️⃣ Add organization to GitHub Classroom",
+    "text": "3️⃣ Add organization to GitHub Classroom\nClick New Classroom and select the GitHub organization.\n\nYou can skip the remaining set up steps for now."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#invite-students",
+    "href": "materials/06-reproduciblity/index.html#invite-students",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "4️⃣ Invite students",
+    "text": "4️⃣ Invite students"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#member-privileges",
+    "href": "materials/06-reproduciblity/index.html#member-privileges",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Member Privileges",
+    "text": "Member Privileges"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#member-privileges-cont.",
+    "href": "materials/06-reproduciblity/index.html#member-privileges-cont.",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Member Privileges (cont.)",
+    "text": "Member Privileges (cont.)"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#member-privileges-cont.-1",
+    "href": "materials/06-reproduciblity/index.html#member-privileges-cont.-1",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Member Privileges (cont.)",
+    "text": "Member Privileges (cont.)"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#ghclass-1",
+    "href": "materials/06-reproduciblity/index.html#ghclass-1",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "📦 ghclass",
+    "text": "📦 ghclass\nTools for managing github class organization accounts\n\nMade for instructors who use GitHub for class management, e.g. assignments distributed via GitHub repos\nThe package assumes that you’re an R user, and you probably teach R as well, though that’s not a requirement since this package is all about setting up repositories with the right permissions, not what your students put in those repositories."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#installation",
+    "href": "materials/06-reproduciblity/index.html#installation",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Installation",
+    "text": "Installation\nUse the code below to install ghclass\n\ninstall.packages(\"ghclass\")\n\n\nUse the code below to load ghclass\n\nlibrary(ghclass)"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#collect-data-from-students",
+    "href": "materials/06-reproduciblity/index.html#collect-data-from-students",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Collect data from students",
+    "text": "Collect data from students\n\nNeed students’ GitHub usernames at a minimum\nRecommend collecting emails, as students might make a typo in their GitHub username"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#prior-to-collecting-data",
+    "href": "materials/06-reproduciblity/index.html#prior-to-collecting-data",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Prior to collecting data…",
+    "text": "Prior to collecting data…\nYou need to instruct students to create GitHub accounts\n\nConsider data privacy rules of institution / country (e.g. you may need to enter a data protection agreement for GDPR compliance)\nGive some guidance for choosing a username\n\nSee “Username Advice” on Happy Git with R: happygitwithr.com/github-acct.html\n\nCan have students choose and submit username as an in-class activity during the first week of classes."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens",
+    "href": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Behind the scenes: GitHub tokens",
+    "text": "Behind the scenes: GitHub tokens\nghclass uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that ghclass can find and use it.\n\nCreate token at github.com/settings/tokens\nOnce created, assign the token to GITHUB_PAT as an environmental variable\n\nusethis::edit_r_environ()\nGITHUB_PAT=\"alphanumeric string of your GitHub token\"\nSave, close, restart R for changes to take effect"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens---update-this-process",
+    "href": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens---update-this-process",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Behind the scenes: GitHub tokens - UPDATE THIS PROCESS",
+    "text": "Behind the scenes: GitHub tokens - UPDATE THIS PROCESS\n\nIf the token is found and works correctly the following code should run without error\n\n\ngithub_test_token()\n\n✔ Your GitHub PAT authenticated correctly.\n\n\n\nIf instead the token is invalid or not found, you will see something like the following\n\n\ngithub_test_token(\"MADE_UP_TOKEN\")\n\n✖ Your GitHub PAT failed to authenticate.\n\n\n└─GitHub API error (401): \n  ├─ API message: Bad credentials\n  └─ API docs: https://docs.github.com/rest"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#invite-students-1",
+    "href": "materials/06-reproduciblity/index.html#invite-students-1",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Invite students",
+    "text": "Invite students\n\nThis will generate an email to students.\nInstruct students to check their email and follow the instructions.\n\n\norg <- \"design-ds-class\"\n\n\nroster <- read_csv(\"SURVEY RESPONSES.csv\")\norg_invite(org = org, user = roster$username)\n\n## ✔ Invited user 'minebotmine' to org 'design-ds-class'.\n## ✔ Invited user 'rundel' to org 'design-ds-class'."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#check-member-status",
+    "href": "materials/06-reproduciblity/index.html#check-member-status",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Check member status",
+    "text": "Check member status\n\nWho is already in?\n\n\n\n [1] \"aaron-gilbreath\"       \"bioboot\"               \"Cghlewis\"             \n [4] \"EricJC24\"              \"gabrielodom\"           \"gavago\"               \n [7] \"gavinfay\"              \"geoffsaw\"              \"jetsetbaxter\"         \n[10] \"KatherineCox\"          \"kavan-econ\"            \"matackett\"            \n[13] \"Mears-UFL\"             \"melindahiggins2000\"    \"mine-cetinkaya-rundel\"\n[16] \"murraycadzow\"          \"paideia-atl\"           \"paigerios68\"          \n[19] \"staceyhancock\"         \"thereseanders\"         \"timothydobbins\"       \n[22] \"VanjaRoz\"              \"woon-yuen\"             \"zamorarr\"             \n\n\n\nWho still didn’t accept their invitations?\n\n\n\ncharacter(0)"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#creating-assignments---big-picture",
+    "href": "materials/06-reproduciblity/index.html#creating-assignments---big-picture",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Creating assignments - big picture",
+    "text": "Creating assignments - big picture\n\nCreate a starter repo, keep it private and make it a template\nClone the repo and add any starter files (template Qmd, data, instructions, etc.)\nCommit and push your changes to the repo\nUse the org_create_assignment() function to create copies of the starter repo with correct permissions for each of your students (or teams)"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#creating-your-starter-repo",
+    "href": "materials/06-reproduciblity/index.html#creating-your-starter-repo",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Creating your starter repo",
+    "text": "Creating your starter repo"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#make-your-starter-repo-a-template",
+    "href": "materials/06-reproduciblity/index.html#make-your-starter-repo-a-template",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Make your starter repo a template",
+    "text": "Make your starter repo a template"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#prepare-your-starter-repo",
+    "href": "materials/06-reproduciblity/index.html#prepare-your-starter-repo",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Prepare your starter repo",
+    "text": "Prepare your starter repo\n\nClone it locally\nAdd any necessary files\nCommit and push\n\n\n[DEMO]"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#create-assignments",
+    "href": "materials/06-reproduciblity/index.html#create-assignments",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Create assignments",
+    "text": "Create assignments\n\norg_create_assignment(\n  org = org,\n  repo = paste0(\"hw-01-airbnb-edi-\", roster$username),\n  user = roster$username,\n  source_repo = paste0(org, \"/hw-01-airbnb-edi\")\n)\n\n\n[DEMO]\n.your-turn[ - Go to the course organisation on GitHub: github.com/design-ds-class - Locate your HW 01 and read through the Getting started section and follow the instructions. - Then, go through the Hello Git and Warm up sections as well. - Finally, add your answer to Question 1, and commit and push again.]\n\nIf there is no GitHub repo created for you for this assignment, let me know.\nClone using the HTTPS link, and let me know if\nyou have 2-factor authentication enabled on\nGitHub (this complicates things!)\n\n\n\n\n10:00"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#options-for-giving-feedback-on-github",
+    "href": "materials/06-reproduciblity/index.html#options-for-giving-feedback-on-github",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Options for giving feedback on GitHub",
+    "text": "Options for giving feedback on GitHub\n\nUse the GitHub UI to add issues to each student’s repo\nClone student repos locally and reproduce their work prior to giving feedback by adding issues on the GitHub UI\n\n\n\n\n\nUse the issue_create() function to post issues to all repos at once\n\nAdd a column for the repo name in org/repo format to roster\nAdd a column for feedback\n[DEMO]"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#get-big-picture-stats-for-an-assignment",
+    "href": "materials/06-reproduciblity/index.html#get-big-picture-stats-for-an-assignment",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Get big picture stats for an assignment",
+    "text": "Get big picture stats for an assignment\n\n\n\n\n[DEMO]"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#create-team-assignments",
+    "href": "materials/06-reproduciblity/index.html#create-team-assignments",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Create team assignments",
+    "text": "Create team assignments\nFirst, we’ll make up some teams\n\n\n\n\n[DEMO]\n.your-turn[ - Go to the course organisation on GitHub: github.com/design-ds-class - Locate your Lab 03 and read through the Getting started section and follow the instructions with your team members.]\n\n\n\n10:00\n\n\n\nclass: middle, inverse"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#more-on-giving-feedback-in-issues",
+    "href": "materials/06-reproduciblity/index.html#more-on-giving-feedback-in-issues",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "More on giving feedback in issues",
+    "text": "More on giving feedback in issues\n\nInstructors (and TAs) can view all repositories within the course organization.\nUse specific line references. [DEMO]\nMake sure to @ mention the student so that they are notified when an issue is opened.\nYou might want to consider keeping points out of issues."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#peer-review",
+    "href": "materials/06-reproduciblity/index.html#peer-review",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Peer review",
+    "text": "Peer review\n\nOnce an assignment is completed you can let other students/teams into a repository and they can provide peer review.\nPeer review is an incredibly effective learning experience for both the reviewers and the reviewees, however it does require coordination and being able to carve out sufficient time in the course schedule.\nTip: Do not solely count on peer review for feedback as some reviewers might be less diligent than others. Teams reviewing teams, as opposed to individual reviewing individuals, might address this issue partially.\n\nSee the Peer review with ghclass vignette for more."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#pull-requests",
+    "href": "materials/06-reproduciblity/index.html#pull-requests",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Pull requests",
+    "text": "Pull requests\n\nAnother option is to open pull requests for your students’ work where you directly edit their work and ask them to approve the edits.\nThis can be effective as students will see your corrections and review them before accepting them.\nHowever this also does mean that you’re directly correcting their work as opposed to giving them higher level instructions on how to correct it.\n\nMore on this in the next module…\n.your-turn[ Now you’re the instructor:]\n\n\n\n10:00"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#git-github-lessons-learned",
+    "href": "materials/06-reproduciblity/index.html#git-github-lessons-learned",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Git + GitHub lessons learned",
+    "text": "Git + GitHub lessons learned\n\nIf you plan on using git in class, start on day one, don’t wait until the “right time”\nFirst assignment should be individual, not team based to avoid merge conflicts\nStudents need to remember to pull before starting work\nImpossible (?) to avoid shell intervention every once in a while\nRemind students on that future projects should go on GitHub with PI approval\n\n\n\n\n🔗 rstd.io/teach-ds-conf22"
+  },
+  {
+    "objectID": "materials/02-tidyverse/ex-2-1.html",
+    "href": "materials/02-tidyverse/ex-2-1.html",
+    "title": "Ex 2.1: Grouped Summary",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(openintro)\n\nloans <- loans_full_schema %>%\n  mutate(\n    homeownership = str_to_title(homeownership), \n    bankruptcy = if_else(public_record_bankrupt >= 1, \"Yes\", \"No\")\n  ) %>%\n  filter(annual_income >= 10) %>%\n  select(\n    loan_amount, homeownership, bankruptcy,\n    application_type, annual_income, interest_rate\n  )\n\nloans\n\n# A tibble: 9,976 × 6\n   loan_amount homeownership bankruptcy application_type annual_income\n         <int> <chr>         <chr>      <fct>                    <dbl>\n 1       28000 Mortgage      No         individual               90000\n 2        5000 Rent          Yes        individual               40000\n 3        2000 Rent          No         individual               40000\n 4       21600 Rent          No         individual               30000\n 5       23000 Rent          No         joint                    35000\n 6        5000 Own           No         individual               34000\n 7       24000 Mortgage      No         joint                    35000\n 8       20000 Mortgage      No         individual              110000\n 9       20000 Mortgage      No         individual               65000\n10        6400 Rent          No         individual               30000\n# … with 9,966 more rows, and 1 more variable: interest_rate <dbl>"
+  },
+  {
+    "objectID": "materials/02-tidyverse/ex-2-1.html#exercise",
+    "href": "materials/02-tidyverse/ex-2-1.html#exercise",
+    "title": "Ex 2.1: Grouped Summary",
+    "section": "Exercise",
+    "text": "Exercise\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n# add your answer here"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#setting-the-scene",
+    "href": "materials/02-tidyverse/index.html#setting-the-scene",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Setting the scene",
+    "text": "Setting the scene\n\n\n\nAssumption 1:\nTeach authentic tools\n\n\nAssumption 2:\nTeach R as the authentic tool"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#takeaway",
+    "href": "materials/02-tidyverse/index.html#takeaway",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Takeaway",
+    "text": "Takeaway\n\n\nThe tidyverse provides an effective and efficient pathway for undergraduate students at all levels and majors to gain computational skills and thinking needed throughout the data science cycle.\n\n\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B. S., McNamara, A., Horton, N. J., & Rundel, C. (2021). An educator’s perspective of the tidyverse. arXiv preprint arXiv:2108.03510. arxiv.org/abs/2108.03510"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#tidyverse",
+    "href": "materials/02-tidyverse/index.html#tidyverse",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Tidyverse",
+    "text": "Tidyverse\n\n\n\nMeta R package that loads eight core packages when invoked and also bundles numerous other packages upon installation\nTidyverse packages share a design philosophy, common grammar, and data structures"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#setup",
+    "href": "materials/02-tidyverse/index.html#setup",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Setup",
+    "text": "Setup\nData: Thousands of loans made through the Lending Club, a peer-to-peer lending platform available in the openintro package, with a few modifications.\n\nlibrary(tidyverse)\nlibrary(openintro)\n\nloans <- loans_full_schema |>\n  mutate(\n    homeownership = str_to_title(homeownership), \n    bankruptcy = if_else(public_record_bankrupt >= 1, \"Yes\", \"No\")\n  ) |>\n  filter(annual_income >= 10) |>\n  select(\n    loan_amount, homeownership, bankruptcy,\n    application_type, annual_income, interest_rate\n  )"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#start-with-a-data-frame",
+    "href": "materials/02-tidyverse/index.html#start-with-a-data-frame",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Start with a data frame",
+    "text": "Start with a data frame\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#tidy-data",
+    "href": "materials/02-tidyverse/index.html#tidy-data",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Tidy data",
+    "text": "Tidy data\n\nEach variable forms a column\nEach observation forms a row\nEach type of observational unit forms a table\n\n\n\nWickham, H. . (2014). Tidy Data. Journal of Statistical Software, 59(10), 1–23. doi.org/10.18637/jss.v059.i10."
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic",
+    "href": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Task: Calculate a summary statistic",
+    "text": "Task: Calculate a summary statistic\n\nCalculate the mean loan amount.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n\n\n\n\nmean(loan_amount)\n\n\n\n\n\nError in mean(loan_amount): object 'loan_amount' not found"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic-1",
+    "href": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Task: Calculate a summary statistic",
+    "text": "Task: Calculate a summary statistic\n\nHow would you calculate the mean loan amount?\n\n\n Add your answer to Discord."
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#accessing-a-variable",
+    "href": "materials/02-tidyverse/index.html#accessing-a-variable",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Accessing a variable",
+    "text": "Accessing a variable\nApproach 1: With attach():\n\nattach(loans)\nmean(loan_amount)\n\n[1] 16357.53\n\n\n\n\nNot recommended. What if you had another data frame you’re working with concurrently called car_loans that also had a variable called loan_amount in it?"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#accessing-a-variable-1",
+    "href": "materials/02-tidyverse/index.html#accessing-a-variable-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Accessing a variable",
+    "text": "Accessing a variable\nApproach 2: Using $:\n\nmean(loans$loan_amount)\n\n[1] 16357.53\n\n\n\n\nApproach 3: Using with():\n\nwith(loans, mean(loan_amount))\n\n[1] 16357.53"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#accessing-a-variable-2",
+    "href": "materials/02-tidyverse/index.html#accessing-a-variable-2",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Accessing a variable",
+    "text": "Accessing a variable\nApproach 4: The tidyverse approach:\n\nloans |>\n  summarise(mean_loan_amount = mean(loan_amount))\n\n# A tibble: 1 × 1\n  mean_loan_amount\n             <dbl>\n1           16358.\n\n\n\n\nMore verbose\nBut also more expressive and extensible"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#the-tidyverse-approach",
+    "href": "materials/02-tidyverse/index.html#the-tidyverse-approach",
+    "title": "Teaching data science with the tidyverse",
+    "section": "The tidyverse approach",
+    "text": "The tidyverse approach\n\n\nTidyverse functions take a data argument that allows them to localize computations inside the specified data frame\nDoes not muddy the concept of what is in the current environment: variables always accessed from within in a data frame without the use of an additional function (like with()) or quotation marks, never as a vector"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#exercise-1-grouped-summary",
+    "href": "materials/02-tidyverse/index.html#exercise-1-grouped-summary",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Exercise 1: Grouped summary",
+    "text": "Exercise 1: Grouped summary\n\n RStudio Cloud > “Module 2 - Tidyverse” > ex-2-1.qmd\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n Compare answers with your neighbor and choose an approach you would teach in an intro course.  Then, type your chosen answer on Discord along with some narrative about how you would approach teaching it describing how you would teach it.\n\n\n\n\n\n \n  \n    Homeownership \n    Average loan amount \n    Number of applicants \n  \n \n\n  \n    Mortgage \n    4,778 \n    $18,132 \n  \n  \n    Rent \n    3,848 \n    $14,396 \n  \n  \n    Own \n    1,350 \n    $15,665 \n  \n\n\n\n\n\n\n\n\n15:00"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-i",
+    "href": "materials/02-tidyverse/index.html#break-it-down-i",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down I",
+    "text": "Break it down I\n\n\nBased on the applicants’ home ownership status, computer the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-ii",
+    "href": "materials/02-tidyverse/index.html#break-it-down-ii",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down II",
+    "text": "Break it down II\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n\n[input] data frame\n\n\n\n\nloans |>\n  group_by(homeownership)\n\n# A tibble: 9,976 × 6\n# Groups:   homeownership [3]\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n\n\n\n\n\ndata frame [output]"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-iii",
+    "href": "materials/02-tidyverse/index.html#break-it-down-iii",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down III",
+    "text": "Break it down III\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans |>\n  group_by(homeownership) |> \n  summarize(\n    n_applicants = n()\n    )\n\n# A tibble: 3 × 2\n  homeownership n_applicants\n  <chr>                <int>\n1 Mortgage              4778\n2 Own                   1350\n3 Rent                  3848"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-iv",
+    "href": "materials/02-tidyverse/index.html#break-it-down-iv",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down IV",
+    "text": "Break it down IV\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans |>\n  group_by(homeownership) |> \n  summarize(\n    n_applicants = n(),\n    avg_loan_amount = mean(loan_amount)\n    )\n\n# A tibble: 3 × 3\n  homeownership n_applicants avg_loan_amount\n  <chr>                <int>           <dbl>\n1 Mortgage              4778          18132.\n2 Own                   1350          15665.\n3 Rent                  3848          14396."
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-v",
+    "href": "materials/02-tidyverse/index.html#break-it-down-v",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down V",
+    "text": "Break it down V\n\n\nBased on the applicants’ home ownership status, compute the average loan amount and the number of applicants. Display the results in descending order of number of applicants.\n\n\nloans |>\n  group_by(homeownership) |> \n  summarize(\n    n_applicants = n(),\n    avg_loan_amount = mean(loan_amount)\n    ) |>\n  arrange(desc(n_applicants))\n\n# A tibble: 3 × 3\n  homeownership n_applicants avg_loan_amount\n  <chr>                <int>           <dbl>\n1 Mortgage              4778          18132.\n2 Rent                  3848          14396.\n3 Own                   1350          15665."
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#putting-it-back-together",
+    "href": "materials/02-tidyverse/index.html#putting-it-back-together",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Putting it back together",
+    "text": "Putting it back together\n\n[input] data frame\n\n\nloans |>\n  group_by(homeownership) |> \n  summarize(\n    n_applicants = n(),\n    avg_loan_amount = mean(loan_amount)\n    ) |>\n  arrange(desc(n_applicants))\n\n# A tibble: 3 × 3\n  homeownership n_applicants avg_loan_amount\n  <chr>                <int>           <dbl>\n1 Mortgage              4778          18132.\n2 Rent                  3848          14396.\n3 Own                   1350          15665.\n\n\n\n[output] data frame"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#grouped-summary-with-aggregate",
+    "href": "materials/02-tidyverse/index.html#grouped-summary-with-aggregate",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Grouped summary with aggregate()",
+    "text": "Grouped summary with aggregate()\n\nres1 <- aggregate(loan_amount ~ homeownership, \n                  data = loans, FUN = length)\nres1\n\n  homeownership loan_amount\n1      Mortgage        4778\n2           Own        1350\n3          Rent        3848\n\nnames(res1)[2] <- \"n_applicants\"\nres1\n\n  homeownership n_applicants\n1      Mortgage         4778\n2           Own         1350\n3          Rent         3848"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#grouped-summary-with-aggregate-1",
+    "href": "materials/02-tidyverse/index.html#grouped-summary-with-aggregate-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Grouped summary with aggregate()",
+    "text": "Grouped summary with aggregate()\n\nres2 <- aggregate(loan_amount ~ homeownership, \n                  data = loans, FUN = mean)\nnames(res2)[2] <- \"avg_loan_amount\"\n\nres2\n\n  homeownership avg_loan_amount\n1      Mortgage        18132.45\n2           Own        15665.44\n3          Rent        14396.44\n\n\n\n\nres <- merge(res1, res2)\nres[order(res$n_applicants, decreasing = TRUE), ]\n\n  homeownership n_applicants avg_loan_amount\n1      Mortgage         4778        18132.45\n3          Rent         3848        14396.44\n2           Own         1350        15665.44"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#grouped-summary-with-aggregate-2",
+    "href": "materials/02-tidyverse/index.html#grouped-summary-with-aggregate-2",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Grouped summary with aggregate()",
+    "text": "Grouped summary with aggregate()\n\n\nres1 <- aggregate(loan_amount ~ homeownership, data = loans, FUN = length)\nnames(res1)[2] <- \"n_applicants\"\nres2 <- aggregate(loan_amount ~ homeownership, data = loans, FUN = mean)\nnames(res2)[2] <- \"avg_loan_amount\"\nres <- merge(res1, res2)\nres[order(res$n_applicants, decreasing = TRUE), ]\n\n\n\n\nGood: Inputs and outputs are data frames\nNot so good: Need to introduce\n\nformula syntax\npassing functions as arguments\nmerging datasets\nsquare bracket notation for accessing rows"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#grouped-summary-with-tapply",
+    "href": "materials/02-tidyverse/index.html#grouped-summary-with-tapply",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Grouped summary with tapply()",
+    "text": "Grouped summary with tapply()\n\nx <- tapply(loans$loan_amount, loans$homeownership, mean)\nx\n\nMortgage      Own     Rent \n18132.45 15665.44 14396.44 \n\ny <- tapply(loans$loan_amount, loans$homeownership, length)\ny\n\nMortgage      Own     Rent \n    4778     1350     3848"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#grouped-summary-with-tapply-1",
+    "href": "materials/02-tidyverse/index.html#grouped-summary-with-tapply-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Grouped summary with tapply()",
+    "text": "Grouped summary with tapply()\n\nz <- data.frame(\n  avg_loan_amount = x,\n  n_applicants = y\n  )\nz\n\n         avg_loan_amount n_applicants\nMortgage        18132.45         4778\nOwn             15665.44         1350\nRent            14396.44         3848\n\nz[order(z$n_applicants), ]\n\n         avg_loan_amount n_applicants\nOwn             15665.44         1350\nRent            14396.44         3848\nMortgage        18132.45         4778"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#grouped-summary-with-tapply-2",
+    "href": "materials/02-tidyverse/index.html#grouped-summary-with-tapply-2",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Grouped summary with tapply()",
+    "text": "Grouped summary with tapply()\n\nx <- tapply(loans$loan_amount, loans$homeownership, length)\ny <- tapply(loans$loan_amount, loans$homeownership, mean)\nz <- data.frame(n_applicants = x, avg_loan_amount = y)\nz[order(z$n_applicants), ]\n\n\n\nNot so good:\n\npassing functions as arguments\ndistinguishing between the various apply() functions\nending up with a new data structure (array)\nrelegating a data column to rownames"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#exercise-2-data-visualization",
+    "href": "materials/02-tidyverse/index.html#exercise-2-data-visualization",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Exercise 2: Data visualization",
+    "text": "Exercise 2: Data visualization\n\n RStudio Cloud > “Module 2 - Tidyverse” > ex-2-2.qmd\n\n\nUsing the loans data, create side-by-side box plots that shows the relationship between loan amount and application type, faceted by homeownership.\n\n\n Compare answers with your neighbor and choose an approach you would teach in an intro course.  Then, type your chosen answer and some narrative about how you would approach teaching it describing how you would teach it.\n\n\n\n\n\n\n\nSee next style for desired output.\n\n\n\n\n\n\n04:00"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#desired-output",
+    "href": "materials/02-tidyverse/index.html#desired-output",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Desired output",
+    "text": "Desired output"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-i-1",
+    "href": "materials/02-tidyverse/index.html#break-it-down-i-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down I",
+    "text": "Break it down I\n\n\nUsing the loans data, create side-by-side box plots that shows the relationship between annual income and application type, faceted by homeownership.\n\n\nggplot(loans)"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-ii-1",
+    "href": "materials/02-tidyverse/index.html#break-it-down-ii-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down II",
+    "text": "Break it down II\n\n\nUsing the loans data, create side-by-side box plots that shows the relationship between annual income and application type, faceted by homeownership.\n\n\nggplot(loans, \n       aes(x = application_type))"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-iii-1",
+    "href": "materials/02-tidyverse/index.html#break-it-down-iii-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down III",
+    "text": "Break it down III\n\n\nUsing the loans data, create side-by-side box plots that shows the relationship between annual income and application type, faceted by homeownership.\n\n\nggplot(loans, \n       aes(x = application_type,\n           y = loan_amount))"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-iv-1",
+    "href": "materials/02-tidyverse/index.html#break-it-down-iv-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down IV",
+    "text": "Break it down IV\n\n\nUsing the loans data, create side-by-side box plots that shows the relationship between annual income and application type, faceted by homeownership.\n\n\nggplot(loans, \n       aes(x = application_type,\n           y = loan_amount)) +\n  geom_boxplot()"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#break-it-down-iv-2",
+    "href": "materials/02-tidyverse/index.html#break-it-down-iv-2",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Break it down IV",
+    "text": "Break it down IV\n\n\nUsing the loans data, create side-by-side box plots that shows the relationship between annual income and application type, faceted by homeownership.\n\n\nggplot(loans, \n       aes(x = application_type,\n           y = loan_amount)) +\n  geom_boxplot() +\n  facet_wrap(~ homeownership)"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#plotting-with-ggplot",
+    "href": "materials/02-tidyverse/index.html#plotting-with-ggplot",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Plotting with ggplot()",
+    "text": "Plotting with ggplot()\n\nggplot(loans, \n       aes(x = application_type, y = loan_amount)) +\n  geom_boxplot() +\n  facet_wrap(~ homeownership)\n\n\n\nEach layer produces a valid plot\nFaceting by a third variable takes only one new function"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#plotting-with-boxplot",
+    "href": "materials/02-tidyverse/index.html#plotting-with-boxplot",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Plotting with boxplot()",
+    "text": "Plotting with boxplot()\n\nlevels <- sort(unique(loans$homeownership))\nlevels\n\n[1] \"Mortgage\" \"Own\"      \"Rent\"    \n\nloans1 <- loans[loans$homeownership == levels[1],]\nloans2 <- loans[loans$homeownership == levels[2],]\nloans3 <- loans[loans$homeownership == levels[3],]"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#plotting-with-boxplot-1",
+    "href": "materials/02-tidyverse/index.html#plotting-with-boxplot-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Plotting with boxplot()",
+    "text": "Plotting with boxplot()\n\npar(mfrow = c(1, 3))\n\nboxplot(loan_amount ~ application_type, \n        data = loans1, main = levels[1])\nboxplot(loan_amount ~ application_type, \n        data = loans2, main = levels[2])\nboxplot(loan_amount ~ application_type, \n        data = loans3, main = levels[3])"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#visualizing-a-different-relationship",
+    "href": "materials/02-tidyverse/index.html#visualizing-a-different-relationship",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Visualizing a different relationship",
+    "text": "Visualizing a different relationship\n\nVisualize the relationship between interest rate and annual income, conditioned on whether the applicant had a bankruptcy."
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#plotting-with-ggplot-1",
+    "href": "materials/02-tidyverse/index.html#plotting-with-ggplot-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Plotting with ggplot()",
+    "text": "Plotting with ggplot()\n\nggplot(loans, \n       aes(y = interest_rate, x = annual_income, \n           color = bankruptcy)) +\n  geom_point(alpha = 0.1) + \n  geom_smooth(method = \"lm\", size = 2, se = FALSE) + \n  scale_x_log10()"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#further-customizing-ggplot",
+    "href": "materials/02-tidyverse/index.html#further-customizing-ggplot",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Further customizing ggplot()",
+    "text": "Further customizing ggplot()\n\nggplot(loans, \n       aes(y = interest_rate, x = annual_income, \n           color = bankruptcy)) +\n  geom_point(alpha = 0.1) + \n  geom_smooth(method = \"lm\", size = 2, se = FALSE) + \n  scale_x_log10(labels = scales::label_dollar()) +\n  scale_y_continuous(labels = scales::label_percent(scale = 1)) +\n  scale_color_OkabeIto() +\n  labs(x = \"Annual Income\", y = \"Interest Rate\", \n       color = \"Previous\\nBankruptcy\") +\n  theme_minimal(base_size = 18)"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#plotting-with-plot",
+    "href": "materials/02-tidyverse/index.html#plotting-with-plot",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Plotting with plot()",
+    "text": "Plotting with plot()\n\n# From the OkabeIto palette\ncols = c(No = \"#e6a003\", Yes = \"#57b4e9\")\n\nplot(\n  loans$annual_income,\n  loans$interest_rate,\n  pch = 16,\n  col = adjustcolor(cols[loans$bankruptcy], alpha.f = 0.1),\n  log = \"x\",\n  xlab = \"Annual Income ($)\",\n  ylab = \"Interest Rate (%)\",\n  xaxp = c(1000, 10000000, 1)\n)\n\nlm_b_no = lm(\n  interest_rate ~ log10(annual_income), \n  data = loans[loans$bankruptcy == \"No\",]\n)\nlm_b_yes = lm(\n  interest_rate ~ log10(annual_income), \n  data = loans[loans$bankruptcy == \"Yes\",]\n)\n\nabline(lm_b_no, col = cols[\"No\"], lwd = 3)\nabline(lm_b_yes, col = cols[\"Yes\"], lwd = 3)\n\nlegend(\n  \"topright\", \n  legend = c(\"Yes\", \"No\"), \n  title = \"Previous\\nBankruptcy\", \n  col = cols[c(\"Yes\", \"No\")], \n  pch = 16, lwd = 1\n)"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#plotting-with-plot-1",
+    "href": "materials/02-tidyverse/index.html#plotting-with-plot-1",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Plotting with plot()",
+    "text": "Plotting with plot()"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#beyond-wrangling-summaries-visualizations",
+    "href": "materials/02-tidyverse/index.html#beyond-wrangling-summaries-visualizations",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Beyond wrangling, summaries, visualizations",
+    "text": "Beyond wrangling, summaries, visualizations\nModeling and inference with tidymodels:\n\nA unified interface to modeling functions available in a large variety of packages\nSticking to the data frame in / data frame out paradigm\nGuardrails for methodology\n\n\n\n\n\n\n\nNext module is teaching with tidymodels!"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#consistency",
+    "href": "materials/02-tidyverse/index.html#consistency",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Consistency",
+    "text": "Consistency\n\nNo matter which approach or tool you use, you should strive to be consistent in the classroom whenever possible\nTidyverse offers consistency, something we believe to be of the utmost importance, allowing students to move knowledge about function arguments to their long-term memory"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#teaching-consistently",
+    "href": "materials/02-tidyverse/index.html#teaching-consistently",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Teaching consistently",
+    "text": "Teaching consistently\n\nChallenge: Google and Stack Overflow can be less useful – demo problem solving\nCounter-proposition: teach all (or multiple) syntaxes at once – trying to teach two (or more!) syntaxes at once will slow the pace of the course, introduce unnecessary syntactic confusion, and make it harder for students to complete their work.\n“Disciplined in what we teach, liberal in what we accept”\n\n\n\nPostel, J. (1980). DoD standard internet protocol. ACM SIGCOMM Computer Communication Review, 10(4), 12-51. datatracker.ietf.org/doc/html/rfc760"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#mixability",
+    "href": "materials/02-tidyverse/index.html#mixability",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Mixability",
+    "text": "Mixability\n\nMix with base R code or code from other packages\nIn fact, you can’t not mix with base R code!"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#scalability",
+    "href": "materials/02-tidyverse/index.html#scalability",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Scalability",
+    "text": "Scalability\nAdding a new variable to a visualization or a new summary statistic doesn’t require introducing a numerous functions, interfaces, and data structures"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#user-centered-design",
+    "href": "materials/02-tidyverse/index.html#user-centered-design",
+    "title": "Teaching data science with the tidyverse",
+    "section": "User-centered design",
+    "text": "User-centered design\n\nInterfaces designed with user experience (and learning) in mind\nContinuous feedback collection and iterative improvements based on user experiences improve functions’ and packages’ usability (and learnability)"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#readability",
+    "href": "materials/02-tidyverse/index.html#readability",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Readability",
+    "text": "Readability\nInterfaces that are designed to produce readable code"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#community",
+    "href": "materials/02-tidyverse/index.html#community",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Community",
+    "text": "Community\n\nThe encouraging and inclusive tidyverse community is one of the benefits of the paradigm\nEach package comes with a website, each of these websites are similarly laid out, and results of example code are displayed, and extensive vignettes describe how to use various functions from the package together"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#shared-syntax",
+    "href": "materials/02-tidyverse/index.html#shared-syntax",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Shared syntax",
+    "text": "Shared syntax\nGet SQL for free with dplyr verbs!"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#building-a-curriculum",
+    "href": "materials/02-tidyverse/index.html#building-a-curriculum",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Building a curriculum",
+    "text": "Building a curriculum\n\nStart with library(tidyverse)\nTeach by learning goals, not packages"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#keeping-up-with-the-tidyverse",
+    "href": "materials/02-tidyverse/index.html#keeping-up-with-the-tidyverse",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Keeping up with the tidyverse",
+    "text": "Keeping up with the tidyverse\n\nBlog posts highlight updates, along with the reasoning behind them and worked examples\nLifecycle stages and badges"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#coda",
+    "href": "materials/02-tidyverse/index.html#coda",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Coda",
+    "text": "Coda\n\n\n\nWe are all converts to the tidyverse and have made a conscious choice to use it in our research and our teaching. We each learned R without the tidyverse and have all spent quite a few years teaching without it at a variety of levels from undergraduate introductory statistics courses to graduate statistical computing courses. This paper is a synthesis of the reasons supporting our tidyverse choice, along with benefits and challenges associated with teaching statistics with the tidyverse.\n\n\n\n\n\n\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B. S., McNamara, A., Horton, N. J., & Rundel, C. (2021). An educator’s perspective of the tidyverse. arXiv preprint arXiv:2108.03510. arxiv.org/abs/2108.03510"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#discussion",
+    "href": "materials/02-tidyverse/index.html#discussion",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Discussion",
+    "text": "Discussion\n\nDo you teach with the tidyverse?\n\nIf yes, what are some highlights of your teaching experience and what are some challenges?\nIf no, what is your approach and, if you’ve considered the tidyverse but decided against it, why?\n\nAny other discussion points of interest?\n\n\n Discuss with your partner for a few minutes first, before sharing with the big group.\n\n\n\n\n04:00"
+  },
+  {
+    "objectID": "materials/02-tidyverse/index.html#time-permitting",
+    "href": "materials/02-tidyverse/index.html#time-permitting",
+    "title": "Teaching data science with the tidyverse",
+    "section": "Time permitting",
+    "text": "Time permitting\nLet’s take a look at the source code for these slides for some of the highlighting tricks!\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 2"
+  },
+  {
+    "objectID": "materials/02-tidyverse/ex-2-2.html",
+    "href": "materials/02-tidyverse/ex-2-2.html",
+    "title": "Ex 2.2: Side-by-side box plots",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(openintro)\n\nloans <- loans_full_schema %>%\n  mutate(\n    homeownership = str_to_title(homeownership), \n    bankruptcy = if_else(public_record_bankrupt >= 1, \"Yes\", \"No\")\n  ) %>%\n  filter(annual_income >= 10) %>%\n  select(\n    loan_amount, homeownership, bankruptcy,\n    application_type, annual_income, interest_rate\n  )\n\nloans\n\n# A tibble: 9,976 × 6\n   loan_amount homeownership bankruptcy application_type annual_income\n         <int> <chr>         <chr>      <fct>                    <dbl>\n 1       28000 Mortgage      No         individual               90000\n 2        5000 Rent          Yes        individual               40000\n 3        2000 Rent          No         individual               40000\n 4       21600 Rent          No         individual               30000\n 5       23000 Rent          No         joint                    35000\n 6        5000 Own           No         individual               34000\n 7       24000 Mortgage      No         joint                    35000\n 8       20000 Mortgage      No         individual              110000\n 9       20000 Mortgage      No         individual               65000\n10        6400 Rent          No         individual               30000\n# … with 9,966 more rows, and 1 more variable: interest_rate <dbl>"
+  },
+  {
+    "objectID": "materials/02-tidyverse/ex-2-2.html#exercise",
+    "href": "materials/02-tidyverse/ex-2-2.html#exercise",
+    "title": "Ex 2.2: Side-by-side box plots",
+    "section": "Exercise",
+    "text": "Exercise\nUsing the loans data, create side-by-side box plots that shows the relationship between loan amount and application type, faceted by homeownership.\n\n# add your answer here"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-3.html",
+    "href": "materials/03-tidymodels/ex-3-3.html",
+    "title": "Ex 3.3: Train / test data",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-3.html#introduction",
+    "href": "materials/03-tidymodels/ex-3-3.html#introduction",
+    "title": "Ex 3.3: Train / test data",
+    "section": "Introduction",
+    "text": "Introduction\nSome of the code below has been pre-populated. In these cases, there is a code chunk option set as #| eval: false. Make sure to remove this option prior to running the relevant code chunk to avoid any errors when rendering the document."
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-3.html#model",
+    "href": "materials/03-tidymodels/ex-3-3.html#model",
+    "title": "Ex 3.3: Train / test data",
+    "section": "Model",
+    "text": "Model\nThe goal is to fit a model to predict the interest rate (interest_rate) based on the debt to income ratio (debt_to_income), type of application (application_type), and whether there are any bankruptcies listed in the public record for the individual (bankrupt). The model should allow the effect of debt to income ratio to differ based on application type.\n\\[\n\\begin{align}\\widehat{interest\\_rate} = b_0 &+ b_1 \\times debt\\_to\\_income \\\\ &+ b_2 \\times application\\_type \\\\ &+ b_3 \\times bankrupt \\\\ &+ b_4 \\times debt\\_to\\_income:application\\_type\\end{align}\n\\]"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-3.html#recipe",
+    "href": "materials/03-tidymodels/ex-3-3.html#recipe",
+    "title": "Ex 3.3: Train / test data",
+    "section": "Recipe",
+    "text": "Recipe\nThis exercise builds on Exercises 1 and 2. To get you started, the recipe created in Exercise 1 and workflow from Exercise 2 are below.\n\nloans_rec <- recipe(interest_rate ~ debt_to_income + application_type + \n                      public_record_bankrupt, data = loans_full_schema) |>\n  step_normalize(debt_to_income) |>\n  step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \n                                           \"no\", \"yes\"))) |>\n  step_rm(public_record_bankrupt) |>\n  step_dummy(all_nominal_predictors()) |>\n  step_interact(terms = ~ starts_with(\"application_type\"):debt_to_income)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-3.html#train-test-data",
+    "href": "materials/03-tidymodels/ex-3-3.html#train-test-data",
+    "title": "Ex 3.3: Train / test data",
+    "section": "Train / test data",
+    "text": "Train / test data\nComplete the code below to split the data into training (80%) and testing (20%) sets.\n\nset.seed(12345)\nloans_split <- initial_split(_____)\nloans_train <- _____\nloans_test <- ______"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-3.html#fit-the-model-to-training-data",
+    "href": "materials/03-tidymodels/ex-3-3.html#fit-the-model-to-training-data",
+    "title": "Ex 3.3: Train / test data",
+    "section": "Fit the model to training data",
+    "text": "Fit the model to training data\nFit the model to the training data.\n\nloand_train_fit <- ______"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-3.html#evaluate-model",
+    "href": "materials/03-tidymodels/ex-3-3.html#evaluate-model",
+    "title": "Ex 3.3: Train / test data",
+    "section": "Evaluate model",
+    "text": "Evaluate model\nCalculate \\(R^2\\) and \\(RMSE\\) for the training and test data.\n\n# calculate predictions \n\n# calculate r-sq\n\n# calculate rmse\n\n\n# calculate predictions \n\n# calculate r-sq\n\n# calculate rmse"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-3.html#discussion",
+    "href": "materials/03-tidymodels/ex-3-3.html#discussion",
+    "title": "Ex 3.3: Train / test data",
+    "section": "Discussion",
+    "text": "Discussion\nDoes the model perform well if the primary objective is to\n\nexplain variability in interest rates?\npredict the interest rate for an application?\n\nWhy or why not?"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-1.html",
+    "href": "materials/03-tidymodels/ex-3-1.html",
+    "title": "Ex 3.1: Feature engineering",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-1.html#introduction",
+    "href": "materials/03-tidymodels/ex-3-1.html#introduction",
+    "title": "Ex 3.1: Feature engineering",
+    "section": "Introduction",
+    "text": "Introduction\nSome of the code below has been pre-populated. In these cases, there is a code chunk option set as #| eval: false. Make sure to remove this option prior to running the relevant code chunk to avoid any errors when rendering the document."
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-1.html#data",
+    "href": "materials/03-tidymodels/ex-3-1.html#data",
+    "title": "Ex 3.1: Feature engineering",
+    "section": "Data",
+    "text": "Data\nThe data is the loans_full_schema data set from the openintro package and featured in the OpenIntro textbooks . It contains information about 50,000 loans made through the Lending Club platform.\nThe data has a bit of peculiarity about it, specifically the application_type variable is a factor variable with an empty level.\n\nlevels(loans_full_schema$application_type)\n\n[1] \"\"           \"individual\" \"joint\"     \n\n\nLet’s clean up this variable using the droplevels() function first. And let’s apply that to the whole data set, in case there are other variables with similar issues.\n\nloans_full_schema <- droplevels(loans_full_schema)\n\nThe variables we’ll use in this analysis are:\n\ninterest_rate: Interest rate of the loan the applicant received.\ndebt_to_income: Debt-to-income ratio.\npublic_record_bankrupt: Number of bankruptcies listed in the public record for this applicant.\napplication_type: The type of application: either individual or joint."
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-1.html#model",
+    "href": "materials/03-tidymodels/ex-3-1.html#model",
+    "title": "Ex 3.1: Feature engineering",
+    "section": "Model",
+    "text": "Model\nThe goal is to fit a model to predict the interest rate (interest_rate) based on the debt to income ratio (debt_to_income), type of application (application_type), and whether there are any bankruptcies listed in the public record for the individual (bankrupt). The model should allow the effect of debt to income ratio to differ based on application type.\n\\[\n\\begin{align}\\widehat{interest\\_rate} = b_0 &+ b_1 \\times debt\\_to\\_income \\\\ &+ b_2 \\times application\\_type \\\\ &+ b_3 \\times bankrupt \\\\ &+ b_4 \\times debt\\_to\\_income:application\\_type\\end{align}\n\\]"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-1.html#featuring-engineering-with-dplyr",
+    "href": "materials/03-tidymodels/ex-3-1.html#featuring-engineering-with-dplyr",
+    "title": "Ex 3.1: Feature engineering",
+    "section": "Featuring engineering with dplyr",
+    "text": "Featuring engineering with dplyr\nThe feature engineering to transform and create new variables using dplyr is shown below.\n\nloans_full_schema_mod <- loans_full_schema |>\n  mutate(debt_to_income_norm = \n           debt_to_income - mean(debt_to_income, na.rm = TRUE)/ sd(debt_to_income, na.rm = TRUE)) |>\n  mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \"no\", \"yes\")))|>\n  mutate(app_type_joint = if_else(application_type == \"joint\", 1, 0)) |>\n  mutate(debt_app_int = debt_to_income_norm * app_type_joint) |>\n  select(-public_record_bankrupt)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-1.html#feature-engineering-using-recipes",
+    "href": "materials/03-tidymodels/ex-3-1.html#feature-engineering-using-recipes",
+    "title": "Ex 3.1: Feature engineering",
+    "section": "Feature engineering using recipes",
+    "text": "Feature engineering using recipes\nComplete the code below to write the recipe for this model. Call the recipe loans_rec. Use the appropriate step_* functions to complete the feature engineering steps shown in the dplyr pipeline above. You can find the list of step_* functions on the recipes reference page.\n\nloans_rec <- recipe(interest_rate ~ _______,\n                       data = loans_full_schema) |>\n\nUse prep() and bake() to view the transformed and newly created variables.\n\nloans_rec |>\n  prep()|>\n  bake(_____) |>\n  head()"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-1.html#discussion",
+    "href": "materials/03-tidymodels/ex-3-1.html#discussion",
+    "title": "Ex 3.1: Feature engineering",
+    "section": "Discussion",
+    "text": "Discussion\nWhat was easy / straightforward about writing the recipe? What was challenging?"
+  },
+  {
     "objectID": "materials/03-tidymodels/index.html#session-outline",
     "href": "materials/03-tidymodels/index.html#session-outline",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Session outline",
-    "text": "Session outline\n\nAdd agenda"
+    "text": "Session outline\n\nAdd agenda\n\n\n# load packages for slides\nlibrary(tidyverse)\nlibrary(openintro)\nlibrary(countdown)"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#gaise-guidelines",
@@ -322,13 +1050,6 @@
     "text": "Teaching modern regression\nFacilitate opportunities for students to…\n\n\nRegularly engage with real-world applications and complex data\nDevelop proficiency using professional statistical software and using a reproducible workflow\nIdentify appropriate methods based on the primary analysis objective - inference or prediction\nDevelop important non-technical skills, specifically written communication and teamwork"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#discussion",
-    "href": "materials/03-tidymodels/index.html#discussion",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Discussion",
-    "text": "Discussion\n\n\n\n\n\n\nImportant\n\n\n\nHow much do you teach regression in your course(s)?\nDo you currently implement any of these principles in your teaching? Do you find some more challenging to implement than others?"
-  },
-  {
     "objectID": "materials/03-tidymodels/index.html#tidymodels",
     "href": "materials/03-tidymodels/index.html#tidymodels",
     "title": "Teaching modern modeling with tidymodels",
@@ -340,14 +1061,14 @@
     "href": "materials/03-tidymodels/index.html#tidymodels-1",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Tidymodels",
-    "text": "Tidymodels\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 0.2.0 ──\n\n\n✔ broom        0.8.0     ✔ rsample      0.1.1\n✔ dials        0.1.1     ✔ tune         0.2.0\n✔ infer        1.0.2     ✔ workflows    0.2.6\n✔ modeldata    0.1.1     ✔ workflowsets 0.2.1\n✔ parsnip      0.2.1     ✔ yardstick    0.0.9\n✔ recipes      0.2.0     \n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ scales::discard() masks purrr::discard()\n✖ dplyr::filter()   masks stats::filter()\n✖ recipes::fixed()  masks stringr::fixed()\n✖ dplyr::lag()      masks stats::lag()\n✖ yardstick::spec() masks readr::spec()\n✖ recipes::step()   masks stats::step()\n• Dig deeper into tidy modeling with R at https://www.tmwr.org"
+    "text": "Tidymodels\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──\n\n\n✔ broom        1.0.0     ✔ rsample      1.0.0\n✔ dials        1.0.0     ✔ tune         1.0.0\n✔ infer        1.0.2     ✔ workflows    1.0.0\n✔ modeldata    1.0.0     ✔ workflowsets 1.0.0\n✔ parsnip      1.0.0     ✔ yardstick    1.0.0\n✔ recipes      1.0.1     \n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ scales::discard() masks purrr::discard()\n✖ dplyr::filter()   masks stats::filter()\n✖ recipes::fixed()  masks stringr::fixed()\n✖ dplyr::lag()      masks stats::lag()\n✖ yardstick::spec() masks readr::spec()\n✖ recipes::step()   masks stats::step()\n• Dig deeper into tidy modeling with R at https://www.tmwr.org"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#data-loans-from-lending-club",
     "href": "materials/03-tidymodels/index.html#data-loans-from-lending-club",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Data: Loans from Lending Club",
-    "text": "Data: Loans from Lending Club\n[Write introduction to the data] and the variables. Partially follow analysis in Chapter 8 - Linear regression with multiple predictors in Introduction to Modern Statistics."
+    "text": "Data: Loans from Lending Club\nThe data is the loans_full_schema data set from the openintro package and featured in the OpenIntro textbooks . It contains information about 50,000 loans made through the Lending Club platform. The variables we’ll use in this analysis are\n\ninterest_rate: Interest rate of the loan the applicant received.\ndebt_to_income: Debt-to-income ratio.\nterm: The number of months of the loan the applicant received.\ndelinq_2y: Number of delinquencies on lines of credit in the last 2 years."
   },
   {
     "objectID": "materials/03-tidymodels/index.html#data-loans-from-lending-club-1",
@@ -361,14 +1082,14 @@
     "href": "materials/03-tidymodels/index.html#regression-syntax",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Regression syntax",
-    "text": "Regression syntax\nFit a linear regression model to predict the interest rate using the debt to income ratio.\n\nBase RTidymodels\n\n\n\nbase_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)\n\nsummary(base_lm)\n\n\nCall:\nlm(formula = interest_rate ~ debt_to_income, data = loans_full_schema)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-21.7391  -3.7203  -0.7945   2.7351  18.6274 \n\nCoefficients:\n                Estimate Std. Error t value Pr(>|t|)    \n(Intercept)    11.511445   0.080732  142.59   <2e-16 ***\ndebt_to_income  0.047183   0.003302   14.29   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.948 on 9974 degrees of freedom\n  (24 observations deleted due to missingness)\nMultiple R-squared:  0.02007,   Adjusted R-squared:  0.01997 \nF-statistic: 204.2 on 1 and 9974 DF,  p-value: < 2.2e-16\n\n\n\n\n\ntidy_lm <- linear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema)\n\ntidy(tidy_lm)\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46"
+    "text": "Regression syntax\nFit a linear regression model to predict the interest rate using the debt to income ratio.\n\nBase RTidymodels\n\n\n\nbase_lm <- lm(interest_rate ~ debt_to_income, data = loans_full_schema)\nsummary(base_lm)\n\n\nCall:\nlm(formula = interest_rate ~ debt_to_income, data = loans_full_schema)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-21.7391  -3.7203  -0.7945   2.7351  18.6274 \n\nCoefficients:\n                Estimate Std. Error t value Pr(>|t|)    \n(Intercept)    11.511445   0.080732  142.59   <2e-16 ***\ndebt_to_income  0.047183   0.003302   14.29   <2e-16 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 4.948 on 9974 degrees of freedom\n  (24 observations deleted due to missingness)\nMultiple R-squared:  0.02007,   Adjusted R-squared:  0.01997 \nF-statistic: 204.2 on 1 and 9974 DF,  p-value: < 2.2e-16\n\n\n\n\n\ntidy_lm <- linear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema)\n\ntidy(tidy_lm)\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#model-summaries-using-broom",
     "href": "materials/03-tidymodels/index.html#model-summaries-using-broom",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Model summaries using broom",
-    "text": "Model summaries using broom\nCan utilize functions from the broom package to produce tidy summaries of models fit using Base R or the tidymodels framework\n\ntidy(): summarizes information about model components\nglance(): reports information about the entire model\naugment(): adds informations about observations to a dataset\n\n\nbroom.tidymodels.org"
+    "text": "Model summaries using broom\nCan utilize functions from the broom package to produce tidy summaries of models fit using Base R or the tidymodels framework\n\ntidy(): summarizes information about model components\nglance(): reports information about the entire model\naugment(): adds information about observations to a data set"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#tidy",
@@ -382,28 +1103,28 @@
     "href": "materials/03-tidymodels/index.html#glance",
     "title": "Teaching modern modeling with tidymodels",
     "section": "glance()",
-    "text": "glance()\n\nBase RTidymodels\n\n\n\nglance(base_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³\n      <dbl>     <dbl> <dbl>   <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>   <dbl>\n1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.\n# … with 2 more variables: df.residual <int>, nobs <int>, and abbreviated\n#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance\n# ℹ Use `colnames()` to see all variable names\n\n\n\n\n\nglance(tidy_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³\n      <dbl>     <dbl> <dbl>   <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>   <dbl>\n1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.\n# … with 2 more variables: df.residual <int>, nobs <int>, and abbreviated\n#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance\n# ℹ Use `colnames()` to see all variable names"
+    "text": "glance()\n\nBase RTidymodels\n\n\n\nglance(base_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.\n# … with 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\n\n\nglance(tidy_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.\n# … with 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#augment",
     "href": "materials/03-tidymodels/index.html#augment",
     "title": "Teaching modern modeling with tidymodels",
     "section": "augment()",
-    "text": "augment()\n\nBase RTidymodels\n\n\n\nbase_lm_aug <- augment(base_lm)\nbase_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²\n   <chr>             <dbl>   <dbl>   <dbl>  <dbl>   <dbl>  <dbl>   <dbl>   <dbl>\n 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 \n 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 \n 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 \n 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  \n 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356\n 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  \n 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 \n 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577\n 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722\n10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  \n# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,\n#   ²​.std.resid\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\n\ntidy_lm_aug <- augment(tidy_lm$fit)\ntidy_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²\n   <chr>             <dbl>   <dbl>   <dbl>  <dbl>   <dbl>  <dbl>   <dbl>   <dbl>\n 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 \n 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 \n 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 \n 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  \n 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356\n 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  \n 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 \n 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577\n 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722\n10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  \n# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,\n#   ²​.std.resid\n# ℹ Use `print(n = ...)` to see more rows"
+    "text": "augment()\n\nBase RTidymodels\n\n\n\nbase_lm_aug <- augment(base_lm)\nbase_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd\n   <chr>             <dbl>          <dbl>   <dbl>  <dbl>    <dbl>  <dbl>   <dbl>\n 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6\n 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6\n 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5\n 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5\n 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7\n 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5\n 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6\n 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7\n 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7\n10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5\n# … with 9,966 more rows, and 1 more variable: .std.resid <dbl>\n\n\n\n\n\ntidy_lm_aug <- augment(tidy_lm$fit)\ntidy_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd\n   <chr>             <dbl>          <dbl>   <dbl>  <dbl>    <dbl>  <dbl>   <dbl>\n 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6\n 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6\n 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5\n 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5\n 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7\n 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5\n 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6\n 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7\n 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7\n10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5\n# … with 9,966 more rows, and 1 more variable: .std.resid <dbl>"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#why-full-tidymodels-framework",
-    "href": "materials/03-tidymodels/index.html#why-full-tidymodels-framework",
+    "objectID": "materials/03-tidymodels/index.html#why-tidymodels",
+    "href": "materials/03-tidymodels/index.html#why-tidymodels",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Why full tidymodels framework?",
-    "text": "Why full tidymodels framework?\nMost pedagogical advantages for more advanced models:\n\nConsistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.\nStreamline modeling workflow\n\nSplit data into train and test sets\nCreate custom variables\nAssess model performance\nUse model for prediction and inference"
+    "section": "Why Tidymodels?",
+    "text": "Why Tidymodels?\nThere are advantages for more advanced modeling:\n\nConsistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.\nStreamline modeling workflow\n\nSplit data into train and test sets\nTransform and create new variables\nAssess model performance\nUse model for prediction and inference"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#getting-started",
-    "href": "materials/03-tidymodels/index.html#getting-started",
+    "objectID": "materials/03-tidymodels/index.html#tidymodels-syntax",
+    "href": "materials/03-tidymodels/index.html#tidymodels-syntax",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Getting started",
-    "text": "Getting started\nLet’s breakdown the syntax from the previous example.\n\nlinear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46"
+    "section": "Tidymodels syntax",
+    "text": "Tidymodels syntax\n\nlinear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46\n\n\nLet’s break down the syntax."
   },
   {
     "objectID": "materials/03-tidymodels/index.html#specify-model",
@@ -434,32 +1155,32 @@
     "text": "4️⃣ Summarize output\n\nlinear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#add-slide",
-    "href": "materials/03-tidymodels/index.html#add-slide",
+    "objectID": "materials/03-tidymodels/index.html#consistent-syntax-for-other-models",
+    "href": "materials/03-tidymodels/index.html#consistent-syntax-for-other-models",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Add slide?",
-    "text": "Add slide?\n\nAdd a slide to show how this would be consistent if you made a logistic model?"
+    "section": "Consistent syntax for other models",
+    "text": "Consistent syntax for other models\nThe syntax is the same if we fit a more advanced model, such as a logistic regression model.\n\nFit a model to predict the loan term length (36 or 60 months) based on the loan amount.\n\nlogistic_reg() |>\n  set_engine(\"glm\") |>\n  fit(factor(term) ~ loan_amount, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 2 × 5\n  term          estimate  std.error statistic   p.value\n  <chr>            <dbl>      <dbl>     <dbl>     <dbl>\n1 (Intercept) -2.28      0.0493         -46.2 0        \n2 loan_amount  0.0000814 0.00000232      35.1 1.02e-269"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#feature-engineering",
     "href": "materials/03-tidymodels/index.html#feature-engineering",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Feature engineering",
-    "text": "Feature engineering\nFeature engineering is the process of transforming raw variables in preparation for use in a statistical model.\n\n\nWe may be familiar doing feature engineering using dplyr before fitting the model.\n\n\n\nThe recipes package makes it possible to do feature engineering as part of the modeling workflow using “dplyr-like” functions."
+    "text": "Feature engineering\n\n\nFeature engineering is the process of transforming raw variables in preparation for use in a statistical model.\nYou may be familiar doing feature engineering using dplyr before fitting the model.\nThe recipes package makes it possible to do feature engineering as part of the modeling workflow using “dplyr-like” functions."
   },
   {
     "objectID": "materials/03-tidymodels/index.html#example-predicting-interest-rate",
     "href": "materials/03-tidymodels/index.html#example-predicting-interest-rate",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Example: Predicting interest rate",
-    "text": "Example: Predicting interest rate\nGoal: Fit a model to predict the interest rate from the term, debt to income ratio, home ownership, and number of delinquencies in past two years.\n\n\nWe need to do the following to prepare the predictors for the model:\n\nMake term a factor.\nMean-center debt_to_income.\nBreak delinq_2y into the categories 0, 1, 2, 3+."
+    "text": "Example: Predicting interest rate\n\n\nGoal: Fit a model to predict the interest rate based on the term, debt to income ratio, and number of delinquencies in the past two years.\nWe need to do the following to prepare the predictors for the model:\n\nMake term a factor.\nMean-center debt_to_income.\nSplit delinq_2y into the categories 0, 1, 2, 3+."
   },
   {
     "objectID": "materials/03-tidymodels/index.html#feature-engineering-using-dplyr",
     "href": "materials/03-tidymodels/index.html#feature-engineering-using-dplyr",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Feature engineering using dplyr",
-    "text": "Feature engineering using dplyr\n\n# Prepare the data\nloans_full_schema <- loans_full_schema |>\n  mutate(term = as_factor(term)) |>\n  mutate(debt_to_income_cent = debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>\n  mutate(delinq_2y_cat = cut(delinq_2y, breaks = c(0, 1, 2, 3, Inf), right = FALSE))\n\n# Fit the model \nlm(interest_rate ~ term + debt_to_income_cent + homeownership + delinq_2y_cat, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 8 × 5\n  term                 estimate std.error statistic  p.value\n  <chr>                   <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)           10.3      0.0780     132.   0       \n2 term60                 4.03     0.0997      40.4  0       \n3 debt_to_income_cent    0.0462   0.00304     15.2  1.80e-51\n4 homeownershipOWN       0.726    0.140        5.18 2.31e- 7\n5 homeownershipRENT      1.49     0.0994      15.0  1.55e-50\n6 delinq_2y_cat[1,2)     1.49     0.151        9.83 1.04e-22\n7 delinq_2y_cat[2,3)     1.81     0.288        6.29 3.23e-10\n8 delinq_2y_cat[3,Inf)   2.76     0.368        7.49 7.28e-14"
+    "text": "Feature engineering using dplyr\n\n# Feature engineering\nloans_full_schema <- loans_full_schema |>\n  mutate(term_fct = as_factor(term)) |>\n  mutate(debt_to_income_cent = \n           debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>\n  mutate(delinq_2y_cat = \n           cut(delinq_2y, breaks = c(-Inf,0,1, 2, 3, Inf)))\n\n# Fit the model \nlm(interest_rate ~ term_fct + debt_to_income_cent + delinq_2y_cat,\n   data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 7 × 5\n  term                  estimate std.error statistic   p.value\n  <chr>                    <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)            11.0      0.0584     189.   0        \n2 term_fct60              3.86     0.100       38.5  6.67e-303\n3 debt_to_income_cent     0.0429   0.00307     14.0  5.47e- 44\n4 delinq_2y_cat(0,1]      1.37     0.153        8.95 4.08e- 19\n5 delinq_2y_cat(1,2]      1.68     0.291        5.76 8.57e-  9\n6 delinq_2y_cat(2,3]      2.46     0.492        5.00 5.78e-  7\n7 delinq_2y_cat(3, Inf]   2.85     0.563        5.05 4.39e-  7"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#feature-engineering-with-recipes",
@@ -469,109 +1190,193 @@
     "text": "Feature engineering with recipes\n\nIllustration by Allison Horst"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#feature-engineering-with-recipes-1",
-    "href": "materials/03-tidymodels/index.html#feature-engineering-with-recipes-1",
+    "objectID": "materials/03-tidymodels/index.html#specify-the-variables",
+    "href": "materials/03-tidymodels/index.html#specify-the-variables",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Feature engineering with recipes",
-    "text": "Feature engineering with recipes\n\nWrite code step by step\nPut all steps in a single pipeline"
+    "section": "Specify the variables",
+    "text": "Specify the variables\n\ninterest_rec <- recipe(\n  interest_rate ~ term + debt_to_income + delinq_2y, \n  data = loans_full_schema \n  )\n\ninterest_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor          3"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#featuring-engineering-with-recipes",
-    "href": "materials/03-tidymodels/index.html#featuring-engineering-with-recipes",
+    "objectID": "materials/03-tidymodels/index.html#define-pre-processing-steps",
+    "href": "materials/03-tidymodels/index.html#define-pre-processing-steps",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Featuring engineering with recipes",
-    "text": "Featuring engineering with recipes\n\n# define workflow \n\ninterest_rec <- recipe(interest_rate ~ term + debt_to_income + \n                         homeownership + delinq_2y, \n                       data = loans_full_schema)"
+    "section": "Define pre-processing steps",
+    "text": "Define pre-processing steps\nMake term a factor.\n\ninterest_rec <- interest_rec |>\n  step_mutate(term = as_factor(term))\n\ninterest_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor          3\n\nOperations:\n\nVariable mutation for as_factor(term)"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#recipes-vs.-dplyr",
-    "href": "materials/03-tidymodels/index.html#recipes-vs.-dplyr",
+    "objectID": "materials/03-tidymodels/index.html#define-pre-processing-steps-1",
+    "href": "materials/03-tidymodels/index.html#define-pre-processing-steps-1",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "recipes vs. dplyr",
-    "text": "recipes vs. dplyr\n\nshow code side by side\nadvantages / disadvantage of each approach"
+    "section": "Define pre-processing steps",
+    "text": "Define pre-processing steps\nMean-center debt_to_income.\n\ninterest_rec <- interest_rec |>\n  step_center(debt_to_income)\n\ninterest_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor          3\n\nOperations:\n\nVariable mutation for as_factor(term)\nCentering for debt_to_income"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#put-it-together-with-workflow",
-    "href": "materials/03-tidymodels/index.html#put-it-together-with-workflow",
+    "objectID": "materials/03-tidymodels/index.html#define-pre-processing-steps-2",
+    "href": "materials/03-tidymodels/index.html#define-pre-processing-steps-2",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Put it together with workflow",
-    "text": "Put it together with workflow\n\nDefine the model\nDefine the receipe"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#exercise---feature-engineering",
-    "href": "materials/03-tidymodels/index.html#exercise---feature-engineering",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Exercise - feature engineering",
-    "text": "Exercise - feature engineering\n\nHave an qmd file with the dplyr pipeline.\nGo to the receipes documentation and try to find the appropriate step functions.\nWas this easy to do? Why or why not? What was easy? What was challenging?"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#prediction",
-    "href": "materials/03-tidymodels/index.html#prediction",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Prediction",
-    "text": "Prediction"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#test-vs.-train-data",
-    "href": "materials/03-tidymodels/index.html#test-vs.-train-data",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Test vs. Train data",
-    "text": "Test vs. Train data"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#prediction-exercise",
-    "href": "materials/03-tidymodels/index.html#prediction-exercise",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Prediction exercise",
-    "text": "Prediction exercise"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#thinking-about-prediction-or-inference",
-    "href": "materials/03-tidymodels/index.html#thinking-about-prediction-or-inference",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Thinking about prediction or inference",
-    "text": "Thinking about prediction or inference"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#exercise---split-into-test-and-train",
-    "href": "materials/03-tidymodels/index.html#exercise---split-into-test-and-train",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Exercise - split into test and train?",
-    "text": "Exercise - split into test and train?"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#cross-validation",
-    "href": "materials/03-tidymodels/index.html#cross-validation",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Cross-validation",
-    "text": "Cross-validation"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#exercise---cross-validation",
-    "href": "materials/03-tidymodels/index.html#exercise---cross-validation",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Exercise - cross validation",
-    "text": "Exercise - cross validation"
-  },
-  {
-    "objectID": "materials/03-tidymodels/index.html#pedagogical-advantages",
-    "href": "materials/03-tidymodels/index.html#pedagogical-advantages",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Pedagogical advantages",
-    "text": "Pedagogical advantages"
+    "section": "Define pre-processing steps",
+    "text": "Define pre-processing steps\nBreak delinq_2y into the categories 0, 1, 2, 3+.\n\ninterest_rec <- interest_rec |>\n  step_cut(delinq_2y, breaks = c(-Inf,0,1, 2, 3, Inf))\n\ninterest_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor          3\n\nOperations:\n\nVariable mutation for as_factor(term)\nCentering for debt_to_income\nCut numeric for delinq_2y"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#putting-it-all-together",
     "href": "materials/03-tidymodels/index.html#putting-it-all-together",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Putting it all together",
-    "text": "Putting it all together\n\nMake an Rmd file with a full pipeline to show this is what your students would be able to do at the end of the semester."
+    "text": "Putting it all together\n\ninterest_rec <- recipe(interest_rate ~ term + debt_to_income + delinq_2y,\n                       data = loans_full_schema) |>\n  step_mutate(term = as_factor(term))|>\n  step_center(debt_to_income) |>\n  step_cut(delinq_2y, breaks = c(-Inf,0,1, 2, 3, Inf))"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#activity-discussion",
-    "href": "materials/03-tidymodels/index.html#activity-discussion",
+    "objectID": "materials/03-tidymodels/index.html#putting-it-all-together-1",
+    "href": "materials/03-tidymodels/index.html#putting-it-all-together-1",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Activity / Discussion",
-    "text": "Activity / Discussion\n\nThink about how you might implement this in the classroom\nWhat is a potential challenge\nWrite an activity\n\n\n\n\n🔗 rstd.io/teach-ds-conf22"
+    "section": "Putting it all together",
+    "text": "Putting it all together\n\ninterest_rec\n\nRecipe\n\nInputs:\n\n      role #variables\n   outcome          1\n predictor          3\n\nOperations:\n\nVariable mutation for as_factor(term)\nCentering for debt_to_income\nCut numeric for delinq_2y"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#prep-and-bake-to-see-created-variables",
+    "href": "materials/03-tidymodels/index.html#prep-and-bake-to-see-created-variables",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Prep and bake to see created variables",
+    "text": "Prep and bake to see created variables\n\ninterest_rec |>\n  prep()|>\n  bake(loans_full_schema) |>\n  head()\n\n# A tibble: 6 × 4\n  term  debt_to_income delinq_2y interest_rate\n  <fct>          <dbl> <fct>             <dbl>\n1 60             -1.30 [-Inf,0]          14.1 \n2 36            -14.3  [-Inf,0]          12.6 \n3 36              1.84 [-Inf,0]          17.1 \n4 36             -9.15 [-Inf,0]           6.72\n5 36             38.7  [-Inf,0]          14.1 \n6 36            -12.8  (0,1]              6.72"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#your-turn",
+    "href": "materials/03-tidymodels/index.html#your-turn",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Your turn!",
+    "text": "Your turn!"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#fit-the-model-using-workflow",
+    "href": "materials/03-tidymodels/index.html#fit-the-model-using-workflow",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Fit the model using workflow()",
+    "text": "Fit the model using workflow()\nWorkflows bring together models and recipes, making them easier to apply to multiple data sets, e.g, training and test data.\n\nSpecify the model\n\ninterest_spec <- linear_reg() |>\n  set_engine(\"lm\")\n\n\n\nBuild workflow\n\ninterest_workflow <- workflow() |>\n  add_model(interest_spec) |>\n  add_recipe(interest_rec)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#view-workflow",
+    "href": "materials/03-tidymodels/index.html#view-workflow",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "View workflow",
+    "text": "View workflow\n\ninterest_workflow\n\n══ Workflow ════════════════════════════════════════════════════════════════════\nPreprocessor: Recipe\nModel: linear_reg()\n\n── Preprocessor ────────────────────────────────────────────────────────────────\n3 Recipe Steps\n\n• step_mutate()\n• step_center()\n• step_cut()\n\n── Model ───────────────────────────────────────────────────────────────────────\nLinear Regression Model Specification (regression)\n\nComputational engine: lm"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#fit-model-to-data",
+    "href": "materials/03-tidymodels/index.html#fit-model-to-data",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Fit model to data",
+    "text": "Fit model to data\n\ninterest_fit <- interest_workflow %>%\n  fit(data = loans_full_schema)\n\ntidy(interest_fit)\n\n# A tibble: 7 × 5\n  term              estimate std.error statistic   p.value\n  <chr>                <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        11.0      0.0584     189.   0        \n2 term60              3.86     0.100       38.5  6.67e-303\n3 debt_to_income      0.0429   0.00307     14.0  5.47e- 44\n4 delinq_2y(0,1]      1.37     0.153        8.95 4.08e- 19\n5 delinq_2y(1,2]      1.68     0.291        5.76 8.57e-  9\n6 delinq_2y(2,3]      2.46     0.492        5.00 5.78e-  7\n7 delinq_2y(3, Inf]   2.85     0.563        5.05 4.39e-  7"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#make-predictions",
+    "href": "materials/03-tidymodels/index.html#make-predictions",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Make predictions",
+    "text": "Make predictions\n\ninterest_pred <- predict(interest_fit, loans_full_schema) |> \n  bind_cols(loans_full_schema |> select(interest_rate))\n\ninterest_pred\n\n# A tibble: 10,000 × 2\n   .pred interest_rate\n   <dbl>         <dbl>\n 1  14.8         14.1 \n 2  10.4         12.6 \n 3  11.1         17.1 \n 4  10.6          6.72\n 5  12.7         14.1 \n 6  11.8          6.72\n 7  15.1         13.6 \n 8  16.1         12.0 \n 9  13.1         13.6 \n10  11.0          6.71\n# … with 9,990 more rows"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#model-evaluation-r2",
+    "href": "materials/03-tidymodels/index.html#model-evaluation-r2",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Model evaluation: \\(R^2\\)",
+    "text": "Model evaluation: \\(R^2\\)\n\\(R^2\\) is the percent of variability in the interest rate explained by the model.\n\nrsq(interest_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rsq     standard       0.157"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#model-evaluation-rmse",
+    "href": "materials/03-tidymodels/index.html#model-evaluation-rmse",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Model evaluation: \\(RMSE\\)",
+    "text": "Model evaluation: \\(RMSE\\)\n\\(RMSE\\) is a measure of the error in the model predictions.\n\\[\nRMSE = \\sqrt{\\frac{\\sum_{i=1}^{n}(\\hat{y}_i - y_i)^2}{n}}\n\\]\n\n\nrmse(interest_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        4.59"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#your-turn-7-minutes",
+    "href": "materials/03-tidymodels/index.html#your-turn-7-minutes",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Your turn! (7 minutes)",
+    "text": "Your turn! (7 minutes)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#splitting-the-data",
+    "href": "materials/03-tidymodels/index.html#splitting-the-data",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Splitting the data",
+    "text": "Splitting the data\nSplitting the data into training and testing sets allows us to evaluate the model on new data.\n\nSplit the data.\n\nset.seed(0725) #to get same split each run\nloans_split <- initial_split(loans_full_schema, prop = 0.8) #80% training\n\nSave the training data.\n\nloans_train <- training(loans_split)\ndim(loans_train)\n\n[1] 8000   58\n\n\nSave test data.\n\nloans_test <- testing(loans_split)\ndim(loans_test)\n\n[1] 2000   58"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#fit-the-model-to-the-training-data",
+    "href": "materials/03-tidymodels/index.html#fit-the-model-to-the-training-data",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Fit the model to the training data",
+    "text": "Fit the model to the training data\nWe can fit the model specified in interest_workflow (model spec + recipe) to the training data.\n\ninterest_train_fit <- interest_workflow |>\n  fit(data = loans_train)\n\ntidy(interest_train_fit)\n\n# A tibble: 7 × 5\n  term              estimate std.error statistic   p.value\n  <chr>                <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)        11.0      0.0646     170.   0        \n2 term60              3.91     0.112       35.1  1.05e-250\n3 debt_to_income      0.0402   0.00331     12.2  1.12e- 33\n4 delinq_2y(0,1]      1.33     0.171        7.79 7.77e- 15\n5 delinq_2y(1,2]      1.75     0.323        5.41 6.38e-  8\n6 delinq_2y(2,3]      2.48     0.536        4.63 3.79e-  6\n7 delinq_2y(3, Inf]   3.01     0.617        4.88 1.09e-  6"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#evaluate-performance-on-training-data",
+    "href": "materials/03-tidymodels/index.html#evaluate-performance-on-training-data",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Evaluate performance on training data",
+    "text": "Evaluate performance on training data\nCalculate predictions\n\ninterest_train_pred <- predict(interest_train_fit, loans_train) |> \n  bind_cols(loans_train |> select(interest_rate))\n\nEvaluate model\n\nrsq(interest_train_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rsq     standard       0.161\n\n\n\nrmse(interest_train_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        4.55"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#evaluate-performance-on-testing-data",
+    "href": "materials/03-tidymodels/index.html#evaluate-performance-on-testing-data",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Evaluate performance on testing data",
+    "text": "Evaluate performance on testing data\nCalculate predictions\n\ninterest_test_pred <- predict(interest_train_fit, loans_test) |> \n  bind_cols(loans_test |> select(interest_rate))\n\nEvaluate model\n\nrsq(interest_test_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rsq     standard       0.140\n\n\n\nrmse(interest_test_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        4.73"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#your-turn-1",
+    "href": "materials/03-tidymodels/index.html#your-turn-1",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Your turn!",
+    "text": "Your turn!"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#discussion",
+    "href": "materials/03-tidymodels/index.html#discussion",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Discussion",
+    "text": "Discussion\n\n\nWhat is something from this module you can implement in your data science course?\nWhat is one potential challenge of implementing this content in your course?\n\n\n\ncountdown(minutes = 7, font_size = \"1.5em\")\n\n\n07:00\n\n\n\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 3"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-2.html",
+    "href": "materials/03-tidymodels/ex-3-2.html",
+    "title": "Ex 3.2: Fit, predict, evaluate",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-2.html#introduction",
+    "href": "materials/03-tidymodels/ex-3-2.html#introduction",
+    "title": "Ex 3.2: Fit, predict, evaluate",
+    "section": "Introduction",
+    "text": "Introduction\nSome of the code below has been pre-populated. In these cases, there is a code chunk option set as #| eval: false. Make sure to remove this option prior to running the relevant code chunk to avoid any errors when rendering the document."
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-2.html#model",
+    "href": "materials/03-tidymodels/ex-3-2.html#model",
+    "title": "Ex 3.2: Fit, predict, evaluate",
+    "section": "Model",
+    "text": "Model\nThe goal is to fit a model to predict the interest rate (interest_rate) based on the debt to income ratio (debt_to_income), type of application (application_type), and whether there are any bankruptcies listed in the public record for the individual (bankrupt). The model should allow the effect of debt to income ratio to differ based on application type.\n\\[\n\\begin{align}\\widehat{interest\\_rate} = b_0 &+ b_1 \\times debt\\_to\\_income \\\\ &+ b_2 \\times application\\_type \\\\ &+ b_3 \\times bankrupt \\\\ &+ b_4 \\times debt\\_to\\_income:application\\_type\\end{align}\n\\]"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-2.html#recipe",
+    "href": "materials/03-tidymodels/ex-3-2.html#recipe",
+    "title": "Ex 3.2: Fit, predict, evaluate",
+    "section": "Recipe",
+    "text": "Recipe\nThis exercise builds on Exercise 1. To get you started, the recipe created in Exercise 1 is below.\n\nloans_rec <- recipe(interest_rate ~ debt_to_income + application_type + \n                      public_record_bankrupt, data = loans_full_schema) |>\n  step_normalize(debt_to_income) |>\n  step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \n                                           \"no\", \"yes\"))) |>\n  step_rm(public_record_bankrupt) |>\n  step_dummy(all_nominal_predictors()) |>\n  step_interact(terms = ~ starts_with(\"application_type\"):debt_to_income)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-2.html#build-workflow-fit-the-model",
+    "href": "materials/03-tidymodels/ex-3-2.html#build-workflow-fit-the-model",
+    "title": "Ex 3.2: Fit, predict, evaluate",
+    "section": "Build workflow + fit the model",
+    "text": "Build workflow + fit the model\nComplete the code below to build a workflow and fit the model to loans_full_schema.\n\n## specify the model \nloans_spec <- linear_reg() |>\n  set_engine(\"lm\")\n\n\n## build workflow \nloans_workflow <- workflow() |>\n  add_model(_____) |>\n  add_recipe(______)\n\n## fit the model \nloans_fit <- ______ |>\n  fit(data = _____)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-2.html#predict-evaluate-model",
+    "href": "materials/03-tidymodels/ex-3-2.html#predict-evaluate-model",
+    "title": "Ex 3.2: Fit, predict, evaluate",
+    "section": "Predict + evaluate model",
+    "text": "Predict + evaluate model\nComplete the code below to calculate predictions and evaluate the model using \\(R^2\\) and \\(RMSE\\).\n\nloans_pred <- predict(______, ______) |>\n  bind_cols(loans_full_schema |> select(interest_rate))\n\n\nrsq(_____, truth = interest_rate, estimate = .pred)\n\n\nrmse(_____)"
   },
   {
     "objectID": "materials/01-hello/index.html#introductions",
@@ -641,7 +1446,7 @@
     "href": "materials/01-hello/index.html#rstudio-cloud",
     "title": "Hello #teachds",
     "section": "RStudio Cloud",
-    "text": "RStudio Cloud\nYou can use the following link to join the workshops RStudio cloud space,\n\nrstd.io/teach-ds-conf22-cloud\n\n\nOnce you have joined, navigate to Projects on the top menu.\n\n\n\n🔗 rstd.io/teach-ds-conf22"
+    "text": "RStudio Cloud\nYou can use the following link to join the workshops RStudio cloud space,\n\n\nrstd.io/teach-ds-conf22-cloud\n\n\nOnce you have joined, navigate to Projects on the top menu.\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 1"
   },
   {
     "objectID": "materials/08-organizing/ex-1.html",
@@ -735,25 +1540,25 @@
     "text": "Deploying materials"
   },
   {
-    "objectID": "materials/04-learnr/ex-1.html",
-    "href": "materials/04-learnr/ex-1.html",
-    "title": "Learnr Demo",
+    "objectID": "materials/04-learnr/ex-4-2.html",
+    "href": "materials/04-learnr/ex-4-2.html",
+    "title": "Ex 4.2: Writing questions",
     "section": "",
-    "text": "The source code is available at LINK] and the 04-learnr project in RStudio Cloud."
+    "text": "Create a tutorial with three questions:\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd."
   },
   {
-    "objectID": "materials/04-learnr/ex-3.html",
-    "href": "materials/04-learnr/ex-3.html",
-    "title": "Automated feedback",
+    "objectID": "materials/04-learnr/ex-4-3.html",
+    "href": "materials/04-learnr/ex-4-3.html",
+    "title": "Ex 4.3: Automated feedback",
     "section": "",
     "text": "Stretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in this section or modify the code in Part 2 of learnr-demo.Rmd."
   },
   {
-    "objectID": "materials/04-learnr/ex-2.html",
-    "href": "materials/04-learnr/ex-2.html",
-    "title": "Writing questions",
+    "objectID": "materials/04-learnr/ex-4-1.html",
+    "href": "materials/04-learnr/ex-4-1.html",
+    "title": "Ex 4.1: Deployed tutorial",
     "section": "",
-    "text": "Create a tutorial with three questions:\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd."
+    "text": "The source code is available at LINK] and the 04-learnr project in RStudio Cloud."
   },
   {
     "objectID": "materials/04-learnr/index.html#parts-of-a-tutorial",
@@ -872,7 +1677,7 @@
     "href": "index.html",
     "title": "Designing the data science classroom",
     "section": "",
-    "text": "🗓️ July 25 and 26, 2022\n⏰ 09:00 - 17:00\n🏨 Room TBA\n✍️ Click here to register"
+    "text": "🗓️ July 25 and 26, 2022\n⏰ 09:00 - 17:00\n🏨 Maryland 3\n✍️ Click here to register"
   },
   {
     "objectID": "index.html#learning-objectives",
@@ -893,7 +1698,7 @@
     "href": "index.html#prework",
     "title": "Designing the data science classroom",
     "section": "Prework",
-    "text": "Prework\nIn this workshop you will wear two hats: the educator and the learner. At times we will be demoing workflows for instructors (whom I assume are familiar with R, RStudio, and the tidyverse and have taught with or are interested in teaching with RStudio Cloud, Git, and GitHub) and at other times you will be working through the student view (on RStudio Cloud, assuming you’re not using your local setup).\nFor the latter, you can mostly assume that you’re a student in an intro data science course and this is the first day of class (i.e. there’s no expectation of prep). However we’d also like to give you a taste of how the remainder of the semester goes, which often entails students watching background videos to prepare. To prepare for the first module, please watch the following video before the workshop.\n\n\n\n🖥️ Slides\n\n\nFor the former, you’ll might need to prepare a bit more. If you already are a Git and GitHub user, have a personal token saved, and can push to and pull from GitHub without having to type your password in each time, you’re good to go. If not, please complete the following steps before the workshop1. If you need help with any of the steps, please ask on GitHub Discussions.\n\nRegister a free GitHub account\nInstall or update R and RStudio\nInstall Git\nIntroduce yourself to Git\nPersonal access token for HTTPS\nConnect to GitHub\nConnect RStudio to Git and GitHub\nDetect Git from RStudio\n\nIf you choose to use your local R and RStudio install for the workshop, you should also install the following packages:\n\nFrom CRAN:\n\ninstall.packages(\"devtools\")\ninstall.packages(\"DT\")\ninstall.packages(\"gapminder\")\ninstall.packages(\"ghclass\")\ninstall.packages(\"learnr\")\ninstall.packages(\"lubridate\")\ninstall.packages(\"magick\")\ninstall.packages(\"nycflights13\")\ninstall.packages(\"openintro\")\ninstall.packages(\"rvest\")\ninstall.packages(\"shiny\")\ninstall.packages(\"sortable\")\ninstall.packages(\"tidyverse\")\ninstall.packages(\"tidymodels\")\ninstall.packages(\"unvotes\")\n\nFrom GitHub:\n\ndevtools::install_github(\"gadenbuie/countdown\")\ndevtools::install_github(\"rstudio/parsons\")"
+    "text": "Prework\nIn this workshop you will wear two hats: the educator and the learner. At times we will be demoing workflows for instructors (whom I assume are familiar with R, RStudio, and the tidyverse and have taught with or are interested in teaching with RStudio Cloud, Git, and GitHub) and at other times you will be working through the student view (on RStudio Cloud, assuming you’re not using your local setup).\n\nWatch\nFor the latter, you can mostly assume that you’re a student in an intro data science course and this is the first day of class (i.e. there’s no expectation of prep). However we’d also like to give you a taste of how the remainder of the semester goes, which often entails students watching background videos to prepare. To prepare for the first module, please watch the following video before the workshop.\n\n\n\n🖥️ Slides\n\n\n\n\nSet up\nFor the former, you’ll might need to prepare a bit more. If you already are a Git and GitHub user, have a personal token saved, and can push to and pull from GitHub without having to type your password in each time, you’re good to go. If not, please complete the following steps before the workshop1. If you need help with any of the steps, please ask on GitHub Discussions.\n\nRegister a free GitHub account\nInstall or update R and RStudio\nInstall Git\nIntroduce yourself to Git\nPersonal access token for HTTPS\nConnect to GitHub\nConnect RStudio to Git and GitHub\nDetect Git from RStudio\n\n\n\nInstall\nIf you choose to use your local R and RStudio install for the workshop, you should also install the following packages:\n\nFrom CRAN:\n\ninstall.packages(\"devtools\")\ninstall.packages(\"DT\")\ninstall.packages(\"gapminder\")\ninstall.packages(\"ghclass\")\ninstall.packages(\"learnr\")\ninstall.packages(\"lubridate\")\ninstall.packages(\"magick\")\ninstall.packages(\"nycflights13\")\ninstall.packages(\"openintro\")\ninstall.packages(\"rvest\")\ninstall.packages(\"shiny\")\ninstall.packages(\"sortable\")\ninstall.packages(\"tidyverse\")\ninstall.packages(\"tidymodels\")\ninstall.packages(\"unvotes\")\n\nFrom GitHub:\n\ndevtools::install_github(\"rundel/learnrhash\")"
   },
   {
     "objectID": "index.html#rstudio-cloud",
