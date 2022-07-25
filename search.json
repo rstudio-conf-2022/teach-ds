@@ -165,14 +165,7 @@
     "href": "modules/d1-01-hello.html",
     "title": "Hello #teachds",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d1-01-hello.html#outline",
-    "href": "modules/d1-01-hello.html#outline",
-    "title": "Hello #teachds",
-    "section": "Outline",
-    "text": "Outline\n\nIntroductions\nPrinciples for designing introductory data science curricula\n\nStart with cake 🍰\nCherish day one 🗓️\nSkip baby steps 🍼\nHide the veggies 🥦\nLeverage the ecosystem 🌲\n\nMeet the toolkit\n\nR and RStudio in RStudio Cloud\nQuarto\nGit and GitHub"
+    "text": "Introductions\nPrinciples for designing introductory data science curricula\n\nStart with cake 🍰\nCherish day one 🗓️\nSkip baby steps 🍼\nHide the veggies 🥦\nLeverage the ecosystem 🌲\n\nMeet the toolkit\n\nR and RStudio in RStudio Cloud\nQuarto\nGit and GitHub"
   },
   {
     "objectID": "modules/d1-01-hello.html#slides",
@@ -186,7 +179,7 @@
     "href": "modules/d1-01-hello.html#exercises",
     "title": "Hello #teachds",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 1.1: UN Votes\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 1.1: Exercise design\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 1.3: Bechdel + Quarto\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-03-tidymodels.html",
@@ -1379,6 +1372,55 @@
     "text": "Predict + evaluate model\nComplete the code below to calculate predictions and evaluate the model using \\(R^2\\) and \\(RMSE\\).\n\nloans_pred <- predict(______, ______) |>\n  bind_cols(loans_full_schema |> select(interest_rate))\n\n\nrsq(_____, truth = interest_rate, estimate = .pred)\n\n\nrmse(_____)"
   },
   {
+    "objectID": "materials/01-hello/ex-1-1.html",
+    "href": "materials/01-hello/ex-1-1.html",
+    "title": "Ex 1.1: UN Votes",
+    "section": "",
+    "text": "How do various countries vote in the United Nations General Assembly, how have their voting patterns evolved throughout time, and how similarly or differently do they view certain issues? Answering these questions (at a high level) is the focus of this analysis.\n\n\nWe will use the tidyverse, lubridate, and scales packages for data wrangling and visualization, and the DT package for interactive display of tabular output, and the unvotes package for the data.\n\n  library(tidyverse)\n  library(lubridate)\n  library(scales)\n  library(DT)\n  library(unvotes)\n\n\n\n\nThe data we’re using originally come from the unvotes package. In the chunk below we modify the data by joining the various data frames provided in the package to help you get started with the analysis.\n\nunvotes <- un_votes |>\n  inner_join(un_roll_calls, by = \"rcid\") |>\n  inner_join(un_roll_call_issues, by = \"rcid\")"
+  },
+  {
+    "objectID": "materials/01-hello/ex-1-1.html#un-voting-patterns",
+    "href": "materials/01-hello/ex-1-1.html#un-voting-patterns",
+    "title": "Ex 1.1: UN Votes",
+    "section": "UN voting patterns",
+    "text": "UN voting patterns\nLet’s create a data visualisation that displays how the voting record of the UK & NI changed over time on a variety of issues, and compares it to two other countries: US and Turkey.\nWe can easily change which countries are being plotted by changing which countries the code above filters for. Note that the country name should be spelled and capitalized exactly the same way as it appears in the data. See the Appendix for a list of the countries in the data.\n\nunvotes |>\n  filter(country %in% c(\"United Kingdom\", \"United States\", \"Turkey\")) |>\n  mutate(year = year(date)) |>\n  group_by(country, year, issue) |>\n  summarize(percent_yes = mean(vote == \"yes\")) |>\n  ggplot(mapping = aes(x = year, y = percent_yes, color = country)) +\n  geom_point(alpha = 0.4) +\n  geom_smooth(method = \"loess\", se = FALSE) +\n  facet_wrap(~issue) +\n  scale_y_continuous(labels = percent) +\n  labs(\n    title = \"Percentage of 'Yes' votes in the UN General Assembly\",\n    subtitle = \"1946 to 2019\",\n    y = \"% Yes\",\n    x = \"Year\",\n    color = \"Country\"\n  )"
+  },
+  {
+    "objectID": "materials/01-hello/ex-1-1.html#references",
+    "href": "materials/01-hello/ex-1-1.html#references",
+    "title": "Ex 1.1: UN Votes",
+    "section": "References",
+    "text": "References\n\nDavid Robinson (2021). unvotes: United Nations General Assembly Voting Data. R package version 0.3.0.\nErik Voeten “Data and Analyses of Voting in the UN General Assembly” Routledge Handbook of International Organization, edited by Bob Reinalda (published May 27, 2013).\nMuch of the analysis has been modeled on the examples presented in the unvotes package vignette."
+  },
+  {
+    "objectID": "materials/01-hello/ex-1-1.html#appendix",
+    "href": "materials/01-hello/ex-1-1.html#appendix",
+    "title": "Ex 1.1: UN Votes",
+    "section": "Appendix",
+    "text": "Appendix\nBelow is a list of countries in the dataset:"
+  },
+  {
+    "objectID": "materials/01-hello/ex-1-3.html",
+    "href": "materials/01-hello/ex-1-3.html",
+    "title": "Ex 1.3: Bechdel + Quarto",
+    "section": "",
+    "text": "In this mini analysis we work with the data used in the FiveThirtyEight story titled “The Dollar-And-Cents Case Against Hollywood’s Exclusion of Women”. Your task is to fill in the blanks denoted by ___."
+  },
+  {
+    "objectID": "materials/01-hello/ex-1-3.html#data-and-packages",
+    "href": "materials/01-hello/ex-1-3.html#data-and-packages",
+    "title": "Ex 1.3: Bechdel + Quarto",
+    "section": "Data and packages",
+    "text": "Data and packages\nWe start with loading the packages we’ll use.\n\nlibrary(fivethirtyeight)\nlibrary(tidyverse)\n\nThe dataset contains information on 1794 movies released between 1970 and 2013. However we’ll focus our analysis on movies released between 1990 and 2013.\n\nbechdel90_13 <- bechdel |> \n  filter(between(year, 1990, 2013))\n\nThere are ___ such movies.\nThe financial variables we’ll focus on are the following:\n\nbudget_2013: Budget in 2013 inflation adjusted dollars\ndomgross_2013: Domestic gross (US) in 2013 inflation adjusted dollars\nintgross_2013: Total International (i.e., worldwide) gross in 2013 inflation adjusted dollars\n\nAnd we’ll also use the binary and clean_test variables for grouping."
+  },
+  {
+    "objectID": "materials/01-hello/ex-1-3.html#analysis",
+    "href": "materials/01-hello/ex-1-3.html#analysis",
+    "title": "Ex 1.3: Bechdel + Quarto",
+    "section": "Analysis",
+    "text": "Analysis\nLet’s take a look at how median budget and gross vary by whether the movie passed the Bechdel test, which is stored in the binary variable.\n\nbechdel90_13 |>\n  group_by(binary) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 2 × 4\n  binary med_budget med_domgross med_intgross\n  <chr>       <dbl>        <dbl>        <dbl>\n1 FAIL    48385984.    57318606.    104475669\n2 PASS    31070724     45330446.     80124349\n\n\nNext, let’s take a look at how median budget and gross vary by a more detailed indicator of the Bechdel test result. This information is stored in the clean_test variable, which takes on the following values:\n\nok = passes test\ndubious\nmen = women only talk about men\nnotalk = women don’t talk to each other\nnowomen = fewer than two women\n\n\nbechdel90_13 |>\n  #group_by(___) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 1 × 3\n  med_budget med_domgross med_intgross\n       <int>        <dbl>        <dbl>\n1   37878971     52270207     93523336\n\n\nIn order to evaluate how return on investment varies among movies that pass and fail the Bechdel test, we’ll first create a new variable called roi as the ratio of the gross to budget.\n\nbechdel90_13 <- bechdel90_13 |>\n  mutate(roi = (intgross_2013 + domgross_2013) / budget_2013)\n\nLet’s see which movies have the highest return on investment.\n\nbechdel90_13 |>\n  arrange(desc(roi)) |> \n  select(title, roi, year)\n\n# A tibble: 1,615 × 3\n   title                     roi  year\n   <chr>                   <dbl> <int>\n 1 Paranormal Activity      671.  2007\n 2 The Blair Witch Project  648.  1999\n 3 El Mariachi              583.  1992\n 4 Clerks.                  258.  1994\n 5 In the Company of Men    231.  1997\n 6 Napoleon Dynamite        227.  2004\n 7 Once                     190.  2006\n 8 The Devil Inside         155.  2012\n 9 Primer                   142.  2004\n10 Fireproof                134.  2008\n# … with 1,605 more rows\n\n\nBelow is a visualization of the return on investment by test result, however it’s difficult to see the distributions due to a few extreme observations.\n\nggplot(data = bechdel90_13, \n       mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    x = \"Detailed Bechdel result\",\n    y = \"___\",\n    color = \"Binary Bechdel result\"\n    )\n\n\n\n\nWhat are those movies with very high returns on investment?\n\nbechdel90_13 |>\n  filter(roi > 400) |>\n  select(title, budget_2013, domgross_2013, year)\n\n# A tibble: 3 × 4\n  title                   budget_2013 domgross_2013  year\n  <chr>                         <int>         <dbl> <int>\n1 Paranormal Activity          505595     121251476  2007\n2 The Blair Witch Project      839077     196538593  1999\n3 El Mariachi                   11622       3388636  1992\n\n\nZooming in on the movies with roi < ___ provides a better view of how the medians across the categories compare:\n\nggplot(data = bechdel90_13, mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    subtitle = \"___\", # Something about zooming in to a certain level\n    x = \"Detailed Bechdel result\",\n    y = \"Return on investment\",\n    color = \"Binary Bechdel result\"\n    ) +\n  coord_cartesian(ylim = c(0, 15))"
+  },
+  {
     "objectID": "materials/01-hello/index.html#introductions",
     "href": "materials/01-hello/index.html#introductions",
     "title": "Hello #teachds",
@@ -1393,6 +1435,13 @@
     "text": "Teaching Assistants\n\nBecky Tang - Duke University\nSimon Couch - RStudio"
   },
   {
+    "objectID": "materials/01-hello/index.html#your-turn",
+    "href": "materials/01-hello/index.html#your-turn",
+    "title": "Hello #teachds",
+    "section": "Your turn!",
+    "text": "Your turn!\n\nIntroduce yourselves:\n\nName\nAffiliation and/or where you’re joining from (geographically)\nWhere you are in your teaching (or learning) journey\nYour favourite thing to teach"
+  },
+  {
     "objectID": "materials/01-hello/index.html#workshop-materials",
     "href": "materials/01-hello/index.html#workshop-materials",
     "title": "Hello #teachds",
@@ -1404,7 +1453,7 @@
     "href": "materials/01-hello/index.html#schedule",
     "title": "Hello #teachds",
     "section": "Schedule",
-    "text": "Schedule\n\n\n\nDay 1\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nHello #teachds\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nTeaching data science with the tidyverse\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nTeaching modern modeling with tidymodels\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nInteractivity and immediate feedback with learnr\n\n\n\n\n\n\nDay 2\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nComputing infrastructure with RStudio Cloud\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nReproducible workflows: Quarto, Git, GitHub\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nMaking a data package\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nOrganizing teaching materials + Wrap-up / Q&A"
+    "text": "Schedule\n\n\nDay 1\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nHello #teachds\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nTeaching data science with the tidyverse\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nTeaching modern modeling with tidymodels\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nInteractivity and immediate feedback with learnr\n\n\n\n\n\n\nDay 2\n\n\n\nTime\nActivity\n\n\n\n\n09:00 - 10:30\nComputing infrastructure with RStudio Cloud\n\n\n10:30 - 11:00\nCoffee break\n\n\n11:00 - 12:30\nReproducible workflows: Quarto, Git, GitHub\n\n\n12:30 - 13:30\nLunch break\n\n\n13:30 - 15:00\nMaking a data package\n\n\n15:00 - 15:30\nCoffee break\n\n\n15:30 - 17:00\nOrganizing teaching materials + Wrap-up / Q&A"
   },
   {
     "objectID": "materials/01-hello/index.html#wifi",
@@ -1425,7 +1474,7 @@
     "href": "materials/01-hello/index.html#other-useful-info",
     "title": "Hello #teachds",
     "section": "Other useful info",
-    "text": "Other useful info\n\nThere are gender neutral bathrooms located on the river side of the Potomac Ballroom.\nThe meditation room is located at Potomac Dressing Room (Open 8am - 5pm, Monday - Thursday)\nThe lactation room is located at National Harbor 9 (Open 8am - 5pm, Monday - Thursday)\n\nThe hotel also has a dedicated room behind reception\n\nParticipants who do not wish to be photographed have red lanyards, please note everyone’s lanyard colors before taking a photo and respect their choices."
+    "text": "Other useful info\n\nThere are gender neutral bathrooms by the National Harbor rooms.\nThe meditation room is located at National Harbor 9. Open 8am - 5pm, Monday - Thursday. The hotel also has a dedicated room behind the reception.\nThe lactation room is located at Potomac Dressing Room. Open 8am - 5pm, Monday - Thursday.\nParticipants who do not wish to be photographed have red lanyards, please note everyone’s lanyard colors before taking a photo and respect their choices."
   },
   {
     "objectID": "materials/01-hello/index.html#asking-for-help-stickies",
@@ -1435,18 +1484,452 @@
     "text": "Asking for help (Stickies)\n\n\n\n\n\nI’m stuck\n\n\n\n\n\nI’m done\n\n\n\n\n I have a general question"
   },
   {
-    "objectID": "materials/01-hello/index.html#other-communication-discord",
-    "href": "materials/01-hello/index.html#other-communication-discord",
+    "objectID": "materials/01-hello/index.html#discord",
+    "href": "materials/01-hello/index.html#discord",
     "title": "Hello #teachds",
-    "section": "Other communication (Discord)",
-    "text": "Other communication (Discord)\nYou should have received an email with an invitation and instructions for joining the conference’s discord server.\nThis workshop has a private channel under Workshops,\n\n#📚getting-started-with-shiny\n\nThis is a great place to ask questions, post resources, memes, or most anything else before, during, and after the workshop."
+    "section": "Discord",
+    "text": "Discord\nYou should have received an email with an invitation and instructions for joining the conference’s discord server.\nThis workshop has a private channel under Workshops:\n\n#📚designing-the-data-science-classroom\n\nThis is a great place to ask questions, share responses to exercises, post resources, memes, or most anything else before, during, and after the workshop.\n\n\n\n\n\n\nTake a minute to\n\nJoin the Discord server for conf: https://discord.gg/FRxNvG7KP9.\nIf you’re already in, let us know if you’re not in the channel for this workshop."
   },
   {
     "objectID": "materials/01-hello/index.html#rstudio-cloud",
     "href": "materials/01-hello/index.html#rstudio-cloud",
     "title": "Hello #teachds",
     "section": "RStudio Cloud",
-    "text": "RStudio Cloud\nYou can use the following link to join the workshops RStudio cloud space,\n\n\nrstd.io/teach-ds-conf22-cloud\n\n\nOnce you have joined, navigate to Projects on the top menu.\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 1"
+    "text": "RStudio Cloud\nYou can use the following link to join the workshops RStudio cloud space,\n\n\nrstd.io/teach-ds-conf22-cloud\n\n\nOnce you have joined, navigate to Projects on the top menu."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#using-your-own-system",
+    "href": "materials/01-hello/index.html#using-your-own-system",
+    "title": "Hello #teachds",
+    "section": "Using your own system",
+    "text": "Using your own system\nIf you’d like to use your own system, please see https://rstudio-conf-2022.github.io/teach-ds/#install."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#baking-a-cake",
+    "href": "materials/01-hello/index.html#baking-a-cake",
+    "title": "Hello #teachds",
+    "section": "Baking a cake",
+    "text": "Baking a cake\nImagine you’re new to baking, and you’re in a baking class. I’m going to present two options for starting the class. Which one gives you better sense of the final product?"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#baking-a-cake-1",
+    "href": "materials/01-hello/index.html#baking-a-cake-1",
+    "title": "Hello #teachds",
+    "section": "Baking a cake",
+    "text": "Baking a cake\n\n\nToday we’re going to make a pineapple and coconut sandwich sponge cake with these ingredients"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#baking-a-cake-2",
+    "href": "materials/01-hello/index.html#baking-a-cake-2",
+    "title": "Hello #teachds",
+    "section": "Baking a cake",
+    "text": "Baking a cake\n\n\nToday we’re going to make a pineapple and coconut sandwich sponge cake with these ingredients"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#ok-hold-on-to-that-thought",
+    "href": "materials/01-hello/index.html#ok-hold-on-to-that-thought",
+    "title": "Hello #teachds",
+    "section": "OK, hold on to that thought!",
+    "text": "OK, hold on to that thought!"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#design-foundation-1-backwards-design",
+    "href": "materials/01-hello/index.html#design-foundation-1-backwards-design",
+    "title": "Hello #teachds",
+    "section": "Design foundation 1: Backwards design",
+    "text": "Design foundation 1: Backwards design\nSet goals for educational curriculum before choosing instructional methods + forms of assessment\n\nIdentify desired results\nDetermine acceptable evidence\nPlan learning experiences and instruction\n\n\n\nWiggins, Grant P., Grant Wiggins, and Jay McTighe.  Understanding by design. Ascd, 2005."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#designing-backwards",
+    "href": "materials/01-hello/index.html#designing-backwards",
+    "title": "Hello #teachds",
+    "section": "Designing backwards",
+    "text": "Designing backwards\n\n\nIdentify desired data analysis results\nDetermine building blocks\nPlan learning experiences and instruction"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#design-foundation-1-gaise",
+    "href": "materials/01-hello/index.html#design-foundation-1-gaise",
+    "title": "Hello #teachds",
+    "section": "Design foundation 1: GAISE",
+    "text": "Design foundation 1: GAISE\n2016 Guidelines for Assessment and Instruction in Statistics Education\n\nTeach statistical thinking.\n\n\n\nTeach statistics as an investigative process of problem-solving and decision making.\nGive students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.\n\n\nFocus on conceptual understanding.\nIntegrate real data with a context and purpose.\nFoster active learning.\nUse technology to explore concepts and analyse data.\nUse assessments to improve and evaluate student learning.\n\n\n\namstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#gaise",
+    "href": "materials/01-hello/index.html#gaise",
+    "title": "Hello #teachds",
+    "section": "2016 GAISE",
+    "text": "2016 GAISE\n\n\n\nTeach statistical thinking.\n\n\n\nTeach statistics as an investigative process of problem-solving and decision making.\nGive students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.\n\n\nFocus on conceptual understanding.\nIntegrate real data with a context and purpose.\nFoster active learning.\nUse technology to explore concepts and analyse data.\nUse assessments to improve and evaluate student learning.\n\n\nNOT a commonly used subset of tests and intervals and produce them with hand calculations"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#gaise-1",
+    "href": "materials/01-hello/index.html#gaise-1",
+    "title": "Hello #teachds",
+    "section": "2016 GAISE",
+    "text": "2016 GAISE\n\n\n\nTeach statistical thinking.\n\n\n\nTeach statistics as an investigative process of problem-solving and decision making.\nGive students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.\n\n\nFocus on conceptual understanding.\nIntegrate real data with a context and purpose.\nFoster active learning.\nUse technology to explore concepts and analyse data.\nUse assessments to improve and evaluate student learning.\n\n\nMultivariate analysis requires the use of computing"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#gaise-2",
+    "href": "materials/01-hello/index.html#gaise-2",
+    "title": "Hello #teachds",
+    "section": "2016 GAISE",
+    "text": "2016 GAISE\n\n\n\nTeach statistical thinking.\n\n\n\nTeach statistics as an investigative process of problem-solving and decision making.\nGive students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.\n\n\nFocus on conceptual understanding.\nIntegrate real data with a context and purpose.\nFoster active learning.\nUse technology to explore concepts and analyse data.\nUse assessments to improve and evaluate student learning.\n\n\nNOT use technology that is only applicable in the intro course or that doesn’t follow good science principles"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#gaise-3",
+    "href": "materials/01-hello/index.html#gaise-3",
+    "title": "Hello #teachds",
+    "section": "2016 GAISE",
+    "text": "2016 GAISE\n\n\n\nTeach statistical thinking.\n\n\n\nTeach statistics as an investigative process of problem-solving and decision making.\nGive students experience with multivariable thinking […] to answer challenging questions that require them to investigate and explore relationships among many variables.\n\n\nFocus on conceptual understanding.\nIntegrate real data with a context and purpose.\nFoster active learning.\nUse technology to explore concepts and analyse data.\nUse assessments to improve and evaluate student learning.\n\n\nData analysis isn’t just inference and modelling, it’s also data importing, cleaning, preparation, exploration, and visualization"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#so-where-do-we-go-with-all-this",
+    "href": "materials/01-hello/index.html#so-where-do-we-go-with-all-this",
+    "title": "Hello #teachds",
+    "section": "So, where do we go with all this?",
+    "text": "So, where do we go with all this?"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#discussion",
+    "href": "materials/01-hello/index.html#discussion",
+    "title": "Hello #teachds",
+    "section": "Discussion",
+    "text": "Discussion\n\nDiscuss in pairs of three and then as a large group.\n\nWhat are your first reactions to the curriculum we just described for an intro data science course?\nWhich components can you see yourself (or do you already) include in an intro data science curriculum?\nWhich components do you have reservations about, and why?\n\n\n\n\n\n05:00"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#which-kitchen-would-you-rather-bake-in",
+    "href": "materials/01-hello/index.html#which-kitchen-would-you-rather-bake-in",
+    "title": "Hello #teachds",
+    "section": "Which kitchen would you rather bake in?",
+    "text": "Which kitchen would you rather bake in?"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#design-principle-1-cherish-day-one",
+    "href": "materials/01-hello/index.html#design-principle-1-cherish-day-one",
+    "title": "Hello #teachds",
+    "section": "Design principle 1: Cherish day one",
+    "text": "Design principle 1: Cherish day one\n\n\n\nInstall R\nInstall RStudio\nInstall the following packages:\n\ntidyverse\nrmarkdown\n…\n\nLoad these packages\nInstall git\n\n\n\nGo to rstudio.cloud (or some other server based solution)\nLog in with your ID & pass\n\n\n> hello R!"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#your-turn-un-votes",
+    "href": "materials/01-hello/index.html#your-turn-un-votes",
+    "title": "Hello #teachds",
+    "section": "Your turn: UN Votes",
+    "text": "Your turn: UN Votes\n\n Go to rstd.io/teach-ds-conf22-cloud to join the RStudio Cloud workspace for this workshop > Log in > Project (top left) > Start “Module 1 - Hello” > ex-1-1.qmd\n\n\nOpen the Quarto document called ex-1-1.qmd, render the document, view the result. Then, change “Turkey” to another country, and render again.\n\n\n Discuss with your neighbor:\n\nAs a student: Why did you choose the country you chose?\nAs an instructor: What went smoothly in the exercise? What didn’t? What would you add to the instructions? What would you take away?\n\n\n\n\n\n15:00"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#how-do-you-prefer-your-cake-recipes-words-only-or-words-pictures",
+    "href": "materials/01-hello/index.html#how-do-you-prefer-your-cake-recipes-words-only-or-words-pictures",
+    "title": "Hello #teachds",
+    "section": "How do you prefer your cake recipes? Words only, or words & pictures?",
+    "text": "How do you prefer your cake recipes? Words only, or words & pictures?"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#design-principle-2-start-with-cake",
+    "href": "materials/01-hello/index.html#design-principle-2-start-with-cake",
+    "title": "Hello #teachds",
+    "section": "Design principle 2: Start with cake",
+    "text": "Design principle 2: Start with cake\n\n\n\nOpen today’s demo project\nKnit the document and discuss the visualisation you made with your neighbor\nThen, change Turkey to a different country, and plot again\n\n\n\nx <- 8\ny <- \"monkey\"\nz <- FALSE\n\nclass(x)\n\n[1] \"numeric\"\n\nclass(y)\n\n[1] \"character\"\n\nclass(z)\n\n[1] \"logical\""
+  },
+  {
+    "objectID": "materials/01-hello/index.html#practically-speaking",
+    "href": "materials/01-hello/index.html#practically-speaking",
+    "title": "Hello #teachds",
+    "section": "Practically speaking…",
+    "text": "Practically speaking…\n\nWith with great examples, comes a great amount of code…\nSo explicitly encourage students to focus on the task at hand\n\n\n\nOpen today’s demo project\nKnit the document and discuss the visualization you made with your neighbor\nThen, change Turkey to a different country, and plot again"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#focusing-on-the-task-at-hand",
+    "href": "materials/01-hello/index.html#focusing-on-the-task-at-hand",
+    "title": "Hello #teachds",
+    "section": "Focusing on the task at hand",
+    "text": "Focusing on the task at hand\n\nun_votes |>\n  filter(country %in% c(\"United States\", \"Turkey\")) |>\n  inner_join(un_roll_calls, by = \"rcid\") |>\n  inner_join(un_roll_call_issues, by = \"rcid\") |>\n  mutate(issue = ifelse(issue == \"Nuclear weapons and nuclear material\",\n                        \"Nuclear weapons and materials\", issue)) |>\n  group_by(country, year = year(date), issue) |>\n  summarize(\n    votes = n(),\n    percent_yes = mean(vote == \"yes\")\n    ) |>\n  filter(votes > 5) |>\n  ggplot(mapping = aes(x = year, y = percent_yes, color = country)) +\n    geom_point() +\n    geom_smooth(method = \"loess\", se = FALSE) +\n    facet_wrap(~ issue) +\n    labs(\n      title = \"Percentage of Yes votes in the UN General Assembly\",\n      subtitle = \"1946 to 2015\",\n      y = \"% Yes\",\n      x = \"Year\",\n      color = \"Country\"\n    )"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#focusing-on-the-task-at-hand-1",
+    "href": "materials/01-hello/index.html#focusing-on-the-task-at-hand-1",
+    "title": "Hello #teachds",
+    "section": "Focusing on the task at hand",
+    "text": "Focusing on the task at hand\n\nun_votes |>\n  filter(country %in% c(\"United States\", \"Turkey\")) |>\n  inner_join(un_roll_calls, by = \"rcid\") |>\n  inner_join(un_roll_call_issues, by = \"rcid\") |>\n  group_by(country, year = year(date), issue) |>\n  summarize(\n    votes = n(),\n    perc_yes = mean(vote == \"yes\")\n    ) |>\n  filter(votes > 5) |>\n  ggplot(mapping = aes(x = year, y = perc_yes, color = country)) +\n    geom_point() +\n    geom_smooth(method = \"loess\", se = FALSE) +\n    facet_wrap(~ issue) +\n    labs(\n      title = \"Percentage of Yes votes in the UN General Assembly\",\n      subtitle = \"1946 to 2015\",\n      y = \"% Yes\", x = \"Year\", color = \"Country\"\n    )"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#focusing-on-the-task-at-hand-2",
+    "href": "materials/01-hello/index.html#focusing-on-the-task-at-hand-2",
+    "title": "Hello #teachds",
+    "section": "Focusing on the task at hand",
+    "text": "Focusing on the task at hand\n\nun_votes |>\n  filter(country %in% c(\"United States\", \"France\")) |>\n  inner_join(un_roll_calls, by = \"rcid\") |>\n  inner_join(un_roll_call_issues, by = \"rcid\") |>\n  group_by(country, year = year(date), issue) |>\n  summarize(\n    votes = n(),\n    perc_yes = mean(vote == \"yes\")\n    ) |>\n  filter(votes > 5) |>\n  ggplot(mapping = aes(x = year, y = perc_yes, color = country)) +\n    geom_point() +\n    geom_smooth(method = \"loess\", se = FALSE) +\n    facet_wrap(~ issue) +\n    labs(\n      title = \"Percentage of Yes votes in the UN General Assembly\",\n      subtitle = \"1946 to 2015\",\n      y = \"% Yes\", x = \"Year\", color = \"Country\"\n    )"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#your-turn-exercise-design",
+    "href": "materials/01-hello/index.html#your-turn-exercise-design",
+    "title": "Hello #teachds",
+    "section": "Your turn: Exercise design",
+    "text": "Your turn: Exercise design\n\n RStudio Cloud > “Module 1 - Hello” > ex-1-2.qmd\n\n\n\nYour challenge is to go from nothing to a data visualization in 15 minutes of your first class. Don’t worry about the computing infrastructure (we’ll get to that later in the day), assume students have successfully landed in RStudio Cloud like you did earlier. Design an exercise for them to “create” their first visualization.\nIf you need inspiration, you can use the ggplot2::diamonds or dplyr::starwars dataset or any dataset from nycflights13 or gapminder packages.\nIf you already have a first day exercise you like, you’re welcomed to modify it to fit the challenge: from nothing to a data visualization in 15 minutes!\n\n\n\n Compare notes with your neighbor.  Share your exercise on Discord.\n\n\n\n\n15:00"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#which-motivates-you-more-to-learn-how-to-cook-perfectly-chopped-onions-or-ratatouille",
+    "href": "materials/01-hello/index.html#which-motivates-you-more-to-learn-how-to-cook-perfectly-chopped-onions-or-ratatouille",
+    "title": "Hello #teachds",
+    "section": "Which motivates you more to learn how to cook: perfectly chopped onions or ratatouille?",
+    "text": "Which motivates you more to learn how to cook: perfectly chopped onions or ratatouille?"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#design-principle-3-skip-baby-steps",
+    "href": "materials/01-hello/index.html#design-principle-3-skip-baby-steps",
+    "title": "Hello #teachds",
+    "section": "Design principle 3: Skip baby steps",
+    "text": "Design principle 3: Skip baby steps"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#practically-speaking-1",
+    "href": "materials/01-hello/index.html#practically-speaking-1",
+    "title": "Hello #teachds",
+    "section": "Practically speaking…",
+    "text": "Practically speaking…\n\nNon-trivial examples can be motivating, but need to avoid…\n\n\n\n\n\n\n\n\n\nScaffold and layer in between!"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#discussion-1",
+    "href": "materials/01-hello/index.html#discussion-1",
+    "title": "Hello #teachds",
+    "section": "Discussion",
+    "text": "Discussion\n\nThe following code is used to create the multivariate visualisation we saw earlier. How much of the code would you show/hide when just starting teaching ggplot2?\n\n\nun_votes |>\n  filter(country %in% c(\"United States\")) |>\n  inner_join(un_roll_calls, by = \"rcid\") |>\n  inner_join(un_roll_call_issues, by = \"rcid\") |>\n  mutate(\n    importantvote = ifelse(importantvote == 0, \"No\", \"Yes\"),\n    issue = ifelse(issue == \"Nuclear weapons and nuclear material\", \"Nuclear weapons and materials\", issue)\n    ) |>\n  ggplot(aes(y = importantvote, fill = vote)) +\n  geom_bar(position = \"fill\") +\n  facet_wrap(~ issue, ncol = 1) +\n  labs(\n    title = \"How the US voted in the UN\", \n    subtitle = \"By issue and importance of vote\",\n    x = \"Important vote\", y = \"\", fill = \"Vote\"\n    ) +\n  theme_minimal() +\n  scale_fill_viridis_d(option = \"E\")\n\n\n\n\n05:00"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#designing-code-snippets-for-teaching",
+    "href": "materials/01-hello/index.html#designing-code-snippets-for-teaching",
+    "title": "Hello #teachds",
+    "section": "Designing code snippets for teaching",
+    "text": "Designing code snippets for teaching\n\nWrite it out to your heart’s desire and polish it\nThen, split into three parts:\n\nPre-process: Required, but isn’t directly connected to / far off from learning goals of current lesson\nStash: Not required, and not directly connected to learning goals of current lesson\n\nLikely concepts that fit better into future lessons)\n\nFeature: Heart of the lesson (and maybe a review of a previous lessons)\n\nFinally, decide on the pace at which to scaffold and layer"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#pre-process",
+    "href": "materials/01-hello/index.html#pre-process",
+    "title": "Hello #teachds",
+    "section": "Pre-process",
+    "text": "Pre-process\nWe’ll call the highlighted lines us_votes\n\nun_votes |>\n  filter(country %in% c(\"United States\")) |>\n  inner_join(un_roll_calls, by = \"rcid\") |>\n  inner_join(un_roll_call_issues, by = \"rcid\") |>\n  mutate(\n    importantvote = ifelse(importantvote == 0, \"No\", \"Yes\"),\n    issue = ifelse(issue == \"Nuclear weapons and nuclear material\", \"Nuclear weapons and materials\", issue)\n    ) |>\n  ggplot(aes(y = importantvote, fill = vote)) +\n  geom_bar(position = \"fill\") +\n  facet_wrap(~ issue, ncol = 1) +\n  labs(\n    title = \"How the US voted in the UN\", \n    subtitle = \"By issue and importance of vote\",\n    x = \"Important vote\", y = \"\", fill = \"Vote\"\n    ) +\n  theme_minimal() +\n  scale_fill_viridis_d(option = \"E\")"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#preprocess",
+    "href": "materials/01-hello/index.html#preprocess",
+    "title": "Hello #teachds",
+    "section": "Preprocess",
+    "text": "Preprocess\n\n\n\n\nus_votes\n\n# A tibble: 5,718 × 14\n    rcid country country_code vote  session importantvote date       unres amend\n   <dbl> <chr>   <chr>        <fct>   <dbl> <chr>         <date>     <chr> <int>\n 1     6 United… US           no          1 No            1946-01-04 R/1/…     0\n 2     8 United… US           no          1 No            1946-01-05 R/1/…     1\n 3    11 United… US           yes         1 No            1946-02-05 R/1/…     0\n 4    11 United… US           yes         1 No            1946-02-05 R/1/…     0\n 5    18 United… US           no          1 No            1946-02-03 R/1/…     1\n 6    19 United… US           yes         1 No            1946-02-03 R/1/…     0\n 7    24 United… US           yes         1 No            1946-12-05 R/1/…     0\n 8    26 United… US           no          1 No            1946-12-06 R/1/…     0\n 9    27 United… US           yes         1 No            1946-12-06 R/1/…     0\n10    28 United… US           yes         1 No            1946-12-06 R/1/…     0\n# … with 5,708 more rows, and 5 more variables: para <int>, short <chr>,\n#   descr <chr>, short_name <chr>, issue <chr>"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#stash",
+    "href": "materials/01-hello/index.html#stash",
+    "title": "Hello #teachds",
+    "section": "Stash",
+    "text": "Stash\n\nun_votes |>\n  filter(country %in% c(\"United States\")) |>\n  inner_join(un_roll_calls, by = \"rcid\") |>\n  inner_join(un_roll_call_issues, by = \"rcid\") |>\n  mutate(\n    importantvote = ifelse(importantvote == 0, \"No\", \"Yes\"),\n    issue = ifelse(issue == \"Nuclear weapons and nuclear material\", \"Nuclear weapons and materials\", issue)\n    ) |>\n  ggplot(aes(y = importantvote, fill = vote)) +\n  geom_bar(position = \"fill\") +\n  facet_wrap(~ issue, ncol = 1) +\n  labs(\n    title = \"How the US voted in the UN\", \n    subtitle = \"By issue and importance of vote\",\n    x = \"Important vote\", y = \"\", fill = \"Vote\"\n    ) +\n  theme_minimal() +\n  scale_fill_viridis_d(option = \"E\")"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#feature",
+    "href": "materials/01-hello/index.html#feature",
+    "title": "Hello #teachds",
+    "section": "Feature",
+    "text": "Feature\n\nus_votes |>\n  ggplot(aes(y = importantvote, fill = vote)) +\n  geom_bar(position = \"fill\") +\n  facet_wrap(~ issue, ncol = 1) +\n  labs(\n    title = \"How the US voted in the UN\", \n    subtitle = \"By issue and importance of vote\",\n    x = \"Important vote\", y = \"\", fill = \"Vote\"\n    )"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#scaffold-1",
+    "href": "materials/01-hello/index.html#scaffold-1",
+    "title": "Hello #teachds",
+    "section": "Scaffold 1",
+    "text": "Scaffold 1\n\n\nggplot(data = us_votes)"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#scaffold-2",
+    "href": "materials/01-hello/index.html#scaffold-2",
+    "title": "Hello #teachds",
+    "section": "Scaffold 2",
+    "text": "Scaffold 2\n\n\nggplot(data = us_votes, \n  mapping = aes(y = importantvote,\n                fill = vote))"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#scaffold-3",
+    "href": "materials/01-hello/index.html#scaffold-3",
+    "title": "Hello #teachds",
+    "section": "Scaffold 3",
+    "text": "Scaffold 3\n\n\nggplot(data = us_votes, \n  mapping = aes(y = importantvote,\n                fill = vote)) +\n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#scaffold-4",
+    "href": "materials/01-hello/index.html#scaffold-4",
+    "title": "Hello #teachds",
+    "section": "Scaffold 4",
+    "text": "Scaffold 4\n\n\nggplot(data = us_votes, \n  mapping = aes(y = importantvote,\n                fill = vote)) +\n  geom_bar(position = \"fill\") +\n  facet_wrap(~ issue, ncol = 1)"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#scaffold-5",
+    "href": "materials/01-hello/index.html#scaffold-5",
+    "title": "Hello #teachds",
+    "section": "Scaffold 5",
+    "text": "Scaffold 5\n\n\nggplot(data = us_votes, \n  mapping = aes(y = importantvote,\n                fill = vote)) +\n  geom_bar(position = \"fill\") +\n  facet_wrap(~ issue, ncol = 1) +\n  labs(\n    title = \"How the US voted in the UN\",\n    subtitle = \"By issue and importance of vote\", \n    x = \"Important vote\", \n    y = \"\" \n    )"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#scaffold-6",
+    "href": "materials/01-hello/index.html#scaffold-6",
+    "title": "Hello #teachds",
+    "section": "Scaffold 6",
+    "text": "Scaffold 6\n\n\nggplot(data = us_votes, \n  mapping = aes(y = importantvote,\n                fill = vote)) +\n  geom_bar(position = \"fill\") +\n  facet_wrap(~ issue, ncol = 1) +\n  labs(\n    title = \"How the US voted in the UN\",\n    subtitle = \"By issue and importance of vote\", \n    x = \"Important vote\", \n    y = \"\",\n    fill = \"Vote\"\n    )"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#skip-re-insert-baby-steps",
+    "href": "materials/01-hello/index.html#skip-re-insert-baby-steps",
+    "title": "Hello #teachds",
+    "section": "Skip Re-insert baby steps",
+    "text": "Skip Re-insert baby steps"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#which-is-more-likely-to-appeal-to-someone-who-has-never-tried-broccoli",
+    "href": "materials/01-hello/index.html#which-is-more-likely-to-appeal-to-someone-who-has-never-tried-broccoli",
+    "title": "Hello #teachds",
+    "section": "Which is more likely to appeal to someone who has never tried broccoli?",
+    "text": "Which is more likely to appeal to someone who has never tried broccoli?"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#design-principle-4-hide-the-veggies",
+    "href": "materials/01-hello/index.html#design-principle-4-hide-the-veggies",
+    "title": "Hello #teachds",
+    "section": "Design principle 4: Hide the veggies",
+    "text": "Design principle 4: Hide the veggies\n\n\nToday we’re going to do web scraping\n\nUsing the rvest package\nAnd with the help of regular expressions\n\n\n\nToday we go from this to that\n\n\n\nand do so in a way that is easy to replicate for another state"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#practically-speaking-2",
+    "href": "materials/01-hello/index.html#practically-speaking-2",
+    "title": "Hello #teachds",
+    "section": "Practically speaking…",
+    "text": "Practically speaking…\n\nStudents will encounter lots of new challenges along the way\nLet that happen, and then provide a solution"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#start-with-a-mini-lecture",
+    "href": "materials/01-hello/index.html#start-with-a-mini-lecture",
+    "title": "Hello #teachds",
+    "section": "Start with a mini-lecture",
+    "text": "Start with a mini-lecture\n\nLesson: Web scraping essentials for turning a structured table into a data frame in R."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#follow-up-with-a-hands-on-exercise",
+    "href": "materials/01-hello/index.html#follow-up-with-a-hands-on-exercise",
+    "title": "Hello #teachds",
+    "section": "Follow up with a hands-on exercise",
+    "text": "Follow up with a hands-on exercise\n\nLesson: Web scraping essentials for turning a structured table into a data frame in R.\nEx 1: Scrape the table off the web and save as a data frame."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#and-a-thought-exercise",
+    "href": "materials/01-hello/index.html#and-a-thought-exercise",
+    "title": "Hello #teachds",
+    "section": "And a thought exercise",
+    "text": "And a thought exercise\n\nLesson: Web scraping essentials for turning a structured table into a data frame in R.\nEx 1: Scrape the table off the web and save as a data frame.\nEx 2: What other information do we need represented as variables in the data to obtain the desired facets?"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#and-finally-the-veggies",
+    "href": "materials/01-hello/index.html#and-finally-the-veggies",
+    "title": "Hello #teachds",
+    "section": "And finally, the veggies!",
+    "text": "And finally, the veggies!\n\nLesson: Web scraping essentials for turning a structured table into a data frame in R.\nEx 1: Scrape the table off the web and save as a data frame.\nEx 2: What other information do we need represented as variables in the data to obtain the desired facets?\nLesson: “Just enough” string parsing and regular expressions to go from"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#if-you-are-already-taking-a-baking-class-which-will-be-easier-to-venture-on-to",
+    "href": "materials/01-hello/index.html#if-you-are-already-taking-a-baking-class-which-will-be-easier-to-venture-on-to",
+    "title": "Hello #teachds",
+    "section": "If you are already taking a baking class, which will be easier to venture on to?",
+    "text": "If you are already taking a baking class, which will be easier to venture on to?"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#design-principle-5-leverage-the-ecosystem",
+    "href": "materials/01-hello/index.html#design-principle-5-leverage-the-ecosystem",
+    "title": "Hello #teachds",
+    "section": "Design principle 5: Leverage the ecosystem",
+    "text": "Design principle 5: Leverage the ecosystem\nEstimate the difference between the average evaluation score of male and female faculty.\n\n\n\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, \n    type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", \n    order = c(\"male\", \"female\")) |>\n  summarise(\n    l = quantile(stat, 0.025), \n    u = quantile(stat, 0.975)\n    )\n\n# A tibble: 1 × 2\n       l     u\n   <dbl> <dbl>\n1 0.0476 0.236\n\n\n\n\nt.test(evals$score ~ evals$gender)\n\n\n    Welch Two Sample t-test\n\ndata:  evals$score by evals$gender\nt = -2.7507, df = 398.7, p-value = 0.006218\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -0.24264375 -0.04037194\nsample estimates:\nmean in group female   mean in group male \n            4.092821             4.234328"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#infer-in-tidymodels",
+    "href": "materials/01-hello/index.html#infer-in-tidymodels",
+    "title": "Hello #teachds",
+    "section": "infer \\(\\in\\) tidymodels",
+    "text": "infer \\(\\in\\) tidymodels\n\n\nThe objective of this package is to perform statistical inference using an expressive statistical grammar that coheres with the tidyverse design framework."
+  },
+  {
+    "objectID": "materials/01-hello/index.html#infer-1",
+    "href": "materials/01-hello/index.html#infer-1",
+    "title": "Hello #teachds",
+    "section": "infer 1",
+    "text": "infer 1\n\nevals |>\n  specify(score ~ gender)\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 463 × 2\n   score gender\n   <dbl> <fct> \n 1   4.7 female\n 2   4.1 female\n 3   3.9 female\n 4   4.8 female\n 5   4.6 male  \n 6   4.3 male  \n 7   2.8 male  \n 8   4.1 male  \n 9   3.4 male  \n10   4.5 female\n# … with 453 more rows"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#infer-2",
+    "href": "materials/01-hello/index.html#infer-2",
+    "title": "Hello #teachds",
+    "section": "infer 2",
+    "text": "infer 2\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\")\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 46,300 × 3\n# Groups:   replicate [100]\n   replicate score gender\n       <int> <dbl> <fct> \n 1         1   4   female\n 2         1   3.1 male  \n 3         1   5   male  \n 4         1   4.4 male  \n 5         1   3.5 female\n 6         1   4.5 female\n 7         1   4.5 male  \n 8         1   4.9 male  \n 9         1   4.4 male  \n10         1   3.5 male  \n# … with 46,290 more rows"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#infer-3",
+    "href": "materials/01-hello/index.html#infer-3",
+    "title": "Hello #teachds",
+    "section": "infer 3",
+    "text": "infer 3\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", order = c(\"male\", \"female\"))\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 100 × 2\n   replicate     stat\n       <int>    <dbl>\n 1         1  0.230  \n 2         2  0.134  \n 3         3  0.100  \n 4         4  0.230  \n 5         5  0.128  \n 6         6  0.201  \n 7         7  0.168  \n 8         8  0.130  \n 9         9 -0.00490\n10        10  0.123  \n# … with 90 more rows"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#infer-4",
+    "href": "materials/01-hello/index.html#infer-4",
+    "title": "Hello #teachds",
+    "section": "infer 4",
+    "text": "infer 4\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", order = c(\"male\", \"female\")) |>\n  visualise()"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#infer-4-1",
+    "href": "materials/01-hello/index.html#infer-4-1",
+    "title": "Hello #teachds",
+    "section": "infer 4",
+    "text": "infer 4\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", order = c(\"male\", \"female\")) |>\n  summarise(l = quantile(stat, 0.025), u = quantile(stat, 0.975))\n\n# A tibble: 1 × 2\n       l     u\n   <dbl> <dbl>\n1 0.0285 0.238"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#one-other-way-to-leverage-the-ecosystem",
+    "href": "materials/01-hello/index.html#one-other-way-to-leverage-the-ecosystem",
+    "title": "Hello #teachds",
+    "section": "One other way to “leverage the ecosystem”",
+    "text": "One other way to “leverage the ecosystem”\nDo it all in R!\n\nSlides, course, course notes / textbook with Quarto\nA student dashboard with flexdashboard\nGit automation with ghclass\nInteractive tutorials with learnr\n…"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#course-toolkit",
+    "href": "materials/01-hello/index.html#course-toolkit",
+    "title": "Hello #teachds",
+    "section": "Course toolkit",
+    "text": "Course toolkit\n\n\nWorkshop operation:\n\nrstd.io/teach-ds-conf22\nDiscord\n\n\nDoing data science:\n\nProgramming:\n\nR\nRStudio\ntidyverse\nQuarto\n\nVersion control and collaboration:\n\nGit\nGitHub"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#toolkit-for-reproducibility",
+    "href": "materials/01-hello/index.html#toolkit-for-reproducibility",
+    "title": "Hello #teachds",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#quarto",
+    "href": "materials/01-hello/index.html#quarto",
+    "title": "Hello #teachds",
+    "section": "Quarto",
+    "text": "Quarto\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nA visual editor (just like Google Docs) for authoring\nCode goes in chunks, narrative goes outside of chunks"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#how-will-we-use-quarto",
+    "href": "materials/01-hello/index.html#how-will-we-use-quarto",
+    "title": "Hello #teachds",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery exercise is a Quarto document\nYou’ll always have a template Quarto document to start with"
+  },
+  {
+    "objectID": "materials/01-hello/index.html#your-turn-bechdel-quarto",
+    "href": "materials/01-hello/index.html#your-turn-bechdel-quarto",
+    "title": "Hello #teachds",
+    "section": "Your turn: Bechdel + Quarto",
+    "text": "Your turn: Bechdel + Quarto\n\n RStudio Cloud > “Module 1 - Hello” > ex-1-3.qmd\n\n\nThe Bechdel test asks whether a work of fiction features at least two women who talk to each other about something other than a man, and there must be two women named characters. Review and render the documnt, then fill in the blanks.\n\n\n\n\n10:00\n\n\n\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 1"
+  },
+  {
+    "objectID": "materials/01-hello/ex-1-2.html",
+    "href": "materials/01-hello/ex-1-2.html",
+    "title": "Ex 1.1: Exercise design",
+    "section": "",
+    "text": "# add code here"
   },
   {
     "objectID": "materials/08-organizing/ex-1.html",
@@ -1698,7 +2181,7 @@
     "href": "index.html#prework",
     "title": "Designing the data science classroom",
     "section": "Prework",
-    "text": "Prework\nIn this workshop you will wear two hats: the educator and the learner. At times we will be demoing workflows for instructors (whom I assume are familiar with R, RStudio, and the tidyverse and have taught with or are interested in teaching with RStudio Cloud, Git, and GitHub) and at other times you will be working through the student view (on RStudio Cloud, assuming you’re not using your local setup).\n\nWatch\nFor the latter, you can mostly assume that you’re a student in an intro data science course and this is the first day of class (i.e. there’s no expectation of prep). However we’d also like to give you a taste of how the remainder of the semester goes, which often entails students watching background videos to prepare. To prepare for the first module, please watch the following video before the workshop.\n\n\n\n🖥️ Slides\n\n\n\n\nSet up\nFor the former, you’ll might need to prepare a bit more. If you already are a Git and GitHub user, have a personal token saved, and can push to and pull from GitHub without having to type your password in each time, you’re good to go. If not, please complete the following steps before the workshop1. If you need help with any of the steps, please ask on GitHub Discussions.\n\nRegister a free GitHub account\nInstall or update R and RStudio\nInstall Git\nIntroduce yourself to Git\nPersonal access token for HTTPS\nConnect to GitHub\nConnect RStudio to Git and GitHub\nDetect Git from RStudio\n\n\n\nInstall\nIf you choose to use your local R and RStudio install for the workshop, you should also install the following packages:\n\nFrom CRAN:\n\ninstall.packages(\"devtools\")\ninstall.packages(\"DT\")\ninstall.packages(\"gapminder\")\ninstall.packages(\"ghclass\")\ninstall.packages(\"learnr\")\ninstall.packages(\"lubridate\")\ninstall.packages(\"magick\")\ninstall.packages(\"nycflights13\")\ninstall.packages(\"openintro\")\ninstall.packages(\"rvest\")\ninstall.packages(\"shiny\")\ninstall.packages(\"sortable\")\ninstall.packages(\"tidyverse\")\ninstall.packages(\"tidymodels\")\ninstall.packages(\"unvotes\")\n\nFrom GitHub:\n\ndevtools::install_github(\"rundel/learnrhash\")"
+    "text": "Prework\nIn this workshop you will wear two hats: the educator and the learner. At times we will be demoing workflows for instructors (whom I assume are familiar with R, RStudio, and the tidyverse and have taught with or are interested in teaching with RStudio Cloud, Git, and GitHub) and at other times you will be working through the student view (on RStudio Cloud, assuming you’re not using your local setup).\n\nWatch\nFor the latter, you can mostly assume that you’re a student in an intro data science course and this is the first day of class (i.e. there’s no expectation of prep). However we’d also like to give you a taste of how the remainder of the semester goes, which often entails students watching background videos to prepare. To prepare for the first module, please watch the following video before the workshop.\n\n\n\n🖥️ Slides\n\n\n\n\nSet up\nFor the former, you’ll might need to prepare a bit more. If you already are a Git and GitHub user, have a personal token saved, and can push to and pull from GitHub without having to type your password in each time, you’re good to go. If not, please complete the following steps before the workshop1. If you need help with any of the steps, please ask on GitHub Discussions.\n\nRegister a free GitHub account\nInstall or update R and RStudio\nInstall Git\nIntroduce yourself to Git\nPersonal access token for HTTPS\nConnect to GitHub\nConnect RStudio to Git and GitHub\nDetect Git from RStudio\n\n\n\nInstall\nIf you choose to use your local R and RStudio install for the workshop, you should also install the following packages:\n\nFrom CRAN:\n\ninstall.packages(\"devtools\")\ninstall.packages(\"DT\")\ninstall.packages(\"fivethirtyeight\")\ninstall.packages(\"gapminder\")\ninstall.packages(\"ghclass\")\ninstall.packages(\"learnr\")\ninstall.packages(\"lubridate\")\ninstall.packages(\"nycflights13\")\ninstall.packages(\"openintro\")\ninstall.packages(\"rvest\")\ninstall.packages(\"shiny\")\ninstall.packages(\"sortable\")\ninstall.packages(\"tidyverse\")\ninstall.packages(\"tidymodels\")\ninstall.packages(\"unvotes\")\n\nFrom GitHub:\n\ndevtools::install_github(\"rundel/learnrhash\")"
   },
   {
     "objectID": "index.html#rstudio-cloud",

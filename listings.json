@@ -34,8 +34,9 @@
   {
     "listing": "/modules/d1-01-hello.html",
     "items": [
-      "/materials/01-hello/ex-1.html",
-      "/materials/01-hello/ex-2.html"
+      "/materials/01-hello/ex-1-1.html",
+      "/materials/01-hello/ex-1-2.html",
+      "/materials/01-hello/ex-1-3.html"
     ]
   },
   {
