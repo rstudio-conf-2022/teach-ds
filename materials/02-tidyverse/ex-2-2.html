@@ -236,19 +236,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>loans</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 9,976 × 6
-   loan_amount homeownership bankruptcy application_type annual_income
-         &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;      &lt;fct&gt;                    &lt;dbl&gt;
- 1       28000 Mortgage      No         individual               90000
- 2        5000 Rent          Yes        individual               40000
- 3        2000 Rent          No         individual               40000
- 4       21600 Rent          No         individual               30000
- 5       23000 Rent          No         joint                    35000
- 6        5000 Own           No         individual               34000
- 7       24000 Mortgage      No         joint                    35000
- 8       20000 Mortgage      No         individual              110000
- 9       20000 Mortgage      No         individual               65000
-10        6400 Rent          No         individual               30000
-# … with 9,966 more rows, and 1 more variable: interest_rate &lt;dbl&gt;</code></pre>
+   loan_amount homeownership bankruptcy application_type annual_income interes…¹
+         &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;      &lt;fct&gt;                    &lt;dbl&gt;     &lt;dbl&gt;
+ 1       28000 Mortgage      No         individual               90000     14.1 
+ 2        5000 Rent          Yes        individual               40000     12.6 
+ 3        2000 Rent          No         individual               40000     17.1 
+ 4       21600 Rent          No         individual               30000      6.72
+ 5       23000 Rent          No         joint                    35000     14.1 
+ 6        5000 Own           No         individual               34000      6.72
+ 7       24000 Mortgage      No         joint                    35000     13.6 
+ 8       20000 Mortgage      No         individual              110000     12.0 
+ 9       20000 Mortgage      No         individual               65000     13.6 
+10        6400 Rent          No         individual               30000      6.71
+# … with 9,966 more rows, and abbreviated variable name ¹​interest_rate
+# ℹ Use `print(n = ...)` to see more rows</code></pre>
 </div>
 </div>
 </section>

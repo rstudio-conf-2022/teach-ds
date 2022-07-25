@@ -186,14 +186,7 @@
     "href": "modules/d1-03-tidymodels.html",
     "title": "Teaching modern modeling with tidymodels",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d1-03-tidymodels.html#outline",
-    "href": "modules/d1-03-tidymodels.html#outline",
-    "title": "Teaching modern modeling with tidymodels",
-    "section": "Outline",
-    "text": "Outline\n\nTeaching modern modeling\nIntroducing tiydmodels\nTeaching with tidymodels\n\nFeature engineering\nPrediction\nCross-validation\n\nUsing tidymodels in your course"
+    "text": "Teaching modern modeling\nIntroducing tiydmodels\nTeaching with tidymodels\n\nFeature engineering\nPrediction\nModel evaluation\nTraining / testing data\n\nUsing tidymodels in your course"
   },
   {
     "objectID": "modules/d1-03-tidymodels.html#slides",
@@ -207,21 +200,14 @@
     "href": "modules/d1-03-tidymodels.html#exercises",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.1: Feature engineering\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.2: Fit, predict, evaluate\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.3: Train / test data\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.1: Feature engineering\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.2: Fit, predict, evaluate\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.3: Train / test data\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nFull analysis\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-04-learnr.html",
     "href": "modules/d1-04-learnr.html",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d1-04-learnr.html#outline",
-    "href": "modules/d1-04-learnr.html#outline",
-    "title": "Interactivity and immediate feedback with learnr",
-    "section": "Outline",
-    "text": "Outline\n\nWriting learnr tutorials\nWriting different types of questions\nWriting automated feedback\nUsing learnr in your course\n\nCollecting student responses\nDeploying tutorials"
+    "text": "Writing learnr tutorials\nWriting different types of questions\nWriting automated feedback\nUsing learnr in your course\n\nCollecting student responses\nDeploying tutorials"
   },
   {
     "objectID": "modules/d1-04-learnr.html#slides",
@@ -235,7 +221,7 @@
     "href": "modules/d1-04-learnr.html#exercises",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.1: Deployed tutorial\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.2: Writing questions\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.3: Automated feedback\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nDeployed tutorial\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.1: Writing questions\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.2: Automated feedback\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-06b-lunch-break.html",
@@ -515,7 +501,7 @@
     "href": "materials/02-tidyverse/ex-2-1.html",
     "title": "Ex 2.1: Grouped Summary",
     "section": "",
-    "text": "library(tidyverse)\nlibrary(openintro)\n\nloans <- loans_full_schema %>%\n  mutate(\n    homeownership = str_to_title(homeownership), \n    bankruptcy = if_else(public_record_bankrupt >= 1, \"Yes\", \"No\")\n  ) %>%\n  filter(annual_income >= 10) %>%\n  select(\n    loan_amount, homeownership, bankruptcy,\n    application_type, annual_income, interest_rate\n  )\n\nloans\n\n# A tibble: 9,976 × 6\n   loan_amount homeownership bankruptcy application_type annual_income\n         <int> <chr>         <chr>      <fct>                    <dbl>\n 1       28000 Mortgage      No         individual               90000\n 2        5000 Rent          Yes        individual               40000\n 3        2000 Rent          No         individual               40000\n 4       21600 Rent          No         individual               30000\n 5       23000 Rent          No         joint                    35000\n 6        5000 Own           No         individual               34000\n 7       24000 Mortgage      No         joint                    35000\n 8       20000 Mortgage      No         individual              110000\n 9       20000 Mortgage      No         individual               65000\n10        6400 Rent          No         individual               30000\n# … with 9,966 more rows, and 1 more variable: interest_rate <dbl>"
+    "text": "library(tidyverse)\nlibrary(openintro)\n\nloans <- loans_full_schema %>%\n  mutate(\n    homeownership = str_to_title(homeownership), \n    bankruptcy = if_else(public_record_bankrupt >= 1, \"Yes\", \"No\")\n  ) %>%\n  filter(annual_income >= 10) %>%\n  select(\n    loan_amount, homeownership, bankruptcy,\n    application_type, annual_income, interest_rate\n  )\n\nloans\n\n# A tibble: 9,976 × 6\n   loan_amount homeownership bankruptcy application_type annual_income interes…¹\n         <int> <chr>         <chr>      <fct>                    <dbl>     <dbl>\n 1       28000 Mortgage      No         individual               90000     14.1 \n 2        5000 Rent          Yes        individual               40000     12.6 \n 3        2000 Rent          No         individual               40000     17.1 \n 4       21600 Rent          No         individual               30000      6.72\n 5       23000 Rent          No         joint                    35000     14.1 \n 6        5000 Own           No         individual               34000      6.72\n 7       24000 Mortgage      No         joint                    35000     13.6 \n 8       20000 Mortgage      No         individual              110000     12.0 \n 9       20000 Mortgage      No         individual               65000     13.6 \n10        6400 Rent          No         individual               30000      6.71\n# … with 9,966 more rows, and abbreviated variable name ¹​interest_rate\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/02-tidyverse/ex-2-1.html#exercise",
@@ -557,7 +543,7 @@
     "href": "materials/02-tidyverse/index.html#start-with-a-data-frame",
     "title": "Teaching data science with the tidyverse",
     "section": "Start with a data frame",
-    "text": "Start with a data frame\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows"
+    "text": "Start with a data frame\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#tidy-data",
@@ -571,7 +557,7 @@
     "href": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic",
     "title": "Teaching data science with the tidyverse",
     "section": "Task: Calculate a summary statistic",
-    "text": "Task: Calculate a summary statistic\n\nCalculate the mean loan amount.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n\n\n\n\nmean(loan_amount)\n\n\n\n\n\nError in mean(loan_amount): object 'loan_amount' not found"
+    "text": "Task: Calculate a summary statistic\n\nCalculate the mean loan amount.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\nmean(loan_amount)\n\n\n\n\n\nError in mean(loan_amount): object 'loan_amount' not found"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic-1",
@@ -620,14 +606,14 @@
     "href": "materials/02-tidyverse/index.html#break-it-down-i",
     "title": "Teaching data science with the tidyverse",
     "section": "Break it down I",
-    "text": "Break it down I\n\n\nBased on the applicants’ home ownership status, computer the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows"
+    "text": "Break it down I\n\n\nBased on the applicants’ home ownership status, computer the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#break-it-down-ii",
     "href": "materials/02-tidyverse/index.html#break-it-down-ii",
     "title": "Teaching data science with the tidyverse",
     "section": "Break it down II",
-    "text": "Break it down II\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n\n[input] data frame\n\n\n\n\nloans |>\n  group_by(homeownership)\n\n# A tibble: 9,976 × 6\n# Groups:   homeownership [3]\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n\n\n\n\n\ndata frame [output]"
+    "text": "Break it down II\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n\n[input] data frame\n\n\n\n\nloans |>\n  group_by(homeownership)\n\n# A tibble: 9,976 × 6\n# Groups:   homeownership [3]\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\n\ndata frame [output]"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#break-it-down-iii",
@@ -907,7 +893,7 @@
     "href": "materials/02-tidyverse/ex-2-2.html",
     "title": "Ex 2.2: Side-by-side box plots",
     "section": "",
-    "text": "library(tidyverse)\nlibrary(openintro)\n\nloans <- loans_full_schema %>%\n  mutate(\n    homeownership = str_to_title(homeownership), \n    bankruptcy = if_else(public_record_bankrupt >= 1, \"Yes\", \"No\")\n  ) %>%\n  filter(annual_income >= 10) %>%\n  select(\n    loan_amount, homeownership, bankruptcy,\n    application_type, annual_income, interest_rate\n  )\n\nloans\n\n# A tibble: 9,976 × 6\n   loan_amount homeownership bankruptcy application_type annual_income\n         <int> <chr>         <chr>      <fct>                    <dbl>\n 1       28000 Mortgage      No         individual               90000\n 2        5000 Rent          Yes        individual               40000\n 3        2000 Rent          No         individual               40000\n 4       21600 Rent          No         individual               30000\n 5       23000 Rent          No         joint                    35000\n 6        5000 Own           No         individual               34000\n 7       24000 Mortgage      No         joint                    35000\n 8       20000 Mortgage      No         individual              110000\n 9       20000 Mortgage      No         individual               65000\n10        6400 Rent          No         individual               30000\n# … with 9,966 more rows, and 1 more variable: interest_rate <dbl>"
+    "text": "library(tidyverse)\nlibrary(openintro)\n\nloans <- loans_full_schema %>%\n  mutate(\n    homeownership = str_to_title(homeownership), \n    bankruptcy = if_else(public_record_bankrupt >= 1, \"Yes\", \"No\")\n  ) %>%\n  filter(annual_income >= 10) %>%\n  select(\n    loan_amount, homeownership, bankruptcy,\n    application_type, annual_income, interest_rate\n  )\n\nloans\n\n# A tibble: 9,976 × 6\n   loan_amount homeownership bankruptcy application_type annual_income interes…¹\n         <int> <chr>         <chr>      <fct>                    <dbl>     <dbl>\n 1       28000 Mortgage      No         individual               90000     14.1 \n 2        5000 Rent          Yes        individual               40000     12.6 \n 3        2000 Rent          No         individual               40000     17.1 \n 4       21600 Rent          No         individual               30000      6.72\n 5       23000 Rent          No         joint                    35000     14.1 \n 6        5000 Own           No         individual               34000      6.72\n 7       24000 Mortgage      No         joint                    35000     13.6 \n 8       20000 Mortgage      No         individual              110000     12.0 \n 9       20000 Mortgage      No         individual               65000     13.6 \n10        6400 Rent          No         individual               30000      6.71\n# … with 9,966 more rows, and abbreviated variable name ¹​interest_rate\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/02-tidyverse/ex-2-2.html#exercise",
@@ -938,11 +924,11 @@
     "text": "Model\nThe goal is to fit a model to predict the interest rate (interest_rate) based on the debt to income ratio (debt_to_income), type of application (application_type), and whether there are any bankruptcies listed in the public record for the individual (bankrupt). The model should allow the effect of debt to income ratio to differ based on application type.\n\\[\n\\begin{align}\\widehat{interest\\_rate} = b_0 &+ b_1 \\times debt\\_to\\_income \\\\ &+ b_2 \\times application\\_type \\\\ &+ b_3 \\times bankrupt \\\\ &+ b_4 \\times debt\\_to\\_income:application\\_type\\end{align}\n\\]"
   },
   {
-    "objectID": "materials/03-tidymodels/ex-3-3.html#recipe",
-    "href": "materials/03-tidymodels/ex-3-3.html#recipe",
+    "objectID": "materials/03-tidymodels/ex-3-3.html#recipe-workflow",
+    "href": "materials/03-tidymodels/ex-3-3.html#recipe-workflow",
     "title": "Ex 3.3: Train / test data",
-    "section": "Recipe",
-    "text": "Recipe\nThis exercise builds on Exercises 1 and 2. To get you started, the recipe created in Exercise 1 and workflow from Exercise 2 are below.\n\nloans_rec <- recipe(interest_rate ~ debt_to_income + application_type + \n                      public_record_bankrupt, data = loans_full_schema) |>\n  step_normalize(debt_to_income) |>\n  step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \n                                           \"no\", \"yes\"))) |>\n  step_rm(public_record_bankrupt) |>\n  step_dummy(all_nominal_predictors()) |>\n  step_interact(terms = ~ starts_with(\"application_type\"):debt_to_income)"
+    "section": "Recipe + Workflow",
+    "text": "Recipe + Workflow\nThis exercise builds on Exercises 1 and 2. To get you started, the recipe created in Exercise 1 and workflow from Exercise 2 are below.\n\nloans_rec <- recipe(interest_rate ~ debt_to_income + application_type + \n                      public_record_bankrupt, data = loans_full_schema) |>\n  step_impute_mean(debt_to_income) |>\n  step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \n                                           \"no\", \"yes\"))) |>\n  step_rm(public_record_bankrupt) |>\n  step_dummy(all_nominal_predictors()) |>\n  step_interact(terms = ~ starts_with(\"application_type\"):debt_to_income)\n\n\nloans_spec <- linear_reg() |>\n  set_engine(\"lm\")\n\nloans_workflow <- workflow() |>\n  add_model(loans_spec) |>\n  add_recipe(loans_rec)"
   },
   {
     "objectID": "materials/03-tidymodels/ex-3-3.html#train-test-data",
@@ -956,7 +942,7 @@
     "href": "materials/03-tidymodels/ex-3-3.html#fit-the-model-to-training-data",
     "title": "Ex 3.3: Train / test data",
     "section": "Fit the model to training data",
-    "text": "Fit the model to training data\nFit the model to the training data.\n\nloand_train_fit <- ______"
+    "text": "Fit the model to training data\nFit the model to the training data.\n\nloans_train_fit <- ______"
   },
   {
     "objectID": "materials/03-tidymodels/ex-3-3.html#evaluate-model",
@@ -1001,11 +987,11 @@
     "text": "Model\nThe goal is to fit a model to predict the interest rate (interest_rate) based on the debt to income ratio (debt_to_income), type of application (application_type), and whether there are any bankruptcies listed in the public record for the individual (bankrupt). The model should allow the effect of debt to income ratio to differ based on application type.\n\\[\n\\begin{align}\\widehat{interest\\_rate} = b_0 &+ b_1 \\times debt\\_to\\_income \\\\ &+ b_2 \\times application\\_type \\\\ &+ b_3 \\times bankrupt \\\\ &+ b_4 \\times debt\\_to\\_income:application\\_type\\end{align}\n\\]"
   },
   {
-    "objectID": "materials/03-tidymodels/ex-3-1.html#featuring-engineering-with-dplyr",
-    "href": "materials/03-tidymodels/ex-3-1.html#featuring-engineering-with-dplyr",
+    "objectID": "materials/03-tidymodels/ex-3-1.html#feature-engineering-with-dplyr",
+    "href": "materials/03-tidymodels/ex-3-1.html#feature-engineering-with-dplyr",
     "title": "Ex 3.1: Feature engineering",
-    "section": "Featuring engineering with dplyr",
-    "text": "Featuring engineering with dplyr\nThe feature engineering to transform and create new variables using dplyr is shown below.\n\nloans_full_schema_mod <- loans_full_schema |>\n  mutate(debt_to_income_norm = \n           debt_to_income - mean(debt_to_income, na.rm = TRUE)/ sd(debt_to_income, na.rm = TRUE)) |>\n  mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \"no\", \"yes\")))|>\n  mutate(app_type_joint = if_else(application_type == \"joint\", 1, 0)) |>\n  mutate(debt_app_int = debt_to_income_norm * app_type_joint) |>\n  select(-public_record_bankrupt)"
+    "section": "Feature engineering with dplyr",
+    "text": "Feature engineering with dplyr\nThe feature engineering to transform and create new variables using dplyr is shown below.\n\nloans_full_schema_mod <- loans_full_schema |>\n  mutate(debt_to_income = \n           if_else(is.na(debt_to_income), mean(debt_to_income, na.rm = TRUE), debt_to_income)) |>\n  mutate(bankrupt = \n           as_factor(if_else(public_record_bankrupt == 0, \"no\", \"yes\")))|>\n  mutate(app_type_joint = if_else(application_type == \"joint\", 1, 0)) |>\n  mutate(debt_app_int = debt_to_income * app_type_joint) |>\n  select(-public_record_bankrupt)\n\n\nloans_full_schema_mod |>\n  select(debt_to_income, bankrupt, app_type_joint, debt_app_int) |>\n  head()\n\n# A tibble: 6 × 4\n  debt_to_income bankrupt app_type_joint debt_app_int\n           <dbl> <fct>             <dbl>        <dbl>\n1          18.0  no                    0          0  \n2           5.04 yes                   0          0  \n3          21.2  no                    0          0  \n4          10.2  no                    0          0  \n5          58.0  no                    1         58.0\n6           6.46 no                    0          0"
   },
   {
     "objectID": "materials/03-tidymodels/ex-3-1.html#feature-engineering-using-recipes",
@@ -1022,11 +1008,88 @@
     "text": "Discussion\nWhat was easy / straightforward about writing the recipe? What was challenging?"
   },
   {
+    "objectID": "materials/03-tidymodels/ex-3-4.html",
+    "href": "materials/03-tidymodels/ex-3-4.html",
+    "title": "Full analysis",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(openintro)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#data",
+    "href": "materials/03-tidymodels/ex-3-4.html#data",
+    "title": "Full analysis",
+    "section": "Data",
+    "text": "Data\nThe data is the loans_full_schema data set from the openintro package and featured in the OpenIntro textbooks. It contains information about 50,000 loans made through the Lending Club platform.\nThe data has a bit of peculiarity about it, specifically the application_type variable is a factor variable with an empty level.\n\nlevels(loans_full_schema$application_type)\n\n[1] \"\"           \"individual\" \"joint\"     \n\n\nLet’s clean up this variable using the droplevels() function first. And let’s apply that to the whole data set, in case there are other variables with similar issues.\n\nloans_full_schema <- droplevels(loans_full_schema)\n\nThe variables we’ll use in this analysis are:\n\ninterest_rate: Interest rate of the loan the applicant received.\ndebt_to_income: Debt-to-income ratio.\npublic_record_bankrupt: Number of bankruptcies listed in the public record for this applicant.\napplication_type: The type of application: either individual or joint."
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#analysis-objective",
+    "href": "materials/03-tidymodels/ex-3-4.html#analysis-objective",
+    "title": "Full analysis",
+    "section": "Analysis objective",
+    "text": "Analysis objective\nThe goal is to fit a model to predict the interest rate (interest_rate) based on the debt to income ratio (debt_to_income), type of application (application_type), and whether there are any bankruptcies listed in the public record for the individual (bankrupt). The model should allow the effect of debt to income ratio to differ based on application type.\n\\[\n\\begin{align}\\widehat{interest\\_rate} = b_0 &+ b_1 \\times debt\\_to\\_income \\\\ &+ b_2 \\times application\\_type \\\\ &+ b_3 \\times bankrupt \\\\ &+ b_4 \\times debt\\_to\\_income:application\\_type\\end{align}\n\\]"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#train-test-split",
+    "href": "materials/03-tidymodels/ex-3-4.html#train-test-split",
+    "title": "Full analysis",
+    "section": "Train / test split",
+    "text": "Train / test split\nSplit the data into a training (80%) and test set (20%). Don’t forget to set a seed!\n\nset.seed(0725)\n\nloans_split <- initial_split(loans_full_schema, prop = 0.8)\n\nloans_train <- training(loans_split)\nloans_test <- testing(loans_split)\n\nThe data exploration, recipe specification, and model fitting will be done using the training data."
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#exploratory-data-analysis",
+    "href": "materials/03-tidymodels/ex-3-4.html#exploratory-data-analysis",
+    "title": "Full analysis",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\nTake a quick look at variables relevant for the model.\n\nloans_train |>\n  select(interest_rate, debt_to_income, public_record_bankrupt, application_type) |>\n  glimpse()\n\nRows: 8,000\nColumns: 4\n$ interest_rate          <dbl> 6.72, 18.06, 7.97, 10.42, 18.06, 6.72, 9.44, 9.…\n$ debt_to_income         <dbl> 15.33, 39.57, 23.52, 26.11, 21.36, 20.95, 8.22,…\n$ public_record_bankrupt <int> 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,…\n$ application_type       <fct> individual, joint, individual, individual, indi…\n\n\nCreate univariate, bivariate, and multivariate plots, and make sure to think about which plots are the most appropriate and effective given the data types.\nInterest rate\n\nggplot(loans_train, aes(x = interest_rate)) +\n  geom_histogram(binwidth = 1) +\n  labs(\n    x = \"Interest rate\", y = \"Count\",\n    title = \"Distribution of loan interest rates\"\n  )\n\n\n\n\nInterest rate by bankruptcy\n\nloans_train |>\n  mutate(bankrupt = if_else(public_record_bankrupt == 0, \"no\", \"yes\")) |>\n  ggplot(aes(x = interest_rate, fill = bankrupt)) +\n  geom_density(alpha = 0.5) +\n  labs(\n    x = \"Interest rate\", y = \"Density\",\n    fill = \"Past bankrupcy status\", \n    title = \"Interest rate by past bankruptcy status\"\n  )\n\n\n\n\nInterest rate vs. debt to income ratio by application type\n\nggplot(loans_train, \n       aes(x = debt_to_income, y = interest_rate,\n           color = application_type, shape = application_type)) +\n  geom_point() +\n  labs(\n    x = \"Debt-to-income ratio\", y = \"Interest rate\",\n    color = \"Application type\", shape = \"Application type\",\n    title = \"Interest rate vs. Debt-to-income by application type\"\n  )\n\nWarning: Removed 20 rows containing missing values (geom_point)."
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#model-specification",
+    "href": "materials/03-tidymodels/ex-3-4.html#model-specification",
+    "title": "Full analysis",
+    "section": "Model specification",
+    "text": "Model specification\n\nloans_spec <- linear_reg() |>\n  set_engine(\"lm\")"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#recipe",
+    "href": "materials/03-tidymodels/ex-3-4.html#recipe",
+    "title": "Full analysis",
+    "section": "Recipe",
+    "text": "Recipe\n\nloans_rec <- recipe(interest_rate ~ debt_to_income + application_type + \n                      public_record_bankrupt, data = loans_train) |>\n  step_impute_mean(debt_to_income) |>\n  step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \n                                           \"no\", \"yes\"))) |>\n  step_rm(public_record_bankrupt) |>\n  step_dummy(all_nominal_predictors()) |>\n  step_interact(terms = ~ starts_with(\"application_type\"):debt_to_income)"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#build-workflow",
+    "href": "materials/03-tidymodels/ex-3-4.html#build-workflow",
+    "title": "Full analysis",
+    "section": "Build workflow",
+    "text": "Build workflow\n\nloans_workflow <- workflow() |>\n  add_model(loans_spec) |>\n  add_recipe(loans_rec)\n\nloans_workflow\n\n══ Workflow ════════════════════════════════════════════════════════════════════\nPreprocessor: Recipe\nModel: linear_reg()\n\n── Preprocessor ────────────────────────────────────────────────────────────────\n5 Recipe Steps\n\n• step_impute_mean()\n• step_mutate()\n• step_rm()\n• step_dummy()\n• step_interact()\n\n── Model ───────────────────────────────────────────────────────────────────────\nLinear Regression Model Specification (regression)\n\nComputational engine: lm"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#fit-model-on-training-data",
+    "href": "materials/03-tidymodels/ex-3-4.html#fit-model-on-training-data",
+    "title": "Full analysis",
+    "section": "Fit model on training data",
+    "text": "Fit model on training data\n\nloans_train_fit <- loans_workflow |>\n  fit(data = loans_train)\n\ntidy(loans_train_fit)\n\n# A tibble: 5 × 5\n  term                                    estimate std.error statistic  p.value\n  <chr>                                      <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)                              11.0      0.198       55.6  0       \n2 debt_to_income                            0.111    0.00675     16.4  1.53e-59\n3 application_type_joint                    2.54     0.236       10.7  9.66e-27\n4 bankrupt_no                              -0.781    0.167       -4.69 2.77e- 6\n5 application_type_joint_x_debt_to_income  -0.0985   0.00809    -12.2  8.27e-34"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#evaluate-model",
+    "href": "materials/03-tidymodels/ex-3-4.html#evaluate-model",
+    "title": "Full analysis",
+    "section": "Evaluate model",
+    "text": "Evaluate model\n\nTraining data\n\n# Predictions \nloans_train_pred <- predict(loans_train_fit, loans_train) |>\n  bind_cols(loans_train |> select(interest_rate))\n\n## R-sq\nrsq(loans_train_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rsq     standard      0.0413\n\n## RMSE\nrmse(loans_train_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        4.87\n\n\n\n\nTesting data\nNote: This is the first time we use the testing data!\n\n# Predictions \nloans_test_pred <- predict(loans_train_fit, loans_test) |>\n  bind_cols(loans_test |> select(interest_rate))\n\n## R-sq\nrsq(loans_test_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rsq     standard      0.0386\n\n## RMSE\nrmse(loans_test_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        5.01"
+  },
+  {
+    "objectID": "materials/03-tidymodels/ex-3-4.html#discussion",
+    "href": "materials/03-tidymodels/ex-3-4.html#discussion",
+    "title": "Full analysis",
+    "section": "Discussion",
+    "text": "Discussion\nThis document has focused on the code students would write to complete the analysis. Below are example writing prompts to help students think critically about the analysis process and interpret the results.\n\nExploratory data analysis\nUsing your plots above (along with any other metrics you compute), describe your initial findings about the training data. Discuss why we perform EDA only on the training data and not on the entire data set.\n\n\nModel fit and evaluation\nAlthough our primary aim is prediction and not inference, it may be of interest to view the model fit nonetheless to make sure nothing looks out of the ordinary. Create a neatly organized table of the model output, and describe your observations, such as which parameters are significant. Make sure to interpret some coefficients appropriately."
+  },
+  {
     "objectID": "materials/03-tidymodels/index.html#session-outline",
     "href": "materials/03-tidymodels/index.html#session-outline",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Session outline",
-    "text": "Session outline\n\nAdd agenda\n\n\n# load packages for slides\nlibrary(tidyverse)\nlibrary(openintro)\nlibrary(countdown)"
+    "text": "Session outline\n\nTeaching modern modeling\nIntroducing tidymodels\nTeaching with tidymodels\n\nFeature engineering\nPrediction + model evaluation\nTrain / test data\n\nPutting it all together"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#gaise-guidelines",
@@ -1061,7 +1124,7 @@
     "href": "materials/03-tidymodels/index.html#data-loans-from-lending-club",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Data: Loans from Lending Club",
-    "text": "Data: Loans from Lending Club\nThe data is the loans_full_schema data set from the openintro package and featured in the OpenIntro textbooks . It contains information about 50,000 loans made through the Lending Club platform. The variables we’ll use in this analysis are\n\ninterest_rate: Interest rate of the loan the applicant received.\ndebt_to_income: Debt-to-income ratio.\nterm: The number of months of the loan the applicant received.\ndelinq_2y: Number of delinquencies on lines of credit in the last 2 years."
+    "text": "Data: Loans from Lending Club\nThe data is the loans_full_schema data set from the openintro package and featured in the OpenIntro textbooks . It contains information about 50,000 loans made through the Lending Club platform. The variables we’ll use in this presentation are\n\ninterest_rate: Interest rate of the loan the applicant received.\ndebt_to_income: Debt-to-income ratio.\nterm: The number of months of the loan the applicant received.\ndelinq_2y: Number of delinquencies on lines of credit in the last 2 years."
   },
   {
     "objectID": "materials/03-tidymodels/index.html#data-loans-from-lending-club-1",
@@ -1069,6 +1132,27 @@
     "title": "Teaching modern modeling with tidymodels",
     "section": "Data: Loans from Lending Club",
     "text": "Data: Loans from Lending Club\n\nlibrary(openintro)\nglimpse(loans_full_schema)\n\nRows: 10,000\nColumns: 55\n$ emp_title                        <chr> \"global config engineer \", \"warehouse…\n$ emp_length                       <dbl> 3, 10, 3, 1, 10, NA, 10, 10, 10, 3, 1…\n$ state                            <fct> NJ, HI, WI, PA, CA, KY, MI, AZ, NV, I…\n$ homeownership                    <fct> MORTGAGE, RENT, RENT, RENT, RENT, OWN…\n$ annual_income                    <dbl> 90000, 40000, 40000, 30000, 35000, 34…\n$ verified_income                  <fct> Verified, Not Verified, Source Verifi…\n$ debt_to_income                   <dbl> 18.01, 5.04, 21.15, 10.16, 57.96, 6.4…\n$ annual_income_joint              <dbl> NA, NA, NA, NA, 57000, NA, 155000, NA…\n$ verification_income_joint        <fct> , , , , Verified, , Not Verified, , ,…\n$ debt_to_income_joint             <dbl> NA, NA, NA, NA, 37.66, NA, 13.12, NA,…\n$ delinq_2y                        <int> 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0…\n$ months_since_last_delinq         <int> 38, NA, 28, NA, NA, 3, NA, 19, 18, NA…\n$ earliest_credit_line             <dbl> 2001, 1996, 2006, 2007, 2008, 1990, 2…\n$ inquiries_last_12m               <int> 6, 1, 4, 0, 7, 6, 1, 1, 3, 0, 4, 4, 8…\n$ total_credit_lines               <int> 28, 30, 31, 4, 22, 32, 12, 30, 35, 9,…\n$ open_credit_lines                <int> 10, 14, 10, 4, 16, 12, 10, 15, 21, 6,…\n$ total_credit_limit               <int> 70795, 28800, 24193, 25400, 69839, 42…\n$ total_credit_utilized            <int> 38767, 4321, 16000, 4997, 52722, 3898…\n$ num_collections_last_12m         <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…\n$ num_historical_failed_to_pay     <int> 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0…\n$ months_since_90d_late            <int> 38, NA, 28, NA, NA, 60, NA, 71, 18, N…\n$ current_accounts_delinq          <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…\n$ total_collection_amount_ever     <int> 1250, 0, 432, 0, 0, 0, 0, 0, 0, 0, 0,…\n$ current_installment_accounts     <int> 2, 0, 1, 1, 1, 0, 2, 2, 6, 1, 2, 1, 2…\n$ accounts_opened_24m              <int> 5, 11, 13, 1, 6, 2, 1, 4, 10, 5, 6, 7…\n$ months_since_last_credit_inquiry <int> 5, 8, 7, 15, 4, 5, 9, 7, 4, 17, 3, 4,…\n$ num_satisfactory_accounts        <int> 10, 14, 10, 4, 16, 12, 10, 15, 21, 6,…\n$ num_accounts_120d_past_due       <int> 0, 0, 0, 0, 0, 0, 0, NA, 0, 0, 0, 0, …\n$ num_accounts_30d_past_due        <int> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…\n$ num_active_debit_accounts        <int> 2, 3, 3, 2, 10, 1, 3, 5, 11, 3, 2, 2,…\n$ total_debit_limit                <int> 11100, 16500, 4300, 19400, 32700, 272…\n$ num_total_cc_accounts            <int> 14, 24, 14, 3, 20, 27, 8, 16, 19, 7, …\n$ num_open_cc_accounts             <int> 8, 14, 8, 3, 15, 12, 7, 12, 14, 5, 8,…\n$ num_cc_carrying_balance          <int> 6, 4, 6, 2, 13, 5, 6, 10, 14, 3, 5, 3…\n$ num_mort_accounts                <int> 1, 0, 0, 0, 0, 3, 2, 7, 2, 0, 2, 3, 3…\n$ account_never_delinq_percent     <dbl> 92.9, 100.0, 93.5, 100.0, 100.0, 78.1…\n$ tax_liens                        <int> 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0…\n$ public_record_bankrupt           <int> 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0…\n$ loan_purpose                     <fct> moving, debt_consolidation, other, de…\n$ application_type                 <fct> individual, individual, individual, i…\n$ loan_amount                      <int> 28000, 5000, 2000, 21600, 23000, 5000…\n$ term                             <dbl> 60, 36, 36, 36, 36, 36, 60, 60, 36, 3…\n$ interest_rate                    <dbl> 14.07, 12.61, 17.09, 6.72, 14.07, 6.7…\n$ installment                      <dbl> 652.53, 167.54, 71.40, 664.19, 786.87…\n$ grade                            <fct> C, C, D, A, C, A, C, B, C, A, C, B, C…\n$ sub_grade                        <fct> C3, C1, D1, A3, C3, A3, C2, B5, C2, A…\n$ issue_month                      <fct> Mar-2018, Feb-2018, Feb-2018, Jan-201…\n$ loan_status                      <fct> Current, Current, Current, Current, C…\n$ initial_listing_status           <fct> whole, whole, fractional, whole, whol…\n$ disbursement_method              <fct> Cash, Cash, Cash, Cash, Cash, Cash, C…\n$ balance                          <dbl> 27015.86, 4651.37, 1824.63, 18853.26,…\n$ paid_total                       <dbl> 1999.330, 499.120, 281.800, 3312.890,…\n$ paid_principal                   <dbl> 984.14, 348.63, 175.37, 2746.74, 1569…\n$ paid_interest                    <dbl> 1015.19, 150.49, 106.43, 566.15, 754.…\n$ paid_late_fees                   <dbl> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#exploratory-data-analysis",
+    "href": "materials/03-tidymodels/index.html#exploratory-data-analysis",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\n\nggplot(loans_full_schema, aes(x = interest_rate)) +\n  geom_histogram(binwidth = 1) +\n  labs(\n    x = \"Interest rate\", y = \"Count\",\n    title = \"Distribution of loan interest rates\"\n  )"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#exploratory-data-analysis-1",
+    "href": "materials/03-tidymodels/index.html#exploratory-data-analysis-1",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\n\nggplot(data = loans_full_schema, aes(x = debt_to_income, y = interest_rate )) +\n  geom_point() + \n  labs(x = \"Debt to income ratio\", y = \"Interest rate\", \n       title = \"Interest rate by debt to income ratio\")"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#exploratory-data-analysis-2",
+    "href": "materials/03-tidymodels/index.html#exploratory-data-analysis-2",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Exploratory data analysis",
+    "text": "Exploratory data analysis\n\nggplot(data = loans_full_schema, aes(x = interest_rate, fill = factor(term))) +\n  geom_density(alpha= 0.5) + \n  labs(x = \"Interest rate\", y = \"Density\", \n       fill = \"Term (in months)\",\n       title = \"Interest rate by debt by term length\")"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#regression-syntax",
@@ -1096,28 +1180,28 @@
     "href": "materials/03-tidymodels/index.html#glance",
     "title": "Teaching modern modeling with tidymodels",
     "section": "glance()",
-    "text": "glance()\n\nBase RTidymodels\n\n\n\nglance(base_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.\n# … with 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\n\n\nglance(tidy_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.\n# … with 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
+    "text": "glance()\n\nBase RTidymodels\n\n\n\nglance(base_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³\n      <dbl>     <dbl> <dbl>   <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>   <dbl>\n1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.\n# … with 2 more variables: df.residual <int>, nobs <int>, and abbreviated\n#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance\n# ℹ Use `colnames()` to see all variable names\n\n\n\n\n\nglance(tidy_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³\n      <dbl>     <dbl> <dbl>   <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>   <dbl>\n1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.\n# … with 2 more variables: df.residual <int>, nobs <int>, and abbreviated\n#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance\n# ℹ Use `colnames()` to see all variable names"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#augment",
     "href": "materials/03-tidymodels/index.html#augment",
     "title": "Teaching modern modeling with tidymodels",
     "section": "augment()",
-    "text": "augment()\n\nBase RTidymodels\n\n\n\nbase_lm_aug <- augment(base_lm)\nbase_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd\n   <chr>             <dbl>          <dbl>   <dbl>  <dbl>    <dbl>  <dbl>   <dbl>\n 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6\n 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6\n 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5\n 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5\n 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7\n 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5\n 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6\n 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7\n 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7\n10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5\n# … with 9,966 more rows, and 1 more variable: .std.resid <dbl>\n\n\n\n\n\ntidy_lm_aug <- augment(tidy_lm$fit)\ntidy_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd\n   <chr>             <dbl>          <dbl>   <dbl>  <dbl>    <dbl>  <dbl>   <dbl>\n 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6\n 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6\n 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5\n 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5\n 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7\n 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5\n 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6\n 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7\n 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7\n10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5\n# … with 9,966 more rows, and 1 more variable: .std.resid <dbl>"
+    "text": "augment()\n\nBase RTidymodels\n\n\n\nbase_lm_aug <- augment(base_lm)\nbase_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²\n   <chr>             <dbl>   <dbl>   <dbl>  <dbl>   <dbl>  <dbl>   <dbl>   <dbl>\n 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 \n 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 \n 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 \n 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  \n 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356\n 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  \n 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 \n 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577\n 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722\n10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  \n# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,\n#   ²​.std.resid\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\n\ntidy_lm_aug <- augment(tidy_lm$fit)\ntidy_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²\n   <chr>             <dbl>   <dbl>   <dbl>  <dbl>   <dbl>  <dbl>   <dbl>   <dbl>\n 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 \n 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 \n 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 \n 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  \n 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356\n 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  \n 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 \n 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577\n 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722\n10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  \n# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,\n#   ²​.std.resid\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#why-tidymodels",
     "href": "materials/03-tidymodels/index.html#why-tidymodels",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Why Tidymodels?",
-    "text": "Why Tidymodels?\nThere are advantages for more advanced modeling:\n\nConsistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.\nStreamline modeling workflow\n\nSplit data into train and test sets\nTransform and create new variables\nAssess model performance\nUse model for prediction and inference"
+    "text": "Why Tidymodels?\nThere are advantages for more advanced modeling:\n\nConsistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.)\nStreamline modeling workflow\n\nSplit data into train and test sets\nTransform and create new variables\nAssess model performance\nUse model for prediction and inference"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#tidymodels-syntax",
     "href": "materials/03-tidymodels/index.html#tidymodels-syntax",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Tidymodels syntax",
-    "text": "Tidymodels syntax\n\nlinear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46\n\n\nLet’s break down the syntax."
+    "text": "Tidymodels syntax\n\nlinear_reg() |> \n  set_engine(\"lm\") |>\n  fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 2 × 5\n  term           estimate std.error statistic  p.value\n  <chr>             <dbl>     <dbl>     <dbl>    <dbl>\n1 (Intercept)     11.5      0.0807      143.  0       \n2 debt_to_income   0.0472   0.00330      14.3 7.05e-46\n\n\n\n\nLet’s break down the syntax."
   },
   {
     "objectID": "materials/03-tidymodels/index.html#specify-model",
@@ -1176,6 +1260,13 @@
     "text": "Feature engineering using dplyr\n\n# Feature engineering\nloans_full_schema <- loans_full_schema |>\n  mutate(term_fct = as_factor(term)) |>\n  mutate(debt_to_income_cent = \n           debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>\n  mutate(delinq_2y_cat = \n           cut(delinq_2y, breaks = c(-Inf,0,1, 2, 3, Inf)))\n\n# Fit the model \nlm(interest_rate ~ term_fct + debt_to_income_cent + delinq_2y_cat,\n   data = loans_full_schema) |>\n  tidy()\n\n# A tibble: 7 × 5\n  term                  estimate std.error statistic   p.value\n  <chr>                    <dbl>     <dbl>     <dbl>     <dbl>\n1 (Intercept)            11.0      0.0584     189.   0        \n2 term_fct60              3.86     0.100       38.5  6.67e-303\n3 debt_to_income_cent     0.0429   0.00307     14.0  5.47e- 44\n4 delinq_2y_cat(0,1]      1.37     0.153        8.95 4.08e- 19\n5 delinq_2y_cat(1,2]      1.68     0.291        5.76 8.57e-  9\n6 delinq_2y_cat(2,3]      2.46     0.492        5.00 5.78e-  7\n7 delinq_2y_cat(3, Inf]   2.85     0.563        5.05 4.39e-  7"
   },
   {
+    "objectID": "materials/03-tidymodels/index.html#discussion",
+    "href": "materials/03-tidymodels/index.html#discussion",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Discussion",
+    "text": "Discussion\n\nWhat is a disadvantage to this approach?\n\n\n\n\n02:00"
+  },
+  {
     "objectID": "materials/03-tidymodels/index.html#feature-engineering-with-recipes",
     "href": "materials/03-tidymodels/index.html#feature-engineering-with-recipes",
     "title": "Teaching modern modeling with tidymodels",
@@ -1232,11 +1323,11 @@
     "text": "Prep and bake to see created variables\n\ninterest_rec |>\n  prep()|>\n  bake(loans_full_schema) |>\n  head()\n\n# A tibble: 6 × 4\n  term  debt_to_income delinq_2y interest_rate\n  <fct>          <dbl> <fct>             <dbl>\n1 60             -1.30 [-Inf,0]          14.1 \n2 36            -14.3  [-Inf,0]          12.6 \n3 36              1.84 [-Inf,0]          17.1 \n4 36             -9.15 [-Inf,0]           6.72\n5 36             38.7  [-Inf,0]          14.1 \n6 36            -12.8  (0,1]              6.72"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#your-turn",
-    "href": "materials/03-tidymodels/index.html#your-turn",
+    "objectID": "materials/03-tidymodels/index.html#exercise-1-feature-engineering",
+    "href": "materials/03-tidymodels/index.html#exercise-1-feature-engineering",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Your turn!",
-    "text": "Your turn!"
+    "section": "Exercise 1: Feature engineering",
+    "text": "Exercise 1: Feature engineering\n\n RStudio Cloud > “Model 3 - Tidymodels” > ex-3-1.qmd\n\n\nWrite the recipe for the model in the exercise file. Call the recipe loans_rec. Use the appropriate step_* functions to complete the feature engineering steps shown in the dplyr pipeline.\nYou can find the list of step_* functions on the recipes reference page.\n\n\n Compare your answer with your neighbor along with what you found easy/straightforward and what you found challenging about writing the recipe.  Then, type one recipe and one takeaway from your discussion.\n\n\n\n\n15:00"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#fit-the-model-using-workflow",
@@ -1264,7 +1355,7 @@
     "href": "materials/03-tidymodels/index.html#make-predictions",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Make predictions",
-    "text": "Make predictions\n\ninterest_pred <- predict(interest_fit, loans_full_schema) |> \n  bind_cols(loans_full_schema |> select(interest_rate))\n\ninterest_pred\n\n# A tibble: 10,000 × 2\n   .pred interest_rate\n   <dbl>         <dbl>\n 1  14.8         14.1 \n 2  10.4         12.6 \n 3  11.1         17.1 \n 4  10.6          6.72\n 5  12.7         14.1 \n 6  11.8          6.72\n 7  15.1         13.6 \n 8  16.1         12.0 \n 9  13.1         13.6 \n10  11.0          6.71\n# … with 9,990 more rows"
+    "text": "Make predictions\n\ninterest_pred <- predict(interest_fit, loans_full_schema) |> \n  bind_cols(loans_full_schema |> select(interest_rate))\n\ninterest_pred\n\n# A tibble: 10,000 × 2\n   .pred interest_rate\n   <dbl>         <dbl>\n 1  14.8         14.1 \n 2  10.4         12.6 \n 3  11.1         17.1 \n 4  10.6          6.72\n 5  12.7         14.1 \n 6  11.8          6.72\n 7  15.1         13.6 \n 8  16.1         12.0 \n 9  13.1         13.6 \n10  11.0          6.71\n# … with 9,990 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#model-evaluation-r2",
@@ -1281,18 +1372,18 @@
     "text": "Model evaluation: \\(RMSE\\)\n\\(RMSE\\) is a measure of the error in the model predictions.\n\\[\nRMSE = \\sqrt{\\frac{\\sum_{i=1}^{n}(\\hat{y}_i - y_i)^2}{n}}\n\\]\n\n\nrmse(interest_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        4.59"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#your-turn-7-minutes",
-    "href": "materials/03-tidymodels/index.html#your-turn-7-minutes",
+    "objectID": "materials/03-tidymodels/index.html#exercise-2-fit-predict-evaluate",
+    "href": "materials/03-tidymodels/index.html#exercise-2-fit-predict-evaluate",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Your turn! (7 minutes)",
-    "text": "Your turn! (7 minutes)"
+    "section": "Exercise 2: Fit, predict, evaluate",
+    "text": "Exercise 2: Fit, predict, evaluate\n\n RStudio Cloud > “Model 3 - Tidymodels” > ex-3-2.qmd\n\n\nBuild a workflow and fit the model specified in the exercise. Then calculate predictions and evaluate the model using \\(R^2\\) and \\(RMSE\\).\n\n\n Compare your answer with your neighbor.  Type any questions that come up during the exercise and discussion.\n\n\n\n\n10:00"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#splitting-the-data",
     "href": "materials/03-tidymodels/index.html#splitting-the-data",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Splitting the data",
-    "text": "Splitting the data\nSplitting the data into training and testing sets allows us to evaluate the model on new data.\n\nSplit the data.\n\nset.seed(0725) #to get same split each run\nloans_split <- initial_split(loans_full_schema, prop = 0.8) #80% training\n\nSave the training data.\n\nloans_train <- training(loans_split)\ndim(loans_train)\n\n[1] 8000   58\n\n\nSave test data.\n\nloans_test <- testing(loans_split)\ndim(loans_test)\n\n[1] 2000   58"
+    "text": "Splitting the data\nSplitting the data into training and testing sets allows us to evaluate the model on new data.\n\nSplit the data.\n\nset.seed(0725) #to get same split each run\nloans_split <- initial_split(loans_full_schema, prop = 0.8) #80% training\n\n\n\nSave the training data.\n\nloans_train <- training(loans_split)\ndim(loans_train)\n\n[1] 8000   58\n\n\n\n\nSave test data.\n\nloans_test <- testing(loans_split)\ndim(loans_test)\n\n[1] 2000   58"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#fit-the-model-to-the-training-data",
@@ -1306,7 +1397,7 @@
     "href": "materials/03-tidymodels/index.html#evaluate-performance-on-training-data",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Evaluate performance on training data",
-    "text": "Evaluate performance on training data\nCalculate predictions\n\ninterest_train_pred <- predict(interest_train_fit, loans_train) |> \n  bind_cols(loans_train |> select(interest_rate))\n\nEvaluate model\n\nrsq(interest_train_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rsq     standard       0.161\n\n\n\nrmse(interest_train_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        4.55"
+    "text": "Evaluate performance on training data\nCalculate predictions\n\ninterest_train_pred <- predict(interest_train_fit, loans_train) |> \n  bind_cols(loans_train |> select(interest_rate))\n\n\nEvaluate model\n\nrsq(interest_train_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rsq     standard       0.161\n\n\n\nrmse(interest_train_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        4.55"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#evaluate-performance-on-testing-data",
@@ -1316,18 +1407,25 @@
     "text": "Evaluate performance on testing data\nCalculate predictions\n\ninterest_test_pred <- predict(interest_train_fit, loans_test) |> \n  bind_cols(loans_test |> select(interest_rate))\n\nEvaluate model\n\nrsq(interest_test_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rsq     standard       0.140\n\n\n\nrmse(interest_test_pred, truth = interest_rate, estimate = .pred)\n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  <chr>   <chr>          <dbl>\n1 rmse    standard        4.73"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#your-turn-1",
-    "href": "materials/03-tidymodels/index.html#your-turn-1",
+    "objectID": "materials/03-tidymodels/index.html#exercise-3-train-test-data-time-permitting",
+    "href": "materials/03-tidymodels/index.html#exercise-3-train-test-data-time-permitting",
     "title": "Teaching modern modeling with tidymodels",
-    "section": "Your turn!",
-    "text": "Your turn!"
+    "section": "Exercise 3: Train / test data (time permitting)",
+    "text": "Exercise 3: Train / test data (time permitting)\n\n RStudio Cloud > “Model 3 - Tidymodels” > ex-3-3.qmd\n\n\nComplete the code below to split the data into training (80%) and testing (20%) sets. Fit the model to the training set, then evaluate the model on the training and test sets.\n\n\n Discuss the model performance with your neighbor.  Then, type your group’s assessment of the model performance.\n\n\n\n\n10:00"
   },
   {
-    "objectID": "materials/03-tidymodels/index.html#discussion",
-    "href": "materials/03-tidymodels/index.html#discussion",
+    "objectID": "materials/03-tidymodels/index.html#putting-it-all-together-2",
+    "href": "materials/03-tidymodels/index.html#putting-it-all-together-2",
+    "title": "Teaching modern modeling with tidymodels",
+    "section": "Putting it all together",
+    "text": "Putting it all together\nLet’s take a look at a full analysis.\n\n RStudio Cloud > “Model 3 - Tidymodels” > ex-3-full-analysis.qmd"
+  },
+  {
+    "objectID": "materials/03-tidymodels/index.html#discussion-1",
+    "href": "materials/03-tidymodels/index.html#discussion-1",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Discussion",
-    "text": "Discussion\n\n\nWhat is something from this module you can implement in your data science course?\nWhat is one potential challenge of implementing this content in your course?\n\n\n\ncountdown(minutes = 7, font_size = \"1.5em\")\n\n\n07:00\n\n\n\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 3"
+    "text": "Discussion\n\nDiscuss the following with your neighbor.\n\nWhat is something from this module you can implement in your data science course?\nDo you anticipate any challenges / is there anything that makes you hesitant about teaching modeling using tidymodels?\n\nAny other discussion points of interest?\n\n\n Discuss with your partner for a few minutes first, before sharing with the big group.\n\n\n\n\n04:00\n\n\n\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 3"
   },
   {
     "objectID": "materials/03-tidymodels/ex-3-2.html",
@@ -1355,7 +1453,7 @@
     "href": "materials/03-tidymodels/ex-3-2.html#recipe",
     "title": "Ex 3.2: Fit, predict, evaluate",
     "section": "Recipe",
-    "text": "Recipe\nThis exercise builds on Exercise 1. To get you started, the recipe created in Exercise 1 is below.\n\nloans_rec <- recipe(interest_rate ~ debt_to_income + application_type + \n                      public_record_bankrupt, data = loans_full_schema) |>\n  step_normalize(debt_to_income) |>\n  step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \n                                           \"no\", \"yes\"))) |>\n  step_rm(public_record_bankrupt) |>\n  step_dummy(all_nominal_predictors()) |>\n  step_interact(terms = ~ starts_with(\"application_type\"):debt_to_income)"
+    "text": "Recipe\nThis exercise builds on Exercise 1. To get you started, the recipe created in Exercise 1 is below.\n\nloans_rec <- recipe(interest_rate ~ debt_to_income + application_type + \n                      public_record_bankrupt, data = loans_full_schema) |>\n  step_impute_mean(debt_to_income) |>\n  step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, \n                                           \"no\", \"yes\"))) |>\n  step_rm(public_record_bankrupt) |>\n  step_dummy(all_nominal_predictors()) |>\n  step_interact(terms = ~ starts_with(\"application_type\"):debt_to_income)"
   },
   {
     "objectID": "materials/03-tidymodels/ex-3-2.html#build-workflow-fit-the-model",
@@ -1418,7 +1516,7 @@
     "href": "materials/01-hello/ex-1-3.html#analysis",
     "title": "Ex 1.3: Bechdel + Quarto",
     "section": "Analysis",
-    "text": "Analysis\nLet’s take a look at how median budget and gross vary by whether the movie passed the Bechdel test, which is stored in the binary variable.\n\nbechdel90_13 |>\n  group_by(binary) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 2 × 4\n  binary med_budget med_domgross med_intgross\n  <chr>       <dbl>        <dbl>        <dbl>\n1 FAIL    48385984.    57318606.    104475669\n2 PASS    31070724     45330446.     80124349\n\n\nNext, let’s take a look at how median budget and gross vary by a more detailed indicator of the Bechdel test result. This information is stored in the clean_test variable, which takes on the following values:\n\nok = passes test\ndubious\nmen = women only talk about men\nnotalk = women don’t talk to each other\nnowomen = fewer than two women\n\n\nbechdel90_13 |>\n  #group_by(___) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 1 × 3\n  med_budget med_domgross med_intgross\n       <int>        <dbl>        <dbl>\n1   37878971     52270207     93523336\n\n\nIn order to evaluate how return on investment varies among movies that pass and fail the Bechdel test, we’ll first create a new variable called roi as the ratio of the gross to budget.\n\nbechdel90_13 <- bechdel90_13 |>\n  mutate(roi = (intgross_2013 + domgross_2013) / budget_2013)\n\nLet’s see which movies have the highest return on investment.\n\nbechdel90_13 |>\n  arrange(desc(roi)) |> \n  select(title, roi, year)\n\n# A tibble: 1,615 × 3\n   title                     roi  year\n   <chr>                   <dbl> <int>\n 1 Paranormal Activity      671.  2007\n 2 The Blair Witch Project  648.  1999\n 3 El Mariachi              583.  1992\n 4 Clerks.                  258.  1994\n 5 In the Company of Men    231.  1997\n 6 Napoleon Dynamite        227.  2004\n 7 Once                     190.  2006\n 8 The Devil Inside         155.  2012\n 9 Primer                   142.  2004\n10 Fireproof                134.  2008\n# … with 1,605 more rows\n\n\nBelow is a visualization of the return on investment by test result, however it’s difficult to see the distributions due to a few extreme observations.\n\nggplot(data = bechdel90_13, \n       mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    x = \"Detailed Bechdel result\",\n    y = \"___\",\n    color = \"Binary Bechdel result\"\n    )\n\n\n\n\nWhat are those movies with very high returns on investment?\n\nbechdel90_13 |>\n  filter(roi > 400) |>\n  select(title, budget_2013, domgross_2013, year)\n\n# A tibble: 3 × 4\n  title                   budget_2013 domgross_2013  year\n  <chr>                         <int>         <dbl> <int>\n1 Paranormal Activity          505595     121251476  2007\n2 The Blair Witch Project      839077     196538593  1999\n3 El Mariachi                   11622       3388636  1992\n\n\nZooming in on the movies with roi < ___ provides a better view of how the medians across the categories compare:\n\nggplot(data = bechdel90_13, mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    subtitle = \"___\", # Something about zooming in to a certain level\n    x = \"Detailed Bechdel result\",\n    y = \"Return on investment\",\n    color = \"Binary Bechdel result\"\n    ) +\n  coord_cartesian(ylim = c(0, 15))"
+    "text": "Analysis\nLet’s take a look at how median budget and gross vary by whether the movie passed the Bechdel test, which is stored in the binary variable.\n\nbechdel90_13 |>\n  group_by(binary) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 2 × 4\n  binary med_budget med_domgross med_intgross\n  <chr>       <dbl>        <dbl>        <dbl>\n1 FAIL    48385984.    57318606.    104475669\n2 PASS    31070724     45330446.     80124349\n\n\nNext, let’s take a look at how median budget and gross vary by a more detailed indicator of the Bechdel test result. This information is stored in the clean_test variable, which takes on the following values:\n\nok = passes test\ndubious\nmen = women only talk about men\nnotalk = women don’t talk to each other\nnowomen = fewer than two women\n\n\nbechdel90_13 |>\n  #group_by(___) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 1 × 3\n  med_budget med_domgross med_intgross\n       <int>        <dbl>        <dbl>\n1   37878971     52270207     93523336\n\n\nIn order to evaluate how return on investment varies among movies that pass and fail the Bechdel test, we’ll first create a new variable called roi as the ratio of the gross to budget.\n\nbechdel90_13 <- bechdel90_13 |>\n  mutate(roi = (intgross_2013 + domgross_2013) / budget_2013)\n\nLet’s see which movies have the highest return on investment.\n\nbechdel90_13 |>\n  arrange(desc(roi)) |> \n  select(title, roi, year)\n\n# A tibble: 1,615 × 3\n   title                     roi  year\n   <chr>                   <dbl> <int>\n 1 Paranormal Activity      671.  2007\n 2 The Blair Witch Project  648.  1999\n 3 El Mariachi              583.  1992\n 4 Clerks.                  258.  1994\n 5 In the Company of Men    231.  1997\n 6 Napoleon Dynamite        227.  2004\n 7 Once                     190.  2006\n 8 The Devil Inside         155.  2012\n 9 Primer                   142.  2004\n10 Fireproof                134.  2008\n# … with 1,605 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\nBelow is a visualization of the return on investment by test result, however it’s difficult to see the distributions due to a few extreme observations.\n\nggplot(data = bechdel90_13, \n       mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    x = \"Detailed Bechdel result\",\n    y = \"___\",\n    color = \"Binary Bechdel result\"\n    )\n\n\n\n\nWhat are those movies with very high returns on investment?\n\nbechdel90_13 |>\n  filter(roi > 400) |>\n  select(title, budget_2013, domgross_2013, year)\n\n# A tibble: 3 × 4\n  title                   budget_2013 domgross_2013  year\n  <chr>                         <int>         <dbl> <int>\n1 Paranormal Activity          505595     121251476  2007\n2 The Blair Witch Project      839077     196538593  1999\n3 El Mariachi                   11622       3388636  1992\n\n\nZooming in on the movies with roi < ___ provides a better view of how the medians across the categories compare:\n\nggplot(data = bechdel90_13, mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    subtitle = \"___\", # Something about zooming in to a certain level\n    x = \"Detailed Bechdel result\",\n    y = \"Return on investment\",\n    color = \"Binary Bechdel result\"\n    ) +\n  coord_cartesian(ylim = c(0, 15))"
   },
   {
     "objectID": "materials/01-hello/index.html#introductions",
@@ -1712,7 +1810,7 @@
     "href": "materials/01-hello/index.html#preprocess",
     "title": "Hello #teachds",
     "section": "Preprocess",
-    "text": "Preprocess\n\n\n\n\nus_votes\n\n# A tibble: 5,718 × 14\n    rcid country       country_code vote  session importantvote date       unres      amend  para short                       descr                                                     short_name issue\n   <dbl> <chr>         <chr>        <fct>   <dbl> <chr>         <date>     <chr>      <int> <int> <chr>                       <chr>                                                     <chr>      <chr>\n 1     6 United States US           no          1 No            1946-01-04 R/1/107        0     0 DECLARATION OF HUMAN RIGHTS \"TO ADOPT A CUBAN PROPOSAL (A/3-C) THAT AN ITEM ON A DEC… hr         4    \n 2     8 United States US           no          1 No            1946-01-05 R/1/297        1     0 ECOSOC POWERS               \"TO ADOPT A SECOND 6TH COMM. AMENDMENT (A/14) TO THE PRO… ec         3    \n 3    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      \"TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE … co         1    \n 4    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      \"TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE … ec         3    \n 5    18 United States US           no          1 No            1946-02-03 R/1/532        1     0 ECOSOC CONSULTANTS          \"TO ADOPT USSR (ORAL) AMENDMENT REPLACING THE 1ST COMM. … ec         3    \n 6    19 United States US           yes         1 No            1946-02-03 R/1/534        0     0 ECOSOC CONSULTANTS          \"TO ADOPT THE 1ST COMM. DRAFT RESOLUTION (A/54/REV.1) PR… ec         3    \n 7    24 United States US           yes         1 No            1946-12-05 R/1/1229       0     0 ECOSOC ELECTIONS            \"TO ADOPT BELGIAN ORAL PROPOSAL TO SURRENDER BELGIUM'S S… ec         3    \n 8    26 United States US           no          1 No            1946-12-06 R/1/1286       0     0 TRUSTEESHIP AGREEMENTS      \"TO ADOPT USSR ORAL RESOL. REJECTING 8 DRAFT TRUSTEESHIP… co         1    \n 9    27 United States US           yes         1 No            1946-12-06 R/1/1287/A     0     0 NEW GUINEA TRUSTEESHIP      \"TO ADOPT THE TRUSTEESHIP AGREEMENT FOR NEW GUINEA SUBMI… co         1    \n10    28 United States US           yes         1 No            1946-12-06 R/1/1287/B     0     0 RUANDA-URUNDI TRUSTEESHIP   \"TO ADOPT THE TRUSTEESHIP AGREEMENT FOR RUANDA-URUNDI SU… co         1    \n# … with 5,708 more rows"
+    "text": "Preprocess\n\n\n\n\nus_votes\n\n# A tibble: 5,718 × 14\n    rcid country       country_code vote  session importantvote date       unres      amend  para short                       descr                                                        short…¹ issue\n   <dbl> <chr>         <chr>        <fct>   <dbl> <chr>         <date>     <chr>      <int> <int> <chr>                       <chr>                                                        <chr>   <chr>\n 1     6 United States US           no          1 No            1946-01-04 R/1/107        0     0 DECLARATION OF HUMAN RIGHTS \"TO ADOPT A CUBAN PROPOSAL (A/3-C) THAT AN ITEM ON A DECLAR… hr      4    \n 2     8 United States US           no          1 No            1946-01-05 R/1/297        1     0 ECOSOC POWERS               \"TO ADOPT A SECOND 6TH COMM. AMENDMENT (A/14) TO THE PROVIS… ec      3    \n 3    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      \"TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE 4TH… co      1    \n 4    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      \"TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE 4TH… ec      3    \n 5    18 United States US           no          1 No            1946-02-03 R/1/532        1     0 ECOSOC CONSULTANTS          \"TO ADOPT USSR (ORAL) AMENDMENT REPLACING THE 1ST COMM. DRA… ec      3    \n 6    19 United States US           yes         1 No            1946-02-03 R/1/534        0     0 ECOSOC CONSULTANTS          \"TO ADOPT THE 1ST COMM. DRAFT RESOLUTION (A/54/REV.1) PROVI… ec      3    \n 7    24 United States US           yes         1 No            1946-12-05 R/1/1229       0     0 ECOSOC ELECTIONS            \"TO ADOPT BELGIAN ORAL PROPOSAL TO SURRENDER BELGIUM'S SEAT… ec      3    \n 8    26 United States US           no          1 No            1946-12-06 R/1/1286       0     0 TRUSTEESHIP AGREEMENTS      \"TO ADOPT USSR ORAL RESOL. REJECTING 8 DRAFT TRUSTEESHIP AG… co      1    \n 9    27 United States US           yes         1 No            1946-12-06 R/1/1287/A     0     0 NEW GUINEA TRUSTEESHIP      \"TO ADOPT THE TRUSTEESHIP AGREEMENT FOR NEW GUINEA SUBMITTE… co      1    \n10    28 United States US           yes         1 No            1946-12-06 R/1/1287/B     0     0 RUANDA-URUNDI TRUSTEESHIP   \"TO ADOPT THE TRUSTEESHIP AGREEMENT FOR RUANDA-URUNDI SUBMI… co      1    \n# … with 5,708 more rows, and abbreviated variable name ¹​short_name\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/01-hello/index.html#stash",
@@ -1838,7 +1936,7 @@
     "href": "materials/01-hello/index.html#design-principle-5-leverage-the-ecosystem",
     "title": "Hello #teachds",
     "section": "Design principle 5: Leverage the ecosystem",
-    "text": "Design principle 5: Leverage the ecosystem\nEstimate the difference between the average evaluation score of male and female faculty.\n\n\n\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, \n    type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", \n    order = c(\"male\", \"female\")) |>\n  summarise(\n    l = quantile(stat, 0.025), \n    u = quantile(stat, 0.975)\n    )\n\n# A tibble: 1 × 2\n       l     u\n   <dbl> <dbl>\n1 0.0435 0.227\n\n\n\n\nt.test(evals$score ~ evals$gender)\n\n\n    Welch Two Sample t-test\n\ndata:  evals$score by evals$gender\nt = -2.7507, df = 398.7, p-value = 0.006218\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -0.24264375 -0.04037194\nsample estimates:\nmean in group female   mean in group male \n            4.092821             4.234328"
+    "text": "Design principle 5: Leverage the ecosystem\nEstimate the difference between the average evaluation score of male and female faculty.\n\n\n\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, \n    type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", \n    order = c(\"male\", \"female\")) |>\n  summarise(\n    l = quantile(stat, 0.025), \n    u = quantile(stat, 0.975)\n    )\n\n# A tibble: 1 × 2\n       l     u\n   <dbl> <dbl>\n1 0.0359 0.235\n\n\n\n\nt.test(evals$score ~ evals$gender)\n\n\n    Welch Two Sample t-test\n\ndata:  evals$score by evals$gender\nt = -2.7507, df = 398.7, p-value = 0.006218\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -0.24264375 -0.04037194\nsample estimates:\nmean in group female   mean in group male \n            4.092821             4.234328"
   },
   {
     "objectID": "materials/01-hello/index.html#infer-in-tidymodels",
@@ -1852,21 +1950,21 @@
     "href": "materials/01-hello/index.html#infer-1",
     "title": "Hello #teachds",
     "section": "infer 1",
-    "text": "infer 1\n\nevals |>\n  specify(score ~ gender)\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 463 × 2\n   score gender\n   <dbl> <fct> \n 1   4.7 female\n 2   4.1 female\n 3   3.9 female\n 4   4.8 female\n 5   4.6 male  \n 6   4.3 male  \n 7   2.8 male  \n 8   4.1 male  \n 9   3.4 male  \n10   4.5 female\n# … with 453 more rows"
+    "text": "infer 1\n\nevals |>\n  specify(score ~ gender)\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 463 × 2\n   score gender\n   <dbl> <fct> \n 1   4.7 female\n 2   4.1 female\n 3   3.9 female\n 4   4.8 female\n 5   4.6 male  \n 6   4.3 male  \n 7   2.8 male  \n 8   4.1 male  \n 9   3.4 male  \n10   4.5 female\n# … with 453 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/01-hello/index.html#infer-2",
     "href": "materials/01-hello/index.html#infer-2",
     "title": "Hello #teachds",
     "section": "infer 2",
-    "text": "infer 2\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\")\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 46,300 × 3\n# Groups:   replicate [100]\n   replicate score gender\n       <int> <dbl> <fct> \n 1         1   4   female\n 2         1   3.1 male  \n 3         1   5   male  \n 4         1   4.4 male  \n 5         1   3.5 female\n 6         1   4.5 female\n 7         1   4.5 male  \n 8         1   4.9 male  \n 9         1   4.4 male  \n10         1   3.5 male  \n# … with 46,290 more rows"
+    "text": "infer 2\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\")\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 46,300 × 3\n# Groups:   replicate [100]\n   replicate score gender\n       <int> <dbl> <fct> \n 1         1   4   female\n 2         1   3.1 male  \n 3         1   5   male  \n 4         1   4.4 male  \n 5         1   3.5 female\n 6         1   4.5 female\n 7         1   4.5 male  \n 8         1   4.9 male  \n 9         1   4.4 male  \n10         1   3.5 male  \n# … with 46,290 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/01-hello/index.html#infer-3",
     "href": "materials/01-hello/index.html#infer-3",
     "title": "Hello #teachds",
     "section": "infer 3",
-    "text": "infer 3\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", order = c(\"male\", \"female\"))\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 100 × 2\n   replicate     stat\n       <int>    <dbl>\n 1         1  0.230  \n 2         2  0.134  \n 3         3  0.100  \n 4         4  0.230  \n 5         5  0.128  \n 6         6  0.201  \n 7         7  0.168  \n 8         8  0.130  \n 9         9 -0.00490\n10        10  0.123  \n# … with 90 more rows"
+    "text": "infer 3\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", order = c(\"male\", \"female\"))\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 100 × 2\n   replicate     stat\n       <int>    <dbl>\n 1         1  0.230  \n 2         2  0.134  \n 3         3  0.100  \n 4         4  0.230  \n 5         5  0.128  \n 6         6  0.201  \n 7         7  0.168  \n 8         8  0.130  \n 9         9 -0.00490\n10        10  0.123  \n# … with 90 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/01-hello/index.html#infer-4",
@@ -2025,23 +2123,23 @@
   {
     "objectID": "materials/04-learnr/ex-4-2.html",
     "href": "materials/04-learnr/ex-4-2.html",
-    "title": "Ex 4.2: Writing questions",
+    "title": "Ex 4.1: Writing questions",
     "section": "",
     "text": "Create a tutorial with three questions:\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd."
   },
   {
     "objectID": "materials/04-learnr/ex-4-3.html",
     "href": "materials/04-learnr/ex-4-3.html",
-    "title": "Ex 4.3: Automated feedback",
+    "title": "Ex 4.2: Automated feedback",
     "section": "",
     "text": "Stretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in this section or modify the code in Part 2 of learnr-demo.Rmd."
   },
   {
     "objectID": "materials/04-learnr/ex-4-1.html",
     "href": "materials/04-learnr/ex-4-1.html",
-    "title": "Ex 4.1: Deployed tutorial",
+    "title": "Deployed tutorial",
     "section": "",
-    "text": "The source code is available at LINK] and the 04-learnr project in RStudio Cloud."
+    "text": "The source code is available at github.com/rstudio-conf-2022/teach-ds-learnr and the 04-learnr project in RStudio Cloud."
   },
   {
     "objectID": "materials/04-learnr/index.html#parts-of-a-tutorial",
@@ -2100,11 +2198,11 @@
     "text": "Writing questions\n\nQuestion types\n\nMultiple choice\nCoding exercises\nSorting questions\n\nAutomated feedback"
   },
   {
-    "objectID": "materials/04-learnr/index.html#your-turn",
-    "href": "materials/04-learnr/index.html#your-turn",
+    "objectID": "materials/04-learnr/index.html#exercise-1-writing-questions",
+    "href": "materials/04-learnr/index.html#exercise-1-writing-questions",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "Your turn!",
-    "text": "Your turn!\n\nCreate a tutorial with three questions:\n\none multiple choice\none coding exercise\none sortable question\n\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd.\n\n\n\n\n10:00"
+    "section": "Exercise 1: Writing questions",
+    "text": "Exercise 1: Writing questions\n\n RStudio Cloud > “Module 4 - Learnr” > learnr-demo.rmd\n\n\nCreate a tutorial with three questions:\n\none multiple choice\none coding exercise\none sortable question\n\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd.\n\n\n Compare your answer with your neighbor.  Then type the code for one of your exericses.\n\n\n\n\n15:00"
   },
   {
     "objectID": "materials/04-learnr/index.html#gradethis",
@@ -2114,11 +2212,11 @@
     "text": "gradethis\nThe gradethis package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:\n\ngrade_this_code(): Compare student code to model code (strict check)\ngrade_this(): Compare student result to model result (flexible check)\n\n\nremotes::install_github(\"rstudio/gradethis\")"
   },
   {
-    "objectID": "materials/04-learnr/index.html#your-turn-1",
-    "href": "materials/04-learnr/index.html#your-turn-1",
+    "objectID": "materials/04-learnr/index.html#exercise-2-automated-feedback",
+    "href": "materials/04-learnr/index.html#exercise-2-automated-feedback",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "Your turn!",
-    "text": "Your turn!\n\nAdd automated feedback to your coding exercise.\nStretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in this section or modify the code in Part 2 of learnr-demo.Rmd.\n\n\n\n\n10:00"
+    "section": "Exercise 2: Automated feedback",
+    "text": "Exercise 2: Automated feedback\n\n RStudio Cloud > “Module 4 - Learnr” > learnr-demo.rmd\n\n\nAdd automated feedback to your coding exercise.\nStretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in this section or modify the code in Part 2 of learnr-demo.Rmd.\n\n\n Compare your answer with your neighbor.  Then type the code for one of your exericses.\n\n\n\n\n10:00"
   },
   {
     "objectID": "materials/04-learnr/index.html#minute-paper",
