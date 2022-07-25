@@ -95,12 +95,12 @@ arXiv preprint arXiv:2108.03510.
 library(tidyverse)
 library(openintro)
 
-loans <- loans_full_schema %>%
+loans <- loans_full_schema |>
   mutate(
     homeownership = str_to_title(homeownership), 
     bankruptcy = if_else(public_record_bankrupt >= 1, "Yes", "No")
-  ) %>%
-  filter(annual_income >= 10) %>%
+  ) |>
+  filter(annual_income >= 10) |>
   select(
     loan_amount, homeownership, bankruptcy,
     application_type, annual_income, interest_rate
@@ -207,7 +207,7 @@ with(loans, mean(loan_amount))
 **Approach 4:** The tidyverse approach:
 
 ```{r}
-loans %>%
+loans |>
   summarise(mean_loan_amount = mean(loan_amount))
 ```
 
@@ -244,17 +244,17 @@ Display the results in descending order of number of applicants.
 ```{r}
 #| echo: false
 
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n(),
     avg_loan_amount = mean(loan_amount)
-    ) %>%
-  arrange(desc(n_applicants)) %>%
+    ) |>
+  arrange(desc(n_applicants)) |>
   mutate(
     n_applicants = number(n_applicants, big.mark = ","),
     avg_loan_amount = dollar(avg_loan_amount, accuracy = 1)
-    ) %>%
+    ) |>
   kable(
     col.names = c("Homeownership", "Average loan amount", "Number of applicants"),
     align = "lrr"
@@ -301,7 +301,7 @@ Display the results in descending order of number of applicants.
 ```{r}
 #| code-line-numbers: "2"
 
-loans %>%
+loans |>
   group_by(homeownership)
 ```
 :::
@@ -326,8 +326,8 @@ Display the results in descending order of number of applicants.
 ```{r}
 #| code-line-numbers: "3-5"
 
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n()
     )
@@ -347,8 +347,8 @@ Display the results in descending order of number of applicants.
 ```{r}
 #| code-line-numbers: "5"
 
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n(),
     avg_loan_amount = mean(loan_amount)
@@ -369,12 +369,12 @@ Based on the applicants' home ownership status, compute the average loan amount 
 ```{r}
 #| code-line-numbers: "7"
 
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n(),
     avg_loan_amount = mean(loan_amount)
-    ) %>%
+    ) |>
   arrange(desc(n_applicants))
 ```
 :::
@@ -387,12 +387,12 @@ loans %>%
 :::
 
 ```{r}
-loans %>%
-  group_by(homeownership) %>% 
+loans |>
+  group_by(homeownership) |> 
   summarize(
     n_applicants = n(),
     avg_loan_amount = mean(loan_amount)
-    ) %>%
+    ) |>
   arrange(desc(n_applicants))
 ```
 
