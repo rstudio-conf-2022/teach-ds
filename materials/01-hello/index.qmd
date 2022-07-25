@@ -74,7 +74,7 @@ Introduce yourselves:
 ::: {style="text-align: center;"}
 One link for all materials
 
-🔗 [bit.ly/rstd.io/teach-ds-conf22](https://bit.ly/rstd.io/teach-ds-conf22)
+🔗 <https://rstd.io/teach-ds-conf22>
 :::
 
 ## Schedule {.small}
@@ -272,20 +272,23 @@ Ascd, 2005.
 3.  Plan learning experiences and instruction
 :::
 
-## Design foundation 1: GAISE {.small}
+## Design foundation 2: GAISE {.small}
 
 2016 Guidelines for Assessment and Instruction in Statistics Education
 
-1.  Teach statistical thinking.\
+1.  Teach statistical thinking.
+    -   Teach statistics as an investigative process of problem-solving and decision making.
 
--   Teach statistics as an investigative process of problem-solving and decision making.
--   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to investigate and explore relationships among many variables.
+    -   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to investigate and explore relationships among many variables.
 
-1.  Focus on conceptual understanding.
-2.  Integrate real data with a context and purpose.
-3.  Foster active learning.
-4.  Use technology to explore concepts and analyse data.
-5.  Use assessments to improve and evaluate student learning.
+```{=html}
+<!-- -->
+```
+2.  Focus on conceptual understanding.
+3.  Integrate real data with a context and purpose.
+4.  Foster active learning.
+5.  Use technology to explore concepts and analyse data.
+6.  Use assessments to improve and evaluate student learning.
 
 ::: aside
 [amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf](https://www.amstat.org/asa/files/pdfs/GAISE/GaiseCollege_Full.pdf)
@@ -295,16 +298,19 @@ Ascd, 2005.
 
 ::: columns
 ::: {.column width="70%"}
-1.  Teach **statistical thinking**.\
+1.  Teach **statistical thinking**.
+    -   Teach statistics as an investigative process of problem-solving and decision making.
 
--   Teach statistics as an investigative process of problem-solving and decision making.
--   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to investigate and explore relationships among many variables.
+    -   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to investigate and explore relationships among many variables.
 
-1.  Focus on conceptual understanding.
-2.  Integrate real data with a context and purpose.
-3.  Foster active learning.
-4.  Use technology to explore concepts and analyse data.
-5.  Use assessments to improve and evaluate student learning.
+```{=html}
+<!-- -->
+```
+2.  Focus on conceptual understanding.
+3.  Integrate real data with a context and purpose.
+4.  Foster active learning.
+5.  Use technology to explore concepts and analyse data.
+6.  Use assessments to improve and evaluate student learning.
 :::
 
 ::: {.column width="30%"}
@@ -316,16 +322,19 @@ NOT a commonly used subset of tests and intervals and produce them with hand cal
 
 ::: columns
 ::: {.column width="70%"}
-1.  Teach statistical thinking.\
+1.  Teach statistical thinking.
+    -   Teach statistics as an investigative process of problem-solving and decision making.
 
--   Teach statistics as an investigative process of problem-solving and decision making.
--   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to **investigate and explore relationships among many variables**.
+    -   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to **investigate and explore relationships among many variables**.
 
-1.  Focus on conceptual understanding.
-2.  Integrate real data with a context and purpose.
-3.  Foster active learning.
-4.  Use technology to explore concepts and analyse data.
-5.  Use assessments to improve and evaluate student learning.
+```{=html}
+<!-- -->
+```
+2.  Focus on conceptual understanding.
+3.  Integrate real data with a context and purpose.
+4.  Foster active learning.
+5.  Use technology to explore concepts and analyse data.
+6.  Use assessments to improve and evaluate student learning.
 :::
 
 ::: {.column width="30%"}
@@ -337,16 +346,19 @@ Multivariate analysis requires the use of computing
 
 ::: columns
 ::: {.column width="70%"}
-1.  Teach statistical thinking.\
+1.  Teach statistical thinking.
+    -   Teach statistics as an investigative process of problem-solving and decision making.
 
--   Teach statistics as an investigative process of problem-solving and decision making.
--   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to investigate and explore relationships among many variables.
+    -   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to investigate and explore relationships among many variables.
 
-1.  Focus on conceptual understanding.
-2.  Integrate real data with a context and purpose.
-3.  Foster active learning.
-4.  **Use technology** to explore concepts and analyse data.
-5.  Use assessments to improve and evaluate student learning.
+```{=html}
+<!-- -->
+```
+2.  Focus on conceptual understanding.
+3.  Integrate real data with a context and purpose.
+4.  Foster active learning.
+5.  **Use technology** to explore concepts and analyse data.
+6.  Use assessments to improve and evaluate student learning.
 :::
 
 ::: {.column width="30%"}
@@ -358,16 +370,19 @@ NOT use technology that is only applicable in the intro course or that doesn't f
 
 ::: columns
 ::: {.column width="70%"}
-1.  Teach statistical thinking.\
+1.  Teach statistical thinking.
+    -   Teach statistics as an investigative process of problem-solving and decision making.
 
--   Teach statistics as an investigative process of problem-solving and decision making.
--   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to investigate and explore relationships among many variables.
+    -   Give students experience with multivariable thinking \[...\] to answer challenging questions that require them to investigate and explore relationships among many variables.
 
-1.  Focus on conceptual understanding.
-2.  Integrate real data with a context and purpose.
-3.  Foster active learning.
-4.  Use technology to explore concepts and **analyse data**.
-5.  Use assessments to improve and evaluate student learning.
+```{=html}
+<!-- -->
+```
+2.  Focus on conceptual understanding.
+3.  Integrate real data with a context and purpose.
+4.  Foster active learning.
+5.  Use technology to explore concepts and **analyse data**.
+6.  Use assessments to improve and evaluate student learning.
 :::
 
 ::: {.column width="30%"}
@@ -382,7 +397,7 @@ Data analysis isn't just inference and modelling, it's also data importing, clea
 ## Discussion
 
 ::: question
-Discuss in pairs of three and then as a large group.
+Discuss in pairs and then as a large group.
 
 -   What are your first reactions to the curriculum we just described for an intro data science course?
 -   Which components can you see yourself (or do you already) include in an intro data science curriculum?
