@@ -49,8 +49,9 @@ format:
       dark: [cosmo, theme-dark.scss]
     toc: true
     code-copy: true
-    code-overflow: wrap
+    code-overflow: scroll
     mainfont: "Atkinson Hyperlegible"
+    highlight-style: a11y
 
 editor: visual
 
