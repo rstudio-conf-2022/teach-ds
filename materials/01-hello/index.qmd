@@ -157,14 +157,14 @@ Covid19 specific policies:
 
 ::: r-hstack
 ::: {style="text-align: center;"}
-::: {data-id="box1" style="background: #E96A81; width: 200px; height: 200px; margin: 25px;"}
+::: {data-id="box1" style="background: #FFA500; width: 200px; height: 200px; margin: 25px;"}
 :::
 
 I'm stuck
 :::
 
 ::: {style="text-align: center;"}
-::: {data-id="box3" style="background: #92C46D; width: 200px; height: 200px; margin: 25px;"}
+::: {data-id="box3" style="background: #BF40BF; width: 200px; height: 200px; margin: 25px;"}
 :::
 
 I'm done
