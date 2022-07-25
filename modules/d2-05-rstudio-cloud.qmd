@@ -5,24 +5,7 @@ author: "Mine Çetinkaya-Rundel"
 date: "2022-07-26"
 image: "images/rstudio-cloud.png"
 image-alt: "Hex logo for RStudio Cloud."
-listing:
-  - id: exercises
-    contents:
-      - ../materials/05-rstudio-cloud/ex-*.qmd
-    type: table
-    fields: [title]
-    field-display-names:
-      title: "Exercise"
-    sort: [filename]
-    sort-ui: false
-    filter-ui: false
-    image-placeholder: images/exercise.png
-tbl-colwidths: [5,20,75]
 ---
-
-::: callout-warning
-This page is under construction and will be updated continuously until the workshop date.
-:::
 
 ## Outline
 
@@ -32,7 +15,6 @@ This page is under construction and will be updated continuously until the works
     -   Share an RStudio Cloud project
     -   Invite students to an RStudio Cloud workspace
 -   Tips for teaching with RStudio Cloud
--   The `rscloud` package
 
 ## Slides
 
@@ -43,5 +25,4 @@ This page is under construction and will be updated continuously until the works
 ```
 ## Exercises
 
-::: {#exercises}
-:::
+Exercise prompts for this session are embedded in the slides since they only involve tasks to be completed in setting up RStudio Cloud project and not writing any code.
