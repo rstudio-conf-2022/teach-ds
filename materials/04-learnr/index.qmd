@@ -12,14 +12,23 @@ format:
     slide-number: true
     incremental: false 
     chalkboard: true
-    center: true
 execute:
   freeze: auto
+  echo: true
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 200
 ---
 
 # What?
 
-------------------------------------------------------------------------
+```{r}
+#| label: load-packages
+#| include: false
+
+library(countdown)
+```
 
 ## Parts of a tutorial
 
@@ -45,8 +54,6 @@ execute:
 
 # How?
 
-------------------------------------------------------------------------
-
 ## Topics
 
 -   Question types
@@ -57,11 +64,9 @@ execute:
 
 -   Sharing tutorials with students
 
-------------------------------------------------------------------------
+## Getting started: Qmd ➡️ Rmd
 
-## Getting started: Qmd `r emo::ji("right_arrow")` Rmd
-
--   Learnr tutorials are written in an R Markdown document (`.rmd`)
+-   Learnr tutorials are written in an R Markdown document (`.Rmd`)
 
 -   The syntax and structure is very similar to a Quarto document (`.qmd`)
 
@@ -69,9 +74,7 @@ execute:
 
 ## YAML for learnr tutorial
 
-```{r}
-#| eval: false
-#| echo: true
+``` yaml
 ---
 title: "Learnr Demo"
 output: 
@@ -97,7 +100,7 @@ Follow along options:
 -   Local:
 
     -   In RStudio, install and load the **learnr, gradethis*,*** s**ortable**, and **learnrhash** packages
-    -   Access the source file for the tutorial on GitHub: [github.com/matackett/learnr-demo](https://github.com/matackett/learnr-demo) - UPDATE
+    -   Access the source file for the tutorial on GitHub: [https://github.com/rstudio-conf-2022/teach-ds-learnr](https://github.com/rstudio-conf-2022/teach-ds-learnr)
 
 -   Cloud: Go to the workspace for this course and start the assignment called **04 - Learnr**.
 
@@ -111,14 +114,14 @@ Follow along options:
     -   Sorting questions
 -   **Automated feedback**
 
-## Exercise 1: Writing questions {.small}
+## Your turn: Writing exercises {.small}
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.rmd
+{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.Rmd > Part 2: Your turn!
 :::
 
 ::: appex
-Create a tutorial with three questions:
+Add three questions to the tutorial:
 
 -   one multiple choice
 -   one coding exercise
@@ -126,20 +129,23 @@ Create a tutorial with three questions:
 
 **Stretch goal**: Add hints to the coding exercise.
 
-You can write your questions in this section of `learnr-demo.Rmd`.
+You can write your questions in Part 2: Your turn! section of `learnr-demo.Rmd`.
 :::
 
 ::: share
-{{< fa user-group >}} Compare your answer with your neighbor. {{< fa brands discord >}} Then type the code for one of your exericses.
+{{< fa user-group >}} Compare your answer with your neighbor. {{< fa brands discord >}} Then type the code for one of your exercises.
 :::
 
 ```{r}
-countdown::countdown(minutes= 15)
+#| echo: false
+
+countdown(minutes = 15, font_size = "1.5em")
 ```
 
 ## gradethis
 
-The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:
+The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible to check coding exercises in a learnr tutorial.
+There are two basic methods for checking:
 
 -   `grade_this_code()`: Compare student code to model code (strict check)
 
@@ -147,23 +153,24 @@ The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible t
 
 ```{r}
 #| eval: false
-#| echo: true
 
-remotes::install_github("rstudio/gradethis")
+devtools::install_github("rstudio/gradethis")
 ```
 
-## Exercise 2: Automated feedback {.small}
+## Your turn: Writing automated feedback {.small}
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.rmd
+{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.Rmd > Part 4: Your turn!
 :::
 
 ::: appex
 Add automated feedback to your coding exercise.
 
-**Stretch goal**: Consider 2 -3 common errors students may make. Write specific feedback for those errors.
+**Stretch goal**: Consider 2 -3 common errors students may make.
+Write specific feedback for those errors.
 
-You can write your responses in this section or modify the code in Part 2 of `learnr-demo.Rmd`.
+You can write your responses in Part 4: Your turn!
+section or modify the code in Part 2 of `learnr-demo.Rmd`.
 :::
 
 ::: share
@@ -171,7 +178,9 @@ You can write your responses in this section or modify the code in Part 2 of `le
 :::
 
 ```{r}
-countdown::countdown(minutes= 10)
+#| echo: false
+
+countdown(minutes = 10, font_size = "1.5em")
 ```
 
 # Recording student responses
@@ -185,8 +194,6 @@ Add a link to a form at the end of the tutorial for a "minute paper"
 >     OR
 >
 > -   *If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.*
-
-------------------------------------------------------------------------
 
 ## learnrhash
 
@@ -232,10 +239,9 @@ remotes::install_github("rundel/learnrhash")
 
 # Workshop check in
 
-------------------------------------------------------------------------
-
 ::: question
-We have completed Day 01! Please answer the following using your sticky notes:
+We have completed Day 01!
+Please answer the following using your sticky notes:
 
 -   Purple sticky note: What is going well / what has been your favorite part of the workshop so far?
 
