@@ -46,14 +46,7 @@
     "href": "modules/d2-05-rstudio-cloud.html",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d2-05-rstudio-cloud.html#outline",
-    "href": "modules/d2-05-rstudio-cloud.html#outline",
-    "title": "Computing infrastructure with RStudio Cloud",
-    "section": "Outline",
-    "text": "Outline\n\nWhy and how RStudio in the Cloud?\nProjects in RStudio Cloud\nTeaching with RStudio Cloud\n\nShare an RStudio Cloud project\nInvite students to an RStudio Cloud workspace\n\nTips for teaching with RStudio Cloud\nThe rscloud package"
+    "text": "Why and how RStudio in the Cloud?\nProjects in RStudio Cloud\nTeaching with RStudio Cloud\n\nShare an RStudio Cloud project\nInvite students to an RStudio Cloud workspace\n\nTips for teaching with RStudio Cloud"
   },
   {
     "objectID": "modules/d2-05-rstudio-cloud.html#slides",
@@ -67,7 +60,7 @@
     "href": "modules/d2-05-rstudio-cloud.html#exercises",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\nExercise prompts for this session are embedded in the slides since they only involve tasks to be completed in setting up RStudio Cloud project and not writing any code."
   },
   {
     "objectID": "modules/d2-06-reproduciblity.html",
