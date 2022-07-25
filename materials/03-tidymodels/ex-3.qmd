@@ -34,7 +34,7 @@ This exercise builds on Exercises 1 and 2. To get you started, the recipe create
 
 loans_rec <- recipe(interest_rate ~ debt_to_income + application_type + 
                       public_record_bankrupt, data = loans_full_schema) |>
-  step_normalize(debt_to_income) |>
+  step_impute_mean(debt_to_income) |>
   step_mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, 
                                            "no", "yes"))) |>
   step_rm(public_record_bankrupt) |>

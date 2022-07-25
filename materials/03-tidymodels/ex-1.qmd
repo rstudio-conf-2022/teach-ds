@@ -5,9 +5,12 @@ editor: visual
 ---
 
 ```{r}
+knitr::opts_chunk$set(echo = TRUE
+```
+
+```{r}
 #| label: load-packages
 #| message: false
-#| 
 library(tidyverse)
 library(tidymodels)
 library(openintro)
@@ -48,7 +51,7 @@ $$
 \begin{align}\widehat{interest\_rate} = b_0 &+ b_1 \times debt\_to\_income \\ &+ b_2 \times application\_type \\ &+ b_3 \times bankrupt \\ &+ b_4 \times debt\_to\_income:application\_type\end{align}
 $$
 
-## Featuring engineering with dplyr
+## Feature engineering with dplyr
 
 The feature engineering to transform and create new variables using dplyr is shown below.
 
@@ -56,11 +59,12 @@ The feature engineering to transform and create new variables using dplyr is sho
 #| label: feature-dplyr
 
 loans_full_schema_mod <- loans_full_schema |>
-  mutate(debt_to_income_norm = 
-           debt_to_income - mean(debt_to_income, na.rm = TRUE)/ sd(debt_to_income, na.rm = TRUE)) |>
-  mutate(bankrupt = as_factor(if_else(public_record_bankrupt == 0, "no", "yes")))|>
+  mutate(debt_to_income = 
+           if_else(is.na(debt_to_income), mean(debt_to_income, na.rm = TRUE), debt_to_income)) |>
+  mutate(bankrupt = 
+           as_factor(if_else(public_record_bankrupt == 0, "no", "yes")))|>
   mutate(app_type_joint = if_else(application_type == "joint", 1, 0)) |>
-  mutate(debt_app_int = debt_to_income_norm * app_type_joint) |>
+  mutate(debt_app_int = debt_to_income * app_type_joint) |>
   select(-public_record_bankrupt)
 ```
 

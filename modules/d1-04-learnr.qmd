@@ -20,10 +20,6 @@ listing:
 tbl-colwidths: [5,20,75]
 ---
 
-::: callout-warning
-This page is under construction and will be updated continuously until the workshop date.
-:::
-
 ## Outline
 
 -   Writing learnr tutorials

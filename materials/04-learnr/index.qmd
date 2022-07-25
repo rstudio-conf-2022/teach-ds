@@ -17,12 +17,6 @@ execute:
   freeze: auto
 ---
 
-# In progress
-
-::: callout-warning
-These slides are currently being designed and built.
-:::
-
 # What?
 
 ------------------------------------------------------------------------
@@ -227,7 +221,7 @@ remotes::install_github("rundel/learnrhash")
 ::: appex
 We have completed Day 01! Please answer the following using your sticky notes:
 
--   XX sticky note: What is going well / what has been your favorite part of the workshop so far?
+-   Green sticky note: What is going well / what has been your favorite part of the workshop so far?
 
--   XX sticky note: What is still unclear or confusing?
+-   Red sticky note: What is still unclear or confusing?
 :::

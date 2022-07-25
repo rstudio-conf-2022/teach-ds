@@ -415,7 +415,21 @@ interest_rec |>
   head()
 ```
 
-## Your turn!
+## Exercise 1: Feature engineering {.small}
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Model 3 - Tidymodels" > ex-3-1.qmd
+:::
+
+::: appex
+Write the recipe for the model in the exercise file.  Call the recipe loans_rec. Use the appropriate step_* functions to complete the feature engineering steps shown in the dplyr pipeline. 
+
+You can find the list of step_* functions on the [recipes reference page](https://recipes.tidymodels.org/reference/index.html#step-functions-imputation).
+:::
+
+::: share
+{{< fa user-group >}} Compare your answer with your neighbor along with what you found easy/straightforward and what you found challenging about writing the recipe. {{< fa brands discord >}} Then, type one recipe and one takeaway from your discussion. 
+:::
 
 ## Fit the model using `workflow()`
 
@@ -501,7 +515,20 @@ $$
 rmse(interest_pred, truth = interest_rate, estimate = .pred)
 ```
 
-## Your turn! (7 minutes)
+
+## Exercise 2: Fit, predict, evaluate {.small}
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Model 3 - Tidymodels" > ex-3-2.qmd
+:::
+
+::: appex
+Build a workflow and fit the model specified in the exercise. Then calculate predictions and evaluate the model using $R^2$ and $RMSE$.
+:::
+
+::: share
+{{< fa user-group >}} Compare your answer with your neighbor. {{< fa brands discord >}} Type any questions that come up during the exercise and discussion.  
+:::
 
 # What is a limitation to the model evaluation we've done thus far?
 
@@ -597,10 +624,37 @@ rsq(interest_test_pred, truth = interest_rate, estimate = .pred)
 rmse(interest_test_pred, truth = interest_rate, estimate = .pred)
 ```
 
-## Your turn! (7 minutes)
+## Exercise 3: Train / test data (time permitting) {.small}
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Model 3 - Tidymodels" > ex-3-3.qmd
+:::
+
+::: appex
+Complete the code below to split the data into training (80%) and testing (20%) sets. Fit the model to the training set, then evaluate the model on the training and test sets. 
+:::
+
+::: share
+{{< fa user-group >}} Discuss the model performance with your neighbor. {{< fa brands discord >}} Then, type your group's assessment of the model performance.
+:::
 
 ## Discussion
 
+:: question
+ Discuss the following with your neighbor. 
+
 -   What is something from this module you can implement in your data science course?
 
--   What is one potential challenge of implementing this content in your course?
+-  Do you anticipate any challenges / is there anything that makes you hesitant about teaching modeling using tidymodels?
+
+Any other discussion points of interest?
+
+:::
+
+::: share
+{{< fa user-group >}} Discuss with your partner for a few minutes first, before sharing with the big group.
+:::
+
+
+
+

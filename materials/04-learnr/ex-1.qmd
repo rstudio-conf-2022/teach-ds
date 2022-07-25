@@ -6,4 +6,4 @@ editor: visual
 
 The deployed tutorial is available at <https://minecr.shinyapps.io/learnr-demo>
 
-The source code is available at LINK\] and the 04-learnr project in RStudio Cloud.
+The source code is available at [github.com/rstudio-conf-2022/teach-ds-learnr](https://github.com/rstudio-conf-2022/teach-ds-learnr) and the 04-learnr project in RStudio Cloud.
