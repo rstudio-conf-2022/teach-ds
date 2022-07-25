@@ -1,5 +1,5 @@
 ---
-title: "Ex 4.2: Writing questions"
+title: "Ex 4.1: Writing questions"
 subtitle: "teach_ds :: Interactivity and immediate feedback with learnr"
 editor: visual
 ---

@@ -20,10 +20,6 @@ listing:
 tbl-colwidths: [5,20,75]
 ---
 
-::: callout-warning
-This page is under construction and will be updated continuously until the workshop date.
-:::
-
 ## Outline
 
 -   Teaching modern modeling
@@ -31,7 +27,8 @@ This page is under construction and will be updated continuously until the works
 -   Teaching with tidymodels
     -   Feature engineering
     -   Prediction
-    -   Cross-validation
+    -   Model evaluation
+    -   Training / testing data
 -   Using tidymodels in your course
 
 ## Slides

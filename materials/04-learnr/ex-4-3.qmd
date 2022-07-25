@@ -1,12 +1,11 @@
 ---
-title: "Ex 4.3: Automated feedback"
+title: "Ex 4.2: Automated feedback"
 subtitle: "teach_ds :: Interactivity and immediate feedback with learnr"
 editor: visual
 ---
 
 Add automated feedback to your coding exercise.
 
-**Stretch goal**: Consider 2 -3 common errors students may make.
-Write specific feedback for those errors.
+**Stretch goal**: Consider 2 -3 common errors students may make. Write specific feedback for those errors.
 
 You can write your responses in this section or modify the code in Part 2 of `learnr-demo.Rmd`.

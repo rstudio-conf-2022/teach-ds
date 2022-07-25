@@ -17,12 +17,6 @@ execute:
   freeze: auto
 ---
 
-# In progress
-
-::: callout-warning
-These slides are currently being designed and built.
-:::
-
 # What?
 
 ------------------------------------------------------------------------
@@ -117,7 +111,11 @@ Follow along options:
     -   Sorting questions
 -   **Automated feedback**
 
-## Your turn!
+## Exercise 1: Writing questions {.small}
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.rmd
+:::
 
 ::: appex
 Create a tutorial with three questions:
@@ -131,8 +129,12 @@ Create a tutorial with three questions:
 You can write your questions in this section of `learnr-demo.Rmd`.
 :::
 
+::: share
+{{< fa user-group >}} Compare your answer with your neighbor. {{< fa brands discord >}} Then type the code for one of your exericses.
+:::
+
 ```{r}
-countdown::countdown(minutes= 10)
+countdown::countdown(minutes= 15)
 ```
 
 ## gradethis
@@ -150,7 +152,11 @@ The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible t
 remotes::install_github("rstudio/gradethis")
 ```
 
-## Your turn!
+## Exercise 2: Automated feedback {.small}
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Module 4 - Learnr" > learnr-demo.rmd
+:::
 
 ::: appex
 Add automated feedback to your coding exercise.
@@ -158,6 +164,10 @@ Add automated feedback to your coding exercise.
 **Stretch goal**: Consider 2 -3 common errors students may make. Write specific feedback for those errors.
 
 You can write your responses in this section or modify the code in Part 2 of `learnr-demo.Rmd`.
+:::
+
+::: share
+{{< fa user-group >}} Compare your answer with your neighbor. {{< fa brands discord >}} Then type the code for one of your exericses.
 :::
 
 ```{r}
@@ -224,10 +234,10 @@ remotes::install_github("rundel/learnrhash")
 
 ------------------------------------------------------------------------
 
-::: appex
+::: question
 We have completed Day 01! Please answer the following using your sticky notes:
 
--   XX sticky note: What is going well / what has been your favorite part of the workshop so far?
+-   Purple sticky note: What is going well / what has been your favorite part of the workshop so far?
 
--   XX sticky note: What is still unclear or confusing?
+-   Orange sticky note: What is still unclear or confusing?
 :::
