@@ -100,7 +100,7 @@ Follow along options:
 -   Local:
 
     -   In RStudio, install and load the **learnr, gradethis*,*** s**ortable**, and **learnrhash** packages
-    -   Access the source file for the tutorial on GitHub: [https://github.com/rstudio-conf-2022/teach-ds-learnr](https://github.com/rstudio-conf-2022/teach-ds-learnr)
+    -   Access the source file for the tutorial on GitHub: <https://github.com/rstudio-conf-2022/teach-ds-learnr>
 
 -   Cloud: Go to the workspace for this course and start the assignment called **04 - Learnr**.
 
@@ -129,7 +129,8 @@ Add three questions to the tutorial:
 
 **Stretch goal**: Add hints to the coding exercise.
 
-You can write your questions in Part 2: Your turn! section of `learnr-demo.Rmd`.
+You can write your questions in Part 2: Your turn!
+section of `learnr-demo.Rmd`.
 :::
 
 ::: share
