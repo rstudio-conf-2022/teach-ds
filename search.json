@@ -609,11 +609,11 @@
     "text": "The tidyverse approach\n\n\nTidyverse functions take a data argument that allows them to localize computations inside the specified data frame\nDoes not muddy the concept of what is in the current environment: variables always accessed from within in a data frame without the use of an additional function (like with()) or quotation marks, never as a vector"
   },
   {
-    "objectID": "materials/02-tidyverse/index.html#exercise-1-grouped-summary",
-    "href": "materials/02-tidyverse/index.html#exercise-1-grouped-summary",
+    "objectID": "materials/02-tidyverse/index.html#your-turn-grouped-summary",
+    "href": "materials/02-tidyverse/index.html#your-turn-grouped-summary",
     "title": "Teaching data science with the tidyverse",
-    "section": "Exercise 1: Grouped summary",
-    "text": "Exercise 1: Grouped summary\n\n RStudio Cloud > “Module 2 - Tidyverse” > ex-2-1.qmd\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n Compare answers with your neighbor and choose an approach you would teach in an intro course.  Then, type your chosen answer on Discord along with some narrative about how you would approach teaching it describing how you would teach it.\n\n\n\n\n\n \n  \n    Homeownership \n    Average loan amount \n    Number of applicants \n  \n \n\n  \n    Mortgage \n    4,778 \n    $18,132 \n  \n  \n    Rent \n    3,848 \n    $14,396 \n  \n  \n    Own \n    1,350 \n    $15,665 \n  \n\n\n\n\n\n\n\n\n15:00"
+    "section": "Your turn: Grouped summary",
+    "text": "Your turn: Grouped summary\n\n RStudio Cloud > “Module 2 - Tidyverse” > ex-2-1.qmd\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n Compare answers with your neighbor and choose an approach you would teach in an intro course.  Then, type your chosen answer on Discord along with some narrative about how you would approach teaching it describing how you would teach it.\n\n\n\n\n\n \n  \n    Homeownership \n    Average loan amount \n    Number of applicants \n  \n \n\n  \n    Mortgage \n    4,778 \n    $18,132 \n  \n  \n    Rent \n    3,848 \n    $14,396 \n  \n  \n    Own \n    1,350 \n    $15,665 \n  \n\n\n\n\n\n\n\n\n15:00"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#break-it-down-i",
@@ -700,11 +700,11 @@
     "text": "Grouped summary with tapply()\n\nx <- tapply(loans$loan_amount, loans$homeownership, length)\ny <- tapply(loans$loan_amount, loans$homeownership, mean)\nz <- data.frame(n_applicants = x, avg_loan_amount = y)\nz[order(z$n_applicants), ]\n\n\n\nNot so good:\n\npassing functions as arguments\ndistinguishing between the various apply() functions\nending up with a new data structure (array)\nrelegating a data column to rownames"
   },
   {
-    "objectID": "materials/02-tidyverse/index.html#exercise-2-data-visualization",
-    "href": "materials/02-tidyverse/index.html#exercise-2-data-visualization",
+    "objectID": "materials/02-tidyverse/index.html#your-turn-data-visualization",
+    "href": "materials/02-tidyverse/index.html#your-turn-data-visualization",
     "title": "Teaching data science with the tidyverse",
-    "section": "Exercise 2: Data visualization",
-    "text": "Exercise 2: Data visualization\n\n RStudio Cloud > “Module 2 - Tidyverse” > ex-2-2.qmd\n\n\nUsing the loans data, create side-by-side box plots that shows the relationship between loan amount and application type, faceted by homeownership.\n\n\n Compare answers with your neighbor and choose an approach you would teach in an intro course.  Then, type your chosen answer and some narrative about how you would approach teaching it describing how you would teach it.\n\n\n\n\n\n\n\nSee next style for desired output.\n\n\n\n\n\n\n04:00"
+    "section": "Your turn: Data visualization",
+    "text": "Your turn: Data visualization\n\n RStudio Cloud > “Module 2 - Tidyverse” > ex-2-2.qmd\n\n\nUsing the loans data, create side-by-side box plots that shows the relationship between loan amount and application type, faceted by homeownership.\n\n\n Compare answers with your neighbor and choose an approach you would teach in an intro course.  Then, type your chosen answer and some narrative about how you would approach teaching it describing how you would teach it.\n\n\n\n\n\n\n\nSee next style for desired output.\n\n\n\n\n\n\n04:00"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#desired-output",
