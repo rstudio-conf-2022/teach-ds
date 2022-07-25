@@ -59,7 +59,7 @@ Facilitate opportunities for students to...
 
 -   Identify **appropriate methods based on the primary analysis objective** - inference or prediction
 
--   Develop important non-technical skills, specifically written communication and **teamwork**
+-   Develop important non-technical skills, specifically written communication and teamwork
 :::
 
 # Introducing tidymodels
@@ -97,7 +97,12 @@ library(tidymodels)
 
 ## Data: Loans from Lending Club
 
-\[Write introduction to the data\] and the variables. Partially follow analysis in Chapter 8 - Linear regression with multiple predictors in [Introduction to Modern Statistics](https://openintro-ims.netlify.app/index.html).
+The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the **openintro** package and featured in the OpenIntro textbooks . It contains information about 50,000 loans made through the Lending Club platform. The variables we'll use in this analysis are
+
+-   `interest_rate`: Interest rate of the loan the applicant received.
+-   `debt_to_income`: Debt-to-income ratio.
+-   `term`: The number of months of the loan the applicant received.
+-   `delinq_2y`: Number of delinquencies on lines of credit in the last 2 years.
 
 ## Data: Loans from Lending Club
 
@@ -209,22 +214,20 @@ tidy_lm_aug
 ```
 :::
 
-## Why full tidymodels framework?
+## Why Tidymodels?
 
 There are advantages for more advanced modeling:
 
 -   Consistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.
 -   Streamline modeling workflow
     -   Split data into train and test sets
-    -   Create custom variables
+    -   Transform and create new variables
     -   Assess model performance
     -   Use model for prediction and inference
 
 # Teaching with tidymodels
 
-## Getting started
-
-Let's breakdown the syntax from the previous example.
+## Tidymodels syntax
 
 ```{r}
 #| echo: true
@@ -233,6 +236,8 @@ linear_reg() |>
   fit(interest_rate ~ debt_to_income, data = loans_full_schema) |>
   tidy()
 ```
+
+Let's break down the syntax.
 
 ## 1️⃣ Specify model
 
@@ -272,7 +277,9 @@ linear_reg() |>
 
 The syntax is the same if we fit a more advanced model, such as a logistic regression model.
 
-*Fit a model to predict the loan term length (36 or 60 month) based on the loan amount.*
+. . .
+
+*Fit a model to predict the loan term length (36 or 60 months) based on the loan amount.*
 
 ```{r}
 #| echo: true
@@ -289,13 +296,13 @@ logistic_reg() |>
 
 -   You may be familiar doing feature engineering using dplyr before fitting the model.
 
--   The [**recipes**](https://recipes.tidymodels.org/) package makes it possible to do feature engineering as part of the modeling workflow using "dplyr-like" functions.
+-   The [recipes](https://recipes.tidymodels.org/) package makes it possible to do feature engineering as part of the modeling workflow using "dplyr-like" functions.
 :::
 
 ## Example: Predicting interest rate
 
 ::: incremental
--   **Goal**: Fit a model to predict the interest rate based on the term, debt to income ratio, and number of delinquencies in past two years.
+-   **Goal**: Fit a model to predict the interest rate based on the term, debt to income ratio, and number of delinquencies in the past two years.
 
 -   We need to do the following to prepare the predictors for the model:
 
@@ -303,23 +310,23 @@ logistic_reg() |>
 
     -   Mean-center `debt_to_income`.
 
-    -   Break `delinq_2y` into the categories 0, 1, 2, 3+.
+    -   Split `delinq_2y` into the categories 0, 1, 2, 3+.
 :::
 
 ## Feature engineering using dplyr
 
 ```{r}
 #| echo: true
-# Prepare the data
+# Feature engineering
 loans_full_schema <- loans_full_schema |>
-  mutate(term = as_factor(term)) |>
+  mutate(term_fct = as_factor(term)) |>
   mutate(debt_to_income_cent = 
            debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>
   mutate(delinq_2y_cat = 
-           cut(delinq_2y, breaks = c(0, 1, 2, 3, Inf), right = FALSE))
+           cut(delinq_2y, breaks = c(-Inf,0,1, 2, 3, Inf)))
 
 # Fit the model 
-lm(interest_rate ~ term + debt_to_income_cent + delinq_2y_cat,
+lm(interest_rate ~ term_fct + debt_to_income_cent + delinq_2y_cat,
    data = loans_full_schema) |>
   tidy()
 ```
@@ -333,8 +340,8 @@ lm(interest_rate ~ term + debt_to_income_cent + delinq_2y_cat,
 ```{r}
 #| echo: true
 interest_rec <- recipe(
-  interest_rate ~ term + debt_to_income + delinq_2y, #formula
-  data = loans_full_schema #data with names and variable types
+  interest_rate ~ term + debt_to_income + delinq_2y, 
+  data = loans_full_schema 
   )
 
 interest_rec
@@ -374,8 +381,7 @@ interest_rec
 #| echo: true
 
 interest_rec <- interest_rec |>
-  step_cut(delinq_2y, breaks = c(0, 1, 2, 3), 
-           include_outside_range = TRUE)
+  step_cut(delinq_2y, breaks = c(-Inf,0,1, 2, 3, Inf))
 
 interest_rec
 ```
@@ -385,13 +391,11 @@ interest_rec
 ```{r}
 #| echo: true
 
-interest_rec <- recipe(
-  interest_rate ~ term + debt_to_income + delinq_2y,
-  data = loans_full_schema) |>
+interest_rec <- recipe(interest_rate ~ term + debt_to_income + delinq_2y,
+                       data = loans_full_schema) |>
   step_mutate(term = as_factor(term))|>
   step_center(debt_to_income) |>
-  step_cut(delinq_2y, breaks = c(0, 1, 2, 3), 
-           include_outside_range = TRUE)
+  step_cut(delinq_2y, breaks = c(-Inf,0,1, 2, 3, Inf))
 ```
 
 ## Putting it all together
@@ -401,107 +405,202 @@ interest_rec <- recipe(
 interest_rec
 ```
 
-## Prep and bake
+## Prep and bake to see created variables
 
 ```{r}
 #| echo: true
 interest_rec |>
   prep()|>
   bake(loans_full_schema) |>
-  glimpse()
+  head()
 ```
-
-## Feature engineering: dplyr vs. recipes - is this the right comparison?
-
-::: columns
-::: {.column width="50%"}
-**dplyr**
-
-```{r}
-#| echo: true
-#| eval: false
-
-loans_full_schema |>
-  mutate(term = as_factor(term)) |>
-  mutate(debt_to_income_cent = 
-           debt_to_income - mean(debt_to_income, na.rm = TRUE)) |>
-  mutate(delinq_2y_cat = 
-           cut(delinq_2y, breaks = c(0, 1, 2, 3, Inf), right = FALSE))
-```
-:::
-
-::: {.column width="50%"}
-**Recipes**
-
-```{r}
-#| echo: true
-#| eval: false 
-
-recipe(
-  interest_rate ~ term + debt_to_income + delinq_2y,
-  data = loans_full_schema) |>
-  step_mutate(term = as_factor(term))|>
-  step_center(debt_to_income) |>
-  step_cut(delinq_2y, breaks = c(0, 1, 2, 3), 
-           include_outside_range = TRUE)
-
-```
-:::
-:::
 
 ## Your turn!
 
-Make a model predicting interest rate using debt to income, application type, bankrupt, application type \* debt to income
-
--   Scale debt to income
-
-<!-- -->
-
--   Create an interaction between application_type and debt to income ratio
-
--   Create dummy variables for all nominal predictors
-
--   Create a new variable bankrupt that takes values "no" if public record bankrupt = 0 and "yes" if public record bankrupt = 1. Then remove public_record_bankrupt
-
-\[Write the dplyr pipeline that does all this.\]
-
--   Use the documentation to determine the accompanying recipes steps
-
--   Stretch goal: Run the code for the recipe.
-
--   Was this easy to do? Why or why not? What was easy? What was challenging?
-
 ## Fit the model using `workflow()`
 
-## Test vs. Train data
+**Workflows** bring together models and recipes, making them easier to apply to multiple data sets, e.g, training and test data.
 
--   Why we would do this. What students get out of it.
+. . .
 
--   Model assessment
+**Specify the model**
 
-## Prediction
+```{r}
+#| echo: true
+interest_spec <- linear_reg() |>
+  set_engine("lm")
+```
 
-## Test/train and Prediction exercise
+. . .
 
-build upon the model from earlier. Do test vs. train and calculate predictions. Assess the model performance.
+**Build workflow**
 
-## Thinking about prediction or inference
+```{r}
+#| echo: true
 
-## Using tidydmodels in your course
+interest_workflow <- workflow() |>
+  add_model(interest_spec) |>
+  add_recipe(interest_rec)
+```
 
-## Pedagogy
+## View workflow
 
-Really thinking about the purpose of the modeling - is it prediction or inference.
+```{r}
+#| echo: true
 
-What procedure do you use based on that?
+interest_workflow
+```
 
-## Putting it all together
+## Fit model to data
 
--   Make an Rmd file with a full pipeline to show this is what your students would be able to do at the end of the semester.
--   Use the modern regression site.
+```{r}
+#| echo: true
+
+interest_fit <- interest_workflow %>%
+  fit(data = loans_full_schema)
+
+tidy(interest_fit)
+```
+
+# Prediction + Model evaluation
+
+## Make predictions
+
+```{r}
+#| echo: true
+
+interest_pred <- predict(interest_fit, loans_full_schema) |> 
+  bind_cols(loans_full_schema |> select(interest_rate))
+
+interest_pred
+```
+
+## Model evaluation: $R^2$
+
+$R^2$ is the percent of variability in the interest rate explained by the model.
+
+```{r}
+#| echo: true
+
+rsq(interest_pred, truth = interest_rate, estimate = .pred)
+```
+
+## Model evaluation: $RMSE$
+
+$RMSE$ is a measure of the error in the model predictions.
+
+$$
+RMSE = \sqrt{\frac{\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}{n}}
+$$
+
+. . .
+
+```{r}
+#| echo: true
+
+rmse(interest_pred, truth = interest_rate, estimate = .pred)
+```
+
+## Your turn! (7 minutes)
+
+# What is a limitation to the model evaluation we've done thus far?
+
+## Splitting the data
+
+Splitting the data into training and testing sets allows us to evaluate the model on new data.
+
+. . .
+
+**Split the data.**
+
+```{r}
+#| echo: true
+#| 
+set.seed(0725) #to get same split each run
+loans_split <- initial_split(loans_full_schema, prop = 0.8) #80% training
+```
+
+**Save the training data.**
+
+```{r}
+#| echo: true
+loans_train <- training(loans_split)
+dim(loans_train)
+```
+
+**Save test data.**
+
+```{r}
+#| echo: true
+loans_test <- testing(loans_split)
+dim(loans_test)
+```
+
+## Fit the model to the training data
+
+We can fit the model specified in `interest_workflow` (model spec + recipe) to the training data.
+
+```{r}
+#| echo: true
+
+interest_train_fit <- interest_workflow |>
+  fit(data = loans_train)
+
+tidy(interest_train_fit)
+```
+
+## Evaluate performance on training data
+
+**Calculate predictions**
+
+```{r}
+#| echo: true
+
+interest_train_pred <- predict(interest_train_fit, loans_train) |> 
+  bind_cols(loans_train |> select(interest_rate))
+```
+
+**Evaluate model**
+
+```{r}
+#| echo: true
+rsq(interest_train_pred, truth = interest_rate, estimate = .pred)
+```
+
+```{r}
+#| echo: true
+#| 
+rmse(interest_train_pred, truth = interest_rate, estimate = .pred)
+```
+
+## Evaluate performance on testing data
+
+**Calculate predictions**
+
+```{r}
+#| echo: true
+
+interest_test_pred <- predict(interest_train_fit, loans_test) |> 
+  bind_cols(loans_test |> select(interest_rate))
+```
+
+**Evaluate model**
+
+```{r}
+#| echo: true
+rsq(interest_test_pred, truth = interest_rate, estimate = .pred)
+```
+
+```{r}
+#| echo: true
+#| 
+rmse(interest_test_pred, truth = interest_rate, estimate = .pred)
+```
+
+## Your turn! (7 minutes)
 
 ## Discussion
 
--   Think about how you might implement this in the classroom
+-   What is something from this module you can implement in your data science course?
 
--   What is a potential challenge
+-   What is one potential challenge of implementing this content in your course?

@@ -19,7 +19,7 @@ Some of the code below has been pre-populated. In these cases, there is a code c
 
 ## Data
 
-The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the **openintro** package^[1](https://matackett.github.io/ecots2022-modern-regression/activity/modeling-loans.html#fn1)^ and featured in the OpenIntro textbooks^[2](https://matackett.github.io/ecots2022-modern-regression/activity/modeling-loans.html#fn2)^ . It contains information about 50,000 loans made through the Lending Club platform.
+The data is the [`loans_full_schema`](http://openintrostat.github.io/openintro/reference/loans_full_schema.html) data set from the [**openintro** package](https://cran.r-project.org/web/packages/openintro/index.html) and featured in the [OpenIntro textbooks](https://openintro-ims.netlify.app/) . It contains information about 50,000 loans made through the Lending Club platform.
 
 The data has a bit of peculiarity about it, specifically the `application_type` variable is a factor variable with an empty level.
 
