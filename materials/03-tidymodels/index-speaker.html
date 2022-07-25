@@ -449,27 +449,8 @@
 <li class="fragment"><p>Regularly engage with <strong>real-world applications and complex data</strong></p></li>
 <li class="fragment"><p>Develop proficiency <strong>using professional statistical software</strong> and using a reproducible workflow</p></li>
 <li class="fragment"><p>Identify <strong>appropriate methods based on the primary analysis objective</strong> - inference or prediction</p></li>
-<li class="fragment"><p>Develop important non-technical skills, specifically written communication and <strong>teamwork</strong></p></li>
+<li class="fragment"><p>Develop important non-technical skills, specifically written communication and teamwork</p></li>
 </ul>
-</div>
-</section>
-<section id="discussion" class="slide level2 center">
-<h2>Discussion</h2>
-<div class="callout callout-important callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li><p>How much do you teach regression in your course(s)?</p></li>
-<li><p>Do you currently implement any of these principles in your teaching? Do you find some more challenging to implement than others?</p></li>
-</ul>
-</div>
-</div>
 </div>
 </section></section>
 <section>
@@ -503,12 +484,12 @@
 <pre><code>── Attaching packages ────────────────────────────────────── tidymodels 0.2.0 ──</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>✔ broom        0.8.0     ✔ rsample      0.1.1
-✔ dials        0.1.1     ✔ tune         0.2.0
-✔ infer        1.0.2     ✔ workflows    0.2.6
+<pre><code>✔ broom        1.0.0     ✔ rsample      1.0.0
+✔ dials        1.0.0     ✔ tune         1.0.0
+✔ infer        1.0.2     ✔ workflows    1.0.0
 ✔ modeldata    0.1.1     ✔ workflowsets 0.2.1
-✔ parsnip      0.2.1     ✔ yardstick    0.0.9
-✔ recipes      0.2.0     </code></pre>
+✔ parsnip      1.0.0     ✔ yardstick    1.0.0
+✔ recipes      1.0.1     </code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──
@@ -518,13 +499,19 @@
 ✖ dplyr::lag()      masks stats::lag()
 ✖ yardstick::spec() masks readr::spec()
 ✖ recipes::step()   masks stats::step()
-• Dig deeper into tidy modeling with R at https://www.tmwr.org</code></pre>
+• Learn how to get started at https://www.tidymodels.org/start/</code></pre>
 </div>
 </div>
 </section>
 <section id="data-loans-from-lending-club" class="slide level2 center">
 <h2>Data: Loans from Lending Club</h2>
-<p>[Write introduction to the data] and the variables. Partially follow analysis in Chapter 8 - Linear regression with multiple predictors in <a href="https://openintro-ims.netlify.app/index.html">Introduction to Modern Statistics</a>.</p>
+<p>The data is the <a href="http://openintrostat.github.io/openintro/reference/loans_full_schema.html"><code>loans_full_schema</code></a> data set from the <strong>openintro</strong> package and featured in the OpenIntro textbooks . It contains information about 50,000 loans made through the Lending Club platform. The variables we’ll use in this analysis are</p>
+<ul>
+<li><code>interest_rate</code>: Interest rate of the loan the applicant received.</li>
+<li><code>debt_to_income</code>: Debt-to-income ratio.</li>
+<li><code>term</code>: The number of months of the loan the applicant received.</li>
+<li><code>delinq_2y</code>: Number of delinquencies on lines of credit in the last 2 years.</li>
+</ul>
 </section>
 <section id="data-loans-from-lending-club-1" class="slide level2 center">
 <h2>Data: Loans from Lending Club</h2>
@@ -601,8 +588,7 @@ $ paid_late_fees                   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
 <div id="tabset-1-1">
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>base_lm <span class="ot">&lt;-</span> <span class="fu">lm</span>(interest_rate <span class="sc">~</span> debt_to_income, <span class="at">data =</span> loans_full_schema)</span>
-<span id="cb8-2"><a href="#cb8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3"></a><span class="fu">summary</span>(base_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">summary</span>(base_lm)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -647,14 +633,12 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 </section>
 <section id="model-summaries-using-broom" class="slide level2 center">
 <h2>Model summaries using broom</h2>
-<p>Can utilize functions from the <strong>broom</strong> package to produce tidy summaries of models fit using Base R or the tidymodels framework</p>
+<p>Can utilize functions from the <a href="broom.tidymodels.org"><strong>broom</strong></a> package to produce tidy summaries of models fit using Base R or the tidymodels framework</p>
 <ul>
 <li><p><code>tidy()</code>: summarizes information about model components</p></li>
 <li><p><code>glance()</code>: reports information about the entire model</p></li>
-<li><p><code>augment()</code>: adds informations about observations to a dataset</p></li>
+<li><p><code>augment()</code>: adds information about observations to a data set</p></li>
 </ul>
-<p><br></p>
-<p><a href="https://broom.tidymodels.org/">broom.tidymodels.org</a></p>
 </section>
 <section id="tidy" class="slide level2 center">
 <h2><code>tidy()</code></h2>
@@ -784,15 +768,15 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 </div>
 </div>
 </section>
-<section id="why-full-tidymodels-framework" class="slide level2 center">
-<h2>Why full tidymodels framework?</h2>
-<p>Most pedagogical advantages for more advanced models:</p>
+<section id="why-tidymodels" class="slide level2 center">
+<h2>Why Tidymodels?</h2>
+<p>There are advantages for more advanced modeling:</p>
 <ul>
 <li>Consistent syntax for different model types (linear, logistic, random forest, Bayesian, etc.</li>
 <li>Streamline modeling workflow
 <ul>
 <li>Split data into train and test sets</li>
-<li>Create custom variables</li>
+<li>Transform and create new variables</li>
 <li>Assess model performance</li>
 <li>Use model for prediction and inference</li>
 </ul></li>
@@ -803,9 +787,8 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 <h1>Teaching with tidymodels</h1>
 
 </section>
-<section id="getting-started" class="slide level2 center">
-<h2>Getting started</h2>
-<p>Let’s breakdown the syntax from the previous example.</p>
+<section id="tidymodels-syntax" class="slide level2 center">
+<h2>Tidymodels syntax</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">linear_reg</span>() <span class="sc">|&gt;</span> </span>
 <span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>) <span class="sc">|&gt;</span></span>
@@ -819,6 +802,7 @@ F-statistic: 204.2 on 1 and 9974 DF,  p-value: &lt; 2.2e-16</code></pre>
 2 debt_to_income   0.0472   0.00330      14.3 7.05e-46</code></pre>
 </div>
 </div>
+<p>Let’s break down the syntax.</p>
 </section>
 <section id="specify-model" class="slide level2 center">
 <h2>1️⃣ Specify model</h2>
@@ -878,61 +862,76 @@ Coefficients:
 </div>
 </div>
 </section>
-<section id="add-slide" class="slide level2 center">
-<h2>Add slide?</h2>
-<ul>
-<li>Add a slide to show how this would be consistent if you made a logistic model?</li>
-</ul>
+<section id="consistent-syntax-for-other-models" class="slide level2 center">
+<h2>Consistent syntax for other models</h2>
+<p>The syntax is the same if we fit a more advanced model, such as a logistic regression model.</p>
+<div class="fragment">
+<p><em>Fit a model to predict the loan term length (36 or 60 months) based on the loan amount.</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">fit</span>(<span class="fu">factor</span>(term) <span class="sc">~</span> loan_amount, <span class="at">data =</span> loans_full_schema) <span class="sc">|&gt;</span></span>
+<span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  term          estimate  std.error statistic   p.value
+  &lt;chr&gt;            &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept) -2.28      0.0493         -46.2 0        
+2 loan_amount  0.0000814 0.00000232      35.1 1.02e-269</code></pre>
+</div>
+</div>
+</div>
 </section>
 <section id="feature-engineering" class="slide level2 center">
 <h2>Feature engineering</h2>
-<p><strong>Feature engineering</strong> is the process of transforming raw variables in preparation for use in a statistical model.</p>
-<p><br></p>
-<div class="fragment">
-<p>We may be familiar doing feature engineering using dplyr before fitting the model.</p>
-<p><br></p>
-</div>
-<div class="fragment">
-<p>The <a href="https://recipes.tidymodels.org/">recipes</a> package makes it possible to do feature engineering as part of the modeling workflow using “dplyr-like” functions.</p>
+<div>
+<ul>
+<li class="fragment"><p><strong>Feature engineering</strong> is the process of transforming raw variables in preparation for use in a statistical model.</p></li>
+<li class="fragment"><p>You may be familiar doing feature engineering using dplyr before fitting the model.</p></li>
+<li class="fragment"><p>The <a href="https://recipes.tidymodels.org/">recipes</a> package makes it possible to do feature engineering as part of the modeling workflow using “dplyr-like” functions.</p></li>
+</ul>
 </div>
 </section>
 <section id="example-predicting-interest-rate" class="slide level2 center">
 <h2>Example: Predicting interest rate</h2>
-<p><strong>Goal</strong>: Fit a model to predict the interest rate from the term, debt to income ratio, home ownership, and number of delinquencies in past two years.</p>
-<p><br></p>
-<div class="fragment">
-<p>We need to do the following to prepare the predictors for the model:</p>
+<div>
 <ul>
-<li>Make <code>term</code> a factor.</li>
-<li>Mean-center <code>debt_to_income</code>.</li>
-<li>Break <code>delinq_2y</code> into the categories 0, 1, 2, 3+.</li>
+<li class="fragment"><p><strong>Goal</strong>: Fit a model to predict the interest rate based on the term, debt to income ratio, and number of delinquencies in the past two years.</p></li>
+<li class="fragment"><p>We need to do the following to prepare the predictors for the model:</p>
+<ul>
+<li class="fragment"><p>Make <code>term</code> a factor.</p></li>
+<li class="fragment"><p>Mean-center <code>debt_to_income</code>.</p></li>
+<li class="fragment"><p>Split <code>delinq_2y</code> into the categories 0, 1, 2, 3+.</p></li>
+</ul></li>
 </ul>
 </div>
 </section>
 <section id="feature-engineering-using-dplyr" class="slide level2 center">
 <h2>Feature engineering using dplyr</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="co"># Prepare the data</span></span>
-<span id="cb34-2"><a href="#cb34-2"></a>loans_full_schema <span class="ot">&lt;-</span> loans_full_schema <span class="sc">|&gt;</span></span>
-<span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">mutate</span>(<span class="at">term =</span> <span class="fu">as_factor</span>(term)) <span class="sc">|&gt;</span></span>
-<span id="cb34-4"><a href="#cb34-4"></a>  <span class="fu">mutate</span>(<span class="at">debt_to_income_cent =</span> debt_to_income <span class="sc">-</span> <span class="fu">mean</span>(debt_to_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb34-5"><a href="#cb34-5"></a>  <span class="fu">mutate</span>(<span class="at">delinq_2y_cat =</span> <span class="fu">cut</span>(delinq_2y, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">Inf</span>), <span class="at">right =</span> <span class="cn">FALSE</span>))</span>
-<span id="cb34-6"><a href="#cb34-6"></a></span>
-<span id="cb34-7"><a href="#cb34-7"></a><span class="co"># Fit the model </span></span>
-<span id="cb34-8"><a href="#cb34-8"></a><span class="fu">lm</span>(interest_rate <span class="sc">~</span> term <span class="sc">+</span> debt_to_income_cent <span class="sc">+</span> homeownership <span class="sc">+</span> delinq_2y_cat, <span class="at">data =</span> loans_full_schema) <span class="sc">|&gt;</span></span>
-<span id="cb34-9"><a href="#cb34-9"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># Feature engineering</span></span>
+<span id="cb36-2"><a href="#cb36-2"></a>loans_full_schema <span class="ot">&lt;-</span> loans_full_schema <span class="sc">|&gt;</span></span>
+<span id="cb36-3"><a href="#cb36-3"></a>  <span class="fu">mutate</span>(<span class="at">term_fct =</span> <span class="fu">as_factor</span>(term)) <span class="sc">|&gt;</span></span>
+<span id="cb36-4"><a href="#cb36-4"></a>  <span class="fu">mutate</span>(<span class="at">debt_to_income_cent =</span> </span>
+<span id="cb36-5"><a href="#cb36-5"></a>           debt_to_income <span class="sc">-</span> <span class="fu">mean</span>(debt_to_income, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb36-6"><a href="#cb36-6"></a>  <span class="fu">mutate</span>(<span class="at">delinq_2y_cat =</span> </span>
+<span id="cb36-7"><a href="#cb36-7"></a>           <span class="fu">cut</span>(delinq_2y, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>,<span class="dv">0</span>,<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">Inf</span>)))</span>
+<span id="cb36-8"><a href="#cb36-8"></a></span>
+<span id="cb36-9"><a href="#cb36-9"></a><span class="co"># Fit the model </span></span>
+<span id="cb36-10"><a href="#cb36-10"></a><span class="fu">lm</span>(interest_rate <span class="sc">~</span> term_fct <span class="sc">+</span> debt_to_income_cent <span class="sc">+</span> delinq_2y_cat,</span>
+<span id="cb36-11"><a href="#cb36-11"></a>   <span class="at">data =</span> loans_full_schema) <span class="sc">|&gt;</span></span>
+<span id="cb36-12"><a href="#cb36-12"></a>  <span class="fu">tidy</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 8 × 5
-  term                 estimate std.error statistic  p.value
-  &lt;chr&gt;                   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;
-1 (Intercept)           10.3      0.0780     132.   0       
-2 term60                 4.03     0.0997      40.4  0       
-3 debt_to_income_cent    0.0462   0.00304     15.2  1.80e-51
-4 homeownershipOWN       0.726    0.140        5.18 2.31e- 7
-5 homeownershipRENT      1.49     0.0994      15.0  1.55e-50
-6 delinq_2y_cat[1,2)     1.49     0.151        9.83 1.04e-22
-7 delinq_2y_cat[2,3)     1.81     0.288        6.29 3.23e-10
-8 delinq_2y_cat[3,Inf)   2.76     0.368        7.49 7.28e-14</code></pre>
+<pre><code># A tibble: 7 × 5
+  term                  estimate std.error statistic   p.value
+  &lt;chr&gt;                    &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)            11.0      0.0584     189.   0        
+2 term_fct60              3.86     0.100       38.5  6.67e-303
+3 debt_to_income_cent     0.0429   0.00307     14.0  5.47e- 44
+4 delinq_2y_cat(0,1]      1.37     0.153        8.95 4.08e- 19
+5 delinq_2y_cat(1,2]      1.68     0.291        5.76 8.57e-  9
+6 delinq_2y_cat(2,3]      2.46     0.492        5.00 5.78e-  7
+7 delinq_2y_cat(3, Inf]   2.85     0.563        5.05 4.39e-  7</code></pre>
 </div>
 </div>
 </section>
@@ -940,86 +939,396 @@ Coefficients:
 <h2>Feature engineering with recipes</h2>
 
 <img data-src="images/recipes.png" class="r-stretch quarto-figure-center"><p class="caption">Illustration by <a href="https://www.allisonhorst.com/">Allison Horst</a></p></section>
-<section id="feature-engineering-with-recipes-1" class="slide level2 center">
-<h2>Feature engineering with recipes</h2>
-<ul>
-<li><p>Write code step by step</p></li>
-<li><p>Put all steps in a single pipeline</p></li>
-</ul>
-</section>
-<section id="featuring-engineering-with-recipes" class="slide level2 center">
-<h2>Featuring engineering with recipes</h2>
+<section id="specify-the-variables" class="slide level2 center">
+<h2>Specify the variables</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a><span class="co"># define workflow </span></span>
-<span id="cb36-2"><a href="#cb36-2"></a></span>
-<span id="cb36-3"><a href="#cb36-3"></a>interest_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(interest_rate <span class="sc">~</span> term <span class="sc">+</span> debt_to_income <span class="sc">+</span> </span>
-<span id="cb36-4"><a href="#cb36-4"></a>                         homeownership <span class="sc">+</span> delinq_2y, </span>
-<span id="cb36-5"><a href="#cb36-5"></a>                       <span class="at">data =</span> loans_full_schema)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a>interest_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(</span>
+<span id="cb38-2"><a href="#cb38-2"></a>  interest_rate <span class="sc">~</span> term <span class="sc">+</span> debt_to_income <span class="sc">+</span> delinq_2y, </span>
+<span id="cb38-3"><a href="#cb38-3"></a>  <span class="at">data =</span> loans_full_schema </span>
+<span id="cb38-4"><a href="#cb38-4"></a>  )</span>
+<span id="cb38-5"><a href="#cb38-5"></a></span>
+<span id="cb38-6"><a href="#cb38-6"></a>interest_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Recipe
+
+Inputs:
+
+      role #variables
+   outcome          1
+ predictor          3</code></pre>
+</div>
 </div>
 </section>
-<section id="recipes-vs.-dplyr" class="slide level2 center">
-<h2>recipes vs.&nbsp;dplyr</h2>
-<ul>
-<li><p>show code side by side</p></li>
-<li><p>advantages / disadvantage of each approach</p></li>
-</ul>
-</section>
-<section id="put-it-together-with-workflow" class="slide level2 center">
-<h2>Put it together with workflow</h2>
-<ul>
-<li><p>Define the model</p></li>
-<li><p>Define the receipe</p></li>
-</ul>
-</section>
-<section id="exercise---feature-engineering" class="slide level2 center">
-<h2>Exercise - feature engineering</h2>
-<ul>
-<li><p>Have an qmd file with the dplyr pipeline.</p></li>
-<li><p>Go to the receipes documentation and try to find the appropriate step functions.</p></li>
-<li><p>Was this easy to do? Why or why not? What was easy? What was challenging?</p></li>
-</ul>
-</section>
-<section id="prediction" class="slide level2 center">
-<h2>Prediction</h2>
-</section>
-<section id="test-vs.-train-data" class="slide level2 center">
-<h2>Test vs.&nbsp;Train data</h2>
-</section>
-<section id="prediction-exercise" class="slide level2 center">
-<h2>Prediction exercise</h2>
-</section>
-<section id="thinking-about-prediction-or-inference" class="slide level2 center">
-<h2>Thinking about prediction or inference</h2>
-</section>
-<section id="exercise---split-into-test-and-train" class="slide level2 center">
-<h2>Exercise - split into test and train?</h2>
-</section>
-<section id="cross-validation" class="slide level2 center">
-<h2>Cross-validation</h2>
-</section>
-<section id="exercise---cross-validation" class="slide level2 center">
-<h2>Exercise - cross validation</h2>
-</section></section>
-<section>
-<section id="using-tidydmodels-in-your-course" class="title-slide slide level1 center">
-<h1>Using tidydmodels in your course</h1>
+<section id="define-pre-processing-steps" class="slide level2 center">
+<h2>Define pre-processing steps</h2>
+<p><strong>Make <code>term</code> a factor.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a>interest_rec <span class="ot">&lt;-</span> interest_rec <span class="sc">|&gt;</span></span>
+<span id="cb40-2"><a href="#cb40-2"></a>  <span class="fu">step_mutate</span>(<span class="at">term =</span> <span class="fu">as_factor</span>(term))</span>
+<span id="cb40-3"><a href="#cb40-3"></a></span>
+<span id="cb40-4"><a href="#cb40-4"></a>interest_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Recipe
 
+Inputs:
+
+      role #variables
+   outcome          1
+ predictor          3
+
+Operations:
+
+Variable mutation for as_factor(term)</code></pre>
+</div>
+</div>
 </section>
-<section id="pedagogical-advantages" class="slide level2 center">
-<h2>Pedagogical advantages</h2>
+<section id="define-pre-processing-steps-1" class="slide level2 center">
+<h2>Define pre-processing steps</h2>
+<p><strong>Mean-center <code>debt_to_income</code></strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a>interest_rec <span class="ot">&lt;-</span> interest_rec <span class="sc">|&gt;</span></span>
+<span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">step_center</span>(debt_to_income)</span>
+<span id="cb42-3"><a href="#cb42-3"></a></span>
+<span id="cb42-4"><a href="#cb42-4"></a>interest_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Recipe
+
+Inputs:
+
+      role #variables
+   outcome          1
+ predictor          3
+
+Operations:
+
+Variable mutation for as_factor(term)
+Centering for debt_to_income</code></pre>
+</div>
+</div>
+</section>
+<section id="define-pre-processing-steps-2" class="slide level2 center">
+<h2>Define pre-processing steps</h2>
+<p><strong>Break <code>delinq_2y</code> into the categories 0, 1, 2, 3+.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a>interest_rec <span class="ot">&lt;-</span> interest_rec <span class="sc">|&gt;</span></span>
+<span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">step_cut</span>(delinq_2y, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>,<span class="dv">0</span>,<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">Inf</span>))</span>
+<span id="cb44-3"><a href="#cb44-3"></a></span>
+<span id="cb44-4"><a href="#cb44-4"></a>interest_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Recipe
+
+Inputs:
+
+      role #variables
+   outcome          1
+ predictor          3
+
+Operations:
+
+Variable mutation for as_factor(term)
+Centering for debt_to_income
+Cut numeric for delinq_2y</code></pre>
+</div>
+</div>
 </section>
 <section id="putting-it-all-together" class="slide level2 center">
 <h2>Putting it all together</h2>
-<ul>
-<li>Make an Rmd file with a full pipeline to show this is what your students would be able to do at the end of the semester.</li>
-</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a>interest_rec <span class="ot">&lt;-</span> <span class="fu">recipe</span>(interest_rate <span class="sc">~</span> term <span class="sc">+</span> debt_to_income <span class="sc">+</span> delinq_2y,</span>
+<span id="cb46-2"><a href="#cb46-2"></a>                       <span class="at">data =</span> loans_full_schema) <span class="sc">|&gt;</span></span>
+<span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">step_mutate</span>(<span class="at">term =</span> <span class="fu">as_factor</span>(term))<span class="sc">|&gt;</span></span>
+<span id="cb46-4"><a href="#cb46-4"></a>  <span class="fu">step_center</span>(debt_to_income) <span class="sc">|&gt;</span></span>
+<span id="cb46-5"><a href="#cb46-5"></a>  <span class="fu">step_cut</span>(delinq_2y, <span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="cn">Inf</span>,<span class="dv">0</span>,<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="cn">Inf</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="activity-discussion" class="slide level2 center">
-<h2>Activity / Discussion</h2>
+<section id="putting-it-all-together-1" class="slide level2 center">
+<h2>Putting it all together</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a>interest_rec</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Recipe
+
+Inputs:
+
+      role #variables
+   outcome          1
+ predictor          3
+
+Operations:
+
+Variable mutation for as_factor(term)
+Centering for debt_to_income
+Cut numeric for delinq_2y</code></pre>
+</div>
+</div>
+</section>
+<section id="prep-and-bake-to-see-created-variables" class="slide level2 center">
+<h2>Prep and bake to see created variables</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1"></a>interest_rec <span class="sc">|&gt;</span></span>
+<span id="cb49-2"><a href="#cb49-2"></a>  <span class="fu">prep</span>()<span class="sc">|&gt;</span></span>
+<span id="cb49-3"><a href="#cb49-3"></a>  <span class="fu">bake</span>(loans_full_schema) <span class="sc">|&gt;</span></span>
+<span id="cb49-4"><a href="#cb49-4"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 4
+  term  debt_to_income delinq_2y interest_rate
+  &lt;fct&gt;          &lt;dbl&gt; &lt;fct&gt;             &lt;dbl&gt;
+1 60             -1.30 [-Inf,0]          14.1 
+2 36            -14.3  [-Inf,0]          12.6 
+3 36              1.84 [-Inf,0]          17.1 
+4 36             -9.15 [-Inf,0]           6.72
+5 36             38.7  [-Inf,0]          14.1 
+6 36            -12.8  (0,1]              6.72</code></pre>
+</div>
+</div>
+</section>
+<section id="your-turn" class="slide level2 center">
+<h2>Your turn!</h2>
+</section>
+<section id="fit-the-model-using-workflow" class="slide level2 center">
+<h2>Fit the model using <code>workflow()</code></h2>
+<p><strong>Workflows</strong> bring together models and recipes, making them easier to apply to multiple data sets, e.g, training and test data.</p>
+<div class="fragment">
+<p><strong>Specify the model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a>interest_spec <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb51-2"><a href="#cb51-2"></a>  <span class="fu">set_engine</span>(<span class="st">"lm"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div class="fragment">
+<p><strong>Build workflow</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a>interest_workflow <span class="ot">&lt;-</span> <span class="fu">workflow</span>() <span class="sc">|&gt;</span></span>
+<span id="cb52-2"><a href="#cb52-2"></a>  <span class="fu">add_model</span>(interest_spec) <span class="sc">|&gt;</span></span>
+<span id="cb52-3"><a href="#cb52-3"></a>  <span class="fu">add_recipe</span>(interest_rec)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</section>
+<section id="view-workflow" class="slide level2 center">
+<h2>View workflow</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a>interest_workflow</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>══ Workflow ════════════════════════════════════════════════════════════════════
+Preprocessor: Recipe
+Model: linear_reg()
+
+── Preprocessor ────────────────────────────────────────────────────────────────
+3 Recipe Steps
+
+• step_mutate()
+• step_center()
+• step_cut()
+
+── Model ───────────────────────────────────────────────────────────────────────
+Linear Regression Model Specification (regression)
+
+Computational engine: lm </code></pre>
+</div>
+</div>
+</section>
+<section id="fit-model-to-data" class="slide level2 center">
+<h2>Fit model to data</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a>interest_fit <span class="ot">&lt;-</span> interest_workflow <span class="sc">%&gt;%</span></span>
+<span id="cb55-2"><a href="#cb55-2"></a>  <span class="fu">fit</span>(<span class="at">data =</span> loans_full_schema)</span>
+<span id="cb55-3"><a href="#cb55-3"></a></span>
+<span id="cb55-4"><a href="#cb55-4"></a><span class="fu">tidy</span>(interest_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 5
+  term              estimate std.error statistic   p.value
+  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)        11.0      0.0584     189.   0        
+2 term60              3.86     0.100       38.5  6.67e-303
+3 debt_to_income      0.0429   0.00307     14.0  5.47e- 44
+4 delinq_2y(0,1]      1.37     0.153        8.95 4.08e- 19
+5 delinq_2y(1,2]      1.68     0.291        5.76 8.57e-  9
+6 delinq_2y(2,3]      2.46     0.492        5.00 5.78e-  7
+7 delinq_2y(3, Inf]   2.85     0.563        5.05 4.39e-  7</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="prediction-model-evaluation" class="title-slide slide level1 center">
+<h1>Prediction + Model evaluation</h1>
+
+</section>
+<section id="make-predictions" class="slide level2 center">
+<h2>Make predictions</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>interest_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(interest_fit, loans_full_schema) <span class="sc">|&gt;</span> </span>
+<span id="cb57-2"><a href="#cb57-2"></a>  <span class="fu">bind_cols</span>(loans_full_schema <span class="sc">|&gt;</span> <span class="fu">select</span>(interest_rate))</span>
+<span id="cb57-3"><a href="#cb57-3"></a></span>
+<span id="cb57-4"><a href="#cb57-4"></a>interest_pred</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10,000 × 2
+   .pred interest_rate
+   &lt;dbl&gt;         &lt;dbl&gt;
+ 1  14.8         14.1 
+ 2  10.4         12.6 
+ 3  11.1         17.1 
+ 4  10.6          6.72
+ 5  12.7         14.1 
+ 6  11.8          6.72
+ 7  15.1         13.6 
+ 8  16.1         12.0 
+ 9  13.1         13.6 
+10  11.0          6.71
+# … with 9,990 more rows
+# ℹ Use `print(n = ...)` to see more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="model-evaluation-r2" class="slide level2 center">
+<h2>Model evaluation: <span class="math inline">\(R^2\)</span></h2>
+<p><span class="math inline">\(R^2\)</span> is the percent of variability in the interest rate explained by the model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="fu">rsq</span>(interest_pred, <span class="at">truth =</span> interest_rate, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  .metric .estimator .estimate
+  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
+1 rsq     standard       0.157</code></pre>
+</div>
+</div>
+</section>
+<section id="model-evaluation-rmse" class="slide level2 center">
+<h2>Model evaluation: <span class="math inline">\(RMSE\)</span></h2>
+<p><span class="math inline">\(RMSE\)</span> is a measure of the error in the model predictions.</p>
+<p><span class="math display">\[
+RMSE = \sqrt{\frac{\sum_{i=1}^{n}(\hat{y}_i - y_i)^2}{n}}
+\]</span></p>
+<div class="fragment">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1"></a><span class="fu">rmse</span>(interest_pred, <span class="at">truth =</span> interest_rate, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  .metric .estimator .estimate
+  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
+1 rmse    standard        4.59</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="your-turn-7-minutes" class="slide level2 center">
+<h2>Your turn! (7 minutes)</h2>
+</section></section>
+<section>
+<section id="what-is-a-limitation-to-the-model-evaluation-weve-done-thus-far" class="title-slide slide level1 center">
+<h1>What is a limitation to the model evaluation we’ve done thus far?</h1>
+
+</section>
+<section id="splitting-the-data" class="slide level2 center">
+<h2>Splitting the data</h2>
+<p>Splitting the data into training and testing sets allows us to evaluate the model on new data.</p>
+<div class="fragment">
+<p><strong>Split the data.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1"></a><span class="fu">set.seed</span>(<span class="dv">0725</span>) <span class="co">#to get same split each run</span></span>
+<span id="cb63-2"><a href="#cb63-2"></a>loans_split <span class="ot">&lt;-</span> <span class="fu">initial_split</span>(loans_full_schema, <span class="at">prop =</span> <span class="fl">0.8</span>) <span class="co">#80% training</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Save the training data.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1"></a>loans_train <span class="ot">&lt;-</span> <span class="fu">training</span>(loans_split)</span>
+<span id="cb64-2"><a href="#cb64-2"></a><span class="fu">dim</span>(loans_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8000   58</code></pre>
+</div>
+</div>
+<p><strong>Save test data.</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1"></a>loans_test <span class="ot">&lt;-</span> <span class="fu">testing</span>(loans_split)</span>
+<span id="cb66-2"><a href="#cb66-2"></a><span class="fu">dim</span>(loans_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2000   58</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="fit-the-model-to-the-training-data" class="slide level2 center">
+<h2>Fit the model to the training data</h2>
+<p>We can fit the model specified in <code>interest_workflow</code> (model spec + recipe) to the training data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1"></a>interest_train_fit <span class="ot">&lt;-</span> interest_workflow <span class="sc">|&gt;</span></span>
+<span id="cb68-2"><a href="#cb68-2"></a>  <span class="fu">fit</span>(<span class="at">data =</span> loans_train)</span>
+<span id="cb68-3"><a href="#cb68-3"></a></span>
+<span id="cb68-4"><a href="#cb68-4"></a><span class="fu">tidy</span>(interest_train_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7 × 5
+  term              estimate std.error statistic   p.value
+  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+1 (Intercept)        11.0      0.0646     170.   0        
+2 term60              3.91     0.112       35.1  1.05e-250
+3 debt_to_income      0.0402   0.00331     12.2  1.12e- 33
+4 delinq_2y(0,1]      1.33     0.171        7.79 7.77e- 15
+5 delinq_2y(1,2]      1.75     0.323        5.41 6.38e-  8
+6 delinq_2y(2,3]      2.48     0.536        4.63 3.79e-  6
+7 delinq_2y(3, Inf]   3.01     0.617        4.88 1.09e-  6</code></pre>
+</div>
+</div>
+</section>
+<section id="evaluate-performance-on-training-data" class="slide level2 center">
+<h2>Evaluate performance on training data</h2>
+<p><strong>Calculate predictions</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1"></a>interest_train_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(interest_train_fit, loans_train) <span class="sc">|&gt;</span> </span>
+<span id="cb70-2"><a href="#cb70-2"></a>  <span class="fu">bind_cols</span>(loans_train <span class="sc">|&gt;</span> <span class="fu">select</span>(interest_rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Evaluate model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1"></a><span class="fu">rsq</span>(interest_train_pred, <span class="at">truth =</span> interest_rate, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  .metric .estimator .estimate
+  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
+1 rsq     standard       0.161</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1"></a><span class="fu">rmse</span>(interest_train_pred, <span class="at">truth =</span> interest_rate, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  .metric .estimator .estimate
+  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
+1 rmse    standard        4.55</code></pre>
+</div>
+</div>
+</section>
+<section id="evaluate-performance-on-testing-data" class="slide level2 center">
+<h2>Evaluate performance on testing data</h2>
+<p><strong>Calculate predictions</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1"></a>interest_test_pred <span class="ot">&lt;-</span> <span class="fu">predict</span>(interest_train_fit, loans_test) <span class="sc">|&gt;</span> </span>
+<span id="cb75-2"><a href="#cb75-2"></a>  <span class="fu">bind_cols</span>(loans_test <span class="sc">|&gt;</span> <span class="fu">select</span>(interest_rate))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Evaluate model</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1"></a><span class="fu">rsq</span>(interest_test_pred, <span class="at">truth =</span> interest_rate, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  .metric .estimator .estimate
+  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
+1 rsq     standard       0.140</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a href="#cb78-1"></a><span class="fu">rmse</span>(interest_test_pred, <span class="at">truth =</span> interest_rate, <span class="at">estimate =</span> .pred)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  .metric .estimator .estimate
+  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;
+1 rmse    standard        4.73</code></pre>
+</div>
+</div>
+</section>
+<section id="your-turn-7-minutes-1" class="slide level2 center">
+<h2>Your turn! (7 minutes)</h2>
+</section>
+<section id="discussion" class="slide level2 center">
+<h2>Discussion</h2>
 <ul>
-<li><p>Think about how you might implement this in the classroom</p></li>
-<li><p>What is a potential challenge</p></li>
-<li><p>Write an activity</p></li>
+<li><p>What is something from this module you can implement in your data science course?</p></li>
+<li><p>What is one potential challenge of implementing this content in your course?</p></li>
 </ul>
 
 

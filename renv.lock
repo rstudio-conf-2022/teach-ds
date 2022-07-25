@@ -260,6 +260,23 @@
       "Hash": "2ba81b120c1655ab696c935ef33ea716",
       "Requirements": []
     },
+    "countdown": {
+      "Package": "countdown",
+      "Version": "0.3.5",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteRepo": "countdown",
+      "RemoteUsername": "gadenbuie",
+      "RemoteRef": "HEAD",
+      "RemoteSha": "a544fa48e2248996002e059ca07ad620d2aec3a8",
+      "Hash": "6b12950bdf51b8a0e865979aad44cdaa",
+      "Requirements": [
+        "callr",
+        "htmltools",
+        "whisker"
+      ]
+    },
     "cowplot": {
       "Package": "cowplot",
       "Version": "1.1.1",
@@ -1416,6 +1433,14 @@
         "jsonlite",
         "magrittr"
       ]
+    },
+    "whisker": {
+      "Package": "whisker",
+      "Version": "0.4",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "ca970b96d894e90397ed20637a0c1bbe",
+      "Requirements": []
     },
     "withr": {
       "Package": "withr",
