@@ -1,9 +1,8 @@
 ---
 title: "Hello #teachds"
 subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
-author: "Mine Çetinkaya-Rundel"
-author: "Maria Tackett"
-footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22) / Module 3"
+author: "Mine Çetinkaya-Rundel + Maria Tackett"
+footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22) / Module 1"
 logo: "../images/logo.png"
 format: 
   revealjs:
