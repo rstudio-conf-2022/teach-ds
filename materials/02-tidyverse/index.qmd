@@ -262,7 +262,7 @@ loans |>
     avg_loan_amount = dollar(avg_loan_amount, accuracy = 1)
     ) |>
   kable(
-    col.names = c("Homeownership", "Average loan amount", "Number of applicants"),
+    col.names = c("Homeownership", "Number of applicants", "Average loan amount"),
     align = "lrr"
     )
 ```
@@ -270,7 +270,7 @@ loans |>
 ```{r}
 #| echo: false
 
-countdown(minutes = 15, font_size = "1.5em")
+countdown(minutes = 10, font_size = "1.5em")
 ```
 
 ## Break it down I
@@ -524,7 +524,7 @@ See next style for desired output.
 ```{r}
 #| echo: false
 
-countdown(minutes = 4, font_size = "1.5em")
+countdown(minutes = 10, font_size = "1.5em")
 ```
 
 ## Desired output
