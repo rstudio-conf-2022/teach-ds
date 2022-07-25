@@ -104,11 +104,11 @@ If you choose to use your local R and RStudio install for the workshop, you shou
 
     install.packages("devtools")
     install.packages("DT")
+    install.packages("fivethirtyeight")
     install.packages("gapminder")
     install.packages("ghclass")
     install.packages("learnr")
     install.packages("lubridate")
-    install.packages("magick")
     install.packages("nycflights13")
     install.packages("openintro")
     install.packages("rvest")
