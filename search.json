@@ -25,7 +25,7 @@
     "href": "modules/d2-08-organizing.html#exercises",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExample presentation\n\n\nDemo\n\n\n\n\nExample course website\n\n\nDemo\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nDemo\n\n\n\n\nDemo\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-03b-coffee-break.html",
@@ -67,7 +67,7 @@
     "href": "modules/d2-05-rstudio-cloud.html#exercises",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-06-reproduciblity.html",
@@ -95,7 +95,7 @@
     "href": "modules/d2-06-reproduciblity.html#exercises",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-07-data-package.html",
@@ -123,7 +123,7 @@
     "href": "modules/d2-07-data-package.html#exercises",
     "title": "Making a data package",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nExercise 2\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-07b-coffee-break.html",
@@ -158,7 +158,7 @@
     "href": "modules/d1-02-tidyverse.html#exercises",
     "title": "Teaching data science with the tidyverse",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 2.1: Grouped Summary\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 2.2: Side-by-side box plots\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nEx 2.1: Grouped Summary\n\n\n\n\nEx 2.2: Side-by-side box plots\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-01-hello.html",
@@ -179,7 +179,7 @@
     "href": "modules/d1-01-hello.html#exercises",
     "title": "Hello #teachds",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 1.1: UN Votes\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 1.1: Exercise design\n\n\n\n\nteach_ds :: Teaching data science with the tidyverse\n\n\nEx 1.3: Bechdel + Quarto\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nEx 1.1: UN Votes\n\n\n\n\nEx 1.1: Exercise design\n\n\n\n\nEx 1.3: Bechdel + Quarto\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-03-tidymodels.html",
@@ -200,7 +200,7 @@
     "href": "modules/d1-03-tidymodels.html#exercises",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.1: Feature engineering\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.2: Fit, predict, evaluate\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nEx 3.3: Train / test data\n\n\n\n\nteach_ds :: Teaching modern modeling with tidymodels\n\n\nFull analysis\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nEx 3.1: Feature engineering\n\n\n\n\nEx 3.2: Fit, predict, evaluate\n\n\n\n\nEx 3.3: Train / test data\n\n\n\n\nFull analysis\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-04-learnr.html",
@@ -221,7 +221,7 @@
     "href": "modules/d1-04-learnr.html#exercises",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nDeployed tutorial\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.1: Writing questions\n\n\n\n\nteach_ds :: Interactivity and immediate feedback with learnr\n\n\nEx 4.2: Automated feedback\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nEx 4.1: Writing exercises\n\n\n\n\nEx 4.2: Writing automated feedback\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d2-06b-lunch-break.html",
@@ -543,7 +543,7 @@
     "href": "materials/02-tidyverse/index.html#start-with-a-data-frame",
     "title": "Teaching data science with the tidyverse",
     "section": "Start with a data frame",
-    "text": "Start with a data frame\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows"
+    "text": "Start with a data frame\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#tidy-data",
@@ -557,7 +557,7 @@
     "href": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic",
     "title": "Teaching data science with the tidyverse",
     "section": "Task: Calculate a summary statistic",
-    "text": "Task: Calculate a summary statistic\n\nCalculate the mean loan amount.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n\n\n\n\nmean(loan_amount)\n\n\n\n\n\nError in mean(loan_amount): object 'loan_amount' not found"
+    "text": "Task: Calculate a summary statistic\n\nCalculate the mean loan amount.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\nmean(loan_amount)\n\n\n\n\n\nError in mean(loan_amount): object 'loan_amount' not found"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#task-calculate-a-summary-statistic-1",
@@ -606,14 +606,14 @@
     "href": "materials/02-tidyverse/index.html#break-it-down-i",
     "title": "Teaching data science with the tidyverse",
     "section": "Break it down I",
-    "text": "Break it down I\n\n\nBased on the applicants’ home ownership status, computer the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows"
+    "text": "Break it down I\n\n\nBased on the applicants’ home ownership status, computer the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\nloans\n\n# A tibble: 9,976 × 6\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#break-it-down-ii",
     "href": "materials/02-tidyverse/index.html#break-it-down-ii",
     "title": "Teaching data science with the tidyverse",
     "section": "Break it down II",
-    "text": "Break it down II\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n\n[input] data frame\n\n\n\n\nloans |>\n  group_by(homeownership)\n\n# A tibble: 9,976 × 6\n# Groups:   homeownership [3]\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n\n\n\n\n\ndata frame [output]"
+    "text": "Break it down II\n\n\nBased on the applicants’ home ownership status, compute the number of applicants and the average loan amount. Display the results in descending order of number of applicants.\n\n\n\n[input] data frame\n\n\n\n\nloans |>\n  group_by(homeownership)\n\n# A tibble: 9,976 × 6\n# Groups:   homeownership [3]\n  loan_amount homeownership bankruptcy application_type annual_income interest_rate\n        <int> <chr>         <chr>      <fct>                    <dbl>         <dbl>\n1       28000 Mortgage      No         individual               90000         14.1 \n2        5000 Rent          Yes        individual               40000         12.6 \n3        2000 Rent          No         individual               40000         17.1 \n4       21600 Rent          No         individual               30000          6.72\n5       23000 Rent          No         joint                    35000         14.1 \n6        5000 Own           No         individual               34000          6.72\n# … with 9,970 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\n\ndata frame [output]"
   },
   {
     "objectID": "materials/02-tidyverse/index.html#break-it-down-iii",
@@ -2123,23 +2123,16 @@
   {
     "objectID": "materials/04-learnr/ex-4-2.html",
     "href": "materials/04-learnr/ex-4-2.html",
-    "title": "Ex 4.1: Writing questions",
+    "title": "Ex 4.2: Writing automated feedback",
     "section": "",
-    "text": "Create a tutorial with three questions:\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd."
-  },
-  {
-    "objectID": "materials/04-learnr/ex-4-3.html",
-    "href": "materials/04-learnr/ex-4-3.html",
-    "title": "Ex 4.2: Automated feedback",
-    "section": "",
-    "text": "Stretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in this section or modify the code in Part 2 of learnr-demo.Rmd."
+    "text": "Stretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in Part 4: Your turn! section or modify the code in Part 2 of learnr-demo.Rmd."
   },
   {
     "objectID": "materials/04-learnr/ex-4-1.html",
     "href": "materials/04-learnr/ex-4-1.html",
-    "title": "Deployed tutorial",
+    "title": "Ex 4.1: Writing exercises",
     "section": "",
-    "text": "The source code is available at github.com/rstudio-conf-2022/teach-ds-learnr and the 04-learnr project in RStudio Cloud."
+    "text": "one multiple choice\none coding exercise\none sortable question\n\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in Part 2: Your turn! section of learnr-demo.Rmd."
   },
   {
     "objectID": "materials/04-learnr/index.html#parts-of-a-tutorial",
@@ -2174,21 +2167,21 @@
     "href": "materials/04-learnr/index.html#getting-started-qmd-rmd",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Getting started: Qmd ➡️ Rmd",
-    "text": "Getting started: Qmd ➡️ Rmd\n\nLearnr tutorials are written in an R Markdown document (.rmd)\nThe syntax and structure is very similar to a Quarto document (.qmd)\nThese documents primarily differ in some arguments in the YAML"
+    "text": "Getting started: Qmd ➡️ Rmd\n\nLearnr tutorials are written in an R Markdown document (.Rmd)\nThe syntax and structure is very similar to a Quarto document (.qmd)\nThese documents primarily differ in some arguments in the YAML"
   },
   {
     "objectID": "materials/04-learnr/index.html#yaml-for-learnr-tutorial",
     "href": "materials/04-learnr/index.html#yaml-for-learnr-tutorial",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "YAML for learnr tutorial",
-    "text": "YAML for learnr tutorial\n\n---\ntitle: \"Learnr Demo\"\noutput: \n  learnr::tutorial:\n    progressive: true\n    allow_skip: true\n    css: \"css/style.css\" \nruntime: shiny_prerendered\n---\n\n\nruntime: shiny_prerendered: Turns R Markdown into interactive app\nprogressive: true: Display one subsection at a time\nallow_skip: true: Able to skip exercises in a section\ncss: \"css/style.css\": Apply custom formatting"
+    "text": "YAML for learnr tutorial\n---\ntitle: \"Learnr Demo\"\noutput: \n  learnr::tutorial:\n    progressive: true\n    allow_skip: true\n    css: \"css/style.css\" \nruntime: shiny_prerendered\n---\n\nruntime: shiny_prerendered: Turns R Markdown into interactive app\nprogressive: true: Display one subsection at a time\nallow_skip: true: Able to skip exercises in a section\ncss: \"css/style.css\": Apply custom formatting"
   },
   {
     "objectID": "materials/04-learnr/index.html#follow-along",
     "href": "materials/04-learnr/index.html#follow-along",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Follow along",
-    "text": "Follow along\nFollow along options:\n\nLocal:\n\nIn RStudio, install and load the learnr, gradethis, sortable, and learnrhash packages\nAccess the source file for the tutorial on GitHub: github.com/matackett/learnr-demo - UPDATE\n\nCloud: Go to the workspace for this course and start the assignment called 04 - Learnr.\nDeployed tutorial: https://minecr.shinyapps.io/learnr-demo"
+    "text": "Follow along\nFollow along options:\n\nLocal:\n\nIn RStudio, install and load the learnr, gradethis, sortable, and learnrhash packages\nAccess the source file for the tutorial on GitHub: https://github.com/rstudio-conf-2022/teach-ds-learnr\n\nCloud: Go to the workspace for this course and start the assignment called 04 - Learnr.\nDeployed tutorial: https://minecr.shinyapps.io/learnr-demo"
   },
   {
     "objectID": "materials/04-learnr/index.html#writing-questions",
@@ -2198,25 +2191,25 @@
     "text": "Writing questions\n\nQuestion types\n\nMultiple choice\nCoding exercises\nSorting questions\n\nAutomated feedback"
   },
   {
-    "objectID": "materials/04-learnr/index.html#exercise-1-writing-questions",
-    "href": "materials/04-learnr/index.html#exercise-1-writing-questions",
+    "objectID": "materials/04-learnr/index.html#your-turn-writing-exercises",
+    "href": "materials/04-learnr/index.html#your-turn-writing-exercises",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "Exercise 1: Writing questions",
-    "text": "Exercise 1: Writing questions\n\n RStudio Cloud > “Module 4 - Learnr” > learnr-demo.rmd\n\n\nCreate a tutorial with three questions:\n\none multiple choice\none coding exercise\none sortable question\n\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in this section of learnr-demo.Rmd.\n\n\n Compare your answer with your neighbor.  Then type the code for one of your exericses.\n\n\n\n\n15:00"
+    "section": "Your turn: Writing exercises",
+    "text": "Your turn: Writing exercises\n\n RStudio Cloud > “Module 4 - Learnr” > learnr-demo.Rmd > Part 2: Your turn!\n\n\nAdd three questions to the tutorial:\n\none multiple choice\none coding exercise\none sortable question\n\nStretch goal: Add hints to the coding exercise.\nYou can write your questions in Part 2: Your turn! section of learnr-demo.Rmd.\n\n\n Compare your answer with your neighbor.  Then type the code for one of your exercises.\n\n\n\n\n15:00"
   },
   {
     "objectID": "materials/04-learnr/index.html#gradethis",
     "href": "materials/04-learnr/index.html#gradethis",
     "title": "Interactivity and immediate feedback with learnr",
     "section": "gradethis",
-    "text": "gradethis\nThe gradethis package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:\n\ngrade_this_code(): Compare student code to model code (strict check)\ngrade_this(): Compare student result to model result (flexible check)\n\n\nremotes::install_github(\"rstudio/gradethis\")"
+    "text": "gradethis\nThe gradethis package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:\n\ngrade_this_code(): Compare student code to model code (strict check)\ngrade_this(): Compare student result to model result (flexible check)\n\n\ndevtools::install_github(\"rstudio/gradethis\")"
   },
   {
-    "objectID": "materials/04-learnr/index.html#exercise-2-automated-feedback",
-    "href": "materials/04-learnr/index.html#exercise-2-automated-feedback",
+    "objectID": "materials/04-learnr/index.html#your-turn-writing-automated-feedback",
+    "href": "materials/04-learnr/index.html#your-turn-writing-automated-feedback",
     "title": "Interactivity and immediate feedback with learnr",
-    "section": "Exercise 2: Automated feedback",
-    "text": "Exercise 2: Automated feedback\n\n RStudio Cloud > “Module 4 - Learnr” > learnr-demo.rmd\n\n\nAdd automated feedback to your coding exercise.\nStretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in this section or modify the code in Part 2 of learnr-demo.Rmd.\n\n\n Compare your answer with your neighbor.  Then type the code for one of your exericses.\n\n\n\n\n10:00"
+    "section": "Your turn: Writing automated feedback",
+    "text": "Your turn: Writing automated feedback\n\n RStudio Cloud > “Module 4 - Learnr” > learnr-demo.Rmd > Part 4: Your turn!\n\n\nAdd automated feedback to your coding exercise.\nStretch goal: Consider 2 -3 common errors students may make. Write specific feedback for those errors.\nYou can write your responses in Part 4: Your turn! section or modify the code in Part 2 of learnr-demo.Rmd.\n\n\n Compare your answer with your neighbor.  Then type the code for one of your exericses.\n\n\n\n\n10:00"
   },
   {
     "objectID": "materials/04-learnr/index.html#minute-paper",

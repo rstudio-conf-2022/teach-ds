@@ -405,7 +405,7 @@
 <h1>What?</h1>
 
 </section>
-<section id="parts-of-a-tutorial" class="slide level2 center">
+<section id="parts-of-a-tutorial" class="slide level2">
 <h2>Parts of a tutorial</h2>
 
 <img data-src="images/learnr-example.png" class="r-stretch quarto-figure-center"><p class="caption"><em>Link to tutorial: <a href="https://minecr.shinyapps.io/dsbox-01-edibnb/">minecr.shinyapps.io/dsbox-01-edibnb</a></em></p></section></section>
@@ -414,7 +414,7 @@
 <h1>Why?</h1>
 
 </section>
-<section id="within-a-course" class="slide level2 center">
+<section id="within-a-course" class="slide level2">
 <h2>Within a course</h2>
 <ul>
 <li>In a flipped classroom
@@ -430,7 +430,7 @@
 <li>Provide immediate and meaningful feedback at scale</li>
 </ul>
 </section>
-<section id="self-learning" class="slide level2 center">
+<section id="self-learning" class="slide level2">
 <h2>Self learning</h2>
 <ul>
 <li>Learn by doing</li>
@@ -443,7 +443,7 @@
 <h1>How?</h1>
 
 </section>
-<section id="topics" class="slide level2 center">
+<section id="topics" class="slide level2">
 <h2>Topics</h2>
 <ul>
 <li><p>Question types</p></li>
@@ -452,27 +452,25 @@
 <li><p>Sharing tutorials with students</p></li>
 </ul>
 </section>
-<section id="getting-started-qmd-rmd" class="slide level2 center">
+<section id="getting-started-qmd-rmd" class="slide level2">
 <h2>Getting started: Qmd ➡️ Rmd</h2>
 <ul>
-<li><p>Learnr tutorials are written in an R Markdown document (<code>.rmd</code>)</p></li>
+<li><p>Learnr tutorials are written in an R Markdown document (<code>.Rmd</code>)</p></li>
 <li><p>The syntax and structure is very similar to a Quarto document (<code>.qmd</code>)</p></li>
 <li><p>These documents primarily differ in some arguments in the YAML</p></li>
 </ul>
 </section>
-<section id="yaml-for-learnr-tutorial" class="slide level2 center">
+<section id="yaml-for-learnr-tutorial" class="slide level2">
 <h2>YAML for learnr tutorial</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">---</span></span>
-<span id="cb1-2"><a href="#cb1-2"></a>title<span class="sc">:</span> <span class="st">"Learnr Demo"</span></span>
-<span id="cb1-3"><a href="#cb1-3"></a>output<span class="sc">:</span> </span>
-<span id="cb1-4"><a href="#cb1-4"></a>  learnr<span class="sc">::</span>tutorial<span class="sc">:</span></span>
-<span id="cb1-5"><a href="#cb1-5"></a>    progressive<span class="sc">:</span> true</span>
-<span id="cb1-6"><a href="#cb1-6"></a>    allow_skip<span class="sc">:</span> true</span>
-<span id="cb1-7"><a href="#cb1-7"></a>    css<span class="sc">:</span> <span class="st">"css/style.css"</span> </span>
-<span id="cb1-8"><a href="#cb1-8"></a>runtime<span class="sc">:</span> shiny_prerendered</span>
-<span id="cb1-9"><a href="#cb1-9"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1"></a><span class="pp">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Learnr Demo"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">output</span><span class="kw">:</span><span class="at"> </span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="at">  learnr:</span><span class="fu">:tutorial</span><span class="kw">:</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="at">    </span><span class="fu">progressive</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="at">    </span><span class="fu">allow_skip</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="at">    </span><span class="fu">css</span><span class="kw">:</span><span class="at"> </span><span class="st">"css/style.css"</span><span class="at"> </span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="fu">runtime</span><span class="kw">:</span><span class="at"> shiny_prerendered</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="pp">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li><code>runtime: shiny_prerendered</code>: Turns R Markdown into interactive app</li>
 <li><code>progressive: true</code>: Display one subsection at a time</li>
@@ -485,20 +483,20 @@
 <h1>Demo</h1>
 
 </section>
-<section id="follow-along" class="slide level2 center">
+<section id="follow-along" class="slide level2">
 <h2>Follow along</h2>
 <p>Follow along options:</p>
 <ul>
 <li><p>Local:</p>
 <ul>
 <li>In RStudio, install and load the <strong>learnr, gradethis<em>,</em></strong> s<strong>ortable</strong>, and <strong>learnrhash</strong> packages</li>
-<li>Access the source file for the tutorial on GitHub: <a href="https://github.com/matackett/learnr-demo">github.com/matackett/learnr-demo</a> - UPDATE</li>
+<li>Access the source file for the tutorial on GitHub: <a href="https://github.com/rstudio-conf-2022/teach-ds-learnr">https://github.com/rstudio-conf-2022/teach-ds-learnr</a></li>
 </ul></li>
 <li><p>Cloud: Go to the workspace for this course and start the assignment called <strong>04 - Learnr</strong>.</p></li>
 <li><p>Deployed tutorial: <a href="https://minecr.shinyapps.io/learnr-demo" class="uri">https://minecr.shinyapps.io/learnr-demo</a></p></li>
 </ul>
 </section>
-<section id="writing-questions" class="slide level2 center">
+<section id="writing-questions" class="slide level2">
 <h2>Writing questions</h2>
 <ul>
 <li><strong>Question types</strong>
@@ -510,33 +508,33 @@
 <li><strong>Automated feedback</strong></li>
 </ul>
 </section>
-<section id="exercise-1-writing-questions" class="slide level2 small center">
-<h2>Exercise 1: Writing questions</h2>
+<section id="your-turn-writing-exercises" class="slide level2 small">
+<h2>Your turn: Writing exercises</h2>
 <div class="cloud">
-<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; “Module 4 - Learnr” &gt; learnr-demo.rmd</p>
+<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; “Module 4 - Learnr” &gt; learnr-demo.Rmd &gt; Part 2: Your turn!</p>
 </div>
 <div class="appex">
-<p>Create a tutorial with three questions:</p>
+<p>Add three questions to the tutorial:</p>
 <ul>
 <li>one multiple choice</li>
 <li>one coding exercise</li>
 <li>one sortable question</li>
 </ul>
 <p><strong>Stretch goal</strong>: Add hints to the coding exercise.</p>
-<p>You can write your questions in this section of <code>learnr-demo.Rmd</code>.</p>
+<p>You can write your questions in Part 2: Your turn! section of <code>learnr-demo.Rmd</code>.</p>
 </div>
 <div class="share">
-<p><i class="fa-solid fa-user-group"></i> Compare your answer with your neighbor. <i class="fa-brands fa-discord"></i> Then type the code for one of your exericses.</p>
+<p><i class="fa-solid fa-user-group"></i> Compare your answer with your neighbor. <i class="fa-brands fa-discord"></i> Then type the code for one of your exercises.</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dec3f3" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62ded9a9" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">15</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section>
-<section id="gradethis" class="slide level2 center">
+<section id="gradethis" class="slide level2">
 <h2>gradethis</h2>
 <p>The <a href="https://pkgs.rstudio.com/gradethis/">gradethis</a> package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:</p>
 <ul>
@@ -544,25 +542,25 @@
 <li><p><code>grade_this()</code>: Compare student result to model result (flexible check)</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rstudio/gradethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rstudio/gradethis"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="exercise-2-automated-feedback" class="slide level2 small center">
-<h2>Exercise 2: Automated feedback</h2>
+<section id="your-turn-writing-automated-feedback" class="slide level2 small">
+<h2>Your turn: Writing automated feedback</h2>
 <div class="cloud">
-<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; “Module 4 - Learnr” &gt; learnr-demo.rmd</p>
+<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; “Module 4 - Learnr” &gt; learnr-demo.Rmd &gt; Part 4: Your turn!</p>
 </div>
 <div class="appex">
 <p>Add automated feedback to your coding exercise.</p>
 <p><strong>Stretch goal</strong>: Consider 2 -3 common errors students may make. Write specific feedback for those errors.</p>
-<p>You can write your responses in this section or modify the code in Part 2 of <code>learnr-demo.Rmd</code>.</p>
+<p>You can write your responses in Part 4: Your turn! section or modify the code in Part 2 of <code>learnr-demo.Rmd</code>.</p>
 </div>
 <div class="share">
 <p><i class="fa-solid fa-user-group"></i> Compare your answer with your neighbor. <i class="fa-brands fa-discord"></i> Then type the code for one of your exericses.</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62dec46f" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62dedbd2" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -573,7 +571,7 @@
 <h1>Recording student responses</h1>
 
 </section>
-<section id="minute-paper" class="slide level2 center">
+<section id="minute-paper" class="slide level2">
 <h2>“Minute paper”</h2>
 <p>Add a link to a form at the end of the tutorial for a “minute paper”</p>
 <ul>
@@ -582,7 +580,7 @@
 <li class="fragment"><p><em>If you got every single question correct on the first try, write one question you would still like clarified on the topics covered in this quiz.</em></p></li>
 </ul>
 </section>
-<section id="learnrhash" class="slide level2 center">
+<section id="learnrhash" class="slide level2">
 <h2>learnrhash</h2>
 <ul>
 <li><p>Use the <a href="https://github.com/rundel/learnrhash"><strong>learnrhash</strong></a> package to collect student responses from learnr tutorials.</p></li>
@@ -592,7 +590,7 @@
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"rundel/learnrhash"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="sharing-with-students" class="slide level2 center">
+<section id="sharing-with-students" class="slide level2">
 <h2>Sharing with students</h2>
 <ul>
 <li><p>Deploy on</p>
@@ -607,7 +605,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="learn-more" class="slide level2 center">
+<section id="learn-more" class="slide level2">
 <h2>Learn more!</h2>
 <p><strong>Creating learnr tutorials</strong></p>
 <ul>
@@ -619,7 +617,7 @@
 </ul></li>
 </ul>
 </section>
-<section id="learn-more-1" class="slide level2 center">
+<section id="learn-more-1" class="slide level2">
 <h2>Learn more!</h2>
 <p><strong>Sharing tutorials</strong></p>
 <ul>
@@ -627,13 +625,8 @@
 <li><a href="https://education.rstudio.com/blog/2020/09/delivering-learnr-tutorials-in-a-package/">How to deliver learnr tutorials in a package</a> by Desirée De Leon</li>
 </ul>
 </section></section>
-<section>
 <section id="workshop-check-in" class="title-slide slide level1 center">
 <h1>Workshop check in</h1>
-
-</section>
-<section class="slide level2 center">
-
 <div class="question">
 <p>We have completed Day 01! Please answer the following using your sticky notes:</p>
 <ul>
@@ -646,7 +639,7 @@
 <img src="../images/logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://rstd.io/teach-ds-conf22">🔗 rstd.io/teach-ds-conf22</a></p>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -733,7 +726,7 @@
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
