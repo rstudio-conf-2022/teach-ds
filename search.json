@@ -256,7 +256,7 @@
     "href": "materials/07-data-package/data-package-notes.html",
     "title": "Designing the Data Science Classroom",
     "section": "",
-    "text": "## code to prepare weather dataset goes here\n\n\n# load packages —————————————————-\n\n\nlibrary(tidyverse)\n\nlibrary(janitor)\n\n\n# load data ——————————————————–\n\n\nweather_raw <- read_csv(“data-raw/weather/weather.csv”)\n\n\nweather <- weather_raw |>\n\n  clean_names()\n\n\nusethis::use_data(weather, overwrite = TRUE)\n\n\ndevtools::load_all(), check that weather exists. then try ?w eather – nothing.\nuse_r(“weather”), then go to https://r-pkgs.org/data.html#documenting-data and copy-paste\nwrite documentation\n\n#’ Hourly weather for 50 US cities\n\n#’\n\n#’ A dataset containing hourly weather data for 50 US cities.\n\n#’\n\n#’ @format A data frame with 6000 rows and 21 variables:\n\n…\n\n#’ @source Dark Sky, \n“weather”\n\n\ndata dictionary\n\nnames(weather) %>% cat(sep = “”)\ncity - Name of city. state - Name of state. time - Time. summary - A human-readable text summary. icon - A machine-readable text summary, suitable for selecting an icon for display. precip_intensity - The intensity (in inches of liquid water per hour) of precipitation occurring at the given time. This value is conditional on probability (that is, assuming any precipitation occurs at all).\n\nprecip_probability - The probability of precipitation occurring, between 0 and 1, inclusive. temperature - The air temperature in degrees Fahrenheit. apparent_temperature - The apparent (or “feels like”) temperature in degrees Fahrenheit. dew_point - The dew point in degrees Fahrenheit. humidity - The relative humidity, between 0 and 1, inclusive. pressure - The sea-level air pressure in millibars. wind_speed - The wind speed in miles per hour. wind_gust - The time at which the maximum wind gust speed occurs during the day. wind_bearing - The direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise. (If windSpeed is zero, then this value will not be defined.) cloud_cover - The percentage of sky occluded by clouds, between 0 and 1, inclusive. uv_index - The UV index. visibility - The average visibility in miles, capped at 10 miles. ozone - The columnar density of total atmospheric ozone at the given time in Dobson units. precip_type - The type of precipitation occurring at the given time. If defined, this property will have one of the following values: “rain”, “snow”, or “sleet” (which refers to each of freezing rain, ice pellets, and “wintery mix”). forecast - Indicator for whether measurement is historical (FALSE) or forecast (TRUE).\n\ndocument(), load_all(), ?w eather\nuse_git(), use_github()\nuse_readme_rmd()\n\n```{r}\n\n#| label: example\n\n#| message: false\n\n\nlibrary(usweather)\n\nlibrary(dplyr)\n\n\nweather |>\n\n  filter(!forecast) |>\n\n  group_by(city) |>\n\n  summarise(mean_temp = mean(temperature)) %>%\n\n  arrange(desc(mean_temp))\n\n```\n\n\nDESCRIPTION\n\n\nTitle: Provides hourly temperature for 50 US cities\nAuthors@R: person(“Mine”, “Çetinkaya-Rundel”, , “cetinkaya.mine@gmail.com, role = c(”aut”, “cre”), comment = c(ORCID = “0000-0001-6452-2420”))\nuse_gpl3_license()\n\n\nuse_pkgdown(), build_site()\nuse_github_pages(), use_github_action(name = “pkgdown”), check action on repo, find page\n\nyour turn: add cities.csv\n\nuse_tutorial(“explore-usweather”, title = “Exploring weather in US cities”)\n\nadd library(usweather) plop weather into a code chunk\ninstall pkg from github show it works in tutorials pane"
+    "text": "## code to prepare weather dataset goes here\n\n# load packages —————————————————-\n\nlibrary(tidyverse)\nlibrary(janitor)\n\n# load data ——————————————————–\n\nweather_raw <- read_csv(“data-raw/weather/weather.csv”)\n\nweather <- weather_raw |>\n  clean_names()\n\nusethis::use_data(weather, overwrite = TRUE)\n\ndevtools::load_all(), check that weather exists. then try ?weather – nothing.\nuse_r(“weather”), then go to https://r-pkgs.org/data.html#documenting-data and copy-paste\nwrite documentation\n\n#’ Hourly weather for 50 US cities\n#’\n#’ A dataset containing hourly weather data for 50 US cities.\n#’\n#’ @format A data frame with 6000 rows and 21 variables:\n…\n#’ @source Dark Sky, \n“weather”\n\ndata dictionary\n\nnames(weather) %>% cat(sep = “”)\ncity - Name of city. state - Name of state. time - Time. summary - A human-readable text summary. icon - A machine-readable text summary, suitable for selecting an icon for display. precip_intensity - The intensity (in inches of liquid water per hour) of precipitation occurring at the given time. This value is conditional on probability (that is, assuming any precipitation occurs at all).\nprecip_probability - The probability of precipitation occurring, between 0 and 1, inclusive. temperature - The air temperature in degrees Fahrenheit. apparent_temperature - The apparent (or “feels like”) temperature in degrees Fahrenheit. dew_point - The dew point in degrees Fahrenheit. humidity - The relative humidity, between 0 and 1, inclusive. pressure - The sea-level air pressure in millibars. wind_speed - The wind speed in miles per hour. wind_gust - The time at which the maximum wind gust speed occurs during the day. wind_bearing - The direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise. (If windSpeed is zero, then this value will not be defined.) cloud_cover - The percentage of sky occluded by clouds, between 0 and 1, inclusive. uv_index - The UV index. visibility - The average visibility in miles, capped at 10 miles. ozone - The columnar density of total atmospheric ozone at the given time in Dobson units. precip_type - The type of precipitation occurring at the given time. If defined, this property will have one of the following values: “rain”, “snow”, or “sleet” (which refers to each of freezing rain, ice pellets, and “wintery mix”). forecast - Indicator for whether measurement is historical (FALSE) or forecast (TRUE).\n\ndocument(), load_all(), ?weather\nuse_git(), use_github(“pkgname”)\nuse_readme_rmd()\n\n```{r}\n#| label: example\n#| message: false\n\nlibrary(usweather)\nlibrary(dplyr)\n\nweather |>\n  filter(!forecast) |>\n  group_by(city) |>\n  summarise(mean_temp = mean(temperature)) %>%\n  arrange(desc(mean_temp))\n```\n\nDESCRIPTION\n\n\nTitle: Provides hourly temperature for 50 US cities\nAuthors@R: person(“Mine”, “Çetinkaya-Rundel”, , “cetinkaya.mine@gmail.com, role = c(”aut”, “cre”), comment = c(ORCID = “0000-0001-6452-2420”))\nuse_gpl3_license()\n\n\nuse_pkgdown(), build_site()\nuse_github_pages(), use_github_action(name = “pkgdown”), check action on repo, find page\n\nyour turn: add cities.csv\n\nuse_tutorial(“explore-usweather”, title = “Exploring weather in US cities”)\n\nadd library(usweather) plop weather into a code chunk\ninstall pkg from github show it works in tutorials pane"
   },
   {
     "objectID": "materials/07-data-package/index.html#goal",
@@ -2300,7 +2300,7 @@
     "href": "materials/05-rstudio-cloud/index.html#tidymodels-in-the-curriculum",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Tidymodels in the curriculum",
-    "text": "Tidymodels in the curriculum\n\n\n\nIntro data science:\n\nAs part of main curriculum:\n\nPredictive multiple regression models\nSimulation-based inference for bootstrap intervals and hypothesis testing\n\nIn looking further: A more advanced example (e.g., text classification) featuring recipe building and cross validation\n\n\n\n\nRegression analysis / Stat 2:\n\nAs part of the main curriculum:\n\nMultiple linear, logistic, and ordinal logistic regression as predictive as well as inferential models\nFor predictive models: start with test/train split, build recipes, use workflows, conduct cross validation\n\nIn looking further: Hyper-parameter tuning, or survival models, or spatial models"
+    "text": "Tidymodels in the curriculum\n\n\n\nIntro data science:\n\nAs part of main curriculum:\n\nPredictive multiple regression models\nSimulation-based inference for bootstrap intervals and hypothesis testing\n\nIn looking further: A more advanced example (e.g., text classification) featuring recipe building and cross validation\n\n\n\n\nRegression analysis / Stat 2:\n\nAs part of the main curriculum:\n\nMultiple linear, logistic, and ordinal logistic regression as predictive as well as inferential models\nFor predictive models: start with test/train split, build recipes, use workflows, conduct cross validation\n\nIn looking further: Hyper-parameter tuning, or survival models, or spatial models\n\n\n\n\n\nBoth curricula: library(tidymodels) – don’t make a big fuss about the individual packages, though helpful to communicate tidymodels is a meta-package and documentation for individual functions are in individual packages."
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#cherish-day-one",
@@ -2349,14 +2349,14 @@
     "href": "materials/05-rstudio-cloud/index.html#contexts",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Contexts",
-    "text": "Contexts\n\nSemester long courses\n\nIntro data science / statistics: little to no background in stats, data science, programming\nUpper level data science / statistics: Varied computing background and different computer setups\n\nShorter workshops: Likely no opportunity to communicate pre-workshop instructions, varied computing background and learning goals"
+    "text": "Contexts\n\n\nSemester long courses\n\nIntro data science / statistics: little to no background in stats, data science, programming\nUpper level data science / statistics: Varied computing background and different computer setups\n\nShorter workshops: Likely no opportunity to communicate pre-workshop instructions, varied computing background and learning goals"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#your-turn",
     "href": "materials/05-rstudio-cloud/index.html#your-turn",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Your turn!",
-    "text": "Your turn!\nLog out of RStudio Cloud and log back in.\n\n\n\n03:00"
+    "text": "Your turn!\nLog out of RStudio Cloud and log back in.\n\n\n\n03:00\n\n\n\n\n Reminder: https://rstd.io/teach-ds-conf22-cloud"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#workspaces",
@@ -2377,14 +2377,14 @@
     "href": "materials/05-rstudio-cloud/index.html#projects-from-git",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Projects from Git",
-    "text": "Projects from Git\n\nA new project from Git Repo in RStudio Cloud\nis creates (cloning) a project from a Git repository RStudio"
+    "text": "Projects from Git\n\nA new project from Git Repo in RStudio Cloud\nis creating (cloning) a project from a Git repository RStudio"
   },
   {
-    "objectID": "materials/05-rstudio-cloud/index.html#setup-in-140-characters",
-    "href": "materials/05-rstudio-cloud/index.html#setup-in-140-characters",
+    "objectID": "materials/05-rstudio-cloud/index.html#setup-in-280-characters",
+    "href": "materials/05-rstudio-cloud/index.html#setup-in-280-characters",
     "title": "Computing infrastructure with RStudio Cloud",
-    "section": "Setup in 140 characters",
-    "text": "Setup in 140 characters"
+    "section": "Setup in 280 characters",
+    "text": "Setup in 280 characters"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#iconography",
@@ -2394,18 +2394,18 @@
     "text": "Iconography\n\n👩‍🏫 teacher\n👩‍💻 student"
   },
   {
-    "objectID": "materials/05-rstudio-cloud/index.html#some-title",
-    "href": "materials/05-rstudio-cloud/index.html#some-title",
+    "objectID": "materials/05-rstudio-cloud/index.html#single-project-instructor-view",
+    "href": "materials/05-rstudio-cloud/index.html#single-project-instructor-view",
     "title": "Computing infrastructure with RStudio Cloud",
-    "section": "Some title",
-    "text": "Some title\n\n\n👩‍🏫"
+    "section": "Single project, instructor view",
+    "text": "Single project, instructor view\n\n\n👩‍🏫"
   },
   {
-    "objectID": "materials/05-rstudio-cloud/index.html#section",
-    "href": "materials/05-rstudio-cloud/index.html#section",
+    "objectID": "materials/05-rstudio-cloud/index.html#single-project-student-view",
+    "href": "materials/05-rstudio-cloud/index.html#single-project-student-view",
     "title": "Computing infrastructure with RStudio Cloud",
-    "section": "",
-    "text": "👩‍🏫"
+    "section": "Single project, student view",
+    "text": "Single project, student view\n\n\n👩‍💻"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#sharing-an-individual-project",
@@ -2415,32 +2415,32 @@
     "text": "Sharing an individual project\n\n\nGood!\n\nStudents land directly in a project upon login\nWorks well for workshops where all work will be completed in a single project\nAlso great for sharing code in general, e.g. collaboration, reprexes, etc.\n\n\nNot so good…\n\nStudents need to remember to make a copy of the project (which means you need to remember to remind them!)\nChanges you make after student launches the project won’t propagate to their project"
   },
   {
-    "objectID": "materials/05-rstudio-cloud/index.html#your-turn-create-a-sharable-project",
-    "href": "materials/05-rstudio-cloud/index.html#your-turn-create-a-sharable-project",
+    "objectID": "materials/05-rstudio-cloud/index.html#your-turn-create-a-shareable-project",
+    "href": "materials/05-rstudio-cloud/index.html#your-turn-create-a-shareable-project",
     "title": "Computing infrastructure with RStudio Cloud",
-    "section": "Your turn: Create a sharable project",
-    "text": "Your turn: Create a sharable project\n\nFirst you’re the instructor:\n\nCreate a new project and give it a name.\nCreate a template R Markdown document in the project.\nChange the access level of the project so others can see it as well.\nGrab the project URL and share it with your neighbor:\nTip: You can create a short link for the URL at bitly.com.\n\nNow you’re the student: Access your neighbor’s project as if you’re the student and they’re the instructor.\n\n\n\n\n10:00"
+    "section": "Your turn: Create a shareable project",
+    "text": "Your turn: Create a shareable project\n\n👩‍🏫 First you’re the instructor:\n\nCreate a new project and give it a name.\nCreate a new Quarto document in the project – just the new document template is fine!\nChange the access level of the project so others can see it as well.\nGrab the project URL and share it with your neighbor.\n\nTip: You can create a short link for the URL at bitly.com.\n\n\n👩‍💻 Now you’re the student: Access your neighbor’s project as if you’re the student and they’re the instructor.\n\n\n\n\n10:00\n\n\n\n\n\n\n\n\n\nDo not create the project in the workshop workspace. Create it in “Your Workspace” so you own it."
   },
   {
-    "objectID": "materials/05-rstudio-cloud/index.html#section-1",
-    "href": "materials/05-rstudio-cloud/index.html#section-1",
+    "objectID": "materials/05-rstudio-cloud/index.html#creating-a-workspace-instructor-view",
+    "href": "materials/05-rstudio-cloud/index.html#creating-a-workspace-instructor-view",
     "title": "Computing infrastructure with RStudio Cloud",
-    "section": "",
-    "text": "👩‍🏫"
+    "section": "Creating a workspace, instructor view",
+    "text": "Creating a workspace, instructor view\n\n\n👩‍🏫"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#your-turn-create-a-workspace",
     "href": "materials/05-rstudio-cloud/index.html#your-turn-create-a-workspace",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Your turn: Create a workspace",
-    "text": "Your turn: Create a workspace\n\nYou’re the instructor:\n\nCreate a new workspace and give it a name.\n\nTip: Check in with your neighbor and use a different name.\n\nAdd a short description.\n\n\n\n\n\n05:00"
+    "text": "Your turn: Create a workspace\n\n👩‍🏫 You’re the instructor:\n\nCreate a new workspace and give it a name.\n\nTip: Check in with your neighbor and use a different name.\n\nAdd a short description.\n\n\n\n\n\n05:00"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#getting-students-into-class-workspace",
     "href": "materials/05-rstudio-cloud/index.html#getting-students-into-class-workspace",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Getting students into class workspace",
-    "text": "Getting students into class workspace\nUnder the Membership tab:\n\n\n\n\n\nMake workspace shared for a short period of time, share link with students, enroll them as contributors.\nAfter drop/add switch over to this access level\nUse invitations for visitors added mid-semester\n\n\n\n\n👩‍🏫"
+    "text": "Getting students into class workspace\nUnder the Membership tab:\n\n\n\n\n\nMake workspace shared for a short period of time, share link with students, enroll them as contributors.\nAfter drop/add switch over to this access level\nUse invitations for visitors added mid-semester\n\n👩‍🏫"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#permission-levels",
@@ -2468,35 +2468,35 @@
     "href": "materials/05-rstudio-cloud/index.html#your-turn-adjust-settings",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Your turn: Adjust settings",
-    "text": "Your turn: Adjust settings\n\nYou’re the instructor:\n\nChange the settings of your workspace to Shared.\nChange the permissions so that contributors or viewers can’t see the list of members and can’t change the visibility of their projects.\n\n\n\n\n\n03:00"
+    "text": "Your turn: Adjust settings\n\n👩‍🏫 You’re the instructor:\n\nChange the settings of your workspace to Shared.\nChange the permissions so that contributors or viewers can’t see the list of members and can’t change the visibility of their projects.\n\n\n\n\n\n03:00"
   },
   {
-    "objectID": "materials/05-rstudio-cloud/index.html#section-2",
-    "href": "materials/05-rstudio-cloud/index.html#section-2",
+    "objectID": "materials/05-rstudio-cloud/index.html#add-a-base-project-instructor-view",
+    "href": "materials/05-rstudio-cloud/index.html#add-a-base-project-instructor-view",
     "title": "Computing infrastructure with RStudio Cloud",
-    "section": "",
-    "text": "👩‍🏫"
+    "section": "Add a base project, instructor view",
+    "text": "Add a base project, instructor view\n\n\n👩‍🏫"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#your-turn-create-an-assignment",
     "href": "materials/05-rstudio-cloud/index.html#your-turn-create-an-assignment",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Your turn: Create an assignment",
-    "text": "Your turn: Create an assignment\n\nYou’re the instructor:\n\nAdd a base project to your workspace:\n\nInstall one or two of your favorite packages.\nStart an R Markdown document so necessary packages get installed.\nAdd a code-of-conduct.md (you can copy-paste from here if you like) or some other plain text document.\n\nMake this project visible to everyone. In the settings menu, set this project as the base project.\nCreate a new assignment: Homework 01.\n\n\n\n\n\n10:00"
+    "text": "Your turn: Create an assignment\n\n👩‍🏫 You’re the instructor:\n\nAdd a base project to your workspace:\n\nInstall one or two of your favorite packages.\nCreate a Quarto document so necessary packages get installed.\nAdd a code-of-conduct.md (you can copy-paste from here if you like) or some other plain text document.\n\nMake this project visible to everyone. In the settings menu, set this project as the base project.\nCreate a new assignment: Homework 01.\n\n\n\n\n\n10:00"
   },
   {
-    "objectID": "materials/05-rstudio-cloud/index.html#section-3",
-    "href": "materials/05-rstudio-cloud/index.html#section-3",
+    "objectID": "materials/05-rstudio-cloud/index.html#joining-a-workspace-student-view",
+    "href": "materials/05-rstudio-cloud/index.html#joining-a-workspace-student-view",
     "title": "Computing infrastructure with RStudio Cloud",
-    "section": "",
-    "text": "👩‍💻"
+    "section": "Joining a workspace, student view",
+    "text": "Joining a workspace, student view\n\n\n👩‍💻"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#your-turn-assign-work",
     "href": "materials/05-rstudio-cloud/index.html#your-turn-assign-work",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Your turn: Assign work",
-    "text": "Your turn: Assign work\n\nYou’re the instructor: - Grab the sharing link for your workspace. - Optional: Make a short link for it. - Share it with your neighbor.\nNow you’re the student: - Access your neighbor’s workspace and start the assignment.\n\n\n\n\n05:00"
+    "text": "Your turn: Assign work\n\n👩‍🏫 You’re the instructor:\n\nGrab the sharing link for your workspace.\nOptional: Make a short link for it.\nShare it with your neighbor.\n\n👩‍💻 Now you’re the student: Access your neighbor’s workspace and start the assignment.\n\n\n\n\n05:00"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#git-integration",
@@ -2531,14 +2531,14 @@
     "href": "materials/05-rstudio-cloud/index.html#rscloud",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "📦 rscloud",
-    "text": "📦 rscloud\n\nA new package for managing RStudio Cloud spaces with R: github.com/rstudio/rscloud\nRequires an API key, which any instructor can request (via email for now, but soon in the UI as well)"
+    "text": "📦 rscloud\n\nA new package for managing RStudio Cloud spaces with R: github.com/rstudio/rscloud\nRequires an API key, which any instructor can request"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#collaborative-editing",
     "href": "materials/05-rstudio-cloud/index.html#collaborative-editing",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Collaborative editing",
-    "text": "Collaborative editing\n\nInstructor and student can collaboratively edit a script\nEnvironments are not shared\nDemo!"
+    "text": "Collaborative editing\n\nInstructor and student can collaboratively edit a script\nEnvironments are not shared\nDemo – any volunteers?"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#tips",
