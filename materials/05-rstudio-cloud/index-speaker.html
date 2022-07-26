@@ -6,7 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Mine Çetinkaya-Rundel">
@@ -380,6 +381,9 @@
 </div>
 </div>
 </div>
+<div class="fragment">
+<p>Both curricula: <code>library(tidymodels)</code> – don’t make a big fuss about the individual packages, though helpful to communicate <strong>tidymodels</strong> is a meta-package and documentation for individual functions are in individual packages.</p>
+</div>
 </section></section>
 <section>
 <section id="flashback" class="title-slide slide level1 center">
@@ -456,7 +460,7 @@
 <h2>An RStudio Cloud project</h2>
 
 <img data-src="images/rstudio-cloud.png" class="r-stretch"></section>
-<section id="why-rstudio-cloud" class="slide level2">
+<section id="why-rstudio-cloud" class="slide level2 small">
 <h2>Why RStudio Cloud?</h2>
 <ul>
 <li>Does not require IT support</li>
@@ -475,24 +479,29 @@
 </section>
 <section id="contexts" class="slide level2">
 <h2>Contexts</h2>
+<div>
 <ul>
-<li>Semester long courses
+<li class="fragment">Semester long courses
 <ul>
-<li>Intro data science / statistics: little to no background in stats, data science, programming</li>
-<li>Upper level data science / statistics: Varied computing background and different computer setups</li>
+<li class="fragment">Intro data science / statistics: little to no background in stats, data science, programming</li>
+<li class="fragment">Upper level data science / statistics: Varied computing background and different computer setups</li>
 </ul></li>
-<li>Shorter workshops: Likely no opportunity to communicate pre-workshop instructions, varied computing background and learning goals</li>
+<li class="fragment">Shorter workshops: Likely no opportunity to communicate pre-workshop instructions, varied computing background and learning goals</li>
 </ul>
+</div>
 </section>
 <section id="your-turn" class="slide level2">
 <h2>Your turn!</h2>
 <p>Log out of RStudio Cloud and log back in.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df64dc" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62dfe5f9" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
+</div>
+<div class="cloud">
+<p><i class="fa-solid fa-cloud"></i> Reminder: <a href="rstd.io/teach-ds-conf22-cloud">https://rstd.io/teach-ds-conf22-cloud</a></p>
 </div>
 </section>
 <section id="workspaces" class="slide level2">
@@ -527,7 +536,7 @@
 <h2>Projects from Git</h2>
 <ul>
 <li>A new project from Git Repo in RStudio Cloud</li>
-<li>is creates (cloning) a project from a Git repository RStudio</li>
+<li>is creating (cloning) a project from a Git repository RStudio</li>
 </ul>
 </section></section>
 <section>
@@ -535,32 +544,32 @@
 <h1>Teaching a short workshop</h1>
 
 </section>
-<section id="setup-in-140-characters" class="slide level2">
-<h2>Setup in 140 characters</h2>
+<section id="setup-in-280-characters" class="slide level2">
+<h2>Setup in 280 characters</h2>
 
 <img data-src="images/cloud-setup-tweet.png" class="r-stretch"></section>
 <section id="iconography" class="slide level2">
 <h2>Iconography</h2>
-<div class="larger">
+<div class="largest" style="text-align: center;">
 <p>👩‍🏫 teacher</p>
 <p>👩‍💻 student</p>
 </div>
 </section>
-<section id="some-title" class="slide level2">
-<h2>Some title</h2>
+<section id="single-project-instructor-view" class="slide level2">
+<h2>Single project, instructor view</h2>
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/81MrMcKZTX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 <div class="larger" style="text-align: right;">
 <p>👩‍🏫</p>
 </div>
 </section>
-<section id="section" class="slide level2">
-<h2></h2>
+<section id="single-project-student-view" class="slide level2">
+<h2>Single project, student view</h2>
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/_VCYdDQTFG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 <div class="larger" style="text-align: right;">
-<p>👩‍🏫</p>
+<p>👩‍💻</p>
 </div>
 </section>
-<section id="sharing-an-individual-project" class="slide level2">
+<section id="sharing-an-individual-project" class="slide level2 small">
 <h2>Sharing an individual project</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -579,23 +588,35 @@
 </div>
 </div>
 </section>
-<section id="your-turn-create-a-sharable-project" class="slide level2">
-<h2>Your turn: Create a sharable project</h2>
+<section id="your-turn-create-a-shareable-project" class="slide level2 small">
+<h2>Your turn: Create a shareable project</h2>
 <div class="appex">
-<p><strong>First you’re the instructor:</strong></p>
+<p>👩‍🏫 <strong>First you’re the instructor:</strong></p>
 <ul>
 <li>Create a new project and give it a name.</li>
-<li>Create a template R Markdown document in the project.</li>
+<li>Create a new Quarto document in the project – just the new document template is fine!</li>
 <li>Change the access level of the project so others can see it as well.</li>
-<li>Grab the project URL and share it with your neighbor:</li>
+<li>Grab the project URL and share it with your neighbor.
+<ul>
 <li>Tip: You can create a short link for the URL at bitly.com.</li>
+</ul></li>
 </ul>
-<p><strong>Now you’re the student:</strong> Access your neighbor’s project as if you’re the student and they’re the instructor.</p>
+<p>👩‍💻 <strong>Now you’re the student:</strong> Access your neighbor’s project as if you’re the student and they’re the instructor.</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df6542" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62dfe84a" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+<div class="callout callout-warning callout-style-simple">
+<div class="callout-body">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-content">
+<p>Do not create the project in the workshop workspace. Create it in “Your Workspace” so you own it.</p>
 </div>
 </div>
 </div>
@@ -605,8 +626,8 @@
 <h1>Teaching a longer course</h1>
 
 </section>
-<section id="section-1" class="slide level2">
-<h2></h2>
+<section id="creating-a-workspace-instructor-view" class="slide level2">
+<h2>Creating a workspace, instructor view</h2>
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/tqu1m9R1HLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 <div class="larger" style="text-align: right;">
 <p>👩‍🏫</p>
@@ -615,7 +636,7 @@
 <section id="your-turn-create-a-workspace" class="slide level2">
 <h2>Your turn: Create a workspace</h2>
 <div class="appex">
-<p><strong>You’re the instructor:</strong></p>
+<p>👩‍🏫 <strong>You’re the instructor:</strong></p>
 <ul>
 <li>Create a new workspace and give it a name.
 <ul>
@@ -626,7 +647,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df629f" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62dfe4c8" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -637,26 +658,26 @@
 <p><strong>Under the Membership tab:</strong></p>
 <div class="columns">
 <div class="column" style="width:40%;">
-<p><img data-src="images/workspace-access.png"></p>
+<p><img data-src="images/workspace-access.png" width="500"></p>
 </div><div class="column" style="width:60%;">
 <ul>
-<li>Make workspace shared for a short period of time, share link with students, enroll them as contributors.</li>
-<li>After drop/add switch over to this access level</li>
-<li>Use invitations for visitors added mid-semester</li>
-</ul>
-</div>
-</div>
+<li><p>Make workspace shared for a short period of time, share link with students, enroll them as contributors.</p></li>
+<li><p>After drop/add switch over to this access level</p></li>
+<li><p>Use invitations for visitors added mid-semester</p>
 <div class="larger" style="text-align: right;">
 <p>👩‍🏫</p>
+</div></li>
+</ul>
+</div>
 </div>
 </section>
 <section id="permission-levels" class="slide level2">
 <h2>Permission levels</h2>
 <table>
 <colgroup>
-<col style="width: 24%">
-<col style="width: 50%">
-<col style="width: 24%">
+<col style="width: 20%">
+<col style="width: 58%">
+<col style="width: 20%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -719,7 +740,7 @@
 <section id="your-turn-adjust-settings" class="slide level2">
 <h2>Your turn: Adjust settings</h2>
 <div class="appex">
-<p><strong>You’re the instructor:</strong></p>
+<p>👩‍🏫 <strong>You’re the instructor:</strong></p>
 <ul>
 <li>Change the settings of your workspace to Shared.</li>
 <li>Change the permissions so that contributors or viewers can’t see the list of members and can’t change the visibility of their projects.</li>
@@ -727,28 +748,28 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df64e1" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62dfe545" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section>
-<section id="section-2" class="slide level2">
-<h2></h2>
+<section id="add-a-base-project-instructor-view" class="slide level2">
+<h2>Add a base project, instructor view</h2>
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/Fz9UR6uxAG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 <div class="larger" style="text-align: right;">
 <p>👩‍🏫</p>
 </div>
 </section>
-<section id="your-turn-create-an-assignment" class="slide level2">
+<section id="your-turn-create-an-assignment" class="slide level2 small">
 <h2>Your turn: Create an assignment</h2>
 <div class="appex">
-<p><strong>You’re the instructor:</strong></p>
+<p>👩‍🏫 <strong>You’re the instructor:</strong></p>
 <ul>
 <li>Add a base project to your workspace:
 <ul>
 <li>Install one or two of your favorite packages.</li>
-<li>Start an R Markdown document so necessary packages get installed.</li>
+<li>Create a Quarto document so necessary packages get installed.</li>
 <li>Add a code-of-conduct.md (you can copy-paste from <a href="https://web.cvent.com/event/36ebe042-0113-44f1-8e36-b9bc5d0733bf/websitePage:988cd046-614c-445b-b658-1c8d83ca82b0">here</a> if you like) or some other plain text document.</li>
 </ul></li>
 <li>Make this project visible to everyone. In the settings menu, set this project as the base project.</li>
@@ -757,14 +778,14 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df646a" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62dfe7d8" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
 </section>
-<section id="section-3" class="slide level2">
-<h2></h2>
+<section id="joining-a-workspace-student-view" class="slide level2">
+<h2>Joining a workspace, student view</h2>
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/k_W1kS10rLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 <div class="larger" style="text-align: right;">
 <p>👩‍💻</p>
@@ -773,12 +794,17 @@
 <section id="your-turn-assign-work" class="slide level2">
 <h2>Your turn: Assign work</h2>
 <div class="appex">
-<p><strong>You’re the instructor:</strong> - Grab the sharing link for your workspace. - Optional: Make a short link for it. - Share it with your neighbor.</p>
-<p><strong>Now you’re the student:</strong> - Access your neighbor’s workspace and start the assignment.</p>
+<p>👩‍🏫 <strong>You’re the instructor:</strong></p>
+<ul>
+<li>Grab the sharing link for your workspace.</li>
+<li>Optional: Make a short link for it.</li>
+<li>Share it with your neighbor.</li>
+</ul>
+<p>👩‍💻 <strong>Now you’re the student:</strong> Access your neighbor’s workspace and start the assignment.</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df643a" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62dfe486" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -822,7 +848,7 @@
 <h2>📦 rscloud</h2>
 <ul>
 <li>A new package for managing RStudio Cloud spaces with R: <a href="https://github.com/rstudio/rscloud">github.com/rstudio/rscloud</a></li>
-<li>Requires an API key, which any instructor can request (via email for now, but soon in the UI as well)</li>
+<li>Requires an API key, which any instructor can request</li>
 </ul>
 </section>
 <section id="collaborative-editing" class="slide level2">
@@ -830,7 +856,7 @@
 <ul>
 <li><p>Instructor and student can collaboratively edit a script</p></li>
 <li><p>Environments are not shared</p></li>
-<li><p>Demo!</p></li>
+<li><p>Demo – any volunteers?</p></li>
 </ul>
 </section></section>
 <section>
@@ -872,7 +898,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df6236" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62dfe627" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>

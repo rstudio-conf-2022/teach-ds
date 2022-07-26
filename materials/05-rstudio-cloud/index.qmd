@@ -58,6 +58,10 @@ knitr:
 :::
 :::
 
+. . .
+
+Both curricula: `library(tidymodels)` -- don't make a big fuss about the individual packages, though helpful to communicate **tidymodels** is a meta-package and documentation for individual functions are in individual packages.
+
 # Flashback
 
 ```{r}
@@ -105,7 +109,9 @@ library(countdown)
     -   RStudio Cloud
 
 ::: aside
-(\*) Çetinkaya-Rundel, Mine, and Rundel, Colin. "Infrastructure and tools for teaching computing throughout the statistical curriculum." The American Statistician (2018). Part of the Practical Data Science for Stats collection.
+(\*) Çetinkaya-Rundel, Mine, and Rundel, Colin.
+"Infrastructure and tools for teaching computing throughout the statistical curriculum." The American Statistician (2018).
+Part of the Practical Data Science for Stats collection.
 :::
 
 # Hello RStudio Cloud!
@@ -130,7 +136,7 @@ We created **RStudio Cloud** to make it easy for professionals, hobbyists, train
 
 ![](images/rstudio-cloud.png)
 
-## Why RStudio Cloud?
+## Why RStudio Cloud? {.small}
 
 -   Does not require IT support
 -   Features designed for instructors:
@@ -145,10 +151,12 @@ We created **RStudio Cloud** to make it easy for professionals, hobbyists, train
 
 ## Contexts
 
+::: incremental
 -   Semester long courses
     -   Intro data science / statistics: little to no background in stats, data science, programming
     -   Upper level data science / statistics: Varied computing background and different computer setups
 -   Shorter workshops: Likely no opportunity to communicate pre-workshop instructions, varied computing background and learning goals
+:::
 
 ## Your turn!
 
@@ -157,6 +165,10 @@ Log out of RStudio Cloud and log back in.
 ```{r}
 countdown(minutes = 3, font_size = "1.5em")
 ```
+
+::: cloud
+{{< fa cloud >}} Reminder: [https://rstd.io/teach-ds-conf22-cloud](rstd.io/teach-ds-conf22-cloud)
+:::
 
 ## Workspaces
 
@@ -173,29 +185,31 @@ countdown(minutes = 3, font_size = "1.5em")
 -   is basically a new project in the RStudio IDE
 
 ::: callout-tip
-If you use RStudio, use projects! Trust me, you won't regret it. Find out more at r4ds.had.co.nz/workflow-projects.html.
+If you use RStudio, use projects!
+Trust me, you won't regret it.
+Find out more at r4ds.had.co.nz/workflow-projects.html.
 :::
 
 ## Projects from Git
 
 -   A new project from Git Repo in RStudio Cloud
--   is creates (cloning) a project from a Git repository RStudio
+-   is creating (cloning) a project from a Git repository RStudio
 
 # Teaching a short workshop
 
-## Setup in 140 characters
+## Setup in 280 characters
 
 ![](images/cloud-setup-tweet.png)
 
 ## Iconography
 
-::: larger
+::: {.largest style="text-align: center;"}
 👩‍🏫 teacher
 
 👩‍💻 student
 :::
 
-## Some title
+## Single project, instructor view
 
 ```{=html}
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/81MrMcKZTX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -204,16 +218,16 @@ If you use RStudio, use projects! Trust me, you won't regret it. Find out more a
 👩‍🏫
 :::
 
-## 
+## Single project, student view
 
 ```{=html}
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/_VCYdDQTFG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
 ::: {.larger style="text-align: right;"}
-👩‍🏫
+👩‍💻
 :::
 
-## Sharing an individual project
+## Sharing an individual project {.small}
 
 ::: columns
 ::: {.column width="50%"}
@@ -232,27 +246,32 @@ If you use RStudio, use projects! Trust me, you won't regret it. Find out more a
 :::
 :::
 
-## Your turn: Create a sharable project
+## Your turn: Create a shareable project {.small}
 
 ::: appex
-**First you're the instructor:**
+👩‍🏫 **First you're the instructor:**
 
 -   Create a new project and give it a name.
--   Create a template R Markdown document in the project.
+-   Create a new Quarto document in the project -- just the new document template is fine!
 -   Change the access level of the project so others can see it as well.
--   Grab the project URL and share it with your neighbor:
--   Tip: You can create a short link for the URL at bitly.com.
+-   Grab the project URL and share it with your neighbor.
+    -   Tip: You can create a short link for the URL at bitly.com.
 
-**Now you're the student:** Access your neighbor's project as if you're the student and they're the instructor.
+👩‍💻 **Now you're the student:** Access your neighbor's project as if you're the student and they're the instructor.
 :::
 
 ```{r}
 countdown(minutes = 10, font_size = "1.5em")
 ```
 
+::: {.callout-warning appearance="simple"}
+Do not create the project in the workshop workspace.
+Create it in "Your Workspace" so you own it.
+:::
+
 # Teaching a longer course
 
-## 
+## Creating a workspace, instructor view
 
 ```{=html}
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/tqu1m9R1HLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -264,7 +283,7 @@ countdown(minutes = 10, font_size = "1.5em")
 ## Your turn: Create a workspace
 
 ::: appex
-**You're the instructor:**
+👩‍🏫 **You're the instructor:**
 
 -   Create a new workspace and give it a name.
     -   Tip: Check in with your neighbor and use a different name.
@@ -281,24 +300,26 @@ countdown(minutes = 5, font_size = "1.5em")
 
 ::: columns
 ::: {.column width="40%"}
-![](images/workspace-access.png)
+![](images/workspace-access.png){width="500"}
 :::
 
 ::: {.column width="60%"}
 -   Make workspace shared for a short period of time, share link with students, enroll them as contributors.
--   After drop/add switch over to this access level
--   Use invitations for visitors added mid-semester
-:::
-:::
 
-::: {.larger style="text-align: right;"}
-👩‍🏫
+-   After drop/add switch over to this access level
+
+-   Use invitations for visitors added mid-semester
+
+    ::: {.larger style="text-align: right;"}
+    👩‍🏫
+    :::
+:::
 :::
 
 ## Permission levels
 
 | role        | permission                                       | course role |
-|-------------|--------------------------------------------------|-------------|
+|---------------|-------------------------------------------|---------------|
 | admin       | manage users, view, edit and manage all projects | instructor  |
 | moderator   | view, edit and manage all projects               | TA          |
 | contributor | create, edit and manage their own projects       | student     |
@@ -338,7 +359,7 @@ countdown(minutes = 5, font_size = "1.5em")
 ## Your turn: Adjust settings
 
 ::: appex
-**You're the instructor:**
+👩‍🏫 **You're the instructor:**
 
 -   Change the settings of your workspace to Shared.
 -   Change the permissions so that contributors or viewers can't see the list of members and can't change the visibility of their projects.
@@ -348,7 +369,7 @@ countdown(minutes = 5, font_size = "1.5em")
 countdown(minutes = 3, font_size = "1.5em")
 ```
 
-## 
+## Add a base project, instructor view
 
 ```{=html}
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/Fz9UR6uxAG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -357,14 +378,14 @@ countdown(minutes = 3, font_size = "1.5em")
 👩‍🏫
 :::
 
-## Your turn: Create an assignment
+## Your turn: Create an assignment {.small}
 
 ::: appex
-**You're the instructor:**
+👩‍🏫 **You're the instructor:**
 
 -   Add a base project to your workspace:
     -   Install one or two of your favorite packages.
-    -   Start an R Markdown document so necessary packages get installed.
+    -   Create a Quarto document so necessary packages get installed.
     -   Add a code-of-conduct.md (you can copy-paste from [here](https://web.cvent.com/event/36ebe042-0113-44f1-8e36-b9bc5d0733bf/websitePage:988cd046-614c-445b-b658-1c8d83ca82b0) if you like) or some other plain text document.
 -   Make this project visible to everyone. In the settings menu, set this project as the base project.
 -   Create a new assignment: `Homework 01`.
@@ -374,7 +395,7 @@ countdown(minutes = 3, font_size = "1.5em")
 countdown(minutes = 10, font_size = "1.5em")
 ```
 
-## 
+## Joining a workspace, student view
 
 ```{=html}
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/k_W1kS10rLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -386,9 +407,13 @@ countdown(minutes = 10, font_size = "1.5em")
 ## Your turn: Assign work
 
 ::: appex
-**You're the instructor:** - Grab the sharing link for your workspace. - Optional: Make a short link for it. - Share it with your neighbor.
+👩‍🏫 **You're the instructor:**
 
-**Now you're the student:** - Access your neighbor's workspace and start the assignment.
+-   Grab the sharing link for your workspace.
+-   Optional: Make a short link for it.
+-   Share it with your neighbor.
+
+👩‍💻 **Now you're the student:** Access your neighbor's workspace and start the assignment.
 :::
 
 ```{r}
@@ -434,7 +459,7 @@ Student usage / engagement metrics
 ## 📦 rscloud
 
 -   A new package for managing RStudio Cloud spaces with R: [github.com/rstudio/rscloud](https://github.com/rstudio/rscloud)
--   Requires an API key, which any instructor can request (via email for now, but soon in the UI as well)
+-   Requires an API key, which any instructor can request
 
 ## Collaborative editing
 
@@ -442,7 +467,7 @@ Student usage / engagement metrics
 
 -   Environments are not shared
 
--   Demo!
+-   Demo -- any volunteers?
 
 # Parting remarks
 
@@ -487,5 +512,6 @@ Click the link to submit your GitHub username and team name.
 
 [bit.ly/teach-ds-github](https://bit.ly/teach-ds-github)
 
-You will receive an email invite to the **teach-ds-conf22** GitHub organization during the break. Accept the invitation to join the organization.
+You will receive an email invite to the **teach-ds-conf22** GitHub organization during the break.
+Accept the invitation to join the organization.
 :::
