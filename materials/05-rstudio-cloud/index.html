@@ -336,6 +336,52 @@
 </section>
 
 <section>
+<section id="recap" class="title-slide slide level1 center">
+<h1>Recap</h1>
+
+</section>
+<section id="yesterday" class="slide level2 small">
+<h2>Yesterday…</h2>
+<div>
+<ul>
+<li class="fragment">Module 1: “Start with cake” – Visualization (and in general hands on data analysis) as early as possible in the class, focusing on significant and motivating examples, and keeping baby steps out of classroom prime time, supported by computational infrastructure that helps make this happen.</li>
+<li class="fragment">Module 2: “Teach the tidyverse” – For consistency, expressiveness, and opportunities for growth.</li>
+<li class="fragment">Module 3: “Teach tidymodels” – For staying in the (consistent, and expressive) tidy ecosystem, easing teaching modern predictive modeling and modern simulation-based inference.</li>
+<li class="fragment">Module 4: “Bring back the baby steps” – With interactive learnr tutorials with automated feedback, and leverage sister packages for formative or summative assessment with learnr.</li>
+</ul>
+</div>
+</section>
+<section id="tidymodels-in-the-curriculum" class="slide level2 small">
+<h2>Tidymodels in the curriculum</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Intro data science:</strong></p>
+<ul>
+<li>As part of main curriculum:
+<ul>
+<li>Predictive multiple regression models</li>
+<li>Simulation-based inference for bootstrap intervals and hypothesis testing</li>
+</ul></li>
+<li>In looking further: A more advanced example (e.g., text classification) featuring recipe building and cross validation</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="fragment">
+<p><strong>Regression analysis / Stat 2:</strong></p>
+<ul>
+<li>As part of the main curriculum:
+<ul>
+<li>Multiple linear, logistic, and ordinal logistic regression as predictive as well as inferential models</li>
+<li>For predictive models: start with test/train split, build recipes, use workflows, conduct cross validation</li>
+</ul></li>
+<li>In looking further: Hyper-parameter tuning, or survival models, or spatial models</li>
+</ul>
+</div>
+</div>
+</div>
+</section></section>
+<section>
 <section id="flashback" class="title-slide slide level1 center">
 <h1>Flashback</h1>
 <div class="cell">
@@ -443,7 +489,7 @@
 <p>Log out of RStudio Cloud and log back in.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62defd95" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62df49de" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -548,7 +594,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62deff1c" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62df4c23" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -580,7 +626,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df002b" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62df4a77" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -608,9 +654,9 @@
 <h2>Permission levels</h2>
 <table>
 <colgroup>
-<col style="width: 22%">
-<col style="width: 55%">
-<col style="width: 22%">
+<col style="width: 23%">
+<col style="width: 52%">
+<col style="width: 23%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -681,7 +727,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62defcdd" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62df4b70" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -711,7 +757,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62defdf5" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62df4892" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -732,7 +778,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62defcdd" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62df498f" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -781,7 +827,11 @@
 </section>
 <section id="collaborative-editing" class="slide level2">
 <h2>Collaborative editing</h2>
-<p>DEMO</p>
+<ul>
+<li><p>Instructor and student can collaboratively edit a script</p></li>
+<li><p>Environments are not shared</p></li>
+<li><p>Demo!</p></li>
+</ul>
 </section></section>
 <section>
 <section id="parting-remarks" class="title-slide slide level1 center">
@@ -822,7 +872,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62defdc9" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
+<div class="countdown" id="timer_62df4aba" style="right:0;bottom:0;font-size:1.5em;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>

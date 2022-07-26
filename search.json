@@ -67,14 +67,7 @@
     "href": "modules/d2-06-reproduciblity.html",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d2-06-reproduciblity.html#outline",
-    "href": "modules/d2-06-reproduciblity.html#outline",
-    "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Outline",
-    "text": "Outline\n\nMotivating reproducibility\nTeaching authoring computational documents with Quarto\nTeaching version control with Git\nTeaching collaboration with GitHub\nUsing GitHub as your learning management system"
+    "text": "Motivating reproducibility\nTeaching authoring computational documents with Quarto\nTeaching version control with Git\nTeaching collaboration with GitHub\nUsing GitHub as your learning management system"
   },
   {
     "objectID": "modules/d2-06-reproduciblity.html#slides",
@@ -172,7 +165,7 @@
     "href": "modules/d1-01-hello.html#exercises",
     "title": "Hello #teachds",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nEx 1.1: UN Votes\n\n\n\n\nEx 1.1: Exercise design\n\n\n\n\nEx 1.3: Bechdel + Quarto\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nEx 1.1: UN Votes\n\n\n\n\nEx 1.1: Exercise design\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-03-tidymodels.html",
@@ -264,6 +257,69 @@
     "title": "Resources",
     "section": "Papers",
     "text": "Papers\n\n\nDesigning introductory data science curricula:\n\nÇetinkaya-Rundel, M., & Ellison, V. (2021). A fresh look at introductory data science. Journal of Statistics and Data Science Education, 29(sup1), S16-S26. https://doi.org/10.1080/10691898.2020.1804497.\nBaumer, B. (2015). A data science course for undergraduates: Thinking with data. The American Statistician, 69(4), 334-342. https://doi.org/10.1080/00031305.2015.1081105.\n\nTeaching reproducibility and version control:\n\nBeckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. Journal of Statistics and Data Science Education, 29(sup1), S132-S144. https://doi.org/10.1080/10691898.2020.1848485.\n\nTeaching with the tidyverse:\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator’s perspective of the tidyverse. Technology Innovations in Statistics Education, 14(1). http://dx.doi.org/10.5070/T514154352.\n\nOrganizing teaching materials:\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. arXiv preprint arXiv:2202.09504. https://doi.org/10.48550/arXiv.2202.09504.\n\nTeaching modern modeling:\n\nTackett, M. (2022) Three principles for modernizing an undergraduate regression analysis course. arXiv preprint arXiv:2205.11026. https://doi.org/10.48550/arXiv.2205.11026"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/ex-6-1.html",
+    "href": "materials/06-reproduciblity/ex-6-1.html",
+    "title": "Ex 6.1: Quarto 💙 visual editor",
+    "section": "",
+    "text": "In this mini analysis we work with the data used in the FiveThirtyEight story titled “The Dollar-And-Cents Case Against Hollywood’s Exclusion of Women”. Your task is to fill in the blanks denoted by ___."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/ex-6-1.html#data-and-packages",
+    "href": "materials/06-reproduciblity/ex-6-1.html#data-and-packages",
+    "title": "Ex 6.1: Quarto 💙 visual editor",
+    "section": "Data and packages",
+    "text": "Data and packages\nWe start with loading the packages we’ll use.\n\nlibrary(fivethirtyeight)\nlibrary(tidyverse)\n\nThe dataset contains information on 1794 movies released between 1970 and 2013. However we’ll focus our analysis on movies released between 1990 and 2013.\n\nbechdel90_13 <- bechdel |> \n  filter(between(year, 1990, 2013))\n\nThere are ___ such movies.\nThe financial variables we’ll focus on are the following:\n\nbudget_2013: Budget in 2013 inflation adjusted dollars\ndomgross_2013: Domestic gross (US) in 2013 inflation adjusted dollars\nintgross_2013: Total International (i.e., worldwide) gross in 2013 inflation adjusted dollars\n\nAnd we’ll also use the binary and clean_test variables for grouping."
+  },
+  {
+    "objectID": "materials/06-reproduciblity/ex-6-1.html#analysis",
+    "href": "materials/06-reproduciblity/ex-6-1.html#analysis",
+    "title": "Ex 6.1: Quarto 💙 visual editor",
+    "section": "Analysis",
+    "text": "Analysis\nLet’s take a look at how median budget and gross vary by whether the movie passed the Bechdel test, which is stored in the binary variable.\n\nbechdel90_13 |>\n  group_by(binary) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 2 × 4\n  binary med_budget med_domgross med_intgross\n  <chr>       <dbl>        <dbl>        <dbl>\n1 FAIL    48385984.    57318606.    104475669\n2 PASS    31070724     45330446.     80124349\n\n\nNext, let’s take a look at how median budget and gross vary by a more detailed indicator of the Bechdel test result. This information is stored in the clean_test variable, which takes on the following values:\n\nok = passes test\ndubious\nmen = women only talk about men\nnotalk = women don’t talk to each other\nnowomen = fewer than two women\n\n\nbechdel90_13 |>\n  #group_by(___) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 1 × 3\n  med_budget med_domgross med_intgross\n       <int>        <dbl>        <dbl>\n1   37878971     52270207     93523336\n\n\nIn order to evaluate how return on investment varies among movies that pass and fail the Bechdel test, we’ll first create a new variable called roi as the ratio of the gross to budget.\n\nbechdel90_13 <- bechdel90_13 |>\n  mutate(roi = (intgross_2013 + domgross_2013) / budget_2013)\n\nLet’s see which movies have the highest return on investment.\n\nbechdel90_13 |>\n  arrange(desc(roi)) |> \n  select(title, roi, year)\n\n# A tibble: 1,615 × 3\n   title                     roi  year\n   <chr>                   <dbl> <int>\n 1 Paranormal Activity      671.  2007\n 2 The Blair Witch Project  648.  1999\n 3 El Mariachi              583.  1992\n 4 Clerks.                  258.  1994\n 5 In the Company of Men    231.  1997\n 6 Napoleon Dynamite        227.  2004\n 7 Once                     190.  2006\n 8 The Devil Inside         155.  2012\n 9 Primer                   142.  2004\n10 Fireproof                134.  2008\n# … with 1,605 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\nBelow is a visualization of the return on investment by test result, however it’s difficult to see the distributions due to a few extreme observations.\n\nggplot(data = bechdel90_13, \n       mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    x = \"Detailed Bechdel result\",\n    y = \"___\",\n    color = \"Binary Bechdel result\"\n    )\n\n\n\n\nWhat are those movies with very high returns on investment?\n\nbechdel90_13 |>\n  filter(roi > 400) |>\n  select(title, budget_2013, domgross_2013, year)\n\n# A tibble: 3 × 4\n  title                   budget_2013 domgross_2013  year\n  <chr>                         <int>         <dbl> <int>\n1 Paranormal Activity          505595     121251476  2007\n2 The Blair Witch Project      839077     196538593  1999\n3 El Mariachi                   11622       3388636  1992\n\n\nZooming in on the movies with roi < ___ provides a better view of how the medians across the categories compare:\n\nggplot(data = bechdel90_13, mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    subtitle = \"___\", # Something about zooming in to a certain level\n    x = \"Detailed Bechdel result\",\n    y = \"Return on investment\",\n    color = \"Binary Bechdel result\"\n    ) +\n  coord_cartesian(ylim = c(0, 15))"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#reproducibility-checklist",
+    "href": "materials/06-reproduciblity/index.html#reproducibility-checklist",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done? (e.g., how were parameter settings chosen?)\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#ambitious-goal-many-other-concerns",
+    "href": "materials/06-reproduciblity/index.html#ambitious-goal-many-other-concerns",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Ambitious goal + many other concerns",
+    "text": "Ambitious goal + many other concerns\nWe need an environment where\n\ndata, analysis, and results are tightly connected, or better yet, inseparable\nreproducibility is built in\n\nthe original data remains untouched\nall data manipulations and analyses are inherently documented\n\ndocumentation is human readable and syntax is minimal"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#roadmap",
+    "href": "materials/06-reproduciblity/index.html#roadmap",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Roadmap",
+    "text": "Roadmap\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#why-quarto",
+    "href": "materials/06-reproduciblity/index.html#why-quarto",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Why Quarto?",
+    "text": "Why Quarto?\n\nReproducibility: Train new analysts whose only workflow is a reproducible one\nPedagogy:\n\nCode + output + prose together\nSyntax highlighting FTW!\nFamiliar-feeling authoring with the visual editor without having to learn a bunch of new markdown syntax\n\nEfficiency: Consistent formatting -> easier grading\nExtendability: Use with Python, and Julia, and Observable, and more"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#tips-for-starting-with-quarto",
+    "href": "materials/06-reproduciblity/index.html#tips-for-starting-with-quarto",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Tips for starting with Quarto",
+    "text": "Tips for starting with Quarto\n\nMinimal YAML\nMinimal chunk options\nUse well scaffolded Quarto documents\nRender early and often!"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#demo-quarto-visual-editor",
+    "href": "materials/06-reproduciblity/index.html#demo-quarto-visual-editor",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Demo: Quarto 💙 visual editor",
+    "text": "Demo: Quarto 💙 visual editor\n\n RStudio Cloud > “Module 6 - Reproducibility” > ex-1-1.qmd\n\n\nDocument YAML\nCode chunks with YAML style options\nYAML completion and diagnostics\nAccessibility features\nCitations\nAnd more…"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#why-git-github",
@@ -382,35 +438,35 @@
     "href": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Behind the scenes: GitHub tokens",
-    "text": "Behind the scenes: GitHub tokens\nghclass uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that ghclass can find and use it.\n\nCreate token at github.com/settings/tokens\nOnce created, assign the token to GITHUB_PAT as an environmental variable\n\nusethis::edit_r_environ()\nGITHUB_PAT=\"alphanumeric string of your GitHub token\"\nSave, close, restart R for changes to take effect"
+    "text": "Behind the scenes: GitHub tokens\nghclass uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that ghclass can find and use it.\n\nCreate token at github.com/settings/tokens\nOnce created, save the GITHUB_PAT using"
   },
   {
-    "objectID": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens---update-this-process",
-    "href": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens---update-this-process",
+    "objectID": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens-1",
+    "href": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens-1",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Behind the scenes: GitHub tokens - UPDATE THIS PROCESS",
-    "text": "Behind the scenes: GitHub tokens - UPDATE THIS PROCESS\n\nIf the token is found and works correctly the following code should run without error\n\n\ngithub_test_token()\n\n✔ Your GitHub PAT authenticated correctly.\n\n\n\nIf instead the token is invalid or not found, you will see something like the following\n\n\ngithub_test_token(\"MADE_UP_TOKEN\")\n\n✖ Your GitHub PAT failed to authenticate.\n\n\n└─GitHub API error (401): \n  ├─ API message: Bad credentials\n  └─ API docs: https://docs.github.com/rest"
+    "section": "Behind the scenes: GitHub tokens",
+    "text": "Behind the scenes: GitHub tokens\n\nIf the token is found and works correctly the following code should run without error\n\n\ngithub_test_token()\n\n✔ Your GitHub PAT authenticated correctly.\n\n\n\nIf instead the token is invalid or not found, you will see something like the following\n\n\ngithub_test_token(\"MADE_UP_TOKEN\")\n\n✖ Your GitHub PAT failed to authenticate.\n\n\n└─GitHub API error (401): \n  ├─ API message: Bad credentials\n  └─ API docs: https://docs.github.com/rest"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#invite-students-1",
     "href": "materials/06-reproduciblity/index.html#invite-students-1",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Invite students",
-    "text": "Invite students\n\nThis will generate an email to students.\nInstruct students to check their email and follow the instructions.\n\n\norg <- \"design-ds-class\"\n\n\nroster <- read_csv(\"SURVEY RESPONSES.csv\")\norg_invite(org = org, user = roster$username)\n\n## ✔ Invited user 'minebotmine' to org 'design-ds-class'.\n## ✔ Invited user 'rundel' to org 'design-ds-class'."
+    "text": "Invite students\n\nThis will generate an email to students.\nInstruct students to check their email and follow the instructions.\n\n\norg <- \"teach-ds-conf22\"\n\n\nroster <- read_csv(\"SURVEY RESPONSES.csv\")\norg_invite(org = org, user = roster$username)\n\n## ✔ Invited user 'minebotmine' to org 'design-ds-class'.\n## ✔ Invited user 'rundel' to org 'design-ds-class'."
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#check-member-status",
     "href": "materials/06-reproduciblity/index.html#check-member-status",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Check member status",
-    "text": "Check member status\n\nWho is already in?\n\n\n\n [1] \"aaron-gilbreath\"       \"bioboot\"               \"Cghlewis\"             \n [4] \"EricJC24\"              \"gabrielodom\"           \"gavago\"               \n [7] \"gavinfay\"              \"geoffsaw\"              \"jetsetbaxter\"         \n[10] \"KatherineCox\"          \"kavan-econ\"            \"matackett\"            \n[13] \"Mears-UFL\"             \"melindahiggins2000\"    \"mine-cetinkaya-rundel\"\n[16] \"murraycadzow\"          \"paideia-atl\"           \"paigerios68\"          \n[19] \"staceyhancock\"         \"thereseanders\"         \"timothydobbins\"       \n[22] \"VanjaRoz\"              \"woon-yuen\"             \"zamorarr\"             \n\n\n\nWho still didn’t accept their invitations?\n\n\n\ncharacter(0)"
+    "text": "Check member status\n\nWho is already in?\n\n\n\n[1] \"matackett\"\n\n\n\nWho still didn’t accept their invitations?\n\n\n\ncharacter(0)"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#creating-assignments---big-picture",
     "href": "materials/06-reproduciblity/index.html#creating-assignments---big-picture",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Creating assignments - big picture",
-    "text": "Creating assignments - big picture\n\nCreate a starter repo, keep it private and make it a template\nClone the repo and add any starter files (template Qmd, data, instructions, etc.)\nCommit and push your changes to the repo\nUse the org_create_assignment() function to create copies of the starter repo with correct permissions for each of your students (or teams)"
+    "text": "Creating assignments - big picture\n\nCreate a starter repo, keep it private and make it a template\nClone the repo and add any starter files (template qmd, data, instructions, etc.)\nCommit and push your changes to the repo\nUse the org_create_assignment() function to create copies of the starter repo with correct permissions for each of your students (or teams)"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#creating-your-starter-repo",
@@ -438,56 +494,63 @@
     "href": "materials/06-reproduciblity/index.html#create-assignments",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Create assignments",
-    "text": "Create assignments\n\norg_create_assignment(\n  org = org,\n  repo = paste0(\"hw-01-airbnb-edi-\", roster$username),\n  user = roster$username,\n  source_repo = paste0(org, \"/hw-01-airbnb-edi\")\n)\n\n\n[DEMO]\n.your-turn[ - Go to the course organisation on GitHub: github.com/design-ds-class - Locate your HW 01 and read through the Getting started section and follow the instructions. - Then, go through the Hello Git and Warm up sections as well. - Finally, add your answer to Question 1, and commit and push again.]\n\nIf there is no GitHub repo created for you for this assignment, let me know.\nClone using the HTTPS link, and let me know if\nyou have 2-factor authentication enabled on\nGitHub (this complicates things!)\n\n\n\n\n10:00"
+    "text": "Create assignments\n\norg_create_assignment(\n  org = org,\n  repo = paste0(\"hw-01-pet-names-\", roster$username),\n  user = roster$username,\n  source_repo = paste0(org, \"/hw-01-pet-names\")\n)\n\n\n[DEMO]"
   },
   {
-    "objectID": "materials/06-reproduciblity/index.html#options-for-giving-feedback-on-github",
-    "href": "materials/06-reproduciblity/index.html#options-for-giving-feedback-on-github",
+    "objectID": "materials/06-reproduciblity/index.html#your-turn",
+    "href": "materials/06-reproduciblity/index.html#your-turn",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Options for giving feedback on GitHub",
-    "text": "Options for giving feedback on GitHub\n\nUse the GitHub UI to add issues to each student’s repo\nClone student repos locally and reproduce their work prior to giving feedback by adding issues on the GitHub UI\n\n\n\n\n\nUse the issue_create() function to post issues to all repos at once\n\nAdd a column for the repo name in org/repo format to roster\nAdd a column for feedback\n[DEMO]"
-  },
-  {
-    "objectID": "materials/06-reproduciblity/index.html#get-big-picture-stats-for-an-assignment",
-    "href": "materials/06-reproduciblity/index.html#get-big-picture-stats-for-an-assignment",
-    "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Get big picture stats for an assignment",
-    "text": "Get big picture stats for an assignment\n\n\n\n\n[DEMO]"
+    "section": "Your turn",
+    "text": "Your turn\n\n\nGo to the course organisation on GitHub: github.com/teach-ds-conf22\nLocate your HW 01, read through the Getting Started section, follow the instructions.\nThen, go through the Hello Git and Warm up sections.\nAdd your answer to Question 1, then commit and push again.\n\n\n\nIf there is no GitHub repo created for you for this assignment, let me know.\nClone the repo using SSH.\n\n\n\n\n10:00"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#create-team-assignments",
     "href": "materials/06-reproduciblity/index.html#create-team-assignments",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Create team assignments",
-    "text": "Create team assignments\nFirst, we’ll make up some teams\n\n\n\n\n[DEMO]\n.your-turn[ - Go to the course organisation on GitHub: github.com/design-ds-class - Locate your Lab 03 and read through the Getting started section and follow the instructions with your team members.]\n\n\n\n10:00\n\n\n\nclass: middle, inverse"
+    "text": "Create team assignments\n\n\n\n\n[DEMO]"
   },
   {
-    "objectID": "materials/06-reproduciblity/index.html#more-on-giving-feedback-in-issues",
-    "href": "materials/06-reproduciblity/index.html#more-on-giving-feedback-in-issues",
+    "objectID": "materials/06-reproduciblity/index.html#your-turn-1",
+    "href": "materials/06-reproduciblity/index.html#your-turn-1",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "More on giving feedback in issues",
-    "text": "More on giving feedback in issues\n\nInstructors (and TAs) can view all repositories within the course organization.\nUse specific line references. [DEMO]\nMake sure to @ mention the student so that they are notified when an issue is opened.\nYou might want to consider keeping points out of issues."
+    "section": "Your turn",
+    "text": "Your turn\n\n\nGo to the course organisation on GitHub: github.com/teach-ds-conf22\nLocate your Lab 03 and read through the Getting started section and follow the instructions with your team members.\n\n\n\n\n\n10:00"
   },
   {
-    "objectID": "materials/06-reproduciblity/index.html#peer-review",
-    "href": "materials/06-reproduciblity/index.html#peer-review",
+    "objectID": "materials/06-reproduciblity/index.html#options-for-giving-feedback-on-github",
+    "href": "materials/06-reproduciblity/index.html#options-for-giving-feedback-on-github",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Peer review",
-    "text": "Peer review\n\nOnce an assignment is completed you can let other students/teams into a repository and they can provide peer review.\nPeer review is an incredibly effective learning experience for both the reviewers and the reviewees, however it does require coordination and being able to carve out sufficient time in the course schedule.\nTip: Do not solely count on peer review for feedback as some reviewers might be less diligent than others. Teams reviewing teams, as opposed to individual reviewing individuals, might address this issue partially.\n\nSee the Peer review with ghclass vignette for more."
+    "section": "Options for giving feedback on GitHub",
+    "text": "Options for giving feedback on GitHub\n\nUse the GitHub UI to add issues to each student’s repo\nInstructors (and TAs) can view all repositories within the course organization.\nMake sure to @ mention the student so that they are notified when an issue is opened.\nConsider keeping points out of issues."
   },
   {
-    "objectID": "materials/06-reproduciblity/index.html#pull-requests",
-    "href": "materials/06-reproduciblity/index.html#pull-requests",
+    "objectID": "materials/06-reproduciblity/index.html#your-turn-2",
+    "href": "materials/06-reproduciblity/index.html#your-turn-2",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
-    "section": "Pull requests",
-    "text": "Pull requests\n\nAnother option is to open pull requests for your students’ work where you directly edit their work and ask them to approve the edits.\nThis can be effective as students will see your corrections and review them before accepting them.\nHowever this also does mean that you’re directly correcting their work as opposed to giving them higher level instructions on how to correct it.\n\nMore on this in the next module…\n.your-turn[ Now you’re the instructor:]\n\n\n\n10:00"
+    "section": "Your turn",
+    "text": "Your turn\n\nNow you’re the instructor:\n\nFirst, I’ll change everyone’s permission level and make you Owners. (Please don’t delete any repos!)\nGo to the GitHub organization for our “class” and observe that now you can see all repos.\nGo into the individual repo (HW 01) for your neighbor. Open an issue and add some text to the issue. In the issue @ mention their username. Submit your issue.\n\nNow you’re a student: Check your email to confirm that you got notified of an issue being filed by your neighbor\nin your repo, then review the issue in on GitHub.\n\n\n\n\n10:00"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#other-ghclass-functionality",
+    "href": "materials/06-reproduciblity/index.html#other-ghclass-functionality",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Other ghclass functionality",
+    "text": "Other ghclass functionality\nClone student repos to review their work locally\n\n\n\n\nGet big picture statistics for an assignment"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#git-github-lessons-learned",
     "href": "materials/06-reproduciblity/index.html#git-github-lessons-learned",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Git + GitHub lessons learned",
-    "text": "Git + GitHub lessons learned\n\nIf you plan on using git in class, start on day one, don’t wait until the “right time”\nFirst assignment should be individual, not team based to avoid merge conflicts\nStudents need to remember to pull before starting work\nImpossible (?) to avoid shell intervention every once in a while\nRemind students on that future projects should go on GitHub with PI approval\n\n\n\n\n🔗 rstd.io/teach-ds-conf22"
+    "text": "Git + GitHub lessons learned\n\nIf you plan on using git in class, start on day one, don’t wait until the “right time”\nFirst few assignment should be individual, not team based to avoid merge conflicts\nStudents need to remember to pull before starting work\nUse GitHub through the RStudio IDE not command line\nRemind students on that future projects should go on GitHub with PI approval"
+  },
+  {
+    "objectID": "materials/06-reproduciblity/index.html#learn-more",
+    "href": "materials/06-reproduciblity/index.html#learn-more",
+    "title": "Reproducible workflows: Quarto, Git, GitHub",
+    "section": "Learn more!",
+    "text": "Learn more!\n\nghclass documentation: rundel.github.io/ghclass\nBeckman, Matthew D., et al. “Implementing version control with Git and GitHub as a learning objective in statistics and data science courses.” Journal of Statistics and Data Science Education 29.sup1 (2021): S132-S144. doi: hdoi.org/10.1080/10691898.2020.1848485\n\n\n\n\n🔗 rstd.io/teach-ds-conf22"
   },
   {
     "objectID": "materials/02-tidyverse/ex-2-1.html",
@@ -1173,14 +1236,14 @@
     "href": "materials/03-tidymodels/index.html#glance",
     "title": "Teaching modern modeling with tidymodels",
     "section": "glance()",
-    "text": "glance()\n\nBase RTidymodels\n\n\n\nglance(base_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.\n# … with 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>\n\n\n\n\n\nglance(tidy_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic  p.value    df  logLik    AIC    BIC\n      <dbl>         <dbl> <dbl>     <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>\n1    0.0201        0.0200  4.95      204. 7.05e-46     1 -30105. 60217. 60238.\n# … with 3 more variables: deviance <dbl>, df.residual <int>, nobs <int>"
+    "text": "glance()\n\nBase RTidymodels\n\n\n\nglance(base_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³\n      <dbl>     <dbl> <dbl>   <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>   <dbl>\n1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.\n# … with 2 more variables: df.residual <int>, nobs <int>, and abbreviated\n#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance\n# ℹ Use `colnames()` to see all variable names\n\n\n\n\n\nglance(tidy_lm)\n\n# A tibble: 1 × 12\n  r.squared adj.r.s…¹ sigma stati…²  p.value    df  logLik    AIC    BIC devia…³\n      <dbl>     <dbl> <dbl>   <dbl>    <dbl> <dbl>   <dbl>  <dbl>  <dbl>   <dbl>\n1    0.0201    0.0200  4.95    204. 7.05e-46     1 -30105. 60217. 60238. 244166.\n# … with 2 more variables: df.residual <int>, nobs <int>, and abbreviated\n#   variable names ¹​adj.r.squared, ²​statistic, ³​deviance\n# ℹ Use `colnames()` to see all variable names"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#augment",
     "href": "materials/03-tidymodels/index.html#augment",
     "title": "Teaching modern modeling with tidymodels",
     "section": "augment()",
-    "text": "augment()\n\nBase RTidymodels\n\n\n\nbase_lm_aug <- augment(base_lm)\nbase_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd\n   <chr>             <dbl>          <dbl>   <dbl>  <dbl>    <dbl>  <dbl>   <dbl>\n 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6\n 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6\n 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5\n 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5\n 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7\n 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5\n 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6\n 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7\n 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7\n10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5\n# … with 9,966 more rows, and 1 more variable: .std.resid <dbl>\n\n\n\n\n\ntidy_lm_aug <- augment(tidy_lm$fit)\ntidy_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_to_income .fitted .resid     .hat .sigma .cooksd\n   <chr>             <dbl>          <dbl>   <dbl>  <dbl>    <dbl>  <dbl>   <dbl>\n 1 1                 14.1           18.0     12.4  1.71  0.000101   4.95 6.02e-6\n 2 2                 12.6            5.04    11.7  0.861 0.000191   4.95 2.89e-6\n 3 3                 17.1           21.2     12.5  4.58  0.000102   4.95 4.36e-5\n 4 4                  6.72          10.2     12.0 -5.27  0.000138   4.95 7.80e-5\n 5 5                 14.1           58.0     14.2 -0.176 0.000765   4.95 4.86e-7\n 6 6                  6.72           6.46    11.8 -5.10  0.000174   4.95 9.22e-5\n 7 7                 13.6           23.7     12.6  0.962 0.000109   4.95 2.06e-6\n 8 8                 12.0           16.2     12.3 -0.285 0.000105   4.95 1.74e-7\n 9 9                 13.6           36.5     13.2  0.357 0.000232   4.95 6.04e-7\n10 10                 6.71          18.9     12.4 -5.69  0.000100   4.95 6.64e-5\n# … with 9,966 more rows, and 1 more variable: .std.resid <dbl>"
+    "text": "augment()\n\nBase RTidymodels\n\n\n\nbase_lm_aug <- augment(base_lm)\nbase_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²\n   <chr>             <dbl>   <dbl>   <dbl>  <dbl>   <dbl>  <dbl>   <dbl>   <dbl>\n 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 \n 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 \n 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 \n 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  \n 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356\n 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  \n 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 \n 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577\n 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722\n10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  \n# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,\n#   ²​.std.resid\n# ℹ Use `print(n = ...)` to see more rows\n\n\n\n\n\ntidy_lm_aug <- augment(tidy_lm$fit)\ntidy_lm_aug\n\n# A tibble: 9,976 × 9\n   .rownames interest_rate debt_…¹ .fitted .resid    .hat .sigma .cooksd .std.…²\n   <chr>             <dbl>   <dbl>   <dbl>  <dbl>   <dbl>  <dbl>   <dbl>   <dbl>\n 1 1                 14.1    18.0     12.4  1.71  1.01e-4   4.95 6.02e-6  0.345 \n 2 2                 12.6     5.04    11.7  0.861 1.91e-4   4.95 2.89e-6  0.174 \n 3 3                 17.1    21.2     12.5  4.58  1.02e-4   4.95 4.36e-5  0.926 \n 4 4                  6.72   10.2     12.0 -5.27  1.38e-4   4.95 7.80e-5 -1.07  \n 5 5                 14.1    58.0     14.2 -0.176 7.65e-4   4.95 4.86e-7 -0.0356\n 6 6                  6.72    6.46    11.8 -5.10  1.74e-4   4.95 9.22e-5 -1.03  \n 7 7                 13.6    23.7     12.6  0.962 1.09e-4   4.95 2.06e-6  0.194 \n 8 8                 12.0    16.2     12.3 -0.285 1.05e-4   4.95 1.74e-7 -0.0577\n 9 9                 13.6    36.5     13.2  0.357 2.32e-4   4.95 6.04e-7  0.0722\n10 10                 6.71   18.9     12.4 -5.69  1.00e-4   4.95 6.64e-5 -1.15  \n# … with 9,966 more rows, and abbreviated variable names ¹​debt_to_income,\n#   ²​.std.resid\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#why-tidymodels",
@@ -1348,7 +1411,7 @@
     "href": "materials/03-tidymodels/index.html#make-predictions",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Make predictions",
-    "text": "Make predictions\n\ninterest_pred <- predict(interest_fit, loans_full_schema) |> \n  bind_cols(loans_full_schema |> select(interest_rate))\n\ninterest_pred\n\n# A tibble: 10,000 × 2\n   .pred interest_rate\n   <dbl>         <dbl>\n 1  14.8         14.1 \n 2  10.4         12.6 \n 3  11.1         17.1 \n 4  10.6          6.72\n 5  12.7         14.1 \n 6  11.8          6.72\n 7  15.1         13.6 \n 8  16.1         12.0 \n 9  13.1         13.6 \n10  11.0          6.71\n# … with 9,990 more rows"
+    "text": "Make predictions\n\ninterest_pred <- predict(interest_fit, loans_full_schema) |> \n  bind_cols(loans_full_schema |> select(interest_rate))\n\ninterest_pred\n\n# A tibble: 10,000 × 2\n   .pred interest_rate\n   <dbl>         <dbl>\n 1  14.8         14.1 \n 2  10.4         12.6 \n 3  11.1         17.1 \n 4  10.6          6.72\n 5  12.7         14.1 \n 6  11.8          6.72\n 7  15.1         13.6 \n 8  16.1         12.0 \n 9  13.1         13.6 \n10  11.0          6.71\n# … with 9,990 more rows\n# ℹ Use `print(n = ...)` to see more rows"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#model-evaluation-r2",
@@ -1489,27 +1552,6 @@
     "title": "Ex 1.1: UN Votes",
     "section": "Appendix",
     "text": "Appendix\nBelow is a list of countries in the dataset:"
-  },
-  {
-    "objectID": "materials/01-hello/ex-1-3.html",
-    "href": "materials/01-hello/ex-1-3.html",
-    "title": "Ex 1.3: Bechdel + Quarto",
-    "section": "",
-    "text": "In this mini analysis we work with the data used in the FiveThirtyEight story titled “The Dollar-And-Cents Case Against Hollywood’s Exclusion of Women”. Your task is to fill in the blanks denoted by ___."
-  },
-  {
-    "objectID": "materials/01-hello/ex-1-3.html#data-and-packages",
-    "href": "materials/01-hello/ex-1-3.html#data-and-packages",
-    "title": "Ex 1.3: Bechdel + Quarto",
-    "section": "Data and packages",
-    "text": "Data and packages\nWe start with loading the packages we’ll use.\n\nlibrary(fivethirtyeight)\nlibrary(tidyverse)\n\nThe dataset contains information on 1794 movies released between 1970 and 2013. However we’ll focus our analysis on movies released between 1990 and 2013.\n\nbechdel90_13 <- bechdel |> \n  filter(between(year, 1990, 2013))\n\nThere are ___ such movies.\nThe financial variables we’ll focus on are the following:\n\nbudget_2013: Budget in 2013 inflation adjusted dollars\ndomgross_2013: Domestic gross (US) in 2013 inflation adjusted dollars\nintgross_2013: Total International (i.e., worldwide) gross in 2013 inflation adjusted dollars\n\nAnd we’ll also use the binary and clean_test variables for grouping."
-  },
-  {
-    "objectID": "materials/01-hello/ex-1-3.html#analysis",
-    "href": "materials/01-hello/ex-1-3.html#analysis",
-    "title": "Ex 1.3: Bechdel + Quarto",
-    "section": "Analysis",
-    "text": "Analysis\nLet’s take a look at how median budget and gross vary by whether the movie passed the Bechdel test, which is stored in the binary variable.\n\nbechdel90_13 |>\n  group_by(binary) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 2 × 4\n  binary med_budget med_domgross med_intgross\n  <chr>       <dbl>        <dbl>        <dbl>\n1 FAIL    48385984.    57318606.    104475669\n2 PASS    31070724     45330446.     80124349\n\n\nNext, let’s take a look at how median budget and gross vary by a more detailed indicator of the Bechdel test result. This information is stored in the clean_test variable, which takes on the following values:\n\nok = passes test\ndubious\nmen = women only talk about men\nnotalk = women don’t talk to each other\nnowomen = fewer than two women\n\n\nbechdel90_13 |>\n  #group_by(___) |>\n  summarise(\n    med_budget = median(budget_2013),\n    med_domgross = median(domgross_2013, na.rm = TRUE),\n    med_intgross = median(intgross_2013, na.rm = TRUE)\n    )\n\n# A tibble: 1 × 3\n  med_budget med_domgross med_intgross\n       <int>        <dbl>        <dbl>\n1   37878971     52270207     93523336\n\n\nIn order to evaluate how return on investment varies among movies that pass and fail the Bechdel test, we’ll first create a new variable called roi as the ratio of the gross to budget.\n\nbechdel90_13 <- bechdel90_13 |>\n  mutate(roi = (intgross_2013 + domgross_2013) / budget_2013)\n\nLet’s see which movies have the highest return on investment.\n\nbechdel90_13 |>\n  arrange(desc(roi)) |> \n  select(title, roi, year)\n\n# A tibble: 1,615 × 3\n   title                     roi  year\n   <chr>                   <dbl> <int>\n 1 Paranormal Activity      671.  2007\n 2 The Blair Witch Project  648.  1999\n 3 El Mariachi              583.  1992\n 4 Clerks.                  258.  1994\n 5 In the Company of Men    231.  1997\n 6 Napoleon Dynamite        227.  2004\n 7 Once                     190.  2006\n 8 The Devil Inside         155.  2012\n 9 Primer                   142.  2004\n10 Fireproof                134.  2008\n# … with 1,605 more rows\n# ℹ Use `print(n = ...)` to see more rows\n\n\nBelow is a visualization of the return on investment by test result, however it’s difficult to see the distributions due to a few extreme observations.\n\nggplot(data = bechdel90_13, \n       mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    x = \"Detailed Bechdel result\",\n    y = \"___\",\n    color = \"Binary Bechdel result\"\n    )\n\n\n\n\nWhat are those movies with very high returns on investment?\n\nbechdel90_13 |>\n  filter(roi > 400) |>\n  select(title, budget_2013, domgross_2013, year)\n\n# A tibble: 3 × 4\n  title                   budget_2013 domgross_2013  year\n  <chr>                         <int>         <dbl> <int>\n1 Paranormal Activity          505595     121251476  2007\n2 The Blair Witch Project      839077     196538593  1999\n3 El Mariachi                   11622       3388636  1992\n\n\nZooming in on the movies with roi < ___ provides a better view of how the medians across the categories compare:\n\nggplot(data = bechdel90_13, mapping = aes(x = clean_test, y = roi, color = binary)) +\n  geom_boxplot() +\n  labs(\n    title = \"Return on investment vs. Bechdel test result\",\n    subtitle = \"___\", # Something about zooming in to a certain level\n    x = \"Detailed Bechdel result\",\n    y = \"Return on investment\",\n    color = \"Binary Bechdel result\"\n    ) +\n  coord_cartesian(ylim = c(0, 15))"
   },
   {
     "objectID": "materials/01-hello/index.html#introductions",
@@ -1803,7 +1845,7 @@
     "href": "materials/01-hello/index.html#preprocess",
     "title": "Hello #teachds",
     "section": "Preprocess",
-    "text": "Preprocess\n\n\n\n\nus_votes\n\n# A tibble: 5,718 × 14\n    rcid country       country_code vote  session importantvote date       unres      amend  para short                       descr                                                        short…¹ issue\n   <dbl> <chr>         <chr>        <fct>   <dbl> <chr>         <date>     <chr>      <int> <int> <chr>                       <chr>                                                        <chr>   <chr>\n 1     6 United States US           no          1 No            1946-01-04 R/1/107        0     0 DECLARATION OF HUMAN RIGHTS \"TO ADOPT A CUBAN PROPOSAL (A/3-C) THAT AN ITEM ON A DECLAR… hr      4    \n 2     8 United States US           no          1 No            1946-01-05 R/1/297        1     0 ECOSOC POWERS               \"TO ADOPT A SECOND 6TH COMM. AMENDMENT (A/14) TO THE PROVIS… ec      3    \n 3    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      \"TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE 4TH… co      1    \n 4    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      \"TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE 4TH… ec      3    \n 5    18 United States US           no          1 No            1946-02-03 R/1/532        1     0 ECOSOC CONSULTANTS          \"TO ADOPT USSR (ORAL) AMENDMENT REPLACING THE 1ST COMM. DRA… ec      3    \n 6    19 United States US           yes         1 No            1946-02-03 R/1/534        0     0 ECOSOC CONSULTANTS          \"TO ADOPT THE 1ST COMM. DRAFT RESOLUTION (A/54/REV.1) PROVI… ec      3    \n 7    24 United States US           yes         1 No            1946-12-05 R/1/1229       0     0 ECOSOC ELECTIONS            \"TO ADOPT BELGIAN ORAL PROPOSAL TO SURRENDER BELGIUM'S SEAT… ec      3    \n 8    26 United States US           no          1 No            1946-12-06 R/1/1286       0     0 TRUSTEESHIP AGREEMENTS      \"TO ADOPT USSR ORAL RESOL. REJECTING 8 DRAFT TRUSTEESHIP AG… co      1    \n 9    27 United States US           yes         1 No            1946-12-06 R/1/1287/A     0     0 NEW GUINEA TRUSTEESHIP      \"TO ADOPT THE TRUSTEESHIP AGREEMENT FOR NEW GUINEA SUBMITTE… co      1    \n10    28 United States US           yes         1 No            1946-12-06 R/1/1287/B     0     0 RUANDA-URUNDI TRUSTEESHIP   \"TO ADOPT THE TRUSTEESHIP AGREEMENT FOR RUANDA-URUNDI SUBMI… co      1    \n# … with 5,708 more rows, and abbreviated variable name ¹​short_name\n# ℹ Use `print(n = ...)` to see more rows"
+    "text": "Preprocess\n\n\n\n\nus_votes\n\n# A tibble: 5,718 × 14\n    rcid country       country_code vote  session importantvote date       unres      amend  para short                       descr                                                     short_name issue\n   <dbl> <chr>         <chr>        <fct>   <dbl> <chr>         <date>     <chr>      <int> <int> <chr>                       <chr>                                                     <chr>      <chr>\n 1     6 United States US           no          1 No            1946-01-04 R/1/107        0     0 DECLARATION OF HUMAN RIGHTS \"TO ADOPT A CUBAN PROPOSAL (A/3-C) THAT AN ITEM ON A DEC… hr         4    \n 2     8 United States US           no          1 No            1946-01-05 R/1/297        1     0 ECOSOC POWERS               \"TO ADOPT A SECOND 6TH COMM. AMENDMENT (A/14) TO THE PRO… ec         3    \n 3    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      \"TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE … co         1    \n 4    11 United States US           yes         1 No            1946-02-05 R/1/376        0     0 TRUSTEESHIP AMENDMENTS      \"TO ADOPT DRAFT RESOLUTIONS I AND II AS A WHOLE, OF THE … ec         3    \n 5    18 United States US           no          1 No            1946-02-03 R/1/532        1     0 ECOSOC CONSULTANTS          \"TO ADOPT USSR (ORAL) AMENDMENT REPLACING THE 1ST COMM. … ec         3    \n 6    19 United States US           yes         1 No            1946-02-03 R/1/534        0     0 ECOSOC CONSULTANTS          \"TO ADOPT THE 1ST COMM. DRAFT RESOLUTION (A/54/REV.1) PR… ec         3    \n 7    24 United States US           yes         1 No            1946-12-05 R/1/1229       0     0 ECOSOC ELECTIONS            \"TO ADOPT BELGIAN ORAL PROPOSAL TO SURRENDER BELGIUM'S S… ec         3    \n 8    26 United States US           no          1 No            1946-12-06 R/1/1286       0     0 TRUSTEESHIP AGREEMENTS      \"TO ADOPT USSR ORAL RESOL. REJECTING 8 DRAFT TRUSTEESHIP… co         1    \n 9    27 United States US           yes         1 No            1946-12-06 R/1/1287/A     0     0 NEW GUINEA TRUSTEESHIP      \"TO ADOPT THE TRUSTEESHIP AGREEMENT FOR NEW GUINEA SUBMI… co         1    \n10    28 United States US           yes         1 No            1946-12-06 R/1/1287/B     0     0 RUANDA-URUNDI TRUSTEESHIP   \"TO ADOPT THE TRUSTEESHIP AGREEMENT FOR RUANDA-URUNDI SU… co         1    \n# … with 5,708 more rows"
   },
   {
     "objectID": "materials/01-hello/index.html#stash",
@@ -1929,7 +1971,7 @@
     "href": "materials/01-hello/index.html#design-principle-5-leverage-the-ecosystem",
     "title": "Hello #teachds",
     "section": "Design principle 5: Leverage the ecosystem",
-    "text": "Design principle 5: Leverage the ecosystem\nEstimate the difference between the average evaluation score of male and female faculty.\n\n\n\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, \n    type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", \n    order = c(\"male\", \"female\")) |>\n  summarise(\n    l = quantile(stat, 0.025), \n    u = quantile(stat, 0.975)\n    )\n\n# A tibble: 1 × 2\n       l     u\n   <dbl> <dbl>\n1 0.0359 0.235\n\n\n\n\nt.test(evals$score ~ evals$gender)\n\n\n    Welch Two Sample t-test\n\ndata:  evals$score by evals$gender\nt = -2.7507, df = 398.7, p-value = 0.006218\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -0.24264375 -0.04037194\nsample estimates:\nmean in group female   mean in group male \n            4.092821             4.234328"
+    "text": "Design principle 5: Leverage the ecosystem\nEstimate the difference between the average evaluation score of male and female faculty.\n\n\n\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, \n    type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", \n    order = c(\"male\", \"female\")) |>\n  summarise(\n    l = quantile(stat, 0.025), \n    u = quantile(stat, 0.975)\n    )\n\n# A tibble: 1 × 2\n       l     u\n   <dbl> <dbl>\n1 0.0256 0.231\n\n\n\n\nt.test(evals$score ~ evals$gender)\n\n\n    Welch Two Sample t-test\n\ndata:  evals$score by evals$gender\nt = -2.7507, df = 398.7, p-value = 0.006218\nalternative hypothesis: true difference in means between group female and group male is not equal to 0\n95 percent confidence interval:\n -0.24264375 -0.04037194\nsample estimates:\nmean in group female   mean in group male \n            4.092821             4.234328"
   },
   {
     "objectID": "materials/01-hello/index.html#infer-in-tidymodels",
@@ -1943,21 +1985,21 @@
     "href": "materials/01-hello/index.html#infer-1",
     "title": "Hello #teachds",
     "section": "infer 1",
-    "text": "infer 1\n\nevals |>\n  specify(score ~ gender)\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 463 × 2\n   score gender\n   <dbl> <fct> \n 1   4.7 female\n 2   4.1 female\n 3   3.9 female\n 4   4.8 female\n 5   4.6 male  \n 6   4.3 male  \n 7   2.8 male  \n 8   4.1 male  \n 9   3.4 male  \n10   4.5 female\n# … with 453 more rows\n# ℹ Use `print(n = ...)` to see more rows"
+    "text": "infer 1\n\nevals |>\n  specify(score ~ gender)\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 463 × 2\n   score gender\n   <dbl> <fct> \n 1   4.7 female\n 2   4.1 female\n 3   3.9 female\n 4   4.8 female\n 5   4.6 male  \n 6   4.3 male  \n 7   2.8 male  \n 8   4.1 male  \n 9   3.4 male  \n10   4.5 female\n# … with 453 more rows"
   },
   {
     "objectID": "materials/01-hello/index.html#infer-2",
     "href": "materials/01-hello/index.html#infer-2",
     "title": "Hello #teachds",
     "section": "infer 2",
-    "text": "infer 2\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\")\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 46,300 × 3\n# Groups:   replicate [100]\n   replicate score gender\n       <int> <dbl> <fct> \n 1         1   4   female\n 2         1   3.1 male  \n 3         1   5   male  \n 4         1   4.4 male  \n 5         1   3.5 female\n 6         1   4.5 female\n 7         1   4.5 male  \n 8         1   4.9 male  \n 9         1   4.4 male  \n10         1   3.5 male  \n# … with 46,290 more rows\n# ℹ Use `print(n = ...)` to see more rows"
+    "text": "infer 2\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\")\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 46,300 × 3\n# Groups:   replicate [100]\n   replicate score gender\n       <int> <dbl> <fct> \n 1         1   4   female\n 2         1   3.1 male  \n 3         1   5   male  \n 4         1   4.4 male  \n 5         1   3.5 female\n 6         1   4.5 female\n 7         1   4.5 male  \n 8         1   4.9 male  \n 9         1   4.4 male  \n10         1   3.5 male  \n# … with 46,290 more rows"
   },
   {
     "objectID": "materials/01-hello/index.html#infer-3",
     "href": "materials/01-hello/index.html#infer-3",
     "title": "Hello #teachds",
     "section": "infer 3",
-    "text": "infer 3\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", order = c(\"male\", \"female\"))\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 100 × 2\n   replicate     stat\n       <int>    <dbl>\n 1         1  0.230  \n 2         2  0.134  \n 3         3  0.100  \n 4         4  0.230  \n 5         5  0.128  \n 6         6  0.201  \n 7         7  0.168  \n 8         8  0.130  \n 9         9 -0.00490\n10        10  0.123  \n# … with 90 more rows\n# ℹ Use `print(n = ...)` to see more rows"
+    "text": "infer 3\n\nset.seed(1234)\nevals |>\n  specify(score ~ gender) |>\n  generate(reps = 100, type = \"bootstrap\") |>\n  calculate(stat = \"diff in means\", order = c(\"male\", \"female\"))\n\nResponse: score (numeric)\nExplanatory: gender (factor)\n# A tibble: 100 × 2\n   replicate     stat\n       <int>    <dbl>\n 1         1  0.230  \n 2         2  0.134  \n 3         3  0.100  \n 4         4  0.230  \n 5         5  0.128  \n 6         6  0.201  \n 7         7  0.168  \n 8         8  0.130  \n 9         9 -0.00490\n10        10  0.123  \n# … with 90 more rows"
   },
   {
     "objectID": "materials/01-hello/index.html#infer-4",
@@ -1978,42 +2020,7 @@
     "href": "materials/01-hello/index.html#one-other-way-to-leverage-the-ecosystem",
     "title": "Hello #teachds",
     "section": "One other way to “leverage the ecosystem”",
-    "text": "One other way to “leverage the ecosystem”\nDo it all in R!\n\nSlides, course, course notes / textbook with Quarto\nA student dashboard with flexdashboard\nGit automation with ghclass\nInteractive tutorials with learnr\n…"
-  },
-  {
-    "objectID": "materials/01-hello/index.html#course-toolkit",
-    "href": "materials/01-hello/index.html#course-toolkit",
-    "title": "Hello #teachds",
-    "section": "Course toolkit",
-    "text": "Course toolkit\n\n\nWorkshop operation:\n\nrstd.io/teach-ds-conf22\nDiscord\n\n\nDoing data science:\n\nProgramming:\n\nR\nRStudio\ntidyverse\nQuarto\n\nVersion control and collaboration:\n\nGit\nGitHub"
-  },
-  {
-    "objectID": "materials/01-hello/index.html#toolkit-for-reproducibility",
-    "href": "materials/01-hello/index.html#toolkit-for-reproducibility",
-    "title": "Hello #teachds",
-    "section": "Toolkit for reproducibility",
-    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
-  },
-  {
-    "objectID": "materials/01-hello/index.html#quarto",
-    "href": "materials/01-hello/index.html#quarto",
-    "title": "Hello #teachds",
-    "section": "Quarto",
-    "text": "Quarto\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nA visual editor (just like Google Docs) for authoring\nCode goes in chunks, narrative goes outside of chunks"
-  },
-  {
-    "objectID": "materials/01-hello/index.html#how-will-we-use-quarto",
-    "href": "materials/01-hello/index.html#how-will-we-use-quarto",
-    "title": "Hello #teachds",
-    "section": "How will we use Quarto?",
-    "text": "How will we use Quarto?\n\nEvery exercise is a Quarto document\nYou’ll always have a template Quarto document to start with"
-  },
-  {
-    "objectID": "materials/01-hello/index.html#your-turn-bechdel-quarto",
-    "href": "materials/01-hello/index.html#your-turn-bechdel-quarto",
-    "title": "Hello #teachds",
-    "section": "Your turn: Bechdel + Quarto",
-    "text": "Your turn: Bechdel + Quarto\n\n RStudio Cloud > “Module 1 - Hello” > ex-1-3.qmd\n\n\nThe Bechdel test asks whether a work of fiction features at least two women who talk to each other about something other than a man, and there must be two women named characters. Review and render the documnt, then fill in the blanks.\n\n\n\n\n10:00\n\n\n\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 1"
+    "text": "One other way to “leverage the ecosystem”\nDo it all in R!\n\nSlides, course, course notes / textbook with Quarto\nA student dashboard with flexdashboard\nGit automation with ghclass\nInteractive tutorials with learnr\n…\n\n\n\n\n🔗 rstd.io/teach-ds-conf22 / Module 1"
   },
   {
     "objectID": "materials/01-hello/ex-1-2.html",
@@ -2238,6 +2245,20 @@
     "title": "Interactivity and immediate feedback with learnr",
     "section": "Learn more!",
     "text": "Learn more!\nSharing tutorials\n\nPublishing learnr tutorials on shinyapps.io by Angela Li\nHow to deliver learnr tutorials in a package by Desirée De Leon"
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#yesterday",
+    "href": "materials/05-rstudio-cloud/index.html#yesterday",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Yesterday…",
+    "text": "Yesterday…\n\n\nModule 1: “Start with cake” – Visualization (and in general hands on data analysis) as early as possible in the class, focusing on significant and motivating examples, and keeping baby steps out of classroom prime time, supported by computational infrastructure that helps make this happen.\nModule 2: “Teach the tidyverse” – For consistency, expressiveness, and opportunities for growth.\nModule 3: “Teach tidymodels” – For staying in the (consistent, and expressive) tidy ecosystem, easing teaching modern predictive modeling and modern simulation-based inference.\nModule 4: “Bring back the baby steps” – With interactive learnr tutorials with automated feedback, and leverage sister packages for formative or summative assessment with learnr."
+  },
+  {
+    "objectID": "materials/05-rstudio-cloud/index.html#tidymodels-in-the-curriculum",
+    "href": "materials/05-rstudio-cloud/index.html#tidymodels-in-the-curriculum",
+    "title": "Computing infrastructure with RStudio Cloud",
+    "section": "Tidymodels in the curriculum",
+    "text": "Tidymodels in the curriculum\n\n\n\nIntro data science:\n\nAs part of main curriculum:\n\nPredictive multiple regression models\nSimulation-based inference for bootstrap intervals and hypothesis testing\n\nIn looking further: A more advanced example (e.g., text classification) featuring recipe building and cross validation\n\n\n\n\nRegression analysis / Stat 2:\n\nAs part of the main curriculum:\n\nMultiple linear, logistic, and ordinal logistic regression as predictive as well as inferential models\nFor predictive models: start with test/train split, build recipes, use workflows, conduct cross validation\n\nIn looking further: Hyper-parameter tuning, or survival models, or spatial models"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#cherish-day-one",
@@ -2475,7 +2496,7 @@
     "href": "materials/05-rstudio-cloud/index.html#collaborative-editing",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Collaborative editing",
-    "text": "Collaborative editing\nDEMO"
+    "text": "Collaborative editing\n\nInstructor and student can collaboratively edit a script\nEnvironments are not shared\nDemo!"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#tips",
