@@ -129,8 +129,7 @@ Add three questions to the tutorial:
 
 **Stretch goal**: Add hints to the coding exercise.
 
-You can write your questions in Part 2: Your turn!
-section of `learnr-demo.Rmd`.
+You can write your questions in Part 2: Your turn! section of `learnr-demo.Rmd`.
 :::
 
 ::: share
@@ -145,8 +144,7 @@ countdown(minutes = 15, font_size = "1.5em")
 
 ## gradethis
 
-The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible to check coding exercises in a learnr tutorial.
-There are two basic methods for checking:
+The [gradethis](https://pkgs.rstudio.com/gradethis/) package makes it feasible to check coding exercises in a learnr tutorial. There are two basic methods for checking:
 
 -   `grade_this_code()`: Compare student code to model code (strict check)
 
@@ -167,11 +165,9 @@ devtools::install_github("rstudio/gradethis")
 ::: appex
 Add automated feedback to your coding exercise.
 
-**Stretch goal**: Consider 2 -3 common errors students may make.
-Write specific feedback for those errors.
+**Stretch goal**: Consider 2 -3 common errors students may make. Write specific feedback for those errors.
 
-You can write your responses in Part 4: Your turn!
-section or modify the code in Part 2 of `learnr-demo.Rmd`.
+You can write your responses in Part 4: Your turn! section or modify the code in Part 2 of `learnr-demo.Rmd`.
 :::
 
 ::: share
@@ -241,8 +237,7 @@ remotes::install_github("rundel/learnrhash")
 # Workshop check in
 
 ::: question
-We have completed Day 01!
-Please answer the following using your sticky notes:
+We have completed Day 01! Please answer the following using your sticky notes:
 
 -   Purple sticky note: What is going well / what has been your favorite part of the workshop so far?
 

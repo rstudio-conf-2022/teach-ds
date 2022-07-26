@@ -7,7 +7,6 @@ logo: "../images/logo.png"
 format: 
   revealjs:
     theme: solarized
-    multiplex: true
     transition: fade
     slide-number: true
     incremental: false 
@@ -15,6 +14,7 @@ format:
     center: true
 execute:
   freeze: auto
+  echo: true
 ---
 
 ## Bullet point list
