@@ -98,6 +98,13 @@
     "text": "Slides\nView slides in full screen"
   },
   {
+    "objectID": "modules/d2-07-data-package.html#data-sets-and-logo",
+    "href": "modules/d2-07-data-package.html#data-sets-and-logo",
+    "title": "Making a data package",
+    "section": "Data sets and logo",
+    "text": "Data sets and logo\n\nweather.csv: https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/weather.csv\ncities.csv: https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/cities.csv\nusweather.png: https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/usweather.png"
+  },
+  {
     "objectID": "modules/d2-07-data-package.html#exercises",
     "href": "modules/d2-07-data-package.html#exercises",
     "title": "Making a data package",
