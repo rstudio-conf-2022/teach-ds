@@ -4,8 +4,7 @@ subtitle: "teach_ds :: Teaching data science with the tidyverse"
 editor: visual
 ---
 
-In this mini analysis we work with the data used in the FiveThirtyEight story titled ["The Dollar-And-Cents Case Against Hollywood's Exclusion of Women"](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/).
-Your task is to fill in the blanks denoted by `___`.
+In this mini analysis we work with the data used in the FiveThirtyEight story titled ["The Dollar-And-Cents Case Against Hollywood's Exclusion of Women"](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/). Your task is to fill in the blanks denoted by `___`.
 
 ## Data and packages
 
@@ -19,8 +18,7 @@ library(fivethirtyeight)
 library(tidyverse)
 ```
 
-The dataset contains information on `r nrow(bechdel)` movies released between `r min(bechdel$year)` and `r max(bechdel$year)`.
-However we'll focus our analysis on movies released between 1990 and 2013.
+The dataset contains information on `r nrow(bechdel)` movies released between `r min(bechdel$year)` and `r max(bechdel$year)`. However we'll focus our analysis on movies released between 1990 and 2013.
 
 ```{r}
 bechdel90_13 <- bechdel |> 
@@ -51,8 +49,7 @@ bechdel90_13 |>
     )
 ```
 
-Next, let's take a look at how median budget and gross vary by a more detailed indicator of the Bechdel test result.
-This information is stored in the `clean_test` variable, which takes on the following values:
+Next, let's take a look at how median budget and gross vary by a more detailed indicator of the Bechdel test result. This information is stored in the `clean_test` variable, which takes on the following values:
 
 -   `ok` = passes test
 -   `dubious`
