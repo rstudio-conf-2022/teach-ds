@@ -1,14 +1,9 @@
 ---
-title: "Demo"
-subtitle: "Example presentation"
+title: "Example Course website"
+subtitle: "teach_ds :: Organizing teaching materials"
 editor: visual
 ---
 
-Follow along options:
+**Link to example course website:** [rstudio-conf-2022.github.io/teach-ds-course-website](https://rstudio-conf-2022.github.io/teach-ds-course-website/)
 
--   Local:
-
-    -   In RStudio, install and load \[UPDATE THIS!\]
-    -   [Click here](https://github.com/rstudio-conf-2022/teach-ds/tree/main/materials/08-organizing/_example-presentation) to access the source file on GitHub
-
--   Cloud: Go to the workspace for this course and start the assignment called **08-organizing**
+**Link to source repo:** [github.com/rstudio-conf-2022/teach-ds-course-website](https://github.com/rstudio-conf-2022/teach-ds-course-website)

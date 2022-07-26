@@ -88,7 +88,7 @@ execute:
 ## Follow along
 
 ::: cloud
-{{< fa cloud >}} Follow at along at **Module 08-organizing** on RStudio Cloud
+{{< fa cloud >}} Follow at along at **Module 08 - Organizing Materials Slides** on RStudio Cloud
 :::
 
 <br>
@@ -129,15 +129,15 @@ execute:
 
 This will populate the standard files for a new website.
 
-## Making a website
+## Follow along
 
 ::: cloud
-{{< fa cloud >}} Follow at along at **Module 08-organizing** on RStudio Cloud
+{{< fa cloud >}} Follow at along at **Module 08 - Organizing Materials Website** on RStudio Cloud
 :::
 
 <br>
 
-DEMO\]
+\[DEMO\]
 
 ## Deploying materials: GitHub pages
 
@@ -159,8 +159,6 @@ Run the following code in the **Terminal**
 
 🔗 [maria.quarto.pub/teach-data-science-course-website](https://maria.quarto.pub/teach-data-science-course-website/)
 
-## 
-
 ## Learn more!
 
 -   Making presentations in Quarto: [quarto.org/docs/presentations/revealjs](https://quarto.org/docs/presentations/revealjs/)
@@ -169,7 +167,7 @@ Run the following code in the **Terminal**
 
 -   Publishing content: [quarto.org/docs/publishing](https://quarto.org/docs/publishing/)
 
-# Wrap up
+# Q&A / Wrap up 
 
 ## Workshop feedback
 
