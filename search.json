@@ -88,14 +88,7 @@
     "href": "modules/d2-07-data-package.html",
     "title": "Making a data package",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d2-07-data-package.html#outline",
-    "href": "modules/d2-07-data-package.html#outline",
-    "title": "Making a data package",
-    "section": "Outline",
-    "text": "Outline\n\nAnatomy of an R package\nData cleaning and the data-raw folder\nDocumenting your data\nChecking and testing your package\nYour package on GitHub and CRAN"
+    "text": "Anatomy of an R package\nData cleaning and the data-raw folder\nDocumenting your data\nChecking your package\nYour package on GitHub and discussion on your package on CRAN"
   },
   {
     "objectID": "modules/d2-07-data-package.html#slides",
@@ -109,7 +102,7 @@
     "href": "modules/d2-07-data-package.html#exercises",
     "title": "Making a data package",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nTitle placeholder for Exercise 1\n\n\n\n\nTitle placeholder for Exercise 2\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\nExercise prompts for this session are embedded in the slides since they only involve tasks to be completed in the package we’re developing."
   },
   {
     "objectID": "modules/d2-07b-coffee-break.html",
@@ -257,6 +250,55 @@
     "title": "Resources",
     "section": "Papers",
     "text": "Papers\n\n\nDesigning introductory data science curricula:\n\nÇetinkaya-Rundel, M., & Ellison, V. (2021). A fresh look at introductory data science. Journal of Statistics and Data Science Education, 29(sup1), S16-S26. https://doi.org/10.1080/10691898.2020.1804497.\nBaumer, B. (2015). A data science course for undergraduates: Thinking with data. The American Statistician, 69(4), 334-342. https://doi.org/10.1080/00031305.2015.1081105.\n\nTeaching reproducibility and version control:\n\nBeckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. Journal of Statistics and Data Science Education, 29(sup1), S132-S144. https://doi.org/10.1080/10691898.2020.1848485.\n\nTeaching with the tidyverse:\n\nÇetinkaya-Rundel, M., Hardin, J., Baumer, B., McNamara, A., Horton, N., & Rundel, C. (2022). An educator’s perspective of the tidyverse. Technology Innovations in Statistics Education, 14(1). http://dx.doi.org/10.5070/T514154352.\n\nOrganizing teaching materials:\n\nDogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. arXiv preprint arXiv:2202.09504. https://doi.org/10.48550/arXiv.2202.09504.\n\nTeaching modern modeling:\n\nTackett, M. (2022) Three principles for modernizing an undergraduate regression analysis course. arXiv preprint arXiv:2205.11026. https://doi.org/10.48550/arXiv.2205.11026"
+  },
+  {
+    "objectID": "materials/07-data-package/data-package-notes.html",
+    "href": "materials/07-data-package/data-package-notes.html",
+    "title": "Designing the Data Science Classroom",
+    "section": "",
+    "text": "## code to prepare weather dataset goes here\n\n\n# load packages —————————————————-\n\n\nlibrary(tidyverse)\n\nlibrary(janitor)\n\n\n# load data ——————————————————–\n\n\nweather_raw <- read_csv(“data-raw/weather/weather.csv”)\n\n\nweather <- weather_raw |>\n\n  clean_names()\n\n\nusethis::use_data(weather, overwrite = TRUE)\n\n\ndevtools::load_all(), check that weather exists. then try ?w eather – nothing.\nuse_r(“weather”), then go to https://r-pkgs.org/data.html#documenting-data and copy-paste\nwrite documentation\n\n#’ Hourly weather for 50 US cities\n\n#’\n\n#’ A dataset containing hourly weather data for 50 US cities.\n\n#’\n\n#’ @format A data frame with 6000 rows and 21 variables:\n\n…\n\n#’ @source Dark Sky, \n“weather”\n\n\ndata dictionary\n\nnames(weather) %>% cat(sep = “”)\ncity - Name of city. state - Name of state. time - Time. summary - A human-readable text summary. icon - A machine-readable text summary, suitable for selecting an icon for display. precip_intensity - The intensity (in inches of liquid water per hour) of precipitation occurring at the given time. This value is conditional on probability (that is, assuming any precipitation occurs at all).\n\nprecip_probability - The probability of precipitation occurring, between 0 and 1, inclusive. temperature - The air temperature in degrees Fahrenheit. apparent_temperature - The apparent (or “feels like”) temperature in degrees Fahrenheit. dew_point - The dew point in degrees Fahrenheit. humidity - The relative humidity, between 0 and 1, inclusive. pressure - The sea-level air pressure in millibars. wind_speed - The wind speed in miles per hour. wind_gust - The time at which the maximum wind gust speed occurs during the day. wind_bearing - The direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise. (If windSpeed is zero, then this value will not be defined.) cloud_cover - The percentage of sky occluded by clouds, between 0 and 1, inclusive. uv_index - The UV index. visibility - The average visibility in miles, capped at 10 miles. ozone - The columnar density of total atmospheric ozone at the given time in Dobson units. precip_type - The type of precipitation occurring at the given time. If defined, this property will have one of the following values: “rain”, “snow”, or “sleet” (which refers to each of freezing rain, ice pellets, and “wintery mix”). forecast - Indicator for whether measurement is historical (FALSE) or forecast (TRUE).\n\ndocument(), load_all(), ?w eather\nuse_git(), use_github()\nuse_readme_rmd()\n\n```{r}\n\n#| label: example\n\n#| message: false\n\n\nlibrary(usweather)\n\nlibrary(dplyr)\n\n\nweather |>\n\n  filter(!forecast) |>\n\n  group_by(city) |>\n\n  summarise(mean_temp = mean(temperature)) %>%\n\n  arrange(desc(mean_temp))\n\n```\n\n\nDESCRIPTION\n\n\nTitle: Provides hourly temperature for 50 US cities\nAuthors@R: person(“Mine”, “Çetinkaya-Rundel”, , “cetinkaya.mine@gmail.com, role = c(”aut”, “cre”), comment = c(ORCID = “0000-0001-6452-2420”))\nuse_gpl3_license()\n\n\nuse_pkgdown(), build_site()\nuse_github_pages(), use_github_action(name = “pkgdown”), check action on repo, find page\n\nyour turn: add cities.csv\n\nuse_tutorial(“explore-usweather”, title = “Exploring weather in US cities”)\n\nadd library(usweather) plop weather into a code chunk\ninstall pkg from github show it works in tutorials pane"
+  },
+  {
+    "objectID": "materials/07-data-package/index.html#goal",
+    "href": "materials/07-data-package/index.html#goal",
+    "title": "Making a data package",
+    "section": "Goal",
+    "text": "Goal\n\nTo make a simple data package, but not to teach all of package development.\nTo use package development best practices, but not to teach all best practices associated with package development (e.g., we won’t cover testing)."
+  },
+  {
+    "objectID": "materials/07-data-package/index.html#demo-making-a-data-package",
+    "href": "materials/07-data-package/index.html#demo-making-a-data-package",
+    "title": "Making a data package",
+    "section": "Demo: Making a data package",
+    "text": "Demo: Making a data package\n\nCheck if a package name is available with available::available()\nCreate the package with usethis::create_package()\n\n\n RStudio Cloud > Module 7 - Data package\n\n\nCreate a data-raw folder for data prep and properly ignore it from package building with usethis::use_data_raw().\n\nIn the folder, create a folder called weather, put weather.R and weather.csv.\nLoad, clean, and save data in weather.R.\nCheck with devtools::load_all().\n\nCreate a documentation file with usethis::use_r(\"weather\").\n\nGo to https://r-pkgs.org/data.html#documenting-data to copy-pastea template.\nWrite the documentation.\nCheck with devtools::document(), devtools::load_all(), ?weather."
+  },
+  {
+    "objectID": "materials/07-data-package/index.html#demo-continued-making-a-data-package",
+    "href": "materials/07-data-package/index.html#demo-continued-making-a-data-package",
+    "title": "Making a data package",
+    "section": "Demo (continued): Making a data package",
+    "text": "Demo (continued): Making a data package\n\nStart tracking with version control: usethis::use_git(), then use_github(\"pkgname\").\nAdd a README with usethis::use_readme_rmd(). Write some info, knit, commit, and push.\nUpdate the DESCRIPTION file and usethis::use_gpl3_license().\nCreate a pkgdown website with usethis::use_pkgdown(), build the site with devtools::build_site().\nPublish the site with usethis::use_github_pages(), then use_github_action(name = \"usweather\"). Check the action running on the repo and view your pkgdown website."
+  },
+  {
+    "objectID": "materials/07-data-package/index.html#your-turn-add-another-dataset",
+    "href": "materials/07-data-package/index.html#your-turn-add-another-dataset",
+    "title": "Making a data package",
+    "section": "Your turn: Add another dataset",
+    "text": "Your turn: Add another dataset\n\n RStudio Cloud > Module 7 - Data package\n\n\nAdd a new dataset: cities.csv. Document it to the best of your ability. The data source is Wikipedia.\n\n\n Work with your neighbor throughout this process. You might also choose to pair program, where only one of you write code and the other navigates."
+  },
+  {
+    "objectID": "materials/07-data-package/index.html#demo-adding-a-tutorial",
+    "href": "materials/07-data-package/index.html#demo-adding-a-tutorial",
+    "title": "Making a data package",
+    "section": "Demo: Adding a tutorial",
+    "text": "Demo: Adding a tutorial\n\nAdd a tutorial with usethis::use_tutorial(\"explore-usweather\", title = \"Exploring weather in US cities\").\nEdit the tutorial to load this package and confirm that the datasets are accessible to the code chunks.\nOpen a new project, install the package from GitHub with devtools::install_github(\"YOUR_GITHUB_USERNAME/usweather\"). Confirm that the tutorial is accessible in the Tutorials pane."
+  },
+  {
+    "objectID": "materials/07-data-package/index.html#your-turn-add-a-hex-logo",
+    "href": "materials/07-data-package/index.html#your-turn-add-a-hex-logo",
+    "title": "Making a data package",
+    "section": "Your turn: Add a hex logo",
+    "text": "Your turn: Add a hex logo\n[Time permitting]\n\n RStudio Cloud > Module 7 - Data package\n\n\nDownload this hex logo and add it to the package website. Take a look at the usethis documentation for functions that can help you place the file in the right location.\n\n\n Work with your neighbor throughout this process. You might also choose to pair program, where only one of you write code and the other navigates.\n\n\n\n\n🔗 rstd.io/teach-ds-conf22"
   },
   {
     "objectID": "materials/06-reproduciblity/ex-6-1.html",
