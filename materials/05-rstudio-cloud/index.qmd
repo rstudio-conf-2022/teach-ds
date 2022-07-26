@@ -386,7 +386,7 @@ countdown(minutes = 3, font_size = "1.5em")
 -   Add a base project to your workspace:
     -   Install one or two of your favorite packages.
     -   Create a Quarto document so necessary packages get installed.
-    -   Add a code-of-conduct.md (you can copy-paste from [here](https://web.cvent.com/event/36ebe042-0113-44f1-8e36-b9bc5d0733bf/websitePage:988cd046-614c-445b-b658-1c8d83ca82b0) if you like) or some other plain text document.
+    -   Add a code-of-conduct.md (you can copy-paste from [here](https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/) if you like) or some other plain text document.
 -   Make this project visible to everyone. In the settings menu, set this project as the base project.
 -   Create a new assignment: `Homework 01`.
 :::
