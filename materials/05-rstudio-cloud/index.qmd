@@ -265,7 +265,7 @@ countdown(minutes = 5, font_size = "1.5em")
 ## Permission levels
 
 | role        | permission                                       | course role |
-|----------------|----------------------------------------|----------------|
+|-------------|--------------------------------------------------|-------------|
 | admin       | manage users, view, edit and manage all projects | instructor  |
 | moderator   | view, edit and manage all projects               | TA          |
 | contributor | create, edit and manage their own projects       | student     |
@@ -346,7 +346,6 @@ countdown(minutes = 10, font_size = "1.5em")
 ```{=html}
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/k_W1kS10rLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
-
 ::: {.larger style="text-align: right;"}
 👩‍💻
 :::
