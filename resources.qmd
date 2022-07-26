@@ -3,19 +3,14 @@ title: "Resources"
 editor: visual
 ---
 
-::: callout-warning
-This page is under construction and will be updated continuously until the workshop date.
-:::
-
 ## Course material repositories
 
 -   Data Science in a Box: [datasciencebox.org](https://datasciencebox.org/)
 
-<!--# TO DO: Add others... -->
-
 ## Course websites
 
-<!--# TO DO: Add links to STA 199, IntroDS, etc. course websites. -->
+-   STA 199 at Duke: [https://sta199-fa21-003.netlify.app](https://sta199-fa21-003.netlify.app/)
+-   STA 210 at Duke: <https://sta210-s22.github.io/website>
 
 ## Textbooks
 
@@ -25,16 +20,21 @@ This page is under construction and will be updated continuously until the works
 
 -   [Tidy modeling with R](https://www.tmwr.org/) by Max Kuhn and Julia Silge
 
-<!--# TO DO: Add MDSR by Baumer? -->
+-   [Modern Data Science with R](https://mdsr-book.github.io/mdsr2e/) by Benjamin S. Baumer, Daniel T. Kaplan, and Nicholas J. Horton
 
 ## Papers
 
-<!--# TO DO: Add more relevant papers. -->
-
 -   Designing introductory data science curricula:
-    -   Çetinkaya-Rundel, M., & Ellison, V. (2021). A fresh look at introductory data science. *Journal of Statistics and Data Science Education*, *29*(sup1), S16-S26. <https://doi.org/10.1080/10691898.2020.1804497>.
+    -   Çetinkaya-Rundel, M., & Ellison, V. (2021).
+        A fresh look at introductory data science.
+        *Journal of Statistics and Data Science Education*, *29*(sup1), S16-S26.
+        <https://doi.org/10.1080/10691898.2020.1804497>.
 
-    -   Baumer, B. (2015). A data science course for undergraduates: Thinking with data. *The American Statistician*, *69*(4), 334-342. <https://doi.org/10.1080/00031305.2015.1081105>.
+    -   Baumer, B.
+        (2015).
+        A data science course for undergraduates: Thinking with data.
+        *The American Statistician*, *69*(4), 334-342.
+        <https://doi.org/10.1080/00031305.2015.1081105>.
 -   Teaching reproducibility and version control:
     -   Beckman, M. D., Çetinkaya-Rundel, M., Horton, N. J., Rundel, C. W., Sullivan, A. J., & Tackett, M. (2021). Implementing version control with Git and GitHub as a learning objective in statistics and data science courses. *Journal of Statistics and Data Science Education*, *29*(sup1), S132-S144. <https://doi.org/10.1080/10691898.2020.1848485>.
 -   Teaching with the tidyverse:
@@ -42,6 +42,9 @@ This page is under construction and will be updated continuously until the works
 -   Organizing teaching materials:
     -   Dogucu, M., & Çetinkaya-Rundel, M. (2022). Tools and Recommendations for Reproducible Teaching. *arXiv preprint arXiv:2202.09504*. <https://doi.org/10.48550/arXiv.2202.09504>.
 -   Teaching modern modeling:
-    -   Tackett, M. (2022) Three principles for modernizing an undergraduate regression analysis course. *arXiv preprint arXiv:*2205.11026. <https://doi.org/10.48550/arXiv.2205.11026>
+    -   Tackett, M.
+        (2022) Three principles for modernizing an undergraduate regression analysis course.
+        *arXiv preprint arXiv:*2205.11026.
+        <https://doi.org/10.48550/arXiv.2205.11026>
 
         \
