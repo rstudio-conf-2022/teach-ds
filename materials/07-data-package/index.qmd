@@ -32,7 +32,7 @@ knitr:
 2.  Create the package with `usethis::create_package()`
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud \> Module 7 - Data package
+{{< fa cloud >}} RStudio Cloud > Module 7 - Data package
 :::
 
 3.  Create a `data-raw` folder for data prep and properly ignore it from package building with `usethis::use_data_raw()`.
@@ -40,7 +40,7 @@ knitr:
     -   Load, clean, and save data in `weather.R`.
     -   Check with `devtools::load_all()`.
 4.  Create a documentation file with `usethis::use_r("weather")`.
-    -   Go to [https://r-pkgs.org/data.html#documenting-data to copy-paste](https://r-pkgs.org/data.html#documenting-data to copy-paste)a template.
+    -   Go to [https://r-pkgs.org/data.html#documenting-data to copy-paste](https://r-pkgs.org/data.html#documenting-data%20to%20copy-paste)a template.
     -   Write the documentation.
     -   Check with `devtools::document()`, `devtools::load_all()`, `?weather`.
 
@@ -55,7 +55,7 @@ knitr:
 ## Your turn: Add another dataset
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud \> Module 7 - Data package
+{{< fa cloud >}} RStudio Cloud > Module 7 - Data package
 :::
 
 ::: appex
@@ -65,8 +65,7 @@ The data source is Wikipedia.
 :::
 
 ::: share
-{{< fa user-group >}} Work with your neighbor throughout this process.
-You might also choose to pair program, where only one of you write code and the other navigates.
+{{< fa user-group >}} Work with your neighbor throughout this process. You might also choose to pair program, where only one of you write code and the other navigates.
 :::
 
 ## Demo: Adding a tutorial
@@ -80,7 +79,7 @@ You might also choose to pair program, where only one of you write code and the 
 \[Time permitting\]
 
 ::: cloud
-{{< fa cloud >}} RStudio Cloud \> Module 7 - Data package
+{{< fa cloud >}} RStudio Cloud > Module 7 - Data package
 :::
 
 ::: appex
@@ -89,6 +88,5 @@ Take a look at the [**usethis** documentation](https://usethis.r-lib.org/) for f
 :::
 
 ::: share
-{{< fa user-group >}} Work with your neighbor throughout this process.
-You might also choose to pair program, where only one of you write code and the other navigates.
+{{< fa user-group >}} Work with your neighbor throughout this process. You might also choose to pair program, where only one of you write code and the other navigates.
 :::
