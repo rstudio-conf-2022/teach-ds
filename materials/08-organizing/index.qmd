@@ -17,18 +17,13 @@ execute:
   freeze: auto
 ---
 
-# In progress
-
-::: callout-warning
-These slides are currently being designed and built.
-:::
-
 ## Topics
 
 -   Creating slides with Quarto
 -   Creating a course website with Quarto
--   File organization & storage
--   Deploying materials
+    -   File organization & storage
+
+    -   Deploying materials
 
 # Creating slides with Quarto
 
@@ -212,4 +207,20 @@ usethis::use_github()
 
 ## Deploying materials
 
+### GitHub pages
+
+Run the following code in the **Terminal**
+
+    quarto publish gh-pages
+
+https://rstudio-conf-2022.github.io/teach-ds-course-website/
+
+https://maria.quarto.pub/teach-data-science-course-website/
+
 # Wrap up
+
+## Workshop feedback 
+
+::: appex
+Please go to [rstd.io/conf-workshop-survey](http://rstd.io/conf-workshop-survey) to fill out the workshop feedback survey. Your feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops and we really appreciate you taking the time to provide it.
+:::
