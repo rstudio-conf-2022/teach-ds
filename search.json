@@ -2097,14 +2097,14 @@
     "href": "materials/08-organizing/index.html#yaml",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "YAML",
-    "text": "YAML\n\nBasicCustomized\n\n\n\n---\ntitle: \"Presentation title\"\nsubtitle: \"Data science course\"\nauthor: \"Maria Tackett\"\nformat: revealjs\n---\n\n\n\n\n---\ntitle: \"Presentation title\"\nsubtitle: \"Data science course\"\nauthor: \"Maria Tackett\"\nfooter: \"[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)\"\nlogo: \"images/logo.png\"\nformat: \n  revealjs:\n    theme: simple\n    transition: fade\n    slide-number: true\n    incremental: false \n    chalkboard: true\nexecute:\n  freeze: auto\n---"
+    "text": "YAML\n\nBasicCustomized\n\n\n\n---\ntitle: \"Presentation title\"\nsubtitle: \"Data science course\"\nauthor: \"Maria Tackett\"\nformat: revealjs\n---\n\n\n\n\n---\ntitle: \"Presentation title\"\nsubtitle: \"Data science course\"\nauthor: \"Maria Tackett\"\nfooter: \"[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)\"\nlogo: \"images/logo.png\"\nformat: \n  revealjs:\n    theme: simple\n    transition: fade\n    slide-number: true\n    incremental: false \n    chalkboard: true\nexecute:\n  freeze: auto\n  echo: true\n---"
   },
   {
     "objectID": "materials/08-organizing/index.html#follow-along",
     "href": "materials/08-organizing/index.html#follow-along",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Follow along",
-    "text": "Follow along\nFollow along options:\n\nLocal:\n\nIn RStudio, install and load [UPDATE THIS!]\nClick here to access the source file on GitHub\n\nCloud: Go to the workspace for this course and start the assignment called 08-organizing"
+    "text": "Follow along\n\n Follow at along at Module 08-organizing on RStudio Cloud\n\n\n[DEMO]"
   },
   {
     "objectID": "materials/08-organizing/index.html#why",
@@ -2114,53 +2114,46 @@
     "text": "Why?\n\nEasily share course materials, particularly for online courses\nSearch capabilities, so students can more easily find materials\nReproducible website that is easier to update\nLearn by doing!"
   },
   {
-    "objectID": "materials/08-organizing/index.html#getting-started-new-project",
-    "href": "materials/08-organizing/index.html#getting-started-new-project",
+    "objectID": "materials/08-organizing/index.html#course-website",
+    "href": "materials/08-organizing/index.html#course-website",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Getting started: New project",
-    "text": "Getting started: New project\nFile ➡️ New Project ➡️ New Directory ➡️ Quarto Website\n\n\n\n\n\n\n\n\n\n\n\nCreate files needed to connect to GitHub repository\nUse renv, a new package to capture the state of the project (R / RStudio version, packages, etc.)\nUse visual editor by default"
+    "section": "Course website",
+    "text": "Course website\n🔗 rstudio-conf-2022.github.io/teach-ds-course-website"
   },
   {
-    "objectID": "materials/08-organizing/index.html#getting-started-new-project-1",
-    "href": "materials/08-organizing/index.html#getting-started-new-project-1",
+    "objectID": "materials/08-organizing/index.html#getting-started",
+    "href": "materials/08-organizing/index.html#getting-started",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Getting started: New project",
-    "text": "Getting started: New project\n\n\n\n\n\nAdd some text about the files"
+    "section": "Getting started",
+    "text": "Getting started\n\nMake a website repo on GitHub.\n\nIf you’re using a GitHub organization for your course, you can make the repo inside that organization\nThe website repo must be public to publish it\n\nClone the repo and start a new RStudio project.\nRun the following code in the Terminal.\nquarto create-project --type website\n\nThis will populate the standard files for a new website."
   },
   {
-    "objectID": "materials/08-organizing/index.html#getting-started-create-github-repo",
-    "href": "materials/08-organizing/index.html#getting-started-create-github-repo",
+    "objectID": "materials/08-organizing/index.html#making-a-website",
+    "href": "materials/08-organizing/index.html#making-a-website",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Getting started: Create GitHub repo",
-    "text": "Getting started: Create GitHub repo\nInitialize a repository, add necessary files to .gitignore, and make initial commit\n\nusethis::use_git()\n\n\nIs it ok to commit them?\n\n1: Negative\n2: For sure\n3: No\n\nSelection: 2\n✔ Adding files\n✔ Making a commit with message 'Initial commit'"
+    "section": "Making a website",
+    "text": "Making a website\n\n Follow at along at Module 08-organizing on RStudio Cloud\n\n\nDEMO]"
   },
   {
-    "objectID": "materials/08-organizing/index.html#getting-started-create-github-repo-1",
-    "href": "materials/08-organizing/index.html#getting-started-create-github-repo-1",
+    "objectID": "materials/08-organizing/index.html#deploying-materials-github-pages",
+    "href": "materials/08-organizing/index.html#deploying-materials-github-pages",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Getting started: Create GitHub repo",
-    "text": "Getting started: Create GitHub repo\nCreate a new GitHub repo, connect to local repo, and make initial commit by typing the following in the console\n\nusethis::use_github()\n\n\n> usethis::use_github()\n✔ Creating GitHub repository 'matackett/course-website'\n✔ Setting remote 'origin' to 'https://github.com/matackett/course-website.git'\n✔ Pushing 'master' branch to GitHub and setting 'origin/master' as upstream branch\n✔ Opening URL 'https://github.com/matackett/course-website'"
+    "section": "Deploying materials: GitHub pages",
+    "text": "Deploying materials: GitHub pages\nRun the following code in the Terminal\nquarto publish gh-pages\n\n🔗 rstudio-conf-2022.github.io/teach-ds-course-website/"
   },
   {
-    "objectID": "materials/08-organizing/index.html#file-structure-for-course-content",
-    "href": "materials/08-organizing/index.html#file-structure-for-course-content",
+    "objectID": "materials/08-organizing/index.html#deploying-materials-quarto-pub",
+    "href": "materials/08-organizing/index.html#deploying-materials-quarto-pub",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "File structure for course content",
-    "text": "File structure for course content\n\nindex.qmd\nsyllabus.qmd\nschedule.qmd\n📂 slides\n\nlecture-01.qmd\nlecture-02.qmd\n\n📂 assignments\n\nassignment-01.qmd\nassignment-02.qmd\n\nstyle.css"
+    "section": "Deploying materials: Quarto pub",
+    "text": "Deploying materials: Quarto pub\nRun the following code in the Terminal\nquarto publish quarto-pub\n\n🔗 maria.quarto.pub/teach-data-science-course-website"
   },
   {
-    "objectID": "materials/08-organizing/index.html#follow-along-1",
-    "href": "materials/08-organizing/index.html#follow-along-1",
+    "objectID": "materials/08-organizing/index.html#learn-more",
+    "href": "materials/08-organizing/index.html#learn-more",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Follow along",
-    "text": "Follow along"
-  },
-  {
-    "objectID": "materials/08-organizing/index.html#deploying-materials",
-    "href": "materials/08-organizing/index.html#deploying-materials",
-    "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Deploying materials",
-    "text": "Deploying materials\nGitHub pages\nRun the following code in the Terminal\nquarto publish gh-pages\nhttps://rstudio-conf-2022.github.io/teach-ds-course-website/\nhttps://maria.quarto.pub/teach-data-science-course-website/"
+    "section": "Learn more!",
+    "text": "Learn more!\n\nMaking presentations in Quarto: quarto.org/docs/presentations/revealjs\nMaking websites in Quarto: quarto.org/docs/websites\nPublishing content: quarto.org/docs/publishing"
   },
   {
     "objectID": "materials/08-organizing/index.html#workshop-feedback",
