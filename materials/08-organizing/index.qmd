@@ -17,18 +17,13 @@ execute:
   freeze: auto
 ---
 
-# In progress
-
-::: callout-warning
-These slides are currently being designed and built.
-:::
-
 ## Topics
 
 -   Creating slides with Quarto
 -   Creating a course website with Quarto
--   File organization & storage
--   Deploying materials
+    -   File organization & storage
+
+    -   Deploying materials
 
 # Creating slides with Quarto
 
@@ -85,20 +80,20 @@ format:
     chalkboard: true
 execute:
   freeze: auto
+  echo: true
 ---
 ```
 :::
 
 ## Follow along
 
-Follow along options:
+::: cloud
+{{< fa cloud >}} Follow at along at **Module 08-organizing** on RStudio Cloud
+:::
 
--   Local:
+<br>
 
-    -   In RStudio, install and load \[UPDATE THIS!\]
-    -   [Click here](https://github.com/rstudio-conf-2022/teach-ds/tree/main/materials/08-organizing/_example-presentation) to access the source file on GitHub
-
--   Cloud: Go to the workspace for this course and start the assignment called **08-organizing**
+\[DEMO\]
 
 # Creating websites with Quarto
 
@@ -112,104 +107,72 @@ Follow along options:
 
 -   Learn by doing!
 
+## Course website
+
+### 🔗 [rstudio-conf-2022.github.io/teach-ds-course-website](https://rstudio-conf-2022.github.io/teach-ds-course-website)
+
 # How
 
-## Getting started: New project
+## Getting started
 
-**File** ➡️ **New Project** ➡️ **New Directory** ➡️ **Quarto Website**
+-   Make a website repo on GitHub.
+
+    -   If you're using a GitHub organization for your course, you can make the repo inside that organization
+
+    -   The website repo must be public to publish it
+
+-   Clone the repo and start a new RStudio project.
+
+-   Run the following code in the **Terminal**.
+
+        quarto create-project --type website
+
+This will populate the standard files for a new website.
+
+## Making a website
+
+::: cloud
+{{< fa cloud >}} Follow at along at **Module 08-organizing** on RStudio Cloud
+:::
 
 <br>
 
-. . .
+DEMO\]
 
-::: columns
-::: {.column width="50%"}
-![](images/create-quarto-project.png){fig-alt="New Quarto website window" fig-align="center" width="562"}
-:::
+## Deploying materials: GitHub pages
 
-::: {.column width="50%"}
--   Create files needed to connect to GitHub repository
+Run the following code in the **Terminal**
 
--   Use [renv](https://rstudio.github.io/renv/index.html), a new package to capture the state of the project (R / RStudio version, packages, etc.)
-
--   Use visual editor by default
-:::
-:::
-
-## Getting started: New project
-
-::: columns
-::: {.column width="50%"}
-![](images/initial-files.png){fig-alt="List of files in new Quarto website repo" width="368"}
-:::
-
-::: {.column width="50%"}
--   Add some text about the files
-:::
-:::
-
-## Getting started: Create GitHub repo
-
-Initialize a repository, add necessary files to `.gitignore`, and make initial commit
-
-```{r}
-#| eval: false
-#| echo: true
-usethis::use_git()
-```
+    quarto publish gh-pages
 
 <br>
 
-    Is it ok to commit them?
+🔗 [rstudio-conf-2022.github.io/teach-ds-course-website/](https://rstudio-conf-2022.github.io/teach-ds-course-website/)
 
-    1: Negative
-    2: For sure
-    3: No
+## Deploying materials: Quarto pub
 
-    Selection: 2
-    ✔ Adding files
-    ✔ Making a commit with message 'Initial commit'
+Run the following code in the **Terminal**
 
-## Getting started: Create GitHub repo
-
-Create a new GitHub repo, connect to local repo, and make initial commit by typing the following in the <u>console</u>
-
-```{r}
-#| eval: false
-#| echo: true
-usethis::use_github()
-```
+    quarto publish quarto-pub
 
 <br>
 
-    > usethis::use_github()
-    ✔ Creating GitHub repository 'matackett/course-website'
-    ✔ Setting remote 'origin' to 'https://github.com/matackett/course-website.git'
-    ✔ Pushing 'master' branch to GitHub and setting 'origin/master' as upstream branch
-    ✔ Opening URL 'https://github.com/matackett/course-website'
+🔗 [maria.quarto.pub/teach-data-science-course-website](https://maria.quarto.pub/teach-data-science-course-website/)
 
-## File structure for course content
+## 
 
--   `index.qmd`
+## Learn more!
 
--   `syllabus.qmd`
+-   Making presentations in Quarto: [quarto.org/docs/presentations/revealjs](https://quarto.org/docs/presentations/revealjs/)
 
--   `schedule.qmd`
+-   Making websites in Quarto: [quarto.org/docs/websites](https://quarto.org/docs/websites/)
 
--   📂 `slides`
-
-    -   `lecture-01.qmd`
-    -   `lecture-02.qmd`
-
--   📂 `assignments`
-
-    -   `assignment-01.qmd`
-    -   `assignment-02.qmd`
-
--   `style.css`
-
-## Follow along
-
-## Deploying materials
+-   Publishing content: [quarto.org/docs/publishing](https://quarto.org/docs/publishing/)
 
 # Wrap up
+
+## Workshop feedback
+
+::: appex
+Please go to [rstd.io/conf-workshop-survey](http://rstd.io/conf-workshop-survey) to fill out the workshop feedback survey. Your feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops and we really appreciate you taking the time to provide it.
+:::

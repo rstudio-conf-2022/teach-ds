@@ -254,7 +254,6 @@ You need to instruct students to create GitHub accounts
 gitcreds::gitcreds_set()
 ```
 
-
 ## Behind the scenes: GitHub tokens
 
 -   If the token is found and works correctly the following code should run without error
@@ -371,7 +370,7 @@ org_create_assignment(
 -   Clone the repo using SSH.
 
 ```{r echo=FALSE}
-countdown(minutes = 10)
+countdown(minutes = 15, font_size = "1.5em")
 ```
 
 ## Create team assignments
@@ -380,7 +379,7 @@ countdown(minutes = 10)
 org_create_assignment(
   org = org,
   repo = paste0("lab-03-nobel-laureates-", roster$team_name),
-  user = roster$github_name,
+  user = roster$username,
   team = roster$team_name,
   source_repo = paste0(org, "/lab-03-nobel-laureates")
 )
@@ -399,7 +398,7 @@ org_create_assignment(
 :::
 
 ```{r echo=FALSE}
-countdown(minutes = 10)
+countdown(minutes = 10, font_size = "1.5em")
 ```
 
 # Giving feedback
@@ -430,7 +429,7 @@ in your repo, then review the issue in on GitHub.
 :::
 
 ```{r echo = FALSE}
-countdown(minutes = 10)
+countdown(minutes = 10, font_size = "1.5em")
 ```
 
 ## Other ghclass functionality

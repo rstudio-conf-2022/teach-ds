@@ -319,7 +319,11 @@ countdown(minutes = 5, font_size = "1.5em")
 ## Permission levels
 
 | role        | permission                                       | course role |
+<<<<<<< HEAD
+|-------------|--------------------------------------------------|-------------|
+=======
 |---------------|-------------------------------------------|---------------|
+>>>>>>> 3013f72455387e27c0ca9d9cf54e4e98038bb865
 | admin       | manage users, view, edit and manage all projects | instructor  |
 | moderator   | view, edit and manage all projects               | TA          |
 | contributor | create, edit and manage their own projects       | student     |
