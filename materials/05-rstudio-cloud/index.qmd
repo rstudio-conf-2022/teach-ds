@@ -35,7 +35,6 @@ knitr:
 ## Tidymodels in the curriculum {.small}
 
 ::: columns
-
 ::: {.column width="50%"}
 ::: fragment
 **Intro data science:**
@@ -57,7 +56,6 @@ knitr:
 -   In looking further: Hyper-parameter tuning, or survival models, or spatial models
 :::
 :::
-
 :::
 
 # Flashback
@@ -304,7 +302,7 @@ countdown(minutes = 5, font_size = "1.5em")
 ## Permission levels
 
 | role        | permission                                       | course role |
-|-----------------|--------------------------------------|-----------------|
+|-------------|--------------------------------------------------|-------------|
 | admin       | manage users, view, edit and manage all projects | instructor  |
 | moderator   | view, edit and manage all projects               | TA          |
 | contributor | create, edit and manage their own projects       | student     |
@@ -446,11 +444,11 @@ Student usage / engagement metrics
 
 ## Collaborative editing
 
-- Instructor and student can collaboratively edit a script
+-   Instructor and student can collaboratively edit a script
 
-- Environments are not shared
+-   Environments are not shared
 
-- Demo!
+-   Demo!
 
 # Parting remarks
 

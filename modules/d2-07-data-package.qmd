@@ -5,32 +5,15 @@ author: "Mine Çetinkaya-Rundel"
 date: "2022-07-27"
 image: "images/data-package.png"
 image-alt: "Hex logo showing a box that is open with icons for dataset floating in it."
-listing:
-  - id: exercises
-    contents:
-      - ../materials/07-data-package/ex-*.qmd
-    type: table
-    fields: [title]
-    field-display-names:
-      title: "Exercise"
-    sort: [filename]
-    sort-ui: false
-    filter-ui: false
-    image-placeholder: images/exercise.png
-tbl-colwidths: [5,20,75]
 ---
-
-::: callout-warning
-This page is under construction and will be updated continuously until the workshop date.
-:::
 
 ## Outline
 
 -   Anatomy of an R package
 -   Data cleaning and the `data-raw` folder
 -   Documenting your data
--   Checking and testing your package
--   Your package on GitHub and CRAN
+-   Checking your package
+-   Your package on GitHub and discussion on your package on CRAN
 
 ## Slides
 
@@ -41,5 +24,4 @@ This page is under construction and will be updated continuously until the works
 ```
 ## Exercises
 
-::: {#exercises}
-:::
+Exercise prompts for this session are embedded in the slides since they only involve tasks to be completed in the package we're developing.
