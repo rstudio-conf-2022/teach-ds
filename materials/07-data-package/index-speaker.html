@@ -6,7 +6,8 @@
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Mine Çetinkaya-Rundel">
@@ -333,20 +334,78 @@
   <p class="author">Mine Çetinkaya-Rundel</p>
 </section>
 
-<section id="in-progress" class="title-slide slide level1 center">
-<h1>In progress</h1>
-<div class="callout callout-warning callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="goal" class="slide level2">
+<h2>Goal</h2>
+<ul>
+<li>To make a simple data package, but not to teach all of package development.</li>
+<li>To use package development best practices, but not to teach all best practices associated with package development (e.g., we won’t cover testing).</li>
+</ul>
+</section>
+<section id="demo-making-a-data-package" class="slide level2 small">
+<h2>Demo: Making a data package</h2>
+<ol type="1">
+<li>Check if a package name is available with <code>available::available()</code></li>
+<li>Create the package with <code>usethis::create_package()</code></li>
+</ol>
+<div class="cloud">
+<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; Module 7 - Data package</p>
 </div>
-<p><strong>Warning</strong></p>
+<ol start="3" type="1">
+<li>Create a <code>data-raw</code> folder for data prep and properly ignore it from package building with <code>usethis::use_data_raw()</code>.
+<ul>
+<li>In the folder, create a folder called <code>weather</code>, put <code>weather.R</code> and <a href="weather.csv"><code>weather.csv</code></a>.</li>
+<li>Load, clean, and save data in <code>weather.R</code>.</li>
+<li>Check with <code>devtools::load_all()</code>.</li>
+</ul></li>
+<li>Create a documentation file with <code>usethis::use_r("weather")</code>.
+<ul>
+<li>Go to <a href="https://r-pkgs.org/data.html#documenting-data%20to%20copy-paste">https://r-pkgs.org/data.html#documenting-data to copy-paste</a>a template.</li>
+<li>Write the documentation.</li>
+<li>Check with <code>devtools::document()</code>, <code>devtools::load_all()</code>, <code>?weather</code>.</li>
+</ul></li>
+</ol>
+</section>
+<section id="demo-continued-making-a-data-package" class="slide level2 small">
+<h2>Demo (continued): Making a data package</h2>
+<ol start="5" type="1">
+<li>Start tracking with version control: <code>usethis::use_git()</code>, then <code>use_github("pkgname")</code>.</li>
+<li>Add a README with <code>usethis::use_readme_rmd()</code>. Write some info, knit, commit, and push.</li>
+<li>Update the <code>DESCRIPTION</code> file and <code>usethis::use_gpl3_license()</code>.</li>
+<li>Create a pkgdown website with <code>usethis::use_pkgdown()</code>, build the site with <code>devtools::build_site()</code>.</li>
+<li>Publish the site with <code>usethis::use_github_pages()</code>, then <code>use_github_action(name = "usweather")</code>. Check the action running on the repo and view your pkgdown website.</li>
+</ol>
+</section>
+<section id="your-turn-add-another-dataset" class="slide level2">
+<h2>Your turn: Add another dataset</h2>
+<div class="cloud">
+<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; Module 7 - Data package</p>
 </div>
-<div class="callout-content">
-<p>These slides are currently being designed and built.</p>
+<div class="appex">
+<p>Add a new dataset: <a href="cities.csv"><code>cities.csv</code></a>. Document it to the best of your ability. The data source is Wikipedia.</p>
 </div>
+<div class="share">
+<p><i class="fa-solid fa-user-group"></i> Work with your neighbor throughout this process. You might also choose to pair program, where only one of you write code and the other navigates.</p>
 </div>
+</section>
+<section id="demo-adding-a-tutorial" class="slide level2">
+<h2>Demo: Adding a tutorial</h2>
+<ol type="1">
+<li>Add a tutorial with <code>usethis::use_tutorial("explore-usweather", title = "Exploring weather in US cities")</code>.</li>
+<li>Edit the tutorial to load this package and confirm that the datasets are accessible to the code chunks.</li>
+<li>Open a new project, install the package from GitHub with <code>devtools::install_github("YOUR_GITHUB_USERNAME/usweather")</code>. Confirm that the tutorial is accessible in the Tutorials pane.</li>
+</ol>
+</section>
+<section id="your-turn-add-a-hex-logo" class="slide level2">
+<h2>Your turn: Add a hex logo</h2>
+<p>[Time permitting]</p>
+<div class="cloud">
+<p><i class="fa-solid fa-cloud"></i> RStudio Cloud &gt; Module 7 - Data package</p>
+</div>
+<div class="appex">
+<p>Download <a href="usweather.png">this hex logo</a> and add it to the package website. Take a look at the <a href="https://usethis.r-lib.org/"><strong>usethis</strong> documentation</a> for functions that can help you place the file in the right location.</p>
+</div>
+<div class="share">
+<p><i class="fa-solid fa-user-group"></i> Work with your neighbor throughout this process. You might also choose to pair program, where only one of you write code and the other navigates.</p>
 </div>
 
 
@@ -440,7 +499,7 @@
         disableLayout: false,
 
         // Vertical centering of slides
-        center: true,
+        center: false,
 
         // Enables touch navigation on devices with touch input
         touch: true,
@@ -570,6 +629,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

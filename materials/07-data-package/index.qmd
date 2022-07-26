@@ -12,13 +12,81 @@ format:
     slide-number: true
     incremental: false 
     chalkboard: true
-    center: true
 execute:
   freeze: auto
+  echo: true
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 200
 ---
 
-# In progress
+## Goal
 
-::: callout-warning
-These slides are currently being designed and built.
+-   To make a simple data package, but not to teach all of package development.
+-   To use package development best practices, but not to teach all best practices associated with package development (e.g., we won't cover testing).
+
+## Demo: Making a data package {.small}
+
+1.  Check if a package name is available with `available::available()`
+2.  Create the package with `usethis::create_package()`
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > Module 7 - Data package
+:::
+
+3.  Create a `data-raw` folder for data prep and properly ignore it from package building with `usethis::use_data_raw()`.
+    -   In the folder, create a folder called `weather`, put `weather.R` and [`weather.csv`](weather.csv).
+    -   Load, clean, and save data in `weather.R`.
+    -   Check with `devtools::load_all()`.
+4.  Create a documentation file with `usethis::use_r("weather")`.
+    -   Go to [https://r-pkgs.org/data.html#documenting-data to copy-paste](https://r-pkgs.org/data.html#documenting-data%20to%20copy-paste)a template.
+    -   Write the documentation.
+    -   Check with `devtools::document()`, `devtools::load_all()`, `?weather`.
+
+## Demo (continued): Making a data package {.small}
+
+5.  Start tracking with version control: `usethis::use_git()`, then `use_github("pkgname")`.
+6.  Add a README with `usethis::use_readme_rmd()`. Write some info, knit, commit, and push.
+7.  Update the `DESCRIPTION` file and `usethis::use_gpl3_license()`.
+8.  Create a pkgdown website with `usethis::use_pkgdown()`, build the site with `devtools::build_site()`.
+9.  Publish the site with `usethis::use_github_pages()`, then `use_github_action(name = "usweather")`. Check the action running on the repo and view your pkgdown website.
+
+## Your turn: Add another dataset
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > Module 7 - Data package
+:::
+
+::: appex
+Add a new dataset: [`cities.csv`](cities.csv).
+Document it to the best of your ability.
+The data source is Wikipedia.
+:::
+
+::: share
+{{< fa user-group >}} Work with your neighbor throughout this process. You might also choose to pair program, where only one of you write code and the other navigates.
+:::
+
+## Demo: Adding a tutorial
+
+1.  Add a tutorial with `usethis::use_tutorial("explore-usweather", title = "Exploring weather in US cities")`.
+2.  Edit the tutorial to load this package and confirm that the datasets are accessible to the code chunks.
+3.  Open a new project, install the package from GitHub with `devtools::install_github("YOUR_GITHUB_USERNAME/usweather")`. Confirm that the tutorial is accessible in the Tutorials pane.
+
+## Your turn: Add a hex logo
+
+\[Time permitting\]
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > Module 7 - Data package
+:::
+
+::: appex
+Download [this hex logo](usweather.png) and add it to the package website.
+Take a look at the [**usethis** documentation](https://usethis.r-lib.org/) for functions that can help you place the file in the right location.
+:::
+
+::: share
+{{< fa user-group >}} Work with your neighbor throughout this process. You might also choose to pair program, where only one of you write code and the other navigates.
 :::
