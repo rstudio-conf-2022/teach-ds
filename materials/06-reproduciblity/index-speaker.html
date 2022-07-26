@@ -402,7 +402,8 @@
 <section class="slide level2 center">
 
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ghclass)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(countdown)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section>
@@ -549,12 +550,12 @@
 <h2>Installation</h2>
 <p>Use the code below to install <strong>ghclass</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">install.packages</span>(<span class="st">"ghclass"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">install.packages</span>(<span class="st">"ghclass"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>Use the code below to load <strong>ghclass</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(ghclass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(ghclass)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="collect-data-from-students" class="slide level2 center">
@@ -581,21 +582,19 @@
 <p><code>ghclass</code> uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that <code>ghclass</code> can find and use it.</p>
 <ul>
 <li>Create token at <a href="https://github.com/settings/tokens">github.com/settings/tokens</a></li>
-<li>Once created, assign the token to <code>GITHUB_PAT</code> as an environmental variable
-<ul>
-<li><code>usethis::edit_r_environ()</code></li>
-<li><code>GITHUB_PAT="alphanumeric string of your GitHub token"</code></li>
-<li>Save, close, restart R for changes to take effect</li>
-</ul></li>
+<li>Once created, save the <code>GITHUB_PAT</code> using</li>
 </ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="behind-the-scenes-github-tokens---update-this-process" class="slide level2 center">
-<h2>Behind the scenes: GitHub tokens - UPDATE THIS PROCESS</h2>
+<section id="behind-the-scenes-github-tokens-1" class="slide level2 center">
+<h2>Behind the scenes: GitHub tokens</h2>
 <ul>
 <li>If the token is found and works correctly the following code should run without error</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">github_test_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">github_test_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>✔ Your GitHub PAT authenticated correctly.</code></pre>
 </div>
@@ -604,7 +603,7 @@
 <li>If instead the token is invalid or not found, you will see something like the following</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">github_test_token</span>(<span class="st">"MADE_UP_TOKEN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">github_test_token</span>(<span class="st">"MADE_UP_TOKEN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>✖ Your GitHub PAT failed to authenticate.</code></pre>
 </div>
@@ -627,11 +626,11 @@
 <li>Instruct students to check their email and follow the instructions.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>org <span class="ot">&lt;-</span> <span class="st">"design-ds-class"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>org <span class="ot">&lt;-</span> <span class="st">"teach-ds-conf22"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>roster <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"SURVEY RESPONSES.csv"</span>)</span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">org_invite</span>(<span class="at">org =</span> org, <span class="at">user =</span> roster<span class="sc">$</span>username)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>roster <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"SURVEY RESPONSES.csv"</span>)</span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="fu">org_invite</span>(<span class="at">org =</span> org, <span class="at">user =</span> roster<span class="sc">$</span>username)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>## ✔ Invited user 'minebotmine' to org 'design-ds-class'.
 ## ✔ Invited user 'rundel' to org 'design-ds-class'.</code></pre>
@@ -642,21 +641,16 @@
 <li>Who is already in?</li>
 </ul>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">org_members</span>(org)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code> [1] "aaron-gilbreath"       "bioboot"               "Cghlewis"             
- [4] "EricJC24"              "gabrielodom"           "gavago"               
- [7] "gavinfay"              "geoffsaw"              "jetsetbaxter"         
-[10] "KatherineCox"          "kavan-econ"            "matackett"            
-[13] "Mears-UFL"             "melindahiggins2000"    "mine-cetinkaya-rundel"
-[16] "murraycadzow"          "paideia-atl"           "paigerios68"          
-[19] "staceyhancock"         "thereseanders"         "timothydobbins"       
-[22] "VanjaRoz"              "woon-yuen"             "zamorarr"             </code></pre>
+<pre><code>[1] "matackett"</code></pre>
 </div>
 </div>
 <ul>
 <li>Who still didn’t accept their invitations?</li>
 </ul>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">org_pending</span>(org)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>character(0)</code></pre>
 </div>
@@ -671,21 +665,19 @@
 <h2>Creating assignments - big picture</h2>
 <ul>
 <li>Create a starter repo, keep it private and make it a template</li>
-<li>Clone the repo and add any starter files (template Qmd, data, instructions, etc.)</li>
+<li>Clone the repo and add any starter files (template qmd, data, instructions, etc.)</li>
 <li>Commit and push your changes to the repo</li>
 <li>Use the <code>org_create_assignment()</code> function to create copies of the starter repo with correct permissions for each of your students (or teams)</li>
 </ul>
 </section>
 <section id="creating-your-starter-repo" class="slide level2 center">
 <h2>Creating your starter repo</h2>
-<p><br></p>
 
-<img data-src="images/starter-repo-create.png" width="741" class="r-stretch"></section>
+<img data-src="images/starter-repo-create.png" class="r-stretch"></section>
 <section id="make-your-starter-repo-a-template" class="slide level2 center">
 <h2>Make your starter repo a template</h2>
-<p><br></p>
 
-<img data-src="images/starter-repo-make-template.png" width="1020" class="r-stretch"></section>
+<img data-src="images/starter-make-repo-template.png" class="r-stretch"></section>
 <section id="prepare-your-starter-repo" class="slide level2 center">
 <h2>Prepare your starter repo</h2>
 <ul>
@@ -699,111 +691,114 @@
 <section id="create-assignments" class="slide level2 center">
 <h2>Create assignments</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">org_create_assignment</span>(</span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="at">org =</span> org,</span>
-<span id="cb13-3"><a href="#cb13-3"></a>  <span class="at">repo =</span> <span class="fu">paste0</span>(<span class="st">"hw-01-airbnb-edi-"</span>, roster<span class="sc">$</span>username),</span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="at">user =</span> roster<span class="sc">$</span>username,</span>
-<span id="cb13-5"><a href="#cb13-5"></a>  <span class="at">source_repo =</span> <span class="fu">paste0</span>(org, <span class="st">"/hw-01-airbnb-edi"</span>)</span>
-<span id="cb13-6"><a href="#cb13-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">org_create_assignment</span>(</span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="at">org =</span> org,</span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="at">repo =</span> <span class="fu">paste0</span>(<span class="st">"hw-01-pet-names-"</span>, roster<span class="sc">$</span>username),</span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="at">user =</span> roster<span class="sc">$</span>username,</span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="at">source_repo =</span> <span class="fu">paste0</span>(org, <span class="st">"/hw-01-pet-names"</span>)</span>
+<span id="cb17-6"><a href="#cb17-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>[DEMO]</p>
-<p>.your-turn[ - Go to the course organisation on GitHub: <a href="https://github.com/design-ds-class">github.com/design-ds-class</a> - Locate your HW 01 and read through the Getting started section and follow the instructions. - Then, go through the Hello Git and Warm up sections as well. - Finally, add your answer to Question 1, and commit and push again.]</p>
+</section>
+<section id="your-turn" class="slide level2 small center">
+<h2>Your turn</h2>
+<div class="appex">
 <ul>
-<li>If there is no GitHub repo created for you for this assignment, let me know.</li>
-<li>Clone using the HTTPS link, and let me know if<br>
-you have 2-factor authentication enabled on<br>
-GitHub (this complicates things!)</li>
+<li><p>Go to the course organisation on GitHub: <a href="https://github.com/teach-ds-conf22">github.com/teach-ds-conf22</a></p></li>
+<li><p>Locate your HW 01, read through the <strong>Getting Started</strong> section, follow the instructions.</p></li>
+<li><p>Then, go through the <strong>Hello Git</strong> and <strong>Warm up</strong> sections.</p></li>
+<li><p>Add your answer to Question 1, then commit and push again.</p></li>
+</ul>
+</div>
+<ul>
+<li><p>If there is no GitHub repo created for you for this assignment, let me know.</p></li>
+<li><p>Clone the repo using SSH.</p></li>
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62db3e86" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62df59ee" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
-</section>
-<section id="options-for-giving-feedback-on-github" class="slide level2 center">
-<h2>Options for giving feedback on GitHub</h2>
-<ul>
-<li><p>Use the GitHub UI to add issues to each student’s repo</p></li>
-<li><p>Clone student repos locally and reproduce their work prior to giving feedback by adding issues on the GitHub UI</p></li>
-</ul>
-<div class="cell">
-
-</div>
-<ul>
-<li>Use the <code>issue_create()</code> function to post issues to all repos at once
-<ul>
-<li>Add a column for the repo name in <code>org/repo</code> format to roster</li>
-<li>Add a column for feedback</li>
-<li>[DEMO]</li>
-</ul></li>
-</ul>
-</section>
-<section id="get-big-picture-stats-for-an-assignment" class="slide level2 center">
-<h2>Get big picture stats for an assignment</h2>
-<div class="cell">
-
-</div>
-<p><br></p>
-<p>[DEMO]</p>
 </section>
 <section id="create-team-assignments" class="slide level2 center">
 <h2>Create team assignments</h2>
-<p>First, we’ll make up some teams</p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">org_create_assignment</span>(</span>
+<span id="cb18-2"><a href="#cb18-2"></a>  <span class="at">org =</span> org,</span>
+<span id="cb18-3"><a href="#cb18-3"></a>  <span class="at">repo =</span> <span class="fu">paste0</span>(<span class="st">"lab-03-nobel-laureates-"</span>, roster<span class="sc">$</span>team_name),</span>
+<span id="cb18-4"><a href="#cb18-4"></a>  <span class="at">user =</span> roster<span class="sc">$</span>github_name,</span>
+<span id="cb18-5"><a href="#cb18-5"></a>  <span class="at">team =</span> roster<span class="sc">$</span>team_name,</span>
+<span id="cb18-6"><a href="#cb18-6"></a>  <span class="at">source_repo =</span> <span class="fu">paste0</span>(org, <span class="st">"/lab-03-nobel-laureates"</span>)</span>
+<span id="cb18-7"><a href="#cb18-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>[DEMO]</p>
-<p>.your-turn[ - Go to the course organisation on GitHub: <a href="https://github.com/design-ds-class">github.com/design-ds-class</a> - Locate your Lab 03 and read through the Getting started section and follow the instructions with your team members.]</p>
+</section>
+<section id="your-turn-1" class="slide level2 center">
+<h2>Your turn</h2>
+<div class="appex">
+<ul>
+<li><p>Go to the course organisation on GitHub: <a href="https://github.com/teach-ds-conf22">github.com/teach-ds-conf22</a></p></li>
+<li><p>Locate your Lab 03 and read through the Getting started section and follow the instructions with your team members.</p></li>
+</ul>
+</div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62db3bc4" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62df569a" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
-<p>class: middle, inverse</p>
 </section></section>
 <section>
 <section id="giving-feedback" class="title-slide slide level1 center">
 <h1>Giving feedback</h1>
 
 </section>
-<section id="more-on-giving-feedback-in-issues" class="slide level2 center">
-<h2>More on giving feedback in issues</h2>
+<section id="options-for-giving-feedback-on-github" class="slide level2 center">
+<h2>Options for giving feedback on GitHub</h2>
 <ul>
-<li>Instructors (and TAs) can view all repositories within the course organization.</li>
-<li>Use specific line references. [DEMO]</li>
-<li>Make sure to <code>@</code> mention the student so that they are notified when an issue is opened.</li>
-<li>You might want to consider keeping points out of issues.</li>
+<li><p>Use the GitHub UI to add issues to each student’s repo</p></li>
+<li><p>Instructors (and TAs) can view all repositories within the course organization.</p></li>
+<li><p>Make sure to <code>@</code> mention the student so that they are notified when an issue is opened.</p></li>
+<li><p>Consider keeping points out of issues.</p></li>
 </ul>
 </section>
-<section id="peer-review" class="slide level2 center">
-<h2>Peer review</h2>
+<section id="your-turn-2" class="slide level2 small center">
+<h2>Your turn</h2>
+<div class="appex">
+<p><strong>Now you’re the instructor:</strong></p>
 <ul>
-<li><p>Once an assignment is completed you can let other students/teams into a repository and they can provide peer review.</p></li>
-<li><p>Peer review is an incredibly effective learning experience for both the reviewers and the reviewees, however it does require coordination and being able to carve out sufficient time in the course schedule.</p></li>
-<li><p>Tip: Do not solely count on peer review for feedback as some reviewers might be less diligent than others. Teams reviewing teams, as opposed to individual reviewing individuals, might address this issue partially.</p></li>
+<li><p>First, I’ll change everyone’s permission level and make you <em>Owner</em>s. (Please don’t delete any repos!)</p></li>
+<li><p>Go to the GitHub organization for our “class” and observe that now you can see all repos.</p></li>
+<li><p>Go into the individual repo (HW 01) for your neighbor. Open an issue and add some text to the issue. In the issue <code>@</code> mention their username. Submit your issue.</p></li>
 </ul>
-<p>See the <a href="https://rundel.github.io/ghclass/articles/peer.html">Peer review with ghclass vignette</a> for more.</p>
-</section>
-<section id="pull-requests" class="slide level2 center">
-<h2>Pull requests</h2>
-<ul>
-<li><p>Another option is to open pull requests for your students’ work where you directly edit their work and ask them to approve the edits.</p></li>
-<li><p>This can be effective as students will see your corrections and review them before accepting them.</p></li>
-<li><p>However this also does mean that you’re directly correcting their work as opposed to giving them higher level instructions on how to correct it.</p></li>
-</ul>
-<p>More on this in the next module…</p>
-<p>.your-turn[ <strong>Now you’re the instructor:</strong>]</p>
+<p><strong>Now you’re a student:</strong> Check your email to confirm that you got notified of an issue being filed by your neighbor<br>
+in your repo, then review the issue in on GitHub.</p>
+</div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62db3c15" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62df580c" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
+</div>
+</div>
+</section>
+<section id="other-ghclass-functionality" class="slide level2 center">
+<h2>Other ghclass functionality</h2>
+<p>Clone student repos to review their work locally</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a>hw01_repos <span class="ot">&lt;-</span> <span class="fu">org_repos</span>(org, <span class="st">"hw-01-pet-names-"</span>)</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="fu">local_repo_clone</span>(hw01_repos, </span>
+<span id="cb19-3"><a href="#cb19-3"></a>                 <span class="at">local_path =</span> <span class="st">"hw01_submissions"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<p>Get big picture statistics for an assignment</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">org_repo_stats</span>(org, <span class="at">filter =</span> <span class="st">"hw-01-pet-names-"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
@@ -811,10 +806,17 @@ GitHub (this complicates things!)</li>
 <h2>Git + GitHub lessons learned</h2>
 <ul>
 <li>If you plan on using git in class, start on day one, don’t wait until the “right time”</li>
-<li>First assignment should be individual, not team based to avoid merge conflicts</li>
+<li>First few assignment should be individual, not team based to avoid merge conflicts</li>
 <li>Students need to remember to pull before starting work</li>
-<li>Impossible (?) to avoid shell intervention every once in a while</li>
+<li>Use GitHub through the RStudio IDE not command line</li>
 <li>Remind students on that future projects should go on GitHub with PI approval</li>
+</ul>
+</section>
+<section id="learn-more" class="slide level2 center">
+<h2>Learn more!</h2>
+<ul>
+<li>ghclass documentation: <a href="https://rundel.github.io/ghclass/index.html">rundel.github.io/ghclass</a></li>
+<li>Beckman, Matthew D., et al.&nbsp;“Implementing version control with Git and GitHub as a learning objective in statistics and data science courses.” <em>Journal of Statistics and Data Science Education</em> 29.sup1 (2021): S132-S144. doi: <a href="https://doi.org/10.1080/10691898.2020.1848485">h</a><a href="https://doi.org/10.1080/10691898.2020.1848485">doi.org/10.1080/10691898.2020.1848485</a></li>
 </ul>
 
 
