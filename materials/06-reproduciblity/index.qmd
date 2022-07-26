@@ -26,7 +26,7 @@ library(ghclass)
 library(countdown)
 ```
 
-# Git + GitHub
+# Version control with Git + GitHub
 
 ## Why Git + GitHub?
 
@@ -193,7 +193,7 @@ You need to instruct students to create GitHub accounts
 gitcreds::gitcreds_set()
 ```
 
-## Behind the scenes: GitHub tokens 
+## Behind the scenes: GitHub tokens
 
 -   If the token is found and works correctly the following code should run without error
 
@@ -402,4 +402,4 @@ org_repo_stats(org, filter = "hw-01-pet-names-")
 ## Learn more!
 
 -   ghclass documentation: [rundel.github.io/ghclass](https://rundel.github.io/ghclass/index.html)
--   Beckman, Matthew D., et al. "Implementing version control with Git and GitHub as a learning objective in statistics and data science courses." *Journal of Statistics and Data Science Education* 29.sup1 (2021): S132-S144. doi: [h](https://doi.org/10.1080/10691898.2020.1848485)[doi.org/10.1080/10691898.2020.1848485](https://doi.org/10.1080/10691898.2020.1848485)
+-   Beckman, Matthew D., et al. "Implementing version control with Git and GitHub as a learning objective in statistics and data science courses." *Journal of Statistics and Data Science Education* 29.sup1 (2021): S132-S144. doi: [hdoi.org/10.1080/10691898.2020.1848485](https://doi.org/10.1080/10691898.2020.1848485)
