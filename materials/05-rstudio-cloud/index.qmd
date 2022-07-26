@@ -21,6 +21,45 @@ knitr:
       width: 200
 ---
 
+# Recap
+
+## Yesterday... {.small}
+
+::: incremental
+-   Module 1: "Start with cake" -- Visualization (and in general hands on data analysis) as early as possible in the class, focusing on significant and motivating examples, and keeping baby steps out of classroom prime time, supported by computational infrastructure that helps make this happen.
+-   Module 2: "Teach the tidyverse" -- For consistency, expressiveness, and opportunities for growth.
+-   Module 3: "Teach tidymodels" -- For staying in the (consistent, and expressive) tidy ecosystem, easing teaching modern predictive modeling and modern simulation-based inference.
+-   Module 4: "Bring back the baby steps" -- With interactive learnr tutorials with automated feedback, and leverage sister packages for formative or summative assessment with learnr.
+:::
+
+## Tidymodels in the curriculum {.small}
+
+::: columns
+
+::: {.column width="50%"}
+::: fragment
+**Intro data science:**
+
+-   As part of main curriculum:
+    -   Predictive multiple regression models
+    -   Simulation-based inference for bootstrap intervals and hypothesis testing
+-   In looking further: A more advanced example (e.g., text classification) featuring recipe building and cross validation
+:::
+:::
+
+::: {.column width="50%"}
+::: fragment
+**Regression analysis / Stat 2:**
+
+-   As part of the main curriculum:
+    -   Multiple linear, logistic, and ordinal logistic regression as predictive as well as inferential models
+    -   For predictive models: start with test/train split, build recipes, use workflows, conduct cross validation
+-   In looking further: Hyper-parameter tuning, or survival models, or spatial models
+:::
+:::
+
+:::
+
 # Flashback
 
 ```{r}
@@ -265,7 +304,7 @@ countdown(minutes = 5, font_size = "1.5em")
 ## Permission levels
 
 | role        | permission                                       | course role |
-|----------------|----------------------------------------|----------------|
+|-----------------|--------------------------------------|-----------------|
 | admin       | manage users, view, edit and manage all projects | instructor  |
 | moderator   | view, edit and manage all projects               | TA          |
 | contributor | create, edit and manage their own projects       | student     |
@@ -346,7 +385,6 @@ countdown(minutes = 10, font_size = "1.5em")
 ```{=html}
 <iframe width="1200" height="530" src="https://www.youtube.com/embed/k_W1kS10rLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ```
-
 ::: {.larger style="text-align: right;"}
 👩‍💻
 :::
@@ -408,7 +446,11 @@ Student usage / engagement metrics
 
 ## Collaborative editing
 
-DEMO
+- Instructor and student can collaboratively edit a script
+
+- Environments are not shared
+
+- Demo!
 
 # Parting remarks
 

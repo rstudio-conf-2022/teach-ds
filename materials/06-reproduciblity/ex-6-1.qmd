@@ -1,5 +1,5 @@
 ---
-title: "Ex 1.3: Bechdel + Quarto"
+title: "Ex 6.1: Quarto 💙 visual editor"
 subtitle: "teach_ds :: Teaching data science with the tidyverse"
 editor: visual
 ---
