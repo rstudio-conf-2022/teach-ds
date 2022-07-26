@@ -17,14 +17,14 @@ execute:
   freeze: auto
 ---
 
+# Reproducibility in the classroom
+
 ```{r load-packages}
 #| warning: false
 #| message: false
 library(ghclass)
 library(countdown)
 ```
-
-# Reproducibility in the classroom
 
 ## Reproducibility checklist
 
@@ -85,7 +85,7 @@ We need an environment where
 -   Citations
 -   And more...
 
-# Version control
+# Version control with Git + GitHub
 
 ## Why Git + GitHub?
 
@@ -245,12 +245,14 @@ You need to instruct students to create GitHub accounts
 `ghclass` uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that `ghclass` can find and use it.
 
 -   Create token at [github.com/settings/tokens](https://github.com/settings/tokens)
--   Once created, assign the token to `GITHUB_PAT` as an environmental variable
-    -   `usethis::edit_r_environ()`
-    -   `GITHUB_PAT="alphanumeric string of your GitHub token"`
-    -   Save, close, restart R for changes to take effect
+-   Once created, save the `GITHUB_PAT` using
 
-## Behind the scenes: GitHub tokens - UPDATE THIS PROCESS
+```{r}
+#| eval: false
+gitcreds::gitcreds_set()
+```
+
+## Behind the scenes: GitHub tokens
 
 -   If the token is found and works correctly the following code should run without error
 
@@ -278,7 +280,7 @@ github_test_token("MADE_UP_TOKEN")
 
 ```{r}
 #| echo: true
-org <- "design-ds-class"
+org <- "teach-ds-conf22"
 ```
 
 ```{r}
@@ -310,25 +312,17 @@ org_pending(org)
 ## Creating assignments - big picture
 
 -   Create a starter repo, keep it private and make it a template
--   Clone the repo and add any starter files (template Qmd, data, instructions, etc.)
+-   Clone the repo and add any starter files (template qmd, data, instructions, etc.)
 -   Commit and push your changes to the repo
 -   Use the `org_create_assignment()` function to create copies of the starter repo with correct permissions for each of your students (or teams)
 
 ## Creating your starter repo
 
-<br>
-
-```{r echo=FALSE}
-knitr::include_graphics("images/starter-repo-create.png")
-```
+![](images/starter-repo-create.png)
 
 ## Make your starter repo a template
 
-<br>
-
-```{r echo=FALSE}
-knitr::include_graphics("images/starter-repo-make-template.png")
-```
+![](images/starter-make-repo-template.png)
 
 ## Prepare your starter repo
 
@@ -347,9 +341,9 @@ knitr::include_graphics("images/starter-repo-make-template.png")
 #| eval: false
 org_create_assignment(
   org = org,
-  repo = paste0("hw-01-airbnb-edi-", roster$username),
+  repo = paste0("hw-01-pet-names-", roster$username),
   user = roster$username,
-  source_repo = paste0(org, "/hw-01-airbnb-edi")
+  source_repo = paste0(org, "/hw-01-pet-names")
 )
 ```
 
@@ -357,49 +351,27 @@ org_create_assignment(
 
 \[DEMO\]
 
-.your-turn\[ - Go to the course organisation on GitHub: [github.com/design-ds-class](https://github.com/design-ds-class) - Locate your HW 01 and read through the Getting started section and follow the instructions.
-- Then, go through the Hello Git and Warm up sections as well.
-- Finally, add your answer to Question 1, and commit and push again.\]
+## Your turn {.small}
+
+::: appex
+-   Go to the course organisation on GitHub: [github.com/teach-ds-conf22](https://github.com/teach-ds-conf22)
+
+-   Locate your HW 01, read through the **Getting Started** section, follow the instructions.
+
+-   Then, go through the **Hello Git** and **Warm up** sections.
+
+-   Add your answer to Question 1, then commit and push again.
+:::
 
 -   If there is no GitHub repo created for you for this assignment, let me know.
--   Clone using the HTTPS link, and let me know if\
-    you have 2-factor authentication enabled on\
-    GitHub (this complicates things!)
+
+-   Clone the repo using SSH.
 
 ```{r echo=FALSE}
 countdown(minutes = 10)
 ```
 
-## Options for giving feedback on GitHub
-
--   Use the GitHub UI to add issues to each student's repo
-
--   Clone student repos locally and reproduce their work prior to giving feedback by adding issues on the GitHub UI
-
-```{r eval=FALSE}
-hw01_repos <- org_repos(org, "hw-01-airbnb-edi-")
-local_repo_clone(hw01_repos, 
-                 local_path = "hw01_submissions")
-```
-
--   Use the `issue_create()` function to post issues to all repos at once
-    -   Add a column for the repo name in `org/repo` format to roster
-    -   Add a column for feedback
-    -   \[DEMO\]
-
-## Get big picture stats for an assignment
-
-```{r eval=FALSE}
-org_repo_stats(org, filter = "hw-01-airbnb-edi-")
-```
-
-<br>
-
-\[DEMO\]
-
 ## Create team assignments
-
-First, we'll make up some teams
 
 ```{r eval=FALSE}
 org_create_assignment(
@@ -415,54 +387,79 @@ org_create_assignment(
 
 \[DEMO\]
 
-.your-turn\[ - Go to the course organisation on GitHub: [github.com/design-ds-class](https://github.com/design-ds-class) - Locate your Lab 03 and read through the Getting started section and follow the instructions with your team members.\]
+## Your turn
+
+::: appex
+-   Go to the course organisation on GitHub: [github.com/teach-ds-conf22](https://github.com/teach-ds-conf22)
+
+-   Locate your Lab 03 and read through the Getting started section and follow the instructions with your team members.
+:::
 
 ```{r echo=FALSE}
 countdown(minutes = 10)
 ```
 
-class: middle, inverse
-
 # Giving feedback
 
-## More on giving feedback in issues
+## Options for giving feedback on GitHub
+
+-   Use the GitHub UI to add issues to each student's repo
 
 -   Instructors (and TAs) can view all repositories within the course organization.
--   Use specific line references. \[DEMO\]
+
 -   Make sure to `@` mention the student so that they are notified when an issue is opened.
--   You might want to consider keeping points out of issues.
 
-## Peer review
+-   Consider keeping points out of issues.
 
--   Once an assignment is completed you can let other students/teams into a repository and they can provide peer review.
+## Your turn {.small}
 
--   Peer review is an incredibly effective learning experience for both the reviewers and the reviewees, however it does require coordination and being able to carve out sufficient time in the course schedule.
+::: appex
+**Now you're the instructor:**
 
--   Tip: Do not solely count on peer review for feedback as some reviewers might be less diligent than others.
-    Teams reviewing teams, as opposed to individual reviewing individuals, might address this issue partially.
+-   First, I'll change everyone's permission level and make you *Owner*s. (Please don't delete any repos!)
 
-See the [Peer review with ghclass vignette](https://rundel.github.io/ghclass/articles/peer.html) for more.
+-   Go to the GitHub organization for our "class" and observe that now you can see all repos.
 
-## Pull requests
+-   Go into the individual repo (HW 01) for your neighbor. Open an issue and add some text to the issue. In the issue `@` mention their username. Submit your issue.
 
--   Another option is to open pull requests for your students' work where you directly edit their work and ask them to approve the edits.
+**Now you're a student:** Check your email to confirm that you got notified of an issue being filed by your neighbor\
+in your repo, then review the issue in on GitHub.
+:::
 
--   This can be effective as students will see your corrections and review them before accepting them.
-
--   However this also does mean that you're directly correcting their work as opposed to giving them higher level instructions on how to correct it.
-
-More on this in the next module...
-
-.your-turn\[ **Now you're the instructor:**\]
-
-```{r echo=FALSE}
+```{r echo = FALSE}
 countdown(minutes = 10)
+```
+
+## Other ghclass functionality
+
+Clone student repos to review their work locally
+
+```{r eval=FALSE}
+hw01_repos <- org_repos(org, "hw-01-pet-names-")
+local_repo_clone(hw01_repos, 
+                 local_path = "hw01_submissions")
+```
+
+. . .
+
+Get big picture statistics for an assignment
+
+```{r}
+#| eval: false
+
+org_repo_stats(org, filter = "hw-01-pet-names-")
 ```
 
 ## Git + GitHub lessons learned
 
 -   If you plan on using git in class, start on day one, don't wait until the "right time"
--   First assignment should be individual, not team based to avoid merge conflicts
+-   First few assignment should be individual, not team based to avoid merge conflicts
 -   Students need to remember to pull before starting work
--   Impossible (?) to avoid shell intervention every once in a while
+-   Use GitHub through the RStudio IDE not command line
 -   Remind students on that future projects should go on GitHub with PI approval
+
+## Learn more!
+
+-   ghclass documentation: [rundel.github.io/ghclass](https://rundel.github.io/ghclass/index.html)
+-   Beckman, Matthew D., et al. "Implementing version control with Git and GitHub as a learning objective in statistics and data science courses." *Journal of Statistics and Data Science Education* 29.sup1 (2021): S132-S144. doi: [hdoi.org/10.1080/10691898.2020.1848485](https://doi.org/10.1080/10691898.2020.1848485)
+
