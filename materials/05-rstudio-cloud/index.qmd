@@ -446,7 +446,11 @@ Student usage / engagement metrics
 
 ## Collaborative editing
 
-DEMO
+- Instructor and student can collaboratively edit a script
+
+- Environments are not shared
+
+- Demo!
 
 # Parting remarks
 
