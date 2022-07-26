@@ -10,9 +10,9 @@ listing:
     contents:
       - ../materials/07-data-package/ex-*.qmd
     type: table
-    fields: [subtitle, title]
+    fields: [title]
     field-display-names:
-      subtitle: "Exercise"
+      title: "Exercise"
     sort: [filename]
     sort-ui: false
     filter-ui: false

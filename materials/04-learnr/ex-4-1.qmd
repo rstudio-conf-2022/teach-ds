@@ -1,9 +1,15 @@
 ---
-title: "Deployed tutorial"
+title: "Ex 4.1: Writing exercises"
 subtitle: "teach_ds :: Interactivity and immediate feedback with learnr"
 editor: visual
 ---
 
-The deployed tutorial is available at <https://minecr.shinyapps.io/learnr-demo>
+Add three questions to the tutorial:
 
-The source code is available at [github.com/rstudio-conf-2022/teach-ds-learnr](https://github.com/rstudio-conf-2022/teach-ds-learnr) and the 04-learnr project in RStudio Cloud.
+-   one multiple choice
+-   one coding exercise
+-   one sortable question
+
+**Stretch goal**: Add hints to the coding exercise.
+
+You can write your questions in Part 2: Your turn! section of `learnr-demo.Rmd`.

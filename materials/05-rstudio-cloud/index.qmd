@@ -12,13 +12,434 @@ format:
     slide-number: true
     incremental: false 
     chalkboard: true
-    center: true
 execute:
   freeze: auto
+  echo: false
+knitr:
+  opts_chunk: 
+    R.options:
+      width: 200
 ---
 
-# In progress
+# Flashback
 
-::: callout-warning
-These slides are currently being designed and built.
+```{r}
+#| label: load-packages
+#| message: false
+
+library(countdown)
+```
+
+## Cherish day one
+
+::: columns
+::: {.column width="50%"}
+**Don't start like this**
+
+-   Install R
+-   Install RStudio
+-   Install the following packages:
+    -   rmarkdown
+    -   tidyverse
+    -   ...
+-   Load these packages
+-   Install git
 :::
+
+::: {.column width="50%"}
+**Start like this**
+
+-   Go to rstudio.cloud
+-   Log in
+
+```{r hello-r, eval=FALSE}
+>hello
+```
+:::
+:::
+
+## Why RStudio in the cloud?
+
+-   Reduce friction at first exposure to R
+-   Avoid local installation
+-   Install R and RStudio on a server and provide access to students:
+    -   Centralized RStudio server (\*)
+    -   Dockerized RStudio server (\*)
+    -   RStudio Cloud
+
+::: aside
+(\*) Çetinkaya-Rundel, Mine, and Rundel, Colin.
+"Infrastructure and tools for teaching computing throughout the statistical curriculum." The American Statistician (2018).
+Part of the Practical Data Science for Stats collection.
+:::
+
+# Hello RStudio Cloud!
+
+## What is RStudio Cloud?
+
+::: columns
+::: {.column width="30%"}
+![](images/cloud.png)
+:::
+
+::: {.column width="70%"}
+We created **RStudio Cloud** to make it easy for professionals, hobbyists, trainers, teachers, and students to do, share, teach, and learn data science using R.
+:::
+:::
+
+## An RStudio project
+
+![](images/rstudio-ide.png)
+
+## An RStudio Cloud project
+
+![](images/rstudio-cloud.png)
+
+## Why RStudio Cloud?
+
+-   Does not require IT support
+-   Features designed for instructors:
+    -   Classes can be organized in workspaces
+    -   Members can be assigned different roles: instructor, TA, student
+    -   Projects can be public or private
+    -   Projects can be made into assignments
+    -   Students can make copies of projects created by instructor
+    -   Instructor can peek into student projects
+    -   A base project template can ensure same packages in each new project created in the workspace
+    -   Git works out of the box
+
+## Contexts
+
+-   Semester long courses
+    -   Intro data science / statistics: little to no background in stats, data science, programming
+    -   Upper level data science / statistics: Varied computing background and different computer setups
+-   Shorter workshops: Likely no opportunity to communicate pre-workshop instructions, varied computing background and learning goals
+
+## Your turn!
+
+Log out of RStudio Cloud and log back in.
+
+```{r}
+countdown(minutes = 3, font_size = "1.5em")
+```
+
+## Workspaces
+
+-   When you create an account on RStudio Cloud you get a workspace of your own
+
+-   You can add a new workspace and control its permissions
+
+-   Projects in either workspace can be public or private
+
+## Projects
+
+-   A new project in RStudio Cloud
+
+-   is basically a new project in the RStudio IDE
+
+::: callout-tip
+If you use RStudio, use projects!
+Trust me, you won't regret it.
+Find out more at r4ds.had.co.nz/workflow-projects.html.
+:::
+
+## Projects from Git
+
+-   A new project from Git Repo in RStudio Cloud
+-   is creates (cloning) a project from a Git repository RStudio
+
+# Teaching a short workshop
+
+## Setup in 140 characters
+
+![](images/cloud-setup-tweet.png)
+
+## Iconography
+
+::: larger
+👩‍🏫 teacher
+
+👩‍💻 student
+:::
+
+## Some title
+
+```{=html}
+<iframe width="1200" height="530" src="https://www.youtube.com/embed/81MrMcKZTX8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+::: {.larger style="text-align: right;"}
+👩‍🏫
+:::
+
+## 
+
+```{=html}
+<iframe width="1200" height="530" src="https://www.youtube.com/embed/_VCYdDQTFG8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+::: {.larger style="text-align: right;"}
+👩‍🏫
+:::
+
+## Sharing an individual project
+
+::: columns
+::: {.column width="50%"}
+**Good!**
+
+-   Students land directly in a project upon login
+-   Works well for workshops where all work will be completed in a single project
+-   Also great for sharing code in general, e.g. collaboration, reprexes, etc.
+:::
+
+::: {.column width="50%"}
+**Not so good...**
+
+-   Students need to remember to make a copy of the project (which means you need to remember to remind them!)
+-   Changes you make after student launches the project won't propagate to their project
+:::
+:::
+
+## Your turn: Create a sharable project
+
+::: appex
+**First you're the instructor:**
+
+-   Create a new project and give it a name.
+-   Create a template R Markdown document in the project.
+-   Change the access level of the project so others can see it as well.
+-   Grab the project URL and share it with your neighbor:
+-   Tip: You can create a short link for the URL at bitly.com.
+
+**Now you're the student:** Access your neighbor's project as if you're the student and they're the instructor.
+:::
+
+```{r}
+countdown(minutes = 10, font_size = "1.5em")
+```
+
+# Teaching a longer course
+
+## 
+
+```{=html}
+<iframe width="1200" height="530" src="https://www.youtube.com/embed/tqu1m9R1HLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+::: {.larger style="text-align: right;"}
+👩‍🏫
+:::
+
+## Your turn: Create a workspace
+
+::: appex
+**You're the instructor:**
+
+-   Create a new workspace and give it a name.
+    -   Tip: Check in with your neighbor and use a different name.
+-   Add a short description.
+:::
+
+```{r}
+countdown(minutes = 5, font_size = "1.5em")
+```
+
+## Getting students into class workspace
+
+**Under the Membership tab:**
+
+::: columns
+::: {.column width="40%"}
+![](images/workspace-access.png)
+:::
+
+::: {.column width="60%"}
+-   Make workspace shared for a short period of time, share link with students, enroll them as contributors.
+-   After drop/add switch over to this access level
+-   Use invitations for visitors added mid-semester
+:::
+:::
+
+::: {.larger style="text-align: right;"}
+👩‍🏫
+:::
+
+## Permission levels
+
+| role        | permission                                       | course role |
+|----------------|----------------------------------------|----------------|
+| admin       | manage users, view, edit and manage all projects | instructor  |
+| moderator   | view, edit and manage all projects               | TA          |
+| contributor | create, edit and manage their own projects       | student     |
+| viewer      | view projects shared with everyone               | auditor     |
+
+::: {.larger style="text-align: right;"}
+👩‍🏫
+:::
+
+## Permissions
+
+**Under the Membership tab:**
+
+::: columns
+::: {.column width="40%"}
+![](images/permissions.png)
+:::
+
+::: {.column width="60%"}
+-   By default, all permissions are turned off
+-   Think carefully before checking these boxes
+:::
+:::
+
+::: {.larger style="text-align: right;"}
+👩‍🏫
+:::
+
+## Capacity
+
+![](images/capacity.png)
+
+::: {.larger style="text-align: right;"}
+👩‍🏫
+:::
+
+## Your turn: Adjust settings
+
+::: appex
+**You're the instructor:**
+
+-   Change the settings of your workspace to Shared.
+-   Change the permissions so that contributors or viewers can't see the list of members and can't change the visibility of their projects.
+:::
+
+```{r}
+countdown(minutes = 3, font_size = "1.5em")
+```
+
+## 
+
+```{=html}
+<iframe width="1200" height="530" src="https://www.youtube.com/embed/Fz9UR6uxAG4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+::: {.larger style="text-align: right;"}
+👩‍🏫
+:::
+
+## Your turn: Create an assignment
+
+::: appex
+**You're the instructor:**
+
+-   Add a base project to your workspace:
+    -   Install one or two of your favorite packages.
+    -   Start an R Markdown document so necessary packages get installed.
+    -   Add a code-of-conduct.md (you can copy-paste from [here](https://web.cvent.com/event/36ebe042-0113-44f1-8e36-b9bc5d0733bf/websitePage:988cd046-614c-445b-b658-1c8d83ca82b0) if you like) or some other plain text document.
+-   Make this project visible to everyone. In the settings menu, set this project as the base project.
+-   Create a new assignment: `Homework 01`.
+:::
+
+```{r echo=FALSE}
+countdown(minutes = 10, font_size = "1.5em")
+```
+
+## 
+
+```{=html}
+<iframe width="1200" height="530" src="https://www.youtube.com/embed/k_W1kS10rLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+```
+
+::: {.larger style="text-align: right;"}
+👩‍💻
+:::
+
+## Your turn: Assign work
+
+::: appex
+**You're the instructor:** - Grab the sharing link for your workspace.
+- Optional: Make a short link for it.
+- Share it with your neighbor.
+
+**Now you're the student:** - Access your neighbor's workspace and start the assignment.
+:::
+
+```{r}
+countdown(minutes = 5, font_size = "1.5em")
+```
+
+## Git integration
+
+Base project template can be used, so new project from git also has the right packages installed!
+
+![](images/git-integration.png)
+
+## Sharing a workspace
+
+::: columns
+::: {.column width="50%"}
+**Good!**
+
+-   Various permission levels
+-   Base projects with desired packages installed
+-   Assignments, which remove the need to remind students to make a copy of the project before starting work
+-   Ability to peek into students' projects
+:::
+
+::: {.column width="50%"}
+**Not so good...**
+
+-   Students land in the workspace, may need to provide instructions for the next steps
+-   You can update the base project throughout the course, but it will only be applied to projects created going forward
+:::
+:::
+
+## Institution accounts
+
+![](images/institution-account.png)
+
+## Dashboards
+
+Student usage / engagement metrics
+
+![](images/dashboard.png)
+
+## 📦 rscloud
+
+-   A new package for managing RStudio Cloud spaces with R: [github.com/rstudio/rscloud](https://github.com/rstudio/rscloud)
+-   Requires an API key, which any instructor can request (via email for now, but soon in the UI as well)
+
+## Collaborative editing
+
+DEMO
+
+# Parting remarks
+
+## Tips
+
+-   Each project is allocated 1GB of RAM
+    -   Test things out before assignments involving large datasets
+-   What your students see is not always what you see
+    -   Create a secondary account and add as a student
+
+## Primers
+
+::: columns
+::: {.column width="50%"}
+![](images/primers.png)
+:::
+
+::: {.column width="50%"}
+[rstudio.cloud/learn/primers](https://rstudio.cloud/learn/primers)
+
+-   Free primers made with the **learnr** package
+-   Companion to R4DS by Grolemund and Wickham
+:::
+:::
+
+## Discussion
+
+::: question
+What models can you envision for collecting assignments and providing feedback when teaching with RStudio Cloud?
+:::
+
+```{r}
+countdown(minutes = 3, font_size = "1.5em")
+```

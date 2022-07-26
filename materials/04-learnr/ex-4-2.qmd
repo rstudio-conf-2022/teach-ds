@@ -1,17 +1,13 @@
 ---
-title: "Ex 4.1: Writing questions"
+title: "Ex 4.2: Writing automated feedback"
 subtitle: "teach_ds :: Interactivity and immediate feedback with learnr"
 editor: visual
 ---
 
-Create a tutorial with three questions:
+Add automated feedback to your coding exercise.
 
--   one multiple choice
--   one coding exercise
--   one sortable question
+**Stretch goal**: Consider 2 -3 common errors students may make.
+Write specific feedback for those errors.
 
-**Stretch goal**: Add hints to the coding exercise.
-
-You can write your questions in this section of `learnr-demo.Rmd`.
-
-## 
+You can write your responses in Part 4: Your turn!
+section or modify the code in Part 2 of `learnr-demo.Rmd`.
