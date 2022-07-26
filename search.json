@@ -438,7 +438,7 @@
     "href": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Behind the scenes: GitHub tokens",
-    "text": "Behind the scenes: GitHub tokens\nghclass uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that ghclass can find and use it.\n\nCreate token at github.com/settings/tokens\nOnce created, save the GITHUB_PAT using"
+    "text": "Behind the scenes: GitHub tokens\nghclass uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that ghclass can find and use it.\n\nCreate token at github.com/settings/tokens\nOnce created, save the GITHUB_PAT using\n\n\ngitcreds::gitcreds_set()"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#behind-the-scenes-github-tokens-1",
@@ -459,7 +459,7 @@
     "href": "materials/06-reproduciblity/index.html#check-member-status",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Check member status",
-    "text": "Check member status\n\nWho is already in?\n\n\n\n[1] \"matackett\"\n\n\n\nWho still didn’t accept their invitations?\n\n\n\ncharacter(0)"
+    "text": "Check member status\n\nWho is already in?\n\n\norg_members(org)\n\n[1] \"matackett\"\n\n\n\nWho still didn’t accept their invitations?\n\n\norg_pending(org)\n\ncharacter(0)"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#creating-assignments---big-picture",
@@ -508,7 +508,7 @@
     "href": "materials/06-reproduciblity/index.html#create-team-assignments",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Create team assignments",
-    "text": "Create team assignments\n\n\n\n\n[DEMO]"
+    "text": "Create team assignments\n\norg_create_assignment(\n  org = org,\n  repo = paste0(\"lab-03-nobel-laureates-\", roster$team_name),\n  user = roster$github_name,\n  team = roster$team_name,\n  source_repo = paste0(org, \"/lab-03-nobel-laureates\")\n)\n\n\n[DEMO]"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#your-turn-1",
@@ -536,7 +536,7 @@
     "href": "materials/06-reproduciblity/index.html#other-ghclass-functionality",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Other ghclass functionality",
-    "text": "Other ghclass functionality\nClone student repos to review their work locally\n\n\n\n\nGet big picture statistics for an assignment"
+    "text": "Other ghclass functionality\nClone student repos to review their work locally\n\nhw01_repos <- org_repos(org, \"hw-01-pet-names-\")\nlocal_repo_clone(hw01_repos, \n                 local_path = \"hw01_submissions\")\n\n\nGet big picture statistics for an assignment\n\norg_repo_stats(org, filter = \"hw-01-pet-names-\")"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#git-github-lessons-learned",
@@ -1173,7 +1173,7 @@
     "href": "materials/03-tidymodels/index.html#tidymodels-1",
     "title": "Teaching modern modeling with tidymodels",
     "section": "Tidymodels",
-    "text": "Tidymodels\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──\n\n\n✔ broom        1.0.0     ✔ rsample      1.0.0\n✔ dials        1.0.0     ✔ tune         1.0.0\n✔ infer        1.0.2     ✔ workflows    1.0.0\n✔ modeldata    1.0.0     ✔ workflowsets 1.0.0\n✔ parsnip      1.0.0     ✔ yardstick    1.0.0\n✔ recipes      1.0.1     \n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ scales::discard() masks purrr::discard()\n✖ dplyr::filter()   masks stats::filter()\n✖ recipes::fixed()  masks stringr::fixed()\n✖ dplyr::lag()      masks stats::lag()\n✖ yardstick::spec() masks readr::spec()\n✖ recipes::step()   masks stats::step()\n• Dig deeper into tidy modeling with R at https://www.tmwr.org"
+    "text": "Tidymodels\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.0.0 ──\n\n\n✔ broom        1.0.0     ✔ rsample      1.0.0\n✔ dials        1.0.0     ✔ tune         1.0.0\n✔ infer        1.0.2     ✔ workflows    1.0.0\n✔ modeldata    1.0.0     ✔ workflowsets 1.0.0\n✔ parsnip      1.0.0     ✔ yardstick    1.0.0\n✔ recipes      1.0.1     \n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ scales::discard() masks purrr::discard()\n✖ dplyr::filter()   masks stats::filter()\n✖ recipes::fixed()  masks stringr::fixed()\n✖ dplyr::lag()      masks stats::lag()\n✖ yardstick::spec() masks readr::spec()\n✖ recipes::step()   masks stats::step()\n• Learn how to get started at https://www.tidymodels.org/start/"
   },
   {
     "objectID": "materials/03-tidymodels/index.html#data-loans-from-lending-club",

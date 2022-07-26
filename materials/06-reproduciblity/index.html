@@ -647,7 +647,7 @@
 <li>Once created, save the <code>GITHUB_PAT</code> using</li>
 </ul>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>gitcreds<span class="sc">::</span><span class="fu">gitcreds_set</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="behind-the-scenes-github-tokens-1" class="slide level2 center">
@@ -656,7 +656,7 @@
 <li>If the token is found and works correctly the following code should run without error</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">github_test_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">github_test_token</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>✔ Your GitHub PAT authenticated correctly.</code></pre>
 </div>
@@ -665,7 +665,7 @@
 <li>If instead the token is invalid or not found, you will see something like the following</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">github_test_token</span>(<span class="st">"MADE_UP_TOKEN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a><span class="fu">github_test_token</span>(<span class="st">"MADE_UP_TOKEN"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>✖ Your GitHub PAT failed to authenticate.</code></pre>
 </div>
@@ -688,11 +688,11 @@
 <li>Instruct students to check their email and follow the instructions.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>org <span class="ot">&lt;-</span> <span class="st">"teach-ds-conf22"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>org <span class="ot">&lt;-</span> <span class="st">"teach-ds-conf22"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>roster <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"SURVEY RESPONSES.csv"</span>)</span>
-<span id="cb9-2"><a href="#cb9-2"></a><span class="fu">org_invite</span>(<span class="at">org =</span> org, <span class="at">user =</span> roster<span class="sc">$</span>username)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a>roster <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"SURVEY RESPONSES.csv"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a><span class="fu">org_invite</span>(<span class="at">org =</span> org, <span class="at">user =</span> roster<span class="sc">$</span>username)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <pre><code>## ✔ Invited user 'minebotmine' to org 'design-ds-class'.
 ## ✔ Invited user 'rundel' to org 'design-ds-class'.</code></pre>
@@ -703,6 +703,7 @@
 <li>Who is already in?</li>
 </ul>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">org_members</span>(org)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "matackett"</code></pre>
 </div>
@@ -711,6 +712,7 @@
 <li>Who still didn’t accept their invitations?</li>
 </ul>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">org_pending</span>(org)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>character(0)</code></pre>
 </div>
@@ -751,12 +753,12 @@
 <section id="create-assignments" class="slide level2 center">
 <h2>Create assignments</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">org_create_assignment</span>(</span>
-<span id="cb13-2"><a href="#cb13-2"></a>  <span class="at">org =</span> org,</span>
-<span id="cb13-3"><a href="#cb13-3"></a>  <span class="at">repo =</span> <span class="fu">paste0</span>(<span class="st">"hw-01-pet-names-"</span>, roster<span class="sc">$</span>username),</span>
-<span id="cb13-4"><a href="#cb13-4"></a>  <span class="at">user =</span> roster<span class="sc">$</span>username,</span>
-<span id="cb13-5"><a href="#cb13-5"></a>  <span class="at">source_repo =</span> <span class="fu">paste0</span>(org, <span class="st">"/hw-01-pet-names"</span>)</span>
-<span id="cb13-6"><a href="#cb13-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">org_create_assignment</span>(</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  <span class="at">org =</span> org,</span>
+<span id="cb16-3"><a href="#cb16-3"></a>  <span class="at">repo =</span> <span class="fu">paste0</span>(<span class="st">"hw-01-pet-names-"</span>, roster<span class="sc">$</span>username),</span>
+<span id="cb16-4"><a href="#cb16-4"></a>  <span class="at">user =</span> roster<span class="sc">$</span>username,</span>
+<span id="cb16-5"><a href="#cb16-5"></a>  <span class="at">source_repo =</span> <span class="fu">paste0</span>(org, <span class="st">"/hw-01-pet-names"</span>)</span>
+<span id="cb16-6"><a href="#cb16-6"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>[DEMO]</p>
@@ -777,7 +779,7 @@
 </ul>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df5d9b" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62df5e09" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -786,7 +788,13 @@
 <section id="create-team-assignments" class="slide level2 center">
 <h2>Create team assignments</h2>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">org_create_assignment</span>(</span>
+<span id="cb17-2"><a href="#cb17-2"></a>  <span class="at">org =</span> org,</span>
+<span id="cb17-3"><a href="#cb17-3"></a>  <span class="at">repo =</span> <span class="fu">paste0</span>(<span class="st">"lab-03-nobel-laureates-"</span>, roster<span class="sc">$</span>team_name),</span>
+<span id="cb17-4"><a href="#cb17-4"></a>  <span class="at">user =</span> roster<span class="sc">$</span>github_name,</span>
+<span id="cb17-5"><a href="#cb17-5"></a>  <span class="at">team =</span> roster<span class="sc">$</span>team_name,</span>
+<span id="cb17-6"><a href="#cb17-6"></a>  <span class="at">source_repo =</span> <span class="fu">paste0</span>(org, <span class="st">"/lab-03-nobel-laureates"</span>)</span>
+<span id="cb17-7"><a href="#cb17-7"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><br></p>
 <p>[DEMO]</p>
@@ -801,7 +809,7 @@
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df5ab0" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62df5f02" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -835,7 +843,7 @@ in your repo, then review the issue in on GitHub.</p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62df5bb8" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62df5f02" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
@@ -845,12 +853,14 @@ in your repo, then review the issue in on GitHub.</p>
 <h2>Other ghclass functionality</h2>
 <p>Clone student repos to review their work locally</p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a>hw01_repos <span class="ot">&lt;-</span> <span class="fu">org_repos</span>(org, <span class="st">"hw-01-pet-names-"</span>)</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="fu">local_repo_clone</span>(hw01_repos, </span>
+<span id="cb18-3"><a href="#cb18-3"></a>                 <span class="at">local_path =</span> <span class="st">"hw01_submissions"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>Get big picture statistics for an assignment</p>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">org_repo_stats</span>(org, <span class="at">filter =</span> <span class="st">"hw-01-pet-names-"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </section>
