@@ -1,7 +1,7 @@
 ---
 title: "Reproducible workflows: Quarto, Git, GitHub"
 subtitle: "rstudio::conf(2022) <br> Designing the data science classroom"
-author: "Mine Çetinkaya-Rundel"
+author: "Mine Çetinkaya-Rundel + Maria Tackett"
 footer: "[🔗 rstd.io/teach-ds-conf22](https://rstd.io/teach-ds-conf22)"
 logo: "../images/logo.png"
 format: 
@@ -24,11 +24,68 @@ library(ghclass)
 library(countdown)
 ```
 
-# In progress
+# Reproducibility in the classroom
 
-::: callout-warning
-These slides are currently being designed and built.
+## Reproducibility checklist
+
+-   Are the tables and figures reproducible from the code and data?
+-   Does the code actually do what you think it does?
+-   In addition to what was done, is it clear *why* it was done? (e.g., how were parameter settings chosen?)
+-   Can the code be used for other data?
+-   Can you extend the code to do other things?
+
+## Ambitious goal + many other concerns
+
+We need an environment where
+
+-   data, analysis, and results are tightly connected, or better yet, inseparable
+
+-   reproducibility is built in
+
+    -   the original data remains untouched
+    -   all data manipulations and analyses are inherently documented
+
+-   documentation is human readable and syntax is minimal
+
+## Roadmap
+
+-   Scriptability $\rightarrow$ R
+-   Literate programming (code, narrative, output in one place) $\rightarrow$ Quarto
+-   Version control $\rightarrow$ Git / GitHub
+
+# Literate programming
+
+## Why Quarto?
+
+-   **Reproducibility:** Train new analysts whose only workflow is a reproducible one
+-   **Pedagogy:**
+    -   Code + output + prose together
+    -   Syntax highlighting FTW!
+    -   Familiar-feeling authoring with the visual editor without having to learn a bunch of new markdown syntax
+-   **Efficiency:** Consistent formatting -\> easier grading
+-   **Extendability:** Use with Python, and Julia, and Observable, and more
+
+## Tips for starting with Quarto
+
+-   Minimal YAML
+-   Minimal chunk options
+-   Use well scaffolded Quarto documents
+-   Render early and often!
+
+## Demo: Quarto 💙 visual editor
+
+::: cloud
+{{< fa cloud >}} RStudio Cloud > "Module 6 - Reproducibility" > ex-1-1.qmd
 :::
+
+-   Document YAML
+-   Code chunks with YAML style options
+-   YAML completion and diagnostics
+-   Accessibility features
+-   Citations
+-   And more...
+
+# Version control
 
 ## Why Git + GitHub?
 
@@ -300,7 +357,9 @@ org_create_assignment(
 
 \[DEMO\]
 
-.your-turn\[ - Go to the course organisation on GitHub: [github.com/design-ds-class](https://github.com/design-ds-class) - Locate your HW 01 and read through the Getting started section and follow the instructions. - Then, go through the Hello Git and Warm up sections as well. - Finally, add your answer to Question 1, and commit and push again.\]
+.your-turn\[ - Go to the course organisation on GitHub: [github.com/design-ds-class](https://github.com/design-ds-class) - Locate your HW 01 and read through the Getting started section and follow the instructions.
+- Then, go through the Hello Git and Warm up sections as well.
+- Finally, add your answer to Question 1, and commit and push again.\]
 
 -   If there is no GitHub repo created for you for this assignment, let me know.
 -   Clone using the HTTPS link, and let me know if\
@@ -379,7 +438,8 @@ class: middle, inverse
 
 -   Peer review is an incredibly effective learning experience for both the reviewers and the reviewees, however it does require coordination and being able to carve out sufficient time in the course schedule.
 
--   Tip: Do not solely count on peer review for feedback as some reviewers might be less diligent than others. Teams reviewing teams, as opposed to individual reviewing individuals, might address this issue partially.
+-   Tip: Do not solely count on peer review for feedback as some reviewers might be less diligent than others.
+    Teams reviewing teams, as opposed to individual reviewing individuals, might address this issue partially.
 
 See the [Peer review with ghclass vignette](https://rundel.github.io/ghclass/articles/peer.html) for more.
 
