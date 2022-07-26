@@ -128,12 +128,12 @@ ul.task-list{list-style: none;}
 <li><p>Pick package name:</p>
 <ul>
 <li>available::available(“darksky”) – no</li>
-<li>available::available(“usweather”) – ok</li>
+<li>available::available(“usweather”) – ok, fine</li>
 </ul></li>
 <li><p>usethis::create_package(“~/Desktop/usweather”)</p></li>
 <li><p>usethis::use_data_raw(“weather”)</p></li>
-<li><p>Create a folder called weather, put weather.R and weather.csv in there</p></li>
-<li><p>Load, clean, save data</p></li>
+<li><p>Create a folder called weather, put weather.R and weather.csv in there.</p></li>
+<li><p>Load, clean, save data.</p></li>
 </ol>
 <p>## code to prepare <code>weather</code> dataset goes here<br>
 <br>
@@ -149,10 +149,12 @@ weather_raw &lt;- read_csv(“data-raw/weather/weather.csv”)<br>
 weather &lt;- weather_raw |&gt;<br>
 &nbsp;&nbsp;clean_names()<br>
 <br>
+# use data ———————————————————<br>
+<br>
 usethis::use_data(weather, overwrite = TRUE)</p>
 <ol start="6" type="1">
 <li><p>devtools::load_all(), check that weather exists. then try ?weather – nothing.</p></li>
-<li><p>use_r(“weather”), then go to https://r-pkgs.org/data.html#documenting-data and copy-paste</p></li>
+<li><p>usethis::use_r(“weather”), then go to https://r-pkgs.org/data.html#documenting-data and copy-paste.</p></li>
 <li><p>write documentation</p></li>
 </ol>
 <p>#’ Hourly weather for 50 US cities<br>
@@ -164,15 +166,23 @@ usethis::use_data(weather, overwrite = TRUE)</p>
 #’ <span class="citation" data-cites="source">@source</span> Dark Sky, <br>
 “weather”</p>
 <ol start="9" type="1">
-<li>data dictionary</li>
+<li>Data dictionary</li>
 </ol>
 <p>names(weather) %&gt;% cat(sep = “”)</p>
-<p>city - Name of city. state - Name of state. time - Time. summary - A human-readable text summary. icon - A machine-readable text summary, suitable for selecting an icon for display. precip_intensity - The intensity (in inches of liquid water per hour) of precipitation occurring at the given time. This value is conditional on probability (that is, assuming any precipitation occurs at all).<br>
-precip_probability - The probability of precipitation occurring, between 0 and 1, inclusive. temperature - The air temperature in degrees Fahrenheit. apparent_temperature - The apparent (or “feels like”) temperature in degrees Fahrenheit. dew_point - The dew point in degrees Fahrenheit. humidity - The relative humidity, between 0 and 1, inclusive. pressure - The sea-level air pressure in millibars. wind_speed - The wind speed in miles per hour. wind_gust - The time at which the maximum wind gust speed occurs during the day. wind_bearing - The direction that the wind is coming from in degrees, with true north at 0° and progressing clockwise. (If windSpeed is zero, then this value will not be defined.) cloud_cover - The percentage of sky occluded by clouds, between 0 and 1, inclusive. uv_index - The UV index. visibility - The average visibility in miles, capped at 10 miles. ozone - The columnar density of total atmospheric ozone at the given time in Dobson units. precip_type - The type of precipitation occurring at the given time. If defined, this property will have one of the following values: “rain”, “snow”, or “sleet” (which refers to each of freezing rain, ice pellets, and “wintery mix”). forecast - Indicator for whether measurement is historical (FALSE) or forecast (<code>TRUE</code>).</p>
+<p>#’ </p>
 <ol start="10" type="1">
-<li><p>document(), load_all(), ?weather</p></li>
-<li><p>use_git(), use_github(“pkgname”)</p></li>
-<li><p>use_readme_rmd()</p></li>
+<li><p>devtools::document(), devtools::load_all(), ?weather – yay!</p></li>
+<li><p>Edit DESCRIPTION</p></li>
+</ol>
+<ul>
+<li>Title: Provides hourly temperature for 50 US cities</li>
+<li>Authors@R: person(“Mine”, “Çetinkaya-Rundel”, , “cetinkaya.mine@gmail.com, role = c(”aut”, “cre”), comment = c(ORCID = “0000-0001-6452-2420”))</li>
+<li>use_gpl3_license()</li>
+</ul>
+<ol start="12" type="1">
+<li><p>devtools::check()</p></li>
+<li><p>usethis::use_git(), uusethis::use_github()</p></li>
+<li><p>usethis::use_readme_rmd(), update (use example below), knit, commit, push.</p></li>
 </ol>
 <p>```{r}<br>
 #| label: example<br>
@@ -187,24 +197,20 @@ weather |&gt;<br>
 &nbsp;&nbsp;summarise(mean_temp = mean(temperature)) %&gt;%<br>
 &nbsp;&nbsp;arrange(desc(mean_temp))<br>
 ```</p>
-<ol start="13" type="1">
-<li>DESCRIPTION</li>
+<ol start="15" type="1">
+<li><p>usethis::use_pkgdown(), devtools::build_site()</p></li>
+<li><p>usethis::use_github_pages(), usethis::use_github_action(name = “pkgdown”), check action on repo, find page</p></li>
 </ol>
-<ul>
-<li>Title: Provides hourly temperature for 50 US cities</li>
-<li>Authors@R: person(“Mine”, “Çetinkaya-Rundel”, , “cetinkaya.mine@gmail.com, role = c(”aut”, “cre”), comment = c(ORCID = “0000-0001-6452-2420”))</li>
-<li>use_gpl3_license()</li>
-</ul>
-<ol start="14" type="1">
-<li><p>use_pkgdown(), build_site()</p></li>
-<li><p>use_github_pages(), use_github_action(name = “pkgdown”), check action on repo, find page</p></li>
-</ol>
+<blockquote class="blockquote">
 <p>your turn: add cities.csv</p>
-<ol start="16" type="1">
-<li>use_tutorial(“explore-usweather”, title = “Exploring weather in US cities”)</li>
+</blockquote>
+<ol start="17" type="1">
+<li>usethis::use_tutorial(“explore-usweather”, title = “Exploring weather in US cities”)</li>
 </ol>
 <p>add library(usweather) plop weather into a code chunk</p>
-<p>install pkg from github show it works in tutorials pane</p>
+<ol start="18" type="1">
+<li>install pkg from github show it works in tutorials pane</li>
+</ol>
 
 
 
