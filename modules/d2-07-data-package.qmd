@@ -22,8 +22,9 @@ image-alt: "Hex logo showing a box that is open with icons for dataset floating 
 ```{=html}
 <iframe class="slide-deck" src="../materials/07-data-package/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
-## Data sets and logo
+## Files for demo
 
+-   Demo steps: <https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/data-package-notes.md>
 -   `weather.csv`: <https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/weather.csv>
 -   `cities.csv`: <https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/cities.csv>
 -   `usweather.png`: <https://rstudio-conf-2022.github.io/teach-ds/materials/07-data-package/usweather.png>

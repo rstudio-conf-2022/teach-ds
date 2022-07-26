@@ -28,6 +28,10 @@ knitr:
 
 ## Demo: Making a data package {.small}
 
+::: {.callout-note appearance="simple"}
+Full demo notes can be found [here](data-package-notes.md).
+:::
+
 1.  Check if a package name is available with `available::available()`
 2.  Create the package with `usethis::create_package()`
 
@@ -46,11 +50,11 @@ knitr:
 
 ## Demo (continued): Making a data package {.small}
 
-5.  Start tracking with version control: `usethis::use_git()`, then `use_github("pkgname")`.
+5.  Start tracking with version control: `usethis::use_git()`, then `usethis::use_github()`.
 6.  Add a README with `usethis::use_readme_rmd()`. Write some info, knit, commit, and push.
 7.  Update the `DESCRIPTION` file and `usethis::use_gpl3_license()`.
 8.  Create a pkgdown website with `usethis::use_pkgdown()`, build the site with `devtools::build_site()`.
-9.  Publish the site with `usethis::use_github_pages()`, then `use_github_action(name = "usweather")`. Check the action running on the repo and view your pkgdown website.
+9.  Publish the site with `usethis::use_github_pages()`, then `use_github_action(name = "pkgdown")`. Check the action running on the repo and view your pkgdown website.
 
 ## Your turn: Add another dataset
 
