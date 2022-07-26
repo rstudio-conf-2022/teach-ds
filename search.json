@@ -2104,7 +2104,7 @@
     "href": "materials/08-organizing/index.html#follow-along",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Follow along",
-    "text": "Follow along\n\n Follow at along at Module 08-organizing on RStudio Cloud\n\n\n[DEMO]"
+    "text": "Follow along\n\n Follow at along at Module 08 - Organizing Materials Slides on RStudio Cloud\n\n\n[DEMO]"
   },
   {
     "objectID": "materials/08-organizing/index.html#why",
@@ -2128,11 +2128,11 @@
     "text": "Getting started\n\nMake a website repo on GitHub.\n\nIf you’re using a GitHub organization for your course, you can make the repo inside that organization\nThe website repo must be public to publish it\n\nClone the repo and start a new RStudio project.\nRun the following code in the Terminal.\nquarto create-project --type website\n\nThis will populate the standard files for a new website."
   },
   {
-    "objectID": "materials/08-organizing/index.html#making-a-website",
-    "href": "materials/08-organizing/index.html#making-a-website",
+    "objectID": "materials/08-organizing/index.html#follow-along-1",
+    "href": "materials/08-organizing/index.html#follow-along-1",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Making a website",
-    "text": "Making a website\n\n Follow at along at Module 08-organizing on RStudio Cloud\n\n\nDEMO]"
+    "section": "Follow along",
+    "text": "Follow along\n\n Follow at along at Module 08 - Organizing Materials Website on RStudio Cloud\n\n\n[DEMO]"
   },
   {
     "objectID": "materials/08-organizing/index.html#deploying-materials-github-pages",
