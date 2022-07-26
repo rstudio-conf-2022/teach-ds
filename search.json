@@ -4,14 +4,7 @@
     "href": "modules/d2-08-organizing.html",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "modules/d2-08-organizing.html#outline",
-    "href": "modules/d2-08-organizing.html#outline",
-    "title": "Organizing teaching materials + Wrap-up / Q&A",
-    "section": "Outline",
-    "text": "Outline\n\nOrganizing teaching materials using Quarto\n\nMaking presentations\nWriting course notes\nCreating a course website\n\nDeploying materials\nWrap-up + Q&A"
+    "text": "Organizing teaching materials using Quarto\n\nMaking presentations\nCreating a course website\n\nDeploying materials\nWrap-up + Q&A"
   },
   {
     "objectID": "modules/d2-08-organizing.html#slides",
@@ -25,7 +18,7 @@
     "href": "modules/d2-08-organizing.html#exercises",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nDemo\n\n\n\n\nDemo\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\n\n\n\n\nExample Course website\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "modules/d1-03b-coffee-break.html",
@@ -2081,9 +2074,9 @@
   {
     "objectID": "materials/08-organizing/ex-1.html",
     "href": "materials/08-organizing/ex-1.html",
-    "title": "Demo",
+    "title": "Example Course website",
     "section": "",
-    "text": "Local:\n\nIn RStudio, install and load [UPDATE THIS!]\nClick here to access the source file on GitHub\n\nCloud: Go to the workspace for this course and start the assignment called 08-organizing"
+    "text": "Link to source repo: github.com/rstudio-conf-2022/teach-ds-course-website"
   },
   {
     "objectID": "materials/08-organizing/index.html#topics",
