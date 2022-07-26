@@ -105,9 +105,7 @@ library(countdown)
     -   RStudio Cloud
 
 ::: aside
-(\*) Çetinkaya-Rundel, Mine, and Rundel, Colin.
-"Infrastructure and tools for teaching computing throughout the statistical curriculum." The American Statistician (2018).
-Part of the Practical Data Science for Stats collection.
+(\*) Çetinkaya-Rundel, Mine, and Rundel, Colin. "Infrastructure and tools for teaching computing throughout the statistical curriculum." The American Statistician (2018). Part of the Practical Data Science for Stats collection.
 :::
 
 # Hello RStudio Cloud!
@@ -175,9 +173,7 @@ countdown(minutes = 3, font_size = "1.5em")
 -   is basically a new project in the RStudio IDE
 
 ::: callout-tip
-If you use RStudio, use projects!
-Trust me, you won't regret it.
-Find out more at r4ds.had.co.nz/workflow-projects.html.
+If you use RStudio, use projects! Trust me, you won't regret it. Find out more at r4ds.had.co.nz/workflow-projects.html.
 :::
 
 ## Projects from Git
@@ -390,9 +386,7 @@ countdown(minutes = 10, font_size = "1.5em")
 ## Your turn: Assign work
 
 ::: appex
-**You're the instructor:** - Grab the sharing link for your workspace.
-- Optional: Make a short link for it.
-- Share it with your neighbor.
+**You're the instructor:** - Grab the sharing link for your workspace. - Optional: Make a short link for it. - Share it with your neighbor.
 
 **Now you're the student:** - Access your neighbor's workspace and start the assignment.
 :::
@@ -483,3 +477,15 @@ What models can you envision for collecting assignments and providing feedback w
 ```{r}
 countdown(minutes = 3, font_size = "1.5em")
 ```
+
+## For next session...
+
+<br>
+
+::: appex
+Click the link to submit your GitHub username and team name.
+
+[bit.ly/teach-ds-github](https://bit.ly/teach-ds-github)
+
+You will receive an email invite to the **teach-ds-conf22** GitHub organization during the break. Accept the invitation to join the organization.
+:::
