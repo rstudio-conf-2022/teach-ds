@@ -501,7 +501,7 @@
     "href": "materials/06-reproduciblity/index.html#check-member-status",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Check member status",
-    "text": "Check member status\n\nWho is already in?\n\n\norg_members(org)\n\n[1] \"matackett\"\n\n\n\nWho still didn’t accept their invitations?\n\n\norg_pending(org)\n\ncharacter(0)"
+    "text": "Check member status\n\nWho is already in?\n\n\norg_members(org)\n\n[1] \"beckytang\"     \"maria-student\" \"matackett\"    \n\n\n\nWho still didn’t accept their invitations?\n\n\norg_pending(org)\n\n[1] \"mine-cetinkaya-rundel\""
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#creating-assignments---big-picture",
@@ -543,14 +543,14 @@
     "href": "materials/06-reproduciblity/index.html#your-turn",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Your turn",
-    "text": "Your turn\n\n\nGo to the course organisation on GitHub: github.com/teach-ds-conf22\nLocate your HW 01, read through the Getting Started section, follow the instructions.\nThen, go through the Hello Git and Warm up sections.\nAdd your answer to Question 1, then commit and push again.\n\n\n\nIf there is no GitHub repo created for you for this assignment, let me know.\nClone the repo using SSH.\n\n\n\n\n10:00"
+    "text": "Your turn\n\n\nGo to the course organisation on GitHub: github.com/teach-ds-conf22\nLocate your HW 01, read through the Getting Started section, follow the instructions.\nThen, go through the Hello Git and Warm up sections.\nAdd your answer to Question 1, then commit and push again.\n\n\n\nIf there is no GitHub repo created for you for this assignment, let me know.\nClone the repo using SSH.\n\n\n\n\n15:00"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#create-team-assignments",
     "href": "materials/06-reproduciblity/index.html#create-team-assignments",
     "title": "Reproducible workflows: Quarto, Git, GitHub",
     "section": "Create team assignments",
-    "text": "Create team assignments\n\norg_create_assignment(\n  org = org,\n  repo = paste0(\"lab-03-nobel-laureates-\", roster$team_name),\n  user = roster$github_name,\n  team = roster$team_name,\n  source_repo = paste0(org, \"/lab-03-nobel-laureates\")\n)\n\n\n[DEMO]"
+    "text": "Create team assignments\n\norg_create_assignment(\n  org = org,\n  repo = paste0(\"lab-03-nobel-laureates-\", roster$team_name),\n  user = roster$username,\n  team = roster$team_name,\n  source_repo = paste0(org, \"/lab-03-nobel-laureates\")\n)\n\n\n[DEMO]"
   },
   {
     "objectID": "materials/06-reproduciblity/index.html#your-turn-1",
@@ -2083,7 +2083,7 @@
     "href": "materials/08-organizing/index.html#topics",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Topics",
-    "text": "Topics\n\nCreating slides with Quarto\nCreating a course website with Quarto\nFile organization & storage\nDeploying materials"
+    "text": "Topics\n\nCreating slides with Quarto\nCreating a course website with Quarto\n\nFile organization & storage\nDeploying materials"
   },
   {
     "objectID": "materials/08-organizing/index.html#why-use-quarto",
@@ -2160,7 +2160,14 @@
     "href": "materials/08-organizing/index.html#deploying-materials",
     "title": "Organizing teaching materials + Wrap-up / Q&A",
     "section": "Deploying materials",
-    "text": "Deploying materials"
+    "text": "Deploying materials\nGitHub pages\nRun the following code in the Terminal\nquarto publish gh-pages\nhttps://rstudio-conf-2022.github.io/teach-ds-course-website/\nhttps://maria.quarto.pub/teach-data-science-course-website/"
+  },
+  {
+    "objectID": "materials/08-organizing/index.html#workshop-feedback",
+    "href": "materials/08-organizing/index.html#workshop-feedback",
+    "title": "Organizing teaching materials + Wrap-up / Q&A",
+    "section": "Workshop feedback",
+    "text": "Workshop feedback\n\nPlease go to rstd.io/conf-workshop-survey to fill out the workshop feedback survey. Your feedback is crucial! Data from the survey informs curriculum and format decisions for future conf workshops and we really appreciate you taking the time to provide it.\n\n\n\n\n🔗 rstd.io/teach-ds-conf22"
   },
   {
     "objectID": "materials/04-learnr/ex-4-2.html",
@@ -2447,7 +2454,7 @@
     "href": "materials/05-rstudio-cloud/index.html#permission-levels",
     "title": "Computing infrastructure with RStudio Cloud",
     "section": "Permission levels",
-    "text": "Permission levels\n\n\n\n\n\n\n\n\nrole\npermission\ncourse role\n\n\n\n\nadmin\nmanage users, view, edit and manage all projects\ninstructor\n\n\nmoderator\nview, edit and manage all projects\nTA\n\n\ncontributor\ncreate, edit and manage their own projects\nstudent\n\n\nviewer\nview projects shared with everyone\nauditor\n\n\n\n\n👩‍🏫"
+    "text": "Permission levels\nrole | permission | course role |\n<<<<<<< HEAD |————-|————————————————–|————-| ======= |—————|——————————————-|—————| >>>>>>> 3013f72455387e27c0ca9d9cf54e4e98038bb865 | admin | manage users, view, edit and manage all projects | instructor | | moderator | view, edit and manage all projects | TA | | contributor | create, edit and manage their own projects | student | | viewer | view projects shared with everyone | auditor |\n\n👩‍🏫"
   },
   {
     "objectID": "materials/05-rstudio-cloud/index.html#permissions",
