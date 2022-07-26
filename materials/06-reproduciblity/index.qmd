@@ -17,14 +17,14 @@ execute:
   freeze: auto
 ---
 
+# Reproducibility in the classroom
+
 ```{r load-packages}
 #| warning: false
 #| message: false
 library(ghclass)
 library(countdown)
 ```
-
-# Reproducibility in the classroom
 
 ## Reproducibility checklist
 
@@ -85,4 +85,381 @@ We need an environment where
 -   Citations
 -   And more...
 
-# 
+# Version control with Git + GitHub
+
+## Why Git + GitHub?
+
+-   **Version control:** Lots of mistakes along the way, need ability to revert
+-   **Collaboration:** Platform that removes barriers to well documented collaboration
+-   **Accountability:** Transparent commit history
+-   **Early introduction:**
+    -   Mastery takes time, earlier start the better
+    -   Marketability in industry
+
+## Goals for version control
+
+-   Centralize the distribution (and collection) of all student assignments
+
+-   Enable students to work collaboratively
+
+-   Make Git & GitHub part of student workflow
+
+    -   Version control is a best practice for reproducible research
+    -   Widely used in industry and academia
+    -   Publish / share work
+
+# GitHub as your Learning Management System
+
+## Basic Structure
+
+On Github
+
+-   1 organization per class
+
+-   1 repo per (student or team) per assignment
+
+-   Student and team repos all private by default
+
+## Setting up a course
+
+1.  Create a <u>free</u> course organization on GitHub: [github.com/organizations/new](https://github.com/organizations/new)
+2.  Request teacher benefits: [education.github.com/discount](https://education.github.com/discount)
+3.  Add organization to GitHub Classroom: [classroom.github.com](https://classroom.github.com)
+4.  Invite students to organization
+5.  Create assignment(s)
+6.  Collect assignments(s)\*\*
+7.  Grade assignment(s)\*\*
+
+## 1️⃣ Create course organization
+
+Select the option for a <u> free</u> course organization.
+
+![](images/org-create.png){fig-alt="Screenshot of page to create GitHub organization." fig-align="center" width="603"}
+
+## 2️⃣ Request teacher benefits
+
+::: columns
+::: {.column width="50%"}
+![](images/teacher-benefits-2.png){fig-alt="Screenshot of GitHub teacher benefits application." width="976"}
+:::
+
+::: {.column width="50%"}
+![](images/teacher-benefits-3.png){fig-alt="Screenshot of ID requirement in GitHub teacher benefits application." width="1557"}
+:::
+:::
+
+## Required information
+
+You will need to provide the following to request teacher benefits:
+
+-   A brief description of how you plan to use GitHub
+
+-   Establishing connection to an academic institution by verifying with a school-issued email address + school ID or some other proof of academic affliation
+
+-   Information about the school - link to website, address, etc.
+
+Verification is manual and can take up to a few days.
+
+## 3️⃣ Add organization to GitHub Classroom
+
+Click **New Classroom** and select the GitHub organization.
+
+![](images/github-classroom.png){fig-alt="Screenshot of GitHub classroom set up" fig-align="center"}
+
+You can skip the remaining set up steps for now.
+
+## 4️⃣ Invite students
+
+::: columns
+::: {.column width="50%"}
+![](images/org-people.png){fig-alt="Screenshot of people in GitHub org." width="1178"}
+:::
+
+::: {.column width="50%"}
+![](images/org-invite-2.png){fig-alt="Screenshot of GitHub org invite options."}
+:::
+:::
+
+## Member Privileges
+
+![](images/member-priv1.png){fig-align="center"}
+
+## Member Privileges (cont.)
+
+![](images/member-priv2.png){fig-align="center"}
+
+## Member Privileges (cont.)
+
+![](images/member-priv3.png)
+
+# Doing things with the GitHub UI could get tedious...
+
+# `r emo::ji("parcel")` ghclass
+
+## `r emo::ji("parcel")` ghclass
+
+### Tools for managing github class organization accounts
+
+-   Made for instructors who use GitHub for class management, e.g. assignments distributed via GitHub repos
+-   The package assumes that you're an R user, and you probably teach R as well, though that's not a requirement since this package is all about setting up repositories with the right permissions, not what your students put in those repositories.
+
+## Installation
+
+Use the code below to install **ghclass**
+
+```{r}
+#| eval: false
+#| echo: true
+install.packages("ghclass")
+```
+
+<br>
+
+Use the code below to load **ghclass**
+
+```{r}
+#| echo: true
+library(ghclass)
+```
+
+## Collect data from students
+
+-   Need students' GitHub usernames at a minimum
+
+-   Recommend collecting emails, as students might make a typo in their GitHub username
+
+## Prior to collecting data...
+
+You need to instruct students to create GitHub accounts
+
+-   Consider data privacy rules of institution / country (e.g. you may need to enter a data protection agreement for GDPR compliance)
+
+-   Give some guidance for choosing a username
+
+    -   See "Username Advice" on *Happy Git with R*: [happygitwithr.com/github-acct.html](https://happygitwithr.com/github-acct.html)
+
+-   Can have students choose and submit username as an in-class activity during the first week of classes.
+
+## Behind the scenes: GitHub tokens
+
+`ghclass` uses the GitHub API to interact with your course organization and repos - the API verifies your identity using a personal access token which must be created and saved in such a way that `ghclass` can find and use it.
+
+-   Create token at [github.com/settings/tokens](https://github.com/settings/tokens)
+-   Once created, save the `GITHUB_PAT` using
+
+```{r}
+#| eval: false
+gitcreds::gitcreds_set()
+```
+
+## Behind the scenes: GitHub tokens
+
+-   If the token is found and works correctly the following code should run without error
+
+```{r}
+#| echo: true
+#| message: true
+github_test_token()
+```
+
+-   If instead the token is invalid or not found, you will see something like the following
+
+```{r}
+#| echo: true
+#| error: true
+#| message: true
+github_test_token("MADE_UP_TOKEN")
+```
+
+# Inviting students
+
+## Invite students
+
+-   This will generate an email to students.
+-   Instruct students to check their email and follow the instructions.
+
+```{r}
+#| echo: true
+org <- "teach-ds-conf22"
+```
+
+```{r}
+#| eval: false
+#| echo: true
+roster <- read_csv("SURVEY RESPONSES.csv")
+org_invite(org = org, user = roster$username)
+```
+
+    ## ✔ Invited user 'minebotmine' to org 'design-ds-class'.
+    ## ✔ Invited user 'rundel' to org 'design-ds-class'.
+
+## Check member status
+
+-   Who is already in?
+
+```{r}
+org_members(org)
+```
+
+-   Who still didn't accept their invitations?
+
+```{r}
+org_pending(org)
+```
+
+# Creating assignments
+
+## Creating assignments - big picture
+
+-   Create a starter repo, keep it private and make it a template
+-   Clone the repo and add any starter files (template qmd, data, instructions, etc.)
+-   Commit and push your changes to the repo
+-   Use the `org_create_assignment()` function to create copies of the starter repo with correct permissions for each of your students (or teams)
+
+## Creating your starter repo
+
+![](images/starter-repo-create.png)
+
+## Make your starter repo a template
+
+![](images/starter-make-repo-template.png)
+
+## Prepare your starter repo
+
+-   Clone it locally
+-   Add any necessary files
+-   Commit and push
+
+<br>
+
+\[DEMO\]
+
+## Create assignments
+
+```{r}
+#| echo: true
+#| eval: false
+org_create_assignment(
+  org = org,
+  repo = paste0("hw-01-pet-names-", roster$username),
+  user = roster$username,
+  source_repo = paste0(org, "/hw-01-pet-names")
+)
+```
+
+<br>
+
+\[DEMO\]
+
+## Your turn {.small}
+
+::: appex
+-   Go to the course organisation on GitHub: [github.com/teach-ds-conf22](https://github.com/teach-ds-conf22)
+
+-   Locate your HW 01, read through the **Getting Started** section, follow the instructions.
+
+-   Then, go through the **Hello Git** and **Warm up** sections.
+
+-   Add your answer to Question 1, then commit and push again.
+:::
+
+-   If there is no GitHub repo created for you for this assignment, let me know.
+
+-   Clone the repo using SSH.
+
+```{r echo=FALSE}
+countdown(minutes = 10)
+```
+
+## Create team assignments
+
+```{r eval=FALSE}
+org_create_assignment(
+  org = org,
+  repo = paste0("lab-03-nobel-laureates-", roster$team_name),
+  user = roster$github_name,
+  team = roster$team_name,
+  source_repo = paste0(org, "/lab-03-nobel-laureates")
+)
+```
+
+<br>
+
+\[DEMO\]
+
+## Your turn
+
+::: appex
+-   Go to the course organisation on GitHub: [github.com/teach-ds-conf22](https://github.com/teach-ds-conf22)
+
+-   Locate your Lab 03 and read through the Getting started section and follow the instructions with your team members.
+:::
+
+```{r echo=FALSE}
+countdown(minutes = 10)
+```
+
+# Giving feedback
+
+## Options for giving feedback on GitHub
+
+-   Use the GitHub UI to add issues to each student's repo
+
+-   Instructors (and TAs) can view all repositories within the course organization.
+
+-   Make sure to `@` mention the student so that they are notified when an issue is opened.
+
+-   Consider keeping points out of issues.
+
+## Your turn {.small}
+
+::: appex
+**Now you're the instructor:**
+
+-   First, I'll change everyone's permission level and make you *Owner*s. (Please don't delete any repos!)
+
+-   Go to the GitHub organization for our "class" and observe that now you can see all repos.
+
+-   Go into the individual repo (HW 01) for your neighbor. Open an issue and add some text to the issue. In the issue `@` mention their username. Submit your issue.
+
+**Now you're a student:** Check your email to confirm that you got notified of an issue being filed by your neighbor\
+in your repo, then review the issue in on GitHub.
+:::
+
+```{r echo = FALSE}
+countdown(minutes = 10)
+```
+
+## Other ghclass functionality
+
+Clone student repos to review their work locally
+
+```{r eval=FALSE}
+hw01_repos <- org_repos(org, "hw-01-pet-names-")
+local_repo_clone(hw01_repos, 
+                 local_path = "hw01_submissions")
+```
+
+. . .
+
+Get big picture statistics for an assignment
+
+```{r}
+#| eval: false
+
+org_repo_stats(org, filter = "hw-01-pet-names-")
+```
+
+## Git + GitHub lessons learned
+
+-   If you plan on using git in class, start on day one, don't wait until the "right time"
+-   First few assignment should be individual, not team based to avoid merge conflicts
+-   Students need to remember to pull before starting work
+-   Use GitHub through the RStudio IDE not command line
+-   Remind students on that future projects should go on GitHub with PI approval
+
+## Learn more!
+
+-   ghclass documentation: [rundel.github.io/ghclass](https://rundel.github.io/ghclass/index.html)
+-   Beckman, Matthew D., et al. "Implementing version control with Git and GitHub as a learning objective in statistics and data science courses." *Journal of Statistics and Data Science Education* 29.sup1 (2021): S132-S144. doi: [hdoi.org/10.1080/10691898.2020.1848485](https://doi.org/10.1080/10691898.2020.1848485)
+
